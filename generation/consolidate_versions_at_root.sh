@@ -11,9 +11,10 @@ for path in $module_list; do
 
   cat ${path}/versions.txt | while read LINE; do
     if ! [[ $LINE == *"#"* ]]; then
-      echo $LINE >> versions.txt
+      echo $LINE >> new-versions.txt
     fi
   done
 done
 
-cat versions.txt | grep '\S'
+cat new-versions.txt | grep '\S' >> versions.txt
+rm new-versions.txt
