@@ -4,6 +4,4440 @@
     {
       "changes": [
         {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-workflows",
+      "id": "af5f44a0-c02b-465e-8387-0b0a29fabafb",
+      "createTime": "2023-02-13T21:52:15.249Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-websecurityscanner",
+      "id": "fc6f0aff-6571-4cda-9c84-fc3dd3625c97",
+      "createTime": "2023-02-13T21:52:15.249Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-webrisk",
+      "id": "d3dd80cc-ce53-4bbb-b6ca-171ed0c44f45",
+      "createTime": "2023-02-13T21:52:15.248Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-vpcaccess",
+      "id": "e00d896c-8a0a-4fe9-adad-ff9f71ad0f38",
+      "createTime": "2023-02-13T21:52:15.248Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-vmmigration",
+      "id": "95627366-1776-43f8-ab0d-6a7be884d3be",
+      "createTime": "2023-02-13T21:52:15.247Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-vision",
+      "id": "8a8220a3-d72d-49d5-83e1-4a56b4f20c76",
+      "createTime": "2023-02-13T21:52:15.247Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "9e9cf68063d690cfd568d7c0f0465cee84648868",
+          "message": "[transcoder] add PreprocessingConfig.deinterlace",
+          "issues": [
+            "8812"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-video-transcoder",
+      "id": "329f15cb-f999-4aaa-bbbc-e28581222df8",
+      "createTime": "2023-02-13T21:52:15.246Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-live-stream",
+      "id": "70b5251f-db0c-430f-8293-327fa7b06187",
+      "createTime": "2023-02-13T21:52:15.245Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-video-intelligence",
+      "id": "a064c5e2-691b-4f8b-9e84-2f106e983533",
+      "createTime": "2023-02-13T21:52:15.245Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-tasks",
+      "id": "c2dd6b54-9838-483a-b9ff-92c0f20e4e33",
+      "createTime": "2023-02-13T21:52:15.244Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-talent",
+      "id": "a735fb0d-bf44-4372-a8c4-a813a316040d",
+      "createTime": "2023-02-13T21:52:15.244Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "2003d7f2864f9be7442860c85149644a23b07188",
+          "message": "[cloudshell] add CloudShellErrorCode.ENVIRONMENT_UNAVAILABLE enum value",
+          "issues": [
+            "8806"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-shell",
+      "id": "cfd291e1-695f-4b53-858b-852f6c56fc38",
+      "createTime": "2023-02-13T21:52:15.243Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-servicedirectory",
+      "id": "f204d21e-3f88-4cea-87d7-3360fcfc68ed",
+      "createTime": "2023-02-13T21:52:15.243Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-security-private-ca",
+      "id": "49214f5d-a22a-495f-a469-e7f5e3c9ed2f",
+      "createTime": "2023-02-13T21:52:15.242Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-resourcemanager",
+      "id": "8eac182a-8db0-48a1-ac39-252e1708102e",
+      "createTime": "2023-02-13T21:52:15.241Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-resource-settings",
+      "id": "fc6c087a-724a-416a-8504-769659086e13",
+      "createTime": "2023-02-13T21:52:15.241Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-redis",
+      "id": "56609f83-639d-406c-9fdb-b28a8ae8ff6c",
+      "createTime": "2023-02-13T21:52:15.240Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-recommender",
+      "id": "dd627d19-7ba5-4a18-b443-7280bbc23573",
+      "createTime": "2023-02-13T21:52:15.240Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-recommendations-ai",
+      "id": "09dfa662-4ee5-4bc4-8233-b83d52a24b45",
+      "createTime": "2023-02-13T21:52:15.239Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-private-catalog",
+      "id": "d42b732e-c8e4-4526-bc1b-a1a1db73d09f",
+      "createTime": "2023-02-13T21:52:15.239Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-policy-troubleshooter",
+      "id": "c4b3d1ea-b8bb-4db4-8c2d-8bec627f7e08",
+      "createTime": "2023-02-13T21:52:15.238Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-phishingprotection",
+      "id": "a463cc01-f215-411a-bd54-b6e062843617",
+      "createTime": "2023-02-13T21:52:15.237Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-os-config",
+      "id": "710ef0aa-1b13-45d2-a2b6-f86ce071dca6",
+      "createTime": "2023-02-13T21:52:15.237Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-orchestration-airflow",
+      "id": "1654b471-2202-4db2-9bc4-67b4535add9d",
+      "createTime": "2023-02-13T21:52:15.236Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "e170de25520f45671b5a2fe37d7ff9c277ebdbd2",
+          "message": "Enable java-notification integration test",
+          "issues": [
+            "8742"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-notification",
+      "id": "1c926569-52ad-4758-bc43-6a773683942a",
+      "createTime": "2023-02-13T21:52:15.236Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-network-security",
+      "id": "4ea85b99-2ed9-414e-b2e8-28e884154f57",
+      "createTime": "2023-02-13T21:52:15.235Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-network-management",
+      "id": "598a5362-9bb4-40e9-bf00-dfb9801b4663",
+      "createTime": "2023-02-13T21:52:15.235Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a3ea65a369e648ee551535815fdafc755768bff9",
+          "message": "[memcache] maintenance schedules",
+          "issues": [
+            "8803"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-memcache",
+      "id": "d90ed3d4-f195-45f9-a16a-4f65d431366c",
+      "createTime": "2023-02-13T21:52:15.234Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-mediatranslation",
+      "id": "6b73d9cc-8f6b-415b-ad46-b507a1d27593",
+      "createTime": "2023-02-13T21:52:15.234Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-managed-identities",
+      "id": "51b6a4ef-d8a4-43cb-bb67-9189a2affa12",
+      "createTime": "2023-02-13T21:52:15.233Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7aaef3c75ef667b061c8b108282eb6264a0b4ad4",
+          "message": "[lifesciences] add Pipeline.secret_environment, Action.secret_environment, VirtualMachine.reservation",
+          "issues": [
+            "8782"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-life-sciences",
+      "id": "92e962e8-bf9b-4358-b0a0-cfe7c3396142",
+      "createTime": "2023-02-13T21:52:15.232Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-language",
+      "id": "25b923af-79ae-4fe7-975a-1f7111b77b90",
+      "createTime": "2023-02-13T21:52:15.232Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-iot",
+      "id": "52e5b0f2-ee13-4842-af09-80f9906576cd",
+      "createTime": "2023-02-13T21:52:15.231Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-ids",
+      "id": "712f0f55-9b53-4877-902e-5e2e63c5d873",
+      "createTime": "2023-02-13T21:52:15.230Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gsuite-addons",
+      "id": "87b5c6f7-c50f-4796-99d1-998f28d0cc5f",
+      "createTime": "2023-02-13T21:52:15.230Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gkehub",
+      "id": "09a0e484-3f57-4eee-be68-9ee444a118a5",
+      "createTime": "2023-02-13T21:52:15.229Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gke-connect-gateway",
+      "id": "5b1ea61b-5476-4be5-af1a-306e7d7df007",
+      "createTime": "2023-02-13T21:52:15.228Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gke-backup",
+      "id": "99134808-b4c1-47b2-8f22-b46a92be0e5a",
+      "createTime": "2023-02-13T21:52:15.228Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-functions",
+      "id": "109940a6-c3e1-4368-8c26-871362cada35",
+      "createTime": "2023-02-13T21:52:15.227Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d07adff871d937518bcf5252e606ff81e8c86bf3",
+          "message": "[file] add polling timeouts config for RevertInstance operation",
+          "issues": [
+            "8826"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "16cf5734289507cee2bfb8f3ed17be94f8eb39dc",
+          "message": "[file] new APIs added to reflect updates to the filestore service",
+          "issues": [
+            "8762"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-filestore",
+      "id": "9ee6384f-aa8b-416c-8ace-9b2cb66e5f0b",
+      "createTime": "2023-02-13T21:52:15.227Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7e32e278c2fae7b07a9040e74afaf3cf7417642e",
+          "message": "[eventarc] Add CMEK support to Eventarc client library",
+          "issues": [
+            "8731"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-eventarc",
+      "id": "c00070b4-4bf0-4e78-86b4-d7cb988fc845",
+      "createTime": "2023-02-13T21:52:15.226Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-essential-contacts",
+      "id": "6a15ad55-7d91-4321-a763-83fb34457f9a",
+      "createTime": "2023-02-13T21:52:15.225Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-domains",
+      "id": "f46aff88-7dd6-436a-8178-84c2d3480b8d",
+      "createTime": "2023-02-13T21:52:15.225Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dns",
+      "id": "1cb17a6d-beed-4cfe-9caf-2e3f2448d030",
+      "createTime": "2023-02-13T21:52:15.224Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dms",
+      "id": "7a2e6780-845b-4865-967a-5ab8193b1eda",
+      "createTime": "2023-02-13T21:52:15.224Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-deploy",
+      "id": "3766b84a-e8b8-4c1e-a54f-6388f5203526",
+      "createTime": "2023-02-13T21:52:15.223Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-datastream",
+      "id": "eea2cc24-f4c3-42a7-b422-10641a16b9d2",
+      "createTime": "2023-02-13T21:52:15.223Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-datalabeling",
+      "id": "3433d030-48de-445b-a160-a2d7841dd674",
+      "createTime": "2023-02-13T21:52:15.222Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-datacatalog",
+      "id": "f49ff255-107b-4532-af7b-6bb2a4c0ae95",
+      "createTime": "2023-02-13T21:52:15.222Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-data-fusion",
+      "id": "c1784226-a503-4233-abfc-30c31a90122a",
+      "createTime": "2023-02-13T21:52:15.221Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-binary-authorization",
+      "id": "96b28597-1bfd-486c-b081-3e82aec41072",
+      "createTime": "2023-02-13T21:52:15.221Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "c9b8282b83723d75e673915e2dc25e9e7ed0b7ea",
+          "message": "[cloudbilling] added Sku.geo_taxonomy",
+          "issues": [
+            "8787"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-billing",
+      "id": "1a33ab17-f80a-472d-a03b-26bf0804f124",
+      "createTime": "2023-02-13T21:52:15.220Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bare-metal-solution",
+      "id": "607c9219-46db-4e10-9a8b-4d6235ac712c",
+      "createTime": "2023-02-13T21:52:15.219Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-automl",
+      "id": "b8abfce5-670a-4816-bfb2-94d795ed26fc",
+      "createTime": "2023-02-13T21:52:15.219Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-assured-workloads",
+      "id": "a0565644-f4c6-4b4c-ba30-36d998614bb7",
+      "createTime": "2023-02-13T21:52:15.218Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-apigee-registry",
+      "id": "c1db8513-6992-41c8-9f57-9bcffaacd44e",
+      "createTime": "2023-02-13T21:52:15.218Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-apigee-connect",
+      "id": "0a5ba998-b966-4735-9a30-d42fdb88bfdf",
+      "createTime": "2023-02-13T21:52:15.217Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-api-gateway",
+      "id": "8d7c5ebc-78fd-464e-bef5-c34e6e6a0b49",
+      "createTime": "2023-02-13T21:52:15.217Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-accessapproval",
+      "id": "412bfa6f-8d56-436a-a3f6-6f7102d910fc",
+      "createTime": "2023-02-13T21:52:15.216Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "a70dbea4caf1cb9a2e16fc132eee6c180af01723",
+          "message": "[cloudkms] add SHA-2 import methods",
+          "issues": [
+            "8835"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "ba8a75f2edf4e6c1ee0fcefb4cc4acf171a290ab",
+          "message": "[cloudkms] add support for additional HMAC algorithms",
+          "issues": [
+            "8792"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-kms",
+      "id": "be5086c2-7c90-41ad-b1ca-cea05bdc9b9f",
+      "createTime": "2023-02-13T21:52:15.215Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "2b48de2ce1c3f8776c4ace587866d431dd5d1d02",
+          "message": "[notebooks] fix minor docstring formatting",
+          "issues": [
+            "8846"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "fd86bade171bda8f7d2461cf6a67bd23425fb40e",
+          "message": "[notebooks] added UpdateRuntime, UpgradeRuntime, DiagnoseRuntime, DiagnoseInstance to v1 API",
+          "issues": [
+            "8804"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-notebooks",
+      "id": "937300da-a124-49f3-8eb8-2aef6a57ec67",
+      "createTime": "2023-02-13T21:52:15.215Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "29d1889efd05ad21eac234e23655b716fd3637a2",
+          "message": "[translate] fix minor docstring formatting",
+          "issues": [
+            "8884"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-translate",
+      "id": "bf35a276-acba-4167-90a9-5ce3323a94a1",
+      "createTime": "2023-02-13T21:52:15.214Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "604a32e481dc0f1cbfe8522798ad83bf625189c8",
+          "message": "[recaptchaenterprise] add account_verification field to Assessment for MFA",
+          "issues": [
+            "8888"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-recaptchaenterprise",
+      "id": "7029893a-5731-4e9d-acaa-2a967ae51478",
+      "createTime": "2023-02-13T21:52:15.214Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "c432bddefa25394a085c7b0a36723b1500754636",
+          "message": "[cloudscheduler] Updated Client Libraries for Cloud Scheduler",
+          "issues": [
+            "8911"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-scheduler",
+      "id": "f449117e-2546-4bc8-9da1-bba9205e32a3",
+      "createTime": "2023-02-13T21:52:15.213Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "262aeee09e7dd0760f1b652564ae1231debf2e50",
+          "message": "[secretmanager] update public API to include annotation support",
+          "issues": [
+            "8921"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-secretmanager",
+      "id": "416d6135-77e0-4c81-b9fc-d5dfbeb03ed4",
+      "createTime": "2023-02-13T21:52:15.213Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "765a8bf090936359da84a1d224bc06132fc47910",
+          "message": "[contactcenterinsights] add Configurable Analysis, Bulk Upload, Bulk Analyze, Delete Issue Apis",
+          "issues": [
+            "8910"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-contact-center-insights",
+      "id": "177bcd77-c218-4779-abc1-89901d2c3ca5",
+      "createTime": "2023-02-13T21:52:15.212Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support collect and import GA4 event format with prebuilt whistle rule",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support exact searchable and retrievable in catalog attribute config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "deprecate retrievable_fields in product attribute",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support diversity type in serving config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "allow set feed id in merchant center link",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support data output to GCS",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "keep the API doc up-to-date with recent changes",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "[retail] support async write mode for WriteUserEvent API",
+          "issues": [
+            "8918"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support collect GA4 event format with prebuilt whistle rule",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support exact searchable and retrievable in catalog attribute config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "deprecate retrievable_fields in product attribute",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support diversity type in serving config",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "keep the API doc up-to-date with recent changes",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "[retail] support async write mode for WriteUserEvent API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support collect and import GA4 event format with prebuilt whistle rule",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support exact searchable and retrievable in catalog attribute config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "deprecate retrievable_fields in product attribute",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support diversity type in serving config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "allow set feed id in merchant center link",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support batch remove catalog attribute config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support attribute suggestion in autocomplete",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support data output to GCS",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "expose the local inventory data in product data retrieval",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "return personal product labels in search response",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "keep the API doc up-to-date with recent changes",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "[retail] support async write mode for WriteUserEvent API",
+          "issues": []
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-retail",
+      "id": "1c3cf30d-8cce-4e55-adec-d34bf28966b9",
+      "createTime": "2023-02-13T21:52:15.211Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "0d027d0fdd96a5371b1046b1ccb8831ae9e377f4",
+          "message": "[cloudchannel] Add support for granular repricing configurations via SkuGroups in Cloud Channel Repricing APIs",
+          "issues": [
+            "8900"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "6a84b714172a48bd4e85c0e462cb107a31d64305",
+          "message": "[cloudchannel] add deal_code field to message Offer",
+          "issues": [
+            "8760"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-channel",
+      "id": "13dfcec9-40b0-48e4-b0b3-b207cd8e2c34",
+      "createTime": "2023-02-13T21:52:15.211Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "ed0f974bb0fd3390b7fc4a1a15d4eb3574042c63",
+          "message": "[texttospeech] fix minor docstring formatting",
+          "issues": [
+            "8914"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d68e8e0d2a2f35463cccabd5835404f6f22b1ea5",
+          "message": "[texttospeech] add LRS API",
+          "issues": [
+            "8887"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a1d5df0523c80e086714a54a0fe117fa888fe7e5",
+          "message": "[texttospeech] add LRS API",
+          "issues": [
+            "8881"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-texttospeech",
+      "id": "bf9d8999-2293-4a02-a4e9-735b92b0c894",
+      "createTime": "2023-02-13T21:52:15.210Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "1ba2561d9a1ce36fa26d223be836d20c1c8aa337",
+          "message": "Remove 'unstable API' message from README.md",
+          "issues": [
+            "570"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "f6183a728e12acf3430bc7bb33c3ca0083b35014",
+          "message": "removing migrated grpc- and proto- modules from repository",
+          "issues": [
+            "592"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4a5ad26a6e3f5259a7d2aaa7f05bfc00f9735858",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.23",
+          "issues": [
+            "578"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "f96f89193fda5f81f4681cdc38a4186ec4b9e35a",
+          "message": "update dependency com.google.api:api-common to v2.3.1",
+          "issues": [
+            "567"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "f0645e72044f682a2705f1feb764ea9d23890487",
+          "message": "update dependency com.google.auth:google-auth-library-oauth2-http to v1.14.0",
+          "issues": [
+            "571"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e3aa7113ef7bbabc69cc099ab44177540249c89",
+          "message": "update dependency io.grpc:grpc-protobuf to v1.51.1",
+          "issues": [
+            "573"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "75ebf53bb99f4fc12f22eb71a35ab7ca06d032fe",
+          "message": "update dependency com.google.cloud:google-cloud-shared-dependencies to v3.1.0",
+          "issues": [
+            "565"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "b8453e541a860bcdd4e17a38d87bf371c4dbb542",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.22",
+          "issues": [
+            "560"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "5e7cedaa3c34dd24c1f50a622848e5a9d5318b54",
+          "message": "update dependency io.grpc:grpc-stub to v1.51.1",
+          "issues": [
+            "574"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "223bdff6f664730593637d8b21e539d2f2ffc60d",
+          "message": "update dependency com.google.protobuf:protobuf-bom to v3.21.12",
+          "issues": [
+            "563"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "b42457951c54b9e882ab143dde29acdf4e246e6c",
+          "message": "update dependency com.google.protobuf:protobuf-java to v3.21.12",
+          "issues": [
+            "564"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "592aeadfd6db756f51d0cbd77a95ca08d26b72e6",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.21",
+          "issues": [
+            "557"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "e15ea286a939a0fb8329c3c9629213dba2d16dd1",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.20",
+          "issues": [
+            "554"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "a9b48d9c9ac5a2150a8c8f21f6cc476caed5f78c",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.19",
+          "issues": [
+            "551"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "0038cc1870f69cab34cf47909b4cd482c95c71d7",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.18",
+          "issues": [
+            "548"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "edef8d486aa0027496e85e99d6acf363745e2ac9",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.17",
+          "issues": [
+            "545"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "8a5ecb6f287f8e654b08f8b286f45a8f5610bdeb",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.16",
+          "issues": [
+            "542"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "6931f5ce074e706ae1b4f1cadc6fd194e77df088",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.15",
+          "issues": [
+            "539"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "caa7bd3c88884792618cb2a844aa828ddb6acd5e",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.14",
+          "issues": [
+            "536"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "802a427ee5c9a2a8b860d60429fafa57ad0403fc",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.13",
+          "issues": [
+            "532"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "f9f7aba79e5f22b0691db7eb51e388035860e2f2",
+          "message": "update dependency io.grpc:grpc-protobuf to v1.51.0",
+          "issues": [
+            "527"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "71cfca72a007a0ff2471b3a4850fe01d79a2df16",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.12",
+          "issues": [
+            "526"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "639ee382a7adba44a3b0c8b5dc93842a8dfc225b",
+          "message": "update dependency io.grpc:grpc-stub to v1.51.0",
+          "issues": [
+            "528"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "6058bb03f8ae0496844708fec629d7f298d47f7e",
+          "message": "update dependency com.google.auth:google-auth-library-oauth2-http to v1.13.0",
+          "issues": [
+            "522"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "2bda331877435c2bcf019130b07333927aa9522d",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.11",
+          "issues": [
+            "521"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "ae476604430936b962d74c9fdb4bbfae83f4e871",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.10",
+          "issues": [
+            "518"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "b8dc63a6083c612e8f87cd32320994633bc5d9d6",
+          "message": "update dependency com.google.apis:google-api-services-cloudresourcemanager to v3-rev20221108-2.0.0",
+          "issues": [
+            "514"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e7bfde3ab9fe186aa449e483dd37a519bc21660",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.9",
+          "issues": [
+            "513"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-iam-policy",
+      "id": "cdc95e92-0355-41ec-b35a-713a70605f9b",
+      "createTime": "2023-02-13T21:52:15.210Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-workflow-executions",
+      "id": "76cf4d12-8bb0-4c78-8297-ddde70c9ae87",
+      "createTime": "2023-02-13T21:52:15.209Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-video-stitcher",
+      "id": "30addefa-7528-4bc3-805c-234071be68f6",
+      "createTime": "2023-02-13T21:52:15.209Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-storage-transfer",
+      "id": "4521e289-7c2b-4883-8148-ee419f8d71ca",
+      "createTime": "2023-02-13T21:52:15.208Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-service-usage",
+      "id": "2287d7ed-7000-41f4-9a1f-6147508b63d3",
+      "createTime": "2023-02-13T21:52:15.208Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-service-management",
+      "id": "32517e4c-0c24-42e7-81a9-04e547aaa034",
+      "createTime": "2023-02-13T21:52:15.207Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-service-control",
+      "id": "e00e45c7-2456-4f24-a866-13afaf0177a3",
+      "createTime": "2023-02-13T21:52:15.207Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-securitycenter-settings",
+      "id": "0da3e9a8-5da2-4c0c-b183-95d99e2977ce",
+      "createTime": "2023-02-13T21:52:15.206Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-publicca",
+      "id": "01802298-2283-44b0-a492-a68ceb336f0a",
+      "createTime": "2023-02-13T21:52:15.205Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-profiler",
+      "id": "de72d81e-efae-4eeb-9987-9042895ba0a3",
+      "createTime": "2023-02-13T21:52:15.204Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "de74b58947381d9df7ba7078606b92f9f9541007",
+          "message": "[oslogin] added CreateSshPublicKey RPC",
+          "issues": [
+            "8783"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-os-login",
+      "id": "cd75c7ec-fac8-4cfb-aa9f-08fd8ac2ca44",
+      "createTime": "2023-02-13T21:52:15.204Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-monitoring",
+      "id": "83ff0623-c487-4e8a-9277-f378e4549ab7",
+      "createTime": "2023-02-13T21:52:15.203Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "3437b1cee0aab0be09cd1ecf55e9d04f8ddd4e81",
+          "message": "[monitoring-metricsscope] new module for monitoring-metricsscope",
+          "issues": [
+            "8875"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-monitoring-metricsscope",
+      "id": "1802987d-e04e-45ba-a4d3-e04a18ff4a15",
+      "createTime": "2023-02-13T21:52:15.203Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "cecd9446fdea65ba132323488aa2fa85821519d3",
+          "message": "[monitoring-dashboards] added support for horizontal bar rendering and column settings on time series tables",
+          "issues": [
+            "8975"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-monitoring-dashboard",
+      "id": "8f7020ce-6381-41e9-bf7b-7c8b2936dda5",
+      "createTime": "2023-02-13T21:52:15.202Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "1169d9e998b37f3e3130ba81241370bfff812b9b",
+          "message": "[java-maps-addressvalidation] Document that PREMISE_PROXIMITY is a valid value for an address granularity",
+          "issues": [
+            "8883"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "0020df607fb59292fb20ae13cb0257ab4c3a30c9",
+          "message": "rename addressvalidation module to maps-addressvalidation",
+          "issues": [
+            "8880"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.maps:google-maps-addressvalidation",
+      "id": "6941697e-9a65-4774-95e2-da7ca71fd153",
+      "createTime": "2023-02-13T21:52:15.202Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-iamcredentials",
+      "id": "674bee88-b954-419f-bc5f-017a20c86483",
+      "createTime": "2023-02-13T21:52:15.201Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-iam-admin",
+      "id": "30679266-cebc-4a67-ae93-e9ffefe171f2",
+      "createTime": "2023-02-13T21:52:15.201Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "io.grafeas:grafeas",
+      "id": "78230c77-6b42-4859-aee1-1535ec76bc3e",
+      "createTime": "2023-02-13T21:52:15.200Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-game-servers",
+      "id": "178ef34e-e832-44c8-b17b-e1970e598fd0",
+      "createTime": "2023-02-13T21:52:15.200Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-eventarc-publishing",
+      "id": "1a3283fd-b75b-47f5-843a-7bfd8e9b32fd",
+      "createTime": "2023-02-13T21:52:15.199Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-errorreporting",
+      "id": "afcf074d-4471-4e81-8e2f-5591f21c9dfd",
+      "createTime": "2023-02-13T21:52:15.199Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "9e4ace25d84097f66c8720190c416c7fd5adc24a",
+          "message": "[java-enterpriseknowledgegraph] publish Google Cloud's Cloud Knowledge Graph (CKG) API",
+          "issues": [
+            "8758"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-enterpriseknowledgegraph",
+      "id": "3d83b3da-9953-4ed2-a759-06bcb0aee60c",
+      "createTime": "2023-02-13T21:52:15.198Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "ff64c8e5a2f8d1dfccb14c55f76275af14bf9a66",
+          "message": "[dlp] ExcludeByHotword added as an ExclusionRule type, NEW_ZEALAND added as a LocationCategory value",
+          "issues": [
+            "8766"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dlp",
+      "id": "a0e8e51e-6845-4aea-b833-ea0ef5e6d475",
+      "createTime": "2023-02-13T21:52:15.198Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-distributedcloudedge",
+      "id": "37abb7a9-9b90-4e4a-9e12-2a51c6f51b0b",
+      "createTime": "2023-02-13T21:52:15.197Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-discoveryengine",
+      "id": "5118e769-9c03-4286-9600-549ce9a109ec",
+      "createTime": "2023-02-13T21:52:15.197Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-debugger-client",
+      "id": "e2e59817-f044-4aa5-aa6f-a683126889b4",
+      "createTime": "2023-02-13T21:52:15.196Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "84d9aa0a2d1df3af904129c93c2af13bebc501be",
+          "message": "added QueryMetadata API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "84d9aa0a2d1df3af904129c93c2af13bebc501be",
+          "message": "added MoveTableToDatabase API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "84d9aa0a2d1df3af904129c93c2af13bebc501be",
+          "message": "added AlterMetadataResourceLocation API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "84d9aa0a2d1df3af904129c93c2af13bebc501be",
+          "message": "[metastore] added RemoveIamPolicy API",
+          "issues": [
+            "8922"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "998d5f3c7d0d2daa421f1786f7f78ab7d30dae59",
+          "message": "added EncryptionConfig field",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "998d5f3c7d0d2daa421f1786f7f78ab7d30dae59",
+          "message": "added NetworkConfig field",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "998d5f3c7d0d2daa421f1786f7f78ab7d30dae59",
+          "message": "added DatabaseType field",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "998d5f3c7d0d2daa421f1786f7f78ab7d30dae59",
+          "message": "added TelemetryConfiguration field",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "998d5f3c7d0d2daa421f1786f7f78ab7d30dae59",
+          "message": "[metastore] added federation API",
+          "issues": [
+            "8840"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataproc-metastore",
+      "id": "fe20eb63-6b93-4bc8-9060-d240fddc1854",
+      "createTime": "2023-02-13T21:52:15.196Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataform",
+      "id": "5ca4f5bb-26f9-49bc-8438-81104a0e7c2b",
+      "createTime": "2023-02-13T21:52:15.195Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataflow",
+      "id": "3bb8c147-afbf-4e0e-8feb-0d98560c306e",
+      "createTime": "2023-02-13T21:52:15.195Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "800cb54165dc61d9e33366ce127d3e66027ace6c",
+          "message": "fix minor docstring formatting",
+          "issues": [
+            "8756"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-contentwarehouse",
+      "id": "a2d7803b-3f81-4292-bd96-6b5ffce86e76",
+      "createTime": "2023-02-13T21:52:15.194Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-containeranalysis",
+      "id": "b68cf79a-d85d-45b8-9d2e-d7657b39fc82",
+      "createTime": "2023-02-13T21:52:15.194Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-cloudcommerceconsumerprocurement",
+      "id": "c30bae8f-996d-4818-aad4-cf4b4a9767e4",
+      "createTime": "2023-02-13T21:52:15.194Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-build",
+      "id": "4153ec84-21a3-4e2d-9e48-eab4f8e7ec85",
+      "createTime": "2023-02-13T21:52:15.193Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-billingbudgets",
+      "id": "15857331-69d8-45c8-871c-4b262cdade00",
+      "createTime": "2023-02-13T21:52:15.193Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigqueryreservation",
+      "id": "09b0fa3a-1c4f-47f6-a1a4-7264e01f6133",
+      "createTime": "2023-02-13T21:52:15.192Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigquerymigration",
+      "id": "b378dfc3-f4b5-4814-a25a-feb599e5f341",
+      "createTime": "2023-02-13T21:52:15.192Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "5117e77068711779c988e54f7a475cb67197a2e7",
+          "message": "[bigquerydatatransfer] Add location methods",
+          "issues": [
+            "8945"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "862afabbbea7c5920ac8dfeeaad59b508adb4a9c",
+          "message": "[bigquerydatatransfer] added Location API methods",
+          "issues": [
+            "8805"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigquerydatatransfer",
+      "id": "14d66791-4857-4f79-98ab-8e1b4bbc536c",
+      "createTime": "2023-02-13T21:52:15.191Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "933f26070dd0ec685bd3e6284f5f4c954ca2023c",
+          "message": "[bigquerydatapolicy] fix minor docstring formatting",
+          "issues": [
+            "8860"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigquerydatapolicy",
+      "id": "f335769b-07d4-4f20-a140-1d4809863063",
+      "createTime": "2023-02-13T21:52:15.191Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigquery-data-exchange",
+      "id": "8e360f18-eb75-404d-8ae4-55ca8d1f8b2d",
+      "createTime": "2023-02-13T21:52:15.191Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "53601847ef2c9e258fbb8cc8011ec97e3f580fbc",
+          "message": "[Many APIs] fix minor docstring formatting",
+          "issues": [
+            "8798"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-clientgateways",
+      "id": "1d35abc8-96c8-4b9b-894d-36ee4635b8f0",
+      "createTime": "2023-02-13T21:52:15.190Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "53601847ef2c9e258fbb8cc8011ec97e3f580fbc",
+          "message": "[Many APIs] fix minor docstring formatting",
+          "issues": [
+            "8798"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-clientconnectorservices",
+      "id": "4c9b36cd-eebf-4a20-93df-bf849b7fe5df",
+      "createTime": "2023-02-13T21:52:15.190Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "53601847ef2c9e258fbb8cc8011ec97e3f580fbc",
+          "message": "[Many APIs] fix minor docstring formatting",
+          "issues": [
+            "8798"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-appgateways",
+      "id": "22da03e5-f2a5-469e-83c8-fa4ba82752f1",
+      "createTime": "2023-02-13T21:52:15.189Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "53601847ef2c9e258fbb8cc8011ec97e3f580fbc",
+          "message": "[Many APIs] fix minor docstring formatting",
+          "issues": [
+            "8798"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-appconnectors",
+      "id": "9205aa0d-810f-4eab-84cb-f62054ac7340",
+      "createTime": "2023-02-13T21:52:15.189Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "53601847ef2c9e258fbb8cc8011ec97e3f580fbc",
+          "message": "[Many APIs] fix minor docstring formatting",
+          "issues": [
+            "8798"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-appconnections",
+      "id": "7328709a-1eca-4377-94eb-d557289d1835",
+      "createTime": "2023-02-13T21:52:15.189Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "[batch] updated documentation for message NetworkInterface",
+          "issues": [
+            "8915"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "[batch] updated documentation for message NetworkInterface",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "remove unsupported HTTP bindings for IAMPolicy RPCs",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "ServiceAccount.scopes is no longer deprecated",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "removed unused endpoints for IAM methods",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "[batch] add InstancePolicy.boot_disk",
+          "issues": []
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "67892355444d8935eede0711398ebb64020cc88c",
+          "message": "[batch] fix minor docstring formatting",
+          "issues": [
+            "8828"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "aaaa62406bed418c0f7ca709912aafcd4f086399",
+          "message": "update the job id format requirement",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "aaaa62406bed418c0f7ca709912aafcd4f086399",
+          "message": "[batch] Adds named reservation to InstancePolicy",
+          "issues": [
+            "8822"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "aaaa62406bed418c0f7ca709912aafcd4f086399",
+          "message": "update the job id format requirement",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "aaaa62406bed418c0f7ca709912aafcd4f086399",
+          "message": "[batch] Adds named reservation to InstancePolicy",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "090ca64d5c60814181beffd3a6227a4aa3dac315",
+          "message": "[batch] fix minor docstring formatting",
+          "issues": [
+            "8761"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-batch",
+      "id": "1721635f-a5e7-4cf5-a69b-19be5271cfa4",
+      "createTime": "2023-02-13T21:52:15.188Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-artifact-registry",
+      "id": "e952e7cc-7f1b-428f-b12e-8b69e76bf145",
+      "createTime": "2023-02-13T21:52:15.188Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.area120:google-area120-tables",
+      "id": "292e1bff-dd73-4e7f-b7b0-739067fa70d9",
+      "createTime": "2023-02-13T21:52:15.187Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-appengine-admin",
+      "id": "7483b7ea-04c4-466b-afa2-83379bdcc493",
+      "createTime": "2023-02-13T21:52:15.187Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-apikeys",
+      "id": "48d1a15c-df9d-42bf-bc95-e4ab6eb73cb3",
+      "createTime": "2023-02-13T21:52:15.187Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-analyticshub",
+      "id": "172d2664-7f54-4c48-8b2b-2558d1a6f081",
+      "createTime": "2023-02-13T21:52:15.186Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.analytics:google-analytics-data",
+      "id": "c91e5c26-741c-4e5f-a4cd-b26c16016f2d",
+      "createTime": "2023-02-13T21:52:15.186Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.analytics:google-analytics-admin",
+      "id": "42fb9bab-a0e0-4a4c-afd9-e71cb6d6d8b6",
+      "createTime": "2023-02-13T21:52:15.186Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "8cea32a6c1c390314d8adb674818bb70692cfde5",
+          "message": "[accesscontextmanager] added AccessPolicy.scopes, EgressTo.external_resources, and IAM methods",
+          "issues": [
+            "8749"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-identity-accesscontextmanager",
+      "id": "ac2785f0-c537-45b7-a6a4-3912b0f62905",
+      "createTime": "2023-02-13T21:52:15.185Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "a4eb15234f7d1a1ff2e08b46c34fc8ae36e2e76e",
+          "message": "Policy Analyzer for Organization Policy is publicly available",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "a4eb15234f7d1a1ff2e08b46c34fc8ae36e2e76e",
+          "message": "[cloudasset] Brand and typo fixes",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "3642eff3ab0bb9bbdcaf9b27885a8f5ccc8b5a21",
+          "message": "[cloudasset] Small change for documentation",
+          "issues": [
+            "8838"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "2ab9395bb6e69b086072eb8589acd063ff768f2c",
+          "message": "[cloudasset] Small change for documentation",
+          "issues": [
+            "8831"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-asset",
+      "id": "1ee18467-aee4-4410-8fab-a41021086573",
+      "createTime": "2023-02-13T21:52:15.185Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "af47cbc9184a18ddf8775144a11b6813bdbe3db1",
+          "message": "Documentation improvements, including clarification that v1 labels/annotations are rejected in v2 API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "af47cbc9184a18ddf8775144a11b6813bdbe3db1",
+          "message": "[run] Adding support for encryption_key_revocation_action and encryption_key_shutdown_duration for RevisionTemplate and ExecutionTemplate",
+          "issues": [
+            "9013"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-run",
+      "id": "07fcca72-7a62-410e-97f5-5dc5bf6e8ed8",
+      "createTime": "2023-02-13T21:52:15.184Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "ede0030ae81475f801918d4722e45c52c6a65710",
+          "message": "[dataproc] add SPOT to Preemptibility enum",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "91aac1604e156fabcbd501c2a3260bb87e3de2fd",
+          "message": "[dataproc] added node groups API protos",
+          "issues": [
+            "8908"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataproc",
+      "id": "8badc944-e7f5-4de1-8a1f-f42908a67c52",
+      "createTime": "2023-02-13T21:52:15.184Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "bdd19f66c2e69eb5938c6bb32065713e328f6131",
+          "message": "[orgpolicy] support for OrgPolicy dry runs",
+          "issues": []
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-orgpolicy",
+      "id": "6f93dc25-8f68-461b-9849-e7aa4bb5b8f9",
+      "createTime": "2023-02-13T21:52:15.184Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "7542a0d2712cb956d26f092da768e9ca0c861bee",
+          "message": "[securitycenter] Update documentation for Security Command Center *.assets.list \"parent\" parameter",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "a8a49a784ad4d6876cb4e5430abd259cebb0073b",
+          "message": "[securitycenter] add user_name field to the finding access",
+          "issues": [
+            "8913"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "0d6e1cc0c1b742544ec3ee82069f3ead3e4c1620",
+          "message": "[securitycenter] add kernel_rootkit field to finding's list of attributes",
+          "issues": [
+            "8878"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d8e47d301c82ef7b98c9a9a39d606512542becb2",
+          "message": "[securitycenter] Add files field to finding's list of attributes",
+          "issues": [
+            "8773"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-securitycenter",
+      "id": "731609be-17c7-40a3-aaed-8304ae1d55ee",
+      "createTime": "2023-02-13T21:52:15.181Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "ba2b7873ee8619f32c1591dd408db60c9c1eda37",
+          "message": "[java-maps-routing] Add ExtraComputations feature to ComputeRoutes and ComputeRouteMatrix",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "15915353520fc532cf1702feed9643c8ac045d29",
+          "message": "[java-maps-routing] updated comment for ComputeRoutesRequest and ComputeRouteMatrixRequest",
+          "issues": [
+            "8912"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "15915353520fc532cf1702feed9643c8ac045d29",
+          "message": "updated comment for RouteTravelMode",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "15915353520fc532cf1702feed9643c8ac045d29",
+          "message": "[java-maps-routing] updated comment for Route.route_token",
+          "issues": []
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "2bf8d508df55a3300a369bb76fd2625871967078",
+          "message": "[maps-routing] new module for maps-routing",
+          "issues": [
+            "8811"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.maps:google-maps-routing",
+      "id": "40ba5378-9b19-4e08-b17b-3755892f3520",
+      "createTime": "2023-02-13T21:52:15.180Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "51340ea2ff90be99804df18612d6f17011bf9b01",
+          "message": "[compute] Update Compute Engine API to revision 20230103 (#769)",
+          "issues": [
+            "9018"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "dc5891c67f13b66d3058dc2fbcbfd518bb85647b",
+          "message": "[compute] Update Compute Engine API to revision 20221224 (#760)",
+          "issues": [
+            "9012"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "fd7188353fd5a476ef74ebcba1dde4c64563fd1a",
+          "message": "[compute] Update Compute Engine API to revision 20221126 (#757)",
+          "issues": [
+            "8885"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "0683411d49cb90dc1039126593c06e9550d076e8",
+          "message": "[compute] Update Compute Engine API to revision 20221101 (#751)",
+          "issues": [
+            "8825"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-compute",
+      "id": "37873dee-b036-4a2e-83ce-d361c63c3f18",
+      "createTime": "2023-02-13T21:52:15.180Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "2c1bd383046e895f30a4c720ebbef7a7c78c9e0c",
+          "message": "[dialogflow] Reformat some comments and documentation",
+          "issues": [
+            "9024"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "97d92e8845dd1743030add05843341a40128133a",
+          "message": "updated go library package",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "97d92e8845dd1743030add05843341a40128133a",
+          "message": "[dialogflow] Added SuggestConversationSummary RPC",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "7b7faf395cee2c6256dbaa4e43812da4bc13bb38",
+          "message": "clarified docs for Sentiment",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7b7faf395cee2c6256dbaa4e43812da4bc13bb38",
+          "message": "[dialogflow] added cx_current_page field to AutomatedAgentReply",
+          "issues": [
+            "8830"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "f7d5c7f51f53057347db6cd7d861845c2ba34d27",
+          "message": "clarified docs for Sentiment",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "f7d5c7f51f53057347db6cd7d861845c2ba34d27",
+          "message": "[dialogflow] added cx_current_page field to AutomatedAgentReply",
+          "issues": [
+            "8820"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dialogflow",
+      "id": "f11ca260-155a-42ca-99c6-e5b55d7a20f4",
+      "createTime": "2023-02-13T21:52:15.179Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "374fd84892fa30c77bb61c0eb50d02358c5cbcc1",
+          "message": "[gke-multi-cloud] Added support for Azure workload identity federation",
+          "issues": [
+            "9055"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "b7f1f6d5640c5dc3a23fc1399d668bf07e4396a7",
+          "message": "[gke-multi-cloud] Support AttachedClusters",
+          "issues": [
+            "8924"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gke-multi-cloud",
+      "id": "c2f76e4b-deff-468b-908f-f69c25986fae",
+      "createTime": "2023-02-13T21:52:15.179Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "2396d77e8d2f93169f9e04b8235f20c7560e3c04",
+          "message": "[dataplex] Improvements to DataScan API documentation",
+          "issues": [
+            "9054"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "77e652621668df7128f52aa949db1be1a9ed9e5c",
+          "message": "added StorageFormat.iceberg",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "77e652621668df7128f52aa949db1be1a9ed9e5c",
+          "message": "[dataplex] DataScans service",
+          "issues": [
+            "8902"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "77e652621668df7128f52aa949db1be1a9ed9e5c",
+          "message": "[dataplex] fix minor docstring formatting",
+          "issues": []
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataplex",
+      "id": "4649f333-7fb1-48a6-b0fc-d056519b32fe",
+      "createTime": "2023-02-13T21:52:15.179Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "32bd679cb746824c37a8c9c408f430e3728fd0d0",
+          "message": "[vmwareengine] resource proto messages moved to new file",
+          "issues": [
+            "9044"
+          ],
+          "breakingChangeNote": "[vmwareengine] resource proto messages moved to new file ([#9044](https://github.com/ddixit14/google-cloud-java/issues/9044))"
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "a6ed63d89e350a064a93568a04bf7e1691b40130",
+          "message": "[java-vmwareengine] update location in docstrings to use `us-central1`",
+          "issues": [
+            "8962"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d61b54a212a592c9884b3886c0fea8b4b65c65fb",
+          "message": "[vmwareengine] new module for vmwareengine",
+          "issues": [
+            "8837"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-vmwareengine",
+      "id": "f6c00245-1164-4c5c-8343-2eb45c472092",
+      "createTime": "2023-02-13T21:52:15.178Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "20c36b2df369868f5a07db98a40e8d2a7432f6e7",
+          "message": "[networkconnectivity] remove policy based routing API",
+          "issues": [
+            "9036"
+          ],
+          "breakingChangeNote": "[networkconnectivity] remove policy based routing API ([#9036](https://github.com/ddixit14/google-cloud-java/issues/9036))"
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-networkconnectivity",
+      "id": "bdeda077-54a2-4fa4-936a-249702af4429",
+      "createTime": "2023-02-13T21:52:15.178Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "ec05dad77119cf97adcfe1a7d067d2591e234b51",
+          "message": "[tpu] proper http bindings for v2 API",
+          "issues": [
+            "9035"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "1ed54abe36f274d60d81c4c829dadc8aece72950",
+          "message": "[tpu] fix minor docstring formatting",
+          "issues": [
+            "8920"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "21fe6697a41873fb4d51c68e2670429797f4f8f3",
+          "message": "fix incorrect resource annotations for TPU v2alpha1 API",
+          "issues": [],
+          "breakingChangeNote": "fix incorrect resource annotations for TPU v2alpha1 API"
+        },
+        {
+          "type": "docs",
+          "sha": "21fe6697a41873fb4d51c68e2670429797f4f8f3",
+          "message": "minor updates in comments",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "21fe6697a41873fb4d51c68e2670429797f4f8f3",
+          "message": "[tpu] publishing TPU v2 API",
+          "issues": [
+            "8851"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-tpu",
+      "id": "f8e85e40-efc9-488e-918a-d5491d367dd9",
+      "createTime": "2023-02-13T21:52:15.177Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "2bf4ad6a6f59eec0b6944617721aa94352b25b0b",
+          "message": "[certificatemanager] workaround crashes in gRPC for C++",
+          "issues": [
+            "9033"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-certificate-manager",
+      "id": "7559a82b-f05d-408b-807c-9a6abe474b09",
+      "createTime": "2023-02-13T21:52:15.177Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "fd273d671446aedbb7662c48222f2b573cbf837a",
+          "message": "[speech] Clarified boost usage",
+          "issues": [
+            "9032"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "e0b7a8602db56ca3dd33c42be7fc141da4bfa818",
+          "message": "[speech] Added new fields to facilitate debugging",
+          "issues": [
+            "8867"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-speech",
+      "id": "629a0ab0-f795-4411-8e64-060bd43324ac",
+      "createTime": "2023-02-13T21:52:15.177Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "9591b891f6fe7ad47f3a94e45da1b7823539d86a",
+          "message": "[cloudtrace] Remove html formatting (cleanup)",
+          "issues": [
+            "9027"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-trace",
+      "id": "3ce4ea68-8152-4af1-998a-1f15dd9b78a2",
+      "createTime": "2023-02-13T21:52:15.176Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "7d96c4ed28ed2b34d61f0503dae4cea3b13bbd82",
+          "message": "[datalineage] fixed formatting for several literal expressions",
+          "issues": [
+            "9026"
+          ],
+          "scope": "ruby"
+        },
+        {
+          "type": "feat",
+          "sha": "ea8d17b7f18daefa103965592891cf7d29e9ee60",
+          "message": "[datalineage] new module for datalineage",
+          "issues": [
+            "8996"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-datalineage",
+      "id": "830b74a9-04b0-4dc8-8388-2d54f75d42af",
+      "createTime": "2023-02-13T21:52:15.176Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "10bb0cb494f64b864408ede46834e1046351370c",
+          "message": "[dialogflow-cx] added JSON_PACKAGE field to ExportAgentRequest",
+          "issues": [
+            "9025"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "b0b9eb0113850371ce0e2930d3fda96791d62f55",
+          "message": "[dialogflow-cx] Update Compute Engine API to revision 20221224 (#760)",
+          "issues": [
+            "8985"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "b0b9eb0113850371ce0e2930d3fda96791d62f55",
+          "message": "updated go library package",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "b0b9eb0113850371ce0e2930d3fda96791d62f55",
+          "message": "[dialogflow-cx] ResponseMessage proto contains channel information",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "55b45c1a88aa6df8413dab3c351feb6f39829524",
+          "message": "[dialogflow-cx] ResponseMessage proto contains channel information",
+          "issues": [
+            "8978"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "ebe3f8a230d66c2fe8effb14e5c07001ecc6b0fd",
+          "message": "[dialogflow-cx] Clarified Agent Assist max retention is 30 days",
+          "issues": [
+            "8821"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "3ae47ae323b455c30da4f909ea913c1633bebc97",
+          "message": "[dialogflow-cx] Clarified Agent Assist max retention is 30 days",
+          "issues": [
+            "8813"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dialogflow-cx",
+      "id": "c7e3f5c4-4c7d-4a71-9536-e1f4889c61f1",
+      "createTime": "2023-02-13T21:52:15.176Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "8816cde0b23ef5e64adfbf75796ca0f17e537703",
+          "message": "[cloudoptimization] clarification for deprecated fields",
+          "issues": [
+            "9062"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-optimization",
+      "id": "2a32bec3-2329-4165-ad86-6eb1dc8ba2bd",
+      "createTime": "2023-02-13T21:52:15.176Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "2bccdf3a5f68f27cf5ba914e6b5b0c00202cd6af",
+          "message": "[container] Add clarification on whether `NodePool.version` is a required field",
+          "issues": [
+            "9074"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "dd109d865193bfeb809cdcdd9a5043edac253e91",
+          "message": "[container] Improve `version` documentation for `NodePool`",
+          "issues": [
+            "9061"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "55e4de106b8f6fc41a706248ad3817d564367777",
+          "message": "[container] clarified wording around the NodePoolUpdateStrategy default behavior",
+          "issues": [
+            "9046"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "22983e042e14c2657e298bb7a523b4b24eb59eff",
+          "message": "[container] Add support for viewing the subnet IPv6 CIDR and services IPv6 CIDR assigned to dual stack clusters",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d52e5250e5c1f58eebae5042c6941030a99d2e2a",
+          "message": "[container] Add field for enabled Beta K8s APIs in proto",
+          "issues": [
+            "8960"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "bcd0111fe0f7fa1478a45fc695bb56f82c3fc2c4",
+          "message": "[container] add etags for cluster and node pool update operations",
+          "issues": [
+            "8930"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a4d2cf03fb7cc177c023765277fb4d816c715328",
+          "message": "add EphemeralStorageLocalSsdConfig and LocalNvmeSsdBlockConfig APIs to v1alpha1, v1beta1, v1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "a4d2cf03fb7cc177c023765277fb4d816c715328",
+          "message": "[container] Release GKE CloudDNS Cluster Scope",
+          "issues": [
+            "8928"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a4d2cf03fb7cc177c023765277fb4d816c715328",
+          "message": "add EphemeralStorageLocalSsdConfig and LocalNvmeSsdBlockConfig APIs to v1alpha1, v1beta1, v1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "a4d2cf03fb7cc177c023765277fb4d816c715328",
+          "message": "[container] add WindowsNodeConfig field to v1alpha1, v1beta1, v1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "033567f1f61b29d339cc86b2c2f6892e77535029",
+          "message": "[container] Add support for specifying stack type for clusters. This will allow clusters to be created as dual stack or toggled between IPV4 and dual stack",
+          "issues": [
+            "8917"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "033567f1f61b29d339cc86b2c2f6892e77535029",
+          "message": "[container] Add support for specifying stack type for clusters. This will allow clusters to be created as dual stack or toggled between IPV4 and dual stack",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "184ae9270b9ecd4d5af4bff19675f558d6141e82",
+          "message": "[container] add a FastSocket API",
+          "issues": [
+            "8845"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "3a6094c402f8ed7d26266e6f5164aa49bd51526b",
+          "message": "[container] add a FastSocket API",
+          "issues": [
+            "8842"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d50169ddac281e7c3c38424db996ab5e41ce0927",
+          "message": "[container] add compact placement feature for node pools",
+          "issues": [
+            "8786"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-container",
+      "id": "2a7adcb7-5515-4e66-8df7-02912561c4ea",
+      "createTime": "2023-02-13T21:52:15.175Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "3cebec3f6958dbf611473df55947b3d33d2ea6db",
+          "message": "[aiplatform] add service_networking.proto to aiplatform v1",
+          "issues": [
+            "9073"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "ffaad0e76a6111a36b7be661277dbe5a3c6ebcfa",
+          "message": "[aiplatform] add enable_dashboard_access in aiplatform v1 and v1beta1",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "51e4b33514d09b64f5b5941779681ae31ec7dd51",
+          "message": "[aiplatform] add instance_config to BatchPredictionJob in aiplatform v1 batch_prediction_job.proto",
+          "issues": [
+            "8953"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7d94be78efa64df7e626132e43da56d8ca198e8",
+          "message": "[aiplatform] add service_account to UploadModelRequest in aiplatform v1beta1 model_service.proto",
+          "issues": [
+            "8895"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "b68a7c19a20927530e90cb829fedbc54bd3d6cf8",
+          "message": "[aiplatform] add SearchDataItems RPC in aiplatform version v1 and v1beta1 dataset_service.proto",
+          "issues": [
+            "8859"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7304a6b6cada0a0f6257405b390f2d512ec35fe0",
+          "message": "[aiplatform] add service_account to batch_prediction_job in aiplatform v1 batch_prediction_job.proto",
+          "issues": [
+            "8780"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "fd8bfdd721ddcd68e77765cbd90ff3dae5fb0676",
+          "message": "[aiplatform] add instance_config to batch_prediction_job in aiplatform v1beta1 batch_prediction_job.proto",
+          "issues": [
+            "8759"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-aiplatform",
+      "id": "ea6117e0-1958-4d1d-95cb-88d1f492662e",
+      "createTime": "2023-02-13T21:52:15.175Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "fix",
+          "sha": "0b7209ac1f38aa4005d619249a6f93f44aef7ca7",
+          "message": "enable java-bigqueryconnect ITSystemTest",
+          "issues": [
+            "9089"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigqueryconnection",
+      "id": "75cc48ee-c83b-4696-9d8d-2a6a6e57d1f8",
+      "createTime": "2023-02-13T21:52:15.174Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "feat",
+          "sha": "935443d917998991dc6af62bd594091164017117",
+          "message": "[documentai] Added EvaluationReference to evaluation.proto",
+          "issues": [
+            "9085"
+          ],
+          "breakingChangeNote": "The TrainProcessorVersion parent was incorrectly annotated."
+        },
+        {
+          "type": "feat",
+          "sha": "f8451473516eb45bdd7251d3533c28da4a31e652",
+          "message": "[documentai] added advanced_ocr_options field in OcrConfig",
+          "issues": [
+            "9042"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "267aa2d725f7098eb3b0ba3a28d964366ff3c17b",
+          "message": "[documentai] exposed GetProcessorType to v1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "267aa2d725f7098eb3b0ba3a28d964366ff3c17b",
+          "message": "[documentai] exposed GetProcessorType to v1beta3",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "added process_options field in ProcessRequest in document_processor_service.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "added sample_document_uris field in ProcessorType in processor_type.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "[documentai] added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto",
+          "issues": [
+            "8909"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "added process_options field in ProcessRequest in document_processor_service.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "added sample_document_uris field in ProcessorType in processor_type.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "[documentai] added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "[documentai] added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "[documentai] added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto",
+          "issues": []
+        },
+        {
+          "type": "deps",
+          "sha": "4e77219472f16610db44c0cf8747e2c9171aca18",
+          "message": "Updating gapic-bom, jar & pom-parent versions.",
+          "issues": [
+            "8827"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "85717c2e9e4bf61040fbe62af6192222b2584691",
+          "message": "[documentai] added field_mask field in DocumentOutputConfig.GcsOutputConfig in document_io.proto",
+          "issues": [
+            "8781"
+          ]
+        }
+      ],
+      "version": "1.5.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-document-ai",
+      "id": "47b12bdb-adad-44a4-b107-2cc6fc9d7994",
+      "createTime": "2023-02-13T21:52:15.173Z"
+    },
+    {
+      "changes": [
+        {
           "type": "docs",
           "sha": "2c1bd383046e895f30a4c720ebbef7a7c78c9e0c",
           "message": "[dialogflow] Reformat some comments and documentation",
@@ -276,5 +4710,5 @@
       "createTime": "2023-02-03T16:27:23.198Z"
     }
   ],
-  "updateTime": "2023-02-03T16:27:23.199Z"
+  "updateTime": "2023-02-13T21:52:15.249Z"
 }
