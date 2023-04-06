@@ -4,6 +4,5997 @@
     {
       "changes": [
         {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-workstations",
+      "id": "62a2870c-7e5d-4394-a796-daf30dd7d211",
+      "createTime": "2023-04-06T15:19:22.734Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "64dc942b7e813612980301d0863c5ebc1f0c60b9",
+          "message": "[workflows] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9206"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-workflows",
+      "id": "d6b6bf52-5ae7-43a4-aaad-e86e93fece99",
+      "createTime": "2023-04-06T15:19:22.733Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-workflow-executions",
+      "id": "5e6b20c7-7a3c-42e9-b379-58ab7240be7e",
+      "createTime": "2023-04-06T15:19:22.732Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-websecurityscanner",
+      "id": "ecfdabf2-774b-4b4d-bd7e-6958746cbb09",
+      "createTime": "2023-04-06T15:19:22.731Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-webrisk",
+      "id": "ce114fd6-ae0a-4dab-b4ff-f908c5b25bad",
+      "createTime": "2023-04-06T15:19:22.730Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-vpcaccess",
+      "id": "5b90c2df-5913-47f6-a0a5-1c718103463f",
+      "createTime": "2023-04-06T15:19:22.729Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "32bd679cb746824c37a8c9c408f430e3728fd0d0",
+          "message": "[vmwareengine] resource proto messages moved to new file",
+          "issues": [
+            "9044"
+          ],
+          "breakingChangeNote": "[vmwareengine] resource proto messages moved to new file ([#9044](https://github.com/ddixit14/google-cloud-java/issues/9044))"
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "a6ed63d89e350a064a93568a04bf7e1691b40130",
+          "message": "[java-vmwareengine] update location in docstrings to use `us-central1`",
+          "issues": [
+            "8962"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-vmwareengine",
+      "id": "a3a64501-78c4-4261-9099-427d11922f3c",
+      "createTime": "2023-04-06T15:19:22.728Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-vmmigration",
+      "id": "350f0cd2-b8ca-46ed-b23f-9cccdbb85b0a",
+      "createTime": "2023-04-06T15:19:22.727Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-vision",
+      "id": "9d28755c-fe2c-45b7-8007-96441902606d",
+      "createTime": "2023-04-06T15:19:22.726Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "c998ac303fea009fdf4b1f8bde59128a728a6165",
+          "message": "[transcoder] Specifying language code and display name for text and audio streams is now supported",
+          "issues": [
+            "9169"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-video-transcoder",
+      "id": "bf0f057c-1db6-4298-bee7-1b36d7211f9f",
+      "createTime": "2023-04-06T15:19:22.724Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-video-stitcher",
+      "id": "853f5301-6f96-4e33-bab4-17c111a36e10",
+      "createTime": "2023-04-06T15:19:22.723Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-live-stream",
+      "id": "be23a4f8-21d8-4cf1-980f-2f78226c22b6",
+      "createTime": "2023-04-06T15:19:22.722Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-video-intelligence",
+      "id": "e7f87576-cad7-46c4-8260-91ab3addcad6",
+      "createTime": "2023-04-06T15:19:22.721Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d6c639e1fe6d5765a3c890741716ea48fa17fd0d",
+          "message": "[translate] Add supported fields in document translation request and refresh translation v3 GA service proto documentation",
+          "issues": [
+            "9144"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "29d1889efd05ad21eac234e23655b716fd3637a2",
+          "message": "[translate] fix minor docstring formatting",
+          "issues": [
+            "8884"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-translate",
+      "id": "b69c48c7-fc9e-4a91-9e1d-39b7c76587ff",
+      "createTime": "2023-04-06T15:19:22.720Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "9591b891f6fe7ad47f3a94e45da1b7823539d86a",
+          "message": "[cloudtrace] Remove html formatting (cleanup)",
+          "issues": [
+            "9027"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-trace",
+      "id": "70439e95-2323-47af-b499-7a6a99217650",
+      "createTime": "2023-04-06T15:19:22.719Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ec05dad77119cf97adcfe1a7d067d2591e234b51",
+          "message": "[tpu] proper http bindings for v2 API",
+          "issues": [
+            "9035"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "1ed54abe36f274d60d81c4c829dadc8aece72950",
+          "message": "[tpu] fix minor docstring formatting",
+          "issues": [
+            "8920"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "21fe6697a41873fb4d51c68e2670429797f4f8f3",
+          "message": "fix incorrect resource annotations for TPU v2alpha1 API",
+          "issues": [],
+          "breakingChangeNote": "fix incorrect resource annotations for TPU v2alpha1 API"
+        },
+        {
+          "type": "docs",
+          "sha": "21fe6697a41873fb4d51c68e2670429797f4f8f3",
+          "message": "minor updates in comments",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "21fe6697a41873fb4d51c68e2670429797f4f8f3",
+          "message": "[tpu] publishing TPU v2 API",
+          "issues": [
+            "8851"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-tpu",
+      "id": "38208755-8592-47dd-a87b-495826283203",
+      "createTime": "2023-04-06T15:19:22.718Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "ed0f974bb0fd3390b7fc4a1a15d4eb3574042c63",
+          "message": "[texttospeech] fix minor docstring formatting",
+          "issues": [
+            "8914"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d68e8e0d2a2f35463cccabd5835404f6f22b1ea5",
+          "message": "[texttospeech] add LRS API",
+          "issues": [
+            "8887"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a1d5df0523c80e086714a54a0fe117fa888fe7e5",
+          "message": "[texttospeech] add LRS API",
+          "issues": [
+            "8881"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-texttospeech",
+      "id": "79f8cac9-85b5-44e6-a0af-b89579f646b7",
+      "createTime": "2023-04-06T15:19:22.717Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-tasks",
+      "id": "21374a87-7198-4456-a74b-a20025879255",
+      "createTime": "2023-04-06T15:19:22.716Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-talent",
+      "id": "ef751414-cc86-4210-91f6-6059e85769ef",
+      "createTime": "2023-04-06T15:19:22.715Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-storage-transfer",
+      "id": "10ec4da4-c240-422f-b68f-05b1c4c0ed95",
+      "createTime": "2023-04-06T15:19:22.714Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "b72fe9d68c5892b587a5be36ba12b33165a71be9",
+          "message": "increment retry setting values and test timeout values in IT",
+          "issues": [
+            "9188"
+          ],
+          "scope": "speech"
+        },
+        {
+          "type": "feat",
+          "sha": "bbc7ce43f3e03ac5ecef99b88054c0762c865f32",
+          "message": "[speech] Voice Activity Detection: adding speech event time and speech event type",
+          "issues": [
+            "9154"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "fd273d671446aedbb7662c48222f2b573cbf837a",
+          "message": "[speech] Clarified boost usage",
+          "issues": [
+            "9032"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "e0b7a8602db56ca3dd33c42be7fc141da4bfa818",
+          "message": "[speech] Added new fields to facilitate debugging",
+          "issues": [
+            "8867"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-speech",
+      "id": "e902ec03-0fe2-41bf-853c-804538afc753",
+      "createTime": "2023-04-06T15:19:22.712Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-shell",
+      "id": "2e0499b4-0a59-4624-9b3d-34ad97bfa984",
+      "createTime": "2023-04-06T15:19:22.711Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-servicedirectory",
+      "id": "f708ed16-4f88-4151-b163-8cbfbe1e7169",
+      "createTime": "2023-04-06T15:19:22.710Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-service-usage",
+      "id": "2b693167-b47f-4455-bcbf-576f53216973",
+      "createTime": "2023-04-06T15:19:22.709Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-service-management",
+      "id": "0a937e17-bcd5-46f5-afe8-6b2aaf84da0f",
+      "createTime": "2023-04-06T15:19:22.708Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-service-control",
+      "id": "93046707-f13a-4c5b-be76-41c860e6dde7",
+      "createTime": "2023-04-06T15:19:22.707Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "7542a0d2712cb956d26f092da768e9ca0c861bee",
+          "message": "[securitycenter] Update documentation for Security Command Center *.assets.list \"parent\" parameter",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "a8a49a784ad4d6876cb4e5430abd259cebb0073b",
+          "message": "[securitycenter] add user_name field to the finding access",
+          "issues": [
+            "8913"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "0d6e1cc0c1b742544ec3ee82069f3ead3e4c1620",
+          "message": "[securitycenter] add kernel_rootkit field to finding's list of attributes",
+          "issues": [
+            "8878"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-securitycenter",
+      "id": "2fb5ed20-d53c-41fb-98a8-c7af71d20996",
+      "createTime": "2023-04-06T15:19:22.706Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-securitycenter-settings",
+      "id": "7c7a314f-3bfe-4a4f-98e0-709fc313b13f",
+      "createTime": "2023-04-06T15:19:22.705Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "146655ac1ae48b3741876740585395ca8d422041",
+          "message": "[privateca] add X.509 Name Constraints support",
+          "issues": [
+            "9117"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-security-private-ca",
+      "id": "be39069b-afc4-4aee-b8bc-5c0744fb55e5",
+      "createTime": "2023-04-06T15:19:22.704Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "262aeee09e7dd0760f1b652564ae1231debf2e50",
+          "message": "[secretmanager] update public API to include annotation support",
+          "issues": [
+            "8921"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-secretmanager",
+      "id": "6eccecd9-6308-49ca-b656-74b913900b35",
+      "createTime": "2023-04-06T15:19:22.703Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d9c7ee510a1c128584f4ce41644e125c33f156dc",
+          "message": "[cloudscheduler] Location API methods",
+          "issues": [
+            "9181"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "c432bddefa25394a085c7b0a36723b1500754636",
+          "message": "[cloudscheduler] Updated Client Libraries for Cloud Scheduler",
+          "issues": [
+            "8911"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-scheduler",
+      "id": "aedeeee9-b2e6-4c8b-8ecb-c17f2758e872",
+      "createTime": "2023-04-06T15:19:22.702Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "af47cbc9184a18ddf8775144a11b6813bdbe3db1",
+          "message": "Documentation improvements, including clarification that v1 labels/annotations are rejected in v2 API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "af47cbc9184a18ddf8775144a11b6813bdbe3db1",
+          "message": "[run] Adding support for encryption_key_revocation_action and encryption_key_shutdown_duration for RevisionTemplate and ExecutionTemplate",
+          "issues": [
+            "9013"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-run",
+      "id": "15ac3683-92bb-4033-989a-d711acdf1058",
+      "createTime": "2023-04-06T15:19:22.701Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support collect and import GA4 event format with prebuilt whistle rule",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support exact searchable and retrievable in catalog attribute config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "deprecate retrievable_fields in product attribute",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support diversity type in serving config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "allow set feed id in merchant center link",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support data output to GCS",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "keep the API doc up-to-date with recent changes",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "[retail] support async write mode for WriteUserEvent API",
+          "issues": [
+            "8918"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support collect GA4 event format with prebuilt whistle rule",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support exact searchable and retrievable in catalog attribute config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "deprecate retrievable_fields in product attribute",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support diversity type in serving config",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "keep the API doc up-to-date with recent changes",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "[retail] support async write mode for WriteUserEvent API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support collect and import GA4 event format with prebuilt whistle rule",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support exact searchable and retrievable in catalog attribute config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "deprecate retrievable_fields in product attribute",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support diversity type in serving config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "allow set feed id in merchant center link",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support batch remove catalog attribute config",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support attribute suggestion in autocomplete",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "support data output to GCS",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "expose the local inventory data in product data retrieval",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "return personal product labels in search response",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "keep the API doc up-to-date with recent changes",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "580a6839a9b8a30d121a593134d448f1a293b3c0",
+          "message": "[retail] support async write mode for WriteUserEvent API",
+          "issues": []
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-retail",
+      "id": "5d8f6d63-e59b-4601-8ec4-911e037d532a",
+      "createTime": "2023-04-06T15:19:22.700Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-resourcemanager",
+      "id": "887f4c30-a869-4644-ba7e-9f8b659e46a5",
+      "createTime": "2023-04-06T15:19:22.699Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-resource-settings",
+      "id": "2057170a-9184-4324-96ba-16ad39b3c362",
+      "createTime": "2023-04-06T15:19:22.698Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-redis",
+      "id": "82c0f4c8-e56d-466d-865b-875d1c4f5422",
+      "createTime": "2023-04-06T15:19:22.697Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-recommender",
+      "id": "d067fd61-44e4-4087-9750-702e685e8b46",
+      "createTime": "2023-04-06T15:19:22.696Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "ecb1a1348db6835b277f2e81c10b75d7f8249600",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9205"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-recommendations-ai",
+      "id": "b064b595-719b-45e7-a832-8857398fe948",
+      "createTime": "2023-04-06T15:19:22.695Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "dd8490483ed36ac134c5e6f159e11bf6a231ea6b",
+          "message": "[recaptchaenterprise] add reCAPTCHA Enterprise Fraud Prevention API",
+          "issues": [
+            "9241"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "604a32e481dc0f1cbfe8522798ad83bf625189c8",
+          "message": "[recaptchaenterprise] add account_verification field to Assessment for MFA",
+          "issues": [
+            "8888"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-recaptchaenterprise",
+      "id": "e952b686-7b96-4bac-a07e-f89f31dcd280",
+      "createTime": "2023-04-06T15:19:22.694Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-publicca",
+      "id": "f952cf15-c701-4d9d-b105-992570728590",
+      "createTime": "2023-04-06T15:19:22.693Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-profiler",
+      "id": "b1fdeb27-57ef-4240-8d23-6ee685d953a4",
+      "createTime": "2023-04-06T15:19:22.693Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-private-catalog",
+      "id": "0b7043b8-8389-4051-8316-886a20af767e",
+      "createTime": "2023-04-06T15:19:22.692Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-policy-troubleshooter",
+      "id": "3ba5e87a-a281-4eb5-81f7-5b866b76df5b",
+      "createTime": "2023-04-06T15:19:22.691Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-phishingprotection",
+      "id": "36c44b4c-2401-4556-92e0-7ec51959a367",
+      "createTime": "2023-04-06T15:19:22.690Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-os-login",
+      "id": "451adbd3-7212-4788-9135-6786fa141a83",
+      "createTime": "2023-04-06T15:19:22.689Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-os-config",
+      "id": "70298fa9-f896-4071-94e4-e08f1ea4c9d5",
+      "createTime": "2023-04-06T15:19:22.688Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "bdd19f66c2e69eb5938c6bb32065713e328f6131",
+          "message": "[orgpolicy] support for OrgPolicy dry runs",
+          "issues": []
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-orgpolicy",
+      "id": "2773313f-a227-4632-9465-1388a8b8bb3c",
+      "createTime": "2023-04-06T15:19:22.687Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-orchestration-airflow",
+      "id": "75344e4d-ef5d-4ed7-b660-abaee6c73983",
+      "createTime": "2023-04-06T15:19:22.686Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "8816cde0b23ef5e64adfbf75796ca0f17e537703",
+          "message": "[cloudoptimization] clarification for deprecated fields",
+          "issues": [
+            "9062"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-optimization",
+      "id": "2457dbe6-f453-4101-93e7-2c5be03c599a",
+      "createTime": "2023-04-06T15:19:22.685Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-notification",
+      "id": "e5b4937d-7c64-4927-a2e3-a4fc7b82b274",
+      "createTime": "2023-04-06T15:19:22.684Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "2b48de2ce1c3f8776c4ace587866d431dd5d1d02",
+          "message": "[notebooks] fix minor docstring formatting",
+          "issues": [
+            "8846"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-notebooks",
+      "id": "45845b64-f3fd-4dd4-8713-595ba0e9c25f",
+      "createTime": "2023-04-06T15:19:22.683Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "20c36b2df369868f5a07db98a40e8d2a7432f6e7",
+          "message": "[networkconnectivity] remove policy based routing API",
+          "issues": [
+            "9036"
+          ],
+          "breakingChangeNote": "[networkconnectivity] remove policy based routing API ([#9036](https://github.com/ddixit14/google-cloud-java/issues/9036))"
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-networkconnectivity",
+      "id": "9c1ceb91-f651-4106-bba8-fd93bf678996",
+      "createTime": "2023-04-06T15:19:22.682Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-network-security",
+      "id": "ed88f0b3-0cb2-49cb-a010-f6e0c24cab69",
+      "createTime": "2023-04-06T15:19:22.681Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-network-management",
+      "id": "c15604f2-309a-4d44-942a-e41a1053f315",
+      "createTime": "2023-04-06T15:19:22.681Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-monitoring",
+      "id": "4d2f0503-a066-44f5-92b8-fe7a1df2a549",
+      "createTime": "2023-04-06T15:19:22.680Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "3437b1cee0aab0be09cd1ecf55e9d04f8ddd4e81",
+          "message": "[monitoring-metricsscope] new module for monitoring-metricsscope",
+          "issues": [
+            "8875"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-monitoring-metricsscope",
+      "id": "5afbf1af-7220-4b50-9695-78e398921568",
+      "createTime": "2023-04-06T15:19:22.679Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "cecd9446fdea65ba132323488aa2fa85821519d3",
+          "message": "[monitoring-dashboards] added support for horizontal bar rendering and column settings on time series tables",
+          "issues": [
+            "8975"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-monitoring-dashboard",
+      "id": "0b86104e-aeb8-4716-99fd-d788e9fc1085",
+      "createTime": "2023-04-06T15:19:22.678Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-memcache",
+      "id": "c7f18953-1122-4500-95e2-7f408430e617",
+      "createTime": "2023-04-06T15:19:22.677Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-mediatranslation",
+      "id": "1b12fc91-0e32-4b5b-bd7f-9c2cfcdcc110",
+      "createTime": "2023-04-06T15:19:22.676Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "51bca7cc03768ee6e1064c184393ac914b5f013f",
+          "message": "[maps-routing] clarify usage of compute_alternative_routes in proto comment",
+          "issues": [
+            "9201"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "ba2b7873ee8619f32c1591dd408db60c9c1eda37",
+          "message": "[java-maps-routing] Add ExtraComputations feature to ComputeRoutes and ComputeRouteMatrix",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "15915353520fc532cf1702feed9643c8ac045d29",
+          "message": "[java-maps-routing] updated comment for ComputeRoutesRequest and ComputeRouteMatrixRequest",
+          "issues": [
+            "8912"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "15915353520fc532cf1702feed9643c8ac045d29",
+          "message": "updated comment for RouteTravelMode",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "15915353520fc532cf1702feed9643c8ac045d29",
+          "message": "[java-maps-routing] updated comment for Route.route_token",
+          "issues": []
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.maps:google-maps-routing",
+      "id": "d9b72359-18ca-4b0f-ac9a-e94cf01b0f5f",
+      "createTime": "2023-04-06T15:19:22.675Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7b6d3db3a86e93bca2788e916de813eb0e023673",
+          "message": "[alloydb] new module for alloydb",
+          "issues": [
+            "9170"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "c8e3fc06ff043161db00900db1eab63ddf625e62",
+          "message": "[maps-mapsplatformdatasets] new module for maps-mapsplatformdatasets",
+          "issues": [
+            "9159"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.maps:google-maps-mapsplatformdatasets",
+      "id": "98896043-629b-4ffc-af03-103a19ff4c98",
+      "createTime": "2023-04-06T15:19:22.674Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "1169d9e998b37f3e3130ba81241370bfff812b9b",
+          "message": "[java-maps-addressvalidation] Document that PREMISE_PROXIMITY is a valid value for an address granularity",
+          "issues": [
+            "8883"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "0020df607fb59292fb20ae13cb0257ab4c3a30c9",
+          "message": "rename addressvalidation module to maps-addressvalidation",
+          "issues": [
+            "8880"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.maps:google-maps-addressvalidation",
+      "id": "d528ba9e-dadf-44a6-83e5-0d7ff1583b0b",
+      "createTime": "2023-04-06T15:19:22.674Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-managed-identities",
+      "id": "088e1b2c-1b1d-4ad8-8dc2-cb5e07964409",
+      "createTime": "2023-04-06T15:19:22.673Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-life-sciences",
+      "id": "8937a1c6-5704-48b3-a1dd-9d1b534ed980",
+      "createTime": "2023-04-06T15:19:22.672Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-language",
+      "id": "0b3c99cd-c55c-467c-8abf-64925d5bef75",
+      "createTime": "2023-04-06T15:19:22.671Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "0fd61a47f23a24e56f9516a444a524c877be16ed",
+          "message": "[kmsinventory] new module for kmsinventory",
+          "issues": [
+            "9162"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-kmsinventory",
+      "id": "98ec17ab-0b47-4f69-b910-976d104344fb",
+      "createTime": "2023-04-06T15:19:22.670Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "8f2119d35384184b1d3d8de850b195daefcf98a3",
+          "message": "[cloudkms] add support for Coordinated External Keys",
+          "issues": [
+            "9197"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-kms",
+      "id": "efecf8f0-9495-4353-a01e-e4650353be68",
+      "createTime": "2023-04-06T15:19:22.669Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-iot",
+      "id": "824463da-b739-4f67-ba03-c378ba3fae2a",
+      "createTime": "2023-04-06T15:19:22.669Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-ids",
+      "id": "ea03371b-0a84-408a-a8ba-91c72388b6ce",
+      "createTime": "2023-04-06T15:19:22.668Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-iamcredentials",
+      "id": "f3db2f38-130a-4053-aeb3-ff8bccf6c49f",
+      "createTime": "2023-04-06T15:19:22.666Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "1ba2561d9a1ce36fa26d223be836d20c1c8aa337",
+          "message": "Remove 'unstable API' message from README.md",
+          "issues": [
+            "570"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "f6183a728e12acf3430bc7bb33c3ca0083b35014",
+          "message": "removing migrated grpc- and proto- modules from repository",
+          "issues": [
+            "592"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4a5ad26a6e3f5259a7d2aaa7f05bfc00f9735858",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.23",
+          "issues": [
+            "578"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "f96f89193fda5f81f4681cdc38a4186ec4b9e35a",
+          "message": "update dependency com.google.api:api-common to v2.3.1",
+          "issues": [
+            "567"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "f0645e72044f682a2705f1feb764ea9d23890487",
+          "message": "update dependency com.google.auth:google-auth-library-oauth2-http to v1.14.0",
+          "issues": [
+            "571"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "4e3aa7113ef7bbabc69cc099ab44177540249c89",
+          "message": "update dependency io.grpc:grpc-protobuf to v1.51.1",
+          "issues": [
+            "573"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "75ebf53bb99f4fc12f22eb71a35ab7ca06d032fe",
+          "message": "update dependency com.google.cloud:google-cloud-shared-dependencies to v3.1.0",
+          "issues": [
+            "565"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "b8453e541a860bcdd4e17a38d87bf371c4dbb542",
+          "message": "update dependency com.google.cloud:google-iam-policy to v1.6.22",
+          "issues": [
+            "560"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "5e7cedaa3c34dd24c1f50a622848e5a9d5318b54",
+          "message": "update dependency io.grpc:grpc-stub to v1.51.1",
+          "issues": [
+            "574"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "223bdff6f664730593637d8b21e539d2f2ffc60d",
+          "message": "update dependency com.google.protobuf:protobuf-bom to v3.21.12",
+          "issues": [
+            "563"
+          ]
+        },
+        {
+          "type": "deps",
+          "sha": "b42457951c54b9e882ab143dde29acdf4e246e6c",
+          "message": "update dependency com.google.protobuf:protobuf-java to v3.21.12",
+          "issues": [
+            "564"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-iam-policy",
+      "id": "fb4feda4-1ec0-4f75-a6c6-09bc47f76b8c",
+      "createTime": "2023-04-06T15:19:22.666Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-iam-admin",
+      "id": "069ed40f-7b67-444d-9698-accec524d415",
+      "createTime": "2023-04-06T15:19:22.665Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gsuite-addons",
+      "id": "79aafc4f-d1bb-4c93-919f-0b1ff6250a3c",
+      "createTime": "2023-04-06T15:19:22.664Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "460b25be090ea2d1125bf0729eced9d632bd995d",
+          "message": "[containeranalysis] Add VULNERABILITY_ASSESSMENT Note type to grafeas v1 API, adds Vex_Assessment derived from the Note to resources' occurrences, VEX notes now be written to add CVE assessments",
+          "issues": [
+            "9183"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "460b25be090ea2d1125bf0729eced9d632bd995d",
+          "message": "[containeranalysis] Import of Grafeas from Github",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "io.grafeas:grafeas",
+      "id": "6f1829e3-5bc1-490f-94e6-3038aa1c29a7",
+      "createTime": "2023-04-06T15:19:22.663Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gkehub",
+      "id": "bd620862-66dd-495d-84e0-f06bbd991a0a",
+      "createTime": "2023-04-06T15:19:22.662Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "374fd84892fa30c77bb61c0eb50d02358c5cbcc1",
+          "message": "[gke-multi-cloud] Added support for Azure workload identity federation",
+          "issues": [
+            "9055"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "b7f1f6d5640c5dc3a23fc1399d668bf07e4396a7",
+          "message": "[gke-multi-cloud] Support AttachedClusters",
+          "issues": [
+            "8924"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gke-multi-cloud",
+      "id": "05c0eab1-0e5d-4e71-9b92-365d547147e7",
+      "createTime": "2023-04-06T15:19:22.661Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gke-connect-gateway",
+      "id": "b624d1ff-67a6-4035-a93e-2431ddd2751d",
+      "createTime": "2023-04-06T15:19:22.660Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-gke-backup",
+      "id": "1f2ff5eb-e3ac-4627-9ae5-031f1ffefe5d",
+      "createTime": "2023-04-06T15:19:22.659Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-game-servers",
+      "id": "bf31ac4b-fb05-4a73-bffb-9e4d9a927177",
+      "createTime": "2023-04-06T15:19:22.658Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "8e44284d33ff8f43f28cea98dda509b5a798e543",
+          "message": "[cloudfunctions] add `available_cpu ` field",
+          "issues": [
+            "9231"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-functions",
+      "id": "bb724da7-498b-4e41-a154-884e9da682d9",
+      "createTime": "2023-04-06T15:19:22.657Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "2a513204fd642de8023a2e231e5269a2fd8f4c63",
+          "message": "[file] set longer polling timeouts for filestore DeleteBackup",
+          "issues": [
+            "9216"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-filestore",
+      "id": "912a7b26-5961-4f84-923d-bae8b5755a29",
+      "createTime": "2023-04-06T15:19:22.657Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-eventarc",
+      "id": "8dad0f56-0d81-4f1d-a8b6-00f60a8dd16e",
+      "createTime": "2023-04-06T15:19:22.656Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-eventarc-publishing",
+      "id": "e604219f-ab90-412f-9267-395c3a7cb0eb",
+      "createTime": "2023-04-06T15:19:22.654Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-essential-contacts",
+      "id": "71548fb4-65dd-415f-9260-95d36e82b597",
+      "createTime": "2023-04-06T15:19:22.654Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a98abeb76665699b84110a9b41c57c86c68ea455",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9204"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "eaef8f978ec8d7666638a1fc581d56bc44c915a3",
+          "message": "[clouderrorreporting] removed link to the regionalization page",
+          "issues": [
+            "9079"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-errorreporting",
+      "id": "ce6e75ed-794a-4515-a9f0-b0be42840527",
+      "createTime": "2023-04-06T15:19:22.653Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-enterpriseknowledgegraph",
+      "id": "5757e723-667b-4ab5-b4de-28cc2e4e8e11",
+      "createTime": "2023-04-06T15:19:22.652Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-domains",
+      "id": "52b1efab-8b54-4c25-8fa8-df289d2c1c64",
+      "createTime": "2023-04-06T15:19:22.651Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a293c4e636aa2b7223e439900578ca086c04e5d4",
+          "message": "[documentai] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9200"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a293c4e636aa2b7223e439900578ca086c04e5d4",
+          "message": "added enable_image_quality_scores field in OcrConfig",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "a293c4e636aa2b7223e439900578ca086c04e5d4",
+          "message": "added enable_symbol field in OcrConfig",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "a293c4e636aa2b7223e439900578ca086c04e5d4",
+          "message": "[documentai] added hints.language_hints field in OcrConfig",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "79ee60b31f538d790a6aa0c3f8797921a50c7b42",
+          "message": "[documentai] Added Training and Evaluation functions, request, responses and metadata to document_processor_service.proto",
+          "issues": [
+            "9145"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "935443d917998991dc6af62bd594091164017117",
+          "message": "[documentai] Added EvaluationReference to evaluation.proto",
+          "issues": [
+            "9085"
+          ],
+          "breakingChangeNote": "The TrainProcessorVersion parent was incorrectly annotated."
+        },
+        {
+          "type": "feat",
+          "sha": "f8451473516eb45bdd7251d3533c28da4a31e652",
+          "message": "[documentai] added advanced_ocr_options field in OcrConfig",
+          "issues": [
+            "9042"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "267aa2d725f7098eb3b0ba3a28d964366ff3c17b",
+          "message": "[documentai] exposed GetProcessorType to v1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "267aa2d725f7098eb3b0ba3a28d964366ff3c17b",
+          "message": "[documentai] exposed GetProcessorType to v1beta3",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "added process_options field in ProcessRequest in document_processor_service.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "added sample_document_uris field in ProcessorType in processor_type.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "[documentai] added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto",
+          "issues": [
+            "8909"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "added process_options field in ProcessRequest in document_processor_service.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "added sample_document_uris field in ProcessorType in processor_type.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "[documentai] added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "[documentai] added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "ff2f100e4dc2a259b9d15a3122262feeeb0e12aa",
+          "message": "[documentai] added sharding_config field in DocumentOutputConfig.GcsOutputConfig in document_io.proto",
+          "issues": []
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-document-ai",
+      "id": "19b70316-a281-4a52-b97a-9a1678128c52",
+      "createTime": "2023-04-06T15:19:22.650Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dns",
+      "id": "ea2e749f-f8e4-4c4e-9b92-3aaee87b70c3",
+      "createTime": "2023-04-06T15:19:22.650Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dms",
+      "id": "8bc1d051-b224-46cf-a2c0-d110eb35e003",
+      "createTime": "2023-04-06T15:19:22.649Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dlp",
+      "id": "3c1d2100-1bf3-4778-866a-a801d9f549e4",
+      "createTime": "2023-04-06T15:19:22.648Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "b0d43200dd35d2311ed2a35658142b829266e56a",
+          "message": "[distributedcloudedge] Add service_yaml parameters to edgecontainer GAPIC targets",
+          "issues": [
+            "9189"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-distributedcloudedge",
+      "id": "dc00a0d1-465e-4756-84f4-c0ab457125e6",
+      "createTime": "2023-04-06T15:19:22.647Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-discoveryengine",
+      "id": "bd99de37-e77c-4a91-83e7-e41059f3c051",
+      "createTime": "2023-04-06T15:19:22.646Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "4e9b04ae2cf2b6120bc186728797c63448f1e4e2",
+          "message": "clarified wording around quota usage",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "4e9b04ae2cf2b6120bc186728797c63448f1e4e2",
+          "message": "[dialogflow] added support for custom content types",
+          "issues": [
+            "9185"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "4e9b04ae2cf2b6120bc186728797c63448f1e4e2",
+          "message": "clarified wording around quota usage",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "4e9b04ae2cf2b6120bc186728797c63448f1e4e2",
+          "message": "[dialogflow] added support for custom content types",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "aaf97a6bbc7302e69315fdb1c434d69322b21853",
+          "message": "[dialogflow] added support for AssistQueryParameters and SynthesizeSpeechConfig",
+          "issues": [
+            "9123"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "2c1bd383046e895f30a4c720ebbef7a7c78c9e0c",
+          "message": "[dialogflow] Reformat some comments and documentation",
+          "issues": [
+            "9024"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "97d92e8845dd1743030add05843341a40128133a",
+          "message": "updated go library package",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "97d92e8845dd1743030add05843341a40128133a",
+          "message": "[dialogflow] Added SuggestConversationSummary RPC",
+          "issues": []
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dialogflow",
+      "id": "3fafbef7-17f8-445d-956a-6cd7e908b7be",
+      "createTime": "2023-04-06T15:19:22.646Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "bcb6df25961316c739ab275e3538240a37aec5e7",
+          "message": "[dialogflow-cx] clarified wording around quota usage",
+          "issues": [
+            "9209"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "aa813d581bb092cce53b067181c75d499040cbb7",
+          "message": "[dialogflow-cx] change java package of Cloud Build v2",
+          "issues": [
+            "9195"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "c6d7b9a1eb0dcde3d3dac950c1c91659e64a1e14",
+          "message": "[dialogflow-cx] Added persist_parameter_changes field from `query_params` to MatchIntentRequest",
+          "issues": [
+            "9168"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7fcde136372774152813b772d95269c0e135898f",
+          "message": "[dialogflow-cx] Added persist_parameter_changes field from `query_params` to MatchIntentRequest",
+          "issues": [
+            "9130"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "10bb0cb494f64b864408ede46834e1046351370c",
+          "message": "[dialogflow-cx] added JSON_PACKAGE field to ExportAgentRequest",
+          "issues": [
+            "9025"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "b0b9eb0113850371ce0e2930d3fda96791d62f55",
+          "message": "[dialogflow-cx] Update Compute Engine API to revision 20221224 (#760)",
+          "issues": [
+            "8985"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "b0b9eb0113850371ce0e2930d3fda96791d62f55",
+          "message": "updated go library package",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "b0b9eb0113850371ce0e2930d3fda96791d62f55",
+          "message": "[dialogflow-cx] ResponseMessage proto contains channel information",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "55b45c1a88aa6df8413dab3c351feb6f39829524",
+          "message": "[dialogflow-cx] ResponseMessage proto contains channel information",
+          "issues": [
+            "8978"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dialogflow-cx",
+      "id": "b99a40c3-f7aa-4cec-a6d7-046f57688b98",
+      "createTime": "2023-04-06T15:19:22.644Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-deploy",
+      "id": "532cee0d-bd3c-4b90-a973-ad65f4971201",
+      "createTime": "2023-04-06T15:19:22.643Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-debugger-client",
+      "id": "cfcc3287-3a81-4d2c-b753-ed8d85770238",
+      "createTime": "2023-04-06T15:19:22.642Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-datastream",
+      "id": "68075ba1-73e9-4335-8679-c1091a89a349",
+      "createTime": "2023-04-06T15:19:22.642Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "841366b8c25ed896de1c4c995ad85ae656d6b2ee",
+          "message": "[dataproc] add support for new Dataproc features",
+          "issues": [
+            "9127"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "ede0030ae81475f801918d4722e45c52c6a65710",
+          "message": "[dataproc] add SPOT to Preemptibility enum",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "91aac1604e156fabcbd501c2a3260bb87e3de2fd",
+          "message": "[dataproc] added node groups API protos",
+          "issues": [
+            "8908"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataproc",
+      "id": "6f7f1579-9c60-4fa5-9b4a-4ca8cc493be2",
+      "createTime": "2023-04-06T15:19:22.641Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "84d9aa0a2d1df3af904129c93c2af13bebc501be",
+          "message": "added QueryMetadata API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "84d9aa0a2d1df3af904129c93c2af13bebc501be",
+          "message": "added MoveTableToDatabase API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "84d9aa0a2d1df3af904129c93c2af13bebc501be",
+          "message": "added AlterMetadataResourceLocation API",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "84d9aa0a2d1df3af904129c93c2af13bebc501be",
+          "message": "[metastore] added RemoveIamPolicy API",
+          "issues": [
+            "8922"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataproc-metastore",
+      "id": "b65ec16a-65ca-4cf2-b91a-b23d95b364e8",
+      "createTime": "2023-04-06T15:19:22.640Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "2396d77e8d2f93169f9e04b8235f20c7560e3c04",
+          "message": "[dataplex] Improvements to DataScan API documentation",
+          "issues": [
+            "9054"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "77e652621668df7128f52aa949db1be1a9ed9e5c",
+          "message": "added StorageFormat.iceberg",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "77e652621668df7128f52aa949db1be1a9ed9e5c",
+          "message": "[dataplex] DataScans service",
+          "issues": [
+            "8902"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "77e652621668df7128f52aa949db1be1a9ed9e5c",
+          "message": "[dataplex] fix minor docstring formatting",
+          "issues": []
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataplex",
+      "id": "c7516eee-0a5b-46ee-8a09-f59c3c89b765",
+      "createTime": "2023-04-06T15:19:22.639Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "7d96c4ed28ed2b34d61f0503dae4cea3b13bbd82",
+          "message": "[datalineage] fixed formatting for several literal expressions",
+          "issues": [
+            "9026"
+          ],
+          "scope": "ruby"
+        },
+        {
+          "type": "feat",
+          "sha": "ea8d17b7f18daefa103965592891cf7d29e9ee60",
+          "message": "[datalineage] new module for datalineage",
+          "issues": [
+            "8996"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-datalineage",
+      "id": "df275d6f-8cb0-4e77-b42e-d68ff12b6506",
+      "createTime": "2023-04-06T15:19:22.638Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-datalabeling",
+      "id": "ebeaace6-db18-494e-b87a-7232b6866c71",
+      "createTime": "2023-04-06T15:19:22.637Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataform",
+      "id": "7c693ed0-2c68-43e4-a81c-44687064d2ad",
+      "createTime": "2023-04-06T15:19:22.636Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-dataflow",
+      "id": "f94f1976-8fd7-4d2b-b7d6-8423ca6bb60a",
+      "createTime": "2023-04-06T15:19:22.636Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "1cd532f0c79eb9627f4532a1aabb92969492393d",
+          "message": "[datacatalog] add support for new ImportEntries() API, including format of the dump",
+          "issues": [
+            "9214"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-datacatalog",
+      "id": "d4b1d8f1-7ed3-4985-8581-c18d5a5073a3",
+      "createTime": "2023-04-06T15:19:22.635Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-data-fusion",
+      "id": "f4808b08-d3a1-497d-8292-2229f88eeaf1",
+      "createTime": "2023-04-06T15:19:22.634Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-contentwarehouse",
+      "id": "503e6a30-5eed-4068-9d09-ea542ad74de3",
+      "createTime": "2023-04-06T15:19:22.633Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-containeranalysis",
+      "id": "4d8623b1-2dc1-43cf-9241-81f2132840d8",
+      "createTime": "2023-04-06T15:19:22.632Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "169bba9c956cd2c30dd32cd89d7408a69bd77345",
+          "message": "[container] minor typo fix",
+          "issues": [
+            "9190"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "169bba9c956cd2c30dd32cd89d7408a69bd77345",
+          "message": "[container] minor typo fix",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "c4f8231aee5cb874190d396134decb3e88fb1f8c",
+          "message": "[container] minor grammar improvements",
+          "issues": [
+            "9140"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "2bccdf3a5f68f27cf5ba914e6b5b0c00202cd6af",
+          "message": "[container] Add clarification on whether `NodePool.version` is a required field",
+          "issues": [
+            "9074"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "dd109d865193bfeb809cdcdd9a5043edac253e91",
+          "message": "[container] Improve `version` documentation for `NodePool`",
+          "issues": [
+            "9061"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "55e4de106b8f6fc41a706248ad3817d564367777",
+          "message": "[container] clarified wording around the NodePoolUpdateStrategy default behavior",
+          "issues": [
+            "9046"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "22983e042e14c2657e298bb7a523b4b24eb59eff",
+          "message": "[container] Add support for viewing the subnet IPv6 CIDR and services IPv6 CIDR assigned to dual stack clusters",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d52e5250e5c1f58eebae5042c6941030a99d2e2a",
+          "message": "[container] Add field for enabled Beta K8s APIs in proto",
+          "issues": [
+            "8960"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "bcd0111fe0f7fa1478a45fc695bb56f82c3fc2c4",
+          "message": "[container] add etags for cluster and node pool update operations",
+          "issues": [
+            "8930"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a4d2cf03fb7cc177c023765277fb4d816c715328",
+          "message": "add EphemeralStorageLocalSsdConfig and LocalNvmeSsdBlockConfig APIs to v1alpha1, v1beta1, v1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "a4d2cf03fb7cc177c023765277fb4d816c715328",
+          "message": "[container] Release GKE CloudDNS Cluster Scope",
+          "issues": [
+            "8928"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a4d2cf03fb7cc177c023765277fb4d816c715328",
+          "message": "add EphemeralStorageLocalSsdConfig and LocalNvmeSsdBlockConfig APIs to v1alpha1, v1beta1, v1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "a4d2cf03fb7cc177c023765277fb4d816c715328",
+          "message": "[container] add WindowsNodeConfig field to v1alpha1, v1beta1, v1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "033567f1f61b29d339cc86b2c2f6892e77535029",
+          "message": "[container] Add support for specifying stack type for clusters. This will allow clusters to be created as dual stack or toggled between IPV4 and dual stack",
+          "issues": [
+            "8917"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "033567f1f61b29d339cc86b2c2f6892e77535029",
+          "message": "[container] Add support for specifying stack type for clusters. This will allow clusters to be created as dual stack or toggled between IPV4 and dual stack",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "184ae9270b9ecd4d5af4bff19675f558d6141e82",
+          "message": "[container] add a FastSocket API",
+          "issues": [
+            "8845"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-container",
+      "id": "6e6fb0a6-738c-4736-a2a8-9d66c0960f23",
+      "createTime": "2023-04-06T15:19:22.631Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "a9bffaa4fdefa1195a7da01c0c3c32406e5f265c",
+          "message": "[contactcenterinsights] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9176"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a9bffaa4fdefa1195a7da01c0c3c32406e5f265c",
+          "message": "[contactcenterinsights] add a way to specify the conversation automatic analysis percentage for the UploadConversation API when creating Analyses in Insights",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "4175bea0d87c75feced2e43421b3a2575840df9d",
+          "message": "[contactcenterinsights] Add IngestConversationsStats",
+          "issues": [
+            "9081"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "765a8bf090936359da84a1d224bc06132fc47910",
+          "message": "[contactcenterinsights] add Configurable Analysis, Bulk Upload, Bulk Analyze, Delete Issue Apis",
+          "issues": [
+            "8910"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-contact-center-insights",
+      "id": "fd3b607d-7c49-44d4-a245-9d9f4b592e57",
+      "createTime": "2023-04-06T15:19:22.630Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "405cb92007e1539c319460faecac743f7c38c54b",
+          "message": "[compute] Update Compute Engine API to revision 20230307 (#770)",
+          "issues": [
+            "9230"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "51340ea2ff90be99804df18612d6f17011bf9b01",
+          "message": "[compute] Update Compute Engine API to revision 20230103 (#769)",
+          "issues": [
+            "9018"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "dc5891c67f13b66d3058dc2fbcbfd518bb85647b",
+          "message": "[compute] Update Compute Engine API to revision 20221224 (#760)",
+          "issues": [
+            "9012"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "fd7188353fd5a476ef74ebcba1dde4c64563fd1a",
+          "message": "[compute] Update Compute Engine API to revision 20221126 (#757)",
+          "issues": [
+            "8885"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-compute",
+      "id": "0544252b-545e-4d38-b340-f90fb6b03b4f",
+      "createTime": "2023-04-06T15:19:22.630Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-cloudcommerceconsumerprocurement",
+      "id": "b7dcfca1-e4eb-40eb-9560-e8eaa6e86710",
+      "createTime": "2023-04-06T15:19:22.629Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "49da4af1edcdafa021a57c395bff2a5ef04cac74",
+          "message": "[cloudbuild] change java package of Cloud Build v2",
+          "issues": [
+            "9218"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "fb876902cb6ad7b19688d66df091d362a43f80f9",
+          "message": "[cloudbuild] Add DefaultLogsBucketBehavior to BuildOptions",
+          "issues": [
+            "9196"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "fb876902cb6ad7b19688d66df091d362a43f80f9",
+          "message": "[cloudbuild] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "fb876902cb6ad7b19688d66df091d362a43f80f9",
+          "message": "[cloudbuild] change java package of Cloud Build v2",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "bfc6efb56d082e7b71e5977999f6ee4a7189e0b5",
+          "message": "[cloudbuild] remove empty v2.CloudBuild definition",
+          "issues": [
+            "9077"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-build",
+      "id": "c2d88c1f-b25b-4072-af8b-e3bf10bdc9a2",
+      "createTime": "2023-04-06T15:19:22.628Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "752495fe41d7594c83b7c9e87f3851b0e3b423ae",
+          "message": "[cloudchannel] add show_future_offers to ListOffers",
+          "issues": [
+            "9212"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "0d027d0fdd96a5371b1046b1ccb8831ae9e377f4",
+          "message": "[cloudchannel] Add support for granular repricing configurations via SkuGroups in Cloud Channel Repricing APIs",
+          "issues": [
+            "8900"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-channel",
+      "id": "1f80ec2d-19e7-45c3-b821-40e00574b042",
+      "createTime": "2023-04-06T15:19:22.627Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7b6d3db3a86e93bca2788e916de813eb0e023673",
+          "message": "[alloydb] new module for alloydb",
+          "issues": [
+            "9170"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "74c459cbfc31748ee461bffd6fc09d381c85c66d",
+          "message": "[certificatemanager] corrected information about the limit of certificates that can be attached to a Certificate Map Entry",
+          "issues": [
+            "9167"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "2bf4ad6a6f59eec0b6944617721aa94352b25b0b",
+          "message": "[certificatemanager] workaround crashes in gRPC for C++",
+          "issues": [
+            "9033"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-certificate-manager",
+      "id": "fd59669f-ee24-4000-8768-ae6db61aa7ef",
+      "createTime": "2023-04-06T15:19:22.626Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-binary-authorization",
+      "id": "0203d605-58f1-4e9d-b89d-c8589ef376df",
+      "createTime": "2023-04-06T15:19:22.626Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-billingbudgets",
+      "id": "75aefd6e-c5fd-456d-aa3c-519b02fbf013",
+      "createTime": "2023-04-06T15:19:22.625Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-billing",
+      "id": "b69f618a-d00e-433f-8ebe-b3ce7a096436",
+      "createTime": "2023-04-06T15:19:22.624Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigqueryreservation",
+      "id": "dd136a29-461e-4606-b75a-24fc136df1d9",
+      "createTime": "2023-04-06T15:19:22.623Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7b6d3db3a86e93bca2788e916de813eb0e023673",
+          "message": "[alloydb] new module for alloydb",
+          "issues": [
+            "9170"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "af85ace90e0f3b69ab0d486dfc729bf7b804cafb",
+          "message": "[bigquerymigration] Add SQL translation service to Bazel generation",
+          "issues": [
+            "9165"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigquerymigration",
+      "id": "7b137953-0643-448b-b387-7cd61869271f",
+      "createTime": "2023-04-06T15:19:22.622Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "3015f712b8de51a627bce50bbea712f31b6c7aae",
+          "message": "[bigquerydatatransfer] minor comment update",
+          "issues": [
+            "9163"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "5117e77068711779c988e54f7a475cb67197a2e7",
+          "message": "[bigquerydatatransfer] Add location methods",
+          "issues": [
+            "8945"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigquerydatatransfer",
+      "id": "76ebbeb3-c75d-4ce9-a23f-061d278234f5",
+      "createTime": "2023-04-06T15:19:22.622Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "933f26070dd0ec685bd3e6284f5f4c954ca2023c",
+          "message": "[bigquerydatapolicy] fix minor docstring formatting",
+          "issues": [
+            "8860"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigquerydatapolicy",
+      "id": "a782f6ec-e173-4aa1-8eae-60b19d8e6964",
+      "createTime": "2023-04-06T15:19:22.621Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "b2fd7e3bd44baaf025ef9efab711604e38102de1",
+          "message": "[bigqueryconnection] add spark connection properties type",
+          "issues": [
+            "9242"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "0b7209ac1f38aa4005d619249a6f93f44aef7ca7",
+          "message": "enable java-bigqueryconnect ITSystemTest",
+          "issues": [
+            "9089"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigqueryconnection",
+      "id": "172109ae-12bf-42d0-bcf5-78fd175cf803",
+      "createTime": "2023-04-06T15:19:22.620Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bigquery-data-exchange",
+      "id": "1628452e-e3c7-4d02-a790-bb9e3c409db5",
+      "createTime": "2023-04-06T15:19:22.619Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "c92a33e43c63537057d9b3fedd371d0f3ed37bca",
+          "message": "[biglake] new module for biglake",
+          "issues": [
+            "9237"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-biglake",
+      "id": "2428d916-3f7f-4dfc-93dc-7dfc4d3ed3c4",
+      "createTime": "2023-04-06T15:19:22.617Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-clientgateways",
+      "id": "184b0af8-8b7f-42af-b403-044f106037c8",
+      "createTime": "2023-04-06T15:19:22.617Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-clientconnectorservices",
+      "id": "3f1205b1-d61e-4871-b9f4-e8900e0129b8",
+      "createTime": "2023-04-06T15:19:22.616Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-appgateways",
+      "id": "35d9c753-8adf-4ad1-9428-a8c0d5cf9e6c",
+      "createTime": "2023-04-06T15:19:22.615Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-appconnectors",
+      "id": "e7318842-c819-47ac-ae38-50b174fad4e9",
+      "createTime": "2023-04-06T15:19:22.614Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-beyondcorp-appconnections",
+      "id": "9212a7de-a4cc-4407-bc19-358d7f42aa54",
+      "createTime": "2023-04-06T15:19:22.613Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "e9caf2145612488be4fd39c96ecefd765ef0db15",
+          "message": "updated comments",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "e9caf2145612488be4fd39c96ecefd765ef0db15",
+          "message": "[batch] added StatusEvent.task_state",
+          "issues": [
+            "9177"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "e9caf2145612488be4fd39c96ecefd765ef0db15",
+          "message": "update comments",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "e9caf2145612488be4fd39c96ecefd765ef0db15",
+          "message": "[batch] resource usage",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "37a574a11f78034d00e201ca6f8fecbc9cd6101c",
+          "message": "[batch] support custom scopes for service account in v1",
+          "issues": [
+            "9082"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "[batch] updated documentation for message NetworkInterface",
+          "issues": [
+            "8915"
+          ]
+        },
+        {
+          "type": "docs",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "[batch] updated documentation for message NetworkInterface",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "remove unsupported HTTP bindings for IAMPolicy RPCs",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "ServiceAccount.scopes is no longer deprecated",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "removed unused endpoints for IAM methods",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "4f5c3de69e30fd711fa9f794681efa10e7982ad3",
+          "message": "[batch] add InstancePolicy.boot_disk",
+          "issues": []
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-batch",
+      "id": "e94f9763-5f85-43d9-903f-ae0eaabbf6e6",
+      "createTime": "2023-04-06T15:19:22.612Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-bare-metal-solution",
+      "id": "48d24e3e-2944-4321-94d3-dae36bc02256",
+      "createTime": "2023-04-06T15:19:22.611Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-automl",
+      "id": "a18fe89d-6751-4239-a6a5-0f9b0ee1e6b5",
+      "createTime": "2023-04-06T15:19:22.611Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-assured-workloads",
+      "id": "c985da58-65bf-47b1-8384-7c0619fef90e",
+      "createTime": "2023-04-06T15:19:22.610Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "a4eb15234f7d1a1ff2e08b46c34fc8ae36e2e76e",
+          "message": "Policy Analyzer for Organization Policy is publicly available",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "a4eb15234f7d1a1ff2e08b46c34fc8ae36e2e76e",
+          "message": "[cloudasset] Brand and typo fixes",
+          "issues": []
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-asset",
+      "id": "3a600276-5c47-465d-aaee-6028740aa1f2",
+      "createTime": "2023-04-06T15:19:22.609Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "6e35902716584603a61fe7253078188191c46d7d",
+          "message": "[artifactregistry] add format-specific resources `MavenArtifact`, `NpmPackage`, `KfpArtifact` and `PythonPackage`",
+          "issues": [
+            "9080"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-artifact-registry",
+      "id": "9dffcedf-320e-45ab-ab7c-2c10f8606f4a",
+      "createTime": "2023-04-06T15:19:22.608Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.area120:google-area120-tables",
+      "id": "987e8b48-a1e5-4c13-8d38-a1863c959b5e",
+      "createTime": "2023-04-06T15:19:22.607Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-appengine-admin",
+      "id": "a0e9a139-dcfd-48d6-9075-7f84f4949348",
+      "createTime": "2023-04-06T15:19:22.606Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-apikeys",
+      "id": "3e7fb0d2-6568-4cdb-b0ca-3d7425746ab5",
+      "createTime": "2023-04-06T15:19:22.605Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-apigee-registry",
+      "id": "c4a28556-1af6-4298-b020-c6bb4ee3d1b6",
+      "createTime": "2023-04-06T15:19:22.604Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-apigee-connect",
+      "id": "f5a590eb-e15a-4774-a14a-11eabb775de9",
+      "createTime": "2023-04-06T15:19:22.602Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-api-gateway",
+      "id": "b4c00014-dc43-4083-ad9e-4a0d637c16f7",
+      "createTime": "2023-04-06T15:19:22.601Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-analyticshub",
+      "id": "6e3f75ba-0da4-4de7-953a-74dc85c53055",
+      "createTime": "2023-04-06T15:19:22.600Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.analytics:google-analytics-data",
+      "id": "5c06c479-18bc-42c2-a761-965d2b660b77",
+      "createTime": "2023-04-06T15:19:22.599Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "222829a721d680987f96fddb9b7dd0fa899ecc11",
+          "message": "[analyticsadmin] add `CreateAccessBinding`, `GetAccessBinding`, `UpdateAccessBinding`, `DeleteAccessBinding`, `ListAccessBindings`, `BatchCreateAccessBindings`, `BatchGetAccessBindings`, `BatchUpdateAccessBindings`, `BatchDeleteAccessBindings` me...",
+          "issues": [
+            "9137"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "2c7e04488fc26db34a1972871455863da0ba8ecd",
+          "message": "[analyticsadmin] add `GetSearchAds360Link`, `ListSearchAds360Links`, `CreateSearchAds360Link`, `DeleteSearchAds360Link`, `UpdateSearchAds360Link` methods to the Admin API v1alpha",
+          "issues": [
+            "9093"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.analytics:google-analytics-admin",
+      "id": "24ecf7cc-01aa-4b06-b92e-5fb96e3ee0d2",
+      "createTime": "2023-04-06T15:19:22.598Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7b6d3db3a86e93bca2788e916de813eb0e023673",
+          "message": "[alloydb] new module for alloydb",
+          "issues": [
+            "9170"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-alloydb",
+      "id": "61dba375-b10c-4bd2-aa63-bd4e1ac4a7b9",
+      "createTime": "2023-04-06T15:19:22.597Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "[aiplatform] add disable_container_logging to BatchPredictionJob in aiplatform v1,v1beta1 batch_prediction_job.proto",
+          "issues": [
+            "9184"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add split to ExportDataConfig in aiplatform v1 dataset.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add offline_storage_ttl_days to EntityType in aiplatform v1 entity_type.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add evaluated_annotation.proto to aiplatform v1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add cpu_utilization_target to Featurestore.OnlineServingConfig.Scaling in aiplatform v1 featurestore.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add online_storage_ttl_days to Featurestore in aiplatform v1 featurestore.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add slice_spec to ModelEvaluationSlice in aiplatform v1 model_evaluation_slice.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add BatchImportEvaluatedAnnotations rpc to aiplatform v1 model_service.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "[aiplatform] add TPU_V4_POD to AcceleratorType in aiplatform v1 accelerator_type.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add split to ExportDataConfig in aiplatform v1beta1 dataset.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add evaluated_annotation.proto to aiplatform v1beta1",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add cpu_utilization_target to Featurestore.OnlineServingConfig.Scaling in aiplatform v1beta1 featurestore.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add large_model_reference to Model in aiplatform v1beta1 model.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add slice_spec to ModelEvaluationSlice in aiplatform v1beta1 model_evaluation_slice.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "add BatchImportEvaluatedAnnotations rpc to aiplatform v1beta1 model_service.proto",
+          "issues": []
+        },
+        {
+          "type": "docs",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "deprecated enable_restricted_image_training in NasJob in aiplatform v1beta1 nas_job.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "7044b6c54b503b5120b6fe1434eed504c89c30c0",
+          "message": "[aiplatform] add TPU_V4_POD to AcceleratorType in aiplatform v1beta1 accelerator_type.proto",
+          "issues": []
+        },
+        {
+          "type": "feat",
+          "sha": "e20803d4a47fb0dad3f7d85af27927e333f243a6",
+          "message": "[aiplatform] add match service in aiplatform v1beta1 match_service.proto",
+          "issues": [
+            "9138"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "3cebec3f6958dbf611473df55947b3d33d2ea6db",
+          "message": "[aiplatform] add service_networking.proto to aiplatform v1",
+          "issues": [
+            "9073"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "ffaad0e76a6111a36b7be661277dbe5a3c6ebcfa",
+          "message": "[aiplatform] add enable_dashboard_access in aiplatform v1 and v1beta1",
+          "issues": []
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "51e4b33514d09b64f5b5941779681ae31ec7dd51",
+          "message": "[aiplatform] add instance_config to BatchPredictionJob in aiplatform v1 batch_prediction_job.proto",
+          "issues": [
+            "8953"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7d94be78efa64df7e626132e43da56d8ca198e8",
+          "message": "[aiplatform] add service_account to UploadModelRequest in aiplatform v1beta1 model_service.proto",
+          "issues": [
+            "8895"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "b68a7c19a20927530e90cb829fedbc54bd3d6cf8",
+          "message": "[aiplatform] add SearchDataItems RPC in aiplatform version v1 and v1beta1 dataset_service.proto",
+          "issues": [
+            "8859"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-aiplatform",
+      "id": "dc997f1d-8cee-4110-a44d-49eca5dd4e73",
+      "createTime": "2023-04-06T15:19:22.596Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "3c73dee1834ae21fc6dc1b6d4638ba6c0b7d4715",
+          "message": "[advisorynotifications] updating Cloud Client Libraries with new field NotificationType for advisorynotifications.googleapis.com",
+          "issues": [
+            "9290"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "7b6d3db3a86e93bca2788e916de813eb0e023673",
+          "message": "[alloydb] new module for alloydb",
+          "issues": [
+            "9170"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "c84532cb73633b1723c8adc5ba1cacfdc296b557",
+          "message": "[advisorynotifications] new module for advisorynotifications",
+          "issues": [
+            "9141"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-advisorynotifications",
+      "id": "ee7544e8-f8b2-42b9-a9c5-8d641fdf7eb2",
+      "createTime": "2023-04-06T15:19:22.594Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "5a404a8a0de9e2123c65e83f3f24fb770387f639",
+          "message": "update owlbot configs to copy generated samples",
+          "issues": [
+            "8790"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-identity-accesscontextmanager",
+      "id": "f7cdc8fa-d98b-4c65-8c6f-9d6aab026328",
+      "createTime": "2023-04-06T15:19:22.593Z"
+    },
+    {
+      "changes": [
+        {
+          "type": "docs",
+          "sha": "c89fbe3d59429c01de3e3130aad293cdaf6b5a5d",
+          "message": "README.md to have Libraries BOM usage guide",
+          "issues": [
+            "9301"
+          ]
+        },
+        {
+          "type": "feat",
+          "sha": "d7010bdbe1092c4ab9b39b30690c5c297f405d26",
+          "message": "[workstations] new module for workstations",
+          "issues": [
+            "9233"
+          ]
+        },
+        {
+          "type": "fix",
+          "sha": "6eca244f800e84ac88cabe01982529074d6621b8",
+          "message": "[Many APIs] Add service_yaml_parameters to `java_gapic_library` targets",
+          "issues": [
+            "9203"
+          ]
+        }
+      ],
+      "version": "1.9.0",
+      "language": "JAVA",
+      "artifactName": "com.google.cloud:google-cloud-accessapproval",
+      "id": "b5d53dcc-580f-42a4-96b2-cc182d8536ea",
+      "createTime": "2023-04-06T15:19:22.591Z"
+    },
+    {
+      "changes": [
+        {
           "type": "feat",
           "sha": "3c73dee1834ae21fc6dc1b6d4638ba6c0b7d4715",
           "message": "[advisorynotifications] updating Cloud Client Libraries with new field NotificationType for advisorynotifications.googleapis.com",
@@ -3466,5 +9457,5 @@
       "createTime": "2023-02-03T16:27:23.198Z"
     }
   ],
-  "updateTime": "2023-03-30T15:24:12.890Z"
+  "updateTime": "2023-04-06T15:19:22.734Z"
 }
