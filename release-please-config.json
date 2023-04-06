@@ -4,8 +4,9 @@
   "separate-pull-requests": false,
   "include-component-in-tag": false,
   "packages": {
-    ".": {
-      "extra-files": ["java-accessapproval/README.md"]
+    ".": {},
+    "java-maps-routing": {
+      "release-as": "1.0.0"
     }
   }
 }
