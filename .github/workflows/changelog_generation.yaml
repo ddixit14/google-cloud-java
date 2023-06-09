@@ -20,6 +20,6 @@ jobs:
           github.event_name == 'pull_request' &&
           github.event.action == 'synchronize' &&
           contains(github.event.pull_request.labels.*.name, 'autorelease: pending') &&
-          github.event.sender.login == 'release-please-bot'
+          github.event.sender.login == 'ddixit14'
         run: |
           echo "Performing changelog.md generation steps..."
