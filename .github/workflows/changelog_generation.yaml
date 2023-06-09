@@ -1,11 +1,9 @@
 name: Module specific CHANGELOG.md generation
 
 on:
-  pull_request:
-    types:
-      - synchronize
+  push:
     branches:
-      - release-please--branches--main
+    - release-please--branches--main
 
 jobs:
   autorelease:
@@ -17,8 +15,6 @@ jobs:
 
       - name: Run when labeled and pushed by 'release-please-bot' user
         if: |
-          github.event_name == 'pull_request' &&
-          github.event.action == 'synchronize' &&
           contains(github.event.pull_request.labels.*.name, 'autorelease: pending') &&
           github.event.sender.login == 'ddixit14'
         run: |
