@@ -4,7 +4,8 @@ on:
   push:
     branches:
     - release-please--branches--main
-
+  pull_request:
+  
 jobs:
   autorelease:
     runs-on: ubuntu-latest
