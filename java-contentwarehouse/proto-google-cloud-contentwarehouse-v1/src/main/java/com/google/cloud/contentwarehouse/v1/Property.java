@@ -47,11 +47,6 @@ public final class Property extends com.google.protobuf.GeneratedMessageV3
     return new Property();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contentwarehouse.v1.DocumentProto
         .internal_static_google_cloud_contentwarehouse_v1_Property_descriptor;
@@ -68,6 +63,8 @@ public final class Property extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int valuesCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object values_;
 
   public enum ValuesCase
@@ -140,7 +137,8 @@ public final class Property extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Required. Must match the name of a PropertyDefinition in the DocumentSchema.
+   * Required. Must match the name of a PropertyDefinition in the
+   * DocumentSchema.
    * </pre>
    *
    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -163,7 +161,8 @@ public final class Property extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Required. Must match the name of a PropertyDefinition in the DocumentSchema.
+   * Required. Must match the name of a PropertyDefinition in the
+   * DocumentSchema.
    * </pre>
    *
    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1237,7 +1236,8 @@ public final class Property extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Must match the name of a PropertyDefinition in the DocumentSchema.
+     * Required. Must match the name of a PropertyDefinition in the
+     * DocumentSchema.
      * </pre>
      *
      * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1259,7 +1259,8 @@ public final class Property extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Must match the name of a PropertyDefinition in the DocumentSchema.
+     * Required. Must match the name of a PropertyDefinition in the
+     * DocumentSchema.
      * </pre>
      *
      * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1281,7 +1282,8 @@ public final class Property extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Must match the name of a PropertyDefinition in the DocumentSchema.
+     * Required. Must match the name of a PropertyDefinition in the
+     * DocumentSchema.
      * </pre>
      *
      * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1302,7 +1304,8 @@ public final class Property extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Must match the name of a PropertyDefinition in the DocumentSchema.
+     * Required. Must match the name of a PropertyDefinition in the
+     * DocumentSchema.
      * </pre>
      *
      * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1319,7 +1322,8 @@ public final class Property extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Must match the name of a PropertyDefinition in the DocumentSchema.
+     * Required. Must match the name of a PropertyDefinition in the
+     * DocumentSchema.
      * </pre>
      *
      * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>

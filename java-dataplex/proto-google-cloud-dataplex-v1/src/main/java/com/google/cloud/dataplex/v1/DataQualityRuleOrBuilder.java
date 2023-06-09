@@ -383,9 +383,11 @@ public interface DataQualityRuleOrBuilder
    *
    *
    * <pre>
-   * Optional. Rows with null values will automatically fail a rule, unless
-   * ignore_null is true. In that case, such null rows are trivially considered
-   * passing. Only applicable to ColumnMap rules.
+   * Optional. Rows with `null` values will automatically fail a rule, unless
+   * `ignore_null` is `true`. In that case, such `null` rows are trivially
+   * considered passing.
+   *
+   * Only applicable to ColumnMap rules.
    * </pre>
    *
    * <code>bool ignore_null = 501 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -399,8 +401,8 @@ public interface DataQualityRuleOrBuilder
    *
    * <pre>
    * Required. The dimension a rule belongs to. Results are also aggregated at
-   * the dimension-level. Supported dimensions are ["COMPLETENESS", "ACCURACY",
-   * "CONSISTENCY", "VALIDITY", "UNIQUENESS", "INTEGRITY"]
+   * the dimension level. Supported dimensions are **["COMPLETENESS",
+   * "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS", "INTEGRITY"]**
    * </pre>
    *
    * <code>string dimension = 502 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -413,8 +415,8 @@ public interface DataQualityRuleOrBuilder
    *
    * <pre>
    * Required. The dimension a rule belongs to. Results are also aggregated at
-   * the dimension-level. Supported dimensions are ["COMPLETENESS", "ACCURACY",
-   * "CONSISTENCY", "VALIDITY", "UNIQUENESS", "INTEGRITY"]
+   * the dimension level. Supported dimensions are **["COMPLETENESS",
+   * "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS", "INTEGRITY"]**
    * </pre>
    *
    * <code>string dimension = 502 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -427,9 +429,10 @@ public interface DataQualityRuleOrBuilder
    *
    *
    * <pre>
-   * Optional. The minimum ratio of passing_rows / total_rows required to pass
-   * this rule, with a range of [0.0, 1.0]
-   * 0 indicates default value (i.e. 1.0)
+   * Optional. The minimum ratio of **passing_rows / total_rows** required to
+   * pass this rule, with a range of [0.0, 1.0].
+   *
+   * 0 indicates default value (i.e. 1.0).
    * </pre>
    *
    * <code>double threshold = 503 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -438,5 +441,5 @@ public interface DataQualityRuleOrBuilder
    */
   double getThreshold();
 
-  public com.google.cloud.dataplex.v1.DataQualityRule.RuleTypeCase getRuleTypeCase();
+  com.google.cloud.dataplex.v1.DataQualityRule.RuleTypeCase getRuleTypeCase();
 }

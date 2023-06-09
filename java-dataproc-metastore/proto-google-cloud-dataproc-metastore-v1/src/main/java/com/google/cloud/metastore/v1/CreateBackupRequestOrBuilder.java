@@ -27,8 +27,9 @@ public interface CreateBackupRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The relative resource name of the service in which to create a backup
-   * of the following form:
+   * Required. The relative resource name of the service in which to create a
+   * backup of the following form:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -43,8 +44,9 @@ public interface CreateBackupRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The relative resource name of the service in which to create a backup
-   * of the following form:
+   * Required. The relative resource name of the service in which to create a
+   * backup of the following form:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -62,6 +64,7 @@ public interface CreateBackupRequestOrBuilder
    * <pre>
    * Required. The ID of the backup, which is used as the final component of the
    * backup's name.
+   *
    * This value must be between 1 and 64 characters long, begin with a letter,
    * end with a letter or number, and consist of alpha-numeric ASCII characters
    * or hyphens.
@@ -78,6 +81,7 @@ public interface CreateBackupRequestOrBuilder
    * <pre>
    * Required. The ID of the backup, which is used as the final component of the
    * backup's name.
+   *
    * This value must be between 1 and 64 characters long, begin with a letter,
    * end with a letter or number, and consist of alpha-numeric ASCII characters
    * or hyphens.
@@ -93,8 +97,8 @@ public interface CreateBackupRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The backup to create. The `name` field is ignored. The ID of the created
-   * backup must be provided in the request's `backup_id` field.
+   * Required. The backup to create. The `name` field is ignored. The ID of the
+   * created backup must be provided in the request's `backup_id` field.
    * </pre>
    *
    * <code>.google.cloud.metastore.v1.Backup backup = 3 [(.google.api.field_behavior) = REQUIRED];
@@ -107,8 +111,8 @@ public interface CreateBackupRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The backup to create. The `name` field is ignored. The ID of the created
-   * backup must be provided in the request's `backup_id` field.
+   * Required. The backup to create. The `name` field is ignored. The ID of the
+   * created backup must be provided in the request's `backup_id` field.
    * </pre>
    *
    * <code>.google.cloud.metastore.v1.Backup backup = 3 [(.google.api.field_behavior) = REQUIRED];
@@ -121,8 +125,8 @@ public interface CreateBackupRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The backup to create. The `name` field is ignored. The ID of the created
-   * backup must be provided in the request's `backup_id` field.
+   * Required. The backup to create. The `name` field is ignored. The ID of the
+   * created backup must be provided in the request's `backup_id` field.
    * </pre>
    *
    * <code>.google.cloud.metastore.v1.Backup backup = 3 [(.google.api.field_behavior) = REQUIRED];
@@ -134,13 +138,15 @@ public interface CreateBackupRequestOrBuilder
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -155,13 +161,15 @@ public interface CreateBackupRequestOrBuilder
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.

@@ -56,11 +56,6 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
     return new Job();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.run.v2.JobProto.internal_static_google_cloud_run_v2_Job_descriptor;
   }
@@ -96,6 +91,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The fully qualified name of this Job.
+   *
    * Format:
    * projects/{project}/locations/{location}/jobs/{job}
    * </pre>
@@ -121,6 +117,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The fully qualified name of this Job.
+   *
    * Format:
    * projects/{project}/locations/{location}/jobs/{job}
    * </pre>
@@ -246,12 +243,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * KRM-style labels for the resource.
+   * Unstructured key value map that can be used to organize and categorize
+   * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -277,12 +276,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * KRM-style labels for the resource.
+   * Unstructured key value map that can be used to organize and categorize
+   * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -299,12 +300,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * KRM-style labels for the resource.
+   * Unstructured key value map that can be used to organize and categorize
+   * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -328,12 +331,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * KRM-style labels for the resource.
+   * Unstructured key value map that can be used to organize and categorize
+   * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -385,16 +390,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * KRM-style annotations for the resource. Unstructured key value map that may
+   * Unstructured key value map that may
    * be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Job.
+   * namespaces, and they will be rejected on new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Job.
+   *
    * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-   * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -416,16 +423,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * KRM-style annotations for the resource. Unstructured key value map that may
+   * Unstructured key value map that may
    * be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Job.
+   * namespaces, and they will be rejected on new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Job.
+   *
    * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-   * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -438,16 +447,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * KRM-style annotations for the resource. Unstructured key value map that may
+   * Unstructured key value map that may
    * be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Job.
+   * namespaces, and they will be rejected on new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Job.
+   *
    * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-   * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -467,16 +478,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * KRM-style annotations for the resource. Unstructured key value map that may
+   * Unstructured key value map that may
    * be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Job.
+   * namespaces, and they will be rejected on new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Job.
+   *
    * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-   * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -906,6 +919,12 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    * Launch Stages](https://cloud.google.com/terms/launch-stages).
    * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
    * is assumed.
+   * Set the launch stage to a preview stage on input to allow use of preview
+   * features in that stage. On read (or output), describes whether the resource
+   * uses preview features.
+   * &lt;p&gt;
+   * For example, if ALPHA is provided as input, but only BETA and GA-level
+   * features are used, this field will be BETA on output.
    * </pre>
    *
    * <code>.google.api.LaunchStage launch_stage = 14;</code>
@@ -924,6 +943,12 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    * Launch Stages](https://cloud.google.com/terms/launch-stages).
    * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
    * is assumed.
+   * Set the launch stage to a preview stage on input to allow use of preview
+   * features in that stage. On read (or output), describes whether the resource
+   * uses preview features.
+   * &lt;p&gt;
+   * For example, if ALPHA is provided as input, but only BETA and GA-level
+   * features are used, this field will be BETA on output.
    * </pre>
    *
    * <code>.google.api.LaunchStage launch_stage = 14;</code>
@@ -1298,6 +1323,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Output only. Returns true if the Job is currently being acted upon by the
    * system to bring it into the desired state.
+   *
    * When a new Job is created, or an existing one is updated, Cloud Run
    * will asynchronously perform all necessary steps to bring the Job to the
    * desired state. This process is called reconciliation.
@@ -1307,9 +1333,11 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
    * false), there are two possible outcomes: reconciliation succeeded and the
    * state matches the Job, or there was an error,  and reconciliation failed.
    * This state can be found in `terminal_condition.state`.
+   *
    * If reconciliation succeeded, the following fields will match:
    * `observed_generation` and `generation`, `latest_succeeded_execution` and
    * `latest_created_execution`.
+   *
    * If reconciliation failed, `observed_generation` and
    * `latest_succeeded_execution` will have the state of the last succeeded
    * execution or empty for newly created Job. Additional information on the
@@ -1323,6 +1351,24 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean getReconciling() {
     return reconciling_;
+  }
+
+  public static final int SATISFIES_PZS_FIELD_NUMBER = 25;
+  private boolean satisfiesPzs_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * Output only. Reserved for future use.
+   * </pre>
+   *
+   * <code>bool satisfies_pzs = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
+   * @return The satisfiesPzs.
+   */
+  @java.lang.Override
+  public boolean getSatisfiesPzs() {
+    return satisfiesPzs_;
   }
 
   public static final int ETAG_FIELD_NUMBER = 99;
@@ -1456,6 +1502,9 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
     if (reconciling_ != false) {
       output.writeBool(23, reconciling_);
     }
+    if (satisfiesPzs_ != false) {
+      output.writeBool(25, satisfiesPzs_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 99, etag_);
     }
@@ -1550,6 +1599,9 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
     if (reconciling_ != false) {
       size += com.google.protobuf.CodedOutputStream.computeBoolSize(23, reconciling_);
     }
+    if (satisfiesPzs_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(25, satisfiesPzs_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(99, etag_);
     }
@@ -1614,6 +1666,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
       if (!getLatestCreatedExecution().equals(other.getLatestCreatedExecution())) return false;
     }
     if (getReconciling() != other.getReconciling()) return false;
+    if (getSatisfiesPzs() != other.getSatisfiesPzs()) return false;
     if (!getEtag().equals(other.getEtag())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -1692,6 +1745,8 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
     }
     hash = (37 * hash) + RECONCILING_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getReconciling());
+    hash = (37 * hash) + SATISFIES_PZS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSatisfiesPzs());
     hash = (37 * hash) + ETAG_FIELD_NUMBER;
     hash = (53 * hash) + getEtag().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1915,6 +1970,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
         latestCreatedExecutionBuilder_ = null;
       }
       reconciling_ = false;
+      satisfiesPzs_ = false;
       etag_ = "";
       return this;
     }
@@ -2038,6 +2094,9 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
         result.reconciling_ = reconciling_;
       }
       if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.satisfiesPzs_ = satisfiesPzs_;
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
         result.etag_ = etag_;
       }
     }
@@ -2187,9 +2246,12 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
       if (other.getReconciling() != false) {
         setReconciling(other.getReconciling());
       }
+      if (other.getSatisfiesPzs() != false) {
+        setSatisfiesPzs(other.getSatisfiesPzs());
+      }
       if (!other.getEtag().isEmpty()) {
         etag_ = other.etag_;
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x00800000;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -2372,10 +2434,16 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
                 bitField0_ |= 0x00200000;
                 break;
               } // case 184
+            case 200:
+              {
+                satisfiesPzs_ = input.readBool();
+                bitField0_ |= 0x00400000;
+                break;
+              } // case 200
             case 794:
               {
                 etag_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00400000;
+                bitField0_ |= 0x00800000;
                 break;
               } // case 794
             default:
@@ -2403,6 +2471,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The fully qualified name of this Job.
+     *
      * Format:
      * projects/{project}/locations/{location}/jobs/{job}
      * </pre>
@@ -2427,6 +2496,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The fully qualified name of this Job.
+     *
      * Format:
      * projects/{project}/locations/{location}/jobs/{job}
      * </pre>
@@ -2451,6 +2521,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The fully qualified name of this Job.
+     *
      * Format:
      * projects/{project}/locations/{location}/jobs/{job}
      * </pre>
@@ -2474,6 +2545,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The fully qualified name of this Job.
+     *
      * Format:
      * projects/{project}/locations/{location}/jobs/{job}
      * </pre>
@@ -2493,6 +2565,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The fully qualified name of this Job.
+     *
      * Format:
      * projects/{project}/locations/{location}/jobs/{job}
      * </pre>
@@ -2714,12 +2787,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style labels for the resource.
+     * Unstructured key value map that can be used to organize and categorize
+     * objects.
      * User-provided labels are shared with Google's billing system, so they can
      * be used to filter, or break down billing charges by team, component,
      * environment, state, etc. For more information, visit
      * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-     * https://cloud.google.com/run/docs/configuring/labels
+     * https://cloud.google.com/run/docs/configuring/labels.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
      * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -2745,12 +2820,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style labels for the resource.
+     * Unstructured key value map that can be used to organize and categorize
+     * objects.
      * User-provided labels are shared with Google's billing system, so they can
      * be used to filter, or break down billing charges by team, component,
      * environment, state, etc. For more information, visit
      * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-     * https://cloud.google.com/run/docs/configuring/labels
+     * https://cloud.google.com/run/docs/configuring/labels.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
      * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -2767,12 +2844,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style labels for the resource.
+     * Unstructured key value map that can be used to organize and categorize
+     * objects.
      * User-provided labels are shared with Google's billing system, so they can
      * be used to filter, or break down billing charges by team, component,
      * environment, state, etc. For more information, visit
      * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-     * https://cloud.google.com/run/docs/configuring/labels
+     * https://cloud.google.com/run/docs/configuring/labels.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
      * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -2796,12 +2875,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style labels for the resource.
+     * Unstructured key value map that can be used to organize and categorize
+     * objects.
      * User-provided labels are shared with Google's billing system, so they can
      * be used to filter, or break down billing charges by team, component,
      * environment, state, etc. For more information, visit
      * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-     * https://cloud.google.com/run/docs/configuring/labels
+     * https://cloud.google.com/run/docs/configuring/labels.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
      * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -2831,12 +2912,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style labels for the resource.
+     * Unstructured key value map that can be used to organize and categorize
+     * objects.
      * User-provided labels are shared with Google's billing system, so they can
      * be used to filter, or break down billing charges by team, component,
      * environment, state, etc. For more information, visit
      * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-     * https://cloud.google.com/run/docs/configuring/labels
+     * https://cloud.google.com/run/docs/configuring/labels.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
      * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -2862,12 +2945,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style labels for the resource.
+     * Unstructured key value map that can be used to organize and categorize
+     * objects.
      * User-provided labels are shared with Google's billing system, so they can
      * be used to filter, or break down billing charges by team, component,
      * environment, state, etc. For more information, visit
      * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-     * https://cloud.google.com/run/docs/configuring/labels
+     * https://cloud.google.com/run/docs/configuring/labels.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
      * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -2891,12 +2976,14 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style labels for the resource.
+     * Unstructured key value map that can be used to organize and categorize
+     * objects.
      * User-provided labels are shared with Google's billing system, so they can
      * be used to filter, or break down billing charges by team, component,
      * environment, state, etc. For more information, visit
      * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-     * https://cloud.google.com/run/docs/configuring/labels
+     * https://cloud.google.com/run/docs/configuring/labels.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
      * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -2943,16 +3030,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style annotations for the resource. Unstructured key value map that may
+     * Unstructured key value map that may
      * be set by external tools to store and arbitrary metadata.
      * They are not queryable and should be preserved
      * when modifying objects.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-     * namespaces, and they will be rejected. All system annotations in v1 now
-     * have a corresponding field in v2 Job.
+     * namespaces, and they will be rejected on new resources. All system
+     * annotations in v1 now have a corresponding field in v2 Job.
+     *
      * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-     * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+     * rules.
      * </pre>
      *
      * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -2974,16 +3063,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style annotations for the resource. Unstructured key value map that may
+     * Unstructured key value map that may
      * be set by external tools to store and arbitrary metadata.
      * They are not queryable and should be preserved
      * when modifying objects.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-     * namespaces, and they will be rejected. All system annotations in v1 now
-     * have a corresponding field in v2 Job.
+     * namespaces, and they will be rejected on new resources. All system
+     * annotations in v1 now have a corresponding field in v2 Job.
+     *
      * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-     * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+     * rules.
      * </pre>
      *
      * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -2996,16 +3087,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style annotations for the resource. Unstructured key value map that may
+     * Unstructured key value map that may
      * be set by external tools to store and arbitrary metadata.
      * They are not queryable and should be preserved
      * when modifying objects.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-     * namespaces, and they will be rejected. All system annotations in v1 now
-     * have a corresponding field in v2 Job.
+     * namespaces, and they will be rejected on new resources. All system
+     * annotations in v1 now have a corresponding field in v2 Job.
+     *
      * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-     * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+     * rules.
      * </pre>
      *
      * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -3025,16 +3118,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style annotations for the resource. Unstructured key value map that may
+     * Unstructured key value map that may
      * be set by external tools to store and arbitrary metadata.
      * They are not queryable and should be preserved
      * when modifying objects.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-     * namespaces, and they will be rejected. All system annotations in v1 now
-     * have a corresponding field in v2 Job.
+     * namespaces, and they will be rejected on new resources. All system
+     * annotations in v1 now have a corresponding field in v2 Job.
+     *
      * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-     * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+     * rules.
      * </pre>
      *
      * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -3060,16 +3155,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style annotations for the resource. Unstructured key value map that may
+     * Unstructured key value map that may
      * be set by external tools to store and arbitrary metadata.
      * They are not queryable and should be preserved
      * when modifying objects.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-     * namespaces, and they will be rejected. All system annotations in v1 now
-     * have a corresponding field in v2 Job.
+     * namespaces, and they will be rejected on new resources. All system
+     * annotations in v1 now have a corresponding field in v2 Job.
+     *
      * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-     * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+     * rules.
      * </pre>
      *
      * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -3091,16 +3188,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style annotations for the resource. Unstructured key value map that may
+     * Unstructured key value map that may
      * be set by external tools to store and arbitrary metadata.
      * They are not queryable and should be preserved
      * when modifying objects.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-     * namespaces, and they will be rejected. All system annotations in v1 now
-     * have a corresponding field in v2 Job.
+     * namespaces, and they will be rejected on new resources. All system
+     * annotations in v1 now have a corresponding field in v2 Job.
+     *
      * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-     * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+     * rules.
      * </pre>
      *
      * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -3120,16 +3219,18 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * KRM-style annotations for the resource. Unstructured key value map that may
+     * Unstructured key value map that may
      * be set by external tools to store and arbitrary metadata.
      * They are not queryable and should be preserved
      * when modifying objects.
+     *
      * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
      * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-     * namespaces, and they will be rejected. All system annotations in v1 now
-     * have a corresponding field in v2 Job.
+     * namespaces, and they will be rejected on new resources. All system
+     * annotations in v1 now have a corresponding field in v2 Job.
+     *
      * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-     * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+     * rules.
      * </pre>
      *
      * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -4386,6 +4487,12 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * Launch Stages](https://cloud.google.com/terms/launch-stages).
      * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
      * is assumed.
+     * Set the launch stage to a preview stage on input to allow use of preview
+     * features in that stage. On read (or output), describes whether the resource
+     * uses preview features.
+     * &lt;p&gt;
+     * For example, if ALPHA is provided as input, but only BETA and GA-level
+     * features are used, this field will be BETA on output.
      * </pre>
      *
      * <code>.google.api.LaunchStage launch_stage = 14;</code>
@@ -4404,6 +4511,12 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * Launch Stages](https://cloud.google.com/terms/launch-stages).
      * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
      * is assumed.
+     * Set the launch stage to a preview stage on input to allow use of preview
+     * features in that stage. On read (or output), describes whether the resource
+     * uses preview features.
+     * &lt;p&gt;
+     * For example, if ALPHA is provided as input, but only BETA and GA-level
+     * features are used, this field will be BETA on output.
      * </pre>
      *
      * <code>.google.api.LaunchStage launch_stage = 14;</code>
@@ -4425,6 +4538,12 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * Launch Stages](https://cloud.google.com/terms/launch-stages).
      * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
      * is assumed.
+     * Set the launch stage to a preview stage on input to allow use of preview
+     * features in that stage. On read (or output), describes whether the resource
+     * uses preview features.
+     * &lt;p&gt;
+     * For example, if ALPHA is provided as input, but only BETA and GA-level
+     * features are used, this field will be BETA on output.
      * </pre>
      *
      * <code>.google.api.LaunchStage launch_stage = 14;</code>
@@ -4444,6 +4563,12 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * Launch Stages](https://cloud.google.com/terms/launch-stages).
      * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
      * is assumed.
+     * Set the launch stage to a preview stage on input to allow use of preview
+     * features in that stage. On read (or output), describes whether the resource
+     * uses preview features.
+     * &lt;p&gt;
+     * For example, if ALPHA is provided as input, but only BETA and GA-level
+     * features are used, this field will be BETA on output.
      * </pre>
      *
      * <code>.google.api.LaunchStage launch_stage = 14;</code>
@@ -4468,6 +4593,12 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * Launch Stages](https://cloud.google.com/terms/launch-stages).
      * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
      * is assumed.
+     * Set the launch stage to a preview stage on input to allow use of preview
+     * features in that stage. On read (or output), describes whether the resource
+     * uses preview features.
+     * &lt;p&gt;
+     * For example, if ALPHA is provided as input, but only BETA and GA-level
+     * features are used, this field will be BETA on output.
      * </pre>
      *
      * <code>.google.api.LaunchStage launch_stage = 14;</code>
@@ -5835,6 +5966,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Output only. Returns true if the Job is currently being acted upon by the
      * system to bring it into the desired state.
+     *
      * When a new Job is created, or an existing one is updated, Cloud Run
      * will asynchronously perform all necessary steps to bring the Job to the
      * desired state. This process is called reconciliation.
@@ -5844,9 +5976,11 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * false), there are two possible outcomes: reconciliation succeeded and the
      * state matches the Job, or there was an error,  and reconciliation failed.
      * This state can be found in `terminal_condition.state`.
+     *
      * If reconciliation succeeded, the following fields will match:
      * `observed_generation` and `generation`, `latest_succeeded_execution` and
      * `latest_created_execution`.
+     *
      * If reconciliation failed, `observed_generation` and
      * `latest_succeeded_execution` will have the state of the last succeeded
      * execution or empty for newly created Job. Additional information on the
@@ -5867,6 +6001,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Output only. Returns true if the Job is currently being acted upon by the
      * system to bring it into the desired state.
+     *
      * When a new Job is created, or an existing one is updated, Cloud Run
      * will asynchronously perform all necessary steps to bring the Job to the
      * desired state. This process is called reconciliation.
@@ -5876,9 +6011,11 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * false), there are two possible outcomes: reconciliation succeeded and the
      * state matches the Job, or there was an error,  and reconciliation failed.
      * This state can be found in `terminal_condition.state`.
+     *
      * If reconciliation succeeded, the following fields will match:
      * `observed_generation` and `generation`, `latest_succeeded_execution` and
      * `latest_created_execution`.
+     *
      * If reconciliation failed, `observed_generation` and
      * `latest_succeeded_execution` will have the state of the last succeeded
      * execution or empty for newly created Job. Additional information on the
@@ -5903,6 +6040,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Output only. Returns true if the Job is currently being acted upon by the
      * system to bring it into the desired state.
+     *
      * When a new Job is created, or an existing one is updated, Cloud Run
      * will asynchronously perform all necessary steps to bring the Job to the
      * desired state. This process is called reconciliation.
@@ -5912,9 +6050,11 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      * false), there are two possible outcomes: reconciliation succeeded and the
      * state matches the Job, or there was an error,  and reconciliation failed.
      * This state can be found in `terminal_condition.state`.
+     *
      * If reconciliation succeeded, the following fields will match:
      * `observed_generation` and `generation`, `latest_succeeded_execution` and
      * `latest_created_execution`.
+     *
      * If reconciliation failed, `observed_generation` and
      * `latest_succeeded_execution` will have the state of the last succeeded
      * execution or empty for newly created Job. Additional information on the
@@ -5928,6 +6068,59 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
     public Builder clearReconciling() {
       bitField0_ = (bitField0_ & ~0x00200000);
       reconciling_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean satisfiesPzs_;
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Reserved for future use.
+     * </pre>
+     *
+     * <code>bool satisfies_pzs = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @return The satisfiesPzs.
+     */
+    @java.lang.Override
+    public boolean getSatisfiesPzs() {
+      return satisfiesPzs_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Reserved for future use.
+     * </pre>
+     *
+     * <code>bool satisfies_pzs = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @param value The satisfiesPzs to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSatisfiesPzs(boolean value) {
+
+      satisfiesPzs_ = value;
+      bitField0_ |= 0x00400000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Reserved for future use.
+     * </pre>
+     *
+     * <code>bool satisfies_pzs = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearSatisfiesPzs() {
+      bitField0_ = (bitField0_ & ~0x00400000);
+      satisfiesPzs_ = false;
       onChanged();
       return this;
     }
@@ -5997,7 +6190,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       etag_ = value;
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -6015,7 +6208,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder clearEtag() {
       etag_ = getDefaultInstance().getEtag();
-      bitField0_ = (bitField0_ & ~0x00400000);
+      bitField0_ = (bitField0_ & ~0x00800000);
       onChanged();
       return this;
     }
@@ -6038,7 +6231,7 @@ public final class Job extends com.google.protobuf.GeneratedMessageV3
       }
       checkByteStringIsUtf8(value);
       etag_ = value;
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }

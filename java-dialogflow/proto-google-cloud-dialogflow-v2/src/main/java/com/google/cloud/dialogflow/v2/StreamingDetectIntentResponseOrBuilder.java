@@ -166,6 +166,7 @@ public interface StreamingDetectIntentResponseOrBuilder
    * multiple default text responses exist, they will be concatenated when
    * generating audio. If no default platform text responses exist, the
    * generated audio content will be empty.
+   *
    * In some scenarios, multiple output audio fields may be present in the
    * response structure. In these cases, only the top-most-level audio output
    * has content.
@@ -211,4 +212,43 @@ public interface StreamingDetectIntentResponseOrBuilder
    * <code>.google.cloud.dialogflow.v2.OutputAudioConfig output_audio_config = 6;</code>
    */
   com.google.cloud.dialogflow.v2.OutputAudioConfigOrBuilder getOutputAudioConfigOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Debugging info that would get populated when
+   * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+   * </pre>
+   *
+   * <code>.google.cloud.dialogflow.v2.CloudConversationDebuggingInfo debugging_info = 8;</code>
+   *
+   * @return Whether the debuggingInfo field is set.
+   */
+  boolean hasDebuggingInfo();
+  /**
+   *
+   *
+   * <pre>
+   * Debugging info that would get populated when
+   * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+   * </pre>
+   *
+   * <code>.google.cloud.dialogflow.v2.CloudConversationDebuggingInfo debugging_info = 8;</code>
+   *
+   * @return The debuggingInfo.
+   */
+  com.google.cloud.dialogflow.v2.CloudConversationDebuggingInfo getDebuggingInfo();
+  /**
+   *
+   *
+   * <pre>
+   * Debugging info that would get populated when
+   * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+   * </pre>
+   *
+   * <code>.google.cloud.dialogflow.v2.CloudConversationDebuggingInfo debugging_info = 8;</code>
+   */
+  com.google.cloud.dialogflow.v2.CloudConversationDebuggingInfoOrBuilder
+      getDebuggingInfoOrBuilder();
 }

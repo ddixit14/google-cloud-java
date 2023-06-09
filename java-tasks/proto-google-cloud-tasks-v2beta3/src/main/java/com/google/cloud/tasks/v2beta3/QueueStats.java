@@ -45,11 +45,6 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
     return new QueueStats();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.tasks.v2beta3.QueueProto
         .internal_static_google_cloud_tasks_v2beta3_QueueStats_descriptor;
@@ -71,10 +66,10 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. An estimation of the number of tasks in the queue, that is, the tasks in
-   * the queue that haven't been executed, the tasks in the queue which the
-   * queue has dispatched but has not yet received a reply for, and the failed
-   * tasks that the queue is retrying.
+   * Output only. An estimation of the number of tasks in the queue, that is,
+   * the tasks in the queue that haven't been executed, the tasks in the queue
+   * which the queue has dispatched but has not yet received a reply for, and
+   * the failed tasks that the queue is retrying.
    * </pre>
    *
    * <code>int64 tasks_count = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -92,8 +87,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. An estimation of the nearest time in the future where a task in the queue
-   * is scheduled to be executed.
+   * Output only. An estimation of the nearest time in the future where a task
+   * in the queue is scheduled to be executed.
    * </pre>
    *
    * <code>
@@ -110,8 +105,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. An estimation of the nearest time in the future where a task in the queue
-   * is scheduled to be executed.
+   * Output only. An estimation of the nearest time in the future where a task
+   * in the queue is scheduled to be executed.
    * </pre>
    *
    * <code>
@@ -130,8 +125,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. An estimation of the nearest time in the future where a task in the queue
-   * is scheduled to be executed.
+   * Output only. An estimation of the nearest time in the future where a task
+   * in the queue is scheduled to be executed.
    * </pre>
    *
    * <code>
@@ -151,9 +146,9 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The number of tasks that the queue has dispatched and received a reply for
-   * during the last minute. This variable counts both successful and
-   * non-successful executions.
+   * Output only. The number of tasks that the queue has dispatched and received
+   * a reply for during the last minute. This variable counts both successful
+   * and non-successful executions.
    * </pre>
    *
    * <code>int64 executed_last_minute_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -171,8 +166,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The number of requests that the queue has dispatched but has not received
-   * a reply for yet.
+   * Output only. The number of requests that the queue has dispatched but has
+   * not received a reply for yet.
    * </pre>
    *
    * <code>int64 concurrent_dispatches_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -191,10 +186,10 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The current maximum number of tasks per second executed by the queue.
-   * The maximum value of this variable is controlled by the RateLimits of the
-   * Queue. However, this value could be less to avoid overloading the endpoints
-   * tasks in the queue are targeting.
+   * Output only. The current maximum number of tasks per second executed by the
+   * queue. The maximum value of this variable is controlled by the RateLimits
+   * of the Queue. However, this value could be less to avoid overloading the
+   * endpoints tasks in the queue are targeting.
    * </pre>
    *
    * <code>double effective_execution_rate = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -658,10 +653,10 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the number of tasks in the queue, that is, the tasks in
-     * the queue that haven't been executed, the tasks in the queue which the
-     * queue has dispatched but has not yet received a reply for, and the failed
-     * tasks that the queue is retrying.
+     * Output only. An estimation of the number of tasks in the queue, that is,
+     * the tasks in the queue that haven't been executed, the tasks in the queue
+     * which the queue has dispatched but has not yet received a reply for, and
+     * the failed tasks that the queue is retrying.
      * </pre>
      *
      * <code>int64 tasks_count = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -676,10 +671,10 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the number of tasks in the queue, that is, the tasks in
-     * the queue that haven't been executed, the tasks in the queue which the
-     * queue has dispatched but has not yet received a reply for, and the failed
-     * tasks that the queue is retrying.
+     * Output only. An estimation of the number of tasks in the queue, that is,
+     * the tasks in the queue that haven't been executed, the tasks in the queue
+     * which the queue has dispatched but has not yet received a reply for, and
+     * the failed tasks that the queue is retrying.
      * </pre>
      *
      * <code>int64 tasks_count = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -698,10 +693,10 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the number of tasks in the queue, that is, the tasks in
-     * the queue that haven't been executed, the tasks in the queue which the
-     * queue has dispatched but has not yet received a reply for, and the failed
-     * tasks that the queue is retrying.
+     * Output only. An estimation of the number of tasks in the queue, that is,
+     * the tasks in the queue that haven't been executed, the tasks in the queue
+     * which the queue has dispatched but has not yet received a reply for, and
+     * the failed tasks that the queue is retrying.
      * </pre>
      *
      * <code>int64 tasks_count = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -725,8 +720,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the nearest time in the future where a task in the queue
-     * is scheduled to be executed.
+     * Output only. An estimation of the nearest time in the future where a task
+     * in the queue is scheduled to be executed.
      * </pre>
      *
      * <code>
@@ -742,8 +737,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the nearest time in the future where a task in the queue
-     * is scheduled to be executed.
+     * Output only. An estimation of the nearest time in the future where a task
+     * in the queue is scheduled to be executed.
      * </pre>
      *
      * <code>
@@ -765,8 +760,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the nearest time in the future where a task in the queue
-     * is scheduled to be executed.
+     * Output only. An estimation of the nearest time in the future where a task
+     * in the queue is scheduled to be executed.
      * </pre>
      *
      * <code>
@@ -790,8 +785,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the nearest time in the future where a task in the queue
-     * is scheduled to be executed.
+     * Output only. An estimation of the nearest time in the future where a task
+     * in the queue is scheduled to be executed.
      * </pre>
      *
      * <code>
@@ -813,8 +808,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the nearest time in the future where a task in the queue
-     * is scheduled to be executed.
+     * Output only. An estimation of the nearest time in the future where a task
+     * in the queue is scheduled to be executed.
      * </pre>
      *
      * <code>
@@ -841,8 +836,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the nearest time in the future where a task in the queue
-     * is scheduled to be executed.
+     * Output only. An estimation of the nearest time in the future where a task
+     * in the queue is scheduled to be executed.
      * </pre>
      *
      * <code>
@@ -863,8 +858,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the nearest time in the future where a task in the queue
-     * is scheduled to be executed.
+     * Output only. An estimation of the nearest time in the future where a task
+     * in the queue is scheduled to be executed.
      * </pre>
      *
      * <code>
@@ -880,8 +875,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the nearest time in the future where a task in the queue
-     * is scheduled to be executed.
+     * Output only. An estimation of the nearest time in the future where a task
+     * in the queue is scheduled to be executed.
      * </pre>
      *
      * <code>
@@ -901,8 +896,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. An estimation of the nearest time in the future where a task in the queue
-     * is scheduled to be executed.
+     * Output only. An estimation of the nearest time in the future where a task
+     * in the queue is scheduled to be executed.
      * </pre>
      *
      * <code>
@@ -931,9 +926,9 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The number of tasks that the queue has dispatched and received a reply for
-     * during the last minute. This variable counts both successful and
-     * non-successful executions.
+     * Output only. The number of tasks that the queue has dispatched and received
+     * a reply for during the last minute. This variable counts both successful
+     * and non-successful executions.
      * </pre>
      *
      * <code>int64 executed_last_minute_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -949,9 +944,9 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The number of tasks that the queue has dispatched and received a reply for
-     * during the last minute. This variable counts both successful and
-     * non-successful executions.
+     * Output only. The number of tasks that the queue has dispatched and received
+     * a reply for during the last minute. This variable counts both successful
+     * and non-successful executions.
      * </pre>
      *
      * <code>int64 executed_last_minute_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -971,9 +966,9 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The number of tasks that the queue has dispatched and received a reply for
-     * during the last minute. This variable counts both successful and
-     * non-successful executions.
+     * Output only. The number of tasks that the queue has dispatched and received
+     * a reply for during the last minute. This variable counts both successful
+     * and non-successful executions.
      * </pre>
      *
      * <code>int64 executed_last_minute_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -993,8 +988,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The number of requests that the queue has dispatched but has not received
-     * a reply for yet.
+     * Output only. The number of requests that the queue has dispatched but has
+     * not received a reply for yet.
      * </pre>
      *
      * <code>int64 concurrent_dispatches_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -1010,8 +1005,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The number of requests that the queue has dispatched but has not received
-     * a reply for yet.
+     * Output only. The number of requests that the queue has dispatched but has
+     * not received a reply for yet.
      * </pre>
      *
      * <code>int64 concurrent_dispatches_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -1031,8 +1026,8 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The number of requests that the queue has dispatched but has not received
-     * a reply for yet.
+     * Output only. The number of requests that the queue has dispatched but has
+     * not received a reply for yet.
      * </pre>
      *
      * <code>int64 concurrent_dispatches_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -1052,10 +1047,10 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The current maximum number of tasks per second executed by the queue.
-     * The maximum value of this variable is controlled by the RateLimits of the
-     * Queue. However, this value could be less to avoid overloading the endpoints
-     * tasks in the queue are targeting.
+     * Output only. The current maximum number of tasks per second executed by the
+     * queue. The maximum value of this variable is controlled by the RateLimits
+     * of the Queue. However, this value could be less to avoid overloading the
+     * endpoints tasks in the queue are targeting.
      * </pre>
      *
      * <code>double effective_execution_rate = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -1071,10 +1066,10 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The current maximum number of tasks per second executed by the queue.
-     * The maximum value of this variable is controlled by the RateLimits of the
-     * Queue. However, this value could be less to avoid overloading the endpoints
-     * tasks in the queue are targeting.
+     * Output only. The current maximum number of tasks per second executed by the
+     * queue. The maximum value of this variable is controlled by the RateLimits
+     * of the Queue. However, this value could be less to avoid overloading the
+     * endpoints tasks in the queue are targeting.
      * </pre>
      *
      * <code>double effective_execution_rate = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -1094,10 +1089,10 @@ public final class QueueStats extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The current maximum number of tasks per second executed by the queue.
-     * The maximum value of this variable is controlled by the RateLimits of the
-     * Queue. However, this value could be less to avoid overloading the endpoints
-     * tasks in the queue are targeting.
+     * Output only. The current maximum number of tasks per second executed by the
+     * queue. The maximum value of this variable is controlled by the RateLimits
+     * of the Queue. However, this value could be less to avoid overloading the
+     * endpoints tasks in the queue are targeting.
      * </pre>
      *
      * <code>double effective_execution_rate = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];

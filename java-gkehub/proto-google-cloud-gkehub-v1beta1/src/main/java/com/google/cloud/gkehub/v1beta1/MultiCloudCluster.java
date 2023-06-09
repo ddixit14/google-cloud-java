@@ -47,11 +47,6 @@ public final class MultiCloudCluster extends com.google.protobuf.GeneratedMessag
     return new MultiCloudCluster();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.gkehub.v1beta1.MembershipOuterClass
         .internal_static_google_cloud_gkehub_v1beta1_MultiCloudCluster_descriptor;
@@ -75,10 +70,12 @@ public final class MultiCloudCluster extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For
-   * example:
+   * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster.
+   * For example:
+   *
    *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
    *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+   *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/attachedClusters/my-cluster
    * </pre>
    *
    * <code>string resource_link = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -101,10 +98,12 @@ public final class MultiCloudCluster extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For
-   * example:
+   * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster.
+   * For example:
+   *
    *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
    *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+   *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/attachedClusters/my-cluster
    * </pre>
    *
    * <code>string resource_link = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -513,10 +512,12 @@ public final class MultiCloudCluster extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For
-     * example:
+     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster.
+     * For example:
+     *
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+     *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/attachedClusters/my-cluster
      * </pre>
      *
      * <code>string resource_link = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -538,10 +539,12 @@ public final class MultiCloudCluster extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For
-     * example:
+     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster.
+     * For example:
+     *
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+     *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/attachedClusters/my-cluster
      * </pre>
      *
      * <code>string resource_link = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -563,10 +566,12 @@ public final class MultiCloudCluster extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For
-     * example:
+     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster.
+     * For example:
+     *
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+     *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/attachedClusters/my-cluster
      * </pre>
      *
      * <code>string resource_link = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -587,10 +592,12 @@ public final class MultiCloudCluster extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For
-     * example:
+     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster.
+     * For example:
+     *
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+     *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/attachedClusters/my-cluster
      * </pre>
      *
      * <code>string resource_link = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -607,10 +614,12 @@ public final class MultiCloudCluster extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For
-     * example:
+     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster.
+     * For example:
+     *
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
      *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+     *  //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/attachedClusters/my-cluster
      * </pre>
      *
      * <code>string resource_link = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>

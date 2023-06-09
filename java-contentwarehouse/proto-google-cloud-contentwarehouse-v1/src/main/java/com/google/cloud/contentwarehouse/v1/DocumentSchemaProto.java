@@ -36,6 +36,10 @@ public final class DocumentSchemaProto {
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_contentwarehouse_v1_PropertyDefinition_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_contentwarehouse_v1_PropertyDefinition_SchemaSource_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_contentwarehouse_v1_PropertyDefinition_SchemaSource_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
       internal_static_google_cloud_contentwarehouse_v1_IntegerTypeOptions_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_contentwarehouse_v1_IntegerTypeOptions_fieldAccessorTable;
@@ -80,51 +84,64 @@ public final class DocumentSchemaProto {
           + "ent_schema.proto\022 google.cloud.contentwa"
           + "rehouse.v1\032\037google/api/field_behavior.pr"
           + "oto\032\031google/api/resource.proto\032\037google/p"
-          + "rotobuf/timestamp.proto\"\252\003\n\016DocumentSche"
-          + "ma\022\014\n\004name\030\001 \001(\t\022\031\n\014display_name\030\002 \001(\tB\003"
-          + "\340A\002\022R\n\024property_definitions\030\003 \003(\01324.goog"
-          + "le.cloud.contentwarehouse.v1.PropertyDef"
-          + "inition\022\032\n\022document_is_folder\030\004 \001(\010\0224\n\013u"
-          + "pdate_time\030\005 \001(\0132\032.google.protobuf.Times"
-          + "tampB\003\340A\003\0224\n\013create_time\030\006 \001(\0132\032.google."
-          + "protobuf.TimestampB\003\340A\003\022\023\n\013description\030\007"
-          + " \001(\t:~\352A{\n.contentwarehouse.googleapis.c"
-          + "om/DocumentSchema\022Iprojects/{project}/lo"
-          + "cations/{location}/documentSchemas/{docu"
-          + "ment_schema}\"\343\006\n\022PropertyDefinition\022\021\n\004n"
-          + "ame\030\001 \001(\tB\003\340A\002\022\024\n\014display_name\030\014 \001(\t\022\025\n\r"
-          + "is_repeatable\030\002 \001(\010\022\025\n\ris_filterable\030\003 \001"
-          + "(\010\022\025\n\ris_searchable\030\004 \001(\010\022\023\n\013is_metadata"
-          + "\030\005 \001(\010\022\023\n\013is_required\030\016 \001(\010\022T\n\024integer_t"
-          + "ype_options\030\007 \001(\01324.google.cloud.content"
-          + "warehouse.v1.IntegerTypeOptionsH\000\022P\n\022flo"
-          + "at_type_options\030\010 \001(\01322.google.cloud.con"
-          + "tentwarehouse.v1.FloatTypeOptionsH\000\022N\n\021t"
-          + "ext_type_options\030\t \001(\01321.google.cloud.co"
-          + "ntentwarehouse.v1.TextTypeOptionsH\000\022V\n\025p"
-          + "roperty_type_options\030\n \001(\01325.google.clou"
-          + "d.contentwarehouse.v1.PropertyTypeOption"
-          + "sH\000\022N\n\021enum_type_options\030\013 \001(\01321.google."
-          + "cloud.contentwarehouse.v1.EnumTypeOption"
-          + "sH\000\022W\n\026date_time_type_options\030\r \001(\01325.go"
-          + "ogle.cloud.contentwarehouse.v1.DateTimeT"
-          + "ypeOptionsH\000\022L\n\020map_type_options\030\017 \001(\01320"
-          + ".google.cloud.contentwarehouse.v1.MapTyp"
-          + "eOptionsH\000\022X\n\026timestamp_type_options\030\020 \001"
-          + "(\01326.google.cloud.contentwarehouse.v1.Ti"
-          + "mestampTypeOptionsH\000B\024\n\022value_type_optio"
-          + "ns\"\024\n\022IntegerTypeOptions\"\022\n\020FloatTypeOpt"
-          + "ions\"\021\n\017TextTypeOptions\"\025\n\023DateTimeTypeO"
-          + "ptions\"\020\n\016MapTypeOptions\"\026\n\024TimestampTyp"
-          + "eOptions\"n\n\023PropertyTypeOptions\022W\n\024prope"
-          + "rty_definitions\030\001 \003(\01324.google.cloud.con"
-          + "tentwarehouse.v1.PropertyDefinitionB\003\340A\002"
-          + "\"R\n\017EnumTypeOptions\022\034\n\017possible_values\030\001"
-          + " \003(\tB\003\340A\002\022!\n\031validation_check_disabled\030\002"
-          + " \001(\010B\217\001\n$com.google.cloud.contentwarehou"
-          + "se.v1B\023DocumentSchemaProtoP\001ZPcloud.goog"
-          + "le.com/go/contentwarehouse/apiv1/content"
-          + "warehousepb;contentwarehousepbb\006proto3"
+          + "rotobuf/timestamp.proto\"\255\003\n\016DocumentSche"
+          + "ma\022\014\n\004name\030\001 \001(\t\022\032\n\014display_name\030\002 \001(\tB\004"
+          + "\342A\001\002\022R\n\024property_definitions\030\003 \003(\01324.goo"
+          + "gle.cloud.contentwarehouse.v1.PropertyDe"
+          + "finition\022\032\n\022document_is_folder\030\004 \001(\010\0225\n\013"
+          + "update_time\030\005 \001(\0132\032.google.protobuf.Time"
+          + "stampB\004\342A\001\003\0225\n\013create_time\030\006 \001(\0132\032.googl"
+          + "e.protobuf.TimestampB\004\342A\001\003\022\023\n\013descriptio"
+          + "n\030\007 \001(\t:~\352A{\n.contentwarehouse.googleapi"
+          + "s.com/DocumentSchema\022Iprojects/{project}"
+          + "/locations/{location}/documentSchemas/{d"
+          + "ocument_schema}\"\336\t\n\022PropertyDefinition\022\022"
+          + "\n\004name\030\001 \001(\tB\004\342A\001\002\022\024\n\014display_name\030\014 \001(\t"
+          + "\022\025\n\ris_repeatable\030\002 \001(\010\022\025\n\ris_filterable"
+          + "\030\003 \001(\010\022\025\n\ris_searchable\030\004 \001(\010\022\023\n\013is_meta"
+          + "data\030\005 \001(\010\022\023\n\013is_required\030\016 \001(\010\022f\n\024retri"
+          + "eval_importance\030\022 \001(\0162H.google.cloud.con"
+          + "tentwarehouse.v1.PropertyDefinition.Retr"
+          + "ievalImportance\022T\n\024integer_type_options\030"
+          + "\007 \001(\01324.google.cloud.contentwarehouse.v1"
+          + ".IntegerTypeOptionsH\000\022P\n\022float_type_opti"
+          + "ons\030\010 \001(\01322.google.cloud.contentwarehous"
+          + "e.v1.FloatTypeOptionsH\000\022N\n\021text_type_opt"
+          + "ions\030\t \001(\01321.google.cloud.contentwarehou"
+          + "se.v1.TextTypeOptionsH\000\022V\n\025property_type"
+          + "_options\030\n \001(\01325.google.cloud.contentwar"
+          + "ehouse.v1.PropertyTypeOptionsH\000\022N\n\021enum_"
+          + "type_options\030\013 \001(\01321.google.cloud.conten"
+          + "twarehouse.v1.EnumTypeOptionsH\000\022W\n\026date_"
+          + "time_type_options\030\r \001(\01325.google.cloud.c"
+          + "ontentwarehouse.v1.DateTimeTypeOptionsH\000"
+          + "\022L\n\020map_type_options\030\017 \001(\01320.google.clou"
+          + "d.contentwarehouse.v1.MapTypeOptionsH\000\022X"
+          + "\n\026timestamp_type_options\030\020 \001(\01326.google."
+          + "cloud.contentwarehouse.v1.TimestampTypeO"
+          + "ptionsH\000\022Y\n\016schema_sources\030\023 \003(\0132A.googl"
+          + "e.cloud.contentwarehouse.v1.PropertyDefi"
+          + "nition.SchemaSource\0324\n\014SchemaSource\022\014\n\004n"
+          + "ame\030\001 \001(\t\022\026\n\016processor_type\030\002 \001(\t\"\177\n\023Ret"
+          + "rievalImportance\022$\n RETRIEVAL_IMPORTANCE"
+          + "_UNSPECIFIED\020\000\022\013\n\007HIGHEST\020\001\022\n\n\006HIGHER\020\002\022"
+          + "\010\n\004HIGH\020\003\022\n\n\006MEDIUM\020\004\022\007\n\003LOW\020\005\022\n\n\006LOWEST"
+          + "\020\006B\024\n\022value_type_options\"\024\n\022IntegerTypeO"
+          + "ptions\"\022\n\020FloatTypeOptions\"\021\n\017TextTypeOp"
+          + "tions\"\025\n\023DateTimeTypeOptions\"\020\n\016MapTypeO"
+          + "ptions\"\026\n\024TimestampTypeOptions\"o\n\023Proper"
+          + "tyTypeOptions\022X\n\024property_definitions\030\001 "
+          + "\003(\01324.google.cloud.contentwarehouse.v1.P"
+          + "ropertyDefinitionB\004\342A\001\002\"S\n\017EnumTypeOptio"
+          + "ns\022\035\n\017possible_values\030\001 \003(\tB\004\342A\001\002\022!\n\031val"
+          + "idation_check_disabled\030\002 \001(\010B\373\001\n$com.goo"
+          + "gle.cloud.contentwarehouse.v1B\023DocumentS"
+          + "chemaProtoP\001ZPcloud.google.com/go/conten"
+          + "twarehouse/apiv1/contentwarehousepb;cont"
+          + "entwarehousepb\252\002 Google.Cloud.ContentWar"
+          + "ehouse.V1\312\002 Google\\Cloud\\ContentWarehous"
+          + "e\\V1\352\002#Google::Cloud::ContentWarehouse::"
+          + "V1b\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -161,6 +178,7 @@ public final class DocumentSchemaProto {
               "IsSearchable",
               "IsMetadata",
               "IsRequired",
+              "RetrievalImportance",
               "IntegerTypeOptions",
               "FloatTypeOptions",
               "TextTypeOptions",
@@ -169,7 +187,18 @@ public final class DocumentSchemaProto {
               "DateTimeTypeOptions",
               "MapTypeOptions",
               "TimestampTypeOptions",
+              "SchemaSources",
               "ValueTypeOptions",
+            });
+    internal_static_google_cloud_contentwarehouse_v1_PropertyDefinition_SchemaSource_descriptor =
+        internal_static_google_cloud_contentwarehouse_v1_PropertyDefinition_descriptor
+            .getNestedTypes()
+            .get(0);
+    internal_static_google_cloud_contentwarehouse_v1_PropertyDefinition_SchemaSource_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_contentwarehouse_v1_PropertyDefinition_SchemaSource_descriptor,
+            new java.lang.String[] {
+              "Name", "ProcessorType",
             });
     internal_static_google_cloud_contentwarehouse_v1_IntegerTypeOptions_descriptor =
         getDescriptor().getMessageTypes().get(2);

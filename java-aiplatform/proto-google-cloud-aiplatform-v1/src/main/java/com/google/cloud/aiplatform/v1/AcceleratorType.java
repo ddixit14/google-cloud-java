@@ -23,7 +23,6 @@ package com.google.cloud.aiplatform.v1;
  *
  * <pre>
  * Represents a hardware accelerator type.
- * NEXT ID: 11.
  * </pre>
  *
  * Protobuf enum {@code google.cloud.aiplatform.v1.AcceleratorType}
@@ -99,6 +98,26 @@ public enum AcceleratorType implements com.google.protobuf.ProtocolMessageEnum {
    * <code>NVIDIA_TESLA_A100 = 8;</code>
    */
   NVIDIA_TESLA_A100(8),
+  /**
+   *
+   *
+   * <pre>
+   * Nvidia A100 80GB GPU.
+   * </pre>
+   *
+   * <code>NVIDIA_A100_80GB = 9;</code>
+   */
+  NVIDIA_A100_80GB(9),
+  /**
+   *
+   *
+   * <pre>
+   * Nvidia L4 GPU.
+   * </pre>
+   *
+   * <code>NVIDIA_L4 = 11;</code>
+   */
+  NVIDIA_L4(11),
   /**
    *
    *
@@ -206,6 +225,26 @@ public enum AcceleratorType implements com.google.protobuf.ProtocolMessageEnum {
    *
    *
    * <pre>
+   * Nvidia A100 80GB GPU.
+   * </pre>
+   *
+   * <code>NVIDIA_A100_80GB = 9;</code>
+   */
+  public static final int NVIDIA_A100_80GB_VALUE = 9;
+  /**
+   *
+   *
+   * <pre>
+   * Nvidia L4 GPU.
+   * </pre>
+   *
+   * <code>NVIDIA_L4 = 11;</code>
+   */
+  public static final int NVIDIA_L4_VALUE = 11;
+  /**
+   *
+   *
+   * <pre>
    * TPU v2.
    * </pre>
    *
@@ -271,6 +310,10 @@ public enum AcceleratorType implements com.google.protobuf.ProtocolMessageEnum {
         return NVIDIA_TESLA_T4;
       case 8:
         return NVIDIA_TESLA_A100;
+      case 9:
+        return NVIDIA_A100_80GB;
+      case 11:
+        return NVIDIA_L4;
       case 6:
         return TPU_V2;
       case 7:

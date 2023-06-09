@@ -27,8 +27,9 @@ public interface ProjectOrBuilder
    *
    *
    * <pre>
-   * Output only. The unique resource name of the project. It is an int64 generated number
-   * prefixed by "projects/".
+   * Output only. The unique resource name of the project. It is an int64
+   * generated number prefixed by "projects/".
+   *
    * Example: `projects/415104041262`
    * </pre>
    *
@@ -41,8 +42,9 @@ public interface ProjectOrBuilder
    *
    *
    * <pre>
-   * Output only. The unique resource name of the project. It is an int64 generated number
-   * prefixed by "projects/".
+   * Output only. The unique resource name of the project. It is an int64
+   * generated number prefixed by "projects/".
+   *
    * Example: `projects/415104041262`
    * </pre>
    *
@@ -87,6 +89,7 @@ public interface ProjectOrBuilder
    * It must be 6 to 30 lowercase ASCII letters, digits, or hyphens.
    * It must start with a letter.
    * Trailing hyphens are prohibited.
+   *
    * Example: `tokyo-rain-123`
    * </pre>
    *
@@ -103,6 +106,7 @@ public interface ProjectOrBuilder
    * It must be 6 to 30 lowercase ASCII letters, digits, or hyphens.
    * It must start with a letter.
    * Trailing hyphens are prohibited.
+   *
    * Example: `tokyo-rain-123`
    * </pre>
    *
@@ -149,6 +153,7 @@ public interface ProjectOrBuilder
    * When present it must be between 4 to 30 characters.
    * Allowed characters are: lowercase and uppercase letters, numbers,
    * hyphen, single-quote, double-quote, space, and exclamation point.
+   *
    * Example: `My Project`
    * </pre>
    *
@@ -165,6 +170,7 @@ public interface ProjectOrBuilder
    * When present it must be between 4 to 30 characters.
    * Allowed characters are: lowercase and uppercase letters, numbers,
    * hyphen, single-quote, double-quote, space, and exclamation point.
+   *
    * Example: `My Project`
    * </pre>
    *
@@ -292,9 +298,9 @@ public interface ProjectOrBuilder
    *
    *
    * <pre>
-   * Output only. A checksum computed by the server based on the current value of the Project
-   * resource. This may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
+   * Output only. A checksum computed by the server based on the current value
+   * of the Project resource. This may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
    * </pre>
    *
    * <code>string etag = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -306,9 +312,9 @@ public interface ProjectOrBuilder
    *
    *
    * <pre>
-   * Output only. A checksum computed by the server based on the current value of the Project
-   * resource. This may be sent on update and delete requests to ensure the
-   * client has an up-to-date value before proceeding.
+   * Output only. A checksum computed by the server based on the current value
+   * of the Project resource. This may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
    * </pre>
    *
    * <code>string etag = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -322,13 +328,18 @@ public interface ProjectOrBuilder
    *
    * <pre>
    * Optional. The labels associated with this project.
+   *
    * Label keys must be between 1 and 63 characters long and must conform
    * to the following regular expression: &#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?.
+   *
    * Label values must be between 0 and 63 characters long and must conform
    * to the regular expression (&#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?)?.
-   * No more than 256 labels can be associated with a given resource.
+   *
+   * No more than 64 labels can be associated with a given resource.
+   *
    * Clients should store labels in a representation such as JSON that does not
    * depend on specific characters being disallowed.
+   *
    * Example: `"myBusinessDimension" : "businessValue"`
    * </pre>
    *
@@ -340,13 +351,18 @@ public interface ProjectOrBuilder
    *
    * <pre>
    * Optional. The labels associated with this project.
+   *
    * Label keys must be between 1 and 63 characters long and must conform
    * to the following regular expression: &#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?.
+   *
    * Label values must be between 0 and 63 characters long and must conform
    * to the regular expression (&#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?)?.
-   * No more than 256 labels can be associated with a given resource.
+   *
+   * No more than 64 labels can be associated with a given resource.
+   *
    * Clients should store labels in a representation such as JSON that does not
    * depend on specific characters being disallowed.
+   *
    * Example: `"myBusinessDimension" : "businessValue"`
    * </pre>
    *
@@ -361,13 +377,18 @@ public interface ProjectOrBuilder
    *
    * <pre>
    * Optional. The labels associated with this project.
+   *
    * Label keys must be between 1 and 63 characters long and must conform
    * to the following regular expression: &#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?.
+   *
    * Label values must be between 0 and 63 characters long and must conform
    * to the regular expression (&#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?)?.
-   * No more than 256 labels can be associated with a given resource.
+   *
+   * No more than 64 labels can be associated with a given resource.
+   *
    * Clients should store labels in a representation such as JSON that does not
    * depend on specific characters being disallowed.
+   *
    * Example: `"myBusinessDimension" : "businessValue"`
    * </pre>
    *
@@ -379,13 +400,18 @@ public interface ProjectOrBuilder
    *
    * <pre>
    * Optional. The labels associated with this project.
+   *
    * Label keys must be between 1 and 63 characters long and must conform
    * to the following regular expression: &#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?.
+   *
    * Label values must be between 0 and 63 characters long and must conform
    * to the regular expression (&#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?)?.
-   * No more than 256 labels can be associated with a given resource.
+   *
+   * No more than 64 labels can be associated with a given resource.
+   *
    * Clients should store labels in a representation such as JSON that does not
    * depend on specific characters being disallowed.
+   *
    * Example: `"myBusinessDimension" : "businessValue"`
    * </pre>
    *
@@ -401,13 +427,18 @@ public interface ProjectOrBuilder
    *
    * <pre>
    * Optional. The labels associated with this project.
+   *
    * Label keys must be between 1 and 63 characters long and must conform
    * to the following regular expression: &#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?.
+   *
    * Label values must be between 0 and 63 characters long and must conform
    * to the regular expression (&#92;[a-z&#92;](&#92;[-a-z0-9&#92;]*&#92;[a-z0-9&#92;])?)?.
-   * No more than 256 labels can be associated with a given resource.
+   *
+   * No more than 64 labels can be associated with a given resource.
+   *
    * Clients should store labels in a representation such as JSON that does not
    * depend on specific characters being disallowed.
+   *
    * Example: `"myBusinessDimension" : "businessValue"`
    * </pre>
    *

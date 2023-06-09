@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -88,6 +88,8 @@ import com.google.cloud.contactcenterinsights.v1.UpdateIssueRequest;
 import com.google.cloud.contactcenterinsights.v1.UpdatePhraseMatcherRequest;
 import com.google.cloud.contactcenterinsights.v1.UpdateSettingsRequest;
 import com.google.cloud.contactcenterinsights.v1.UpdateViewRequest;
+import com.google.cloud.contactcenterinsights.v1.UploadConversationMetadata;
+import com.google.cloud.contactcenterinsights.v1.UploadConversationRequest;
 import com.google.cloud.contactcenterinsights.v1.View;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.OperationsStub;
@@ -113,6 +115,16 @@ public abstract class ContactCenterInsightsStub implements BackgroundResource {
 
   public UnaryCallable<CreateConversationRequest, Conversation> createConversationCallable() {
     throw new UnsupportedOperationException("Not implemented: createConversationCallable()");
+  }
+
+  public OperationCallable<UploadConversationRequest, Conversation, UploadConversationMetadata>
+      uploadConversationOperationCallable() {
+    throw new UnsupportedOperationException(
+        "Not implemented: uploadConversationOperationCallable()");
+  }
+
+  public UnaryCallable<UploadConversationRequest, Operation> uploadConversationCallable() {
+    throw new UnsupportedOperationException("Not implemented: uploadConversationCallable()");
   }
 
   public UnaryCallable<UpdateConversationRequest, Conversation> updateConversationCallable() {

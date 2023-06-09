@@ -54,11 +54,6 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
     return new Feature();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.aiplatform.v1beta1.FeatureProto
         .internal_static_google_cloud_aiplatform_v1beta1_Feature_descriptor;
@@ -476,10 +471,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * A list of historical [Snapshot
-   * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis] or [Import Feature
-   * Analysis] [FeaturestoreMonitoringConfig.ImportFeatureAnalysis] stats
-   * requested by user, sorted by
+   * A list of historical
+   * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
+   * or
+   * [ImportFeaturesAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.ImportFeaturesAnalysis]
+   * stats requested by user, sorted by
    * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
    * descending.
    * </pre>
@@ -504,11 +500,6 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new MonitoringStatsAnomaly();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -977,10 +968,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis] or [Import Feature
-     * Analysis] [FeaturestoreMonitoringConfig.ImportFeatureAnalysis] stats
-     * requested by user, sorted by
+     * A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * or
+     * [ImportFeaturesAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.ImportFeaturesAnalysis]
+     * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
      * </pre>
@@ -1581,6 +1573,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    * Immutable. Name of the Feature.
    * Format:
    * `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+   *
    * The last part feature is assigned by the client. The feature can be up to
    * 64 characters long and can consist only of ASCII Latin letters A-Z and a-z,
    * underscore(_), and ASCII digits 0-9 starting with a letter. The value will
@@ -1610,6 +1603,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    * Immutable. Name of the Feature.
    * Format:
    * `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+   *
    * The last part feature is assigned by the client. The feature can be up to
    * 64 characters long and can consist only of ASCII Latin letters A-Z and a-z,
    * underscore(_), and ASCII digits 0-9 starting with a letter. The value will
@@ -1854,9 +1848,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Optional. The labels with user-defined metadata to organize your Features.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information on and examples of labels.
    * No more than 64 user labels can be associated with one Feature (System
    * labels are excluded)."
@@ -1884,9 +1880,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Optional. The labels with user-defined metadata to organize your Features.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information on and examples of labels.
    * No more than 64 user labels can be associated with one Feature (System
    * labels are excluded)."
@@ -1905,9 +1903,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Optional. The labels with user-defined metadata to organize your Features.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information on and examples of labels.
    * No more than 64 user labels can be associated with one Feature (System
    * labels are excluded)."
@@ -1933,9 +1933,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Optional. The labels with user-defined metadata to organize your Features.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information on and examples of labels.
    * No more than 64 user labels can be associated with one Feature (System
    * labels are excluded)."
@@ -2021,6 +2023,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    * Feature belongs to. Only Features with type
    * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
    * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+   *
    * If this is populated with
    * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
    * monitoring is disabled; if
@@ -2034,7 +2037,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    * </code>
    *
    * @deprecated google.cloud.aiplatform.v1beta1.Feature.monitoring_config is deprecated. See
-   *     google/cloud/aiplatform/v1beta1/feature.proto;l=160
+   *     google/cloud/aiplatform/v1beta1/feature.proto;l=161
    * @return Whether the monitoringConfig field is set.
    */
   @java.lang.Override
@@ -2051,6 +2054,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    * Feature belongs to. Only Features with type
    * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
    * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+   *
    * If this is populated with
    * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
    * monitoring is disabled; if
@@ -2064,7 +2068,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    * </code>
    *
    * @deprecated google.cloud.aiplatform.v1beta1.Feature.monitoring_config is deprecated. See
-   *     google/cloud/aiplatform/v1beta1/feature.proto;l=160
+   *     google/cloud/aiplatform/v1beta1/feature.proto;l=161
    * @return The monitoringConfig.
    */
   @java.lang.Override
@@ -2083,6 +2087,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    * Feature belongs to. Only Features with type
    * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
    * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+   *
    * If this is populated with
    * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
    * monitoring is disabled; if
@@ -2114,6 +2119,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    * this Feature belongs to. Only Features with type
    * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
    * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+   *
    * If set to true, all types of data monitoring are disabled despite the
    * config on EntityType.
    * </pre>
@@ -2135,8 +2141,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. A list of historical [Snapshot
-   * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+   * Output only. A list of historical
+   * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
    * stats requested by user, sorted by
    * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
    * descending.
@@ -2155,8 +2161,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. A list of historical [Snapshot
-   * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+   * Output only. A list of historical
+   * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
    * stats requested by user, sorted by
    * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
    * descending.
@@ -2175,8 +2181,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. A list of historical [Snapshot
-   * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+   * Output only. A list of historical
+   * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
    * stats requested by user, sorted by
    * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
    * descending.
@@ -2194,8 +2200,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. A list of historical [Snapshot
-   * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+   * Output only. A list of historical
+   * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
    * stats requested by user, sorted by
    * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
    * descending.
@@ -2213,8 +2219,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. A list of historical [Snapshot
-   * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+   * Output only. A list of historical
+   * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
    * stats requested by user, sorted by
    * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
    * descending.
@@ -3063,6 +3069,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Immutable. Name of the Feature.
      * Format:
      * `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+     *
      * The last part feature is assigned by the client. The feature can be up to
      * 64 characters long and can consist only of ASCII Latin letters A-Z and a-z,
      * underscore(_), and ASCII digits 0-9 starting with a letter. The value will
@@ -3091,6 +3098,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Immutable. Name of the Feature.
      * Format:
      * `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+     *
      * The last part feature is assigned by the client. The feature can be up to
      * 64 characters long and can consist only of ASCII Latin letters A-Z and a-z,
      * underscore(_), and ASCII digits 0-9 starting with a letter. The value will
@@ -3119,6 +3127,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Immutable. Name of the Feature.
      * Format:
      * `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+     *
      * The last part feature is assigned by the client. The feature can be up to
      * 64 characters long and can consist only of ASCII Latin letters A-Z and a-z,
      * underscore(_), and ASCII digits 0-9 starting with a letter. The value will
@@ -3146,6 +3155,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Immutable. Name of the Feature.
      * Format:
      * `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+     *
      * The last part feature is assigned by the client. The feature can be up to
      * 64 characters long and can consist only of ASCII Latin letters A-Z and a-z,
      * underscore(_), and ASCII digits 0-9 starting with a letter. The value will
@@ -3169,6 +3179,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Immutable. Name of the Feature.
      * Format:
      * `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+     *
      * The last part feature is assigned by the client. The feature can be up to
      * 64 characters long and can consist only of ASCII Latin letters A-Z and a-z,
      * underscore(_), and ASCII digits 0-9 starting with a letter. The value will
@@ -3831,9 +3842,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. The labels with user-defined metadata to organize your Features.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information on and examples of labels.
      * No more than 64 user labels can be associated with one Feature (System
      * labels are excluded)."
@@ -3861,9 +3874,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. The labels with user-defined metadata to organize your Features.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information on and examples of labels.
      * No more than 64 user labels can be associated with one Feature (System
      * labels are excluded)."
@@ -3882,9 +3897,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. The labels with user-defined metadata to organize your Features.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information on and examples of labels.
      * No more than 64 user labels can be associated with one Feature (System
      * labels are excluded)."
@@ -3910,9 +3927,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. The labels with user-defined metadata to organize your Features.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information on and examples of labels.
      * No more than 64 user labels can be associated with one Feature (System
      * labels are excluded)."
@@ -3944,9 +3963,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. The labels with user-defined metadata to organize your Features.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information on and examples of labels.
      * No more than 64 user labels can be associated with one Feature (System
      * labels are excluded)."
@@ -3974,9 +3995,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. The labels with user-defined metadata to organize your Features.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information on and examples of labels.
      * No more than 64 user labels can be associated with one Feature (System
      * labels are excluded)."
@@ -4002,9 +4025,11 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. The labels with user-defined metadata to organize your Features.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information on and examples of labels.
      * No more than 64 user labels can be associated with one Feature (System
      * labels are excluded)."
@@ -4146,6 +4171,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If this is populated with
      * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
      * monitoring is disabled; if
@@ -4159,7 +4185,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * </code>
      *
      * @deprecated google.cloud.aiplatform.v1beta1.Feature.monitoring_config is deprecated. See
-     *     google/cloud/aiplatform/v1beta1/feature.proto;l=160
+     *     google/cloud/aiplatform/v1beta1/feature.proto;l=161
      * @return Whether the monitoringConfig field is set.
      */
     @java.lang.Deprecated
@@ -4175,6 +4201,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If this is populated with
      * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
      * monitoring is disabled; if
@@ -4188,7 +4215,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * </code>
      *
      * @deprecated google.cloud.aiplatform.v1beta1.Feature.monitoring_config is deprecated. See
-     *     google/cloud/aiplatform/v1beta1/feature.proto;l=160
+     *     google/cloud/aiplatform/v1beta1/feature.proto;l=161
      * @return The monitoringConfig.
      */
     @java.lang.Deprecated
@@ -4210,6 +4237,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If this is populated with
      * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
      * monitoring is disabled; if
@@ -4246,6 +4274,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If this is populated with
      * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
      * monitoring is disabled; if
@@ -4279,6 +4308,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If this is populated with
      * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
      * monitoring is disabled; if
@@ -4320,6 +4350,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If this is populated with
      * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
      * monitoring is disabled; if
@@ -4352,6 +4383,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If this is populated with
      * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
      * monitoring is disabled; if
@@ -4380,6 +4412,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If this is populated with
      * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
      * monitoring is disabled; if
@@ -4412,6 +4445,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If this is populated with
      * [FeaturestoreMonitoringConfig.disabled][] = true, snapshot analysis
      * monitoring is disabled; if
@@ -4450,6 +4484,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * this Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If set to true, all types of data monitoring are disabled despite the
      * config on EntityType.
      * </pre>
@@ -4470,6 +4505,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * this Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If set to true, all types of data monitoring are disabled despite the
      * config on EntityType.
      * </pre>
@@ -4494,6 +4530,7 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      * this Feature belongs to. Only Features with type
      * ([Feature.ValueType][google.cloud.aiplatform.v1beta1.Feature.ValueType])
      * BOOL, STRING, DOUBLE or INT64 can enable monitoring.
+     *
      * If set to true, all types of data monitoring are disabled despite the
      * config on EntityType.
      * </pre>
@@ -4531,8 +4568,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4554,8 +4591,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4576,8 +4613,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4598,8 +4635,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4627,8 +4664,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4654,8 +4691,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4683,8 +4720,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4712,8 +4749,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4738,8 +4775,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4765,8 +4802,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4792,8 +4829,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4817,8 +4854,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4842,8 +4879,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4861,8 +4898,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4884,8 +4921,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4908,8 +4945,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4928,8 +4965,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.
@@ -4949,8 +4986,8 @@ public final class Feature extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A list of historical [Snapshot
-     * Analysis][FeaturestoreMonitoringConfig.SnapshotAnalysis]
+     * Output only. A list of historical
+     * [SnapshotAnalysis][google.cloud.aiplatform.v1beta1.FeaturestoreMonitoringConfig.SnapshotAnalysis]
      * stats requested by user, sorted by
      * [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1beta1.FeatureStatsAnomaly.start_time]
      * descending.

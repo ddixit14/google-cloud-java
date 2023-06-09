@@ -48,11 +48,6 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
     return new ListLinkedSourcesRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contentwarehouse.v1.DocumentLinkServiceProto
         .internal_static_google_cloud_contentwarehouse_v1_ListLinkedSourcesRequest_descriptor;
@@ -76,8 +71,8 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
    *
    *
    * <pre>
-   * Required. The name of the document, for which all source links are returned.
-   * Format:
+   * Required. The name of the document, for which all source links are
+   * returned. Format:
    * projects/{project_number}/locations/{location}/documents/{source_document_id}.
    * </pre>
    *
@@ -103,8 +98,8 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
    *
    *
    * <pre>
-   * Required. The name of the document, for which all source links are returned.
-   * Format:
+   * Required. The name of the document, for which all source links are
+   * returned. Format:
    * projects/{project_number}/locations/{location}/documents/{source_document_id}.
    * </pre>
    *
@@ -135,6 +130,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
    * <pre>
    * The maximum number of document-links to return. The service may return
    * fewer than this value.
+   *
    * If unspecified, at most 50 document-links will be returned.
    * The maximum value is 1000; values above 1000 will be coerced to 1000.
    * </pre>
@@ -158,6 +154,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
    * <pre>
    * A page token, received from a previous `ListLinkedSources` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to `ListLinkedSources`
    * must match the call that provided the page token.
    * </pre>
@@ -184,6 +181,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
    * <pre>
    * A page token, received from a previous `ListLinkedSources` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to `ListLinkedSources`
    * must match the call that provided the page token.
    * </pre>
@@ -688,8 +686,8 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all source links are returned.
-     * Format:
+     * Required. The name of the document, for which all source links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{source_document_id}.
      * </pre>
      *
@@ -714,8 +712,8 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all source links are returned.
-     * Format:
+     * Required. The name of the document, for which all source links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{source_document_id}.
      * </pre>
      *
@@ -740,8 +738,8 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all source links are returned.
-     * Format:
+     * Required. The name of the document, for which all source links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{source_document_id}.
      * </pre>
      *
@@ -765,8 +763,8 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all source links are returned.
-     * Format:
+     * Required. The name of the document, for which all source links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{source_document_id}.
      * </pre>
      *
@@ -786,8 +784,8 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all source links are returned.
-     * Format:
+     * Required. The name of the document, for which all source links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{source_document_id}.
      * </pre>
      *
@@ -816,6 +814,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      * <pre>
      * The maximum number of document-links to return. The service may return
      * fewer than this value.
+     *
      * If unspecified, at most 50 document-links will be returned.
      * The maximum value is 1000; values above 1000 will be coerced to 1000.
      * </pre>
@@ -834,6 +833,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      * <pre>
      * The maximum number of document-links to return. The service may return
      * fewer than this value.
+     *
      * If unspecified, at most 50 document-links will be returned.
      * The maximum value is 1000; values above 1000 will be coerced to 1000.
      * </pre>
@@ -856,6 +856,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      * <pre>
      * The maximum number of document-links to return. The service may return
      * fewer than this value.
+     *
      * If unspecified, at most 50 document-links will be returned.
      * The maximum value is 1000; values above 1000 will be coerced to 1000.
      * </pre>
@@ -878,6 +879,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      * <pre>
      * A page token, received from a previous `ListLinkedSources` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListLinkedSources`
      * must match the call that provided the page token.
      * </pre>
@@ -903,6 +905,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      * <pre>
      * A page token, received from a previous `ListLinkedSources` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListLinkedSources`
      * must match the call that provided the page token.
      * </pre>
@@ -928,6 +931,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      * <pre>
      * A page token, received from a previous `ListLinkedSources` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListLinkedSources`
      * must match the call that provided the page token.
      * </pre>
@@ -952,6 +956,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      * <pre>
      * A page token, received from a previous `ListLinkedSources` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListLinkedSources`
      * must match the call that provided the page token.
      * </pre>
@@ -972,6 +977,7 @@ public final class ListLinkedSourcesRequest extends com.google.protobuf.Generate
      * <pre>
      * A page token, received from a previous `ListLinkedSources` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListLinkedSources`
      * must match the call that provided the page token.
      * </pre>

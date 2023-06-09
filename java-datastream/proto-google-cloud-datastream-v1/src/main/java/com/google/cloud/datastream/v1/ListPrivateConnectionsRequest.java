@@ -50,11 +50,6 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
     return new ListPrivateConnectionsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.datastream.v1.DatastreamProto
         .internal_static_google_cloud_datastream_v1_ListPrivateConnectionsRequest_descriptor;
@@ -78,7 +73,8 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
    *
    *
    * <pre>
-   * Required. The parent that owns the collection of private connectivity configurations.
+   * Required. The parent that owns the collection of private connectivity
+   * configurations.
    * </pre>
    *
    * <code>
@@ -103,7 +99,8 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
    *
    *
    * <pre>
-   * Required. The parent that owns the collection of private connectivity configurations.
+   * Required. The parent that owns the collection of private connectivity
+   * configurations.
    * </pre>
    *
    * <code>
@@ -156,6 +153,7 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
    * <pre>
    * Page token received from a previous `ListPrivateConnections` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to
    * `ListPrivateConnections` must match the call that provided the page
    * token.
@@ -183,6 +181,7 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
    * <pre>
    * Page token received from a previous `ListPrivateConnections` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to
    * `ListPrivateConnections` must match the call that provided the page
    * token.
@@ -752,7 +751,8 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The parent that owns the collection of private connectivity configurations.
+     * Required. The parent that owns the collection of private connectivity
+     * configurations.
      * </pre>
      *
      * <code>
@@ -776,7 +776,8 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The parent that owns the collection of private connectivity configurations.
+     * Required. The parent that owns the collection of private connectivity
+     * configurations.
      * </pre>
      *
      * <code>
@@ -800,7 +801,8 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The parent that owns the collection of private connectivity configurations.
+     * Required. The parent that owns the collection of private connectivity
+     * configurations.
      * </pre>
      *
      * <code>
@@ -823,7 +825,8 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The parent that owns the collection of private connectivity configurations.
+     * Required. The parent that owns the collection of private connectivity
+     * configurations.
      * </pre>
      *
      * <code>
@@ -842,7 +845,8 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The parent that owns the collection of private connectivity configurations.
+     * Required. The parent that owns the collection of private connectivity
+     * configurations.
      * </pre>
      *
      * <code>
@@ -932,6 +936,7 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      * <pre>
      * Page token received from a previous `ListPrivateConnections` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to
      * `ListPrivateConnections` must match the call that provided the page
      * token.
@@ -958,6 +963,7 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      * <pre>
      * Page token received from a previous `ListPrivateConnections` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to
      * `ListPrivateConnections` must match the call that provided the page
      * token.
@@ -984,6 +990,7 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      * <pre>
      * Page token received from a previous `ListPrivateConnections` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to
      * `ListPrivateConnections` must match the call that provided the page
      * token.
@@ -1009,6 +1016,7 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      * <pre>
      * Page token received from a previous `ListPrivateConnections` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to
      * `ListPrivateConnections` must match the call that provided the page
      * token.
@@ -1030,6 +1038,7 @@ public final class ListPrivateConnectionsRequest extends com.google.protobuf.Gen
      * <pre>
      * Page token received from a previous `ListPrivateConnections` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to
      * `ListPrivateConnections` must match the call that provided the page
      * token.

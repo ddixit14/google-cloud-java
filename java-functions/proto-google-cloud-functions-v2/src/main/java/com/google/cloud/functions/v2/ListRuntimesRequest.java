@@ -48,11 +48,6 @@ public final class ListRuntimesRequest extends com.google.protobuf.GeneratedMess
     return new ListRuntimesRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.functions.v2.FunctionsProto
         .internal_static_google_cloud_functions_v2_ListRuntimesRequest_descriptor;

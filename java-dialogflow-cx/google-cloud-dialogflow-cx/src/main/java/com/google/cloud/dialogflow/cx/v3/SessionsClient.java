@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -292,6 +292,7 @@ public class SessionsClient implements BackgroundResource {
    *           .setQueryInput(QueryInput.newBuilder().build())
    *           .setOutputAudioConfig(OutputAudioConfig.newBuilder().build())
    *           .setEnablePartialResponse(true)
+   *           .setEnableDebuggingInfo(true)
    *           .build();
    *   bidiStream.send(request);
    *   for (StreamingDetectIntentResponse response : bidiStream) {

@@ -46,11 +46,6 @@ public final class SourceProvenance extends com.google.protobuf.GeneratedMessage
     return new SourceProvenance();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.functions.v2beta.FunctionsProto
         .internal_static_google_cloud_functions_v2beta_SourceProvenance_descriptor;

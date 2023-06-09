@@ -45,11 +45,6 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
     return new DeploymentJobs();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.deploy.v1.CloudDeployProto
         .internal_static_google_cloud_deploy_v1_DeploymentJobs_descriptor;
@@ -71,7 +66,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The deploy Job. This is the first job run in the phase.
+   * Output only. The deploy Job. This is the deploy job in the phase.
    * </pre>
    *
    * <code>.google.cloud.deploy.v1.Job deploy_job = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -87,7 +82,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The deploy Job. This is the first job run in the phase.
+   * Output only. The deploy Job. This is the deploy job in the phase.
    * </pre>
    *
    * <code>.google.cloud.deploy.v1.Job deploy_job = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -103,7 +98,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The deploy Job. This is the first job run in the phase.
+   * Output only. The deploy Job. This is the deploy job in the phase.
    * </pre>
    *
    * <code>.google.cloud.deploy.v1.Job deploy_job = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -552,7 +547,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The deploy Job. This is the first job run in the phase.
+     * Output only. The deploy Job. This is the deploy job in the phase.
      * </pre>
      *
      * <code>
@@ -568,7 +563,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The deploy Job. This is the first job run in the phase.
+     * Output only. The deploy Job. This is the deploy job in the phase.
      * </pre>
      *
      * <code>
@@ -590,7 +585,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The deploy Job. This is the first job run in the phase.
+     * Output only. The deploy Job. This is the deploy job in the phase.
      * </pre>
      *
      * <code>
@@ -614,7 +609,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The deploy Job. This is the first job run in the phase.
+     * Output only. The deploy Job. This is the deploy job in the phase.
      * </pre>
      *
      * <code>
@@ -635,7 +630,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The deploy Job. This is the first job run in the phase.
+     * Output only. The deploy Job. This is the deploy job in the phase.
      * </pre>
      *
      * <code>
@@ -662,7 +657,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The deploy Job. This is the first job run in the phase.
+     * Output only. The deploy Job. This is the deploy job in the phase.
      * </pre>
      *
      * <code>
@@ -683,7 +678,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The deploy Job. This is the first job run in the phase.
+     * Output only. The deploy Job. This is the deploy job in the phase.
      * </pre>
      *
      * <code>
@@ -699,7 +694,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The deploy Job. This is the first job run in the phase.
+     * Output only. The deploy Job. This is the deploy job in the phase.
      * </pre>
      *
      * <code>
@@ -719,7 +714,7 @@ public final class DeploymentJobs extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The deploy Job. This is the first job run in the phase.
+     * Output only. The deploy Job. This is the deploy job in the phase.
      * </pre>
      *
      * <code>

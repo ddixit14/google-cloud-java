@@ -45,17 +45,13 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
     deployedIndexes_ = java.util.Collections.emptyList();
     etag_ = "";
     network_ = "";
+    publicEndpointDomainName_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new IndexEndpoint();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -408,9 +404,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The labels with user-defined metadata to organize your IndexEndpoints.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information and examples of labels.
    * </pre>
    *
@@ -434,9 +432,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The labels with user-defined metadata to organize your IndexEndpoints.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information and examples of labels.
    * </pre>
    *
@@ -451,9 +451,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The labels with user-defined metadata to organize your IndexEndpoints.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information and examples of labels.
    * </pre>
    *
@@ -475,9 +477,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The labels with user-defined metadata to organize your IndexEndpoints.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information and examples of labels.
    * </pre>
    *
@@ -613,11 +617,14 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    * Optional. The full name of the Google Compute Engine
    * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks)
    * to which the IndexEndpoint should be peered.
+   *
    * Private services access must already be configured for the network. If left
    * unspecified, the Endpoint is not peered with any network.
+   *
    * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
    * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
    * are mutually exclusive.
+   *
    * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
    * `projects/{project}/global/networks/{network}`.
    * Where {project} is a project number, as in '12345', and {network} is
@@ -647,11 +654,14 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    * Optional. The full name of the Google Compute Engine
    * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks)
    * to which the IndexEndpoint should be peered.
+   *
    * Private services access must already be configured for the network. If left
    * unspecified, the Endpoint is not peered with any network.
+   *
    * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
    * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
    * are mutually exclusive.
+   *
    * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
    * `projects/{project}/global/networks/{network}`.
    * Where {project} is a project number, as in '12345', and {network} is
@@ -683,6 +693,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Optional. Deprecated: If true, expose the IndexEndpoint via private service
    * connect.
+   *
    * Only one of the fields,
    * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] or
    * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.IndexEndpoint.enable_private_service_connect],
@@ -711,6 +722,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Optional. Configuration for private service connect.
+   *
    * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
    * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
    * are mutually exclusive.
@@ -731,6 +743,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Optional. Configuration for private service connect.
+   *
    * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
    * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
    * are mutually exclusive.
@@ -754,6 +767,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Optional. Configuration for private service connect.
+   *
    * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
    * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
    * are mutually exclusive.
@@ -769,6 +783,84 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
     return privateServiceConnectConfig_ == null
         ? com.google.cloud.aiplatform.v1beta1.PrivateServiceConnectConfig.getDefaultInstance()
         : privateServiceConnectConfig_;
+  }
+
+  public static final int PUBLIC_ENDPOINT_ENABLED_FIELD_NUMBER = 13;
+  private boolean publicEndpointEnabled_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * Optional. If true, the deployed index will be accessible through public
+   * endpoint.
+   * </pre>
+   *
+   * <code>bool public_endpoint_enabled = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+   *
+   * @return The publicEndpointEnabled.
+   */
+  @java.lang.Override
+  public boolean getPublicEndpointEnabled() {
+    return publicEndpointEnabled_;
+  }
+
+  public static final int PUBLIC_ENDPOINT_DOMAIN_NAME_FIELD_NUMBER = 14;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object publicEndpointDomainName_ = "";
+  /**
+   *
+   *
+   * <pre>
+   * Output only. If
+   * [public_endpoint_enabled][google.cloud.aiplatform.v1beta1.IndexEndpoint.public_endpoint_enabled]
+   * is true, this field will be populated with the domain name to use for this
+   * index endpoint.
+   * </pre>
+   *
+   * <code>string public_endpoint_domain_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
+   * @return The publicEndpointDomainName.
+   */
+  @java.lang.Override
+  public java.lang.String getPublicEndpointDomainName() {
+    java.lang.Object ref = publicEndpointDomainName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      publicEndpointDomainName_ = s;
+      return s;
+    }
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Output only. If
+   * [public_endpoint_enabled][google.cloud.aiplatform.v1beta1.IndexEndpoint.public_endpoint_enabled]
+   * is true, this field will be populated with the domain name to use for this
+   * index endpoint.
+   * </pre>
+   *
+   * <code>string public_endpoint_domain_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
+   * @return The bytes for publicEndpointDomainName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getPublicEndpointDomainNameBytes() {
+    java.lang.Object ref = publicEndpointDomainName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      publicEndpointDomainName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -816,6 +908,12 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
     }
     if (privateServiceConnectConfig_ != null) {
       output.writeMessage(12, getPrivateServiceConnectConfig());
+    }
+    if (publicEndpointEnabled_ != false) {
+      output.writeBool(13, publicEndpointEnabled_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicEndpointDomainName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, publicEndpointDomainName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -869,6 +967,13 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
           com.google.protobuf.CodedOutputStream.computeMessageSize(
               12, getPrivateServiceConnectConfig());
     }
+    if (publicEndpointEnabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(13, publicEndpointEnabled_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicEndpointDomainName_)) {
+      size +=
+          com.google.protobuf.GeneratedMessageV3.computeStringSize(14, publicEndpointDomainName_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -906,6 +1011,8 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
       if (!getPrivateServiceConnectConfig().equals(other.getPrivateServiceConnectConfig()))
         return false;
     }
+    if (getPublicEndpointEnabled() != other.getPublicEndpointEnabled()) return false;
+    if (!getPublicEndpointDomainName().equals(other.getPublicEndpointDomainName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -949,6 +1056,10 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + PRIVATE_SERVICE_CONNECT_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateServiceConnectConfig().hashCode();
     }
+    hash = (37 * hash) + PUBLIC_ENDPOINT_ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getPublicEndpointEnabled());
+    hash = (37 * hash) + PUBLIC_ENDPOINT_DOMAIN_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getPublicEndpointDomainName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1138,6 +1249,8 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
         privateServiceConnectConfigBuilder_.dispose();
         privateServiceConnectConfigBuilder_ = null;
       }
+      publicEndpointEnabled_ = false;
+      publicEndpointDomainName_ = "";
       return this;
     }
 
@@ -1221,6 +1334,12 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
             privateServiceConnectConfigBuilder_ == null
                 ? privateServiceConnectConfig_
                 : privateServiceConnectConfigBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.publicEndpointEnabled_ = publicEndpointEnabled_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.publicEndpointDomainName_ = publicEndpointDomainName_;
       }
     }
 
@@ -1336,6 +1455,14 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
       if (other.hasPrivateServiceConnectConfig()) {
         mergePrivateServiceConnectConfig(other.getPrivateServiceConnectConfig());
       }
+      if (other.getPublicEndpointEnabled() != false) {
+        setPublicEndpointEnabled(other.getPublicEndpointEnabled());
+      }
+      if (!other.getPublicEndpointDomainName().isEmpty()) {
+        publicEndpointDomainName_ = other.publicEndpointDomainName_;
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1443,6 +1570,18 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
                 bitField0_ |= 0x00000400;
                 break;
               } // case 98
+            case 104:
+              {
+                publicEndpointEnabled_ = input.readBool();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 104
+            case 114:
+              {
+                publicEndpointDomainName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 114
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -2329,9 +2468,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your IndexEndpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -2355,9 +2496,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your IndexEndpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -2372,9 +2515,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your IndexEndpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -2396,9 +2541,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your IndexEndpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -2426,9 +2573,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your IndexEndpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -2452,9 +2601,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your IndexEndpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -2476,9 +2627,11 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your IndexEndpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -2927,11 +3080,14 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks)
      * to which the IndexEndpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where {project} is a project number, as in '12345', and {network} is
@@ -2960,11 +3116,14 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks)
      * to which the IndexEndpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where {project} is a project number, as in '12345', and {network} is
@@ -2993,11 +3152,14 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks)
      * to which the IndexEndpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where {project} is a project number, as in '12345', and {network} is
@@ -3025,11 +3187,14 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks)
      * to which the IndexEndpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where {project} is a project number, as in '12345', and {network} is
@@ -3053,11 +3218,14 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks)
      * to which the IndexEndpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where {project} is a project number, as in '12345', and {network} is
@@ -3087,6 +3255,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Optional. Deprecated: If true, expose the IndexEndpoint via private service
      * connect.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.IndexEndpoint.enable_private_service_connect],
@@ -3112,6 +3281,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Optional. Deprecated: If true, expose the IndexEndpoint via private service
      * connect.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.IndexEndpoint.enable_private_service_connect],
@@ -3141,6 +3311,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Optional. Deprecated: If true, expose the IndexEndpoint via private service
      * connect.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.IndexEndpoint.enable_private_service_connect],
@@ -3175,6 +3346,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. Configuration for private service connect.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
@@ -3194,6 +3366,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. Configuration for private service connect.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
@@ -3220,6 +3393,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. Configuration for private service connect.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
@@ -3248,6 +3422,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. Configuration for private service connect.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
@@ -3273,6 +3448,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. Configuration for private service connect.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
@@ -3306,6 +3482,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. Configuration for private service connect.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
@@ -3330,6 +3507,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. Configuration for private service connect.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
@@ -3350,6 +3528,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. Configuration for private service connect.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
@@ -3374,6 +3553,7 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Optional. Configuration for private service connect.
+     *
      * [network][google.cloud.aiplatform.v1beta1.IndexEndpoint.network] and
      * [private_service_connect_config][google.cloud.aiplatform.v1beta1.IndexEndpoint.private_service_connect_config]
      * are mutually exclusive.
@@ -3398,6 +3578,188 @@ public final class IndexEndpoint extends com.google.protobuf.GeneratedMessageV3
         privateServiceConnectConfig_ = null;
       }
       return privateServiceConnectConfigBuilder_;
+    }
+
+    private boolean publicEndpointEnabled_;
+    /**
+     *
+     *
+     * <pre>
+     * Optional. If true, the deployed index will be accessible through public
+     * endpoint.
+     * </pre>
+     *
+     * <code>bool public_endpoint_enabled = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return The publicEndpointEnabled.
+     */
+    @java.lang.Override
+    public boolean getPublicEndpointEnabled() {
+      return publicEndpointEnabled_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. If true, the deployed index will be accessible through public
+     * endpoint.
+     * </pre>
+     *
+     * <code>bool public_endpoint_enabled = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @param value The publicEndpointEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPublicEndpointEnabled(boolean value) {
+
+      publicEndpointEnabled_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. If true, the deployed index will be accessible through public
+     * endpoint.
+     * </pre>
+     *
+     * <code>bool public_endpoint_enabled = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearPublicEndpointEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      publicEndpointEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object publicEndpointDomainName_ = "";
+    /**
+     *
+     *
+     * <pre>
+     * Output only. If
+     * [public_endpoint_enabled][google.cloud.aiplatform.v1beta1.IndexEndpoint.public_endpoint_enabled]
+     * is true, this field will be populated with the domain name to use for this
+     * index endpoint.
+     * </pre>
+     *
+     * <code>string public_endpoint_domain_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
+     * @return The publicEndpointDomainName.
+     */
+    public java.lang.String getPublicEndpointDomainName() {
+      java.lang.Object ref = publicEndpointDomainName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publicEndpointDomainName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. If
+     * [public_endpoint_enabled][google.cloud.aiplatform.v1beta1.IndexEndpoint.public_endpoint_enabled]
+     * is true, this field will be populated with the domain name to use for this
+     * index endpoint.
+     * </pre>
+     *
+     * <code>string public_endpoint_domain_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
+     * @return The bytes for publicEndpointDomainName.
+     */
+    public com.google.protobuf.ByteString getPublicEndpointDomainNameBytes() {
+      java.lang.Object ref = publicEndpointDomainName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        publicEndpointDomainName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. If
+     * [public_endpoint_enabled][google.cloud.aiplatform.v1beta1.IndexEndpoint.public_endpoint_enabled]
+     * is true, this field will be populated with the domain name to use for this
+     * index endpoint.
+     * </pre>
+     *
+     * <code>string public_endpoint_domain_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
+     * @param value The publicEndpointDomainName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPublicEndpointDomainName(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      publicEndpointDomainName_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. If
+     * [public_endpoint_enabled][google.cloud.aiplatform.v1beta1.IndexEndpoint.public_endpoint_enabled]
+     * is true, this field will be populated with the domain name to use for this
+     * index endpoint.
+     * </pre>
+     *
+     * <code>string public_endpoint_domain_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearPublicEndpointDomainName() {
+      publicEndpointDomainName_ = getDefaultInstance().getPublicEndpointDomainName();
+      bitField0_ = (bitField0_ & ~0x00001000);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. If
+     * [public_endpoint_enabled][google.cloud.aiplatform.v1beta1.IndexEndpoint.public_endpoint_enabled]
+     * is true, this field will be populated with the domain name to use for this
+     * index endpoint.
+     * </pre>
+     *
+     * <code>string public_endpoint_domain_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
+     * @param value The bytes for publicEndpointDomainName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPublicEndpointDomainNameBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      publicEndpointDomainName_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
     }
 
     @java.lang.Override

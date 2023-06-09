@@ -45,11 +45,6 @@ public final class UpdateFunctionRequest extends com.google.protobuf.GeneratedMe
     return new UpdateFunctionRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.functions.v2.FunctionsProto
         .internal_static_google_cloud_functions_v2_UpdateFunctionRequest_descriptor;

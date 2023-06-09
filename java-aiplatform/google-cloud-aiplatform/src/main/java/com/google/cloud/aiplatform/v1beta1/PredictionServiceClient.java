@@ -58,7 +58,8 @@ import javax.annotation.Generated;
  * // - It may require specifying regional endpoints when creating the service client as shown in
  * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
- *   EndpointName endpoint = EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+ *   EndpointName endpoint =
+ *       EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
  *   List<Value> instances = new ArrayList<>();
  *   Value parameters = Value.newBuilder().setBoolValue(true).build();
  *   PredictResponse response = predictionServiceClient.predict(endpoint, instances, parameters);
@@ -188,7 +189,8 @@ public class PredictionServiceClient implements BackgroundResource {
    * // - It may require specifying regional endpoints when creating the service client as shown in
    * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
-   *   EndpointName endpoint = EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+   *   EndpointName endpoint =
+   *       EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
    *   List<Value> instances = new ArrayList<>();
    *   Value parameters = Value.newBuilder().setBoolValue(true).build();
    *   PredictResponse response = predictionServiceClient.predict(endpoint, instances, parameters);
@@ -236,7 +238,9 @@ public class PredictionServiceClient implements BackgroundResource {
    * // - It may require specifying regional endpoints when creating the service client as shown in
    * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
-   *   String endpoint = EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]").toString();
+   *   String endpoint =
+   *       EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]")
+   *           .toString();
    *   List<Value> instances = new ArrayList<>();
    *   Value parameters = Value.newBuilder().setBoolValue(true).build();
    *   PredictResponse response = predictionServiceClient.predict(endpoint, instances, parameters);
@@ -285,7 +289,10 @@ public class PredictionServiceClient implements BackgroundResource {
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
    *   PredictRequest request =
    *       PredictRequest.newBuilder()
-   *           .setEndpoint(EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]").toString())
+   *           .setEndpoint(
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
+   *                   .toString())
    *           .addAllInstances(new ArrayList<Value>())
    *           .setParameters(Value.newBuilder().setBoolValue(true).build())
    *           .build();
@@ -315,7 +322,10 @@ public class PredictionServiceClient implements BackgroundResource {
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
    *   PredictRequest request =
    *       PredictRequest.newBuilder()
-   *           .setEndpoint(EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]").toString())
+   *           .setEndpoint(
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
+   *                   .toString())
    *           .addAllInstances(new ArrayList<Value>())
    *           .setParameters(Value.newBuilder().setBoolValue(true).build())
    *           .build();
@@ -356,7 +366,8 @@ public class PredictionServiceClient implements BackgroundResource {
    * // - It may require specifying regional endpoints when creating the service client as shown in
    * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
-   *   EndpointName endpoint = EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+   *   EndpointName endpoint =
+   *       EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
    *   HttpBody httpBody = HttpBody.newBuilder().build();
    *   HttpBody response = predictionServiceClient.rawPredict(endpoint, httpBody);
    * }
@@ -413,7 +424,9 @@ public class PredictionServiceClient implements BackgroundResource {
    * // - It may require specifying regional endpoints when creating the service client as shown in
    * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
-   *   String endpoint = EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]").toString();
+   *   String endpoint =
+   *       EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]")
+   *           .toString();
    *   HttpBody httpBody = HttpBody.newBuilder().build();
    *   HttpBody response = predictionServiceClient.rawPredict(endpoint, httpBody);
    * }
@@ -469,7 +482,10 @@ public class PredictionServiceClient implements BackgroundResource {
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
    *   RawPredictRequest request =
    *       RawPredictRequest.newBuilder()
-   *           .setEndpoint(EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]").toString())
+   *           .setEndpoint(
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
+   *                   .toString())
    *           .setHttpBody(HttpBody.newBuilder().build())
    *           .build();
    *   HttpBody response = predictionServiceClient.rawPredict(request);
@@ -511,7 +527,10 @@ public class PredictionServiceClient implements BackgroundResource {
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
    *   RawPredictRequest request =
    *       RawPredictRequest.newBuilder()
-   *           .setEndpoint(EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]").toString())
+   *           .setEndpoint(
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
+   *                   .toString())
    *           .setHttpBody(HttpBody.newBuilder().build())
    *           .build();
    *   ApiFuture<HttpBody> future = predictionServiceClient.rawPredictCallable().futureCall(request);
@@ -534,7 +553,6 @@ public class PredictionServiceClient implements BackgroundResource {
    * If [deployed_model_id][google.cloud.aiplatform.v1beta1.ExplainRequest.deployed_model_id] is not
    * specified, all DeployedModels must have
    * [explanation_spec][google.cloud.aiplatform.v1beta1.DeployedModel.explanation_spec] populated.
-   * Only deployed AutoML tabular Models have explanation_spec.
    *
    * <p>Sample code:
    *
@@ -545,7 +563,8 @@ public class PredictionServiceClient implements BackgroundResource {
    * // - It may require specifying regional endpoints when creating the service client as shown in
    * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
-   *   EndpointName endpoint = EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+   *   EndpointName endpoint =
+   *       EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
    *   List<Value> instances = new ArrayList<>();
    *   Value parameters = Value.newBuilder().setBoolValue(true).build();
    *   String deployedModelId = "deployedModelId-1817547906";
@@ -596,7 +615,6 @@ public class PredictionServiceClient implements BackgroundResource {
    * If [deployed_model_id][google.cloud.aiplatform.v1beta1.ExplainRequest.deployed_model_id] is not
    * specified, all DeployedModels must have
    * [explanation_spec][google.cloud.aiplatform.v1beta1.DeployedModel.explanation_spec] populated.
-   * Only deployed AutoML tabular Models have explanation_spec.
    *
    * <p>Sample code:
    *
@@ -607,7 +625,9 @@ public class PredictionServiceClient implements BackgroundResource {
    * // - It may require specifying regional endpoints when creating the service client as shown in
    * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
-   *   String endpoint = EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]").toString();
+   *   String endpoint =
+   *       EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]")
+   *           .toString();
    *   List<Value> instances = new ArrayList<>();
    *   Value parameters = Value.newBuilder().setBoolValue(true).build();
    *   String deployedModelId = "deployedModelId-1817547906";
@@ -658,7 +678,6 @@ public class PredictionServiceClient implements BackgroundResource {
    * If [deployed_model_id][google.cloud.aiplatform.v1beta1.ExplainRequest.deployed_model_id] is not
    * specified, all DeployedModels must have
    * [explanation_spec][google.cloud.aiplatform.v1beta1.DeployedModel.explanation_spec] populated.
-   * Only deployed AutoML tabular Models have explanation_spec.
    *
    * <p>Sample code:
    *
@@ -671,7 +690,10 @@ public class PredictionServiceClient implements BackgroundResource {
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
    *   ExplainRequest request =
    *       ExplainRequest.newBuilder()
-   *           .setEndpoint(EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]").toString())
+   *           .setEndpoint(
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
+   *                   .toString())
    *           .addAllInstances(new ArrayList<Value>())
    *           .setParameters(Value.newBuilder().setBoolValue(true).build())
    *           .setExplanationSpecOverride(ExplanationSpecOverride.newBuilder().build())
@@ -698,7 +720,6 @@ public class PredictionServiceClient implements BackgroundResource {
    * If [deployed_model_id][google.cloud.aiplatform.v1beta1.ExplainRequest.deployed_model_id] is not
    * specified, all DeployedModels must have
    * [explanation_spec][google.cloud.aiplatform.v1beta1.DeployedModel.explanation_spec] populated.
-   * Only deployed AutoML tabular Models have explanation_spec.
    *
    * <p>Sample code:
    *
@@ -711,7 +732,10 @@ public class PredictionServiceClient implements BackgroundResource {
    * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
    *   ExplainRequest request =
    *       ExplainRequest.newBuilder()
-   *           .setEndpoint(EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]").toString())
+   *           .setEndpoint(
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
+   *                   .toString())
    *           .addAllInstances(new ArrayList<Value>())
    *           .setParameters(Value.newBuilder().setBoolValue(true).build())
    *           .setExplanationSpecOverride(ExplanationSpecOverride.newBuilder().build())
@@ -903,7 +927,8 @@ public class PredictionServiceClient implements BackgroundResource {
    *   SetIamPolicyRequest request =
    *       SetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setPolicy(Policy.newBuilder().build())
    *           .setUpdateMask(FieldMask.newBuilder().build())
@@ -937,7 +962,8 @@ public class PredictionServiceClient implements BackgroundResource {
    *   SetIamPolicyRequest request =
    *       SetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setPolicy(Policy.newBuilder().build())
    *           .setUpdateMask(FieldMask.newBuilder().build())
@@ -969,7 +995,8 @@ public class PredictionServiceClient implements BackgroundResource {
    *   GetIamPolicyRequest request =
    *       GetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setOptions(GetPolicyOptions.newBuilder().build())
    *           .build();
@@ -1001,7 +1028,8 @@ public class PredictionServiceClient implements BackgroundResource {
    *   GetIamPolicyRequest request =
    *       GetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setOptions(GetPolicyOptions.newBuilder().build())
    *           .build();
@@ -1036,7 +1064,8 @@ public class PredictionServiceClient implements BackgroundResource {
    *   TestIamPermissionsRequest request =
    *       TestIamPermissionsRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .addAllPermissions(new ArrayList<String>())
    *           .build();
@@ -1072,7 +1101,8 @@ public class PredictionServiceClient implements BackgroundResource {
    *   TestIamPermissionsRequest request =
    *       TestIamPermissionsRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .addAllPermissions(new ArrayList<String>())
    *           .build();

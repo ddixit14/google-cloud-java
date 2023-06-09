@@ -22,7 +22,8 @@ package com.google.cloud.tasks.v2beta2;
  *
  *
  * <pre>
- * Request message for [PauseQueue][google.cloud.tasks.v2beta2.CloudTasks.PauseQueue].
+ * Request message for
+ * [PauseQueue][google.cloud.tasks.v2beta2.CloudTasks.PauseQueue].
  * </pre>
  *
  * Protobuf type {@code google.cloud.tasks.v2beta2.PauseQueueRequest}
@@ -45,11 +46,6 @@ public final class PauseQueueRequest extends com.google.protobuf.GeneratedMessag
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new PauseQueueRequest();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -287,7 +283,8 @@ public final class PauseQueueRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Request message for [PauseQueue][google.cloud.tasks.v2beta2.CloudTasks.PauseQueue].
+   * Request message for
+   * [PauseQueue][google.cloud.tasks.v2beta2.CloudTasks.PauseQueue].
    * </pre>
    *
    * Protobuf type {@code google.cloud.tasks.v2beta2.PauseQueueRequest}

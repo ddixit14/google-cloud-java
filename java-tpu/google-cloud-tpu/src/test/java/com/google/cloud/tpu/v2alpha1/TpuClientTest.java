@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -209,6 +209,7 @@ public class TpuClientTest {
             .setQueuedResource("queuedResource94310049")
             .setAcceleratorConfig(AcceleratorConfig.newBuilder().build())
             .setShieldedInstanceConfig(ShieldedInstanceConfig.newBuilder().build())
+            .setMultisliceNode(true)
             .build();
     mockTpu.addResponse(expectedResponse);
 
@@ -266,6 +267,7 @@ public class TpuClientTest {
             .setQueuedResource("queuedResource94310049")
             .setAcceleratorConfig(AcceleratorConfig.newBuilder().build())
             .setShieldedInstanceConfig(ShieldedInstanceConfig.newBuilder().build())
+            .setMultisliceNode(true)
             .build();
     mockTpu.addResponse(expectedResponse);
 
@@ -323,6 +325,7 @@ public class TpuClientTest {
             .setQueuedResource("queuedResource94310049")
             .setAcceleratorConfig(AcceleratorConfig.newBuilder().build())
             .setShieldedInstanceConfig(ShieldedInstanceConfig.newBuilder().build())
+            .setMultisliceNode(true)
             .build();
     Operation resultOperation =
         Operation.newBuilder()
@@ -394,6 +397,7 @@ public class TpuClientTest {
             .setQueuedResource("queuedResource94310049")
             .setAcceleratorConfig(AcceleratorConfig.newBuilder().build())
             .setShieldedInstanceConfig(ShieldedInstanceConfig.newBuilder().build())
+            .setMultisliceNode(true)
             .build();
     Operation resultOperation =
         Operation.newBuilder()
@@ -549,6 +553,7 @@ public class TpuClientTest {
             .setQueuedResource("queuedResource94310049")
             .setAcceleratorConfig(AcceleratorConfig.newBuilder().build())
             .setShieldedInstanceConfig(ShieldedInstanceConfig.newBuilder().build())
+            .setMultisliceNode(true)
             .build();
     Operation resultOperation =
         Operation.newBuilder()
@@ -620,6 +625,7 @@ public class TpuClientTest {
             .setQueuedResource("queuedResource94310049")
             .setAcceleratorConfig(AcceleratorConfig.newBuilder().build())
             .setShieldedInstanceConfig(ShieldedInstanceConfig.newBuilder().build())
+            .setMultisliceNode(true)
             .build();
     Operation resultOperation =
         Operation.newBuilder()
@@ -691,6 +697,7 @@ public class TpuClientTest {
             .setQueuedResource("queuedResource94310049")
             .setAcceleratorConfig(AcceleratorConfig.newBuilder().build())
             .setShieldedInstanceConfig(ShieldedInstanceConfig.newBuilder().build())
+            .setMultisliceNode(true)
             .build();
     Operation resultOperation =
         Operation.newBuilder()
@@ -831,6 +838,7 @@ public class TpuClientTest {
                 QueuedResourceName.of("[PROJECT]", "[LOCATION]", "[QUEUED_RESOURCE]").toString())
             .setQueueingPolicy(QueuedResource.QueueingPolicy.newBuilder().build())
             .setState(QueuedResourceState.newBuilder().build())
+            .setReservationName("reservationName-337941385")
             .build();
     mockTpu.addResponse(expectedResponse);
 
@@ -873,6 +881,7 @@ public class TpuClientTest {
                 QueuedResourceName.of("[PROJECT]", "[LOCATION]", "[QUEUED_RESOURCE]").toString())
             .setQueueingPolicy(QueuedResource.QueueingPolicy.newBuilder().build())
             .setState(QueuedResourceState.newBuilder().build())
+            .setReservationName("reservationName-337941385")
             .build();
     mockTpu.addResponse(expectedResponse);
 
@@ -914,6 +923,7 @@ public class TpuClientTest {
                 QueuedResourceName.of("[PROJECT]", "[LOCATION]", "[QUEUED_RESOURCE]").toString())
             .setQueueingPolicy(QueuedResource.QueueingPolicy.newBuilder().build())
             .setState(QueuedResourceState.newBuilder().build())
+            .setReservationName("reservationName-337941385")
             .build();
     Operation resultOperation =
         Operation.newBuilder()
@@ -971,6 +981,7 @@ public class TpuClientTest {
                 QueuedResourceName.of("[PROJECT]", "[LOCATION]", "[QUEUED_RESOURCE]").toString())
             .setQueueingPolicy(QueuedResource.QueueingPolicy.newBuilder().build())
             .setState(QueuedResourceState.newBuilder().build())
+            .setReservationName("reservationName-337941385")
             .build();
     Operation resultOperation =
         Operation.newBuilder()
@@ -1028,6 +1039,7 @@ public class TpuClientTest {
                 QueuedResourceName.of("[PROJECT]", "[LOCATION]", "[QUEUED_RESOURCE]").toString())
             .setQueueingPolicy(QueuedResource.QueueingPolicy.newBuilder().build())
             .setState(QueuedResourceState.newBuilder().build())
+            .setReservationName("reservationName-337941385")
             .build();
     Operation resultOperation =
         Operation.newBuilder()
@@ -1079,6 +1091,7 @@ public class TpuClientTest {
                 QueuedResourceName.of("[PROJECT]", "[LOCATION]", "[QUEUED_RESOURCE]").toString())
             .setQueueingPolicy(QueuedResource.QueueingPolicy.newBuilder().build())
             .setState(QueuedResourceState.newBuilder().build())
+            .setReservationName("reservationName-337941385")
             .build();
     Operation resultOperation =
         Operation.newBuilder()
@@ -1583,6 +1596,7 @@ public class TpuClientTest {
             .setQueuedResource("queuedResource94310049")
             .setAcceleratorConfig(AcceleratorConfig.newBuilder().build())
             .setShieldedInstanceConfig(ShieldedInstanceConfig.newBuilder().build())
+            .setMultisliceNode(true)
             .build();
     Operation resultOperation =
         Operation.newBuilder()

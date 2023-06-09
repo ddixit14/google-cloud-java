@@ -47,11 +47,6 @@ public final class GetExpandedDataSetRequest extends com.google.protobuf.Generat
     return new GetExpandedDataSetRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.analytics.admin.v1alpha.AnalyticsAdminProto
         .internal_static_google_analytics_admin_v1alpha_GetExpandedDataSetRequest_descriptor;
@@ -75,7 +70,7 @@ public final class GetExpandedDataSetRequest extends com.google.protobuf.Generat
    *
    *
    * <pre>
-   * Required. The name of the Audience to get.
+   * Required. The name of the ExpandedDataSet to get.
    * Example format: properties/1234/expandedDataSets/5678
    * </pre>
    *
@@ -101,7 +96,7 @@ public final class GetExpandedDataSetRequest extends com.google.protobuf.Generat
    *
    *
    * <pre>
-   * Required. The name of the Audience to get.
+   * Required. The name of the ExpandedDataSet to get.
    * Example format: properties/1234/expandedDataSets/5678
    * </pre>
    *
@@ -475,7 +470,7 @@ public final class GetExpandedDataSetRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The name of the Audience to get.
+     * Required. The name of the ExpandedDataSet to get.
      * Example format: properties/1234/expandedDataSets/5678
      * </pre>
      *
@@ -500,7 +495,7 @@ public final class GetExpandedDataSetRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The name of the Audience to get.
+     * Required. The name of the ExpandedDataSet to get.
      * Example format: properties/1234/expandedDataSets/5678
      * </pre>
      *
@@ -525,7 +520,7 @@ public final class GetExpandedDataSetRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The name of the Audience to get.
+     * Required. The name of the ExpandedDataSet to get.
      * Example format: properties/1234/expandedDataSets/5678
      * </pre>
      *
@@ -549,7 +544,7 @@ public final class GetExpandedDataSetRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The name of the Audience to get.
+     * Required. The name of the ExpandedDataSet to get.
      * Example format: properties/1234/expandedDataSets/5678
      * </pre>
      *
@@ -569,7 +564,7 @@ public final class GetExpandedDataSetRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The name of the Audience to get.
+     * Required. The name of the ExpandedDataSet to get.
      * Example format: properties/1234/expandedDataSets/5678
      * </pre>
      *

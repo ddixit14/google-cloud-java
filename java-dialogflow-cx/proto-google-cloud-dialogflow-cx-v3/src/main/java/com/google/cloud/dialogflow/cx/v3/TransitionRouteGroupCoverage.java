@@ -49,11 +49,6 @@ public final class TransitionRouteGroupCoverage extends com.google.protobuf.Gene
     return new TransitionRouteGroupCoverage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dialogflow.cx.v3.TestCaseProto
         .internal_static_google_cloud_dialogflow_cx_v3_TransitionRouteGroupCoverage_descriptor;
@@ -221,11 +216,6 @@ public final class TransitionRouteGroupCoverage extends com.google.protobuf.Gene
       return new Coverage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.dialogflow.cx.v3.TestCaseProto
           .internal_static_google_cloud_dialogflow_cx_v3_TransitionRouteGroupCoverage_Coverage_descriptor;
@@ -286,7 +276,7 @@ public final class TransitionRouteGroupCoverage extends com.google.protobuf.Gene
        *
        *
        * <pre>
-       * Whether or not the transition route is covered by at least one of the
+       * Whether the transition route is covered by at least one of the
        * agent's test cases.
        * </pre>
        *
@@ -322,11 +312,6 @@ public final class TransitionRouteGroupCoverage extends com.google.protobuf.Gene
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
         return new Transition();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-        return this.unknownFields;
       }
 
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -403,7 +388,7 @@ public final class TransitionRouteGroupCoverage extends com.google.protobuf.Gene
        *
        *
        * <pre>
-       * Whether or not the transition route is covered by at least one of the
+       * Whether the transition route is covered by at least one of the
        * agent's test cases.
        * </pre>
        *
@@ -1034,7 +1019,7 @@ public final class TransitionRouteGroupCoverage extends com.google.protobuf.Gene
          *
          *
          * <pre>
-         * Whether or not the transition route is covered by at least one of the
+         * Whether the transition route is covered by at least one of the
          * agent's test cases.
          * </pre>
          *
@@ -1050,7 +1035,7 @@ public final class TransitionRouteGroupCoverage extends com.google.protobuf.Gene
          *
          *
          * <pre>
-         * Whether or not the transition route is covered by at least one of the
+         * Whether the transition route is covered by at least one of the
          * agent's test cases.
          * </pre>
          *
@@ -1070,7 +1055,7 @@ public final class TransitionRouteGroupCoverage extends com.google.protobuf.Gene
          *
          *
          * <pre>
-         * Whether or not the transition route is covered by at least one of the
+         * Whether the transition route is covered by at least one of the
          * agent's test cases.
          * </pre>
          *

@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -629,6 +629,7 @@ public class ParticipantsClientTest {
             .addAllHumanAgentSuggestionResults(new ArrayList<SuggestionResult>())
             .addAllEndUserSuggestionResults(new ArrayList<SuggestionResult>())
             .setDtmfParameters(DtmfParameters.newBuilder().build())
+            .setDebuggingInfo(CloudConversationDebuggingInfo.newBuilder().build())
             .build();
     mockParticipants.addResponse(expectedResponse);
     StreamingAnalyzeContentRequest request =
@@ -642,6 +643,7 @@ public class ParticipantsClientTest {
             .setAssistQueryParams(AssistQueryParameters.newBuilder().build())
             .setCxParameters(Struct.newBuilder().build())
             .setEnablePartialAutomatedAgentReply(true)
+            .setEnableDebuggingInfo(true)
             .build();
 
     MockStreamObserver<StreamingAnalyzeContentResponse> responseObserver =
@@ -675,6 +677,7 @@ public class ParticipantsClientTest {
             .setAssistQueryParams(AssistQueryParameters.newBuilder().build())
             .setCxParameters(Struct.newBuilder().build())
             .setEnablePartialAutomatedAgentReply(true)
+            .setEnableDebuggingInfo(true)
             .build();
 
     MockStreamObserver<StreamingAnalyzeContentResponse> responseObserver =

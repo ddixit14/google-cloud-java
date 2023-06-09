@@ -46,19 +46,15 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
     attributionToken_ = "";
     nextPageToken_ = "";
     redirectUri_ = "";
-    appliedControls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    appliedControls_ = com.google.protobuf.LazyStringArrayList.emptyList();
     invalidConditionBoostSpecs_ = java.util.Collections.emptyList();
+    experimentInfo_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new SearchResponse();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -115,10 +111,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * The product data snippet in the search response. Only
      * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
      * be populated.
+     *
      * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
      * the product variants that match the search query. If there are multiple
      * product variants matching the query, top 5 most relevant product variants
      * are returned and ordered by relevancy.
+     *
      * If relevancy can be deternmined, use
      * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
      * to look up matched product variants fields. If relevancy cannot be
@@ -138,10 +136,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * The product data snippet in the search response. Only
      * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
      * be populated.
+     *
      * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
      * the product variants that match the search query. If there are multiple
      * product variants matching the query, top 5 most relevant product variants
      * are returned and ordered by relevancy.
+     *
      * If relevancy can be deternmined, use
      * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
      * to look up matched product variants fields. If relevancy cannot be
@@ -161,10 +161,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * The product data snippet in the search response. Only
      * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
      * be populated.
+     *
      * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
      * the product variants that match the search query. If there are multiple
      * product variants matching the query, top 5 most relevant product variants
      * are returned and ordered by relevancy.
+     *
      * If relevancy can be deternmined, use
      * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
      * to look up matched product variants fields. If relevancy cannot be
@@ -203,6 +205,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
      * fields. If matched attributes cannot be determined, this map will be
      * empty.
+     *
      * For example, a key "sku1" with field mask
      * "products.color_info" indicates there is a match between
      * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -223,6 +226,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
      * fields. If matched attributes cannot be determined, this map will be
      * empty.
+     *
      * For example, a key "sku1" with field mask
      * "products.color_info" indicates there is a match between
      * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -246,6 +250,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
      * fields. If matched attributes cannot be determined, this map will be
      * empty.
+     *
      * For example, a key "sku1" with field mask
      * "products.color_info" indicates there is a match between
      * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -266,6 +271,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
      * fields. If matched attributes cannot be determined, this map will be
      * empty.
+     *
      * For example, a key "sku1" with field mask
      * "products.color_info" indicates there is a match between
      * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -290,6 +296,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
      * fields. If matched attributes cannot be determined, this map will be
      * empty.
+     *
      * For example, a key "sku1" with field mask
      * "products.color_info" indicates there is a match between
      * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -313,11 +320,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * rollup values are respect filter. For example, when filtering by
      * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
      * returned.
+     *
      * For textual and numerical attributes, the rollup values is a list of
      * string or double values with type
      * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
      * there are two variants with colors "red" and "blue", the rollup values
      * are
+     *
      *     { key: "colorFamilies"
      *       value {
      *         list_value {
@@ -326,6 +335,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      *          }
      *       }
      *     }
+     *
      * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
      * rollup values is a double value with type
      * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -350,11 +360,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * rollup values are respect filter. For example, when filtering by
      * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
      * returned.
+     *
      * For textual and numerical attributes, the rollup values is a list of
      * string or double values with type
      * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
      * there are two variants with colors "red" and "blue", the rollup values
      * are
+     *
      *     { key: "colorFamilies"
      *       value {
      *         list_value {
@@ -363,6 +375,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      *          }
      *       }
      *     }
+     *
      * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
      * rollup values is a double value with type
      * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -390,11 +403,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * rollup values are respect filter. For example, when filtering by
      * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
      * returned.
+     *
      * For textual and numerical attributes, the rollup values is a list of
      * string or double values with type
      * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
      * there are two variants with colors "red" and "blue", the rollup values
      * are
+     *
      *     { key: "colorFamilies"
      *       value {
      *         list_value {
@@ -403,6 +418,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      *          }
      *       }
      *     }
+     *
      * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
      * rollup values is a double value with type
      * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -427,11 +443,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * rollup values are respect filter. For example, when filtering by
      * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
      * returned.
+     *
      * For textual and numerical attributes, the rollup values is a list of
      * string or double values with type
      * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
      * there are two variants with colors "red" and "blue", the rollup values
      * are
+     *
      *     { key: "colorFamilies"
      *       value {
      *         list_value {
@@ -440,6 +458,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      *          }
      *       }
      *     }
+     *
      * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
      * rollup values is a double value with type
      * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -468,11 +487,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * rollup values are respect filter. For example, when filtering by
      * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
      * returned.
+     *
      * For textual and numerical attributes, the rollup values is a list of
      * string or double values with type
      * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
      * there are two variants with colors "red" and "blue", the rollup values
      * are
+     *
      *     { key: "colorFamilies"
      *       value {
      *         list_value {
@@ -481,6 +502,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      *          }
      *       }
      *     }
+     *
      * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
      * rollup values is a double value with type
      * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -500,11 +522,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
      * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
      * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+     *
      * This is set only when
      * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
      * is
      * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+     *
      * Possible values:
+     *
      * * `purchased`: Indicates that this product has been purchased before.
      * </pre>
      *
@@ -521,11 +546,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
      * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
      * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+     *
      * This is set only when
      * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
      * is
      * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+     *
      * Possible values:
+     *
      * * `purchased`: Indicates that this product has been purchased before.
      * </pre>
      *
@@ -542,11 +570,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
      * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
      * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+     *
      * This is set only when
      * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
      * is
      * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+     *
      * Possible values:
+     *
      * * `purchased`: Indicates that this product has been purchased before.
      * </pre>
      *
@@ -564,11 +595,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
      * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
      * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+     *
      * This is set only when
      * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
      * is
      * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+     *
      * Possible values:
+     *
      * * `purchased`: Indicates that this product has been purchased before.
      * </pre>
      *
@@ -600,18 +634,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
 
     private SearchResult() {
       id_ = "";
-      personalLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      personalLabels_ = com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new SearchResult();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -704,10 +733,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * The product data snippet in the search response. Only
      * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
      * be populated.
+     *
      * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
      * the product variants that match the search query. If there are multiple
      * product variants matching the query, top 5 most relevant product variants
      * are returned and ordered by relevancy.
+     *
      * If relevancy can be deternmined, use
      * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
      * to look up matched product variants fields. If relevancy cannot be
@@ -730,10 +761,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * The product data snippet in the search response. Only
      * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
      * be populated.
+     *
      * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
      * the product variants that match the search query. If there are multiple
      * product variants matching the query, top 5 most relevant product variants
      * are returned and ordered by relevancy.
+     *
      * If relevancy can be deternmined, use
      * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
      * to look up matched product variants fields. If relevancy cannot be
@@ -758,10 +791,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * The product data snippet in the search response. Only
      * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
      * be populated.
+     *
      * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
      * the product variants that match the search query. If there are multiple
      * product variants matching the query, top 5 most relevant product variants
      * are returned and ordered by relevancy.
+     *
      * If relevancy can be deternmined, use
      * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
      * to look up matched product variants fields. If relevancy cannot be
@@ -841,6 +876,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
      * fields. If matched attributes cannot be determined, this map will be
      * empty.
+     *
      * For example, a key "sku1" with field mask
      * "products.color_info" indicates there is a match between
      * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -874,6 +910,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
      * fields. If matched attributes cannot be determined, this map will be
      * empty.
+     *
      * For example, a key "sku1" with field mask
      * "products.color_info" indicates there is a match between
      * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -898,6 +935,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
      * fields. If matched attributes cannot be determined, this map will be
      * empty.
+     *
      * For example, a key "sku1" with field mask
      * "products.color_info" indicates there is a match between
      * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -929,6 +967,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
      * fields. If matched attributes cannot be determined, this map will be
      * empty.
+     *
      * For example, a key "sku1" with field mask
      * "products.color_info" indicates there is a match between
      * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -994,11 +1033,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * rollup values are respect filter. For example, when filtering by
      * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
      * returned.
+     *
      * For textual and numerical attributes, the rollup values is a list of
      * string or double values with type
      * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
      * there are two variants with colors "red" and "blue", the rollup values
      * are
+     *
      *     { key: "colorFamilies"
      *       value {
      *         list_value {
@@ -1007,6 +1048,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      *          }
      *       }
      *     }
+     *
      * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
      * rollup values is a double value with type
      * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -1043,11 +1085,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * rollup values are respect filter. For example, when filtering by
      * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
      * returned.
+     *
      * For textual and numerical attributes, the rollup values is a list of
      * string or double values with type
      * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
      * there are two variants with colors "red" and "blue", the rollup values
      * are
+     *
      *     { key: "colorFamilies"
      *       value {
      *         list_value {
@@ -1056,6 +1100,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      *          }
      *       }
      *     }
+     *
      * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
      * rollup values is a double value with type
      * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -1083,11 +1128,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * rollup values are respect filter. For example, when filtering by
      * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
      * returned.
+     *
      * For textual and numerical attributes, the rollup values is a list of
      * string or double values with type
      * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
      * there are two variants with colors "red" and "blue", the rollup values
      * are
+     *
      *     { key: "colorFamilies"
      *       value {
      *         list_value {
@@ -1096,6 +1143,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      *          }
      *       }
      *     }
+     *
      * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
      * rollup values is a double value with type
      * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -1131,11 +1179,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * rollup values are respect filter. For example, when filtering by
      * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
      * returned.
+     *
      * For textual and numerical attributes, the rollup values is a list of
      * string or double values with type
      * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
      * there are two variants with colors "red" and "blue", the rollup values
      * are
+     *
      *     { key: "colorFamilies"
      *       value {
      *         list_value {
@@ -1144,6 +1194,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      *          }
      *       }
      *     }
+     *
      * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
      * rollup values is a double value with type
      * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -1169,7 +1220,8 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
     public static final int PERSONAL_LABELS_FIELD_NUMBER = 7;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList personalLabels_;
+    private com.google.protobuf.LazyStringArrayList personalLabels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      *
      *
@@ -1178,11 +1230,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
      * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
      * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+     *
      * This is set only when
      * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
      * is
      * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+     *
      * Possible values:
+     *
      * * `purchased`: Indicates that this product has been purchased before.
      * </pre>
      *
@@ -1201,11 +1256,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
      * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
      * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+     *
      * This is set only when
      * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
      * is
      * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+     *
      * Possible values:
+     *
      * * `purchased`: Indicates that this product has been purchased before.
      * </pre>
      *
@@ -1224,11 +1282,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
      * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
      * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+     *
      * This is set only when
      * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
      * is
      * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+     *
      * Possible values:
+     *
      * * `purchased`: Indicates that this product has been purchased before.
      * </pre>
      *
@@ -1248,11 +1309,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
      * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
      * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+     *
      * This is set only when
      * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
      * is
      * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+     *
      * Possible values:
+     *
      * * `purchased`: Indicates that this product has been purchased before.
      * </pre>
      *
@@ -1583,8 +1647,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         matchingVariantCount_ = 0;
         internalGetMutableMatchingVariantFields().clear();
         internalGetMutableVariantRollupValues().clear();
-        personalLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        personalLabels_ = com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -1613,21 +1676,11 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       public com.google.cloud.retail.v2beta.SearchResponse.SearchResult buildPartial() {
         com.google.cloud.retail.v2beta.SearchResponse.SearchResult result =
             new com.google.cloud.retail.v2beta.SearchResponse.SearchResult(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(
-          com.google.cloud.retail.v2beta.SearchResponse.SearchResult result) {
-        if (((bitField0_ & 0x00000020) != 0)) {
-          personalLabels_ = personalLabels_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
-        }
-        result.personalLabels_ = personalLabels_;
       }
 
       private void buildPartial0(
@@ -1649,6 +1702,10 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.variantRollupValues_ = internalGetVariantRollupValues();
           result.variantRollupValues_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          personalLabels_.makeImmutable();
+          result.personalLabels_ = personalLabels_;
         }
       }
 
@@ -1720,7 +1777,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         if (!other.personalLabels_.isEmpty()) {
           if (personalLabels_.isEmpty()) {
             personalLabels_ = other.personalLabels_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ |= 0x00000020;
           } else {
             ensurePersonalLabelsIsMutable();
             personalLabels_.addAll(other.personalLabels_);
@@ -1948,10 +2005,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * The product data snippet in the search response. Only
        * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
        * be populated.
+       *
        * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
        * the product variants that match the search query. If there are multiple
        * product variants matching the query, top 5 most relevant product variants
        * are returned and ordered by relevancy.
+       *
        * If relevancy can be deternmined, use
        * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
        * to look up matched product variants fields. If relevancy cannot be
@@ -1973,10 +2032,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * The product data snippet in the search response. Only
        * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
        * be populated.
+       *
        * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
        * the product variants that match the search query. If there are multiple
        * product variants matching the query, top 5 most relevant product variants
        * are returned and ordered by relevancy.
+       *
        * If relevancy can be deternmined, use
        * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
        * to look up matched product variants fields. If relevancy cannot be
@@ -2004,10 +2065,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * The product data snippet in the search response. Only
        * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
        * be populated.
+       *
        * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
        * the product variants that match the search query. If there are multiple
        * product variants matching the query, top 5 most relevant product variants
        * are returned and ordered by relevancy.
+       *
        * If relevancy can be deternmined, use
        * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
        * to look up matched product variants fields. If relevancy cannot be
@@ -2037,10 +2100,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * The product data snippet in the search response. Only
        * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
        * be populated.
+       *
        * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
        * the product variants that match the search query. If there are multiple
        * product variants matching the query, top 5 most relevant product variants
        * are returned and ordered by relevancy.
+       *
        * If relevancy can be deternmined, use
        * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
        * to look up matched product variants fields. If relevancy cannot be
@@ -2067,10 +2132,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * The product data snippet in the search response. Only
        * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
        * be populated.
+       *
        * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
        * the product variants that match the search query. If there are multiple
        * product variants matching the query, top 5 most relevant product variants
        * are returned and ordered by relevancy.
+       *
        * If relevancy can be deternmined, use
        * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
        * to look up matched product variants fields. If relevancy cannot be
@@ -2103,10 +2170,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * The product data snippet in the search response. Only
        * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
        * be populated.
+       *
        * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
        * the product variants that match the search query. If there are multiple
        * product variants matching the query, top 5 most relevant product variants
        * are returned and ordered by relevancy.
+       *
        * If relevancy can be deternmined, use
        * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
        * to look up matched product variants fields. If relevancy cannot be
@@ -2133,10 +2202,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * The product data snippet in the search response. Only
        * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
        * be populated.
+       *
        * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
        * the product variants that match the search query. If there are multiple
        * product variants matching the query, top 5 most relevant product variants
        * are returned and ordered by relevancy.
+       *
        * If relevancy can be deternmined, use
        * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
        * to look up matched product variants fields. If relevancy cannot be
@@ -2158,10 +2229,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * The product data snippet in the search response. Only
        * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
        * be populated.
+       *
        * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
        * the product variants that match the search query. If there are multiple
        * product variants matching the query, top 5 most relevant product variants
        * are returned and ordered by relevancy.
+       *
        * If relevancy can be deternmined, use
        * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
        * to look up matched product variants fields. If relevancy cannot be
@@ -2187,10 +2260,12 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * The product data snippet in the search response. Only
        * [Product.name][google.cloud.retail.v2beta.Product.name] is guaranteed to
        * be populated.
+       *
        * [Product.variants][google.cloud.retail.v2beta.Product.variants] contains
        * the product variants that match the search query. If there are multiple
        * product variants matching the query, top 5 most relevant product variants
        * are returned and ordered by relevancy.
+       *
        * If relevancy can be deternmined, use
        * [matching_variant_fields][google.cloud.retail.v2beta.SearchResponse.SearchResult.matching_variant_fields]
        * to look up matched product variants fields. If relevancy cannot be
@@ -2318,6 +2393,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
        * fields. If matched attributes cannot be determined, this map will be
        * empty.
+       *
        * For example, a key "sku1" with field mask
        * "products.color_info" indicates there is a match between
        * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -2351,6 +2427,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
        * fields. If matched attributes cannot be determined, this map will be
        * empty.
+       *
        * For example, a key "sku1" with field mask
        * "products.color_info" indicates there is a match between
        * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -2375,6 +2452,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
        * fields. If matched attributes cannot be determined, this map will be
        * empty.
+       *
        * For example, a key "sku1" with field mask
        * "products.color_info" indicates there is a match between
        * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -2406,6 +2484,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
        * fields. If matched attributes cannot be determined, this map will be
        * empty.
+       *
        * For example, a key "sku1" with field mask
        * "products.color_info" indicates there is a match between
        * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -2443,6 +2522,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
        * fields. If matched attributes cannot be determined, this map will be
        * empty.
+       *
        * For example, a key "sku1" with field mask
        * "products.color_info" indicates there is a match between
        * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -2476,6 +2556,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
        * fields. If matched attributes cannot be determined, this map will be
        * empty.
+       *
        * For example, a key "sku1" with field mask
        * "products.color_info" indicates there is a match between
        * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -2507,6 +2588,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * field mask of the matched [Product][google.cloud.retail.v2beta.Product]
        * fields. If matched attributes cannot be determined, this map will be
        * empty.
+       *
        * For example, a key "sku1" with field mask
        * "products.color_info" indicates there is a match between
        * "sku1" [ColorInfo][google.cloud.retail.v2beta.ColorInfo] and the query.
@@ -2565,11 +2647,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * rollup values are respect filter. For example, when filtering by
        * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
        * returned.
+       *
        * For textual and numerical attributes, the rollup values is a list of
        * string or double values with type
        * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
        * there are two variants with colors "red" and "blue", the rollup values
        * are
+       *
        *     { key: "colorFamilies"
        *       value {
        *         list_value {
@@ -2578,6 +2662,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        *          }
        *       }
        *     }
+       *
        * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
        * rollup values is a double value with type
        * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -2614,11 +2699,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * rollup values are respect filter. For example, when filtering by
        * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
        * returned.
+       *
        * For textual and numerical attributes, the rollup values is a list of
        * string or double values with type
        * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
        * there are two variants with colors "red" and "blue", the rollup values
        * are
+       *
        *     { key: "colorFamilies"
        *       value {
        *         list_value {
@@ -2627,6 +2714,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        *          }
        *       }
        *     }
+       *
        * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
        * rollup values is a double value with type
        * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -2655,11 +2743,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * rollup values are respect filter. For example, when filtering by
        * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
        * returned.
+       *
        * For textual and numerical attributes, the rollup values is a list of
        * string or double values with type
        * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
        * there are two variants with colors "red" and "blue", the rollup values
        * are
+       *
        *     { key: "colorFamilies"
        *       value {
        *         list_value {
@@ -2668,6 +2758,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        *          }
        *       }
        *     }
+       *
        * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
        * rollup values is a double value with type
        * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -2703,11 +2794,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * rollup values are respect filter. For example, when filtering by
        * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
        * returned.
+       *
        * For textual and numerical attributes, the rollup values is a list of
        * string or double values with type
        * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
        * there are two variants with colors "red" and "blue", the rollup values
        * are
+       *
        *     { key: "colorFamilies"
        *       value {
        *         list_value {
@@ -2716,6 +2809,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        *          }
        *       }
        *     }
+       *
        * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
        * rollup values is a double value with type
        * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -2757,11 +2851,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * rollup values are respect filter. For example, when filtering by
        * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
        * returned.
+       *
        * For textual and numerical attributes, the rollup values is a list of
        * string or double values with type
        * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
        * there are two variants with colors "red" and "blue", the rollup values
        * are
+       *
        *     { key: "colorFamilies"
        *       value {
        *         list_value {
@@ -2770,6 +2866,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        *          }
        *       }
        *     }
+       *
        * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
        * rollup values is a double value with type
        * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -2807,11 +2904,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * rollup values are respect filter. For example, when filtering by
        * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
        * returned.
+       *
        * For textual and numerical attributes, the rollup values is a list of
        * string or double values with type
        * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
        * there are two variants with colors "red" and "blue", the rollup values
        * are
+       *
        *     { key: "colorFamilies"
        *       value {
        *         list_value {
@@ -2820,6 +2919,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        *          }
        *       }
        *     }
+       *
        * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
        * rollup values is a double value with type
        * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -2854,11 +2954,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * rollup values are respect filter. For example, when filtering by
        * "colorFamilies:ANY(&#92;"red&#92;")" and rollup "colorFamilies", only "red" is
        * returned.
+       *
        * For textual and numerical attributes, the rollup values is a list of
        * string or double values with type
        * [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
        * there are two variants with colors "red" and "blue", the rollup values
        * are
+       *
        *     { key: "colorFamilies"
        *       value {
        *         list_value {
@@ -2867,6 +2969,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        *          }
        *       }
        *     }
+       *
        * For [FulfillmentInfo][google.cloud.retail.v2beta.FulfillmentInfo], the
        * rollup values is a double value with type
        * [google.protobuf.Value][google.protobuf.Value]. For example,
@@ -2883,14 +2986,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
 
-      private com.google.protobuf.LazyStringList personalLabels_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList personalLabels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensurePersonalLabelsIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!personalLabels_.isModifiable()) {
           personalLabels_ = new com.google.protobuf.LazyStringArrayList(personalLabels_);
-          bitField0_ |= 0x00000020;
         }
+        bitField0_ |= 0x00000020;
       }
       /**
        *
@@ -2900,11 +3003,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
        * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
        * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+       *
        * This is set only when
        * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
        * is
        * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+       *
        * Possible values:
+       *
        * * `purchased`: Indicates that this product has been purchased before.
        * </pre>
        *
@@ -2913,7 +3019,8 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * @return A list containing the personalLabels.
        */
       public com.google.protobuf.ProtocolStringList getPersonalLabelsList() {
-        return personalLabels_.getUnmodifiableView();
+        personalLabels_.makeImmutable();
+        return personalLabels_;
       }
       /**
        *
@@ -2923,11 +3030,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
        * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
        * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+       *
        * This is set only when
        * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
        * is
        * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+       *
        * Possible values:
+       *
        * * `purchased`: Indicates that this product has been purchased before.
        * </pre>
        *
@@ -2946,11 +3056,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
        * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
        * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+       *
        * This is set only when
        * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
        * is
        * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+       *
        * Possible values:
+       *
        * * `purchased`: Indicates that this product has been purchased before.
        * </pre>
        *
@@ -2970,11 +3083,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
        * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
        * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+       *
        * This is set only when
        * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
        * is
        * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+       *
        * Possible values:
+       *
        * * `purchased`: Indicates that this product has been purchased before.
        * </pre>
        *
@@ -2994,11 +3110,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
        * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
        * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+       *
        * This is set only when
        * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
        * is
        * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+       *
        * Possible values:
+       *
        * * `purchased`: Indicates that this product has been purchased before.
        * </pre>
        *
@@ -3014,6 +3133,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         }
         ensurePersonalLabelsIsMutable();
         personalLabels_.set(index, value);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3025,11 +3145,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
        * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
        * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+       *
        * This is set only when
        * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
        * is
        * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+       *
        * Possible values:
+       *
        * * `purchased`: Indicates that this product has been purchased before.
        * </pre>
        *
@@ -3044,6 +3167,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         }
         ensurePersonalLabelsIsMutable();
         personalLabels_.add(value);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3055,11 +3179,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
        * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
        * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+       *
        * This is set only when
        * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
        * is
        * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+       *
        * Possible values:
+       *
        * * `purchased`: Indicates that this product has been purchased before.
        * </pre>
        *
@@ -3071,6 +3198,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       public Builder addAllPersonalLabels(java.lang.Iterable<java.lang.String> values) {
         ensurePersonalLabelsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, personalLabels_);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3082,11 +3210,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
        * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
        * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+       *
        * This is set only when
        * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
        * is
        * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+       *
        * Possible values:
+       *
        * * `purchased`: Indicates that this product has been purchased before.
        * </pre>
        *
@@ -3095,8 +3226,9 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * @return This builder for chaining.
        */
       public Builder clearPersonalLabels() {
-        personalLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        personalLabels_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
+        ;
         onChanged();
         return this;
       }
@@ -3108,11 +3240,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        * [UserEvent][google.cloud.retail.v2beta.UserEvent] with same
        * [SearchRequest.visitor_id][google.cloud.retail.v2beta.SearchRequest.visitor_id]
        * or [UserInfo.user_id][google.cloud.retail.v2beta.UserInfo.user_id].
+       *
        * This is set only when
        * [SearchRequest.PersonalizationSpec.mode][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.mode]
        * is
        * [SearchRequest.PersonalizationSpec.Mode.AUTO][google.cloud.retail.v2beta.SearchRequest.PersonalizationSpec.Mode.AUTO].
+       *
        * Possible values:
+       *
        * * `purchased`: Indicates that this product has been purchased before.
        * </pre>
        *
@@ -3128,6 +3263,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         checkByteStringIsUtf8(value);
         ensurePersonalLabelsIsMutable();
         personalLabels_.add(value);
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3326,11 +3462,6 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       return new Facet();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.retail.v2beta.SearchServiceProto
           .internal_static_google_cloud_retail_v2beta_SearchResponse_Facet_descriptor;
@@ -3470,7 +3601,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
        */
       double getMaxValue();
 
-      public com.google.cloud.retail.v2beta.SearchResponse.Facet.FacetValue.FacetValueCase
+      com.google.cloud.retail.v2beta.SearchResponse.Facet.FacetValue.FacetValueCase
           getFacetValueCase();
     }
     /**
@@ -3500,11 +3631,6 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         return new FacetValue();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-        return this.unknownFields;
-      }
-
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
         return com.google.cloud.retail.v2beta.SearchServiceProto
             .internal_static_google_cloud_retail_v2beta_SearchResponse_Facet_FacetValue_descriptor;
@@ -3521,6 +3647,8 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       }
 
       private int facetValueCase_ = 0;
+
+      @SuppressWarnings("serial")
       private java.lang.Object facetValue_;
 
       public enum FacetValueCase
@@ -6111,11 +6239,6 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       return new QueryExpansionInfo();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.retail.v2beta.SearchServiceProto
           .internal_static_google_cloud_retail_v2beta_SearchResponse_QueryExpansionInfo_descriptor;
@@ -7179,7 +7302,8 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
   public static final int APPLIED_CONTROLS_FIELD_NUMBER = 12;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList appliedControls_;
+  private com.google.protobuf.LazyStringArrayList appliedControls_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
@@ -7340,6 +7464,83 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
     return invalidConditionBoostSpecs_.get(index);
   }
 
+  public static final int EXPERIMENT_INFO_FIELD_NUMBER = 17;
+
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.cloud.retail.v2beta.ExperimentInfo> experimentInfo_;
+  /**
+   *
+   *
+   * <pre>
+   * Metadata related to A/B testing [Experiment][] associated with this
+   * response. Only exists when an experiment is triggered.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.cloud.retail.v2beta.ExperimentInfo> getExperimentInfoList() {
+    return experimentInfo_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Metadata related to A/B testing [Experiment][] associated with this
+   * response. Only exists when an experiment is triggered.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.cloud.retail.v2beta.ExperimentInfoOrBuilder>
+      getExperimentInfoOrBuilderList() {
+    return experimentInfo_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Metadata related to A/B testing [Experiment][] associated with this
+   * response. Only exists when an experiment is triggered.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+   */
+  @java.lang.Override
+  public int getExperimentInfoCount() {
+    return experimentInfo_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Metadata related to A/B testing [Experiment][] associated with this
+   * response. Only exists when an experiment is triggered.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+   */
+  @java.lang.Override
+  public com.google.cloud.retail.v2beta.ExperimentInfo getExperimentInfo(int index) {
+    return experimentInfo_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Metadata related to A/B testing [Experiment][] associated with this
+   * response. Only exists when an experiment is triggered.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+   */
+  @java.lang.Override
+  public com.google.cloud.retail.v2beta.ExperimentInfoOrBuilder getExperimentInfoOrBuilder(
+      int index) {
+    return experimentInfo_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -7383,6 +7584,9 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
     }
     for (int i = 0; i < invalidConditionBoostSpecs_.size(); i++) {
       output.writeMessage(14, invalidConditionBoostSpecs_.get(i));
+    }
+    for (int i = 0; i < experimentInfo_.size(); i++) {
+      output.writeMessage(17, experimentInfo_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -7430,6 +7634,9 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
           com.google.protobuf.CodedOutputStream.computeMessageSize(
               14, invalidConditionBoostSpecs_.get(i));
     }
+    for (int i = 0; i < experimentInfo_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(17, experimentInfo_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -7460,6 +7667,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
     if (!getAppliedControlsList().equals(other.getAppliedControlsList())) return false;
     if (!getInvalidConditionBoostSpecsList().equals(other.getInvalidConditionBoostSpecsList()))
       return false;
+    if (!getExperimentInfoList().equals(other.getExperimentInfoList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -7500,6 +7708,10 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
     if (getInvalidConditionBoostSpecsCount() > 0) {
       hash = (37 * hash) + INVALID_CONDITION_BOOST_SPECS_FIELD_NUMBER;
       hash = (53 * hash) + getInvalidConditionBoostSpecsList().hashCode();
+    }
+    if (getExperimentInfoCount() > 0) {
+      hash = (37 * hash) + EXPERIMENT_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getExperimentInfoList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -7666,8 +7878,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         queryExpansionInfoBuilder_ = null;
       }
       redirectUri_ = "";
-      appliedControls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000100);
+      appliedControls_ = com.google.protobuf.LazyStringArrayList.emptyList();
       if (invalidConditionBoostSpecsBuilder_ == null) {
         invalidConditionBoostSpecs_ = java.util.Collections.emptyList();
       } else {
@@ -7675,6 +7886,13 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         invalidConditionBoostSpecsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000200);
+      if (experimentInfoBuilder_ == null) {
+        experimentInfo_ = java.util.Collections.emptyList();
+      } else {
+        experimentInfo_ = null;
+        experimentInfoBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -7729,11 +7947,6 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.facets_ = facetsBuilder_.build();
       }
-      if (((bitField0_ & 0x00000100) != 0)) {
-        appliedControls_ = appliedControls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000100);
-      }
-      result.appliedControls_ = appliedControls_;
       if (invalidConditionBoostSpecsBuilder_ == null) {
         if (((bitField0_ & 0x00000200) != 0)) {
           invalidConditionBoostSpecs_ =
@@ -7743,6 +7956,15 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         result.invalidConditionBoostSpecs_ = invalidConditionBoostSpecs_;
       } else {
         result.invalidConditionBoostSpecs_ = invalidConditionBoostSpecsBuilder_.build();
+      }
+      if (experimentInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          experimentInfo_ = java.util.Collections.unmodifiableList(experimentInfo_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.experimentInfo_ = experimentInfo_;
+      } else {
+        result.experimentInfo_ = experimentInfoBuilder_.build();
       }
     }
 
@@ -7768,6 +7990,10 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.redirectUri_ = redirectUri_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        appliedControls_.makeImmutable();
+        result.appliedControls_ = appliedControls_;
       }
     }
 
@@ -7899,7 +8125,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       if (!other.appliedControls_.isEmpty()) {
         if (appliedControls_.isEmpty()) {
           appliedControls_ = other.appliedControls_;
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ |= 0x00000100;
         } else {
           ensureAppliedControlsIsMutable();
           appliedControls_.addAll(other.appliedControls_);
@@ -7930,6 +8156,33 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
                     : null;
           } else {
             invalidConditionBoostSpecsBuilder_.addAllMessages(other.invalidConditionBoostSpecs_);
+          }
+        }
+      }
+      if (experimentInfoBuilder_ == null) {
+        if (!other.experimentInfo_.isEmpty()) {
+          if (experimentInfo_.isEmpty()) {
+            experimentInfo_ = other.experimentInfo_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureExperimentInfoIsMutable();
+            experimentInfo_.addAll(other.experimentInfo_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.experimentInfo_.isEmpty()) {
+          if (experimentInfoBuilder_.isEmpty()) {
+            experimentInfoBuilder_.dispose();
+            experimentInfoBuilder_ = null;
+            experimentInfo_ = other.experimentInfo_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            experimentInfoBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getExperimentInfoFieldBuilder()
+                    : null;
+          } else {
+            experimentInfoBuilder_.addAllMessages(other.experimentInfo_);
           }
         }
       }
@@ -8046,6 +8299,19 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
                 }
                 break;
               } // case 114
+            case 138:
+              {
+                com.google.cloud.retail.v2beta.ExperimentInfo m =
+                    input.readMessage(
+                        com.google.cloud.retail.v2beta.ExperimentInfo.parser(), extensionRegistry);
+                if (experimentInfoBuilder_ == null) {
+                  ensureExperimentInfoIsMutable();
+                  experimentInfo_.add(m);
+                } else {
+                  experimentInfoBuilder_.addMessage(m);
+                }
+                break;
+              } // case 138
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -9527,14 +9793,14 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private com.google.protobuf.LazyStringList appliedControls_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList appliedControls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureAppliedControlsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!appliedControls_.isModifiable()) {
         appliedControls_ = new com.google.protobuf.LazyStringArrayList(appliedControls_);
-        bitField0_ |= 0x00000100;
       }
+      bitField0_ |= 0x00000100;
     }
     /**
      *
@@ -9549,7 +9815,8 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the appliedControls.
      */
     public com.google.protobuf.ProtocolStringList getAppliedControlsList() {
-      return appliedControls_.getUnmodifiableView();
+      appliedControls_.makeImmutable();
+      return appliedControls_;
     }
     /**
      *
@@ -9618,6 +9885,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       }
       ensureAppliedControlsIsMutable();
       appliedControls_.set(index, value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -9640,6 +9908,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       }
       ensureAppliedControlsIsMutable();
       appliedControls_.add(value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -9659,6 +9928,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllAppliedControls(java.lang.Iterable<java.lang.String> values) {
       ensureAppliedControlsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, appliedControls_);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -9675,8 +9945,9 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearAppliedControls() {
-      appliedControls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      appliedControls_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000100);
+      ;
       onChanged();
       return this;
     }
@@ -9700,6 +9971,7 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureAppliedControlsIsMutable();
       appliedControls_.add(value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -10157,6 +10429,383 @@ public final class SearchResponse extends com.google.protobuf.GeneratedMessageV3
         invalidConditionBoostSpecs_ = null;
       }
       return invalidConditionBoostSpecsBuilder_;
+    }
+
+    private java.util.List<com.google.cloud.retail.v2beta.ExperimentInfo> experimentInfo_ =
+        java.util.Collections.emptyList();
+
+    private void ensureExperimentInfoIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        experimentInfo_ =
+            new java.util.ArrayList<com.google.cloud.retail.v2beta.ExperimentInfo>(experimentInfo_);
+        bitField0_ |= 0x00000400;
+      }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.cloud.retail.v2beta.ExperimentInfo,
+            com.google.cloud.retail.v2beta.ExperimentInfo.Builder,
+            com.google.cloud.retail.v2beta.ExperimentInfoOrBuilder>
+        experimentInfoBuilder_;
+
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public java.util.List<com.google.cloud.retail.v2beta.ExperimentInfo> getExperimentInfoList() {
+      if (experimentInfoBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(experimentInfo_);
+      } else {
+        return experimentInfoBuilder_.getMessageList();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public int getExperimentInfoCount() {
+      if (experimentInfoBuilder_ == null) {
+        return experimentInfo_.size();
+      } else {
+        return experimentInfoBuilder_.getCount();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public com.google.cloud.retail.v2beta.ExperimentInfo getExperimentInfo(int index) {
+      if (experimentInfoBuilder_ == null) {
+        return experimentInfo_.get(index);
+      } else {
+        return experimentInfoBuilder_.getMessage(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public Builder setExperimentInfo(
+        int index, com.google.cloud.retail.v2beta.ExperimentInfo value) {
+      if (experimentInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExperimentInfoIsMutable();
+        experimentInfo_.set(index, value);
+        onChanged();
+      } else {
+        experimentInfoBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public Builder setExperimentInfo(
+        int index, com.google.cloud.retail.v2beta.ExperimentInfo.Builder builderForValue) {
+      if (experimentInfoBuilder_ == null) {
+        ensureExperimentInfoIsMutable();
+        experimentInfo_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        experimentInfoBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public Builder addExperimentInfo(com.google.cloud.retail.v2beta.ExperimentInfo value) {
+      if (experimentInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExperimentInfoIsMutable();
+        experimentInfo_.add(value);
+        onChanged();
+      } else {
+        experimentInfoBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public Builder addExperimentInfo(
+        int index, com.google.cloud.retail.v2beta.ExperimentInfo value) {
+      if (experimentInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureExperimentInfoIsMutable();
+        experimentInfo_.add(index, value);
+        onChanged();
+      } else {
+        experimentInfoBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public Builder addExperimentInfo(
+        com.google.cloud.retail.v2beta.ExperimentInfo.Builder builderForValue) {
+      if (experimentInfoBuilder_ == null) {
+        ensureExperimentInfoIsMutable();
+        experimentInfo_.add(builderForValue.build());
+        onChanged();
+      } else {
+        experimentInfoBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public Builder addExperimentInfo(
+        int index, com.google.cloud.retail.v2beta.ExperimentInfo.Builder builderForValue) {
+      if (experimentInfoBuilder_ == null) {
+        ensureExperimentInfoIsMutable();
+        experimentInfo_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        experimentInfoBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public Builder addAllExperimentInfo(
+        java.lang.Iterable<? extends com.google.cloud.retail.v2beta.ExperimentInfo> values) {
+      if (experimentInfoBuilder_ == null) {
+        ensureExperimentInfoIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, experimentInfo_);
+        onChanged();
+      } else {
+        experimentInfoBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public Builder clearExperimentInfo() {
+      if (experimentInfoBuilder_ == null) {
+        experimentInfo_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        experimentInfoBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public Builder removeExperimentInfo(int index) {
+      if (experimentInfoBuilder_ == null) {
+        ensureExperimentInfoIsMutable();
+        experimentInfo_.remove(index);
+        onChanged();
+      } else {
+        experimentInfoBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public com.google.cloud.retail.v2beta.ExperimentInfo.Builder getExperimentInfoBuilder(
+        int index) {
+      return getExperimentInfoFieldBuilder().getBuilder(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public com.google.cloud.retail.v2beta.ExperimentInfoOrBuilder getExperimentInfoOrBuilder(
+        int index) {
+      if (experimentInfoBuilder_ == null) {
+        return experimentInfo_.get(index);
+      } else {
+        return experimentInfoBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public java.util.List<? extends com.google.cloud.retail.v2beta.ExperimentInfoOrBuilder>
+        getExperimentInfoOrBuilderList() {
+      if (experimentInfoBuilder_ != null) {
+        return experimentInfoBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(experimentInfo_);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public com.google.cloud.retail.v2beta.ExperimentInfo.Builder addExperimentInfoBuilder() {
+      return getExperimentInfoFieldBuilder()
+          .addBuilder(com.google.cloud.retail.v2beta.ExperimentInfo.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public com.google.cloud.retail.v2beta.ExperimentInfo.Builder addExperimentInfoBuilder(
+        int index) {
+      return getExperimentInfoFieldBuilder()
+          .addBuilder(index, com.google.cloud.retail.v2beta.ExperimentInfo.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Metadata related to A/B testing [Experiment][] associated with this
+     * response. Only exists when an experiment is triggered.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2beta.ExperimentInfo experiment_info = 17;</code>
+     */
+    public java.util.List<com.google.cloud.retail.v2beta.ExperimentInfo.Builder>
+        getExperimentInfoBuilderList() {
+      return getExperimentInfoFieldBuilder().getBuilderList();
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.cloud.retail.v2beta.ExperimentInfo,
+            com.google.cloud.retail.v2beta.ExperimentInfo.Builder,
+            com.google.cloud.retail.v2beta.ExperimentInfoOrBuilder>
+        getExperimentInfoFieldBuilder() {
+      if (experimentInfoBuilder_ == null) {
+        experimentInfoBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.cloud.retail.v2beta.ExperimentInfo,
+                com.google.cloud.retail.v2beta.ExperimentInfo.Builder,
+                com.google.cloud.retail.v2beta.ExperimentInfoOrBuilder>(
+                experimentInfo_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        experimentInfo_ = null;
+      }
+      return experimentInfoBuilder_;
     }
 
     @java.lang.Override

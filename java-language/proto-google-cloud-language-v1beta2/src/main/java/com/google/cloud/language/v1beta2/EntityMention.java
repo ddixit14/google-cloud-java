@@ -48,11 +48,6 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
     return new EntityMention();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.language.v1beta2.LanguageServiceProto
         .internal_static_google_cloud_language_v1beta2_EntityMention_descriptor;
@@ -315,9 +310,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * For calls to [AnalyzeEntitySentiment][] or if
-   * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-   * true, this field will contain the sentiment expressed for this mention of
-   * the entity in the provided document.
+   * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+   * is set to true, this field will contain the sentiment expressed for this
+   * mention of the entity in the provided document.
    * </pre>
    *
    * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -333,9 +328,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * For calls to [AnalyzeEntitySentiment][] or if
-   * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-   * true, this field will contain the sentiment expressed for this mention of
-   * the entity in the provided document.
+   * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+   * is set to true, this field will contain the sentiment expressed for this
+   * mention of the entity in the provided document.
    * </pre>
    *
    * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -353,9 +348,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * For calls to [AnalyzeEntitySentiment][] or if
-   * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-   * true, this field will contain the sentiment expressed for this mention of
-   * the entity in the provided document.
+   * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+   * is set to true, this field will contain the sentiment expressed for this
+   * mention of the entity in the provided document.
    * </pre>
    *
    * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -1056,9 +1051,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeEntitySentiment][] or if
-     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-     * true, this field will contain the sentiment expressed for this mention of
-     * the entity in the provided document.
+     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+     * is set to true, this field will contain the sentiment expressed for this
+     * mention of the entity in the provided document.
      * </pre>
      *
      * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -1073,9 +1068,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeEntitySentiment][] or if
-     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-     * true, this field will contain the sentiment expressed for this mention of
-     * the entity in the provided document.
+     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+     * is set to true, this field will contain the sentiment expressed for this
+     * mention of the entity in the provided document.
      * </pre>
      *
      * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -1096,9 +1091,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeEntitySentiment][] or if
-     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-     * true, this field will contain the sentiment expressed for this mention of
-     * the entity in the provided document.
+     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+     * is set to true, this field will contain the sentiment expressed for this
+     * mention of the entity in the provided document.
      * </pre>
      *
      * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -1121,9 +1116,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeEntitySentiment][] or if
-     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-     * true, this field will contain the sentiment expressed for this mention of
-     * the entity in the provided document.
+     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+     * is set to true, this field will contain the sentiment expressed for this
+     * mention of the entity in the provided document.
      * </pre>
      *
      * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -1144,9 +1139,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeEntitySentiment][] or if
-     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-     * true, this field will contain the sentiment expressed for this mention of
-     * the entity in the provided document.
+     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+     * is set to true, this field will contain the sentiment expressed for this
+     * mention of the entity in the provided document.
      * </pre>
      *
      * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -1172,9 +1167,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeEntitySentiment][] or if
-     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-     * true, this field will contain the sentiment expressed for this mention of
-     * the entity in the provided document.
+     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+     * is set to true, this field will contain the sentiment expressed for this
+     * mention of the entity in the provided document.
      * </pre>
      *
      * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -1194,9 +1189,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeEntitySentiment][] or if
-     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-     * true, this field will contain the sentiment expressed for this mention of
-     * the entity in the provided document.
+     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+     * is set to true, this field will contain the sentiment expressed for this
+     * mention of the entity in the provided document.
      * </pre>
      *
      * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -1211,9 +1206,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeEntitySentiment][] or if
-     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-     * true, this field will contain the sentiment expressed for this mention of
-     * the entity in the provided document.
+     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+     * is set to true, this field will contain the sentiment expressed for this
+     * mention of the entity in the provided document.
      * </pre>
      *
      * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>
@@ -1232,9 +1227,9 @@ public final class EntityMention extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeEntitySentiment][] or if
-     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-     * true, this field will contain the sentiment expressed for this mention of
-     * the entity in the provided document.
+     * [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1beta2.AnnotateTextRequest.Features.extract_entity_sentiment]
+     * is set to true, this field will contain the sentiment expressed for this
+     * mention of the entity in the provided document.
      * </pre>
      *
      * <code>.google.cloud.language.v1beta2.Sentiment sentiment = 3;</code>

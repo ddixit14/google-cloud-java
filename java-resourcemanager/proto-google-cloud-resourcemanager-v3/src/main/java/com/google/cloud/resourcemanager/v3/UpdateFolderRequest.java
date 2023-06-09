@@ -25,6 +25,7 @@ package com.google.cloud.resourcemanager.v3;
  * The request sent to the
  * [UpdateFolder][google.cloud.resourcemanager.v3.Folder.UpdateFolder]
  * method.
+ *
  * Only the `display_name` field can be changed. All other fields will be
  * ignored. Use the
  * [MoveFolder][google.cloud.resourcemanager.v3.Folders.MoveFolder] method to
@@ -51,11 +52,6 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
     return new UpdateFolderRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.FoldersProto
         .internal_static_google_cloud_resourcemanager_v3_UpdateFolderRequest_descriptor;
@@ -77,8 +73,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The new definition of the Folder. It must include the `name` field, which
-   * cannot be changed.
+   * Required. The new definition of the Folder. It must include the `name`
+   * field, which cannot be changed.
    * </pre>
    *
    * <code>
@@ -95,8 +91,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The new definition of the Folder. It must include the `name` field, which
-   * cannot be changed.
+   * Required. The new definition of the Folder. It must include the `name`
+   * field, which cannot be changed.
    * </pre>
    *
    * <code>
@@ -115,8 +111,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The new definition of the Folder. It must include the `name` field, which
-   * cannot be changed.
+   * Required. The new definition of the Folder. It must include the `name`
+   * field, which cannot be changed.
    * </pre>
    *
    * <code>
@@ -368,6 +364,7 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
    * The request sent to the
    * [UpdateFolder][google.cloud.resourcemanager.v3.Folder.UpdateFolder]
    * method.
+   *
    * Only the `display_name` field can be changed. All other fields will be
    * ignored. Use the
    * [MoveFolder][google.cloud.resourcemanager.v3.Folders.MoveFolder] method to
@@ -579,8 +576,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the Folder. It must include the `name` field, which
-     * cannot be changed.
+     * Required. The new definition of the Folder. It must include the `name`
+     * field, which cannot be changed.
      * </pre>
      *
      * <code>
@@ -596,8 +593,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the Folder. It must include the `name` field, which
-     * cannot be changed.
+     * Required. The new definition of the Folder. It must include the `name`
+     * field, which cannot be changed.
      * </pre>
      *
      * <code>
@@ -619,8 +616,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the Folder. It must include the `name` field, which
-     * cannot be changed.
+     * Required. The new definition of the Folder. It must include the `name`
+     * field, which cannot be changed.
      * </pre>
      *
      * <code>
@@ -644,8 +641,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the Folder. It must include the `name` field, which
-     * cannot be changed.
+     * Required. The new definition of the Folder. It must include the `name`
+     * field, which cannot be changed.
      * </pre>
      *
      * <code>
@@ -666,8 +663,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the Folder. It must include the `name` field, which
-     * cannot be changed.
+     * Required. The new definition of the Folder. It must include the `name`
+     * field, which cannot be changed.
      * </pre>
      *
      * <code>
@@ -694,8 +691,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the Folder. It must include the `name` field, which
-     * cannot be changed.
+     * Required. The new definition of the Folder. It must include the `name`
+     * field, which cannot be changed.
      * </pre>
      *
      * <code>
@@ -716,8 +713,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the Folder. It must include the `name` field, which
-     * cannot be changed.
+     * Required. The new definition of the Folder. It must include the `name`
+     * field, which cannot be changed.
      * </pre>
      *
      * <code>
@@ -733,8 +730,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the Folder. It must include the `name` field, which
-     * cannot be changed.
+     * Required. The new definition of the Folder. It must include the `name`
+     * field, which cannot be changed.
      * </pre>
      *
      * <code>
@@ -754,8 +751,8 @@ public final class UpdateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the Folder. It must include the `name` field, which
-     * cannot be changed.
+     * Required. The new definition of the Folder. It must include the `name`
+     * field, which cannot be changed.
      * </pre>
      *
      * <code>

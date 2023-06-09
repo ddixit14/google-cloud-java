@@ -29,17 +29,14 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
     super(builder);
   }
 
-  private ModelMonitoringAlertConfig() {}
+  private ModelMonitoringAlertConfig() {
+    notificationChannels_ = com.google.protobuf.LazyStringArrayList.emptyList();
+  }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new ModelMonitoringAlertConfig();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -134,18 +131,13 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
     }
 
     private EmailAlertConfig() {
-      userEmails_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      userEmails_ = com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new EmailAlertConfig();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -167,7 +159,8 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
     public static final int USER_EMAILS_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList userEmails_;
+    private com.google.protobuf.LazyStringArrayList userEmails_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      *
      *
@@ -447,8 +440,7 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        userEmails_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        userEmails_ = com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -482,7 +474,6 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
         com.google.cloud.aiplatform.v1beta1.ModelMonitoringAlertConfig.EmailAlertConfig result =
             new com.google.cloud.aiplatform.v1beta1.ModelMonitoringAlertConfig.EmailAlertConfig(
                 this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
@@ -490,18 +481,13 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
         return result;
       }
 
-      private void buildPartialRepeatedFields(
-          com.google.cloud.aiplatform.v1beta1.ModelMonitoringAlertConfig.EmailAlertConfig result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          userEmails_ = userEmails_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.userEmails_ = userEmails_;
-      }
-
       private void buildPartial0(
           com.google.cloud.aiplatform.v1beta1.ModelMonitoringAlertConfig.EmailAlertConfig result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          userEmails_.makeImmutable();
+          result.userEmails_ = userEmails_;
+        }
       }
 
       @java.lang.Override
@@ -561,7 +547,7 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
         if (!other.userEmails_.isEmpty()) {
           if (userEmails_.isEmpty()) {
             userEmails_ = other.userEmails_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureUserEmailsIsMutable();
             userEmails_.addAll(other.userEmails_);
@@ -620,14 +606,14 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
 
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList userEmails_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList userEmails_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensureUserEmailsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!userEmails_.isModifiable()) {
           userEmails_ = new com.google.protobuf.LazyStringArrayList(userEmails_);
-          bitField0_ |= 0x00000001;
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        *
@@ -641,7 +627,8 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
        * @return A list containing the userEmails.
        */
       public com.google.protobuf.ProtocolStringList getUserEmailsList() {
-        return userEmails_.getUnmodifiableView();
+        userEmails_.makeImmutable();
+        return userEmails_;
       }
       /**
        *
@@ -706,6 +693,7 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
         }
         ensureUserEmailsIsMutable();
         userEmails_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -727,6 +715,7 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
         }
         ensureUserEmailsIsMutable();
         userEmails_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -745,6 +734,7 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
       public Builder addAllUserEmails(java.lang.Iterable<java.lang.String> values) {
         ensureUserEmailsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, userEmails_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -760,8 +750,9 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
        * @return This builder for chaining.
        */
       public Builder clearUserEmails() {
-        userEmails_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        userEmails_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        ;
         onChanged();
         return this;
       }
@@ -784,6 +775,7 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
         checkByteStringIsUtf8(value);
         ensureUserEmailsIsMutable();
         userEmails_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -858,6 +850,8 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
   }
 
   private int alertCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object alert_;
 
   public enum AlertCase
@@ -986,6 +980,82 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
     return enableLogging_;
   }
 
+  public static final int NOTIFICATION_CHANNELS_FIELD_NUMBER = 3;
+
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList notificationChannels_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   *
+   *
+   * <pre>
+   * Resource names of the NotificationChannels to send alert.
+   * Must be of the format
+   * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+   * </pre>
+   *
+   * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+   * </code>
+   *
+   * @return A list containing the notificationChannels.
+   */
+  public com.google.protobuf.ProtocolStringList getNotificationChannelsList() {
+    return notificationChannels_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Resource names of the NotificationChannels to send alert.
+   * Must be of the format
+   * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+   * </pre>
+   *
+   * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+   * </code>
+   *
+   * @return The count of notificationChannels.
+   */
+  public int getNotificationChannelsCount() {
+    return notificationChannels_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Resource names of the NotificationChannels to send alert.
+   * Must be of the format
+   * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+   * </pre>
+   *
+   * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+   * </code>
+   *
+   * @param index The index of the element to return.
+   * @return The notificationChannels at the given index.
+   */
+  public java.lang.String getNotificationChannels(int index) {
+    return notificationChannels_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Resource names of the NotificationChannels to send alert.
+   * Must be of the format
+   * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+   * </pre>
+   *
+   * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+   * </code>
+   *
+   * @param index The index of the value to return.
+   * @return The bytes of the notificationChannels at the given index.
+   */
+  public com.google.protobuf.ByteString getNotificationChannelsBytes(int index) {
+    return notificationChannels_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -1008,6 +1078,10 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
     if (enableLogging_ != false) {
       output.writeBool(2, enableLogging_);
     }
+    for (int i = 0; i < notificationChannels_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(
+          output, 3, notificationChannels_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1027,6 +1101,14 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
     if (enableLogging_ != false) {
       size += com.google.protobuf.CodedOutputStream.computeBoolSize(2, enableLogging_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < notificationChannels_.size(); i++) {
+        dataSize += computeStringSizeNoTag(notificationChannels_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getNotificationChannelsList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1044,6 +1126,7 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
         (com.google.cloud.aiplatform.v1beta1.ModelMonitoringAlertConfig) obj;
 
     if (getEnableLogging() != other.getEnableLogging()) return false;
+    if (!getNotificationChannelsList().equals(other.getNotificationChannelsList())) return false;
     if (!getAlertCase().equals(other.getAlertCase())) return false;
     switch (alertCase_) {
       case 1:
@@ -1065,6 +1148,10 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ENABLE_LOGGING_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getEnableLogging());
+    if (getNotificationChannelsCount() > 0) {
+      hash = (37 * hash) + NOTIFICATION_CHANNELS_FIELD_NUMBER;
+      hash = (53 * hash) + getNotificationChannelsList().hashCode();
+    }
     switch (alertCase_) {
       case 1:
         hash = (37 * hash) + EMAIL_ALERT_CONFIG_FIELD_NUMBER;
@@ -1209,6 +1296,7 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
         emailAlertConfigBuilder_.clear();
       }
       enableLogging_ = false;
+      notificationChannels_ = com.google.protobuf.LazyStringArrayList.emptyList();
       alertCase_ = 0;
       alert_ = null;
       return this;
@@ -1252,6 +1340,10 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.enableLogging_ = enableLogging_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        notificationChannels_.makeImmutable();
+        result.notificationChannels_ = notificationChannels_;
       }
     }
 
@@ -1314,6 +1406,16 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
       if (other.getEnableLogging() != false) {
         setEnableLogging(other.getEnableLogging());
       }
+      if (!other.notificationChannels_.isEmpty()) {
+        if (notificationChannels_.isEmpty()) {
+          notificationChannels_ = other.notificationChannels_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureNotificationChannelsIsMutable();
+          notificationChannels_.addAll(other.notificationChannels_);
+        }
+        onChanged();
+      }
       switch (other.getAlertCase()) {
         case EMAIL_ALERT_CONFIG:
           {
@@ -1364,6 +1466,13 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
+            case 26:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureNotificationChannelsIsMutable();
+                notificationChannels_.add(s);
+                break;
+              } // case 26
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -1708,6 +1817,207 @@ public final class ModelMonitoringAlertConfig extends com.google.protobuf.Genera
     public Builder clearEnableLogging() {
       bitField0_ = (bitField0_ & ~0x00000002);
       enableLogging_ = false;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList notificationChannels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+
+    private void ensureNotificationChannelsIsMutable() {
+      if (!notificationChannels_.isModifiable()) {
+        notificationChannels_ = new com.google.protobuf.LazyStringArrayList(notificationChannels_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Resource names of the NotificationChannels to send alert.
+     * Must be of the format
+     * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+     * </pre>
+     *
+     * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+     * </code>
+     *
+     * @return A list containing the notificationChannels.
+     */
+    public com.google.protobuf.ProtocolStringList getNotificationChannelsList() {
+      notificationChannels_.makeImmutable();
+      return notificationChannels_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Resource names of the NotificationChannels to send alert.
+     * Must be of the format
+     * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+     * </pre>
+     *
+     * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+     * </code>
+     *
+     * @return The count of notificationChannels.
+     */
+    public int getNotificationChannelsCount() {
+      return notificationChannels_.size();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Resource names of the NotificationChannels to send alert.
+     * Must be of the format
+     * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+     * </pre>
+     *
+     * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+     * </code>
+     *
+     * @param index The index of the element to return.
+     * @return The notificationChannels at the given index.
+     */
+    public java.lang.String getNotificationChannels(int index) {
+      return notificationChannels_.get(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Resource names of the NotificationChannels to send alert.
+     * Must be of the format
+     * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+     * </pre>
+     *
+     * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+     * </code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the notificationChannels at the given index.
+     */
+    public com.google.protobuf.ByteString getNotificationChannelsBytes(int index) {
+      return notificationChannels_.getByteString(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Resource names of the NotificationChannels to send alert.
+     * Must be of the format
+     * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+     * </pre>
+     *
+     * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+     * </code>
+     *
+     * @param index The index to set the value at.
+     * @param value The notificationChannels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNotificationChannels(int index, java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureNotificationChannelsIsMutable();
+      notificationChannels_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Resource names of the NotificationChannels to send alert.
+     * Must be of the format
+     * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+     * </pre>
+     *
+     * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+     * </code>
+     *
+     * @param value The notificationChannels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addNotificationChannels(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureNotificationChannelsIsMutable();
+      notificationChannels_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Resource names of the NotificationChannels to send alert.
+     * Must be of the format
+     * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+     * </pre>
+     *
+     * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+     * </code>
+     *
+     * @param values The notificationChannels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllNotificationChannels(java.lang.Iterable<java.lang.String> values) {
+      ensureNotificationChannelsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, notificationChannels_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Resource names of the NotificationChannels to send alert.
+     * Must be of the format
+     * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+     * </pre>
+     *
+     * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+     * </code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearNotificationChannels() {
+      notificationChannels_ = com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      ;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Resource names of the NotificationChannels to send alert.
+     * Must be of the format
+     * `projects/&lt;project_id_or_number&gt;/notificationChannels/&lt;channel_id&gt;`
+     * </pre>
+     *
+     * <code>repeated string notification_channels = 3 [(.google.api.resource_reference) = { ... }
+     * </code>
+     *
+     * @param value The bytes of the notificationChannels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addNotificationChannelsBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      ensureNotificationChannelsIsMutable();
+      notificationChannels_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

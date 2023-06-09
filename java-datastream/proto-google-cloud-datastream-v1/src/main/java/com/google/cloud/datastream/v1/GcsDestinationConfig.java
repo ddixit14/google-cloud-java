@@ -47,11 +47,6 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
     return new GcsDestinationConfig();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.datastream.v1.DatastreamResourcesProto
         .internal_static_google_cloud_datastream_v1_GcsDestinationConfig_descriptor;
@@ -68,6 +63,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
   }
 
   private int fileFormatCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object fileFormat_;
 
   public enum FileFormatCase
@@ -190,7 +187,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
    *
    * <pre>
    * The maximum duration for which new events are added before a file is
-   * closed and a new file is created.
+   * closed and a new file is created. Values within the range of 15-60 seconds
+   * are allowed.
    * </pre>
    *
    * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -206,7 +204,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
    *
    * <pre>
    * The maximum duration for which new events are added before a file is
-   * closed and a new file is created.
+   * closed and a new file is created. Values within the range of 15-60 seconds
+   * are allowed.
    * </pre>
    *
    * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -224,7 +223,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
    *
    * <pre>
    * The maximum duration for which new events are added before a file is
-   * closed and a new file is created.
+   * closed and a new file is created. Values within the range of 15-60 seconds
+   * are allowed.
    * </pre>
    *
    * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -1009,7 +1009,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * The maximum duration for which new events are added before a file is
-     * closed and a new file is created.
+     * closed and a new file is created. Values within the range of 15-60 seconds
+     * are allowed.
      * </pre>
      *
      * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -1024,7 +1025,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * The maximum duration for which new events are added before a file is
-     * closed and a new file is created.
+     * closed and a new file is created. Values within the range of 15-60 seconds
+     * are allowed.
      * </pre>
      *
      * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -1045,7 +1047,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * The maximum duration for which new events are added before a file is
-     * closed and a new file is created.
+     * closed and a new file is created. Values within the range of 15-60 seconds
+     * are allowed.
      * </pre>
      *
      * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -1068,7 +1071,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * The maximum duration for which new events are added before a file is
-     * closed and a new file is created.
+     * closed and a new file is created. Values within the range of 15-60 seconds
+     * are allowed.
      * </pre>
      *
      * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -1088,7 +1092,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * The maximum duration for which new events are added before a file is
-     * closed and a new file is created.
+     * closed and a new file is created. Values within the range of 15-60 seconds
+     * are allowed.
      * </pre>
      *
      * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -1114,7 +1119,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * The maximum duration for which new events are added before a file is
-     * closed and a new file is created.
+     * closed and a new file is created. Values within the range of 15-60 seconds
+     * are allowed.
      * </pre>
      *
      * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -1134,7 +1140,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * The maximum duration for which new events are added before a file is
-     * closed and a new file is created.
+     * closed and a new file is created. Values within the range of 15-60 seconds
+     * are allowed.
      * </pre>
      *
      * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -1149,7 +1156,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * The maximum duration for which new events are added before a file is
-     * closed and a new file is created.
+     * closed and a new file is created. Values within the range of 15-60 seconds
+     * are allowed.
      * </pre>
      *
      * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>
@@ -1168,7 +1176,8 @@ public final class GcsDestinationConfig extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * The maximum duration for which new events are added before a file is
-     * closed and a new file is created.
+     * closed and a new file is created. Values within the range of 15-60 seconds
+     * are allowed.
      * </pre>
      *
      * <code>.google.protobuf.Duration file_rotation_interval = 3;</code>

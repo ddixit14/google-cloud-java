@@ -48,11 +48,6 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
     return new DeleteTagValueRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.TagValuesProto
         .internal_static_google_cloud_resourcemanager_v3_DeleteTagValueRequest_descriptor;
@@ -76,7 +71,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Required. Resource name for TagValue to be deleted in the format tagValues/456.
+   * Required. Resource name for TagValue to be deleted in the format
+   * tagValues/456.
    * </pre>
    *
    * <code>
@@ -101,7 +97,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Required. Resource name for TagValue to be deleted in the format tagValues/456.
+   * Required. Resource name for TagValue to be deleted in the format
+   * tagValues/456.
    * </pre>
    *
    * <code>
@@ -129,8 +126,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Optional. Set as true to perform the validations necessary for deletion, but not
-   * actually perform the action.
+   * Optional. Set as true to perform the validations necessary for deletion,
+   * but not actually perform the action.
    * </pre>
    *
    * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -150,8 +147,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Optional. The etag known to the client for the expected state of the TagValue. This
-   * is to be used for optimistic concurrency.
+   * Optional. The etag known to the client for the expected state of the
+   * TagValue. This is to be used for optimistic concurrency.
    * </pre>
    *
    * <code>string etag = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -174,8 +171,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Optional. The etag known to the client for the expected state of the TagValue. This
-   * is to be used for optimistic concurrency.
+   * Optional. The etag known to the client for the expected state of the
+   * TagValue. This is to be used for optimistic concurrency.
    * </pre>
    *
    * <code>string etag = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -589,7 +586,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. Resource name for TagValue to be deleted in the format tagValues/456.
+     * Required. Resource name for TagValue to be deleted in the format
+     * tagValues/456.
      * </pre>
      *
      * <code>
@@ -613,7 +611,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. Resource name for TagValue to be deleted in the format tagValues/456.
+     * Required. Resource name for TagValue to be deleted in the format
+     * tagValues/456.
      * </pre>
      *
      * <code>
@@ -637,7 +636,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. Resource name for TagValue to be deleted in the format tagValues/456.
+     * Required. Resource name for TagValue to be deleted in the format
+     * tagValues/456.
      * </pre>
      *
      * <code>
@@ -660,7 +660,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. Resource name for TagValue to be deleted in the format tagValues/456.
+     * Required. Resource name for TagValue to be deleted in the format
+     * tagValues/456.
      * </pre>
      *
      * <code>
@@ -679,7 +680,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. Resource name for TagValue to be deleted in the format tagValues/456.
+     * Required. Resource name for TagValue to be deleted in the format
+     * tagValues/456.
      * </pre>
      *
      * <code>
@@ -705,8 +707,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. Set as true to perform the validations necessary for deletion, but not
-     * actually perform the action.
+     * Optional. Set as true to perform the validations necessary for deletion,
+     * but not actually perform the action.
      * </pre>
      *
      * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -721,8 +723,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. Set as true to perform the validations necessary for deletion, but not
-     * actually perform the action.
+     * Optional. Set as true to perform the validations necessary for deletion,
+     * but not actually perform the action.
      * </pre>
      *
      * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -741,8 +743,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. Set as true to perform the validations necessary for deletion, but not
-     * actually perform the action.
+     * Optional. Set as true to perform the validations necessary for deletion,
+     * but not actually perform the action.
      * </pre>
      *
      * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -761,8 +763,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. The etag known to the client for the expected state of the TagValue. This
-     * is to be used for optimistic concurrency.
+     * Optional. The etag known to the client for the expected state of the
+     * TagValue. This is to be used for optimistic concurrency.
      * </pre>
      *
      * <code>string etag = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -784,8 +786,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. The etag known to the client for the expected state of the TagValue. This
-     * is to be used for optimistic concurrency.
+     * Optional. The etag known to the client for the expected state of the
+     * TagValue. This is to be used for optimistic concurrency.
      * </pre>
      *
      * <code>string etag = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -807,8 +809,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. The etag known to the client for the expected state of the TagValue. This
-     * is to be used for optimistic concurrency.
+     * Optional. The etag known to the client for the expected state of the
+     * TagValue. This is to be used for optimistic concurrency.
      * </pre>
      *
      * <code>string etag = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -829,8 +831,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. The etag known to the client for the expected state of the TagValue. This
-     * is to be used for optimistic concurrency.
+     * Optional. The etag known to the client for the expected state of the
+     * TagValue. This is to be used for optimistic concurrency.
      * </pre>
      *
      * <code>string etag = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -847,8 +849,8 @@ public final class DeleteTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. The etag known to the client for the expected state of the TagValue. This
-     * is to be used for optimistic concurrency.
+     * Optional. The etag known to the client for the expected state of the
+     * TagValue. This is to be used for optimistic concurrency.
      * </pre>
      *
      * <code>string etag = 3 [(.google.api.field_behavior) = OPTIONAL];</code>

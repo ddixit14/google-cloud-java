@@ -46,11 +46,6 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
     return new UpdateFeaturestoreRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.aiplatform.v1beta1.FeaturestoreServiceProto
         .internal_static_google_cloud_aiplatform_v1beta1_UpdateFeaturestoreRequest_descriptor;
@@ -141,11 +136,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
    * user does not provide a mask then only the non-empty fields present in the
    * request will be overwritten. Set the update_mask to `*` to override all
    * fields.
+   *
    * Updatable fields:
+   *
    *   * `labels`
    *   * `online_serving_config.fixed_node_count`
    *   * `online_serving_config.scaling`
-   *   * `online_storage_ttl_days` (available in Preview)
+   *   * `online_storage_ttl_days`
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -167,11 +164,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
    * user does not provide a mask then only the non-empty fields present in the
    * request will be overwritten. Set the update_mask to `*` to override all
    * fields.
+   *
    * Updatable fields:
+   *
    *   * `labels`
    *   * `online_serving_config.fixed_node_count`
    *   * `online_serving_config.scaling`
-   *   * `online_storage_ttl_days` (available in Preview)
+   *   * `online_storage_ttl_days`
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -193,11 +192,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
    * user does not provide a mask then only the non-empty fields present in the
    * request will be overwritten. Set the update_mask to `*` to override all
    * fields.
+   *
    * Updatable fields:
+   *
    *   * `labels`
    *   * `online_serving_config.fixed_node_count`
    *   * `online_serving_config.scaling`
-   *   * `online_storage_ttl_days` (available in Preview)
+   *   * `online_storage_ttl_days`
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -831,11 +832,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `labels`
      *   * `online_serving_config.fixed_node_count`
      *   * `online_serving_config.scaling`
-     *   * `online_storage_ttl_days` (available in Preview)
+     *   * `online_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -856,11 +859,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `labels`
      *   * `online_serving_config.fixed_node_count`
      *   * `online_serving_config.scaling`
-     *   * `online_storage_ttl_days` (available in Preview)
+     *   * `online_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -887,11 +892,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `labels`
      *   * `online_serving_config.fixed_node_count`
      *   * `online_serving_config.scaling`
-     *   * `online_storage_ttl_days` (available in Preview)
+     *   * `online_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -920,11 +927,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `labels`
      *   * `online_serving_config.fixed_node_count`
      *   * `online_serving_config.scaling`
-     *   * `online_storage_ttl_days` (available in Preview)
+     *   * `online_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -950,11 +959,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `labels`
      *   * `online_serving_config.fixed_node_count`
      *   * `online_serving_config.scaling`
-     *   * `online_storage_ttl_days` (available in Preview)
+     *   * `online_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -986,11 +997,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `labels`
      *   * `online_serving_config.fixed_node_count`
      *   * `online_serving_config.scaling`
-     *   * `online_storage_ttl_days` (available in Preview)
+     *   * `online_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -1016,11 +1029,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `labels`
      *   * `online_serving_config.fixed_node_count`
      *   * `online_serving_config.scaling`
-     *   * `online_storage_ttl_days` (available in Preview)
+     *   * `online_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -1041,11 +1056,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `labels`
      *   * `online_serving_config.fixed_node_count`
      *   * `online_serving_config.scaling`
-     *   * `online_storage_ttl_days` (available in Preview)
+     *   * `online_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -1070,11 +1087,13 @@ public final class UpdateFeaturestoreRequest extends com.google.protobuf.Generat
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `labels`
      *   * `online_serving_config.fixed_node_count`
      *   * `online_serving_config.scaling`
-     *   * `online_storage_ttl_days` (available in Preview)
+     *   * `online_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>

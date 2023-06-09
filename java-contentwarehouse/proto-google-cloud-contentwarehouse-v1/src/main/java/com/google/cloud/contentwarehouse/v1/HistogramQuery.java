@@ -47,11 +47,6 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
     return new HistogramQuery();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contentwarehouse.v1.HistogramProto
         .internal_static_google_cloud_contentwarehouse_v1_HistogramQuery_descriptor;
@@ -77,7 +72,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * An expression specifies a histogram request against matching documents for
    * searches.
-   * See [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries] for details about syntax.
+   *
+   * See
+   * [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries]
+   * for details about syntax.
    * </pre>
    *
    * <code>string histogram_query = 1;</code>
@@ -102,7 +100,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * An expression specifies a histogram request against matching documents for
    * searches.
-   * See [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries] for details about syntax.
+   *
+   * See
+   * [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries]
+   * for details about syntax.
    * </pre>
    *
    * <code>string histogram_query = 1;</code>
@@ -130,6 +131,7 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Controls if the histogram query requires the return of a precise count.
    * Enable this flag may adversely impact performance.
+   *
    * Defaults to true.
    * </pre>
    *
@@ -148,11 +150,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Optional. Filter the result of histogram query by the property names. It only works
-   * with histogram query count('FilterableProperties').
-   * It is an optional. It will perform histogram on all the property names for
-   * all the document schemas. Setting this field will have a better
-   * performance.
+   * Optional. Filter the result of histogram query by the property names. It
+   * only works with histogram query count('FilterableProperties'). It is an
+   * optional. It will perform histogram on all the property names for all the
+   * document schemas. Setting this field will have a better performance.
    * </pre>
    *
    * <code>
@@ -169,11 +170,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Optional. Filter the result of histogram query by the property names. It only works
-   * with histogram query count('FilterableProperties').
-   * It is an optional. It will perform histogram on all the property names for
-   * all the document schemas. Setting this field will have a better
-   * performance.
+   * Optional. Filter the result of histogram query by the property names. It
+   * only works with histogram query count('FilterableProperties'). It is an
+   * optional. It will perform histogram on all the property names for all the
+   * document schemas. Setting this field will have a better performance.
    * </pre>
    *
    * <code>
@@ -192,11 +192,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Optional. Filter the result of histogram query by the property names. It only works
-   * with histogram query count('FilterableProperties').
-   * It is an optional. It will perform histogram on all the property names for
-   * all the document schemas. Setting this field will have a better
-   * performance.
+   * Optional. Filter the result of histogram query by the property names. It
+   * only works with histogram query count('FilterableProperties'). It is an
+   * optional. It will perform histogram on all the property names for all the
+   * document schemas. Setting this field will have a better performance.
    * </pre>
    *
    * <code>
@@ -613,7 +612,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * An expression specifies a histogram request against matching documents for
      * searches.
-     * See [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries] for details about syntax.
+     *
+     * See
+     * [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries]
+     * for details about syntax.
      * </pre>
      *
      * <code>string histogram_query = 1;</code>
@@ -637,7 +639,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * An expression specifies a histogram request against matching documents for
      * searches.
-     * See [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries] for details about syntax.
+     *
+     * See
+     * [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries]
+     * for details about syntax.
      * </pre>
      *
      * <code>string histogram_query = 1;</code>
@@ -661,7 +666,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * An expression specifies a histogram request against matching documents for
      * searches.
-     * See [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries] for details about syntax.
+     *
+     * See
+     * [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries]
+     * for details about syntax.
      * </pre>
      *
      * <code>string histogram_query = 1;</code>
@@ -684,7 +692,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * An expression specifies a histogram request against matching documents for
      * searches.
-     * See [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries] for details about syntax.
+     *
+     * See
+     * [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries]
+     * for details about syntax.
      * </pre>
      *
      * <code>string histogram_query = 1;</code>
@@ -703,7 +714,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * An expression specifies a histogram request against matching documents for
      * searches.
-     * See [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries] for details about syntax.
+     *
+     * See
+     * [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries]
+     * for details about syntax.
      * </pre>
      *
      * <code>string histogram_query = 1;</code>
@@ -729,6 +743,7 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Controls if the histogram query requires the return of a precise count.
      * Enable this flag may adversely impact performance.
+     *
      * Defaults to true.
      * </pre>
      *
@@ -746,6 +761,7 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Controls if the histogram query requires the return of a precise count.
      * Enable this flag may adversely impact performance.
+     *
      * Defaults to true.
      * </pre>
      *
@@ -767,6 +783,7 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Controls if the histogram query requires the return of a precise count.
      * Enable this flag may adversely impact performance.
+     *
      * Defaults to true.
      * </pre>
      *
@@ -791,11 +808,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Optional. Filter the result of histogram query by the property names. It only works
-     * with histogram query count('FilterableProperties').
-     * It is an optional. It will perform histogram on all the property names for
-     * all the document schemas. Setting this field will have a better
-     * performance.
+     * Optional. Filter the result of histogram query by the property names. It
+     * only works with histogram query count('FilterableProperties'). It is an
+     * optional. It will perform histogram on all the property names for all the
+     * document schemas. Setting this field will have a better performance.
      * </pre>
      *
      * <code>
@@ -811,11 +827,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Optional. Filter the result of histogram query by the property names. It only works
-     * with histogram query count('FilterableProperties').
-     * It is an optional. It will perform histogram on all the property names for
-     * all the document schemas. Setting this field will have a better
-     * performance.
+     * Optional. Filter the result of histogram query by the property names. It
+     * only works with histogram query count('FilterableProperties'). It is an
+     * optional. It will perform histogram on all the property names for all the
+     * document schemas. Setting this field will have a better performance.
      * </pre>
      *
      * <code>
@@ -838,11 +853,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Optional. Filter the result of histogram query by the property names. It only works
-     * with histogram query count('FilterableProperties').
-     * It is an optional. It will perform histogram on all the property names for
-     * all the document schemas. Setting this field will have a better
-     * performance.
+     * Optional. Filter the result of histogram query by the property names. It
+     * only works with histogram query count('FilterableProperties'). It is an
+     * optional. It will perform histogram on all the property names for all the
+     * document schemas. Setting this field will have a better performance.
      * </pre>
      *
      * <code>
@@ -867,11 +881,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Optional. Filter the result of histogram query by the property names. It only works
-     * with histogram query count('FilterableProperties').
-     * It is an optional. It will perform histogram on all the property names for
-     * all the document schemas. Setting this field will have a better
-     * performance.
+     * Optional. Filter the result of histogram query by the property names. It
+     * only works with histogram query count('FilterableProperties'). It is an
+     * optional. It will perform histogram on all the property names for all the
+     * document schemas. Setting this field will have a better performance.
      * </pre>
      *
      * <code>
@@ -894,11 +907,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Optional. Filter the result of histogram query by the property names. It only works
-     * with histogram query count('FilterableProperties').
-     * It is an optional. It will perform histogram on all the property names for
-     * all the document schemas. Setting this field will have a better
-     * performance.
+     * Optional. Filter the result of histogram query by the property names. It
+     * only works with histogram query count('FilterableProperties'). It is an
+     * optional. It will perform histogram on all the property names for all the
+     * document schemas. Setting this field will have a better performance.
      * </pre>
      *
      * <code>
@@ -928,11 +940,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Optional. Filter the result of histogram query by the property names. It only works
-     * with histogram query count('FilterableProperties').
-     * It is an optional. It will perform histogram on all the property names for
-     * all the document schemas. Setting this field will have a better
-     * performance.
+     * Optional. Filter the result of histogram query by the property names. It
+     * only works with histogram query count('FilterableProperties'). It is an
+     * optional. It will perform histogram on all the property names for all the
+     * document schemas. Setting this field will have a better performance.
      * </pre>
      *
      * <code>
@@ -953,11 +964,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Optional. Filter the result of histogram query by the property names. It only works
-     * with histogram query count('FilterableProperties').
-     * It is an optional. It will perform histogram on all the property names for
-     * all the document schemas. Setting this field will have a better
-     * performance.
+     * Optional. Filter the result of histogram query by the property names. It
+     * only works with histogram query count('FilterableProperties'). It is an
+     * optional. It will perform histogram on all the property names for all the
+     * document schemas. Setting this field will have a better performance.
      * </pre>
      *
      * <code>
@@ -974,11 +984,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Optional. Filter the result of histogram query by the property names. It only works
-     * with histogram query count('FilterableProperties').
-     * It is an optional. It will perform histogram on all the property names for
-     * all the document schemas. Setting this field will have a better
-     * performance.
+     * Optional. Filter the result of histogram query by the property names. It
+     * only works with histogram query count('FilterableProperties'). It is an
+     * optional. It will perform histogram on all the property names for all the
+     * document schemas. Setting this field will have a better performance.
      * </pre>
      *
      * <code>
@@ -1000,11 +1009,10 @@ public final class HistogramQuery extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Optional. Filter the result of histogram query by the property names. It only works
-     * with histogram query count('FilterableProperties').
-     * It is an optional. It will perform histogram on all the property names for
-     * all the document schemas. Setting this field will have a better
-     * performance.
+     * Optional. Filter the result of histogram query by the property names. It
+     * only works with histogram query count('FilterableProperties'). It is an
+     * optional. It will perform histogram on all the property names for all the
+     * document schemas. Setting this field will have a better performance.
      * </pre>
      *
      * <code>

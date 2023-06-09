@@ -27,7 +27,8 @@ public interface PropertyOrBuilder
    *
    *
    * <pre>
-   * Required. Must match the name of a PropertyDefinition in the DocumentSchema.
+   * Required. Must match the name of a PropertyDefinition in the
+   * DocumentSchema.
    * </pre>
    *
    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -39,7 +40,8 @@ public interface PropertyOrBuilder
    *
    *
    * <pre>
-   * Required. Must match the name of a PropertyDefinition in the DocumentSchema.
+   * Required. Must match the name of a PropertyDefinition in the
+   * DocumentSchema.
    * </pre>
    *
    * <code>string name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -334,5 +336,5 @@ public interface PropertyOrBuilder
    */
   com.google.cloud.contentwarehouse.v1.TimestampArrayOrBuilder getTimestampValuesOrBuilder();
 
-  public com.google.cloud.contentwarehouse.v1.Property.ValuesCase getValuesCase();
+  com.google.cloud.contentwarehouse.v1.Property.ValuesCase getValuesCase();
 }

@@ -30,6 +30,7 @@ public interface DocumentSchemaOrBuilder
    * The resource name of the document schema.
    * Format:
    * projects/{project_number}/locations/{location}/documentSchemas/{document_schema_id}.
+   *
    * The name is ignored when creating a document schema.
    * </pre>
    *
@@ -45,6 +46,7 @@ public interface DocumentSchemaOrBuilder
    * The resource name of the document schema.
    * Format:
    * projects/{project_number}/locations/{location}/documentSchemas/{document_schema_id}.
+   *
    * The name is ignored when creating a document schema.
    * </pre>
    *
@@ -58,7 +60,7 @@ public interface DocumentSchemaOrBuilder
    *
    *
    * <pre>
-   * Required. Name of the schema given by the user. Must be unique per customer.
+   * Required. Name of the schema given by the user. Must be unique per project.
    * </pre>
    *
    * <code>string display_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -70,7 +72,7 @@ public interface DocumentSchemaOrBuilder
    *
    *
    * <pre>
-   * Required. Name of the schema given by the user. Must be unique per customer.
+   * Required. Name of the schema given by the user. Must be unique per project.
    * </pre>
    *
    * <code>string display_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>

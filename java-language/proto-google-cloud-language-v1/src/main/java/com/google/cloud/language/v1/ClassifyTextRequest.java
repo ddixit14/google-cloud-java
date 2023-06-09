@@ -45,11 +45,6 @@ public final class ClassifyTextRequest extends com.google.protobuf.GeneratedMess
     return new ClassifyTextRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.language.v1.LanguageServiceProto
         .internal_static_google_cloud_language_v1_ClassifyTextRequest_descriptor;

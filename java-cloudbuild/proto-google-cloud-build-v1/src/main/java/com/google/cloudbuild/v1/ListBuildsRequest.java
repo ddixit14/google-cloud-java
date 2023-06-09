@@ -50,11 +50,6 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
     return new ListBuildsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloudbuild.v1.Cloudbuild
         .internal_static_google_devtools_cloudbuild_v1_ListBuildsRequest_descriptor;
@@ -79,7 +74,7 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
    *
    * <pre>
    * The parent of the collection of `Builds`.
-   * Format: `projects/{project}/locations/location`
+   * Format: `projects/{project}/locations/{location}`
    * </pre>
    *
    * <code>string parent = 9 [(.google.api.resource_reference) = { ... }</code>
@@ -103,7 +98,7 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
    *
    * <pre>
    * The parent of the collection of `Builds`.
-   * Format: `projects/{project}/locations/location`
+   * Format: `projects/{project}/locations/{location}`
    * </pre>
    *
    * <code>string parent = 9 [(.google.api.resource_reference) = { ... }</code>
@@ -201,10 +196,13 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
    *
    * <pre>
    * The page token for the next page of Builds.
+   *
    * If unspecified, the first page of results is returned.
+   *
    * If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
    * In this case, the token should be discarded, and pagination should be
    * restarted from the first page of results.
+   *
    * See https://google.aip.dev/158 for more.
    * </pre>
    *
@@ -229,10 +227,13 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
    *
    * <pre>
    * The page token for the next page of Builds.
+   *
    * If unspecified, the first page of results is returned.
+   *
    * If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
    * In this case, the token should be discarded, and pagination should be
    * restarted from the first page of results.
+   *
    * See https://google.aip.dev/158 for more.
    * </pre>
    *
@@ -745,7 +746,7 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The parent of the collection of `Builds`.
-     * Format: `projects/{project}/locations/location`
+     * Format: `projects/{project}/locations/{location}`
      * </pre>
      *
      * <code>string parent = 9 [(.google.api.resource_reference) = { ... }</code>
@@ -768,7 +769,7 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The parent of the collection of `Builds`.
-     * Format: `projects/{project}/locations/location`
+     * Format: `projects/{project}/locations/{location}`
      * </pre>
      *
      * <code>string parent = 9 [(.google.api.resource_reference) = { ... }</code>
@@ -791,7 +792,7 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The parent of the collection of `Builds`.
-     * Format: `projects/{project}/locations/location`
+     * Format: `projects/{project}/locations/{location}`
      * </pre>
      *
      * <code>string parent = 9 [(.google.api.resource_reference) = { ... }</code>
@@ -813,7 +814,7 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The parent of the collection of `Builds`.
-     * Format: `projects/{project}/locations/location`
+     * Format: `projects/{project}/locations/{location}`
      * </pre>
      *
      * <code>string parent = 9 [(.google.api.resource_reference) = { ... }</code>
@@ -831,7 +832,7 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The parent of the collection of `Builds`.
-     * Format: `projects/{project}/locations/location`
+     * Format: `projects/{project}/locations/{location}`
      * </pre>
      *
      * <code>string parent = 9 [(.google.api.resource_reference) = { ... }</code>
@@ -1015,10 +1016,13 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The page token for the next page of Builds.
+     *
      * If unspecified, the first page of results is returned.
+     *
      * If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
      * In this case, the token should be discarded, and pagination should be
      * restarted from the first page of results.
+     *
      * See https://google.aip.dev/158 for more.
      * </pre>
      *
@@ -1042,10 +1046,13 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The page token for the next page of Builds.
+     *
      * If unspecified, the first page of results is returned.
+     *
      * If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
      * In this case, the token should be discarded, and pagination should be
      * restarted from the first page of results.
+     *
      * See https://google.aip.dev/158 for more.
      * </pre>
      *
@@ -1069,10 +1076,13 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The page token for the next page of Builds.
+     *
      * If unspecified, the first page of results is returned.
+     *
      * If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
      * In this case, the token should be discarded, and pagination should be
      * restarted from the first page of results.
+     *
      * See https://google.aip.dev/158 for more.
      * </pre>
      *
@@ -1095,10 +1105,13 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The page token for the next page of Builds.
+     *
      * If unspecified, the first page of results is returned.
+     *
      * If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
      * In this case, the token should be discarded, and pagination should be
      * restarted from the first page of results.
+     *
      * See https://google.aip.dev/158 for more.
      * </pre>
      *
@@ -1117,10 +1130,13 @@ public final class ListBuildsRequest extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The page token for the next page of Builds.
+     *
      * If unspecified, the first page of results is returned.
+     *
      * If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
      * In this case, the token should be discarded, and pagination should be
      * restarted from the first page of results.
+     *
      * See https://google.aip.dev/158 for more.
      * </pre>
      *

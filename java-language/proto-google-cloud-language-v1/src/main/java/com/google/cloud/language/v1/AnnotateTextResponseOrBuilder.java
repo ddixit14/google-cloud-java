@@ -246,7 +246,8 @@ public interface AnnotateTextResponseOrBuilder
    * <pre>
    * The language of the text, which will be the same as the language specified
    * in the request or, if not specified, the automatically-detected language.
-   * See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+   * See [Document.language][google.cloud.language.v1.Document.language] field
+   * for more details.
    * </pre>
    *
    * <code>string language = 5;</code>
@@ -260,7 +261,8 @@ public interface AnnotateTextResponseOrBuilder
    * <pre>
    * The language of the text, which will be the same as the language specified
    * in the request or, if not specified, the automatically-detected language.
-   * See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+   * See [Document.language][google.cloud.language.v1.Document.language] field
+   * for more details.
    * </pre>
    *
    * <code>string language = 5;</code>
@@ -320,4 +322,62 @@ public interface AnnotateTextResponseOrBuilder
    * <code>repeated .google.cloud.language.v1.ClassificationCategory categories = 6;</code>
    */
   com.google.cloud.language.v1.ClassificationCategoryOrBuilder getCategoriesOrBuilder(int index);
+
+  /**
+   *
+   *
+   * <pre>
+   * Harmful and sensitive categories identified in the input document.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.language.v1.ClassificationCategory moderation_categories = 7;
+   * </code>
+   */
+  java.util.List<com.google.cloud.language.v1.ClassificationCategory> getModerationCategoriesList();
+  /**
+   *
+   *
+   * <pre>
+   * Harmful and sensitive categories identified in the input document.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.language.v1.ClassificationCategory moderation_categories = 7;
+   * </code>
+   */
+  com.google.cloud.language.v1.ClassificationCategory getModerationCategories(int index);
+  /**
+   *
+   *
+   * <pre>
+   * Harmful and sensitive categories identified in the input document.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.language.v1.ClassificationCategory moderation_categories = 7;
+   * </code>
+   */
+  int getModerationCategoriesCount();
+  /**
+   *
+   *
+   * <pre>
+   * Harmful and sensitive categories identified in the input document.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.language.v1.ClassificationCategory moderation_categories = 7;
+   * </code>
+   */
+  java.util.List<? extends com.google.cloud.language.v1.ClassificationCategoryOrBuilder>
+      getModerationCategoriesOrBuilderList();
+  /**
+   *
+   *
+   * <pre>
+   * Harmful and sensitive categories identified in the input document.
+   * </pre>
+   *
+   * <code>repeated .google.cloud.language.v1.ClassificationCategory moderation_categories = 7;
+   * </code>
+   */
+  com.google.cloud.language.v1.ClassificationCategoryOrBuilder getModerationCategoriesOrBuilder(
+      int index);
 }

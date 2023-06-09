@@ -23,9 +23,11 @@ package com.google.cloud.tasks.v2beta3;
  *
  * <pre>
  * Pull Message.
+ *
  * This proto can only be used for tasks in a queue which has
- * [PULL][google.cloud.tasks.v2beta3.Queue.type] type. It currently exists for backwards compatibility with
- * the App Engine Task Queue SDK. This message type maybe returned with methods
+ * [PULL][google.cloud.tasks.v2beta3.Queue.type] type. It currently exists for
+ * backwards compatibility with the App Engine Task Queue SDK. This message type
+ * maybe returned with methods
  * [list][google.cloud.tasks.v2beta3.CloudTask.ListTasks] and
  * [get][google.cloud.tasks.v2beta3.CloudTask.ListTasks], when the response view
  * is [FULL][google.cloud.tasks.v2beta3.Task.View.Full].
@@ -52,11 +54,6 @@ public final class PullMessage extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new PullMessage();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -101,7 +98,9 @@ public final class PullMessage extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The tasks's tag.
+   *
    * The tag is less than 500 characters.
+   *
    * SDK compatibility: Although the SDK allows tags to be either
    * string or
    * [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-),
@@ -130,7 +129,9 @@ public final class PullMessage extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The tasks's tag.
+   *
    * The tag is less than 500 characters.
+   *
    * SDK compatibility: Although the SDK allows tags to be either
    * string or
    * [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-),
@@ -328,9 +329,11 @@ public final class PullMessage extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Pull Message.
+   *
    * This proto can only be used for tasks in a queue which has
-   * [PULL][google.cloud.tasks.v2beta3.Queue.type] type. It currently exists for backwards compatibility with
-   * the App Engine Task Queue SDK. This message type maybe returned with methods
+   * [PULL][google.cloud.tasks.v2beta3.Queue.type] type. It currently exists for
+   * backwards compatibility with the App Engine Task Queue SDK. This message type
+   * maybe returned with methods
    * [list][google.cloud.tasks.v2beta3.CloudTask.ListTasks] and
    * [get][google.cloud.tasks.v2beta3.CloudTask.ListTasks], when the response view
    * is [FULL][google.cloud.tasks.v2beta3.Task.View.Full].
@@ -585,7 +588,9 @@ public final class PullMessage extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The tasks's tag.
+     *
      * The tag is less than 500 characters.
+     *
      * SDK compatibility: Although the SDK allows tags to be either
      * string or
      * [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-),
@@ -613,7 +618,9 @@ public final class PullMessage extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The tasks's tag.
+     *
      * The tag is less than 500 characters.
+     *
      * SDK compatibility: Although the SDK allows tags to be either
      * string or
      * [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-),
@@ -641,7 +648,9 @@ public final class PullMessage extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The tasks's tag.
+     *
      * The tag is less than 500 characters.
+     *
      * SDK compatibility: Although the SDK allows tags to be either
      * string or
      * [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-),
@@ -668,7 +677,9 @@ public final class PullMessage extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The tasks's tag.
+     *
      * The tag is less than 500 characters.
+     *
      * SDK compatibility: Although the SDK allows tags to be either
      * string or
      * [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-),
@@ -691,7 +702,9 @@ public final class PullMessage extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The tasks's tag.
+     *
      * The tag is less than 500 characters.
+     *
      * SDK compatibility: Although the SDK allows tags to be either
      * string or
      * [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-),

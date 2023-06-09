@@ -46,11 +46,6 @@ public final class Sentiment extends com.google.protobuf.GeneratedMessageV3
     return new Sentiment();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.language.v1.LanguageServiceProto
         .internal_static_google_cloud_language_v1_Sentiment_descriptor;

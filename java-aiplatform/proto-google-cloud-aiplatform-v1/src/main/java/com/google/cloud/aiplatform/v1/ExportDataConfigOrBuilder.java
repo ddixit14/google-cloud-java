@@ -121,9 +121,9 @@ public interface ExportDataConfigOrBuilder
    *
    *
    * <pre>
-   * A filter on Annotations of the Dataset. Only Annotations on to-be-exported
-   * DataItems(specified by [data_items_filter][]) that match this filter will
-   * be exported. The filter syntax is the same as in
+   * An expression for filtering what part of the Dataset is to be exported.
+   * Only Annotations that match this filter will be exported. The filter syntax
+   * is the same as in
    * [ListAnnotations][google.cloud.aiplatform.v1.DatasetService.ListAnnotations].
    * </pre>
    *
@@ -136,9 +136,9 @@ public interface ExportDataConfigOrBuilder
    *
    *
    * <pre>
-   * A filter on Annotations of the Dataset. Only Annotations on to-be-exported
-   * DataItems(specified by [data_items_filter][]) that match this filter will
-   * be exported. The filter syntax is the same as in
+   * An expression for filtering what part of the Dataset is to be exported.
+   * Only Annotations that match this filter will be exported. The filter syntax
+   * is the same as in
    * [ListAnnotations][google.cloud.aiplatform.v1.DatasetService.ListAnnotations].
    * </pre>
    *
@@ -148,7 +148,7 @@ public interface ExportDataConfigOrBuilder
    */
   com.google.protobuf.ByteString getAnnotationsFilterBytes();
 
-  public com.google.cloud.aiplatform.v1.ExportDataConfig.DestinationCase getDestinationCase();
+  com.google.cloud.aiplatform.v1.ExportDataConfig.DestinationCase getDestinationCase();
 
-  public com.google.cloud.aiplatform.v1.ExportDataConfig.SplitCase getSplitCase();
+  com.google.cloud.aiplatform.v1.ExportDataConfig.SplitCase getSplitCase();
 }

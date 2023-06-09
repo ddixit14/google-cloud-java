@@ -50,11 +50,6 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
     return new QueryResult();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dialogflow.cx.v3.SessionProto
         .internal_static_google_cloud_dialogflow_cx_v3_QueryResult_descriptor;
@@ -71,6 +66,8 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int queryCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object query_;
 
   public enum QueryCase
@@ -432,8 +429,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * If a [DTMF][DTMFInput] was provided as input, this field will contain
-   * a copy of the [DTMFInput][].
+   * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+   * input, this field will contain a copy of the
+   * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
    * </pre>
    *
    * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -448,8 +446,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * If a [DTMF][DTMFInput] was provided as input, this field will contain
-   * a copy of the [DTMFInput][].
+   * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+   * input, this field will contain a copy of the
+   * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
    * </pre>
    *
    * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -467,8 +466,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * If a [DTMF][DTMFInput] was provided as input, this field will contain
-   * a copy of the [DTMFInput][].
+   * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+   * input, this field will contain a copy of the
+   * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
    * </pre>
    *
    * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -546,9 +546,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The collected [session
    * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+   *
    * Depending on your protocol or client library language, this is a
    * map, associative array, symbol table, dictionary, or JSON object
    * composed of a collection of (MapKey, MapValue) pairs:
+   *
    * * MapKey type: string
    * * MapKey value: parameter name
    * * MapValue type: If parameter's entity type is a composite entity then use
@@ -573,9 +575,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The collected [session
    * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+   *
    * Depending on your protocol or client library language, this is a
    * map, associative array, symbol table, dictionary, or JSON object
    * composed of a collection of (MapKey, MapValue) pairs:
+   *
    * * MapKey type: string
    * * MapKey value: parameter name
    * * MapValue type: If parameter's entity type is a composite entity then use
@@ -600,9 +604,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The collected [session
    * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+   *
    * Depending on your protocol or client library language, this is a
    * map, associative array, symbol table, dictionary, or JSON object
    * composed of a collection of (MapKey, MapValue) pairs:
+   *
    * * MapKey type: string
    * * MapKey value: parameter name
    * * MapValue type: If parameter's entity type is a composite entity then use
@@ -933,7 +939,7 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.cloud.dialogflow.cx.v3.Intent intent = 8 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.cx.v3.QueryResult.intent is deprecated. See
-   *     google/cloud/dialogflow/cx/v3/session.proto;l=642
+   *     google/cloud/dialogflow/cx/v3/session.proto;l=716
    * @return Whether the intent field is set.
    */
   @java.lang.Override
@@ -956,7 +962,7 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.cloud.dialogflow.cx.v3.Intent intent = 8 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.cx.v3.QueryResult.intent is deprecated. See
-   *     google/cloud/dialogflow/cx/v3/session.proto;l=642
+   *     google/cloud/dialogflow/cx/v3/session.proto;l=716
    * @return The intent.
    */
   @java.lang.Override
@@ -1008,7 +1014,7 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    * <code>float intent_detection_confidence = 9 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.cx.v3.QueryResult.intent_detection_confidence is
-   *     deprecated. See google/cloud/dialogflow/cx/v3/session.proto;l=653
+   *     deprecated. See google/cloud/dialogflow/cx/v3/session.proto;l=727
    * @return The intentDetectionConfidence.
    */
   @java.lang.Override
@@ -1072,8 +1078,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    * The free-form diagnostic info. For example, this field could contain
    * webhook call latency. The fields of this data can change without notice,
    * so you should not write code that depends on its structure.
+   *
    * One of the fields is called "Alternative Matched Intents", which may
    * aid with debugging. The following describes these intent results:
+   *
    * - The list is empty if no intent was matched to end-user input.
    * - Only intents that are referenced in the currently active flow are
    *   included.
@@ -1101,8 +1109,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    * The free-form diagnostic info. For example, this field could contain
    * webhook call latency. The fields of this data can change without notice,
    * so you should not write code that depends on its structure.
+   *
    * One of the fields is called "Alternative Matched Intents", which may
    * aid with debugging. The following describes these intent results:
+   *
    * - The list is empty if no intent was matched to end-user input.
    * - Only intents that are referenced in the currently active flow are
    *   included.
@@ -1132,8 +1142,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
    * The free-form diagnostic info. For example, this field could contain
    * webhook call latency. The fields of this data can change without notice,
    * so you should not write code that depends on its structure.
+   *
    * One of the fields is called "Alternative Matched Intents", which may
    * aid with debugging. The following describes these intent results:
+   *
    * - The list is empty if no intent was matched to end-user input.
    * - Only intents that are referenced in the currently active flow are
    *   included.
@@ -2744,8 +2756,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If a [DTMF][DTMFInput] was provided as input, this field will contain
-     * a copy of the [DTMFInput][].
+     * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+     * input, this field will contain a copy of the
+     * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
      * </pre>
      *
      * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -2760,8 +2773,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If a [DTMF][DTMFInput] was provided as input, this field will contain
-     * a copy of the [DTMFInput][].
+     * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+     * input, this field will contain a copy of the
+     * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
      * </pre>
      *
      * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -2786,8 +2800,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If a [DTMF][DTMFInput] was provided as input, this field will contain
-     * a copy of the [DTMFInput][].
+     * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+     * input, this field will contain a copy of the
+     * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
      * </pre>
      *
      * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -2809,8 +2824,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If a [DTMF][DTMFInput] was provided as input, this field will contain
-     * a copy of the [DTMFInput][].
+     * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+     * input, this field will contain a copy of the
+     * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
      * </pre>
      *
      * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -2829,8 +2845,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If a [DTMF][DTMFInput] was provided as input, this field will contain
-     * a copy of the [DTMFInput][].
+     * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+     * input, this field will contain a copy of the
+     * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
      * </pre>
      *
      * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -2862,8 +2879,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If a [DTMF][DTMFInput] was provided as input, this field will contain
-     * a copy of the [DTMFInput][].
+     * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+     * input, this field will contain a copy of the
+     * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
      * </pre>
      *
      * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -2888,8 +2906,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If a [DTMF][DTMFInput] was provided as input, this field will contain
-     * a copy of the [DTMFInput][].
+     * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+     * input, this field will contain a copy of the
+     * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
      * </pre>
      *
      * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -2901,8 +2920,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If a [DTMF][DTMFInput] was provided as input, this field will contain
-     * a copy of the [DTMFInput][].
+     * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+     * input, this field will contain a copy of the
+     * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
      * </pre>
      *
      * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -2922,8 +2942,9 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If a [DTMF][DTMFInput] was provided as input, this field will contain
-     * a copy of the [DTMFInput][].
+     * If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+     * input, this field will contain a copy of the
+     * [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
      * </pre>
      *
      * <code>.google.cloud.dialogflow.cx.v3.DtmfInput dtmf = 23;</code>
@@ -3085,9 +3106,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The collected [session
      * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+     *
      * Depending on your protocol or client library language, this is a
      * map, associative array, symbol table, dictionary, or JSON object
      * composed of a collection of (MapKey, MapValue) pairs:
+     *
      * * MapKey type: string
      * * MapKey value: parameter name
      * * MapValue type: If parameter's entity type is a composite entity then use
@@ -3111,9 +3134,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The collected [session
      * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+     *
      * Depending on your protocol or client library language, this is a
      * map, associative array, symbol table, dictionary, or JSON object
      * composed of a collection of (MapKey, MapValue) pairs:
+     *
      * * MapKey type: string
      * * MapKey value: parameter name
      * * MapValue type: If parameter's entity type is a composite entity then use
@@ -3141,9 +3166,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The collected [session
      * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+     *
      * Depending on your protocol or client library language, this is a
      * map, associative array, symbol table, dictionary, or JSON object
      * composed of a collection of (MapKey, MapValue) pairs:
+     *
      * * MapKey type: string
      * * MapKey value: parameter name
      * * MapValue type: If parameter's entity type is a composite entity then use
@@ -3175,9 +3202,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The collected [session
      * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+     *
      * Depending on your protocol or client library language, this is a
      * map, associative array, symbol table, dictionary, or JSON object
      * composed of a collection of (MapKey, MapValue) pairs:
+     *
      * * MapKey type: string
      * * MapKey value: parameter name
      * * MapValue type: If parameter's entity type is a composite entity then use
@@ -3206,9 +3235,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The collected [session
      * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+     *
      * Depending on your protocol or client library language, this is a
      * map, associative array, symbol table, dictionary, or JSON object
      * composed of a collection of (MapKey, MapValue) pairs:
+     *
      * * MapKey type: string
      * * MapKey value: parameter name
      * * MapValue type: If parameter's entity type is a composite entity then use
@@ -3243,9 +3274,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The collected [session
      * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+     *
      * Depending on your protocol or client library language, this is a
      * map, associative array, symbol table, dictionary, or JSON object
      * composed of a collection of (MapKey, MapValue) pairs:
+     *
      * * MapKey type: string
      * * MapKey value: parameter name
      * * MapValue type: If parameter's entity type is a composite entity then use
@@ -3274,9 +3307,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The collected [session
      * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+     *
      * Depending on your protocol or client library language, this is a
      * map, associative array, symbol table, dictionary, or JSON object
      * composed of a collection of (MapKey, MapValue) pairs:
+     *
      * * MapKey type: string
      * * MapKey value: parameter name
      * * MapValue type: If parameter's entity type is a composite entity then use
@@ -3300,9 +3335,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The collected [session
      * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+     *
      * Depending on your protocol or client library language, this is a
      * map, associative array, symbol table, dictionary, or JSON object
      * composed of a collection of (MapKey, MapValue) pairs:
+     *
      * * MapKey type: string
      * * MapKey value: parameter name
      * * MapValue type: If parameter's entity type is a composite entity then use
@@ -3328,9 +3365,11 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The collected [session
      * parameters][google.cloud.dialogflow.cx.v3.SessionInfo.parameters].
+     *
      * Depending on your protocol or client library language, this is a
      * map, associative array, symbol table, dictionary, or JSON object
      * composed of a collection of (MapKey, MapValue) pairs:
+     *
      * * MapKey type: string
      * * MapKey value: parameter name
      * * MapValue type: If parameter's entity type is a composite entity then use
@@ -4730,7 +4769,7 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.cloud.dialogflow.cx.v3.Intent intent = 8 [deprecated = true];</code>
      *
      * @deprecated google.cloud.dialogflow.cx.v3.QueryResult.intent is deprecated. See
-     *     google/cloud/dialogflow/cx/v3/session.proto;l=642
+     *     google/cloud/dialogflow/cx/v3/session.proto;l=716
      * @return Whether the intent field is set.
      */
     @java.lang.Deprecated
@@ -4752,7 +4791,7 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.cloud.dialogflow.cx.v3.Intent intent = 8 [deprecated = true];</code>
      *
      * @deprecated google.cloud.dialogflow.cx.v3.QueryResult.intent is deprecated. See
-     *     google/cloud/dialogflow/cx/v3/session.proto;l=642
+     *     google/cloud/dialogflow/cx/v3/session.proto;l=716
      * @return The intent.
      */
     @java.lang.Deprecated
@@ -4968,7 +5007,7 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <code>float intent_detection_confidence = 9 [deprecated = true];</code>
      *
      * @deprecated google.cloud.dialogflow.cx.v3.QueryResult.intent_detection_confidence is
-     *     deprecated. See google/cloud/dialogflow/cx/v3/session.proto;l=653
+     *     deprecated. See google/cloud/dialogflow/cx/v3/session.proto;l=727
      * @return The intentDetectionConfidence.
      */
     @java.lang.Override
@@ -4994,7 +5033,7 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <code>float intent_detection_confidence = 9 [deprecated = true];</code>
      *
      * @deprecated google.cloud.dialogflow.cx.v3.QueryResult.intent_detection_confidence is
-     *     deprecated. See google/cloud/dialogflow/cx/v3/session.proto;l=653
+     *     deprecated. See google/cloud/dialogflow/cx/v3/session.proto;l=727
      * @param value The intentDetectionConfidence to set.
      * @return This builder for chaining.
      */
@@ -5024,7 +5063,7 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * <code>float intent_detection_confidence = 9 [deprecated = true];</code>
      *
      * @deprecated google.cloud.dialogflow.cx.v3.QueryResult.intent_detection_confidence is
-     *     deprecated. See google/cloud/dialogflow/cx/v3/session.proto;l=653
+     *     deprecated. See google/cloud/dialogflow/cx/v3/session.proto;l=727
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -5231,8 +5270,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * The free-form diagnostic info. For example, this field could contain
      * webhook call latency. The fields of this data can change without notice,
      * so you should not write code that depends on its structure.
+     *
      * One of the fields is called "Alternative Matched Intents", which may
      * aid with debugging. The following describes these intent results:
+     *
      * - The list is empty if no intent was matched to end-user input.
      * - Only intents that are referenced in the currently active flow are
      *   included.
@@ -5259,8 +5300,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * The free-form diagnostic info. For example, this field could contain
      * webhook call latency. The fields of this data can change without notice,
      * so you should not write code that depends on its structure.
+     *
      * One of the fields is called "Alternative Matched Intents", which may
      * aid with debugging. The following describes these intent results:
+     *
      * - The list is empty if no intent was matched to end-user input.
      * - Only intents that are referenced in the currently active flow are
      *   included.
@@ -5293,8 +5336,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * The free-form diagnostic info. For example, this field could contain
      * webhook call latency. The fields of this data can change without notice,
      * so you should not write code that depends on its structure.
+     *
      * One of the fields is called "Alternative Matched Intents", which may
      * aid with debugging. The following describes these intent results:
+     *
      * - The list is empty if no intent was matched to end-user input.
      * - Only intents that are referenced in the currently active flow are
      *   included.
@@ -5329,8 +5374,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * The free-form diagnostic info. For example, this field could contain
      * webhook call latency. The fields of this data can change without notice,
      * so you should not write code that depends on its structure.
+     *
      * One of the fields is called "Alternative Matched Intents", which may
      * aid with debugging. The following describes these intent results:
+     *
      * - The list is empty if no intent was matched to end-user input.
      * - Only intents that are referenced in the currently active flow are
      *   included.
@@ -5362,8 +5409,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * The free-form diagnostic info. For example, this field could contain
      * webhook call latency. The fields of this data can change without notice,
      * so you should not write code that depends on its structure.
+     *
      * One of the fields is called "Alternative Matched Intents", which may
      * aid with debugging. The following describes these intent results:
+     *
      * - The list is empty if no intent was matched to end-user input.
      * - Only intents that are referenced in the currently active flow are
      *   included.
@@ -5401,8 +5450,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * The free-form diagnostic info. For example, this field could contain
      * webhook call latency. The fields of this data can change without notice,
      * so you should not write code that depends on its structure.
+     *
      * One of the fields is called "Alternative Matched Intents", which may
      * aid with debugging. The following describes these intent results:
+     *
      * - The list is empty if no intent was matched to end-user input.
      * - Only intents that are referenced in the currently active flow are
      *   included.
@@ -5434,8 +5485,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * The free-form diagnostic info. For example, this field could contain
      * webhook call latency. The fields of this data can change without notice,
      * so you should not write code that depends on its structure.
+     *
      * One of the fields is called "Alternative Matched Intents", which may
      * aid with debugging. The following describes these intent results:
+     *
      * - The list is empty if no intent was matched to end-user input.
      * - Only intents that are referenced in the currently active flow are
      *   included.
@@ -5462,8 +5515,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * The free-form diagnostic info. For example, this field could contain
      * webhook call latency. The fields of this data can change without notice,
      * so you should not write code that depends on its structure.
+     *
      * One of the fields is called "Alternative Matched Intents", which may
      * aid with debugging. The following describes these intent results:
+     *
      * - The list is empty if no intent was matched to end-user input.
      * - Only intents that are referenced in the currently active flow are
      *   included.
@@ -5494,8 +5549,10 @@ public final class QueryResult extends com.google.protobuf.GeneratedMessageV3
      * The free-form diagnostic info. For example, this field could contain
      * webhook call latency. The fields of this data can change without notice,
      * so you should not write code that depends on its structure.
+     *
      * One of the fields is called "Alternative Matched Intents", which may
      * aid with debugging. The following describes these intent results:
+     *
      * - The list is empty if no intent was matched to end-user input.
      * - Only intents that are referenced in the currently active flow are
      *   included.

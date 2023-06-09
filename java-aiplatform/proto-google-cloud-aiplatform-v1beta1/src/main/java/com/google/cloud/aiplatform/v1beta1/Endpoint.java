@@ -54,11 +54,6 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
     return new Endpoint();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.aiplatform.v1beta1.EndpointProto
         .internal_static_google_cloud_aiplatform_v1beta1_Endpoint_descriptor;
@@ -385,8 +380,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A map from a DeployedModel's ID to the percentage of this Endpoint's
    * traffic that should be forwarded to that DeployedModel.
+   *
    * If a DeployedModel's ID is not listed in this map, then it receives no
    * traffic.
+   *
    * The traffic percentage values must add up to 100, or map must be empty if
    * the Endpoint is to not accept any traffic at a moment.
    * </pre>
@@ -412,8 +409,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A map from a DeployedModel's ID to the percentage of this Endpoint's
    * traffic that should be forwarded to that DeployedModel.
+   *
    * If a DeployedModel's ID is not listed in this map, then it receives no
    * traffic.
+   *
    * The traffic percentage values must add up to 100, or map must be empty if
    * the Endpoint is to not accept any traffic at a moment.
    * </pre>
@@ -430,8 +429,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A map from a DeployedModel's ID to the percentage of this Endpoint's
    * traffic that should be forwarded to that DeployedModel.
+   *
    * If a DeployedModel's ID is not listed in this map, then it receives no
    * traffic.
+   *
    * The traffic percentage values must add up to 100, or map must be empty if
    * the Endpoint is to not accept any traffic at a moment.
    * </pre>
@@ -452,8 +453,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A map from a DeployedModel's ID to the percentage of this Endpoint's
    * traffic that should be forwarded to that DeployedModel.
+   *
    * If a DeployedModel's ID is not listed in this map, then it receives no
    * traffic.
+   *
    * The traffic percentage values must add up to 100, or map must be empty if
    * the Endpoint is to not accept any traffic at a moment.
    * </pre>
@@ -556,9 +559,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The labels with user-defined metadata to organize your Endpoints.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information and examples of labels.
    * </pre>
    *
@@ -582,9 +587,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The labels with user-defined metadata to organize your Endpoints.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information and examples of labels.
    * </pre>
    *
@@ -599,9 +606,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The labels with user-defined metadata to organize your Endpoints.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information and examples of labels.
    * </pre>
    *
@@ -623,9 +632,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The labels with user-defined metadata to organize your Endpoints.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information and examples of labels.
    * </pre>
    *
@@ -808,12 +819,15 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    * Optional. The full name of the Google Compute Engine
    * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
    * to which the Endpoint should be peered.
+   *
    * Private services access must already be configured for the network. If left
    * unspecified, the Endpoint is not peered with any network.
+   *
    * Only one of the fields,
    * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
    * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
    * can be set.
+   *
    * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
    * `projects/{project}/global/networks/{network}`.
    * Where `{project}` is a project number, as in `12345`, and `{network}` is
@@ -845,12 +859,15 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    * Optional. The full name of the Google Compute Engine
    * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
    * to which the Endpoint should be peered.
+   *
    * Private services access must already be configured for the network. If left
    * unspecified, the Endpoint is not peered with any network.
+   *
    * Only one of the fields,
    * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
    * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
    * can be set.
+   *
    * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
    * `projects/{project}/global/networks/{network}`.
    * Where `{project}` is a project number, as in `12345`, and `{network}` is
@@ -883,6 +900,7 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Deprecated: If true, expose the Endpoint via private service connect.
+   *
    * Only one of the fields,
    * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
    * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
@@ -892,7 +910,7 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    * <code>bool enable_private_service_connect = 17 [deprecated = true];</code>
    *
    * @deprecated google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect is
-   *     deprecated. See google/cloud/aiplatform/v1beta1/endpoint.proto;l=125
+   *     deprecated. See google/cloud/aiplatform/v1beta1/endpoint.proto;l=126
    * @return The enablePrivateServiceConnect.
    */
   @java.lang.Override
@@ -911,7 +929,8 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Output only. Resource name of the Model Monitoring job associated with this
    * Endpoint if monitoring is enabled by
-   * [CreateModelDeploymentMonitoringJob][]. Format:
+   * [JobService.CreateModelDeploymentMonitoringJob][google.cloud.aiplatform.v1beta1.JobService.CreateModelDeploymentMonitoringJob].
+   * Format:
    * `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
    * </pre>
    *
@@ -939,7 +958,8 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Output only. Resource name of the Model Monitoring job associated with this
    * Endpoint if monitoring is enabled by
-   * [CreateModelDeploymentMonitoringJob][]. Format:
+   * [JobService.CreateModelDeploymentMonitoringJob][google.cloud.aiplatform.v1beta1.JobService.CreateModelDeploymentMonitoringJob].
+   * Format:
    * `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
    * </pre>
    *
@@ -2663,8 +2683,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A map from a DeployedModel's ID to the percentage of this Endpoint's
      * traffic that should be forwarded to that DeployedModel.
+     *
      * If a DeployedModel's ID is not listed in this map, then it receives no
      * traffic.
+     *
      * The traffic percentage values must add up to 100, or map must be empty if
      * the Endpoint is to not accept any traffic at a moment.
      * </pre>
@@ -2690,8 +2712,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A map from a DeployedModel's ID to the percentage of this Endpoint's
      * traffic that should be forwarded to that DeployedModel.
+     *
      * If a DeployedModel's ID is not listed in this map, then it receives no
      * traffic.
+     *
      * The traffic percentage values must add up to 100, or map must be empty if
      * the Endpoint is to not accept any traffic at a moment.
      * </pre>
@@ -2708,8 +2732,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A map from a DeployedModel's ID to the percentage of this Endpoint's
      * traffic that should be forwarded to that DeployedModel.
+     *
      * If a DeployedModel's ID is not listed in this map, then it receives no
      * traffic.
+     *
      * The traffic percentage values must add up to 100, or map must be empty if
      * the Endpoint is to not accept any traffic at a moment.
      * </pre>
@@ -2730,8 +2756,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A map from a DeployedModel's ID to the percentage of this Endpoint's
      * traffic that should be forwarded to that DeployedModel.
+     *
      * If a DeployedModel's ID is not listed in this map, then it receives no
      * traffic.
+     *
      * The traffic percentage values must add up to 100, or map must be empty if
      * the Endpoint is to not accept any traffic at a moment.
      * </pre>
@@ -2761,8 +2789,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A map from a DeployedModel's ID to the percentage of this Endpoint's
      * traffic that should be forwarded to that DeployedModel.
+     *
      * If a DeployedModel's ID is not listed in this map, then it receives no
      * traffic.
+     *
      * The traffic percentage values must add up to 100, or map must be empty if
      * the Endpoint is to not accept any traffic at a moment.
      * </pre>
@@ -2788,8 +2818,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A map from a DeployedModel's ID to the percentage of this Endpoint's
      * traffic that should be forwarded to that DeployedModel.
+     *
      * If a DeployedModel's ID is not listed in this map, then it receives no
      * traffic.
+     *
      * The traffic percentage values must add up to 100, or map must be empty if
      * the Endpoint is to not accept any traffic at a moment.
      * </pre>
@@ -2811,8 +2843,10 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A map from a DeployedModel's ID to the percentage of this Endpoint's
      * traffic that should be forwarded to that DeployedModel.
+     *
      * If a DeployedModel's ID is not listed in this map, then it receives no
      * traffic.
+     *
      * The traffic percentage values must add up to 100, or map must be empty if
      * the Endpoint is to not accept any traffic at a moment.
      * </pre>
@@ -2966,9 +3000,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your Endpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -2992,9 +3028,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your Endpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -3009,9 +3047,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your Endpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -3033,9 +3073,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your Endpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -3063,9 +3105,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your Endpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -3089,9 +3133,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your Endpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -3113,9 +3159,11 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The labels with user-defined metadata to organize your Endpoints.
+     *
      * Label keys and values can be no longer than 64 characters
      * (Unicode codepoints), can only contain lowercase letters, numeric
      * characters, underscores and dashes. International characters are allowed.
+     *
      * See https://goo.gl/xmQnxf for more information and examples of labels.
      * </pre>
      *
@@ -3741,12 +3789,15 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
      * to which the Endpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
      * can be set.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where `{project}` is a project number, as in `12345`, and `{network}` is
@@ -3777,12 +3828,15 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
      * to which the Endpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
      * can be set.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where `{project}` is a project number, as in `12345`, and `{network}` is
@@ -3813,12 +3867,15 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
      * to which the Endpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
      * can be set.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where `{project}` is a project number, as in `12345`, and `{network}` is
@@ -3848,12 +3905,15 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
      * to which the Endpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
      * can be set.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where `{project}` is a project number, as in `12345`, and `{network}` is
@@ -3879,12 +3939,15 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * Optional. The full name of the Google Compute Engine
      * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
      * to which the Endpoint should be peered.
+     *
      * Private services access must already be configured for the network. If left
      * unspecified, the Endpoint is not peered with any network.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
      * can be set.
+     *
      * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
      * `projects/{project}/global/networks/{network}`.
      * Where `{project}` is a project number, as in `12345`, and `{network}` is
@@ -3915,6 +3978,7 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Deprecated: If true, expose the Endpoint via private service connect.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
@@ -3924,7 +3988,7 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <code>bool enable_private_service_connect = 17 [deprecated = true];</code>
      *
      * @deprecated google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect is
-     *     deprecated. See google/cloud/aiplatform/v1beta1/endpoint.proto;l=125
+     *     deprecated. See google/cloud/aiplatform/v1beta1/endpoint.proto;l=126
      * @return The enablePrivateServiceConnect.
      */
     @java.lang.Override
@@ -3937,6 +4001,7 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Deprecated: If true, expose the Endpoint via private service connect.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
@@ -3946,7 +4011,7 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <code>bool enable_private_service_connect = 17 [deprecated = true];</code>
      *
      * @deprecated google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect is
-     *     deprecated. See google/cloud/aiplatform/v1beta1/endpoint.proto;l=125
+     *     deprecated. See google/cloud/aiplatform/v1beta1/endpoint.proto;l=126
      * @param value The enablePrivateServiceConnect to set.
      * @return This builder for chaining.
      */
@@ -3963,6 +4028,7 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Deprecated: If true, expose the Endpoint via private service connect.
+     *
      * Only one of the fields,
      * [network][google.cloud.aiplatform.v1beta1.Endpoint.network] or
      * [enable_private_service_connect][google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect],
@@ -3972,7 +4038,7 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <code>bool enable_private_service_connect = 17 [deprecated = true];</code>
      *
      * @deprecated google.cloud.aiplatform.v1beta1.Endpoint.enable_private_service_connect is
-     *     deprecated. See google/cloud/aiplatform/v1beta1/endpoint.proto;l=125
+     *     deprecated. See google/cloud/aiplatform/v1beta1/endpoint.proto;l=126
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -3990,7 +4056,8 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Output only. Resource name of the Model Monitoring job associated with this
      * Endpoint if monitoring is enabled by
-     * [CreateModelDeploymentMonitoringJob][]. Format:
+     * [JobService.CreateModelDeploymentMonitoringJob][google.cloud.aiplatform.v1beta1.JobService.CreateModelDeploymentMonitoringJob].
+     * Format:
      * `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
      * </pre>
      *
@@ -4017,7 +4084,8 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Output only. Resource name of the Model Monitoring job associated with this
      * Endpoint if monitoring is enabled by
-     * [CreateModelDeploymentMonitoringJob][]. Format:
+     * [JobService.CreateModelDeploymentMonitoringJob][google.cloud.aiplatform.v1beta1.JobService.CreateModelDeploymentMonitoringJob].
+     * Format:
      * `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
      * </pre>
      *
@@ -4044,7 +4112,8 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Output only. Resource name of the Model Monitoring job associated with this
      * Endpoint if monitoring is enabled by
-     * [CreateModelDeploymentMonitoringJob][]. Format:
+     * [JobService.CreateModelDeploymentMonitoringJob][google.cloud.aiplatform.v1beta1.JobService.CreateModelDeploymentMonitoringJob].
+     * Format:
      * `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
      * </pre>
      *
@@ -4070,7 +4139,8 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Output only. Resource name of the Model Monitoring job associated with this
      * Endpoint if monitoring is enabled by
-     * [CreateModelDeploymentMonitoringJob][]. Format:
+     * [JobService.CreateModelDeploymentMonitoringJob][google.cloud.aiplatform.v1beta1.JobService.CreateModelDeploymentMonitoringJob].
+     * Format:
      * `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
      * </pre>
      *
@@ -4092,7 +4162,8 @@ public final class Endpoint extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Output only. Resource name of the Model Monitoring job associated with this
      * Endpoint if monitoring is enabled by
-     * [CreateModelDeploymentMonitoringJob][]. Format:
+     * [JobService.CreateModelDeploymentMonitoringJob][google.cloud.aiplatform.v1beta1.JobService.CreateModelDeploymentMonitoringJob].
+     * Format:
      * `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
      * </pre>
      *

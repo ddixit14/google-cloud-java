@@ -49,17 +49,13 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
     dataPathPattern_ = "";
     catalogEntry_ = "";
     system_ = 0;
+    uid_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Entity();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -350,11 +346,6 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
       return new CompatibilityStatus();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.dataplex.v1.MetadataProto
           .internal_static_google_cloud_dataplex_v1_Entity_CompatibilityStatus_descriptor;
@@ -443,11 +434,6 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
         return new Compatibility();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-        return this.unknownFields;
       }
 
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -2419,8 +2405,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
    * published table name. Specifying a new ID in an update entity
    * request will override the existing value.
    * The ID must contain only letters (a-z, A-Z), numbers (0-9), and
-   * underscores. Must begin with a letter and consist of 256 or fewer
-   * characters.
+   * underscores, and consist of 256 or fewer characters.
    * </pre>
    *
    * <code>string id = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2447,8 +2432,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
    * published table name. Specifying a new ID in an update entity
    * request will override the existing value.
    * The ID must contain only letters (a-z, A-Z), numbers (0-9), and
-   * underscores. Must begin with a letter and consist of 256 or fewer
-   * characters.
+   * underscores, and consist of 256 or fewer characters.
    * </pre>
    *
    * <code>string id = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2943,6 +2927,118 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
         : compatibility_;
   }
 
+  public static final int ACCESS_FIELD_NUMBER = 21;
+  private com.google.cloud.dataplex.v1.StorageAccess access_;
+  /**
+   *
+   *
+   * <pre>
+   * Output only. Identifies the access mechanism to the entity. Not user
+   * settable.
+   * </pre>
+   *
+   * <code>
+   * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
+   * @return Whether the access field is set.
+   */
+  @java.lang.Override
+  public boolean hasAccess() {
+    return access_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Output only. Identifies the access mechanism to the entity. Not user
+   * settable.
+   * </pre>
+   *
+   * <code>
+   * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   *
+   * @return The access.
+   */
+  @java.lang.Override
+  public com.google.cloud.dataplex.v1.StorageAccess getAccess() {
+    return access_ == null
+        ? com.google.cloud.dataplex.v1.StorageAccess.getDefaultInstance()
+        : access_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Output only. Identifies the access mechanism to the entity. Not user
+   * settable.
+   * </pre>
+   *
+   * <code>
+   * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+   * </code>
+   */
+  @java.lang.Override
+  public com.google.cloud.dataplex.v1.StorageAccessOrBuilder getAccessOrBuilder() {
+    return access_ == null
+        ? com.google.cloud.dataplex.v1.StorageAccess.getDefaultInstance()
+        : access_;
+  }
+
+  public static final int UID_FIELD_NUMBER = 22;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object uid_ = "";
+  /**
+   *
+   *
+   * <pre>
+   * Output only. System generated unique ID for the Entity. This ID will be
+   * different if the Entity is deleted and re-created with the same name.
+   * </pre>
+   *
+   * <code>string uid = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
+   * @return The uid.
+   */
+  @java.lang.Override
+  public java.lang.String getUid() {
+    java.lang.Object ref = uid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      uid_ = s;
+      return s;
+    }
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Output only. System generated unique ID for the Entity. This ID will be
+   * different if the Entity is deleted and re-created with the same name.
+   * </pre>
+   *
+   * <code>string uid = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
+   * @return The bytes for uid.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getUidBytes() {
+    java.lang.Object ref = uid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      uid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int SCHEMA_FIELD_NUMBER = 50;
   private com.google.cloud.dataplex.v1.Schema schema_;
   /**
@@ -3058,6 +3154,12 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
     if (compatibility_ != null) {
       output.writeMessage(19, getCompatibility());
     }
+    if (access_ != null) {
+      output.writeMessage(21, getAccess());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 22, uid_);
+    }
     if (schema_ != null) {
       output.writeMessage(50, getSchema());
     }
@@ -3116,6 +3218,12 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
     if (compatibility_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(19, getCompatibility());
     }
+    if (access_ != null) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(21, getAccess());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, uid_);
+    }
     if (schema_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(50, getSchema());
     }
@@ -3161,6 +3269,11 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
     if (hasCompatibility()) {
       if (!getCompatibility().equals(other.getCompatibility())) return false;
     }
+    if (hasAccess() != other.hasAccess()) return false;
+    if (hasAccess()) {
+      if (!getAccess().equals(other.getAccess())) return false;
+    }
+    if (!getUid().equals(other.getUid())) return false;
     if (hasSchema() != other.hasSchema()) return false;
     if (hasSchema()) {
       if (!getSchema().equals(other.getSchema())) return false;
@@ -3214,6 +3327,12 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + COMPATIBILITY_FIELD_NUMBER;
       hash = (53 * hash) + getCompatibility().hashCode();
     }
+    if (hasAccess()) {
+      hash = (37 * hash) + ACCESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAccess().hashCode();
+    }
+    hash = (37 * hash) + UID_FIELD_NUMBER;
+    hash = (53 * hash) + getUid().hashCode();
     if (hasSchema()) {
       hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
       hash = (53 * hash) + getSchema().hashCode();
@@ -3387,6 +3506,12 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
         compatibilityBuilder_.dispose();
         compatibilityBuilder_ = null;
       }
+      access_ = null;
+      if (accessBuilder_ != null) {
+        accessBuilder_.dispose();
+        accessBuilder_ = null;
+      }
+      uid_ = "";
       schema_ = null;
       if (schemaBuilder_ != null) {
         schemaBuilder_.dispose();
@@ -3474,6 +3599,12 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
             compatibilityBuilder_ == null ? compatibility_ : compatibilityBuilder_.build();
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.access_ = accessBuilder_ == null ? access_ : accessBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.uid_ = uid_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
         result.schema_ = schemaBuilder_ == null ? schema_ : schemaBuilder_.build();
       }
     }
@@ -3585,6 +3716,14 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
       }
       if (other.hasCompatibility()) {
         mergeCompatibility(other.getCompatibility());
+      }
+      if (other.hasAccess()) {
+        mergeAccess(other.getAccess());
+      }
+      if (!other.getUid().isEmpty()) {
+        uid_ = other.uid_;
+        bitField0_ |= 0x00010000;
+        onChanged();
       }
       if (other.hasSchema()) {
         mergeSchema(other.getSchema());
@@ -3705,10 +3844,22 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
                 bitField0_ |= 0x00004000;
                 break;
               } // case 154
+            case 170:
+              {
+                input.readMessage(getAccessFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 170
+            case 178:
+              {
+                uid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 178
             case 402:
               {
                 input.readMessage(getSchemaFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00008000;
+                bitField0_ |= 0x00020000;
                 break;
               } // case 402
             default:
@@ -4479,8 +4630,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
      * published table name. Specifying a new ID in an update entity
      * request will override the existing value.
      * The ID must contain only letters (a-z, A-Z), numbers (0-9), and
-     * underscores. Must begin with a letter and consist of 256 or fewer
-     * characters.
+     * underscores, and consist of 256 or fewer characters.
      * </pre>
      *
      * <code>string id = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4506,8 +4656,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
      * published table name. Specifying a new ID in an update entity
      * request will override the existing value.
      * The ID must contain only letters (a-z, A-Z), numbers (0-9), and
-     * underscores. Must begin with a letter and consist of 256 or fewer
-     * characters.
+     * underscores, and consist of 256 or fewer characters.
      * </pre>
      *
      * <code>string id = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4533,8 +4682,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
      * published table name. Specifying a new ID in an update entity
      * request will override the existing value.
      * The ID must contain only letters (a-z, A-Z), numbers (0-9), and
-     * underscores. Must begin with a letter and consist of 256 or fewer
-     * characters.
+     * underscores, and consist of 256 or fewer characters.
      * </pre>
      *
      * <code>string id = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4559,8 +4707,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
      * published table name. Specifying a new ID in an update entity
      * request will override the existing value.
      * The ID must contain only letters (a-z, A-Z), numbers (0-9), and
-     * underscores. Must begin with a letter and consist of 256 or fewer
-     * characters.
+     * underscores, and consist of 256 or fewer characters.
      * </pre>
      *
      * <code>string id = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4581,8 +4728,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
      * published table name. Specifying a new ID in an update entity
      * request will override the existing value.
      * The ID must contain only letters (a-z, A-Z), numbers (0-9), and
-     * underscores. Must begin with a letter and consist of 256 or fewer
-     * characters.
+     * underscores, and consist of 256 or fewer characters.
      * </pre>
      *
      * <code>string id = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -5812,6 +5958,327 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
       return compatibilityBuilder_;
     }
 
+    private com.google.cloud.dataplex.v1.StorageAccess access_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.cloud.dataplex.v1.StorageAccess,
+            com.google.cloud.dataplex.v1.StorageAccess.Builder,
+            com.google.cloud.dataplex.v1.StorageAccessOrBuilder>
+        accessBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Identifies the access mechanism to the entity. Not user
+     * settable.
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
+     * @return Whether the access field is set.
+     */
+    public boolean hasAccess() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Identifies the access mechanism to the entity. Not user
+     * settable.
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     *
+     * @return The access.
+     */
+    public com.google.cloud.dataplex.v1.StorageAccess getAccess() {
+      if (accessBuilder_ == null) {
+        return access_ == null
+            ? com.google.cloud.dataplex.v1.StorageAccess.getDefaultInstance()
+            : access_;
+      } else {
+        return accessBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Identifies the access mechanism to the entity. Not user
+     * settable.
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     */
+    public Builder setAccess(com.google.cloud.dataplex.v1.StorageAccess value) {
+      if (accessBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        access_ = value;
+      } else {
+        accessBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Identifies the access mechanism to the entity. Not user
+     * settable.
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     */
+    public Builder setAccess(com.google.cloud.dataplex.v1.StorageAccess.Builder builderForValue) {
+      if (accessBuilder_ == null) {
+        access_ = builderForValue.build();
+      } else {
+        accessBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Identifies the access mechanism to the entity. Not user
+     * settable.
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     */
+    public Builder mergeAccess(com.google.cloud.dataplex.v1.StorageAccess value) {
+      if (accessBuilder_ == null) {
+        if (((bitField0_ & 0x00008000) != 0)
+            && access_ != null
+            && access_ != com.google.cloud.dataplex.v1.StorageAccess.getDefaultInstance()) {
+          getAccessBuilder().mergeFrom(value);
+        } else {
+          access_ = value;
+        }
+      } else {
+        accessBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Identifies the access mechanism to the entity. Not user
+     * settable.
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     */
+    public Builder clearAccess() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      access_ = null;
+      if (accessBuilder_ != null) {
+        accessBuilder_.dispose();
+        accessBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Identifies the access mechanism to the entity. Not user
+     * settable.
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     */
+    public com.google.cloud.dataplex.v1.StorageAccess.Builder getAccessBuilder() {
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return getAccessFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Identifies the access mechanism to the entity. Not user
+     * settable.
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     */
+    public com.google.cloud.dataplex.v1.StorageAccessOrBuilder getAccessOrBuilder() {
+      if (accessBuilder_ != null) {
+        return accessBuilder_.getMessageOrBuilder();
+      } else {
+        return access_ == null
+            ? com.google.cloud.dataplex.v1.StorageAccess.getDefaultInstance()
+            : access_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Identifies the access mechanism to the entity. Not user
+     * settable.
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.dataplex.v1.StorageAccess access = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];
+     * </code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.cloud.dataplex.v1.StorageAccess,
+            com.google.cloud.dataplex.v1.StorageAccess.Builder,
+            com.google.cloud.dataplex.v1.StorageAccessOrBuilder>
+        getAccessFieldBuilder() {
+      if (accessBuilder_ == null) {
+        accessBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.cloud.dataplex.v1.StorageAccess,
+                com.google.cloud.dataplex.v1.StorageAccess.Builder,
+                com.google.cloud.dataplex.v1.StorageAccessOrBuilder>(
+                getAccess(), getParentForChildren(), isClean());
+        access_ = null;
+      }
+      return accessBuilder_;
+    }
+
+    private java.lang.Object uid_ = "";
+    /**
+     *
+     *
+     * <pre>
+     * Output only. System generated unique ID for the Entity. This ID will be
+     * different if the Entity is deleted and re-created with the same name.
+     * </pre>
+     *
+     * <code>string uid = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @return The uid.
+     */
+    public java.lang.String getUid() {
+      java.lang.Object ref = uid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. System generated unique ID for the Entity. This ID will be
+     * different if the Entity is deleted and re-created with the same name.
+     * </pre>
+     *
+     * <code>string uid = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @return The bytes for uid.
+     */
+    public com.google.protobuf.ByteString getUidBytes() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        uid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. System generated unique ID for the Entity. This ID will be
+     * different if the Entity is deleted and re-created with the same name.
+     * </pre>
+     *
+     * <code>string uid = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @param value The uid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUid(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      uid_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. System generated unique ID for the Entity. This ID will be
+     * different if the Entity is deleted and re-created with the same name.
+     * </pre>
+     *
+     * <code>string uid = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearUid() {
+      uid_ = getDefaultInstance().getUid();
+      bitField0_ = (bitField0_ & ~0x00010000);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. System generated unique ID for the Entity. This ID will be
+     * different if the Entity is deleted and re-created with the same name.
+     * </pre>
+     *
+     * <code>string uid = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @param value The bytes for uid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUidBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      uid_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+
     private com.google.cloud.dataplex.v1.Schema schema_;
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.cloud.dataplex.v1.Schema,
@@ -5833,7 +6300,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the schema field is set.
      */
     public boolean hasSchema() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      *
@@ -5877,7 +6344,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
       } else {
         schemaBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -5899,7 +6366,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
       } else {
         schemaBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -5917,7 +6384,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder mergeSchema(com.google.cloud.dataplex.v1.Schema value) {
       if (schemaBuilder_ == null) {
-        if (((bitField0_ & 0x00008000) != 0)
+        if (((bitField0_ & 0x00020000) != 0)
             && schema_ != null
             && schema_ != com.google.cloud.dataplex.v1.Schema.getDefaultInstance()) {
           getSchemaBuilder().mergeFrom(value);
@@ -5927,7 +6394,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
       } else {
         schemaBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -5944,7 +6411,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
      * </code>
      */
     public Builder clearSchema() {
-      bitField0_ = (bitField0_ & ~0x00008000);
+      bitField0_ = (bitField0_ & ~0x00020000);
       schema_ = null;
       if (schemaBuilder_ != null) {
         schemaBuilder_.dispose();
@@ -5966,7 +6433,7 @@ public final class Entity extends com.google.protobuf.GeneratedMessageV3
      * </code>
      */
     public com.google.cloud.dataplex.v1.Schema.Builder getSchemaBuilder() {
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return getSchemaFieldBuilder().getBuilder();
     }

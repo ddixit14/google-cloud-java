@@ -196,8 +196,9 @@ public interface QueryResultOrBuilder
    *
    *
    * <pre>
-   * If a [DTMF][DTMFInput] was provided as input, this field will contain
-   * a copy of the [DTMFInput][].
+   * If a [DTMF][google.cloud.dialogflow.cx.v3beta1.DtmfInput] was provided as
+   * input, this field will contain a copy of the
+   * [DtmfInput][google.cloud.dialogflow.cx.v3beta1.DtmfInput].
    * </pre>
    *
    * <code>.google.cloud.dialogflow.cx.v3beta1.DtmfInput dtmf = 23;</code>
@@ -209,8 +210,9 @@ public interface QueryResultOrBuilder
    *
    *
    * <pre>
-   * If a [DTMF][DTMFInput] was provided as input, this field will contain
-   * a copy of the [DTMFInput][].
+   * If a [DTMF][google.cloud.dialogflow.cx.v3beta1.DtmfInput] was provided as
+   * input, this field will contain a copy of the
+   * [DtmfInput][google.cloud.dialogflow.cx.v3beta1.DtmfInput].
    * </pre>
    *
    * <code>.google.cloud.dialogflow.cx.v3beta1.DtmfInput dtmf = 23;</code>
@@ -222,8 +224,9 @@ public interface QueryResultOrBuilder
    *
    *
    * <pre>
-   * If a [DTMF][DTMFInput] was provided as input, this field will contain
-   * a copy of the [DTMFInput][].
+   * If a [DTMF][google.cloud.dialogflow.cx.v3beta1.DtmfInput] was provided as
+   * input, this field will contain a copy of the
+   * [DtmfInput][google.cloud.dialogflow.cx.v3beta1.DtmfInput].
    * </pre>
    *
    * <code>.google.cloud.dialogflow.cx.v3beta1.DtmfInput dtmf = 23;</code>
@@ -267,9 +270,11 @@ public interface QueryResultOrBuilder
    * <pre>
    * The collected [session
    * parameters][google.cloud.dialogflow.cx.v3beta1.SessionInfo.parameters].
+   *
    * Depending on your protocol or client library language, this is a
    * map, associative array, symbol table, dictionary, or JSON object
    * composed of a collection of (MapKey, MapValue) pairs:
+   *
    * * MapKey type: string
    * * MapKey value: parameter name
    * * MapValue type: If parameter's entity type is a composite entity then use
@@ -291,9 +296,11 @@ public interface QueryResultOrBuilder
    * <pre>
    * The collected [session
    * parameters][google.cloud.dialogflow.cx.v3beta1.SessionInfo.parameters].
+   *
    * Depending on your protocol or client library language, this is a
    * map, associative array, symbol table, dictionary, or JSON object
    * composed of a collection of (MapKey, MapValue) pairs:
+   *
    * * MapKey type: string
    * * MapKey value: parameter name
    * * MapValue type: If parameter's entity type is a composite entity then use
@@ -315,9 +322,11 @@ public interface QueryResultOrBuilder
    * <pre>
    * The collected [session
    * parameters][google.cloud.dialogflow.cx.v3beta1.SessionInfo.parameters].
+   *
    * Depending on your protocol or client library language, this is a
    * map, associative array, symbol table, dictionary, or JSON object
    * composed of a collection of (MapKey, MapValue) pairs:
+   *
    * * MapKey type: string
    * * MapKey value: parameter name
    * * MapValue type: If parameter's entity type is a composite entity then use
@@ -573,7 +582,7 @@ public interface QueryResultOrBuilder
    * <code>.google.cloud.dialogflow.cx.v3beta1.Intent intent = 8 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.cx.v3beta1.QueryResult.intent is deprecated. See
-   *     google/cloud/dialogflow/cx/v3beta1/session.proto;l=644
+   *     google/cloud/dialogflow/cx/v3beta1/session.proto;l=718
    * @return Whether the intent field is set.
    */
   @java.lang.Deprecated
@@ -593,7 +602,7 @@ public interface QueryResultOrBuilder
    * <code>.google.cloud.dialogflow.cx.v3beta1.Intent intent = 8 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.cx.v3beta1.QueryResult.intent is deprecated. See
-   *     google/cloud/dialogflow/cx/v3beta1/session.proto;l=644
+   *     google/cloud/dialogflow/cx/v3beta1/session.proto;l=718
    * @return The intent.
    */
   @java.lang.Deprecated
@@ -633,7 +642,7 @@ public interface QueryResultOrBuilder
    * <code>float intent_detection_confidence = 9 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.cx.v3beta1.QueryResult.intent_detection_confidence is
-   *     deprecated. See google/cloud/dialogflow/cx/v3beta1/session.proto;l=655
+   *     deprecated. See google/cloud/dialogflow/cx/v3beta1/session.proto;l=729
    * @return The intentDetectionConfidence.
    */
   @java.lang.Deprecated
@@ -681,8 +690,10 @@ public interface QueryResultOrBuilder
    * The free-form diagnostic info. For example, this field could contain
    * webhook call latency. The fields of this data can change without notice,
    * so you should not write code that depends on its structure.
+   *
    * One of the fields is called "Alternative Matched Intents", which may
    * aid with debugging. The following describes these intent results:
+   *
    * - The list is empty if no intent was matched to end-user input.
    * - Only intents that are referenced in the currently active flow are
    *   included.
@@ -707,8 +718,10 @@ public interface QueryResultOrBuilder
    * The free-form diagnostic info. For example, this field could contain
    * webhook call latency. The fields of this data can change without notice,
    * so you should not write code that depends on its structure.
+   *
    * One of the fields is called "Alternative Matched Intents", which may
    * aid with debugging. The following describes these intent results:
+   *
    * - The list is empty if no intent was matched to end-user input.
    * - Only intents that are referenced in the currently active flow are
    *   included.
@@ -733,8 +746,10 @@ public interface QueryResultOrBuilder
    * The free-form diagnostic info. For example, this field could contain
    * webhook call latency. The fields of this data can change without notice,
    * so you should not write code that depends on its structure.
+   *
    * One of the fields is called "Alternative Matched Intents", which may
    * aid with debugging. The following describes these intent results:
+   *
    * - The list is empty if no intent was matched to end-user input.
    * - Only intents that are referenced in the currently active flow are
    *   included.
@@ -802,5 +817,5 @@ public interface QueryResultOrBuilder
   com.google.cloud.dialogflow.cx.v3beta1.SentimentAnalysisResultOrBuilder
       getSentimentAnalysisResultOrBuilder();
 
-  public com.google.cloud.dialogflow.cx.v3beta1.QueryResult.QueryCase getQueryCase();
+  com.google.cloud.dialogflow.cx.v3beta1.QueryResult.QueryCase getQueryCase();
 }

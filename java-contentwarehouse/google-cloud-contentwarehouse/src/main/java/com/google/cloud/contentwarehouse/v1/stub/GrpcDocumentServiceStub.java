@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.cloud.contentwarehouse.v1.CreateDocumentRequest;
 import com.google.cloud.contentwarehouse.v1.CreateDocumentResponse;
@@ -31,13 +32,13 @@ import com.google.cloud.contentwarehouse.v1.Document;
 import com.google.cloud.contentwarehouse.v1.FetchAclRequest;
 import com.google.cloud.contentwarehouse.v1.FetchAclResponse;
 import com.google.cloud.contentwarehouse.v1.GetDocumentRequest;
+import com.google.cloud.contentwarehouse.v1.LockDocumentRequest;
 import com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest;
 import com.google.cloud.contentwarehouse.v1.SearchDocumentsResponse;
 import com.google.cloud.contentwarehouse.v1.SetAclRequest;
 import com.google.cloud.contentwarehouse.v1.SetAclResponse;
 import com.google.cloud.contentwarehouse.v1.UpdateDocumentRequest;
 import com.google.cloud.contentwarehouse.v1.UpdateDocumentResponse;
-import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import com.google.protobuf.Empty;
 import io.grpc.MethodDescriptor;
@@ -105,6 +106,15 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
                   ProtoUtils.marshaller(SearchDocumentsResponse.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<LockDocumentRequest, Document>
+      lockDocumentMethodDescriptor =
+          MethodDescriptor.<LockDocumentRequest, Document>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName("google.cloud.contentwarehouse.v1.DocumentService/LockDocument")
+              .setRequestMarshaller(ProtoUtils.marshaller(LockDocumentRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(Document.getDefaultInstance()))
+              .build();
+
   private static final MethodDescriptor<FetchAclRequest, FetchAclResponse>
       fetchAclMethodDescriptor =
           MethodDescriptor.<FetchAclRequest, FetchAclResponse>newBuilder()
@@ -130,6 +140,7 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
       searchDocumentsCallable;
   private final UnaryCallable<SearchDocumentsRequest, SearchDocumentsPagedResponse>
       searchDocumentsPagedCallable;
+  private final UnaryCallable<LockDocumentRequest, Document> lockDocumentCallable;
   private final UnaryCallable<FetchAclRequest, FetchAclResponse> fetchAclCallable;
   private final UnaryCallable<SetAclRequest, SetAclResponse> setAclCallable;
 
@@ -183,9 +194,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
                 .setMethodDescriptor(createDocumentMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("parent", String.valueOf(request.getParent()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("parent", String.valueOf(request.getParent()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<GetDocumentRequest, Document> getDocumentTransportSettings =
@@ -193,9 +204,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
             .setMethodDescriptor(getDocumentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("name", String.valueOf(request.getName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<UpdateDocumentRequest, UpdateDocumentResponse>
@@ -204,9 +215,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
                 .setMethodDescriptor(updateDocumentMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("name", String.valueOf(request.getName()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("name", String.valueOf(request.getName()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<DeleteDocumentRequest, Empty> deleteDocumentTransportSettings =
@@ -214,9 +225,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
             .setMethodDescriptor(deleteDocumentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("name", String.valueOf(request.getName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<SearchDocumentsRequest, SearchDocumentsResponse>
@@ -225,19 +236,29 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
                 .setMethodDescriptor(searchDocumentsMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("parent", String.valueOf(request.getParent()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("parent", String.valueOf(request.getParent()));
+                      return builder.build();
                     })
                 .build();
+    GrpcCallSettings<LockDocumentRequest, Document> lockDocumentTransportSettings =
+        GrpcCallSettings.<LockDocumentRequest, Document>newBuilder()
+            .setMethodDescriptor(lockDocumentMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
+                })
+            .build();
     GrpcCallSettings<FetchAclRequest, FetchAclResponse> fetchAclTransportSettings =
         GrpcCallSettings.<FetchAclRequest, FetchAclResponse>newBuilder()
             .setMethodDescriptor(fetchAclMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("resource", String.valueOf(request.getResource()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("resource", String.valueOf(request.getResource()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<SetAclRequest, SetAclResponse> setAclTransportSettings =
@@ -245,9 +266,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
             .setMethodDescriptor(setAclMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("resource", String.valueOf(request.getResource()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("resource", String.valueOf(request.getResource()));
+                  return builder.build();
                 })
             .build();
 
@@ -269,6 +290,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
     this.searchDocumentsPagedCallable =
         callableFactory.createPagedCallable(
             searchDocumentsTransportSettings, settings.searchDocumentsSettings(), clientContext);
+    this.lockDocumentCallable =
+        callableFactory.createUnaryCallable(
+            lockDocumentTransportSettings, settings.lockDocumentSettings(), clientContext);
     this.fetchAclCallable =
         callableFactory.createUnaryCallable(
             fetchAclTransportSettings, settings.fetchAclSettings(), clientContext);
@@ -313,6 +337,11 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
   public UnaryCallable<SearchDocumentsRequest, SearchDocumentsPagedResponse>
       searchDocumentsPagedCallable() {
     return searchDocumentsPagedCallable;
+  }
+
+  @Override
+  public UnaryCallable<LockDocumentRequest, Document> lockDocumentCallable() {
+    return lockDocumentCallable;
   }
 
   @Override

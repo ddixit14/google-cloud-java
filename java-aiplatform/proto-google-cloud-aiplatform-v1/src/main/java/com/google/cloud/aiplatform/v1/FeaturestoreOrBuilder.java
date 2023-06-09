@@ -159,9 +159,11 @@ public interface FeaturestoreOrBuilder
    * <pre>
    * Optional. The labels with user-defined metadata to organize your
    * Featurestore.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information on and examples of labels.
    * No more than 64 user labels can be associated with one Featurestore(System
    * labels are excluded)."
@@ -178,9 +180,11 @@ public interface FeaturestoreOrBuilder
    * <pre>
    * Optional. The labels with user-defined metadata to organize your
    * Featurestore.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information on and examples of labels.
    * No more than 64 user labels can be associated with one Featurestore(System
    * labels are excluded)."
@@ -200,9 +204,11 @@ public interface FeaturestoreOrBuilder
    * <pre>
    * Optional. The labels with user-defined metadata to organize your
    * Featurestore.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information on and examples of labels.
    * No more than 64 user labels can be associated with one Featurestore(System
    * labels are excluded)."
@@ -219,9 +225,11 @@ public interface FeaturestoreOrBuilder
    * <pre>
    * Optional. The labels with user-defined metadata to organize your
    * Featurestore.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information on and examples of labels.
    * No more than 64 user labels can be associated with one Featurestore(System
    * labels are excluded)."
@@ -242,9 +250,11 @@ public interface FeaturestoreOrBuilder
    * <pre>
    * Optional. The labels with user-defined metadata to organize your
    * Featurestore.
+   *
    * Label keys and values can be no longer than 64 characters
    * (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed.
+   *
    * See https://goo.gl/xmQnxf for more information on and examples of labels.
    * No more than 64 user labels can be associated with one Featurestore(System
    * labels are excluded)."
@@ -335,6 +345,24 @@ public interface FeaturestoreOrBuilder
    * @return The state.
    */
   com.google.cloud.aiplatform.v1.Featurestore.State getState();
+
+  /**
+   *
+   *
+   * <pre>
+   * Optional. TTL in days for feature values that will be stored in online
+   * serving storage. The Feature Store online storage periodically removes
+   * obsolete feature values older than `online_storage_ttl_days` since the
+   * feature generation time. Note that `online_storage_ttl_days` should be less
+   * than or equal to `offline_storage_ttl_days` for each EntityType under a
+   * featurestore. If not set, default to 4000 days
+   * </pre>
+   *
+   * <code>int32 online_storage_ttl_days = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+   *
+   * @return The onlineStorageTtlDays.
+   */
+  int getOnlineStorageTtlDays();
 
   /**
    *

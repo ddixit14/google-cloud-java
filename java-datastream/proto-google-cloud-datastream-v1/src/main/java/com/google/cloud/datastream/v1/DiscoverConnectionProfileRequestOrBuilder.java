@@ -27,8 +27,8 @@ public interface DiscoverConnectionProfileRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The parent resource of the connection profile type. Must be in the
-   * format `projects/&#42;&#47;locations/&#42;`.
+   * Required. The parent resource of the connection profile type. Must be in
+   * the format `projects/&#42;&#47;locations/&#42;`.
    * </pre>
    *
    * <code>
@@ -42,8 +42,8 @@ public interface DiscoverConnectionProfileRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The parent resource of the connection profile type. Must be in the
-   * format `projects/&#42;&#47;locations/&#42;`.
+   * Required. The parent resource of the connection profile type. Must be in
+   * the format `projects/&#42;&#47;locations/&#42;`.
    * </pre>
    *
    * <code>
@@ -283,11 +283,10 @@ public interface DiscoverConnectionProfileRequestOrBuilder
    */
   com.google.cloud.datastream.v1.PostgresqlRdbmsOrBuilder getPostgresqlRdbmsOrBuilder();
 
-  public com.google.cloud.datastream.v1.DiscoverConnectionProfileRequest.TargetCase getTargetCase();
+  com.google.cloud.datastream.v1.DiscoverConnectionProfileRequest.TargetCase getTargetCase();
 
-  public com.google.cloud.datastream.v1.DiscoverConnectionProfileRequest.HierarchyCase
-      getHierarchyCase();
+  com.google.cloud.datastream.v1.DiscoverConnectionProfileRequest.HierarchyCase getHierarchyCase();
 
-  public com.google.cloud.datastream.v1.DiscoverConnectionProfileRequest.DataObjectCase
+  com.google.cloud.datastream.v1.DiscoverConnectionProfileRequest.DataObjectCase
       getDataObjectCase();
 }

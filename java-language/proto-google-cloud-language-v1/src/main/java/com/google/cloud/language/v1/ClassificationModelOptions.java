@@ -45,11 +45,6 @@ public final class ClassificationModelOptions extends com.google.protobuf.Genera
     return new ClassificationModelOptions();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.language.v1.LanguageServiceProto
         .internal_static_google_cloud_language_v1_ClassificationModelOptions_descriptor;
@@ -94,11 +89,6 @@ public final class ClassificationModelOptions extends com.google.protobuf.Genera
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new V1Model();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -563,11 +553,6 @@ public final class ClassificationModelOptions extends com.google.protobuf.Genera
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new V2Model();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -1329,6 +1314,8 @@ public final class ClassificationModelOptions extends com.google.protobuf.Genera
   }
 
   private int modelTypeCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object modelType_;
 
   public enum ModelTypeCase

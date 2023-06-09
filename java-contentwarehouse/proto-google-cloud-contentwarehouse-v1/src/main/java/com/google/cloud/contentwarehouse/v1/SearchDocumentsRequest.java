@@ -42,17 +42,13 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
     pageToken_ = "";
     orderBy_ = "";
     histogramQueries_ = java.util.Collections.emptyList();
+    totalResultSize_ = 0;
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new SearchDocumentsRequest();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -68,6 +64,169 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
         .ensureFieldAccessorsInitialized(
             com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.class,
             com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.Builder.class);
+  }
+
+  /**
+   *
+   *
+   * <pre>
+   * The total number of matching documents.
+   * </pre>
+   *
+   * Protobuf enum {@code google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize}
+   */
+  public enum TotalResultSize implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     *
+     *
+     * <pre>
+     * Total number calculation will be skipped.
+     * </pre>
+     *
+     * <code>TOTAL_RESULT_SIZE_UNSPECIFIED = 0;</code>
+     */
+    TOTAL_RESULT_SIZE_UNSPECIFIED(0),
+    /**
+     *
+     *
+     * <pre>
+     * Estimate total number. The total result size will be accurated up to
+     * 10,000. This option will add cost and latency to your request.
+     * </pre>
+     *
+     * <code>ESTIMATED_SIZE = 1;</code>
+     */
+    ESTIMATED_SIZE(1),
+    /**
+     *
+     *
+     * <pre>
+     * It may adversely impact performance. The limit is 1000,000.
+     * </pre>
+     *
+     * <code>ACTUAL_SIZE = 2;</code>
+     */
+    ACTUAL_SIZE(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     *
+     *
+     * <pre>
+     * Total number calculation will be skipped.
+     * </pre>
+     *
+     * <code>TOTAL_RESULT_SIZE_UNSPECIFIED = 0;</code>
+     */
+    public static final int TOTAL_RESULT_SIZE_UNSPECIFIED_VALUE = 0;
+    /**
+     *
+     *
+     * <pre>
+     * Estimate total number. The total result size will be accurated up to
+     * 10,000. This option will add cost and latency to your request.
+     * </pre>
+     *
+     * <code>ESTIMATED_SIZE = 1;</code>
+     */
+    public static final int ESTIMATED_SIZE_VALUE = 1;
+    /**
+     *
+     *
+     * <pre>
+     * It may adversely impact performance. The limit is 1000,000.
+     * </pre>
+     *
+     * <code>ACTUAL_SIZE = 2;</code>
+     */
+    public static final int ACTUAL_SIZE_VALUE = 2;
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static TotalResultSize valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static TotalResultSize forNumber(int value) {
+      switch (value) {
+        case 0:
+          return TOTAL_RESULT_SIZE_UNSPECIFIED;
+        case 1:
+          return ESTIMATED_SIZE;
+        case 2:
+          return ACTUAL_SIZE;
+        default:
+          return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TotalResultSize> internalGetValueMap() {
+      return internalValueMap;
+    }
+
+    private static final com.google.protobuf.Internal.EnumLiteMap<TotalResultSize>
+        internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<TotalResultSize>() {
+              public TotalResultSize findValueByNumber(int number) {
+                return TotalResultSize.forNumber(number);
+              }
+            };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+
+    public final com.google.protobuf.Descriptors.EnumDescriptor getDescriptorForType() {
+      return getDescriptor();
+    }
+
+    public static final com.google.protobuf.Descriptors.EnumDescriptor getDescriptor() {
+      return com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.getDescriptor()
+          .getEnumTypes()
+          .get(0);
+    }
+
+    private static final TotalResultSize[] VALUES = values();
+
+    public static TotalResultSize valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException("EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private TotalResultSize(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize)
   }
 
   public static final int PARENT_FIELD_NUMBER = 1;
@@ -239,8 +398,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * <pre>
    * An integer that specifies the current offset (that is, starting result
    * location, amongst the documents deemed by the API as relevant) in search
-   * results. This field is only considered if [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token] is unset.
+   * results. This field is only considered if
+   * [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token]
+   * is unset.
+   *
    * The maximum allowed value is 5000. Otherwise an error is thrown.
+   *
    * For example, 0 means to  return results starting from the first matching
    * document, and 10 means to return from the 11th document. This can be used
    * for pagination, (for example, pageSize = 10 and offset = 10 means to return
@@ -285,8 +448,9 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    *
    * <pre>
    * The token specifying the current offset within search results.
-   * See [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token] for an explanation of how
-   * to obtain the next set of query results.
+   * See
+   * [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token]
+   * for an explanation of how to obtain the next set of query results.
    * </pre>
    *
    * <code>string page_token = 7;</code>
@@ -310,8 +474,9 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    *
    * <pre>
    * The token specifying the current offset within search results.
-   * See [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token] for an explanation of how
-   * to obtain the next set of query results.
+   * See
+   * [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token]
+   * for an explanation of how to obtain the next set of query results.
    * </pre>
    *
    * <code>string page_token = 7;</code>
@@ -342,13 +507,18 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * The criteria determining how search results are sorted. For non-empty
    * query, default is `"relevance desc"`. For empty query, default is
    * `"upload_date desc"`.
+   *
    * Supported options are:
+   *
    * * `"relevance desc"`: By relevance descending, as determined by the API
    *   algorithms.
    * * `"upload_date desc"`: By upload date descending.
    * * `"upload_date"`: By upload date ascending.
    * * `"update_date desc"`: By last updated date descending.
    * * `"update_date"`: By last updated date ascending.
+   * * `"retrieval_importance desc"`: By retrieval importance of properties
+   *   descending. This feature is still under development, please do not use
+   *   unless otherwise instructed to do so.
    * </pre>
    *
    * <code>string order_by = 8;</code>
@@ -374,13 +544,18 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * The criteria determining how search results are sorted. For non-empty
    * query, default is `"relevance desc"`. For empty query, default is
    * `"upload_date desc"`.
+   *
    * Supported options are:
+   *
    * * `"relevance desc"`: By relevance descending, as determined by the API
    *   algorithms.
    * * `"upload_date desc"`: By upload date descending.
    * * `"upload_date"`: By upload date ascending.
    * * `"update_date desc"`: By last updated date descending.
    * * `"update_date"`: By last updated date ascending.
+   * * `"retrieval_importance desc"`: By retrieval importance of properties
+   *   descending. This feature is still under development, please do not use
+   *   unless otherwise instructed to do so.
    * </pre>
    *
    * <code>string order_by = 8;</code>
@@ -411,10 +586,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -426,9 +605,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -447,10 +629,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -462,9 +648,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -483,10 +672,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -498,9 +691,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -518,10 +714,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -533,9 +733,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -553,10 +756,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -568,9 +775,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -589,11 +799,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Optional. Controls if the search document request requires the return of a total size
-   * of matched documents. See [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+   * Controls if the search document request requires the return of a total size
+   * of matched documents. See
+   * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+   *
    * Enabling this flag may adversely impact performance. Hint: If this is
    * used with pagination, set this flag on the initial query but set this
    * to false on subsequent page calls (keep the total count locally).
+   *
    * Defaults to false.
    * </pre>
    *
@@ -604,6 +817,53 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
   @java.lang.Override
   public boolean getRequireTotalSize() {
     return requireTotalSize_;
+  }
+
+  public static final int TOTAL_RESULT_SIZE_FIELD_NUMBER = 12;
+  private int totalResultSize_ = 0;
+  /**
+   *
+   *
+   * <pre>
+   * Controls if the search document request requires the return of a total size
+   * of matched documents. See
+   * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+   * </pre>
+   *
+   * <code>
+   * .google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize total_result_size = 12;
+   * </code>
+   *
+   * @return The enum numeric value on the wire for totalResultSize.
+   */
+  @java.lang.Override
+  public int getTotalResultSizeValue() {
+    return totalResultSize_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Controls if the search document request requires the return of a total size
+   * of matched documents. See
+   * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+   * </pre>
+   *
+   * <code>
+   * .google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize total_result_size = 12;
+   * </code>
+   *
+   * @return The totalResultSize.
+   */
+  @java.lang.Override
+  public com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize
+      getTotalResultSize() {
+    com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize result =
+        com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize.forNumber(
+            totalResultSize_);
+    return result == null
+        ? com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize.UNRECOGNIZED
+        : result;
   }
 
   public static final int QA_SIZE_LIMIT_FIELD_NUMBER = 11;
@@ -671,6 +931,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
     if (qaSizeLimit_ != 0) {
       output.writeInt32(11, qaSizeLimit_);
     }
+    if (totalResultSize_
+        != com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize
+            .TOTAL_RESULT_SIZE_UNSPECIFIED
+            .getNumber()) {
+      output.writeEnum(12, totalResultSize_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -710,6 +976,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
     if (qaSizeLimit_ != 0) {
       size += com.google.protobuf.CodedOutputStream.computeInt32Size(11, qaSizeLimit_);
     }
+    if (totalResultSize_
+        != com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize
+            .TOTAL_RESULT_SIZE_UNSPECIFIED
+            .getNumber()) {
+      size += com.google.protobuf.CodedOutputStream.computeEnumSize(12, totalResultSize_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -741,6 +1013,7 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
     if (!getOrderBy().equals(other.getOrderBy())) return false;
     if (!getHistogramQueriesList().equals(other.getHistogramQueriesList())) return false;
     if (getRequireTotalSize() != other.getRequireTotalSize()) return false;
+    if (totalResultSize_ != other.totalResultSize_) return false;
     if (getQaSizeLimit() != other.getQaSizeLimit()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -777,6 +1050,8 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
     }
     hash = (37 * hash) + REQUIRE_TOTAL_SIZE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getRequireTotalSize());
+    hash = (37 * hash) + TOTAL_RESULT_SIZE_FIELD_NUMBER;
+    hash = (53 * hash) + totalResultSize_;
     hash = (37 * hash) + QA_SIZE_LIMIT_FIELD_NUMBER;
     hash = (53 * hash) + getQaSizeLimit();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -942,6 +1217,7 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
       }
       bitField0_ = (bitField0_ & ~0x00000080);
       requireTotalSize_ = false;
+      totalResultSize_ = 0;
       qaSizeLimit_ = 0;
       return this;
     }
@@ -1020,6 +1296,9 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
         result.requireTotalSize_ = requireTotalSize_;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.totalResultSize_ = totalResultSize_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.qaSizeLimit_ = qaSizeLimit_;
       }
     }
@@ -1127,6 +1406,9 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
       if (other.getRequireTotalSize() != false) {
         setRequireTotalSize(other.getRequireTotalSize());
       }
+      if (other.totalResultSize_ != 0) {
+        setTotalResultSizeValue(other.getTotalResultSizeValue());
+      }
       if (other.getQaSizeLimit() != 0) {
         setQaSizeLimit(other.getQaSizeLimit());
       }
@@ -1221,9 +1503,15 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
             case 88:
               {
                 qaSizeLimit_ = input.readInt32();
-                bitField0_ |= 0x00000200;
+                bitField0_ |= 0x00000400;
                 break;
               } // case 88
+            case 96:
+              {
+                totalResultSize_ = input.readEnum();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 96
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -1753,8 +2041,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * <pre>
      * An integer that specifies the current offset (that is, starting result
      * location, amongst the documents deemed by the API as relevant) in search
-     * results. This field is only considered if [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token] is unset.
+     * results. This field is only considered if
+     * [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token]
+     * is unset.
+     *
      * The maximum allowed value is 5000. Otherwise an error is thrown.
+     *
      * For example, 0 means to  return results starting from the first matching
      * document, and 10 means to return from the 11th document. This can be used
      * for pagination, (for example, pageSize = 10 and offset = 10 means to return
@@ -1775,8 +2067,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * <pre>
      * An integer that specifies the current offset (that is, starting result
      * location, amongst the documents deemed by the API as relevant) in search
-     * results. This field is only considered if [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token] is unset.
+     * results. This field is only considered if
+     * [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token]
+     * is unset.
+     *
      * The maximum allowed value is 5000. Otherwise an error is thrown.
+     *
      * For example, 0 means to  return results starting from the first matching
      * document, and 10 means to return from the 11th document. This can be used
      * for pagination, (for example, pageSize = 10 and offset = 10 means to return
@@ -1801,8 +2097,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * <pre>
      * An integer that specifies the current offset (that is, starting result
      * location, amongst the documents deemed by the API as relevant) in search
-     * results. This field is only considered if [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token] is unset.
+     * results. This field is only considered if
+     * [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token]
+     * is unset.
+     *
      * The maximum allowed value is 5000. Otherwise an error is thrown.
+     *
      * For example, 0 means to  return results starting from the first matching
      * document, and 10 means to return from the 11th document. This can be used
      * for pagination, (for example, pageSize = 10 and offset = 10 means to return
@@ -1885,8 +2185,9 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      *
      * <pre>
      * The token specifying the current offset within search results.
-     * See [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token] for an explanation of how
-     * to obtain the next set of query results.
+     * See
+     * [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token]
+     * for an explanation of how to obtain the next set of query results.
      * </pre>
      *
      * <code>string page_token = 7;</code>
@@ -1909,8 +2210,9 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      *
      * <pre>
      * The token specifying the current offset within search results.
-     * See [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token] for an explanation of how
-     * to obtain the next set of query results.
+     * See
+     * [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token]
+     * for an explanation of how to obtain the next set of query results.
      * </pre>
      *
      * <code>string page_token = 7;</code>
@@ -1933,8 +2235,9 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      *
      * <pre>
      * The token specifying the current offset within search results.
-     * See [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token] for an explanation of how
-     * to obtain the next set of query results.
+     * See
+     * [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token]
+     * for an explanation of how to obtain the next set of query results.
      * </pre>
      *
      * <code>string page_token = 7;</code>
@@ -1956,8 +2259,9 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      *
      * <pre>
      * The token specifying the current offset within search results.
-     * See [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token] for an explanation of how
-     * to obtain the next set of query results.
+     * See
+     * [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token]
+     * for an explanation of how to obtain the next set of query results.
      * </pre>
      *
      * <code>string page_token = 7;</code>
@@ -1975,8 +2279,9 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      *
      * <pre>
      * The token specifying the current offset within search results.
-     * See [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token] for an explanation of how
-     * to obtain the next set of query results.
+     * See
+     * [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token]
+     * for an explanation of how to obtain the next set of query results.
      * </pre>
      *
      * <code>string page_token = 7;</code>
@@ -2003,13 +2308,18 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * The criteria determining how search results are sorted. For non-empty
      * query, default is `"relevance desc"`. For empty query, default is
      * `"upload_date desc"`.
+     *
      * Supported options are:
+     *
      * * `"relevance desc"`: By relevance descending, as determined by the API
      *   algorithms.
      * * `"upload_date desc"`: By upload date descending.
      * * `"upload_date"`: By upload date ascending.
      * * `"update_date desc"`: By last updated date descending.
      * * `"update_date"`: By last updated date ascending.
+     * * `"retrieval_importance desc"`: By retrieval importance of properties
+     *   descending. This feature is still under development, please do not use
+     *   unless otherwise instructed to do so.
      * </pre>
      *
      * <code>string order_by = 8;</code>
@@ -2034,13 +2344,18 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * The criteria determining how search results are sorted. For non-empty
      * query, default is `"relevance desc"`. For empty query, default is
      * `"upload_date desc"`.
+     *
      * Supported options are:
+     *
      * * `"relevance desc"`: By relevance descending, as determined by the API
      *   algorithms.
      * * `"upload_date desc"`: By upload date descending.
      * * `"upload_date"`: By upload date ascending.
      * * `"update_date desc"`: By last updated date descending.
      * * `"update_date"`: By last updated date ascending.
+     * * `"retrieval_importance desc"`: By retrieval importance of properties
+     *   descending. This feature is still under development, please do not use
+     *   unless otherwise instructed to do so.
      * </pre>
      *
      * <code>string order_by = 8;</code>
@@ -2065,13 +2380,18 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * The criteria determining how search results are sorted. For non-empty
      * query, default is `"relevance desc"`. For empty query, default is
      * `"upload_date desc"`.
+     *
      * Supported options are:
+     *
      * * `"relevance desc"`: By relevance descending, as determined by the API
      *   algorithms.
      * * `"upload_date desc"`: By upload date descending.
      * * `"upload_date"`: By upload date ascending.
      * * `"update_date desc"`: By last updated date descending.
      * * `"update_date"`: By last updated date ascending.
+     * * `"retrieval_importance desc"`: By retrieval importance of properties
+     *   descending. This feature is still under development, please do not use
+     *   unless otherwise instructed to do so.
      * </pre>
      *
      * <code>string order_by = 8;</code>
@@ -2095,13 +2415,18 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * The criteria determining how search results are sorted. For non-empty
      * query, default is `"relevance desc"`. For empty query, default is
      * `"upload_date desc"`.
+     *
      * Supported options are:
+     *
      * * `"relevance desc"`: By relevance descending, as determined by the API
      *   algorithms.
      * * `"upload_date desc"`: By upload date descending.
      * * `"upload_date"`: By upload date ascending.
      * * `"update_date desc"`: By last updated date descending.
      * * `"update_date"`: By last updated date ascending.
+     * * `"retrieval_importance desc"`: By retrieval importance of properties
+     *   descending. This feature is still under development, please do not use
+     *   unless otherwise instructed to do so.
      * </pre>
      *
      * <code>string order_by = 8;</code>
@@ -2121,13 +2446,18 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * The criteria determining how search results are sorted. For non-empty
      * query, default is `"relevance desc"`. For empty query, default is
      * `"upload_date desc"`.
+     *
      * Supported options are:
+     *
      * * `"relevance desc"`: By relevance descending, as determined by the API
      *   algorithms.
      * * `"upload_date desc"`: By upload date descending.
      * * `"upload_date"`: By upload date ascending.
      * * `"update_date desc"`: By last updated date descending.
      * * `"update_date"`: By last updated date ascending.
+     * * `"retrieval_importance desc"`: By retrieval importance of properties
+     *   descending. This feature is still under development, please do not use
+     *   unless otherwise instructed to do so.
      * </pre>
      *
      * <code>string order_by = 8;</code>
@@ -2171,10 +2501,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2186,9 +2520,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2210,10 +2547,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2225,9 +2566,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2248,10 +2592,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2263,9 +2611,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2286,10 +2637,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2301,9 +2656,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2331,10 +2689,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2346,9 +2708,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2373,10 +2738,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2388,9 +2757,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2417,10 +2789,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2432,9 +2808,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2462,10 +2841,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2477,9 +2860,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2504,10 +2890,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2519,9 +2909,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2546,10 +2939,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2561,9 +2958,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2588,10 +2988,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2603,9 +3007,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2629,10 +3036,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2644,9 +3055,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2670,10 +3084,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2685,9 +3103,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2705,10 +3126,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2720,9 +3145,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2744,10 +3172,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2759,9 +3191,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2783,10 +3218,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2798,9 +3237,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2819,10 +3261,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2834,9 +3280,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2856,10 +3305,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * An expression specifying a histogram request against matching
      * documents. Expression syntax is an aggregation function call with
      * histogram facets and other options.
+     *
      * The following aggregation functions are supported:
+     *
      * * `count(string_histogram_facet)`: Count the number of matching entities
      * for each distinct attribute value.
+     *
      * Data types:
+     *
      * * Histogram facet (aka filterable properties): Facet names with format
      * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
      * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -2871,9 +3324,12 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * * DocumentSchemaId: (with no schema id prefix) to get
      * histograms for each document type (returns the schema id path, e.g.
      * projects/12345/locations/us-west/documentSchemas/abc123).
+     *
      * Example expression:
+     *
      * * Document type counts:
      *   count('DocumentSchemaId')
+     *
      * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
      *   count('abc123.MORTGAGE_TYPE')
      * </pre>
@@ -2910,11 +3366,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. Controls if the search document request requires the return of a total size
-     * of matched documents. See [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     * Controls if the search document request requires the return of a total size
+     * of matched documents. See
+     * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     *
      * Enabling this flag may adversely impact performance. Hint: If this is
      * used with pagination, set this flag on the initial query but set this
      * to false on subsequent page calls (keep the total count locally).
+     *
      * Defaults to false.
      * </pre>
      *
@@ -2930,11 +3389,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. Controls if the search document request requires the return of a total size
-     * of matched documents. See [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     * Controls if the search document request requires the return of a total size
+     * of matched documents. See
+     * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     *
      * Enabling this flag may adversely impact performance. Hint: If this is
      * used with pagination, set this flag on the initial query but set this
      * to false on subsequent page calls (keep the total count locally).
+     *
      * Defaults to false.
      * </pre>
      *
@@ -2954,11 +3416,14 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. Controls if the search document request requires the return of a total size
-     * of matched documents. See [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     * Controls if the search document request requires the return of a total size
+     * of matched documents. See
+     * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     *
      * Enabling this flag may adversely impact performance. Hint: If this is
      * used with pagination, set this flag on the initial query but set this
      * to false on subsequent page calls (keep the total count locally).
+     *
      * Defaults to false.
      * </pre>
      *
@@ -2969,6 +3434,121 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
     public Builder clearRequireTotalSize() {
       bitField0_ = (bitField0_ & ~0x00000100);
       requireTotalSize_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int totalResultSize_ = 0;
+    /**
+     *
+     *
+     * <pre>
+     * Controls if the search document request requires the return of a total size
+     * of matched documents. See
+     * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize total_result_size = 12;
+     * </code>
+     *
+     * @return The enum numeric value on the wire for totalResultSize.
+     */
+    @java.lang.Override
+    public int getTotalResultSizeValue() {
+      return totalResultSize_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Controls if the search document request requires the return of a total size
+     * of matched documents. See
+     * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize total_result_size = 12;
+     * </code>
+     *
+     * @param value The enum numeric value on the wire for totalResultSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalResultSizeValue(int value) {
+      totalResultSize_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Controls if the search document request requires the return of a total size
+     * of matched documents. See
+     * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize total_result_size = 12;
+     * </code>
+     *
+     * @return The totalResultSize.
+     */
+    @java.lang.Override
+    public com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize
+        getTotalResultSize() {
+      com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize result =
+          com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize.forNumber(
+              totalResultSize_);
+      return result == null
+          ? com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize.UNRECOGNIZED
+          : result;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Controls if the search document request requires the return of a total size
+     * of matched documents. See
+     * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize total_result_size = 12;
+     * </code>
+     *
+     * @param value The totalResultSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalResultSize(
+        com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000200;
+      totalResultSize_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Controls if the search document request requires the return of a total size
+     * of matched documents. See
+     * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+     * </pre>
+     *
+     * <code>
+     * .google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize total_result_size = 12;
+     * </code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalResultSize() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      totalResultSize_ = 0;
       onChanged();
       return this;
     }
@@ -3010,7 +3590,7 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
     public Builder setQaSizeLimit(int value) {
 
       qaSizeLimit_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3029,7 +3609,7 @@ public final class SearchDocumentsRequest extends com.google.protobuf.GeneratedM
      * @return This builder for chaining.
      */
     public Builder clearQaSizeLimit() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       qaSizeLimit_ = 0;
       onChanged();
       return this;

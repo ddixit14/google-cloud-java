@@ -49,11 +49,6 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
     return new TransitionCoverage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dialogflow.cx.v3.TestCaseProto
         .internal_static_google_cloud_dialogflow_cx_v3_TransitionCoverage_descriptor;
@@ -150,8 +145,7 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
      */
     com.google.cloud.dialogflow.cx.v3.FlowOrBuilder getFlowOrBuilder();
 
-    public com.google.cloud.dialogflow.cx.v3.TransitionCoverage.TransitionNode.KindCase
-        getKindCase();
+    com.google.cloud.dialogflow.cx.v3.TransitionCoverage.TransitionNode.KindCase getKindCase();
   }
   /**
    *
@@ -180,11 +174,6 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
       return new TransitionNode();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.dialogflow.cx.v3.TestCaseProto
           .internal_static_google_cloud_dialogflow_cx_v3_TransitionCoverage_TransitionNode_descriptor;
@@ -201,6 +190,8 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
     }
 
     private int kindCase_ = 0;
+
+    @SuppressWarnings("serial")
     private java.lang.Object kind_;
 
     public enum KindCase
@@ -1383,7 +1374,7 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Whether or not the transition is covered by at least one of the
+     * Whether the transition is covered by at least one of the
      * agent's test cases.
      * </pre>
      *
@@ -1463,8 +1454,7 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
      */
     com.google.cloud.dialogflow.cx.v3.EventHandlerOrBuilder getEventHandlerOrBuilder();
 
-    public com.google.cloud.dialogflow.cx.v3.TransitionCoverage.Transition.DetailCase
-        getDetailCase();
+    com.google.cloud.dialogflow.cx.v3.TransitionCoverage.Transition.DetailCase getDetailCase();
   }
   /**
    *
@@ -1493,11 +1483,6 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
       return new Transition();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.dialogflow.cx.v3.TestCaseProto
           .internal_static_google_cloud_dialogflow_cx_v3_TransitionCoverage_Transition_descriptor;
@@ -1514,6 +1499,8 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
     }
 
     private int detailCase_ = 0;
+
+    @SuppressWarnings("serial")
     private java.lang.Object detail_;
 
     public enum DetailCase
@@ -1686,7 +1673,7 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Whether or not the transition is covered by at least one of the
+     * Whether the transition is covered by at least one of the
      * agent's test cases.
      * </pre>
      *
@@ -2784,7 +2771,7 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
        *
        *
        * <pre>
-       * Whether or not the transition is covered by at least one of the
+       * Whether the transition is covered by at least one of the
        * agent's test cases.
        * </pre>
        *
@@ -2800,7 +2787,7 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
        *
        *
        * <pre>
-       * Whether or not the transition is covered by at least one of the
+       * Whether the transition is covered by at least one of the
        * agent's test cases.
        * </pre>
        *
@@ -2820,7 +2807,7 @@ public final class TransitionCoverage extends com.google.protobuf.GeneratedMessa
        *
        *
        * <pre>
-       * Whether or not the transition is covered by at least one of the
+       * Whether the transition is covered by at least one of the
        * agent's test cases.
        * </pre>
        *

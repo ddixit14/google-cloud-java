@@ -125,6 +125,11 @@ public class ScheduleServiceSettings extends ClientSettings<ScheduleServiceSetti
     return ((ScheduleServiceStubSettings) getStubSettings()).resumeScheduleSettings();
   }
 
+  /** Returns the object with the settings used for calls to updateSchedule. */
+  public UnaryCallSettings<UpdateScheduleRequest, Schedule> updateScheduleSettings() {
+    return ((ScheduleServiceStubSettings) getStubSettings()).updateScheduleSettings();
+  }
+
   /** Returns the object with the settings used for calls to listLocations. */
   public PagedCallSettings<ListLocationsRequest, ListLocationsResponse, ListLocationsPagedResponse>
       listLocationsSettings() {
@@ -285,6 +290,11 @@ public class ScheduleServiceSettings extends ClientSettings<ScheduleServiceSetti
     /** Returns the builder for the settings used for calls to resumeSchedule. */
     public UnaryCallSettings.Builder<ResumeScheduleRequest, Empty> resumeScheduleSettings() {
       return getStubSettingsBuilder().resumeScheduleSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to updateSchedule. */
+    public UnaryCallSettings.Builder<UpdateScheduleRequest, Schedule> updateScheduleSettings() {
+      return getStubSettingsBuilder().updateScheduleSettings();
     }
 
     /** Returns the builder for the settings used for calls to listLocations. */

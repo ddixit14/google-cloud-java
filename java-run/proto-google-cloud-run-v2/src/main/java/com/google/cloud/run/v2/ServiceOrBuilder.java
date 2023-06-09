@@ -30,6 +30,7 @@ public interface ServiceOrBuilder
    * The fully qualified name of this Service. In CreateServiceRequest, this
    * field is ignored, and instead composed from CreateServiceRequest.parent and
    * CreateServiceRequest.service_id.
+   *
    * Format:
    * projects/{project}/locations/{location}/services/{service_id}
    * </pre>
@@ -46,6 +47,7 @@ public interface ServiceOrBuilder
    * The fully qualified name of this Service. In CreateServiceRequest, this
    * field is ignored, and instead composed from CreateServiceRequest.parent and
    * CreateServiceRequest.service_id.
+   *
    * Format:
    * projects/{project}/locations/{location}/services/{service_id}
    * </pre>
@@ -132,13 +134,14 @@ public interface ServiceOrBuilder
    *
    *
    * <pre>
-   * Map of string keys and values that can be used to organize and categorize
+   * Unstructured key value map that can be used to organize and categorize
    * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with  `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -152,13 +155,14 @@ public interface ServiceOrBuilder
    *
    *
    * <pre>
-   * Map of string keys and values that can be used to organize and categorize
+   * Unstructured key value map that can be used to organize and categorize
    * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with  `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -175,13 +179,14 @@ public interface ServiceOrBuilder
    *
    *
    * <pre>
-   * Map of string keys and values that can be used to organize and categorize
+   * Unstructured key value map that can be used to organize and categorize
    * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with  `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -195,13 +200,14 @@ public interface ServiceOrBuilder
    *
    *
    * <pre>
-   * Map of string keys and values that can be used to organize and categorize
+   * Unstructured key value map that can be used to organize and categorize
    * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with  `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -219,13 +225,14 @@ public interface ServiceOrBuilder
    *
    *
    * <pre>
-   * Map of string keys and values that can be used to organize and categorize
+   * Unstructured key value map that can be used to organize and categorize
    * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with  `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -243,13 +250,14 @@ public interface ServiceOrBuilder
    * Unstructured key value map that may be set by external tools to store and
    * arbitrary metadata. They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Service.
+   * namespaces, and they will be rejected in new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Service.
+   *
    * &lt;p&gt;This field follows Kubernetes
-   * annotations' namespacing, limits, and rules. More info:
-   * https://kubernetes.io/docs/user-guide/annotations
+   * annotations' namespacing, limits, and rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 6;</code>
@@ -262,13 +270,14 @@ public interface ServiceOrBuilder
    * Unstructured key value map that may be set by external tools to store and
    * arbitrary metadata. They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Service.
+   * namespaces, and they will be rejected in new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Service.
+   *
    * &lt;p&gt;This field follows Kubernetes
-   * annotations' namespacing, limits, and rules. More info:
-   * https://kubernetes.io/docs/user-guide/annotations
+   * annotations' namespacing, limits, and rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 6;</code>
@@ -284,13 +293,14 @@ public interface ServiceOrBuilder
    * Unstructured key value map that may be set by external tools to store and
    * arbitrary metadata. They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Service.
+   * namespaces, and they will be rejected in new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Service.
+   *
    * &lt;p&gt;This field follows Kubernetes
-   * annotations' namespacing, limits, and rules. More info:
-   * https://kubernetes.io/docs/user-guide/annotations
+   * annotations' namespacing, limits, and rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 6;</code>
@@ -303,13 +313,14 @@ public interface ServiceOrBuilder
    * Unstructured key value map that may be set by external tools to store and
    * arbitrary metadata. They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Service.
+   * namespaces, and they will be rejected in new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Service.
+   *
    * &lt;p&gt;This field follows Kubernetes
-   * annotations' namespacing, limits, and rules. More info:
-   * https://kubernetes.io/docs/user-guide/annotations
+   * annotations' namespacing, limits, and rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 6;</code>
@@ -326,13 +337,14 @@ public interface ServiceOrBuilder
    * Unstructured key value map that may be set by external tools to store and
    * arbitrary metadata. They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Service.
+   * namespaces, and they will be rejected in new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Service.
+   *
    * &lt;p&gt;This field follows Kubernetes
-   * annotations' namespacing, limits, and rules. More info:
-   * https://kubernetes.io/docs/user-guide/annotations
+   * annotations' namespacing, limits, and rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 6;</code>
@@ -631,6 +643,12 @@ public interface ServiceOrBuilder
    * Launch Stages](https://cloud.google.com/terms/launch-stages).
    * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
    * is assumed.
+   * Set the launch stage to a preview stage on input to allow use of preview
+   * features in that stage. On read (or output), describes whether the resource
+   * uses preview features.
+   * &lt;p&gt;
+   * For example, if ALPHA is provided as input, but only BETA and GA-level
+   * features are used, this field will be BETA on output.
    * </pre>
    *
    * <code>.google.api.LaunchStage launch_stage = 16;</code>
@@ -646,6 +664,12 @@ public interface ServiceOrBuilder
    * Launch Stages](https://cloud.google.com/terms/launch-stages).
    * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
    * is assumed.
+   * Set the launch stage to a preview stage on input to allow use of preview
+   * features in that stage. On read (or output), describes whether the resource
+   * uses preview features.
+   * &lt;p&gt;
+   * For example, if ALPHA is provided as input, but only BETA and GA-level
+   * features are used, this field will be BETA on output.
    * </pre>
    *
    * <code>.google.api.LaunchStage launch_stage = 16;</code>
@@ -1102,8 +1126,22 @@ public interface ServiceOrBuilder
    *
    *
    * <pre>
+   * Output only. Reserved for future use.
+   * </pre>
+   *
+   * <code>bool satisfies_pzs = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
+   * @return The satisfiesPzs.
+   */
+  boolean getSatisfiesPzs();
+
+  /**
+   *
+   *
+   * <pre>
    * Output only. Returns true if the Service is currently being acted upon by
    * the system to bring it into the desired state.
+   *
    * When a new Service is created, or an existing one is updated, Cloud Run
    * will asynchronously perform all necessary steps to bring the Service to the
    * desired serving state. This process is called reconciliation.
@@ -1114,9 +1152,11 @@ public interface ServiceOrBuilder
    * succeeded and the serving state matches the Service, or there was an error,
    * and reconciliation failed. This state can be found in
    * `terminal_condition.state`.
+   *
    * If reconciliation succeeded, the following fields will match: `traffic` and
    * `traffic_statuses`, `observed_generation` and `generation`,
    * `latest_ready_revision` and `latest_created_revision`.
+   *
    * If reconciliation failed, `traffic_statuses`, `observed_generation`, and
    * `latest_ready_revision` will have the state of the last serving revision,
    * or empty for newly created Services. Additional information on the failure

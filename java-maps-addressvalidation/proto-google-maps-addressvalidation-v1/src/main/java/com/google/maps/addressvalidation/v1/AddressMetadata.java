@@ -22,7 +22,8 @@ package com.google.maps.addressvalidation.v1;
  *
  *
  * <pre>
- * The metadata for the address.
+ * The metadata for the address. `metadata` is not guaranteed to be fully
+ * populated for every address sent to the Address Validation API.
  * </pre>
  *
  * Protobuf type {@code google.maps.addressvalidation.v1.AddressMetadata}
@@ -43,11 +44,6 @@ public final class AddressMetadata extends com.google.protobuf.GeneratedMessageV
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new AddressMetadata();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -367,7 +363,8 @@ public final class AddressMetadata extends com.google.protobuf.GeneratedMessageV
    *
    *
    * <pre>
-   * The metadata for the address.
+   * The metadata for the address. `metadata` is not guaranteed to be fully
+   * populated for every address sent to the Address Validation API.
    * </pre>
    *
    * Protobuf type {@code google.maps.addressvalidation.v1.AddressMetadata}

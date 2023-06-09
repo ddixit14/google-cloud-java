@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -86,6 +86,18 @@ public class ContactCenterInsightsSettings extends ClientSettings<ContactCenterI
   /** Returns the object with the settings used for calls to createConversation. */
   public UnaryCallSettings<CreateConversationRequest, Conversation> createConversationSettings() {
     return ((ContactCenterInsightsStubSettings) getStubSettings()).createConversationSettings();
+  }
+
+  /** Returns the object with the settings used for calls to uploadConversation. */
+  public UnaryCallSettings<UploadConversationRequest, Operation> uploadConversationSettings() {
+    return ((ContactCenterInsightsStubSettings) getStubSettings()).uploadConversationSettings();
+  }
+
+  /** Returns the object with the settings used for calls to uploadConversation. */
+  public OperationCallSettings<UploadConversationRequest, Conversation, UploadConversationMetadata>
+      uploadConversationOperationSettings() {
+    return ((ContactCenterInsightsStubSettings) getStubSettings())
+        .uploadConversationOperationSettings();
   }
 
   /** Returns the object with the settings used for calls to updateConversation. */
@@ -464,6 +476,19 @@ public class ContactCenterInsightsSettings extends ClientSettings<ContactCenterI
     public UnaryCallSettings.Builder<CreateConversationRequest, Conversation>
         createConversationSettings() {
       return getStubSettingsBuilder().createConversationSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to uploadConversation. */
+    public UnaryCallSettings.Builder<UploadConversationRequest, Operation>
+        uploadConversationSettings() {
+      return getStubSettingsBuilder().uploadConversationSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to uploadConversation. */
+    public OperationCallSettings.Builder<
+            UploadConversationRequest, Conversation, UploadConversationMetadata>
+        uploadConversationOperationSettings() {
+      return getStubSettingsBuilder().uploadConversationOperationSettings();
     }
 
     /** Returns the builder for the settings used for calls to updateConversation. */

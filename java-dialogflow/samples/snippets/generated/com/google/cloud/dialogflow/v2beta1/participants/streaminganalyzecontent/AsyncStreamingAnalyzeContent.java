@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,6 +54,7 @@ public class AsyncStreamingAnalyzeContent {
               .setCxParameters(Struct.newBuilder().build())
               .setCxCurrentPage("cxCurrentPage1596907507")
               .setEnablePartialAutomatedAgentReply(true)
+              .setEnableDebuggingInfo(true)
               .build();
       bidiStream.send(request);
       for (StreamingAnalyzeContentResponse response : bidiStream) {

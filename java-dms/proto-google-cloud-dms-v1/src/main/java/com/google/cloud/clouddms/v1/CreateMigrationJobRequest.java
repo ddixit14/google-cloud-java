@@ -50,11 +50,6 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
     return new CreateMigrationJobRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.clouddms.v1.ClouddmsProto
         .internal_static_google_cloud_clouddms_v1_CreateMigrationJobRequest_descriptor;
@@ -78,7 +73,7 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
    *
    *
    * <pre>
-   * Required. The parent, which owns this collection of migration jobs.
+   * Required. The parent which owns this collection of migration jobs.
    * </pre>
    *
    * <code>
@@ -103,7 +98,7 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
    *
    *
    * <pre>
-   * Required. The parent, which owns this collection of migration jobs.
+   * Required. The parent which owns this collection of migration jobs.
    * </pre>
    *
    * <code>
@@ -246,10 +241,12 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
    *
    *
    * <pre>
-   * A unique id used to identify the request. If the server receives two
-   * requests with the same id, then the second request will be ignored.
+   * A unique ID used to identify the request. If the server receives two
+   * requests with the same ID, then the second request is ignored.
+   *
    * It is recommended to always set this value to a UUID.
-   * The id must contain only letters (a-z, A-Z), numbers (0-9), underscores
+   *
+   * The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
    * (_), and hyphens (-). The maximum length is 40 characters.
    * </pre>
    *
@@ -273,10 +270,12 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
    *
    *
    * <pre>
-   * A unique id used to identify the request. If the server receives two
-   * requests with the same id, then the second request will be ignored.
+   * A unique ID used to identify the request. If the server receives two
+   * requests with the same ID, then the second request is ignored.
+   *
    * It is recommended to always set this value to a UUID.
-   * The id must contain only letters (a-z, A-Z), numbers (0-9), underscores
+   *
+   * The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
    * (_), and hyphens (-). The maximum length is 40 characters.
    * </pre>
    *
@@ -726,7 +725,7 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The parent, which owns this collection of migration jobs.
+     * Required. The parent which owns this collection of migration jobs.
      * </pre>
      *
      * <code>
@@ -750,7 +749,7 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The parent, which owns this collection of migration jobs.
+     * Required. The parent which owns this collection of migration jobs.
      * </pre>
      *
      * <code>
@@ -774,7 +773,7 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The parent, which owns this collection of migration jobs.
+     * Required. The parent which owns this collection of migration jobs.
      * </pre>
      *
      * <code>
@@ -797,7 +796,7 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The parent, which owns this collection of migration jobs.
+     * Required. The parent which owns this collection of migration jobs.
      * </pre>
      *
      * <code>
@@ -816,7 +815,7 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. The parent, which owns this collection of migration jobs.
+     * Required. The parent which owns this collection of migration jobs.
      * </pre>
      *
      * <code>
@@ -1168,10 +1167,12 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * A unique id used to identify the request. If the server receives two
-     * requests with the same id, then the second request will be ignored.
+     * A unique ID used to identify the request. If the server receives two
+     * requests with the same ID, then the second request is ignored.
+     *
      * It is recommended to always set this value to a UUID.
-     * The id must contain only letters (a-z, A-Z), numbers (0-9), underscores
+     *
+     * The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
      * (_), and hyphens (-). The maximum length is 40 characters.
      * </pre>
      *
@@ -1194,10 +1195,12 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * A unique id used to identify the request. If the server receives two
-     * requests with the same id, then the second request will be ignored.
+     * A unique ID used to identify the request. If the server receives two
+     * requests with the same ID, then the second request is ignored.
+     *
      * It is recommended to always set this value to a UUID.
-     * The id must contain only letters (a-z, A-Z), numbers (0-9), underscores
+     *
+     * The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
      * (_), and hyphens (-). The maximum length is 40 characters.
      * </pre>
      *
@@ -1220,10 +1223,12 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * A unique id used to identify the request. If the server receives two
-     * requests with the same id, then the second request will be ignored.
+     * A unique ID used to identify the request. If the server receives two
+     * requests with the same ID, then the second request is ignored.
+     *
      * It is recommended to always set this value to a UUID.
-     * The id must contain only letters (a-z, A-Z), numbers (0-9), underscores
+     *
+     * The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
      * (_), and hyphens (-). The maximum length is 40 characters.
      * </pre>
      *
@@ -1245,10 +1250,12 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * A unique id used to identify the request. If the server receives two
-     * requests with the same id, then the second request will be ignored.
+     * A unique ID used to identify the request. If the server receives two
+     * requests with the same ID, then the second request is ignored.
+     *
      * It is recommended to always set this value to a UUID.
-     * The id must contain only letters (a-z, A-Z), numbers (0-9), underscores
+     *
+     * The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
      * (_), and hyphens (-). The maximum length is 40 characters.
      * </pre>
      *
@@ -1266,10 +1273,12 @@ public final class CreateMigrationJobRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * A unique id used to identify the request. If the server receives two
-     * requests with the same id, then the second request will be ignored.
+     * A unique ID used to identify the request. If the server receives two
+     * requests with the same ID, then the second request is ignored.
+     *
      * It is recommended to always set this value to a UUID.
-     * The id must contain only letters (a-z, A-Z), numbers (0-9), underscores
+     *
+     * The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
      * (_), and hyphens (-). The maximum length is 40 characters.
      * </pre>
      *

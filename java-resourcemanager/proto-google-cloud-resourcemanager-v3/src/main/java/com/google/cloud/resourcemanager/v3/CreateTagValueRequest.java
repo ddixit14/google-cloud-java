@@ -45,11 +45,6 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
     return new CreateTagValueRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.TagValuesProto
         .internal_static_google_cloud_resourcemanager_v3_CreateTagValueRequest_descriptor;
@@ -71,8 +66,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Required. The TagValue to be created. Only fields `short_name`, `description`,
-   * and `parent` are considered during the creation request.
+   * Required. The TagValue to be created. Only fields `short_name`,
+   * `description`, and `parent` are considered during the creation request.
    * </pre>
    *
    * <code>
@@ -89,8 +84,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Required. The TagValue to be created. Only fields `short_name`, `description`,
-   * and `parent` are considered during the creation request.
+   * Required. The TagValue to be created. Only fields `short_name`,
+   * `description`, and `parent` are considered during the creation request.
    * </pre>
    *
    * <code>
@@ -109,8 +104,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Required. The TagValue to be created. Only fields `short_name`, `description`,
-   * and `parent` are considered during the creation request.
+   * Required. The TagValue to be created. Only fields `short_name`,
+   * `description`, and `parent` are considered during the creation request.
    * </pre>
    *
    * <code>
@@ -130,8 +125,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Optional. Set as true to perform the validations necessary for creating the resource,
-   * but not actually perform the action.
+   * Optional. Set as true to perform the validations necessary for creating the
+   * resource, but not actually perform the action.
    * </pre>
    *
    * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -525,8 +520,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The TagValue to be created. Only fields `short_name`, `description`,
-     * and `parent` are considered during the creation request.
+     * Required. The TagValue to be created. Only fields `short_name`,
+     * `description`, and `parent` are considered during the creation request.
      * </pre>
      *
      * <code>
@@ -542,8 +537,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The TagValue to be created. Only fields `short_name`, `description`,
-     * and `parent` are considered during the creation request.
+     * Required. The TagValue to be created. Only fields `short_name`,
+     * `description`, and `parent` are considered during the creation request.
      * </pre>
      *
      * <code>
@@ -565,8 +560,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The TagValue to be created. Only fields `short_name`, `description`,
-     * and `parent` are considered during the creation request.
+     * Required. The TagValue to be created. Only fields `short_name`,
+     * `description`, and `parent` are considered during the creation request.
      * </pre>
      *
      * <code>
@@ -590,8 +585,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The TagValue to be created. Only fields `short_name`, `description`,
-     * and `parent` are considered during the creation request.
+     * Required. The TagValue to be created. Only fields `short_name`,
+     * `description`, and `parent` are considered during the creation request.
      * </pre>
      *
      * <code>
@@ -613,8 +608,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The TagValue to be created. Only fields `short_name`, `description`,
-     * and `parent` are considered during the creation request.
+     * Required. The TagValue to be created. Only fields `short_name`,
+     * `description`, and `parent` are considered during the creation request.
      * </pre>
      *
      * <code>
@@ -641,8 +636,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The TagValue to be created. Only fields `short_name`, `description`,
-     * and `parent` are considered during the creation request.
+     * Required. The TagValue to be created. Only fields `short_name`,
+     * `description`, and `parent` are considered during the creation request.
      * </pre>
      *
      * <code>
@@ -663,8 +658,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The TagValue to be created. Only fields `short_name`, `description`,
-     * and `parent` are considered during the creation request.
+     * Required. The TagValue to be created. Only fields `short_name`,
+     * `description`, and `parent` are considered during the creation request.
      * </pre>
      *
      * <code>
@@ -680,8 +675,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The TagValue to be created. Only fields `short_name`, `description`,
-     * and `parent` are considered during the creation request.
+     * Required. The TagValue to be created. Only fields `short_name`,
+     * `description`, and `parent` are considered during the creation request.
      * </pre>
      *
      * <code>
@@ -701,8 +696,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Required. The TagValue to be created. Only fields `short_name`, `description`,
-     * and `parent` are considered during the creation request.
+     * Required. The TagValue to be created. Only fields `short_name`,
+     * `description`, and `parent` are considered during the creation request.
      * </pre>
      *
      * <code>
@@ -731,8 +726,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. Set as true to perform the validations necessary for creating the resource,
-     * but not actually perform the action.
+     * Optional. Set as true to perform the validations necessary for creating the
+     * resource, but not actually perform the action.
      * </pre>
      *
      * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -747,8 +742,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. Set as true to perform the validations necessary for creating the resource,
-     * but not actually perform the action.
+     * Optional. Set as true to perform the validations necessary for creating the
+     * resource, but not actually perform the action.
      * </pre>
      *
      * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -767,8 +762,8 @@ public final class CreateTagValueRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Optional. Set as true to perform the validations necessary for creating the resource,
-     * but not actually perform the action.
+     * Optional. Set as true to perform the validations necessary for creating the
+     * resource, but not actually perform the action.
      * </pre>
      *
      * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -199,6 +199,7 @@ public class SessionsClientTest {
             .setWebhookStatus(Status.newBuilder().build())
             .setOutputAudio(ByteString.EMPTY)
             .setOutputAudioConfig(OutputAudioConfig.newBuilder().build())
+            .setDebuggingInfo(CloudConversationDebuggingInfo.newBuilder().build())
             .build();
     mockSessions.addResponse(expectedResponse);
     StreamingDetectIntentRequest request =
@@ -210,6 +211,7 @@ public class SessionsClientTest {
             .setOutputAudioConfig(OutputAudioConfig.newBuilder().build())
             .setOutputAudioConfigMask(FieldMask.newBuilder().build())
             .setInputAudio(ByteString.EMPTY)
+            .setEnableDebuggingInfo(true)
             .build();
 
     MockStreamObserver<StreamingDetectIntentResponse> responseObserver = new MockStreamObserver<>();
@@ -240,6 +242,7 @@ public class SessionsClientTest {
             .setOutputAudioConfig(OutputAudioConfig.newBuilder().build())
             .setOutputAudioConfigMask(FieldMask.newBuilder().build())
             .setInputAudio(ByteString.EMPTY)
+            .setEnableDebuggingInfo(true)
             .build();
 
     MockStreamObserver<StreamingDetectIntentResponse> responseObserver = new MockStreamObserver<>();

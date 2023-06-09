@@ -28,7 +28,9 @@ public interface AudioStreamOrBuilder
    *
    * <pre>
    * The codec for this audio stream. The default is `aac`.
+   *
    * Supported audio codecs:
+   *
    * - `aac`
    * - `aac-he`
    * - `aac-he-v2`
@@ -47,7 +49,9 @@ public interface AudioStreamOrBuilder
    *
    * <pre>
    * The codec for this audio stream. The default is `aac`.
+   *
    * Supported audio codecs:
+   *
    * - `aac`
    * - `aac-he`
    * - `aac-he-v2`
@@ -96,7 +100,9 @@ public interface AudioStreamOrBuilder
    * A list of channel names specifying layout of the audio channels.
    * This only affects the metadata embedded in the container headers, if
    * supported by the specified format. The default is `["fl", "fr"]`.
+   *
    * Supported channel names:
+   *
    * - `fl` - Front left channel
    * - `fr` - Front right channel
    * - `sl` - Side left channel
@@ -117,7 +123,9 @@ public interface AudioStreamOrBuilder
    * A list of channel names specifying layout of the audio channels.
    * This only affects the metadata embedded in the container headers, if
    * supported by the specified format. The default is `["fl", "fr"]`.
+   *
    * Supported channel names:
+   *
    * - `fl` - Front left channel
    * - `fr` - Front right channel
    * - `sl` - Side left channel
@@ -138,7 +146,9 @@ public interface AudioStreamOrBuilder
    * A list of channel names specifying layout of the audio channels.
    * This only affects the metadata embedded in the container headers, if
    * supported by the specified format. The default is `["fl", "fr"]`.
+   *
    * Supported channel names:
+   *
    * - `fl` - Front left channel
    * - `fr` - Front right channel
    * - `sl` - Side left channel
@@ -160,7 +170,9 @@ public interface AudioStreamOrBuilder
    * A list of channel names specifying layout of the audio channels.
    * This only affects the metadata embedded in the container headers, if
    * supported by the specified format. The default is `["fl", "fr"]`.
+   *
    * Supported channel names:
+   *
    * - `fl` - Front left channel
    * - `fr` - Front right channel
    * - `sl` - Side left channel
@@ -248,7 +260,8 @@ public interface AudioStreamOrBuilder
    * <pre>
    * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more
    * information, see
-   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier. Not
+   * supported in MP4 files.
    * </pre>
    *
    * <code>string language_code = 7;</code>
@@ -262,7 +275,8 @@ public interface AudioStreamOrBuilder
    * <pre>
    * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more
    * information, see
-   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier. Not
+   * supported in MP4 files.
    * </pre>
    *
    * <code>string language_code = 7;</code>
@@ -276,7 +290,7 @@ public interface AudioStreamOrBuilder
    *
    * <pre>
    * The name for this particular audio stream that
-   * will be added to the HLS/DASH manifest.
+   * will be added to the HLS/DASH manifest. Not supported in MP4 files.
    * </pre>
    *
    * <code>string display_name = 8;</code>
@@ -289,7 +303,7 @@ public interface AudioStreamOrBuilder
    *
    * <pre>
    * The name for this particular audio stream that
-   * will be added to the HLS/DASH manifest.
+   * will be added to the HLS/DASH manifest. Not supported in MP4 files.
    * </pre>
    *
    * <code>string display_name = 8;</code>

@@ -45,11 +45,6 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
     return new CreateFolderRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.FoldersProto
         .internal_static_google_cloud_resourcemanager_v3_CreateFolderRequest_descriptor;
@@ -71,8 +66,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The folder being created, only the display name and parent will be
-   * consulted. All other fields will be ignored.
+   * Required. The folder being created, only the display name and parent will
+   * be consulted. All other fields will be ignored.
    * </pre>
    *
    * <code>
@@ -89,8 +84,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The folder being created, only the display name and parent will be
-   * consulted. All other fields will be ignored.
+   * Required. The folder being created, only the display name and parent will
+   * be consulted. All other fields will be ignored.
    * </pre>
    *
    * <code>
@@ -109,8 +104,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The folder being created, only the display name and parent will be
-   * consulted. All other fields will be ignored.
+   * Required. The folder being created, only the display name and parent will
+   * be consulted. All other fields will be ignored.
    * </pre>
    *
    * <code>
@@ -484,8 +479,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The folder being created, only the display name and parent will be
-     * consulted. All other fields will be ignored.
+     * Required. The folder being created, only the display name and parent will
+     * be consulted. All other fields will be ignored.
      * </pre>
      *
      * <code>
@@ -501,8 +496,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The folder being created, only the display name and parent will be
-     * consulted. All other fields will be ignored.
+     * Required. The folder being created, only the display name and parent will
+     * be consulted. All other fields will be ignored.
      * </pre>
      *
      * <code>
@@ -524,8 +519,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The folder being created, only the display name and parent will be
-     * consulted. All other fields will be ignored.
+     * Required. The folder being created, only the display name and parent will
+     * be consulted. All other fields will be ignored.
      * </pre>
      *
      * <code>
@@ -549,8 +544,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The folder being created, only the display name and parent will be
-     * consulted. All other fields will be ignored.
+     * Required. The folder being created, only the display name and parent will
+     * be consulted. All other fields will be ignored.
      * </pre>
      *
      * <code>
@@ -571,8 +566,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The folder being created, only the display name and parent will be
-     * consulted. All other fields will be ignored.
+     * Required. The folder being created, only the display name and parent will
+     * be consulted. All other fields will be ignored.
      * </pre>
      *
      * <code>
@@ -599,8 +594,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The folder being created, only the display name and parent will be
-     * consulted. All other fields will be ignored.
+     * Required. The folder being created, only the display name and parent will
+     * be consulted. All other fields will be ignored.
      * </pre>
      *
      * <code>
@@ -621,8 +616,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The folder being created, only the display name and parent will be
-     * consulted. All other fields will be ignored.
+     * Required. The folder being created, only the display name and parent will
+     * be consulted. All other fields will be ignored.
      * </pre>
      *
      * <code>
@@ -638,8 +633,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The folder being created, only the display name and parent will be
-     * consulted. All other fields will be ignored.
+     * Required. The folder being created, only the display name and parent will
+     * be consulted. All other fields will be ignored.
      * </pre>
      *
      * <code>
@@ -659,8 +654,8 @@ public final class CreateFolderRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The folder being created, only the display name and parent will be
-     * consulted. All other fields will be ignored.
+     * Required. The folder being created, only the display name and parent will
+     * be consulted. All other fields will be ignored.
      * </pre>
      *
      * <code>

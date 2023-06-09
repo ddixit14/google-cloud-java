@@ -27,10 +27,14 @@ public interface TaskOrBuilder
    *
    *
    * <pre>
-   * Optionally caller-specified in [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask].
+   * Optionally caller-specified in
+   * [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask].
+   *
    * The task name.
+   *
    * The task name must have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+   *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),
    *    hyphens (-), colons (:), or periods (.).
    *    For more information, see
@@ -55,10 +59,14 @@ public interface TaskOrBuilder
    *
    *
    * <pre>
-   * Optionally caller-specified in [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask].
+   * Optionally caller-specified in
+   * [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask].
+   *
    * The task name.
+   *
    * The task name must have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+   *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),
    *    hyphens (-), colons (:), or periods (.).
    *    For more information, see
@@ -85,7 +93,9 @@ public interface TaskOrBuilder
    *
    * <pre>
    * HTTP request that is sent to the App Engine app handler.
-   * An App Engine task is a task that has [AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest] set.
+   *
+   * An App Engine task is a task that has
+   * [AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest] set.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.AppEngineHttpRequest app_engine_http_request = 2;</code>
@@ -98,7 +108,9 @@ public interface TaskOrBuilder
    *
    * <pre>
    * HTTP request that is sent to the App Engine app handler.
-   * An App Engine task is a task that has [AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest] set.
+   *
+   * An App Engine task is a task that has
+   * [AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest] set.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.AppEngineHttpRequest app_engine_http_request = 2;</code>
@@ -111,7 +123,9 @@ public interface TaskOrBuilder
    *
    * <pre>
    * HTTP request that is sent to the App Engine app handler.
-   * An App Engine task is a task that has [AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest] set.
+   *
+   * An App Engine task is a task that has
+   * [AppEngineHttpRequest][google.cloud.tasks.v2.AppEngineHttpRequest] set.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.AppEngineHttpRequest app_engine_http_request = 2;</code>
@@ -123,7 +137,9 @@ public interface TaskOrBuilder
    *
    * <pre>
    * HTTP request that is sent to the worker.
-   * An HTTP task is a task that has [HttpRequest][google.cloud.tasks.v2.HttpRequest] set.
+   *
+   * An HTTP task is a task that has
+   * [HttpRequest][google.cloud.tasks.v2.HttpRequest] set.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.HttpRequest http_request = 3;</code>
@@ -136,7 +152,9 @@ public interface TaskOrBuilder
    *
    * <pre>
    * HTTP request that is sent to the worker.
-   * An HTTP task is a task that has [HttpRequest][google.cloud.tasks.v2.HttpRequest] set.
+   *
+   * An HTTP task is a task that has
+   * [HttpRequest][google.cloud.tasks.v2.HttpRequest] set.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.HttpRequest http_request = 3;</code>
@@ -149,7 +167,9 @@ public interface TaskOrBuilder
    *
    * <pre>
    * HTTP request that is sent to the worker.
-   * An HTTP task is a task that has [HttpRequest][google.cloud.tasks.v2.HttpRequest] set.
+   *
+   * An HTTP task is a task that has
+   * [HttpRequest][google.cloud.tasks.v2.HttpRequest] set.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.HttpRequest http_request = 3;</code>
@@ -161,6 +181,7 @@ public interface TaskOrBuilder
    *
    * <pre>
    * The time when the task is scheduled to be attempted or retried.
+   *
    * `schedule_time` will be truncated to the nearest microsecond.
    * </pre>
    *
@@ -174,6 +195,7 @@ public interface TaskOrBuilder
    *
    * <pre>
    * The time when the task is scheduled to be attempted or retried.
+   *
    * `schedule_time` will be truncated to the nearest microsecond.
    * </pre>
    *
@@ -187,6 +209,7 @@ public interface TaskOrBuilder
    *
    * <pre>
    * The time when the task is scheduled to be attempted or retried.
+   *
    * `schedule_time` will be truncated to the nearest microsecond.
    * </pre>
    *
@@ -199,6 +222,7 @@ public interface TaskOrBuilder
    *
    * <pre>
    * Output only. The time that the task was created.
+   *
    * `create_time` will be truncated to the nearest second.
    * </pre>
    *
@@ -212,6 +236,7 @@ public interface TaskOrBuilder
    *
    * <pre>
    * Output only. The time that the task was created.
+   *
    * `create_time` will be truncated to the nearest second.
    * </pre>
    *
@@ -225,6 +250,7 @@ public interface TaskOrBuilder
    *
    * <pre>
    * Output only. The time that the task was created.
+   *
    * `create_time` will be truncated to the nearest second.
    * </pre>
    *
@@ -240,14 +266,20 @@ public interface TaskOrBuilder
    * respond by this deadline then the request is cancelled and the attempt
    * is marked as a `DEADLINE_EXCEEDED` failure. Cloud Tasks will retry the
    * task according to the [RetryConfig][google.cloud.tasks.v2.RetryConfig].
+   *
    * Note that when the request is cancelled, Cloud Tasks will stop listing for
    * the response, but whether the worker stops processing depends on the
    * worker. For example, if the worker is stuck, it may not react to cancelled
    * requests.
+   *
    * The default and maximum values depend on the type of request:
-   * * For [HTTP tasks][google.cloud.tasks.v2.HttpRequest], the default is 10 minutes. The deadline
+   *
+   * * For [HTTP tasks][google.cloud.tasks.v2.HttpRequest], the default is 10
+   * minutes. The deadline
    *   must be in the interval [15 seconds, 30 minutes].
-   * * For [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest], 0 indicates that the
+   *
+   * * For [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest], 0
+   * indicates that the
    *   request has the default deadline. The default deadline depends on the
    *   [scaling
    *   type](https://cloud.google.com/appengine/docs/standard/go/how-instances-are-managed#instance_scaling)
@@ -260,6 +292,7 @@ public interface TaskOrBuilder
    *   at most a few seconds more than the app handler's timeout. For more
    *   information see
    *   [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts).
+   *
    * `dispatch_deadline` will be truncated to the nearest millisecond. The
    * deadline is an approximate deadline.
    * </pre>
@@ -277,14 +310,20 @@ public interface TaskOrBuilder
    * respond by this deadline then the request is cancelled and the attempt
    * is marked as a `DEADLINE_EXCEEDED` failure. Cloud Tasks will retry the
    * task according to the [RetryConfig][google.cloud.tasks.v2.RetryConfig].
+   *
    * Note that when the request is cancelled, Cloud Tasks will stop listing for
    * the response, but whether the worker stops processing depends on the
    * worker. For example, if the worker is stuck, it may not react to cancelled
    * requests.
+   *
    * The default and maximum values depend on the type of request:
-   * * For [HTTP tasks][google.cloud.tasks.v2.HttpRequest], the default is 10 minutes. The deadline
+   *
+   * * For [HTTP tasks][google.cloud.tasks.v2.HttpRequest], the default is 10
+   * minutes. The deadline
    *   must be in the interval [15 seconds, 30 minutes].
-   * * For [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest], 0 indicates that the
+   *
+   * * For [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest], 0
+   * indicates that the
    *   request has the default deadline. The default deadline depends on the
    *   [scaling
    *   type](https://cloud.google.com/appengine/docs/standard/go/how-instances-are-managed#instance_scaling)
@@ -297,6 +336,7 @@ public interface TaskOrBuilder
    *   at most a few seconds more than the app handler's timeout. For more
    *   information see
    *   [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts).
+   *
    * `dispatch_deadline` will be truncated to the nearest millisecond. The
    * deadline is an approximate deadline.
    * </pre>
@@ -314,14 +354,20 @@ public interface TaskOrBuilder
    * respond by this deadline then the request is cancelled and the attempt
    * is marked as a `DEADLINE_EXCEEDED` failure. Cloud Tasks will retry the
    * task according to the [RetryConfig][google.cloud.tasks.v2.RetryConfig].
+   *
    * Note that when the request is cancelled, Cloud Tasks will stop listing for
    * the response, but whether the worker stops processing depends on the
    * worker. For example, if the worker is stuck, it may not react to cancelled
    * requests.
+   *
    * The default and maximum values depend on the type of request:
-   * * For [HTTP tasks][google.cloud.tasks.v2.HttpRequest], the default is 10 minutes. The deadline
+   *
+   * * For [HTTP tasks][google.cloud.tasks.v2.HttpRequest], the default is 10
+   * minutes. The deadline
    *   must be in the interval [15 seconds, 30 minutes].
-   * * For [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest], 0 indicates that the
+   *
+   * * For [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest], 0
+   * indicates that the
    *   request has the default deadline. The default deadline depends on the
    *   [scaling
    *   type](https://cloud.google.com/appengine/docs/standard/go/how-instances-are-managed#instance_scaling)
@@ -334,6 +380,7 @@ public interface TaskOrBuilder
    *   at most a few seconds more than the app handler's timeout. For more
    *   information see
    *   [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts).
+   *
    * `dispatch_deadline` will be truncated to the nearest millisecond. The
    * deadline is an approximate deadline.
    * </pre>
@@ -347,6 +394,7 @@ public interface TaskOrBuilder
    *
    * <pre>
    * Output only. The number of attempts dispatched.
+   *
    * This count includes attempts which have been dispatched but haven't
    * received a response.
    * </pre>
@@ -375,8 +423,10 @@ public interface TaskOrBuilder
    *
    * <pre>
    * Output only. The status of the task's first attempt.
-   * Only [dispatch_time][google.cloud.tasks.v2.Attempt.dispatch_time] will be set.
-   * The other [Attempt][google.cloud.tasks.v2.Attempt] information is not retained by Cloud Tasks.
+   *
+   * Only [dispatch_time][google.cloud.tasks.v2.Attempt.dispatch_time] will be
+   * set. The other [Attempt][google.cloud.tasks.v2.Attempt] information is not
+   * retained by Cloud Tasks.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.Attempt first_attempt = 9;</code>
@@ -389,8 +439,10 @@ public interface TaskOrBuilder
    *
    * <pre>
    * Output only. The status of the task's first attempt.
-   * Only [dispatch_time][google.cloud.tasks.v2.Attempt.dispatch_time] will be set.
-   * The other [Attempt][google.cloud.tasks.v2.Attempt] information is not retained by Cloud Tasks.
+   *
+   * Only [dispatch_time][google.cloud.tasks.v2.Attempt.dispatch_time] will be
+   * set. The other [Attempt][google.cloud.tasks.v2.Attempt] information is not
+   * retained by Cloud Tasks.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.Attempt first_attempt = 9;</code>
@@ -403,8 +455,10 @@ public interface TaskOrBuilder
    *
    * <pre>
    * Output only. The status of the task's first attempt.
-   * Only [dispatch_time][google.cloud.tasks.v2.Attempt.dispatch_time] will be set.
-   * The other [Attempt][google.cloud.tasks.v2.Attempt] information is not retained by Cloud Tasks.
+   *
+   * Only [dispatch_time][google.cloud.tasks.v2.Attempt.dispatch_time] will be
+   * set. The other [Attempt][google.cloud.tasks.v2.Attempt] information is not
+   * retained by Cloud Tasks.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.Attempt first_attempt = 9;</code>
@@ -450,8 +504,8 @@ public interface TaskOrBuilder
    *
    *
    * <pre>
-   * Output only. The view specifies which subset of the [Task][google.cloud.tasks.v2.Task] has
-   * been returned.
+   * Output only. The view specifies which subset of the
+   * [Task][google.cloud.tasks.v2.Task] has been returned.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.Task.View view = 11;</code>
@@ -463,8 +517,8 @@ public interface TaskOrBuilder
    *
    *
    * <pre>
-   * Output only. The view specifies which subset of the [Task][google.cloud.tasks.v2.Task] has
-   * been returned.
+   * Output only. The view specifies which subset of the
+   * [Task][google.cloud.tasks.v2.Task] has been returned.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.Task.View view = 11;</code>
@@ -473,5 +527,5 @@ public interface TaskOrBuilder
    */
   com.google.cloud.tasks.v2.Task.View getView();
 
-  public com.google.cloud.tasks.v2.Task.MessageTypeCase getMessageTypeCase();
+  com.google.cloud.tasks.v2.Task.MessageTypeCase getMessageTypeCase();
 }

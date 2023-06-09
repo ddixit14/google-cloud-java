@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,8 +30,11 @@ public interface GcsSourceOrBuilder
    * Required. Cloud Storage URIs to input files. URI can be up to
    * 2000 characters long. URIs can match the full object path (for example,
    * `gs://bucket/directory/object.json`) or a pattern matching one or more
-   * files, such as `gs://bucket/directory/&#42;.json`. A request can
-   * contain at most 100 files, and each file can be up to 2 GB.
+   * files, such as `gs://bucket/directory/&#42;.json`.
+   *
+   * A request can contain at most 100 files (or 100,000 files if `data_schema`
+   * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+   * `content`).
    * </pre>
    *
    * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,8 +49,11 @@ public interface GcsSourceOrBuilder
    * Required. Cloud Storage URIs to input files. URI can be up to
    * 2000 characters long. URIs can match the full object path (for example,
    * `gs://bucket/directory/object.json`) or a pattern matching one or more
-   * files, such as `gs://bucket/directory/&#42;.json`. A request can
-   * contain at most 100 files, and each file can be up to 2 GB.
+   * files, such as `gs://bucket/directory/&#42;.json`.
+   *
+   * A request can contain at most 100 files (or 100,000 files if `data_schema`
+   * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+   * `content`).
    * </pre>
    *
    * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -62,8 +68,11 @@ public interface GcsSourceOrBuilder
    * Required. Cloud Storage URIs to input files. URI can be up to
    * 2000 characters long. URIs can match the full object path (for example,
    * `gs://bucket/directory/object.json`) or a pattern matching one or more
-   * files, such as `gs://bucket/directory/&#42;.json`. A request can
-   * contain at most 100 files, and each file can be up to 2 GB.
+   * files, such as `gs://bucket/directory/&#42;.json`.
+   *
+   * A request can contain at most 100 files (or 100,000 files if `data_schema`
+   * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+   * `content`).
    * </pre>
    *
    * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -79,8 +88,11 @@ public interface GcsSourceOrBuilder
    * Required. Cloud Storage URIs to input files. URI can be up to
    * 2000 characters long. URIs can match the full object path (for example,
    * `gs://bucket/directory/object.json`) or a pattern matching one or more
-   * files, such as `gs://bucket/directory/&#42;.json`. A request can
-   * contain at most 100 files, and each file can be up to 2 GB.
+   * files, such as `gs://bucket/directory/&#42;.json`.
+   *
+   * A request can contain at most 100 files (or 100,000 files if `data_schema`
+   * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+   * `content`).
    * </pre>
    *
    * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -95,13 +107,23 @@ public interface GcsSourceOrBuilder
    *
    * <pre>
    * The schema to use when parsing the data from the source.
+   *
    * Supported values for document imports:
+   *
    * * `document` (default): One JSON
    * [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
    * document must
    *   have a valid
    *   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+   * * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
+   *   `input_uris` will become a document, with the ID set to the first 128
+   *   bits of SHA256(URI) encoded as a hex string.
+   * * `custom`: One custom data JSON per row in arbitrary format that conforms
+   *   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+   *   data store. This can only be used by the GENERIC Data Store vertical.
+   *
    * Supported values for user even imports:
+   *
    * * `user_event` (default): One JSON
    * [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
    * </pre>
@@ -116,13 +138,23 @@ public interface GcsSourceOrBuilder
    *
    * <pre>
    * The schema to use when parsing the data from the source.
+   *
    * Supported values for document imports:
+   *
    * * `document` (default): One JSON
    * [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
    * document must
    *   have a valid
    *   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+   * * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
+   *   `input_uris` will become a document, with the ID set to the first 128
+   *   bits of SHA256(URI) encoded as a hex string.
+   * * `custom`: One custom data JSON per row in arbitrary format that conforms
+   *   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+   *   data store. This can only be used by the GENERIC Data Store vertical.
+   *
    * Supported values for user even imports:
+   *
    * * `user_event` (default): One JSON
    * [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
    * </pre>

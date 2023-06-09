@@ -45,11 +45,6 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
     return new ScannedData();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dataplex.v1.ProcessingProto
         .internal_static_google_cloud_dataplex_v1_ScannedData_descriptor;
@@ -75,7 +70,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The field that contains values which monotonically increases over time
-     * (e.g. timestamp).
+     * (e.g. a timestamp column).
      * </pre>
      *
      * <code>string field = 1;</code>
@@ -88,7 +83,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The field that contains values which monotonically increases over time
-     * (e.g. timestamp).
+     * (e.g. a timestamp column).
      * </pre>
      *
      * <code>string field = 1;</code>
@@ -101,7 +96,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Value that marks the start of the range
+     * Value that marks the start of the range.
      * </pre>
      *
      * <code>string start = 2;</code>
@@ -113,7 +108,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Value that marks the start of the range
+     * Value that marks the start of the range.
      * </pre>
      *
      * <code>string start = 2;</code>
@@ -126,7 +121,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Value that marks the end of the range
+     * Value that marks the end of the range.
      * </pre>
      *
      * <code>string end = 3;</code>
@@ -138,7 +133,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Value that marks the end of the range
+     * Value that marks the end of the range.
      * </pre>
      *
      * <code>string end = 3;</code>
@@ -178,11 +173,6 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
       return new IncrementalField();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.dataplex.v1.ProcessingProto
           .internal_static_google_cloud_dataplex_v1_ScannedData_IncrementalField_descriptor;
@@ -207,7 +197,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The field that contains values which monotonically increases over time
-     * (e.g. timestamp).
+     * (e.g. a timestamp column).
      * </pre>
      *
      * <code>string field = 1;</code>
@@ -231,7 +221,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The field that contains values which monotonically increases over time
-     * (e.g. timestamp).
+     * (e.g. a timestamp column).
      * </pre>
      *
      * <code>string field = 1;</code>
@@ -259,7 +249,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Value that marks the start of the range
+     * Value that marks the start of the range.
      * </pre>
      *
      * <code>string start = 2;</code>
@@ -282,7 +272,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Value that marks the start of the range
+     * Value that marks the start of the range.
      * </pre>
      *
      * <code>string start = 2;</code>
@@ -310,7 +300,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Value that marks the end of the range
+     * Value that marks the end of the range.
      * </pre>
      *
      * <code>string end = 3;</code>
@@ -333,7 +323,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Value that marks the end of the range
+     * Value that marks the end of the range.
      * </pre>
      *
      * <code>string end = 3;</code>
@@ -754,7 +744,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * The field that contains values which monotonically increases over time
-       * (e.g. timestamp).
+       * (e.g. a timestamp column).
        * </pre>
        *
        * <code>string field = 1;</code>
@@ -777,7 +767,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * The field that contains values which monotonically increases over time
-       * (e.g. timestamp).
+       * (e.g. a timestamp column).
        * </pre>
        *
        * <code>string field = 1;</code>
@@ -800,7 +790,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * The field that contains values which monotonically increases over time
-       * (e.g. timestamp).
+       * (e.g. a timestamp column).
        * </pre>
        *
        * <code>string field = 1;</code>
@@ -822,7 +812,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * The field that contains values which monotonically increases over time
-       * (e.g. timestamp).
+       * (e.g. a timestamp column).
        * </pre>
        *
        * <code>string field = 1;</code>
@@ -840,7 +830,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * The field that contains values which monotonically increases over time
-       * (e.g. timestamp).
+       * (e.g. a timestamp column).
        * </pre>
        *
        * <code>string field = 1;</code>
@@ -864,7 +854,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the start of the range
+       * Value that marks the start of the range.
        * </pre>
        *
        * <code>string start = 2;</code>
@@ -886,7 +876,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the start of the range
+       * Value that marks the start of the range.
        * </pre>
        *
        * <code>string start = 2;</code>
@@ -908,7 +898,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the start of the range
+       * Value that marks the start of the range.
        * </pre>
        *
        * <code>string start = 2;</code>
@@ -929,7 +919,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the start of the range
+       * Value that marks the start of the range.
        * </pre>
        *
        * <code>string start = 2;</code>
@@ -946,7 +936,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the start of the range
+       * Value that marks the start of the range.
        * </pre>
        *
        * <code>string start = 2;</code>
@@ -970,7 +960,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the end of the range
+       * Value that marks the end of the range.
        * </pre>
        *
        * <code>string end = 3;</code>
@@ -992,7 +982,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the end of the range
+       * Value that marks the end of the range.
        * </pre>
        *
        * <code>string end = 3;</code>
@@ -1014,7 +1004,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the end of the range
+       * Value that marks the end of the range.
        * </pre>
        *
        * <code>string end = 3;</code>
@@ -1035,7 +1025,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the end of the range
+       * Value that marks the end of the range.
        * </pre>
        *
        * <code>string end = 3;</code>
@@ -1052,7 +1042,7 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Value that marks the end of the range
+       * Value that marks the end of the range.
        * </pre>
        *
        * <code>string end = 3;</code>
@@ -1136,6 +1126,8 @@ public final class ScannedData extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int dataRangeCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object dataRange_;
 
   public enum DataRangeCase

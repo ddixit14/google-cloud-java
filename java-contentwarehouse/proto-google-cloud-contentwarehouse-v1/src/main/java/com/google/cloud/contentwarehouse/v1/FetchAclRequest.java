@@ -47,11 +47,6 @@ public final class FetchAclRequest extends com.google.protobuf.GeneratedMessageV
     return new FetchAclRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contentwarehouse.v1.DocumentServiceRequestProto
         .internal_static_google_cloud_contentwarehouse_v1_FetchAclRequest_descriptor;
@@ -78,6 +73,8 @@ public final class FetchAclRequest extends com.google.protobuf.GeneratedMessageV
    * Required. REQUIRED: The resource for which the policy is being requested.
    * Format for document:
    * projects/{project_number}/locations/{location}/documents/{document_id}.
+   * Format for collection:
+   * projects/{project_number}/locations/{location}/collections/{collection_id}.
    * Format for project: projects/{project_number}.
    * </pre>
    *
@@ -104,6 +101,8 @@ public final class FetchAclRequest extends com.google.protobuf.GeneratedMessageV
    * Required. REQUIRED: The resource for which the policy is being requested.
    * Format for document:
    * projects/{project_number}/locations/{location}/documents/{document_id}.
+   * Format for collection:
+   * projects/{project_number}/locations/{location}/collections/{collection_id}.
    * Format for project: projects/{project_number}.
    * </pre>
    *
@@ -601,6 +600,8 @@ public final class FetchAclRequest extends com.google.protobuf.GeneratedMessageV
      * Required. REQUIRED: The resource for which the policy is being requested.
      * Format for document:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     * Format for collection:
+     * projects/{project_number}/locations/{location}/collections/{collection_id}.
      * Format for project: projects/{project_number}.
      * </pre>
      *
@@ -626,6 +627,8 @@ public final class FetchAclRequest extends com.google.protobuf.GeneratedMessageV
      * Required. REQUIRED: The resource for which the policy is being requested.
      * Format for document:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     * Format for collection:
+     * projects/{project_number}/locations/{location}/collections/{collection_id}.
      * Format for project: projects/{project_number}.
      * </pre>
      *
@@ -651,6 +654,8 @@ public final class FetchAclRequest extends com.google.protobuf.GeneratedMessageV
      * Required. REQUIRED: The resource for which the policy is being requested.
      * Format for document:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     * Format for collection:
+     * projects/{project_number}/locations/{location}/collections/{collection_id}.
      * Format for project: projects/{project_number}.
      * </pre>
      *
@@ -675,6 +680,8 @@ public final class FetchAclRequest extends com.google.protobuf.GeneratedMessageV
      * Required. REQUIRED: The resource for which the policy is being requested.
      * Format for document:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     * Format for collection:
+     * projects/{project_number}/locations/{location}/collections/{collection_id}.
      * Format for project: projects/{project_number}.
      * </pre>
      *
@@ -695,6 +702,8 @@ public final class FetchAclRequest extends com.google.protobuf.GeneratedMessageV
      * Required. REQUIRED: The resource for which the policy is being requested.
      * Format for document:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     * Format for collection:
+     * projects/{project_number}/locations/{location}/collections/{collection_id}.
      * Format for project: projects/{project_number}.
      * </pre>
      *

@@ -22,7 +22,8 @@ package com.google.cloud.metastore.v1;
  *
  *
  * <pre>
- * Request message for [DataprocMetastore.DeleteService][google.cloud.metastore.v1.DataprocMetastore.DeleteService].
+ * Request message for
+ * [DataprocMetastore.DeleteService][google.cloud.metastore.v1.DataprocMetastore.DeleteService].
  * </pre>
  *
  * Protobuf type {@code google.cloud.metastore.v1.DeleteServiceRequest}
@@ -48,11 +49,6 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
     return new DeleteServiceRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.metastore.v1.MetastoreProto
         .internal_static_google_cloud_metastore_v1_DeleteServiceRequest_descriptor;
@@ -76,8 +72,9 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Required. The relative resource name of the metastore service to delete, in the
-   * following form:
+   * Required. The relative resource name of the metastore service to delete, in
+   * the following form:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -103,8 +100,9 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Required. The relative resource name of the metastore service to delete, in the
-   * following form:
+   * Required. The relative resource name of the metastore service to delete, in
+   * the following form:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -135,13 +133,15 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -167,13 +167,15 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -368,7 +370,8 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Request message for [DataprocMetastore.DeleteService][google.cloud.metastore.v1.DataprocMetastore.DeleteService].
+   * Request message for
+   * [DataprocMetastore.DeleteService][google.cloud.metastore.v1.DataprocMetastore.DeleteService].
    * </pre>
    *
    * Protobuf type {@code google.cloud.metastore.v1.DeleteServiceRequest}
@@ -567,8 +570,9 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to delete, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to delete, in
+     * the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -593,8 +597,9 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to delete, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to delete, in
+     * the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -619,8 +624,9 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to delete, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to delete, in
+     * the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -644,8 +650,9 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to delete, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to delete, in
+     * the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -665,8 +672,9 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to delete, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to delete, in
+     * the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -693,13 +701,15 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -724,13 +734,15 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -755,13 +767,15 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -785,13 +799,15 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -811,13 +827,15 @@ public final class DeleteServiceRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.

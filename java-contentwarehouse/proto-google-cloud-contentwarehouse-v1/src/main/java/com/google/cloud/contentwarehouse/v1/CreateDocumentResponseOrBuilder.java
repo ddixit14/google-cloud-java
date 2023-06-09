@@ -64,6 +64,7 @@ public interface CreateDocumentResponseOrBuilder
    * <pre>
    * Output from Rule Engine recording the rule evaluator and action executor's
    * output.
+   *
    * Refer format in: google/cloud/contentwarehouse/v1/rule_engine.proto
    * </pre>
    *
@@ -78,6 +79,7 @@ public interface CreateDocumentResponseOrBuilder
    * <pre>
    * Output from Rule Engine recording the rule evaluator and action executor's
    * output.
+   *
    * Refer format in: google/cloud/contentwarehouse/v1/rule_engine.proto
    * </pre>
    *
@@ -92,6 +94,7 @@ public interface CreateDocumentResponseOrBuilder
    * <pre>
    * Output from Rule Engine recording the rule evaluator and action executor's
    * output.
+   *
    * Refer format in: google/cloud/contentwarehouse/v1/rule_engine.proto
    * </pre>
    *
@@ -136,4 +139,56 @@ public interface CreateDocumentResponseOrBuilder
    * <code>.google.cloud.contentwarehouse.v1.ResponseMetadata metadata = 3;</code>
    */
   com.google.cloud.contentwarehouse.v1.ResponseMetadataOrBuilder getMetadataOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * post-processing LROs
+   * </pre>
+   *
+   * <code>repeated .google.longrunning.Operation long_running_operations = 4;</code>
+   */
+  java.util.List<com.google.longrunning.Operation> getLongRunningOperationsList();
+  /**
+   *
+   *
+   * <pre>
+   * post-processing LROs
+   * </pre>
+   *
+   * <code>repeated .google.longrunning.Operation long_running_operations = 4;</code>
+   */
+  com.google.longrunning.Operation getLongRunningOperations(int index);
+  /**
+   *
+   *
+   * <pre>
+   * post-processing LROs
+   * </pre>
+   *
+   * <code>repeated .google.longrunning.Operation long_running_operations = 4;</code>
+   */
+  int getLongRunningOperationsCount();
+  /**
+   *
+   *
+   * <pre>
+   * post-processing LROs
+   * </pre>
+   *
+   * <code>repeated .google.longrunning.Operation long_running_operations = 4;</code>
+   */
+  java.util.List<? extends com.google.longrunning.OperationOrBuilder>
+      getLongRunningOperationsOrBuilderList();
+  /**
+   *
+   *
+   * <pre>
+   * post-processing LROs
+   * </pre>
+   *
+   * <code>repeated .google.longrunning.Operation long_running_operations = 4;</code>
+   */
+  com.google.longrunning.OperationOrBuilder getLongRunningOperationsOrBuilder(int index);
 }

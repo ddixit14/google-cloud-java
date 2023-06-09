@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,10 +25,13 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.cloud.dialogflow.v2.CompleteConversationRequest;
 import com.google.cloud.dialogflow.v2.Conversation;
 import com.google.cloud.dialogflow.v2.CreateConversationRequest;
+import com.google.cloud.dialogflow.v2.GenerateStatelessSummaryRequest;
+import com.google.cloud.dialogflow.v2.GenerateStatelessSummaryResponse;
 import com.google.cloud.dialogflow.v2.GetConversationRequest;
 import com.google.cloud.dialogflow.v2.ListConversationsRequest;
 import com.google.cloud.dialogflow.v2.ListConversationsResponse;
@@ -40,7 +43,6 @@ import com.google.cloud.location.GetLocationRequest;
 import com.google.cloud.location.ListLocationsRequest;
 import com.google.cloud.location.ListLocationsResponse;
 import com.google.cloud.location.Location;
-import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
@@ -121,6 +123,20 @@ public class GrpcConversationsStub extends ConversationsStub {
                   ProtoUtils.marshaller(SuggestConversationSummaryResponse.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<
+          GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+      generateStatelessSummaryMethodDescriptor =
+          MethodDescriptor
+              .<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.cloud.dialogflow.v2.Conversations/GenerateStatelessSummary")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(GenerateStatelessSummaryRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(GenerateStatelessSummaryResponse.getDefaultInstance()))
+              .build();
+
   private static final MethodDescriptor<ListLocationsRequest, ListLocationsResponse>
       listLocationsMethodDescriptor =
           MethodDescriptor.<ListLocationsRequest, ListLocationsResponse>newBuilder()
@@ -153,6 +169,8 @@ public class GrpcConversationsStub extends ConversationsStub {
       listMessagesPagedCallable;
   private final UnaryCallable<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>
       suggestConversationSummaryCallable;
+  private final UnaryCallable<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+      generateStatelessSummaryCallable;
   private final UnaryCallable<ListLocationsRequest, ListLocationsResponse> listLocationsCallable;
   private final UnaryCallable<ListLocationsRequest, ListLocationsPagedResponse>
       listLocationsPagedCallable;
@@ -205,9 +223,9 @@ public class GrpcConversationsStub extends ConversationsStub {
             .setMethodDescriptor(createConversationMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("parent", String.valueOf(request.getParent()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("parent", String.valueOf(request.getParent()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<ListConversationsRequest, ListConversationsResponse>
@@ -216,9 +234,9 @@ public class GrpcConversationsStub extends ConversationsStub {
                 .setMethodDescriptor(listConversationsMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("parent", String.valueOf(request.getParent()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("parent", String.valueOf(request.getParent()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<GetConversationRequest, Conversation> getConversationTransportSettings =
@@ -226,9 +244,9 @@ public class GrpcConversationsStub extends ConversationsStub {
             .setMethodDescriptor(getConversationMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("name", String.valueOf(request.getName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<CompleteConversationRequest, Conversation>
@@ -237,9 +255,9 @@ public class GrpcConversationsStub extends ConversationsStub {
                 .setMethodDescriptor(completeConversationMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("name", String.valueOf(request.getName()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("name", String.valueOf(request.getName()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<ListMessagesRequest, ListMessagesResponse> listMessagesTransportSettings =
@@ -247,9 +265,9 @@ public class GrpcConversationsStub extends ConversationsStub {
             .setMethodDescriptor(listMessagesMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("parent", String.valueOf(request.getParent()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("parent", String.valueOf(request.getParent()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>
@@ -259,9 +277,23 @@ public class GrpcConversationsStub extends ConversationsStub {
                 .setMethodDescriptor(suggestConversationSummaryMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("conversation", String.valueOf(request.getConversation()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("conversation", String.valueOf(request.getConversation()));
+                      return builder.build();
+                    })
+                .build();
+    GrpcCallSettings<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+        generateStatelessSummaryTransportSettings =
+            GrpcCallSettings
+                .<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>newBuilder()
+                .setMethodDescriptor(generateStatelessSummaryMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add(
+                          "stateless_conversation.parent",
+                          String.valueOf(request.getStatelessConversation().getParent()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<ListLocationsRequest, ListLocationsResponse> listLocationsTransportSettings =
@@ -269,9 +301,9 @@ public class GrpcConversationsStub extends ConversationsStub {
             .setMethodDescriptor(listLocationsMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("name", String.valueOf(request.getName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<GetLocationRequest, Location> getLocationTransportSettings =
@@ -279,9 +311,9 @@ public class GrpcConversationsStub extends ConversationsStub {
             .setMethodDescriptor(getLocationMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("name", String.valueOf(request.getName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
                 })
             .build();
 
@@ -318,6 +350,11 @@ public class GrpcConversationsStub extends ConversationsStub {
         callableFactory.createUnaryCallable(
             suggestConversationSummaryTransportSettings,
             settings.suggestConversationSummarySettings(),
+            clientContext);
+    this.generateStatelessSummaryCallable =
+        callableFactory.createUnaryCallable(
+            generateStatelessSummaryTransportSettings,
+            settings.generateStatelessSummarySettings(),
             clientContext);
     this.listLocationsCallable =
         callableFactory.createUnaryCallable(
@@ -378,6 +415,12 @@ public class GrpcConversationsStub extends ConversationsStub {
   public UnaryCallable<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>
       suggestConversationSummaryCallable() {
     return suggestConversationSummaryCallable;
+  }
+
+  @Override
+  public UnaryCallable<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+      generateStatelessSummaryCallable() {
+    return generateStatelessSummaryCallable;
   }
 
   @Override

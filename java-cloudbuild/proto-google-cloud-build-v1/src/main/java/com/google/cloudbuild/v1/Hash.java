@@ -48,11 +48,6 @@ public final class Hash extends com.google.protobuf.GeneratedMessageV3
     return new Hash();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloudbuild.v1.Cloudbuild
         .internal_static_google_devtools_cloudbuild_v1_Hash_descriptor;
@@ -107,6 +102,16 @@ public final class Hash extends com.google.protobuf.GeneratedMessageV3
      * <code>MD5 = 2;</code>
      */
     MD5(2),
+    /**
+     *
+     *
+     * <pre>
+     * Use a sha512 hash.
+     * </pre>
+     *
+     * <code>SHA512 = 4;</code>
+     */
+    SHA512(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -140,6 +145,16 @@ public final class Hash extends com.google.protobuf.GeneratedMessageV3
      * <code>MD5 = 2;</code>
      */
     public static final int MD5_VALUE = 2;
+    /**
+     *
+     *
+     * <pre>
+     * Use a sha512 hash.
+     * </pre>
+     *
+     * <code>SHA512 = 4;</code>
+     */
+    public static final int SHA512_VALUE = 4;
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -171,6 +186,8 @@ public final class Hash extends com.google.protobuf.GeneratedMessageV3
           return SHA256;
         case 2:
           return MD5;
+        case 4:
+          return SHA512;
         default:
           return null;
       }

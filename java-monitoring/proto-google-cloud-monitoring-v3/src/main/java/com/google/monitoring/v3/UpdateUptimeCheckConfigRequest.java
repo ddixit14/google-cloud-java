@@ -46,11 +46,6 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
     return new UpdateUptimeCheckConfigRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.monitoring.v3.UptimeServiceProto
         .internal_static_google_monitoring_v3_UpdateUptimeCheckConfigRequest_descriptor;
@@ -131,9 +126,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
    * the values for the set of fields mentioned in the `updateMask`. If an
    * `updateMask` has not been given, this Uptime check configuration replaces
    * the current configuration. If a field is mentioned in `updateMask` but
-   * the corresonding field is omitted in this partial Uptime check
+   * the corresponding field is omitted in this partial Uptime check
    * configuration, it has the effect of deleting/clearing the field from the
    * configuration on the server.
+   *
    * The following fields can be updated: `display_name`,
    * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
    * `selected_regions`.
@@ -157,9 +153,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
    * the values for the set of fields mentioned in the `updateMask`. If an
    * `updateMask` has not been given, this Uptime check configuration replaces
    * the current configuration. If a field is mentioned in `updateMask` but
-   * the corresonding field is omitted in this partial Uptime check
+   * the corresponding field is omitted in this partial Uptime check
    * configuration, it has the effect of deleting/clearing the field from the
    * configuration on the server.
+   *
    * The following fields can be updated: `display_name`,
    * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
    * `selected_regions`.
@@ -185,9 +182,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
    * the values for the set of fields mentioned in the `updateMask`. If an
    * `updateMask` has not been given, this Uptime check configuration replaces
    * the current configuration. If a field is mentioned in `updateMask` but
-   * the corresonding field is omitted in this partial Uptime check
+   * the corresponding field is omitted in this partial Uptime check
    * configuration, it has the effect of deleting/clearing the field from the
    * configuration on the server.
+   *
    * The following fields can be updated: `display_name`,
    * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
    * `selected_regions`.
@@ -813,9 +811,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      * the values for the set of fields mentioned in the `updateMask`. If an
      * `updateMask` has not been given, this Uptime check configuration replaces
      * the current configuration. If a field is mentioned in `updateMask` but
-     * the corresonding field is omitted in this partial Uptime check
+     * the corresponding field is omitted in this partial Uptime check
      * configuration, it has the effect of deleting/clearing the field from the
      * configuration on the server.
+     *
      * The following fields can be updated: `display_name`,
      * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
      * `selected_regions`.
@@ -838,9 +837,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      * the values for the set of fields mentioned in the `updateMask`. If an
      * `updateMask` has not been given, this Uptime check configuration replaces
      * the current configuration. If a field is mentioned in `updateMask` but
-     * the corresonding field is omitted in this partial Uptime check
+     * the corresponding field is omitted in this partial Uptime check
      * configuration, it has the effect of deleting/clearing the field from the
      * configuration on the server.
+     *
      * The following fields can be updated: `display_name`,
      * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
      * `selected_regions`.
@@ -869,9 +869,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      * the values for the set of fields mentioned in the `updateMask`. If an
      * `updateMask` has not been given, this Uptime check configuration replaces
      * the current configuration. If a field is mentioned in `updateMask` but
-     * the corresonding field is omitted in this partial Uptime check
+     * the corresponding field is omitted in this partial Uptime check
      * configuration, it has the effect of deleting/clearing the field from the
      * configuration on the server.
+     *
      * The following fields can be updated: `display_name`,
      * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
      * `selected_regions`.
@@ -902,9 +903,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      * the values for the set of fields mentioned in the `updateMask`. If an
      * `updateMask` has not been given, this Uptime check configuration replaces
      * the current configuration. If a field is mentioned in `updateMask` but
-     * the corresonding field is omitted in this partial Uptime check
+     * the corresponding field is omitted in this partial Uptime check
      * configuration, it has the effect of deleting/clearing the field from the
      * configuration on the server.
+     *
      * The following fields can be updated: `display_name`,
      * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
      * `selected_regions`.
@@ -933,9 +935,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      * the values for the set of fields mentioned in the `updateMask`. If an
      * `updateMask` has not been given, this Uptime check configuration replaces
      * the current configuration. If a field is mentioned in `updateMask` but
-     * the corresonding field is omitted in this partial Uptime check
+     * the corresponding field is omitted in this partial Uptime check
      * configuration, it has the effect of deleting/clearing the field from the
      * configuration on the server.
+     *
      * The following fields can be updated: `display_name`,
      * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
      * `selected_regions`.
@@ -970,9 +973,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      * the values for the set of fields mentioned in the `updateMask`. If an
      * `updateMask` has not been given, this Uptime check configuration replaces
      * the current configuration. If a field is mentioned in `updateMask` but
-     * the corresonding field is omitted in this partial Uptime check
+     * the corresponding field is omitted in this partial Uptime check
      * configuration, it has the effect of deleting/clearing the field from the
      * configuration on the server.
+     *
      * The following fields can be updated: `display_name`,
      * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
      * `selected_regions`.
@@ -1000,9 +1004,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      * the values for the set of fields mentioned in the `updateMask`. If an
      * `updateMask` has not been given, this Uptime check configuration replaces
      * the current configuration. If a field is mentioned in `updateMask` but
-     * the corresonding field is omitted in this partial Uptime check
+     * the corresponding field is omitted in this partial Uptime check
      * configuration, it has the effect of deleting/clearing the field from the
      * configuration on the server.
+     *
      * The following fields can be updated: `display_name`,
      * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
      * `selected_regions`.
@@ -1025,9 +1030,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      * the values for the set of fields mentioned in the `updateMask`. If an
      * `updateMask` has not been given, this Uptime check configuration replaces
      * the current configuration. If a field is mentioned in `updateMask` but
-     * the corresonding field is omitted in this partial Uptime check
+     * the corresponding field is omitted in this partial Uptime check
      * configuration, it has the effect of deleting/clearing the field from the
      * configuration on the server.
+     *
      * The following fields can be updated: `display_name`,
      * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
      * `selected_regions`.
@@ -1054,9 +1060,10 @@ public final class UpdateUptimeCheckConfigRequest extends com.google.protobuf.Ge
      * the values for the set of fields mentioned in the `updateMask`. If an
      * `updateMask` has not been given, this Uptime check configuration replaces
      * the current configuration. If a field is mentioned in `updateMask` but
-     * the corresonding field is omitted in this partial Uptime check
+     * the corresponding field is omitted in this partial Uptime check
      * configuration, it has the effect of deleting/clearing the field from the
      * configuration on the server.
+     *
      * The following fields can be updated: `display_name`,
      * `http_check`, `tcp_check`, `timeout`, `content_matchers`, and
      * `selected_regions`.

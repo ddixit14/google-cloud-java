@@ -48,11 +48,6 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
     return new SearchUrisRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.webrisk.v1.WebRiskProto
         .internal_static_google_cloud_webrisk_v1_SearchUrisRequest_descriptor;
@@ -139,7 +134,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+   * Required. The ThreatLists to search in. Multiple ThreatLists may be
+   * specified.
    * </pre>
    *
    * <code>
@@ -157,7 +153,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+   * Required. The ThreatLists to search in. Multiple ThreatLists may be
+   * specified.
    * </pre>
    *
    * <code>
@@ -174,7 +171,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+   * Required. The ThreatLists to search in. Multiple ThreatLists may be
+   * specified.
    * </pre>
    *
    * <code>
@@ -192,7 +190,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+   * Required. The ThreatLists to search in. Multiple ThreatLists may be
+   * specified.
    * </pre>
    *
    * <code>
@@ -209,7 +208,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+   * Required. The ThreatLists to search in. Multiple ThreatLists may be
+   * specified.
    * </pre>
    *
    * <code>
@@ -749,7 +749,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -767,7 +768,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -783,7 +785,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -800,7 +803,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -824,7 +828,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -847,7 +852,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -870,7 +876,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -889,7 +896,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -905,7 +913,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -922,7 +931,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -943,7 +953,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>
@@ -963,7 +974,8 @@ public final class SearchUrisRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+     * Required. The ThreatLists to search in. Multiple ThreatLists may be
+     * specified.
      * </pre>
      *
      * <code>

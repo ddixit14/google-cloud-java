@@ -48,11 +48,6 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
     return new DeleteMembershipRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.gkehub.v1beta1.MembershipOuterClass
         .internal_static_google_cloud_gkehub_v1beta1_DeleteMembershipRequest_descriptor;
@@ -137,11 +132,13 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
    * so that if you must retry your request, the server will know to ignore
    * the request if it has already been completed. The server will guarantee
    * that for at least 60 minutes after the first request.
+   *
    * For example, consider a situation where you make an initial request and
    * the request times out. If you make the request again with the same request
    * ID, the server can check if original operation with the same request ID
    * was received, and if so, will ignore the second request. This prevents
    * clients from accidentally creating duplicate commitments.
+   *
    * The request ID must be a valid UUID with the exception that zero UUID is
    * not supported (00000000-0000-0000-0000-000000000000).
    * </pre>
@@ -170,11 +167,13 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
    * so that if you must retry your request, the server will know to ignore
    * the request if it has already been completed. The server will guarantee
    * that for at least 60 minutes after the first request.
+   *
    * For example, consider a situation where you make an initial request and
    * the request times out. If you make the request again with the same request
    * ID, the server can check if original operation with the same request ID
    * was received, and if so, will ignore the second request. This prevents
    * clients from accidentally creating duplicate commitments.
+   *
    * The request ID must be a valid UUID with the exception that zero UUID is
    * not supported (00000000-0000-0000-0000-000000000000).
    * </pre>
@@ -194,6 +193,26 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int FORCE_FIELD_NUMBER = 5;
+  private boolean force_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * Optional. If set to true, any subresource from this Membership will also be
+   * deleted. Otherwise, the request will only work if the Membership has no
+   * subresource.
+   * </pre>
+   *
+   * <code>bool force = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
+   *
+   * @return The force.
+   */
+  @java.lang.Override
+  public boolean getForce() {
+    return force_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -216,6 +235,9 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, requestId_);
     }
+    if (force_ != false) {
+      output.writeBool(5, force_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -230,6 +252,9 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, requestId_);
+    }
+    if (force_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(5, force_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -249,6 +274,7 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
 
     if (!getName().equals(other.getName())) return false;
     if (!getRequestId().equals(other.getRequestId())) return false;
+    if (getForce() != other.getForce()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -264,6 +290,8 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRequestId().hashCode();
+    hash = (37 * hash) + FORCE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getForce());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -406,6 +434,7 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
       bitField0_ = 0;
       name_ = "";
       requestId_ = "";
+      force_ = false;
       return this;
     }
 
@@ -447,6 +476,9 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.requestId_ = requestId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.force_ = force_;
       }
     }
 
@@ -506,6 +538,9 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (other.getForce() != false) {
+        setForce(other.getForce());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -544,6 +579,12 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
                 bitField0_ |= 0x00000002;
                 break;
               } // case 34
+            case 40:
+              {
+                force_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 40
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -693,11 +734,13 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes after the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -725,11 +768,13 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes after the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -757,11 +802,13 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes after the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -788,11 +835,13 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes after the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -815,11 +864,13 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes after the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -836,6 +887,65 @@ public final class DeleteMembershipRequest extends com.google.protobuf.Generated
       checkByteStringIsUtf8(value);
       requestId_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private boolean force_;
+    /**
+     *
+     *
+     * <pre>
+     * Optional. If set to true, any subresource from this Membership will also be
+     * deleted. Otherwise, the request will only work if the Membership has no
+     * subresource.
+     * </pre>
+     *
+     * <code>bool force = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return The force.
+     */
+    @java.lang.Override
+    public boolean getForce() {
+      return force_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. If set to true, any subresource from this Membership will also be
+     * deleted. Otherwise, the request will only work if the Membership has no
+     * subresource.
+     * </pre>
+     *
+     * <code>bool force = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @param value The force to set.
+     * @return This builder for chaining.
+     */
+    public Builder setForce(boolean value) {
+
+      force_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. If set to true, any subresource from this Membership will also be
+     * deleted. Otherwise, the request will only work if the Membership has no
+     * subresource.
+     * </pre>
+     *
+     * <code>bool force = 5 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearForce() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      force_ = false;
       onChanged();
       return this;
     }

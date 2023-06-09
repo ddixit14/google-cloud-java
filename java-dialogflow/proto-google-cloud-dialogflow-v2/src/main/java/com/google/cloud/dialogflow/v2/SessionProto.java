@@ -56,6 +56,10 @@ public final class SessionProto {
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_dialogflow_v2_StreamingDetectIntentRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_dialogflow_v2_CloudConversationDebuggingInfo_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_dialogflow_v2_CloudConversationDebuggingInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
       internal_static_google_cloud_dialogflow_v2_StreamingDetectIntentResponse_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_dialogflow_v2_StreamingDetectIntentResponse_fieldAccessorTable;
@@ -104,129 +108,154 @@ public final class SessionProto {
           + "ype.proto\032\036google/protobuf/duration.prot"
           + "o\032 google/protobuf/field_mask.proto\032\034goo"
           + "gle/protobuf/struct.proto\032\027google/rpc/st"
-          + "atus.proto\032\030google/type/latlng.proto\"\365\002\n"
-          + "\023DetectIntentRequest\022:\n\007session\030\001 \001(\tB)\340"
-          + "A\002\372A#\n!dialogflow.googleapis.com/Session"
-          + "\022A\n\014query_params\030\002 \001(\0132+.google.cloud.di"
-          + "alogflow.v2.QueryParameters\022@\n\013query_inp"
-          + "ut\030\003 \001(\0132&.google.cloud.dialogflow.v2.Qu"
-          + "eryInputB\003\340A\002\022J\n\023output_audio_config\030\004 \001"
-          + "(\0132-.google.cloud.dialogflow.v2.OutputAu"
-          + "dioConfig\022<\n\030output_audio_config_mask\030\007 "
-          + "\001(\0132\032.google.protobuf.FieldMask\022\023\n\013input"
-          + "_audio\030\005 \001(\014\"\370\001\n\024DetectIntentResponse\022\023\n"
-          + "\013response_id\030\001 \001(\t\022=\n\014query_result\030\002 \001(\013"
-          + "2\'.google.cloud.dialogflow.v2.QueryResul"
-          + "t\022*\n\016webhook_status\030\003 \001(\0132\022.google.rpc.S"
-          + "tatus\022\024\n\014output_audio\030\004 \001(\014\022J\n\023output_au"
-          + "dio_config\030\006 \001(\0132-.google.cloud.dialogfl"
-          + "ow.v2.OutputAudioConfig\"\215\004\n\017QueryParamet"
-          + "ers\022\021\n\ttime_zone\030\001 \001(\t\022)\n\014geo_location\030\002"
-          + " \001(\0132\023.google.type.LatLng\0225\n\010contexts\030\003 "
-          + "\003(\0132#.google.cloud.dialogflow.v2.Context"
-          + "\022\026\n\016reset_contexts\030\004 \001(\010\022K\n\024session_enti"
-          + "ty_types\030\005 \003(\0132-.google.cloud.dialogflow"
-          + ".v2.SessionEntityType\022(\n\007payload\030\006 \001(\0132\027"
-          + ".google.protobuf.Struct\022e\n!sentiment_ana"
-          + "lysis_request_config\030\n \001(\0132:.google.clou"
-          + "d.dialogflow.v2.SentimentAnalysisRequest"
-          + "Config\022X\n\017webhook_headers\030\016 \003(\0132?.google"
-          + ".cloud.dialogflow.v2.QueryParameters.Web"
-          + "hookHeadersEntry\0325\n\023WebhookHeadersEntry\022"
-          + "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\313\001\n\nQuer"
-          + "yInput\022D\n\014audio_config\030\001 \001(\0132,.google.cl"
-          + "oud.dialogflow.v2.InputAudioConfigH\000\0225\n\004"
-          + "text\030\002 \001(\0132%.google.cloud.dialogflow.v2."
-          + "TextInputH\000\0227\n\005event\030\003 \001(\0132&.google.clou"
-          + "d.dialogflow.v2.EventInputH\000B\007\n\005input\"\256\005"
-          + "\n\013QueryResult\022\022\n\nquery_text\030\001 \001(\t\022\025\n\rlan"
-          + "guage_code\030\017 \001(\t\022%\n\035speech_recognition_c"
-          + "onfidence\030\002 \001(\002\022\016\n\006action\030\003 \001(\t\022+\n\nparam"
-          + "eters\030\004 \001(\0132\027.google.protobuf.Struct\022#\n\033"
-          + "all_required_params_present\030\005 \001(\010\022\034\n\024can"
-          + "cels_slot_filling\030\025 \001(\010\022\030\n\020fulfillment_t"
-          + "ext\030\006 \001(\t\022H\n\024fulfillment_messages\030\007 \003(\0132"
-          + "*.google.cloud.dialogflow.v2.Intent.Mess"
-          + "age\022\026\n\016webhook_source\030\010 \001(\t\0220\n\017webhook_p"
-          + "ayload\030\t \001(\0132\027.google.protobuf.Struct\022<\n"
-          + "\017output_contexts\030\n \003(\0132#.google.cloud.di"
-          + "alogflow.v2.Context\0222\n\006intent\030\013 \001(\0132\".go"
-          + "ogle.cloud.dialogflow.v2.Intent\022#\n\033inten"
-          + "t_detection_confidence\030\014 \001(\002\0220\n\017diagnost"
-          + "ic_info\030\016 \001(\0132\027.google.protobuf.Struct\022V"
-          + "\n\031sentiment_analysis_result\030\021 \001(\01323.goog"
-          + "le.cloud.dialogflow.v2.SentimentAnalysis"
-          + "Result\"\234\003\n\034StreamingDetectIntentRequest\022"
-          + ":\n\007session\030\001 \001(\tB)\340A\002\372A#\n!dialogflow.goo"
-          + "gleapis.com/Session\022A\n\014query_params\030\002 \001("
-          + "\0132+.google.cloud.dialogflow.v2.QueryPara"
-          + "meters\022@\n\013query_input\030\003 \001(\0132&.google.clo"
-          + "ud.dialogflow.v2.QueryInputB\003\340A\002\022\034\n\020sing"
-          + "le_utterance\030\004 \001(\010B\002\030\001\022J\n\023output_audio_c"
-          + "onfig\030\005 \001(\0132-.google.cloud.dialogflow.v2"
-          + ".OutputAudioConfig\022<\n\030output_audio_confi"
-          + "g_mask\030\007 \001(\0132\032.google.protobuf.FieldMask"
-          + "\022\023\n\013input_audio\030\006 \001(\014\"\325\002\n\035StreamingDetec"
-          + "tIntentResponse\022\023\n\013response_id\030\001 \001(\t\022R\n\022"
-          + "recognition_result\030\002 \001(\01326.google.cloud."
-          + "dialogflow.v2.StreamingRecognitionResult"
-          + "\022=\n\014query_result\030\003 \001(\0132\'.google.cloud.di"
-          + "alogflow.v2.QueryResult\022*\n\016webhook_statu"
-          + "s\030\004 \001(\0132\022.google.rpc.Status\022\024\n\014output_au"
-          + "dio\030\005 \001(\014\022J\n\023output_audio_config\030\006 \001(\0132-"
-          + ".google.cloud.dialogflow.v2.OutputAudioC"
-          + "onfig\"\235\003\n\032StreamingRecognitionResult\022X\n\014"
-          + "message_type\030\001 \001(\0162B.google.cloud.dialog"
-          + "flow.v2.StreamingRecognitionResult.Messa"
-          + "geType\022\022\n\ntranscript\030\002 \001(\t\022\020\n\010is_final\030\003"
-          + " \001(\010\022\022\n\nconfidence\030\004 \001(\002\022D\n\020speech_word_"
-          + "info\030\007 \003(\0132*.google.cloud.dialogflow.v2."
-          + "SpeechWordInfo\0224\n\021speech_end_offset\030\010 \001("
-          + "\0132\031.google.protobuf.Duration\022\025\n\rlanguage"
-          + "_code\030\n \001(\t\"X\n\013MessageType\022\034\n\030MESSAGE_TY"
-          + "PE_UNSPECIFIED\020\000\022\016\n\nTRANSCRIPT\020\001\022\033\n\027END_"
-          + "OF_SINGLE_UTTERANCE\020\002\":\n\tTextInput\022\021\n\004te"
-          + "xt\030\001 \001(\tB\003\340A\002\022\032\n\rlanguage_code\030\002 \001(\tB\003\340A"
-          + "\002\"h\n\nEventInput\022\021\n\004name\030\001 \001(\tB\003\340A\002\022+\n\npa"
-          + "rameters\030\002 \001(\0132\027.google.protobuf.Struct\022"
-          + "\032\n\rlanguage_code\030\003 \001(\tB\003\340A\002\"F\n\036Sentiment"
-          + "AnalysisRequestConfig\022$\n\034analyze_query_t"
-          + "ext_sentiment\030\001 \001(\010\"^\n\027SentimentAnalysis"
-          + "Result\022C\n\024query_text_sentiment\030\001 \001(\0132%.g"
-          + "oogle.cloud.dialogflow.v2.Sentiment\"-\n\tS"
-          + "entiment\022\r\n\005score\030\001 \001(\002\022\021\n\tmagnitude\030\002 \001"
-          + "(\0022\345\005\n\010Sessions\022\311\003\n\014DetectIntent\022/.googl"
-          + "e.cloud.dialogflow.v2.DetectIntentReques"
-          + "t\0320.google.cloud.dialogflow.v2.DetectInt"
-          + "entResponse\"\325\002\202\323\344\223\002\270\002\"6/v2/{session=proj"
-          + "ects/*/agent/sessions/*}:detectIntent:\001*"
-          + "ZR\"M/v2/{session=projects/*/agent/enviro"
-          + "nments/*/users/*/sessions/*}:detectInten"
-          + "t:\001*ZG\"B/v2/{session=projects/*/location"
-          + "s/*/agent/sessions/*}:detectIntent:\001*Z^\""
-          + "Y/v2/{session=projects/*/locations/*/age"
-          + "nt/environments/*/users/*/sessions/*}:de"
-          + "tectIntent:\001*\332A\023session,query_input\022\222\001\n\025"
-          + "StreamingDetectIntent\0228.google.cloud.dia"
-          + "logflow.v2.StreamingDetectIntentRequest\032"
-          + "9.google.cloud.dialogflow.v2.StreamingDe"
-          + "tectIntentResponse\"\000(\0010\001\032x\312A\031dialogflow."
-          + "googleapis.com\322AYhttps://www.googleapis."
-          + "com/auth/cloud-platform,https://www.goog"
-          + "leapis.com/auth/dialogflowB\352\003\n\036com.googl"
-          + "e.cloud.dialogflow.v2B\014SessionProtoP\001Z>c"
-          + "loud.google.com/go/dialogflow/apiv2/dial"
-          + "ogflowpb;dialogflowpb\370\001\001\242\002\002DF\252\002\032Google.C"
-          + "loud.Dialogflow.V2\352A\321\002\n!dialogflow.googl"
-          + "eapis.com/Session\022+projects/{project}/ag"
-          + "ent/sessions/{session}\022Sprojects/{projec"
-          + "t}/agent/environments/{environment}/user"
-          + "s/{user}/sessions/{session}\022@projects/{p"
-          + "roject}/locations/{location}/agent/sessi"
-          + "ons/{session}\022hprojects/{project}/locati"
-          + "ons/{location}/agent/environments/{envir"
-          + "onment}/users/{user}/sessions/{session}b"
-          + "\006proto3"
+          + "atus.proto\032\030google/type/latlng.proto\"\367\002\n"
+          + "\023DetectIntentRequest\022;\n\007session\030\001 \001(\tB*\342"
+          + "A\001\002\372A#\n!dialogflow.googleapis.com/Sessio"
+          + "n\022A\n\014query_params\030\002 \001(\0132+.google.cloud.d"
+          + "ialogflow.v2.QueryParameters\022A\n\013query_in"
+          + "put\030\003 \001(\0132&.google.cloud.dialogflow.v2.Q"
+          + "ueryInputB\004\342A\001\002\022J\n\023output_audio_config\030\004"
+          + " \001(\0132-.google.cloud.dialogflow.v2.Output"
+          + "AudioConfig\022<\n\030output_audio_config_mask\030"
+          + "\007 \001(\0132\032.google.protobuf.FieldMask\022\023\n\013inp"
+          + "ut_audio\030\005 \001(\014\"\370\001\n\024DetectIntentResponse\022"
+          + "\023\n\013response_id\030\001 \001(\t\022=\n\014query_result\030\002 \001"
+          + "(\0132\'.google.cloud.dialogflow.v2.QueryRes"
+          + "ult\022*\n\016webhook_status\030\003 \001(\0132\022.google.rpc"
+          + ".Status\022\024\n\014output_audio\030\004 \001(\014\022J\n\023output_"
+          + "audio_config\030\006 \001(\0132-.google.cloud.dialog"
+          + "flow.v2.OutputAudioConfig\"\215\004\n\017QueryParam"
+          + "eters\022\021\n\ttime_zone\030\001 \001(\t\022)\n\014geo_location"
+          + "\030\002 \001(\0132\023.google.type.LatLng\0225\n\010contexts\030"
+          + "\003 \003(\0132#.google.cloud.dialogflow.v2.Conte"
+          + "xt\022\026\n\016reset_contexts\030\004 \001(\010\022K\n\024session_en"
+          + "tity_types\030\005 \003(\0132-.google.cloud.dialogfl"
+          + "ow.v2.SessionEntityType\022(\n\007payload\030\006 \001(\013"
+          + "2\027.google.protobuf.Struct\022e\n!sentiment_a"
+          + "nalysis_request_config\030\n \001(\0132:.google.cl"
+          + "oud.dialogflow.v2.SentimentAnalysisReque"
+          + "stConfig\022X\n\017webhook_headers\030\016 \003(\0132?.goog"
+          + "le.cloud.dialogflow.v2.QueryParameters.W"
+          + "ebhookHeadersEntry\0325\n\023WebhookHeadersEntr"
+          + "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\313\001\n\nQu"
+          + "eryInput\022D\n\014audio_config\030\001 \001(\0132,.google."
+          + "cloud.dialogflow.v2.InputAudioConfigH\000\0225"
+          + "\n\004text\030\002 \001(\0132%.google.cloud.dialogflow.v"
+          + "2.TextInputH\000\0227\n\005event\030\003 \001(\0132&.google.cl"
+          + "oud.dialogflow.v2.EventInputH\000B\007\n\005input\""
+          + "\256\005\n\013QueryResult\022\022\n\nquery_text\030\001 \001(\t\022\025\n\rl"
+          + "anguage_code\030\017 \001(\t\022%\n\035speech_recognition"
+          + "_confidence\030\002 \001(\002\022\016\n\006action\030\003 \001(\t\022+\n\npar"
+          + "ameters\030\004 \001(\0132\027.google.protobuf.Struct\022#"
+          + "\n\033all_required_params_present\030\005 \001(\010\022\034\n\024c"
+          + "ancels_slot_filling\030\025 \001(\010\022\030\n\020fulfillment"
+          + "_text\030\006 \001(\t\022H\n\024fulfillment_messages\030\007 \003("
+          + "\0132*.google.cloud.dialogflow.v2.Intent.Me"
+          + "ssage\022\026\n\016webhook_source\030\010 \001(\t\0220\n\017webhook"
+          + "_payload\030\t \001(\0132\027.google.protobuf.Struct\022"
+          + "<\n\017output_contexts\030\n \003(\0132#.google.cloud."
+          + "dialogflow.v2.Context\0222\n\006intent\030\013 \001(\0132\"."
+          + "google.cloud.dialogflow.v2.Intent\022#\n\033int"
+          + "ent_detection_confidence\030\014 \001(\002\0220\n\017diagno"
+          + "stic_info\030\016 \001(\0132\027.google.protobuf.Struct"
+          + "\022V\n\031sentiment_analysis_result\030\021 \001(\01323.go"
+          + "ogle.cloud.dialogflow.v2.SentimentAnalys"
+          + "isResult\"\275\003\n\034StreamingDetectIntentReques"
+          + "t\022;\n\007session\030\001 \001(\tB*\342A\001\002\372A#\n!dialogflow."
+          + "googleapis.com/Session\022A\n\014query_params\030\002"
+          + " \001(\0132+.google.cloud.dialogflow.v2.QueryP"
+          + "arameters\022A\n\013query_input\030\003 \001(\0132&.google."
+          + "cloud.dialogflow.v2.QueryInputB\004\342A\001\002\022\034\n\020"
+          + "single_utterance\030\004 \001(\010B\002\030\001\022J\n\023output_aud"
+          + "io_config\030\005 \001(\0132-.google.cloud.dialogflo"
+          + "w.v2.OutputAudioConfig\022<\n\030output_audio_c"
+          + "onfig_mask\030\007 \001(\0132\032.google.protobuf.Field"
+          + "Mask\022\023\n\013input_audio\030\006 \001(\014\022\035\n\025enable_debu"
+          + "gging_info\030\010 \001(\010\"\370\006\n\036CloudConversationDe"
+          + "buggingInfo\022\031\n\021audio_data_chunks\030\001 \001(\005\0229"
+          + "\n\026result_end_time_offset\030\002 \001(\0132\031.google."
+          + "protobuf.Duration\0227\n\024first_audio_duratio"
+          + "n\030\003 \001(\0132\031.google.protobuf.Duration\022\030\n\020si"
+          + "ngle_utterance\030\005 \001(\010\022C\n speech_partial_r"
+          + "esults_end_times\030\006 \003(\0132\031.google.protobuf"
+          + ".Duration\022A\n\036speech_final_results_end_ti"
+          + "mes\030\007 \003(\0132\031.google.protobuf.Duration\022\031\n\021"
+          + "partial_responses\030\010 \001(\005\022,\n$speaker_id_pa"
+          + "ssive_latency_ms_offset\030\t \001(\005\022\037\n\027bargein"
+          + "_event_triggered\030\n \001(\010\022\037\n\027speech_single_"
+          + "utterance\030\013 \001(\010\022=\n\032dtmf_partial_results_"
+          + "times\030\014 \003(\0132\031.google.protobuf.Duration\022;"
+          + "\n\030dtmf_final_results_times\030\r \003(\0132\031.googl"
+          + "e.protobuf.Duration\022C\n single_utterance_"
+          + "end_time_offset\030\016 \001(\0132\031.google.protobuf."
+          + "Duration\0224\n\021no_speech_timeout\030\017 \001(\0132\031.go"
+          + "ogle.protobuf.Duration\022\025\n\ris_input_text\030"
+          + "\020 \001(\010\022@\n\035client_half_close_time_offset\030\021"
+          + " \001(\0132\031.google.protobuf.Duration\022J\n\'clien"
+          + "t_half_close_streaming_time_offset\030\022 \001(\013"
+          + "2\031.google.protobuf.Duration\"\251\003\n\035Streamin"
+          + "gDetectIntentResponse\022\023\n\013response_id\030\001 \001"
+          + "(\t\022R\n\022recognition_result\030\002 \001(\01326.google."
+          + "cloud.dialogflow.v2.StreamingRecognition"
+          + "Result\022=\n\014query_result\030\003 \001(\0132\'.google.cl"
+          + "oud.dialogflow.v2.QueryResult\022*\n\016webhook"
+          + "_status\030\004 \001(\0132\022.google.rpc.Status\022\024\n\014out"
+          + "put_audio\030\005 \001(\014\022J\n\023output_audio_config\030\006"
+          + " \001(\0132-.google.cloud.dialogflow.v2.Output"
+          + "AudioConfig\022R\n\016debugging_info\030\010 \001(\0132:.go"
+          + "ogle.cloud.dialogflow.v2.CloudConversati"
+          + "onDebuggingInfo\"\235\003\n\032StreamingRecognition"
+          + "Result\022X\n\014message_type\030\001 \001(\0162B.google.cl"
+          + "oud.dialogflow.v2.StreamingRecognitionRe"
+          + "sult.MessageType\022\022\n\ntranscript\030\002 \001(\t\022\020\n\010"
+          + "is_final\030\003 \001(\010\022\022\n\nconfidence\030\004 \001(\002\022D\n\020sp"
+          + "eech_word_info\030\007 \003(\0132*.google.cloud.dial"
+          + "ogflow.v2.SpeechWordInfo\0224\n\021speech_end_o"
+          + "ffset\030\010 \001(\0132\031.google.protobuf.Duration\022\025"
+          + "\n\rlanguage_code\030\n \001(\t\"X\n\013MessageType\022\034\n\030"
+          + "MESSAGE_TYPE_UNSPECIFIED\020\000\022\016\n\nTRANSCRIPT"
+          + "\020\001\022\033\n\027END_OF_SINGLE_UTTERANCE\020\002\"<\n\tTextI"
+          + "nput\022\022\n\004text\030\001 \001(\tB\004\342A\001\002\022\033\n\rlanguage_cod"
+          + "e\030\002 \001(\tB\004\342A\001\002\"j\n\nEventInput\022\022\n\004name\030\001 \001("
+          + "\tB\004\342A\001\002\022+\n\nparameters\030\002 \001(\0132\027.google.pro"
+          + "tobuf.Struct\022\033\n\rlanguage_code\030\003 \001(\tB\004\342A\001"
+          + "\002\"F\n\036SentimentAnalysisRequestConfig\022$\n\034a"
+          + "nalyze_query_text_sentiment\030\001 \001(\010\"^\n\027Sen"
+          + "timentAnalysisResult\022C\n\024query_text_senti"
+          + "ment\030\001 \001(\0132%.google.cloud.dialogflow.v2."
+          + "Sentiment\"-\n\tSentiment\022\r\n\005score\030\001 \001(\002\022\021\n"
+          + "\tmagnitude\030\002 \001(\0022\345\005\n\010Sessions\022\311\003\n\014Detect"
+          + "Intent\022/.google.cloud.dialogflow.v2.Dete"
+          + "ctIntentRequest\0320.google.cloud.dialogflo"
+          + "w.v2.DetectIntentResponse\"\325\002\332A\023session,q"
+          + "uery_input\202\323\344\223\002\270\002\"6/v2/{session=projects"
+          + "/*/agent/sessions/*}:detectIntent:\001*ZR\"M"
+          + "/v2/{session=projects/*/agent/environmen"
+          + "ts/*/users/*/sessions/*}:detectIntent:\001*"
+          + "ZG\"B/v2/{session=projects/*/locations/*/"
+          + "agent/sessions/*}:detectIntent:\001*Z^\"Y/v2"
+          + "/{session=projects/*/locations/*/agent/e"
+          + "nvironments/*/users/*/sessions/*}:detect"
+          + "Intent:\001*\022\222\001\n\025StreamingDetectIntent\0228.go"
+          + "ogle.cloud.dialogflow.v2.StreamingDetect"
+          + "IntentRequest\0329.google.cloud.dialogflow."
+          + "v2.StreamingDetectIntentResponse\"\000(\0010\001\032x"
+          + "\312A\031dialogflow.googleapis.com\322AYhttps://w"
+          + "ww.googleapis.com/auth/cloud-platform,ht"
+          + "tps://www.googleapis.com/auth/dialogflow"
+          + "B\352\003\n\036com.google.cloud.dialogflow.v2B\014Ses"
+          + "sionProtoP\001Z>cloud.google.com/go/dialogf"
+          + "low/apiv2/dialogflowpb;dialogflowpb\370\001\001\242\002"
+          + "\002DF\252\002\032Google.Cloud.Dialogflow.V2\352A\321\002\n!di"
+          + "alogflow.googleapis.com/Session\022+project"
+          + "s/{project}/agent/sessions/{session}\022Spr"
+          + "ojects/{project}/agent/environments/{env"
+          + "ironment}/users/{user}/sessions/{session"
+          + "}\022@projects/{project}/locations/{locatio"
+          + "n}/agent/sessions/{session}\022hprojects/{p"
+          + "roject}/locations/{location}/agent/envir"
+          + "onments/{environment}/users/{user}/sessi"
+          + "ons/{session}b\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -336,9 +365,34 @@ public final class SessionProto {
               "OutputAudioConfig",
               "OutputAudioConfigMask",
               "InputAudio",
+              "EnableDebuggingInfo",
+            });
+    internal_static_google_cloud_dialogflow_v2_CloudConversationDebuggingInfo_descriptor =
+        getDescriptor().getMessageTypes().get(6);
+    internal_static_google_cloud_dialogflow_v2_CloudConversationDebuggingInfo_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_dialogflow_v2_CloudConversationDebuggingInfo_descriptor,
+            new java.lang.String[] {
+              "AudioDataChunks",
+              "ResultEndTimeOffset",
+              "FirstAudioDuration",
+              "SingleUtterance",
+              "SpeechPartialResultsEndTimes",
+              "SpeechFinalResultsEndTimes",
+              "PartialResponses",
+              "SpeakerIdPassiveLatencyMsOffset",
+              "BargeinEventTriggered",
+              "SpeechSingleUtterance",
+              "DtmfPartialResultsTimes",
+              "DtmfFinalResultsTimes",
+              "SingleUtteranceEndTimeOffset",
+              "NoSpeechTimeout",
+              "IsInputText",
+              "ClientHalfCloseTimeOffset",
+              "ClientHalfCloseStreamingTimeOffset",
             });
     internal_static_google_cloud_dialogflow_v2_StreamingDetectIntentResponse_descriptor =
-        getDescriptor().getMessageTypes().get(6);
+        getDescriptor().getMessageTypes().get(7);
     internal_static_google_cloud_dialogflow_v2_StreamingDetectIntentResponse_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_dialogflow_v2_StreamingDetectIntentResponse_descriptor,
@@ -349,9 +403,10 @@ public final class SessionProto {
               "WebhookStatus",
               "OutputAudio",
               "OutputAudioConfig",
+              "DebuggingInfo",
             });
     internal_static_google_cloud_dialogflow_v2_StreamingRecognitionResult_descriptor =
-        getDescriptor().getMessageTypes().get(7);
+        getDescriptor().getMessageTypes().get(8);
     internal_static_google_cloud_dialogflow_v2_StreamingRecognitionResult_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_dialogflow_v2_StreamingRecognitionResult_descriptor,
@@ -365,7 +420,7 @@ public final class SessionProto {
               "LanguageCode",
             });
     internal_static_google_cloud_dialogflow_v2_TextInput_descriptor =
-        getDescriptor().getMessageTypes().get(8);
+        getDescriptor().getMessageTypes().get(9);
     internal_static_google_cloud_dialogflow_v2_TextInput_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_dialogflow_v2_TextInput_descriptor,
@@ -373,7 +428,7 @@ public final class SessionProto {
               "Text", "LanguageCode",
             });
     internal_static_google_cloud_dialogflow_v2_EventInput_descriptor =
-        getDescriptor().getMessageTypes().get(9);
+        getDescriptor().getMessageTypes().get(10);
     internal_static_google_cloud_dialogflow_v2_EventInput_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_dialogflow_v2_EventInput_descriptor,
@@ -381,7 +436,7 @@ public final class SessionProto {
               "Name", "Parameters", "LanguageCode",
             });
     internal_static_google_cloud_dialogflow_v2_SentimentAnalysisRequestConfig_descriptor =
-        getDescriptor().getMessageTypes().get(10);
+        getDescriptor().getMessageTypes().get(11);
     internal_static_google_cloud_dialogflow_v2_SentimentAnalysisRequestConfig_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_dialogflow_v2_SentimentAnalysisRequestConfig_descriptor,
@@ -389,7 +444,7 @@ public final class SessionProto {
               "AnalyzeQueryTextSentiment",
             });
     internal_static_google_cloud_dialogflow_v2_SentimentAnalysisResult_descriptor =
-        getDescriptor().getMessageTypes().get(11);
+        getDescriptor().getMessageTypes().get(12);
     internal_static_google_cloud_dialogflow_v2_SentimentAnalysisResult_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_dialogflow_v2_SentimentAnalysisResult_descriptor,
@@ -397,7 +452,7 @@ public final class SessionProto {
               "QueryTextSentiment",
             });
     internal_static_google_cloud_dialogflow_v2_Sentiment_descriptor =
-        getDescriptor().getMessageTypes().get(12);
+        getDescriptor().getMessageTypes().get(13);
     internal_static_google_cloud_dialogflow_v2_Sentiment_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_dialogflow_v2_Sentiment_descriptor,

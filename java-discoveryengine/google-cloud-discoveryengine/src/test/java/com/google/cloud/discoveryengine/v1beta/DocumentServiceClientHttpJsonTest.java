@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,7 @@ import com.google.common.collect.Lists;
 import com.google.longrunning.Operation;
 import com.google.protobuf.Any;
 import com.google.protobuf.Empty;
+import com.google.protobuf.Struct;
 import com.google.rpc.Status;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -91,7 +92,9 @@ public class DocumentServiceClientHttpJsonTest {
                     .toString())
             .setId("id3355")
             .setSchemaId("schemaId-697673060")
+            .setContent(Document.Content.newBuilder().build())
             .setParentDocumentId("parentDocumentId1990105056")
+            .setDerivedStructData(Struct.newBuilder().build())
             .build();
     mockService.addResponse(expectedResponse);
 
@@ -145,7 +148,9 @@ public class DocumentServiceClientHttpJsonTest {
                     .toString())
             .setId("id3355")
             .setSchemaId("schemaId-697673060")
+            .setContent(Document.Content.newBuilder().build())
             .setParentDocumentId("parentDocumentId1990105056")
+            .setDerivedStructData(Struct.newBuilder().build())
             .build();
     mockService.addResponse(expectedResponse);
 
@@ -303,7 +308,9 @@ public class DocumentServiceClientHttpJsonTest {
                     .toString())
             .setId("id3355")
             .setSchemaId("schemaId-697673060")
+            .setContent(Document.Content.newBuilder().build())
             .setParentDocumentId("parentDocumentId1990105056")
+            .setDerivedStructData(Struct.newBuilder().build())
             .build();
     mockService.addResponse(expectedResponse);
 
@@ -361,7 +368,9 @@ public class DocumentServiceClientHttpJsonTest {
                     .toString())
             .setId("id3355")
             .setSchemaId("schemaId-697673060")
+            .setContent(Document.Content.newBuilder().build())
             .setParentDocumentId("parentDocumentId1990105056")
+            .setDerivedStructData(Struct.newBuilder().build())
             .build();
     mockService.addResponse(expectedResponse);
 
@@ -417,7 +426,9 @@ public class DocumentServiceClientHttpJsonTest {
                     .toString())
             .setId("id3355")
             .setSchemaId("schemaId-697673060")
+            .setContent(Document.Content.newBuilder().build())
             .setParentDocumentId("parentDocumentId1990105056")
+            .setDerivedStructData(Struct.newBuilder().build())
             .build();
     mockService.addResponse(expectedResponse);
 
@@ -431,7 +442,9 @@ public class DocumentServiceClientHttpJsonTest {
                             .toString())
                     .setId("id3355")
                     .setSchemaId("schemaId-697673060")
+                    .setContent(Document.Content.newBuilder().build())
                     .setParentDocumentId("parentDocumentId1990105056")
+                    .setDerivedStructData(Struct.newBuilder().build())
                     .build())
             .setAllowMissing(true)
             .build();
@@ -476,7 +489,9 @@ public class DocumentServiceClientHttpJsonTest {
                               .toString())
                       .setId("id3355")
                       .setSchemaId("schemaId-697673060")
+                      .setContent(Document.Content.newBuilder().build())
                       .setParentDocumentId("parentDocumentId1990105056")
+                      .setDerivedStructData(Struct.newBuilder().build())
                       .build())
               .setAllowMissing(true)
               .build();
@@ -595,6 +610,8 @@ public class DocumentServiceClientHttpJsonTest {
                         "[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]")
                     .toString())
             .setErrorConfig(ImportErrorConfig.newBuilder().build())
+            .setAutoGenerateIds(true)
+            .setIdField("idField1629396127")
             .build();
 
     ImportDocumentsResponse actualResponse = client.importDocumentsAsync(request).get();
@@ -630,8 +647,76 @@ public class DocumentServiceClientHttpJsonTest {
                           "[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]")
                       .toString())
               .setErrorConfig(ImportErrorConfig.newBuilder().build())
+              .setAutoGenerateIds(true)
+              .setIdField("idField1629396127")
               .build();
       client.importDocumentsAsync(request).get();
+      Assert.fail("No exception raised");
+    } catch (ExecutionException e) {
+    }
+  }
+
+  @Test
+  public void purgeDocumentsTest() throws Exception {
+    PurgeDocumentsResponse expectedResponse =
+        PurgeDocumentsResponse.newBuilder()
+            .setPurgeCount(575305851)
+            .addAllPurgeSample(new ArrayList<String>())
+            .build();
+    Operation resultOperation =
+        Operation.newBuilder()
+            .setName("purgeDocumentsTest")
+            .setDone(true)
+            .setResponse(Any.pack(expectedResponse))
+            .build();
+    mockService.addResponse(resultOperation);
+
+    PurgeDocumentsRequest request =
+        PurgeDocumentsRequest.newBuilder()
+            .setParent(
+                BranchName.ofProjectLocationDataStoreBranchName(
+                        "[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]")
+                    .toString())
+            .setFilter("filter-1274492040")
+            .setForce(true)
+            .build();
+
+    PurgeDocumentsResponse actualResponse = client.purgeDocumentsAsync(request).get();
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<String> actualRequests = mockService.getRequestPaths();
+    Assert.assertEquals(1, actualRequests.size());
+
+    String apiClientHeaderKey =
+        mockService
+            .getRequestHeaders()
+            .get(ApiClientHeaderProvider.getDefaultApiClientHeaderKey())
+            .iterator()
+            .next();
+    Assert.assertTrue(
+        GaxHttpJsonProperties.getDefaultApiClientHeaderPattern()
+            .matcher(apiClientHeaderKey)
+            .matches());
+  }
+
+  @Test
+  public void purgeDocumentsExceptionTest() throws Exception {
+    ApiException exception =
+        ApiExceptionFactory.createException(
+            new Exception(), FakeStatusCode.of(StatusCode.Code.INVALID_ARGUMENT), false);
+    mockService.addException(exception);
+
+    try {
+      PurgeDocumentsRequest request =
+          PurgeDocumentsRequest.newBuilder()
+              .setParent(
+                  BranchName.ofProjectLocationDataStoreBranchName(
+                          "[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]")
+                      .toString())
+              .setFilter("filter-1274492040")
+              .setForce(true)
+              .build();
+      client.purgeDocumentsAsync(request).get();
       Assert.fail("No exception raised");
     } catch (ExecutionException e) {
     }

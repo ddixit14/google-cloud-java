@@ -22,7 +22,8 @@ package com.google.cloud.tasks.v2beta2;
  *
  *
  * <pre>
- * Request message for [DeleteQueue][google.cloud.tasks.v2beta2.CloudTasks.DeleteQueue].
+ * Request message for
+ * [DeleteQueue][google.cloud.tasks.v2beta2.CloudTasks.DeleteQueue].
  * </pre>
  *
  * Protobuf type {@code google.cloud.tasks.v2beta2.DeleteQueueRequest}
@@ -45,11 +46,6 @@ public final class DeleteQueueRequest extends com.google.protobuf.GeneratedMessa
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new DeleteQueueRequest();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -287,7 +283,8 @@ public final class DeleteQueueRequest extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Request message for [DeleteQueue][google.cloud.tasks.v2beta2.CloudTasks.DeleteQueue].
+   * Request message for
+   * [DeleteQueue][google.cloud.tasks.v2beta2.CloudTasks.DeleteQueue].
    * </pre>
    *
    * Protobuf type {@code google.cloud.tasks.v2beta2.DeleteQueueRequest}

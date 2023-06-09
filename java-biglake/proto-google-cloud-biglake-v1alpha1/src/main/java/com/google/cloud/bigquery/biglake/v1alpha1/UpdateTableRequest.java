@@ -45,11 +45,6 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
     return new UpdateTableRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.bigquery.biglake.v1alpha1.MetastoreProto
         .internal_static_google_cloud_bigquery_biglake_v1alpha1_UpdateTableRequest_descriptor;
@@ -72,7 +67,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Required. The table to update.
-   * The table's `name` field is used to identify the database to update.
+   *
+   * The table's `name` field is used to identify the table to update.
    * Format:
    * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
    * </pre>
@@ -92,7 +88,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Required. The table to update.
-   * The table's `name` field is used to identify the database to update.
+   *
+   * The table's `name` field is used to identify the table to update.
    * Format:
    * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
    * </pre>
@@ -114,7 +111,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Required. The table to update.
-   * The table's `name` field is used to identify the database to update.
+   *
+   * The table's `name` field is used to identify the table to update.
    * Format:
    * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
    * </pre>
@@ -137,6 +135,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * The list of fields to update.
+   *
    * For the `FieldMask` definition, see
    * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
    * If not set, defaults to all of the fields that are allowed to update.
@@ -155,6 +154,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * The list of fields to update.
+   *
    * For the `FieldMask` definition, see
    * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
    * If not set, defaults to all of the fields that are allowed to update.
@@ -173,6 +173,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * The list of fields to update.
+   *
    * For the `FieldMask` definition, see
    * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
    * If not set, defaults to all of the fields that are allowed to update.
@@ -580,7 +581,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Required. The table to update.
-     * The table's `name` field is used to identify the database to update.
+     *
+     * The table's `name` field is used to identify the table to update.
      * Format:
      * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
      * </pre>
@@ -599,7 +601,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Required. The table to update.
-     * The table's `name` field is used to identify the database to update.
+     *
+     * The table's `name` field is used to identify the table to update.
      * Format:
      * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
      * </pre>
@@ -624,7 +627,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Required. The table to update.
-     * The table's `name` field is used to identify the database to update.
+     *
+     * The table's `name` field is used to identify the table to update.
      * Format:
      * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
      * </pre>
@@ -651,7 +655,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Required. The table to update.
-     * The table's `name` field is used to identify the database to update.
+     *
+     * The table's `name` field is used to identify the table to update.
      * Format:
      * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
      * </pre>
@@ -676,7 +681,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Required. The table to update.
-     * The table's `name` field is used to identify the database to update.
+     *
+     * The table's `name` field is used to identify the table to update.
      * Format:
      * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
      * </pre>
@@ -706,7 +712,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Required. The table to update.
-     * The table's `name` field is used to identify the database to update.
+     *
+     * The table's `name` field is used to identify the table to update.
      * Format:
      * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
      * </pre>
@@ -730,7 +737,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Required. The table to update.
-     * The table's `name` field is used to identify the database to update.
+     *
+     * The table's `name` field is used to identify the table to update.
      * Format:
      * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
      * </pre>
@@ -749,7 +757,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Required. The table to update.
-     * The table's `name` field is used to identify the database to update.
+     *
+     * The table's `name` field is used to identify the table to update.
      * Format:
      * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
      * </pre>
@@ -772,7 +781,8 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Required. The table to update.
-     * The table's `name` field is used to identify the database to update.
+     *
+     * The table's `name` field is used to identify the table to update.
      * Format:
      * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
      * </pre>
@@ -809,6 +819,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * The list of fields to update.
+     *
      * For the `FieldMask` definition, see
      * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
      * If not set, defaults to all of the fields that are allowed to update.
@@ -826,6 +837,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * The list of fields to update.
+     *
      * For the `FieldMask` definition, see
      * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
      * If not set, defaults to all of the fields that are allowed to update.
@@ -849,6 +861,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * The list of fields to update.
+     *
      * For the `FieldMask` definition, see
      * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
      * If not set, defaults to all of the fields that are allowed to update.
@@ -874,6 +887,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * The list of fields to update.
+     *
      * For the `FieldMask` definition, see
      * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
      * If not set, defaults to all of the fields that are allowed to update.
@@ -896,6 +910,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * The list of fields to update.
+     *
      * For the `FieldMask` definition, see
      * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
      * If not set, defaults to all of the fields that are allowed to update.
@@ -924,6 +939,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * The list of fields to update.
+     *
      * For the `FieldMask` definition, see
      * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
      * If not set, defaults to all of the fields that are allowed to update.
@@ -946,6 +962,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * The list of fields to update.
+     *
      * For the `FieldMask` definition, see
      * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
      * If not set, defaults to all of the fields that are allowed to update.
@@ -963,6 +980,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * The list of fields to update.
+     *
      * For the `FieldMask` definition, see
      * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
      * If not set, defaults to all of the fields that are allowed to update.
@@ -984,6 +1002,7 @@ public final class UpdateTableRequest extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * The list of fields to update.
+     *
      * For the `FieldMask` definition, see
      * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
      * If not set, defaults to all of the fields that are allowed to update.

@@ -22,7 +22,7 @@ package com.google.cloud.securitycenter.v1;
  *
  *
  * <pre>
- * Representa a single contact's email address
+ * The email address of a contact.
  * </pre>
  *
  * Protobuf type {@code google.cloud.securitycenter.v1.Contact}
@@ -45,11 +45,6 @@ public final class Contact extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Contact();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -75,7 +70,7 @@ public final class Contact extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * An email address e.g. "person123&#64;company.com"
+   * An email address. For example, "`person123&#64;company.com`".
    * </pre>
    *
    * <code>string email = 1;</code>
@@ -98,7 +93,7 @@ public final class Contact extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * An email address e.g. "person123&#64;company.com"
+   * An email address. For example, "`person123&#64;company.com`".
    * </pre>
    *
    * <code>string email = 1;</code>
@@ -281,7 +276,7 @@ public final class Contact extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Representa a single contact's email address
+   * The email address of a contact.
    * </pre>
    *
    * Protobuf type {@code google.cloud.securitycenter.v1.Contact}
@@ -464,7 +459,7 @@ public final class Contact extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * An email address e.g. "person123&#64;company.com"
+     * An email address. For example, "`person123&#64;company.com`".
      * </pre>
      *
      * <code>string email = 1;</code>
@@ -486,7 +481,7 @@ public final class Contact extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * An email address e.g. "person123&#64;company.com"
+     * An email address. For example, "`person123&#64;company.com`".
      * </pre>
      *
      * <code>string email = 1;</code>
@@ -508,7 +503,7 @@ public final class Contact extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * An email address e.g. "person123&#64;company.com"
+     * An email address. For example, "`person123&#64;company.com`".
      * </pre>
      *
      * <code>string email = 1;</code>
@@ -529,7 +524,7 @@ public final class Contact extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * An email address e.g. "person123&#64;company.com"
+     * An email address. For example, "`person123&#64;company.com`".
      * </pre>
      *
      * <code>string email = 1;</code>
@@ -546,7 +541,7 @@ public final class Contact extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * An email address e.g. "person123&#64;company.com"
+     * An email address. For example, "`person123&#64;company.com`".
      * </pre>
      *
      * <code>string email = 1;</code>

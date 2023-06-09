@@ -49,11 +49,6 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
     return new SynthesizeLongAudioRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.texttospeech.v1beta1.TextToSpeechLongAudioSynthesisProto
         .internal_static_google_cloud_texttospeech_v1beta1_SynthesizeLongAudioRequest_descriptor;
@@ -78,7 +73,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    * <pre>
    * The resource states of the request in the form of
-   * `projects/&#42;&#47;locations/&#42;&#47;voices/&#42;`.
+   * `projects/&#42;&#47;locations/&#42;`.
    * </pre>
    *
    * <code>string parent = 1;</code>
@@ -102,7 +97,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    * <pre>
    * The resource states of the request in the form of
-   * `projects/&#42;&#47;locations/&#42;&#47;voices/&#42;`.
+   * `projects/&#42;&#47;locations/&#42;`.
    * </pre>
    *
    * <code>string parent = 1;</code>
@@ -129,6 +124,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    * <pre>
    * Required. The Synthesizer requires either plain text or SSML as input.
+   * While Long Audio is in preview, SSML is temporarily unsupported.
    * </pre>
    *
    * <code>
@@ -146,6 +142,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    * <pre>
    * Required. The Synthesizer requires either plain text or SSML as input.
+   * While Long Audio is in preview, SSML is temporarily unsupported.
    * </pre>
    *
    * <code>
@@ -165,6 +162,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    * <pre>
    * Required. The Synthesizer requires either plain text or SSML as input.
+   * While Long Audio is in preview, SSML is temporarily unsupported.
    * </pre>
    *
    * <code>
@@ -242,12 +240,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * Specifies a Cloud Storage URI for the synthesis results. Must be
+   * Required. Specifies a Cloud Storage URI for the synthesis results. Must be
    * specified in the format: `gs://bucket_name/object_name`, and the bucket
    * must already exist.
    * </pre>
    *
-   * <code>string output_gcs_uri = 4;</code>
+   * <code>string output_gcs_uri = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    *
    * @return The outputGcsUri.
    */
@@ -267,12 +265,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * Specifies a Cloud Storage URI for the synthesis results. Must be
+   * Required. Specifies a Cloud Storage URI for the synthesis results. Must be
    * specified in the format: `gs://bucket_name/object_name`, and the bucket
    * must already exist.
    * </pre>
    *
-   * <code>string output_gcs_uri = 4;</code>
+   * <code>string output_gcs_uri = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    *
    * @return The bytes for outputGcsUri.
    */
@@ -295,10 +293,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * The desired voice of the synthesized audio.
+   * Required. The desired voice of the synthesized audio.
    * </pre>
    *
-   * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+   * <code>
+   * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    *
    * @return Whether the voice field is set.
    */
@@ -310,10 +310,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * The desired voice of the synthesized audio.
+   * Required. The desired voice of the synthesized audio.
    * </pre>
    *
-   * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+   * <code>
+   * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    *
    * @return The voice.
    */
@@ -327,10 +329,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * The desired voice of the synthesized audio.
+   * Required. The desired voice of the synthesized audio.
    * </pre>
    *
-   * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+   * <code>
+   * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Override
   public com.google.cloud.texttospeech.v1beta1.VoiceSelectionParamsOrBuilder getVoiceOrBuilder() {
@@ -811,7 +815,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * The resource states of the request in the form of
-     * `projects/&#42;&#47;locations/&#42;&#47;voices/&#42;`.
+     * `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>string parent = 1;</code>
@@ -834,7 +838,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * The resource states of the request in the form of
-     * `projects/&#42;&#47;locations/&#42;&#47;voices/&#42;`.
+     * `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>string parent = 1;</code>
@@ -857,7 +861,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * The resource states of the request in the form of
-     * `projects/&#42;&#47;locations/&#42;&#47;voices/&#42;`.
+     * `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>string parent = 1;</code>
@@ -879,7 +883,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * The resource states of the request in the form of
-     * `projects/&#42;&#47;locations/&#42;&#47;voices/&#42;`.
+     * `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>string parent = 1;</code>
@@ -897,7 +901,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * The resource states of the request in the form of
-     * `projects/&#42;&#47;locations/&#42;&#47;voices/&#42;`.
+     * `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>string parent = 1;</code>
@@ -927,6 +931,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Required. The Synthesizer requires either plain text or SSML as input.
+     * While Long Audio is in preview, SSML is temporarily unsupported.
      * </pre>
      *
      * <code>
@@ -943,6 +948,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Required. The Synthesizer requires either plain text or SSML as input.
+     * While Long Audio is in preview, SSML is temporarily unsupported.
      * </pre>
      *
      * <code>
@@ -965,6 +971,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Required. The Synthesizer requires either plain text or SSML as input.
+     * While Long Audio is in preview, SSML is temporarily unsupported.
      * </pre>
      *
      * <code>
@@ -989,6 +996,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Required. The Synthesizer requires either plain text or SSML as input.
+     * While Long Audio is in preview, SSML is temporarily unsupported.
      * </pre>
      *
      * <code>
@@ -1011,6 +1019,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Required. The Synthesizer requires either plain text or SSML as input.
+     * While Long Audio is in preview, SSML is temporarily unsupported.
      * </pre>
      *
      * <code>
@@ -1039,6 +1048,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Required. The Synthesizer requires either plain text or SSML as input.
+     * While Long Audio is in preview, SSML is temporarily unsupported.
      * </pre>
      *
      * <code>
@@ -1060,6 +1070,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Required. The Synthesizer requires either plain text or SSML as input.
+     * While Long Audio is in preview, SSML is temporarily unsupported.
      * </pre>
      *
      * <code>
@@ -1076,6 +1087,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Required. The Synthesizer requires either plain text or SSML as input.
+     * While Long Audio is in preview, SSML is temporarily unsupported.
      * </pre>
      *
      * <code>
@@ -1096,6 +1108,7 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Required. The Synthesizer requires either plain text or SSML as input.
+     * While Long Audio is in preview, SSML is temporarily unsupported.
      * </pre>
      *
      * <code>
@@ -1327,12 +1340,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Specifies a Cloud Storage URI for the synthesis results. Must be
+     * Required. Specifies a Cloud Storage URI for the synthesis results. Must be
      * specified in the format: `gs://bucket_name/object_name`, and the bucket
      * must already exist.
      * </pre>
      *
-     * <code>string output_gcs_uri = 4;</code>
+     * <code>string output_gcs_uri = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @return The outputGcsUri.
      */
@@ -1351,12 +1364,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Specifies a Cloud Storage URI for the synthesis results. Must be
+     * Required. Specifies a Cloud Storage URI for the synthesis results. Must be
      * specified in the format: `gs://bucket_name/object_name`, and the bucket
      * must already exist.
      * </pre>
      *
-     * <code>string output_gcs_uri = 4;</code>
+     * <code>string output_gcs_uri = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @return The bytes for outputGcsUri.
      */
@@ -1375,12 +1388,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Specifies a Cloud Storage URI for the synthesis results. Must be
+     * Required. Specifies a Cloud Storage URI for the synthesis results. Must be
      * specified in the format: `gs://bucket_name/object_name`, and the bucket
      * must already exist.
      * </pre>
      *
-     * <code>string output_gcs_uri = 4;</code>
+     * <code>string output_gcs_uri = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @param value The outputGcsUri to set.
      * @return This builder for chaining.
@@ -1398,12 +1411,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Specifies a Cloud Storage URI for the synthesis results. Must be
+     * Required. Specifies a Cloud Storage URI for the synthesis results. Must be
      * specified in the format: `gs://bucket_name/object_name`, and the bucket
      * must already exist.
      * </pre>
      *
-     * <code>string output_gcs_uri = 4;</code>
+     * <code>string output_gcs_uri = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @return This builder for chaining.
      */
@@ -1417,12 +1430,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Specifies a Cloud Storage URI for the synthesis results. Must be
+     * Required. Specifies a Cloud Storage URI for the synthesis results. Must be
      * specified in the format: `gs://bucket_name/object_name`, and the bucket
      * must already exist.
      * </pre>
      *
-     * <code>string output_gcs_uri = 4;</code>
+     * <code>string output_gcs_uri = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      *
      * @param value The bytes for outputGcsUri to set.
      * @return This builder for chaining.
@@ -1448,10 +1461,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * The desired voice of the synthesized audio.
+     * Required. The desired voice of the synthesized audio.
      * </pre>
      *
-     * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+     * <code>
+     * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      *
      * @return Whether the voice field is set.
      */
@@ -1462,10 +1477,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * The desired voice of the synthesized audio.
+     * Required. The desired voice of the synthesized audio.
      * </pre>
      *
-     * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+     * <code>
+     * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      *
      * @return The voice.
      */
@@ -1482,10 +1499,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * The desired voice of the synthesized audio.
+     * Required. The desired voice of the synthesized audio.
      * </pre>
      *
-     * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+     * <code>
+     * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setVoice(com.google.cloud.texttospeech.v1beta1.VoiceSelectionParams value) {
       if (voiceBuilder_ == null) {
@@ -1504,10 +1523,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * The desired voice of the synthesized audio.
+     * Required. The desired voice of the synthesized audio.
      * </pre>
      *
-     * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+     * <code>
+     * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setVoice(
         com.google.cloud.texttospeech.v1beta1.VoiceSelectionParams.Builder builderForValue) {
@@ -1524,10 +1545,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * The desired voice of the synthesized audio.
+     * Required. The desired voice of the synthesized audio.
      * </pre>
      *
-     * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+     * <code>
+     * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder mergeVoice(com.google.cloud.texttospeech.v1beta1.VoiceSelectionParams value) {
       if (voiceBuilder_ == null) {
@@ -1551,10 +1574,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * The desired voice of the synthesized audio.
+     * Required. The desired voice of the synthesized audio.
      * </pre>
      *
-     * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+     * <code>
+     * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder clearVoice() {
       bitField0_ = (bitField0_ & ~0x00000010);
@@ -1570,10 +1595,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * The desired voice of the synthesized audio.
+     * Required. The desired voice of the synthesized audio.
      * </pre>
      *
-     * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+     * <code>
+     * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.cloud.texttospeech.v1beta1.VoiceSelectionParams.Builder getVoiceBuilder() {
       bitField0_ |= 0x00000010;
@@ -1584,10 +1611,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * The desired voice of the synthesized audio.
+     * Required. The desired voice of the synthesized audio.
      * </pre>
      *
-     * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+     * <code>
+     * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.cloud.texttospeech.v1beta1.VoiceSelectionParamsOrBuilder getVoiceOrBuilder() {
       if (voiceBuilder_ != null) {
@@ -1602,10 +1631,12 @@ public final class SynthesizeLongAudioRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * The desired voice of the synthesized audio.
+     * Required. The desired voice of the synthesized audio.
      * </pre>
      *
-     * <code>.google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5;</code>
+     * <code>
+     * .google.cloud.texttospeech.v1beta1.VoiceSelectionParams voice = 5 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.cloud.texttospeech.v1beta1.VoiceSelectionParams,

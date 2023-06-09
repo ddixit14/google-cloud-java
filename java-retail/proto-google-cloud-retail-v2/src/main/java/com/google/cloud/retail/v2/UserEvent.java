@@ -42,28 +42,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
     eventType_ = "";
     visitorId_ = "";
     sessionId_ = "";
-    experimentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    experimentIds_ = com.google.protobuf.LazyStringArrayList.emptyList();
     attributionToken_ = "";
     productDetails_ = java.util.Collections.emptyList();
     cartId_ = "";
     searchQuery_ = "";
     filter_ = "";
     orderBy_ = "";
-    pageCategories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    pageCategories_ = com.google.protobuf.LazyStringArrayList.emptyList();
     uri_ = "";
     referrerUri_ = "";
     pageViewId_ = "";
+    entity_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new UserEvent();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -101,6 +97,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Required. User event type. Allowed values are:
+   *
    * * `add-to-cart`: Products being added to cart.
    * * `category-page-view`: Special pages such as sale or promotion pages
    *   viewed.
@@ -134,6 +131,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Required. User event type. Allowed values are:
+   *
    * * `add-to-cart`: Products being added to cart.
    * * `category-page-view`: Special pages such as sale or promotion pages
    *   viewed.
@@ -172,14 +170,18 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Required. A unique identifier for tracking visitors.
+   *
    * For example, this could be implemented with an HTTP cookie, which should be
    * able to uniquely identify a visitor on a single device. This unique
    * identifier should not change if the visitor log in/out of the website.
+   *
    * Don't set the field to the same fixed ID for different users. This mixes
    * the event history of those users together, which results in degraded model
    * quality.
+   *
    * The field must be a UTF-8 encoded string with a length limit of 128
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * The field should not contain PII or user-data. We recommend to use Google
    * Analytics [Client
    * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#clientId)
@@ -207,14 +209,18 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Required. A unique identifier for tracking visitors.
+   *
    * For example, this could be implemented with an HTTP cookie, which should be
    * able to uniquely identify a visitor on a single device. This unique
    * identifier should not change if the visitor log in/out of the website.
+   *
    * Don't set the field to the same fixed ID for different users. This mixes
    * the event history of those users together, which results in degraded model
    * quality.
+   *
    * The field must be a UTF-8 encoded string with a length limit of 128
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * The field should not contain PII or user-data. We recommend to use Google
    * Analytics [Client
    * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#clientId)
@@ -249,6 +255,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * A unique identifier for tracking a visitor session with a length limit of
    * 128 bytes. A session is an aggregation of an end user behavior in a time
    * span.
+   *
    * A general guideline to populate the sesion_id:
    * 1. If user has no activity for 30 min, a new session_id should be assigned.
    * 2. The session_id should be unique across users, suggest use uuid or add
@@ -278,6 +285,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * A unique identifier for tracking a visitor session with a length limit of
    * 128 bytes. A session is an aggregation of an end user behavior in a time
    * span.
+   *
    * A general guideline to populate the sesion_id:
    * 1. If user has no activity for 30 min, a new session_id should be assigned.
    * 2. The session_id should be unique across users, suggest use uuid or add
@@ -356,7 +364,8 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
   public static final int EXPERIMENT_IDS_FIELD_NUMBER = 4;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList experimentIds_;
+  private com.google.protobuf.LazyStringArrayList experimentIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
@@ -440,6 +449,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * [PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict].
    * This field enables accurate attribution of recommendation model
    * performance.
+   *
    * The value must be a valid
    * [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
    * for user events that are the result of
@@ -448,6 +458,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * [SearchResponse.attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token]
    * for user events that are the result of
    * [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+   *
    * This token enables us to accurately attribute page view or purchase back to
    * the event and the particular predict response containing this
    * clicked/purchased product. If user clicks on product K in the
@@ -483,6 +494,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * [PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict].
    * This field enables accurate attribution of recommendation model
    * performance.
+   *
    * The value must be a valid
    * [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
    * for user events that are the result of
@@ -491,6 +503,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * [SearchResponse.attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token]
    * for user events that are the result of
    * [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+   *
    * This token enables us to accurately attribute page view or purchase back to
    * the event and the particular predict response containing this
    * clicked/purchased product. If user clicks on product K in the
@@ -528,10 +541,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The main product details related to the event.
+   *
    * This field is optional except for the following event types:
+   *
    * * `add-to-cart`
    * * `detail-page-view`
    * * `purchase-complete`
+   *
    * In a `search` event, this field represents the products returned to the end
    * user on the current page (the end user may have not finished browsing the
    * whole page yet). When a new page is returned to the end user, after
@@ -552,10 +568,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The main product details related to the event.
+   *
    * This field is optional except for the following event types:
+   *
    * * `add-to-cart`
    * * `detail-page-view`
    * * `purchase-complete`
+   *
    * In a `search` event, this field represents the products returned to the end
    * user on the current page (the end user may have not finished browsing the
    * whole page yet). When a new page is returned to the end user, after
@@ -577,10 +596,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The main product details related to the event.
+   *
    * This field is optional except for the following event types:
+   *
    * * `add-to-cart`
    * * `detail-page-view`
    * * `purchase-complete`
+   *
    * In a `search` event, this field represents the products returned to the end
    * user on the current page (the end user may have not finished browsing the
    * whole page yet). When a new page is returned to the end user, after
@@ -601,10 +623,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The main product details related to the event.
+   *
    * This field is optional except for the following event types:
+   *
    * * `add-to-cart`
    * * `detail-page-view`
    * * `purchase-complete`
+   *
    * In a `search` event, this field represents the products returned to the end
    * user on the current page (the end user may have not finished browsing the
    * whole page yet). When a new page is returned to the end user, after
@@ -625,10 +650,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The main product details related to the event.
+   *
    * This field is optional except for the following event types:
+   *
    * * `add-to-cart`
    * * `detail-page-view`
    * * `purchase-complete`
+   *
    * In a `search` event, this field represents the products returned to the end
    * user on the current page (the end user may have not finished browsing the
    * whole page yet). When a new page is returned to the end user, after
@@ -652,6 +680,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The main auto-completion details related to the event.
+   *
    * This field should be set for `search` event when autocomplete function is
    * enabled and the user clicks a suggestion for search.
    * </pre>
@@ -669,6 +698,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The main auto-completion details related to the event.
+   *
    * This field should be set for `search` event when autocomplete function is
    * enabled and the user clicks a suggestion for search.
    * </pre>
@@ -688,6 +718,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The main auto-completion details related to the event.
+   *
    * This field should be set for `search` event when autocomplete function is
    * enabled and the user clicks a suggestion for search.
    * </pre>
@@ -737,20 +768,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Extra user event features to include in the recommendation model.
+   *
    * If you provide custom attributes for ingested user events, also include
    * them in the user events that you associate with prediction requests. Custom
    * attribute formatting must be consistent between imported events and events
    * provided with prediction requests. This lets the Retail API use
    * those custom attributes when training models and serving predictions, which
    * helps improve recommendation quality.
+   *
    * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
    * error is returned:
+   *
    * * The key must be a UTF-8 encoded string with a length limit of 5,000
    *   characters.
    * * For text attributes, at most 400 values are allowed. Empty values are not
    *   allowed. Each value must be a UTF-8 encoded string with a length limit of
    *   256 characters.
    * * For number attributes, at most 400 values are allowed.
+   *
    * For product recommendations, an example of extra user information is
    * traffic_channel, which is how a user arrives at the site. Users can arrive
    * at the site by coming to the site directly, coming through Google
@@ -778,20 +813,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Extra user event features to include in the recommendation model.
+   *
    * If you provide custom attributes for ingested user events, also include
    * them in the user events that you associate with prediction requests. Custom
    * attribute formatting must be consistent between imported events and events
    * provided with prediction requests. This lets the Retail API use
    * those custom attributes when training models and serving predictions, which
    * helps improve recommendation quality.
+   *
    * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
    * error is returned:
+   *
    * * The key must be a UTF-8 encoded string with a length limit of 5,000
    *   characters.
    * * For text attributes, at most 400 values are allowed. Empty values are not
    *   allowed. Each value must be a UTF-8 encoded string with a length limit of
    *   256 characters.
    * * For number attributes, at most 400 values are allowed.
+   *
    * For product recommendations, an example of extra user information is
    * traffic_channel, which is how a user arrives at the site. Users can arrive
    * at the site by coming to the site directly, coming through Google
@@ -810,20 +849,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Extra user event features to include in the recommendation model.
+   *
    * If you provide custom attributes for ingested user events, also include
    * them in the user events that you associate with prediction requests. Custom
    * attribute formatting must be consistent between imported events and events
    * provided with prediction requests. This lets the Retail API use
    * those custom attributes when training models and serving predictions, which
    * helps improve recommendation quality.
+   *
    * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
    * error is returned:
+   *
    * * The key must be a UTF-8 encoded string with a length limit of 5,000
    *   characters.
    * * For text attributes, at most 400 values are allowed. Empty values are not
    *   allowed. Each value must be a UTF-8 encoded string with a length limit of
    *   256 characters.
    * * For number attributes, at most 400 values are allowed.
+   *
    * For product recommendations, an example of extra user information is
    * traffic_channel, which is how a user arrives at the site. Users can arrive
    * at the site by coming to the site directly, coming through Google
@@ -849,20 +892,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Extra user event features to include in the recommendation model.
+   *
    * If you provide custom attributes for ingested user events, also include
    * them in the user events that you associate with prediction requests. Custom
    * attribute formatting must be consistent between imported events and events
    * provided with prediction requests. This lets the Retail API use
    * those custom attributes when training models and serving predictions, which
    * helps improve recommendation quality.
+   *
    * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
    * error is returned:
+   *
    * * The key must be a UTF-8 encoded string with a length limit of 5,000
    *   characters.
    * * For text attributes, at most 400 values are allowed. Empty values are not
    *   allowed. Each value must be a UTF-8 encoded string with a length limit of
    *   256 characters.
    * * For number attributes, at most 400 values are allowed.
+   *
    * For product recommendations, an example of extra user information is
    * traffic_channel, which is how a user arrives at the site. Users can arrive
    * at the site by coming to the site directly, coming through Google
@@ -894,6 +941,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The ID or name of the associated shopping cart. This ID is used
    * to associate multiple items added or present in the cart before purchase.
+   *
    * This can only be set for `add-to-cart`, `purchase-complete`, or
    * `shopping-cart-page-view` events.
    * </pre>
@@ -920,6 +968,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The ID or name of the associated shopping cart. This ID is used
    * to associate multiple items added or present in the cart before purchase.
+   *
    * This can only be set for `add-to-cart`, `purchase-complete`, or
    * `shopping-cart-page-view` events.
    * </pre>
@@ -948,6 +997,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * A transaction represents the entire purchase transaction.
+   *
    * Required for `purchase-complete` events. Other event types should not set
    * this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * </pre>
@@ -965,6 +1015,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * A transaction represents the entire purchase transaction.
+   *
    * Required for `purchase-complete` events. Other event types should not set
    * this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * </pre>
@@ -984,6 +1035,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * A transaction represents the entire purchase transaction.
+   *
    * Required for `purchase-complete` events. Other event types should not set
    * this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * </pre>
@@ -1006,10 +1058,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The user's search query.
+   *
    * See [SearchRequest.query][google.cloud.retail.v2.SearchRequest.query] for
    * definition.
+   *
    * The value must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * At least one of
    * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
    * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -1038,10 +1093,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The user's search query.
+   *
    * See [SearchRequest.query][google.cloud.retail.v2.SearchRequest.query] for
    * definition.
+   *
    * The value must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * At least one of
    * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
    * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -1076,8 +1134,10 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The filter syntax consists of an expression language for constructing a
    * predicate from one or more fields of the products being filtered.
+   *
    * See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
    * definition and syntax.
+   *
    * The value must be a UTF-8 encoded string with a length limit of 1,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * </pre>
@@ -1104,8 +1164,10 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The filter syntax consists of an expression language for constructing a
    * predicate from one or more fields of the products being filtered.
+   *
    * See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
    * definition and syntax.
+   *
    * The value must be a UTF-8 encoded string with a length limit of 1,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * </pre>
@@ -1136,10 +1198,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The order in which products are returned.
+   *
    * See [SearchRequest.order_by][google.cloud.retail.v2.SearchRequest.order_by]
    * for definition and syntax.
+   *
    * The value must be a UTF-8 encoded string with a length limit of 1,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * This can only be set for `search` events. Other event types should not set
    * this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * </pre>
@@ -1165,10 +1230,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The order in which products are returned.
+   *
    * See [SearchRequest.order_by][google.cloud.retail.v2.SearchRequest.order_by]
    * for definition and syntax.
+   *
    * The value must be a UTF-8 encoded string with a length limit of 1,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * This can only be set for `search` events. Other event types should not set
    * this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * </pre>
@@ -1198,9 +1266,12 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * An integer that specifies the current offset for pagination (the 0-indexed
    * starting location, amongst the products deemed by the API as relevant).
+   *
    * See [SearchRequest.offset][google.cloud.retail.v2.SearchRequest.offset] for
    * definition.
+   *
    * If this field is negative, an INVALID_ARGUMENT is returned.
+   *
    * This can only be set for `search` events. Other event types should not set
    * this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * </pre>
@@ -1217,18 +1288,22 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
   public static final int PAGE_CATEGORIES_FIELD_NUMBER = 11;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList pageCategories_;
+  private com.google.protobuf.LazyStringArrayList pageCategories_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * The categories associated with a category page.
+   *
    * To represent full path of category, use '&gt;' sign to separate different
    * hierarchies. If '&gt;' is part of the category name, replace it with
    * other character(s).
+   *
    * Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy:
    * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+   *
    * Required for `category-page-view` events. At least one of
    * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
    * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -1248,12 +1323,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The categories associated with a category page.
+   *
    * To represent full path of category, use '&gt;' sign to separate different
    * hierarchies. If '&gt;' is part of the category name, replace it with
    * other character(s).
+   *
    * Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy:
    * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+   *
    * Required for `category-page-view` events. At least one of
    * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
    * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -1273,12 +1351,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The categories associated with a category page.
+   *
    * To represent full path of category, use '&gt;' sign to separate different
    * hierarchies. If '&gt;' is part of the category name, replace it with
    * other character(s).
+   *
    * Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy:
    * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+   *
    * Required for `category-page-view` events. At least one of
    * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
    * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -1299,12 +1380,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The categories associated with a category page.
+   *
    * To represent full path of category, use '&gt;' sign to separate different
    * hierarchies. If '&gt;' is part of the category name, replace it with
    * other character(s).
+   *
    * Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy:
    * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+   *
    * Required for `category-page-view` events. At least one of
    * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
    * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -1376,6 +1460,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Complete URL (window.location.href) of the user's current page.
+   *
    * When using the client side event reporting with JavaScript pixel and Google
    * Tag Manager, this value is filled in automatically. Maximum length 5,000
    * characters.
@@ -1402,6 +1487,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Complete URL (window.location.href) of the user's current page.
+   *
    * When using the client side event reporting with JavaScript pixel and Google
    * Tag Manager, this value is filled in automatically. Maximum length 5,000
    * characters.
@@ -1433,6 +1519,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The referrer URL of the current page.
+   *
    * When using the client side event reporting with JavaScript pixel and Google
    * Tag Manager, this value is filled in automatically.
    * </pre>
@@ -1458,6 +1545,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The referrer URL of the current page.
+   *
    * When using the client side event reporting with JavaScript pixel and Google
    * Tag Manager, this value is filled in automatically.
    * </pre>
@@ -1488,11 +1576,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * A unique ID of a web page view.
+   *
    * This should be kept the same for all user events triggered from the same
    * pageview. For example, an item detail page view could trigger multiple
    * events as the user is browsing the page. The `pageViewId` property should
    * be kept the same for all these events so that they can be grouped together
    * properly.
+   *
    * When using the client side event reporting with JavaScript pixel and Google
    * Tag Manager, this value is filled in automatically.
    * </pre>
@@ -1518,11 +1608,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * A unique ID of a web page view.
+   *
    * This should be kept the same for all user events triggered from the same
    * pageview. For example, an item detail page view could trigger multiple
    * events as the user is browsing the page. The `pageViewId` property should
    * be kept the same for all these events so that they can be grouped together
    * properly.
+   *
    * When using the client side event reporting with JavaScript pixel and Google
    * Tag Manager, this value is filled in automatically.
    * </pre>
@@ -1538,6 +1630,65 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       com.google.protobuf.ByteString b =
           com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       pageViewId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ENTITY_FIELD_NUMBER = 23;
+
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object entity_ = "";
+  /**
+   *
+   *
+   * <pre>
+   * The entity for customers that may run multiple different entities, domains,
+   * sites or regions, for example, `Google US`, `Google Ads`, `Waymo`,
+   * `google.com`, `youtube.com`, etc.
+   * It is recommended to set this field to get better per-entity search,
+   * completion and prediction results.
+   * </pre>
+   *
+   * <code>string entity = 23;</code>
+   *
+   * @return The entity.
+   */
+  @java.lang.Override
+  public java.lang.String getEntity() {
+    java.lang.Object ref = entity_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      entity_ = s;
+      return s;
+    }
+  }
+  /**
+   *
+   *
+   * <pre>
+   * The entity for customers that may run multiple different entities, domains,
+   * sites or regions, for example, `Google US`, `Google Ads`, `Waymo`,
+   * `google.com`, `youtube.com`, etc.
+   * It is recommended to set this field to get better per-entity search,
+   * completion and prediction results.
+   * </pre>
+   *
+   * <code>string entity = 23;</code>
+   *
+   * @return The bytes for entity.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString getEntityBytes() {
+    java.lang.Object ref = entity_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      entity_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -1616,6 +1767,9 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
     }
     if (completionDetail_ != null) {
       output.writeMessage(22, getCompletionDetail());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entity_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 23, entity_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1704,6 +1858,9 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
     if (completionDetail_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(22, getCompletionDetail());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entity_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, entity_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1751,6 +1908,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
     if (!getUri().equals(other.getUri())) return false;
     if (!getReferrerUri().equals(other.getReferrerUri())) return false;
     if (!getPageViewId().equals(other.getPageViewId())) return false;
+    if (!getEntity().equals(other.getEntity())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1818,6 +1976,8 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + getReferrerUri().hashCode();
     hash = (37 * hash) + PAGE_VIEW_ID_FIELD_NUMBER;
     hash = (53 * hash) + getPageViewId().hashCode();
+    hash = (37 * hash) + ENTITY_FIELD_NUMBER;
+    hash = (53 * hash) + getEntity().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1985,8 +2145,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
         eventTimeBuilder_.dispose();
         eventTimeBuilder_ = null;
       }
-      experimentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      experimentIds_ = com.google.protobuf.LazyStringArrayList.emptyList();
       attributionToken_ = "";
       if (productDetailsBuilder_ == null) {
         productDetails_ = java.util.Collections.emptyList();
@@ -2011,8 +2170,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       filter_ = "";
       orderBy_ = "";
       offset_ = 0;
-      pageCategories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00008000);
+      pageCategories_ = com.google.protobuf.LazyStringArrayList.emptyList();
       userInfo_ = null;
       if (userInfoBuilder_ != null) {
         userInfoBuilder_.dispose();
@@ -2021,6 +2179,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       uri_ = "";
       referrerUri_ = "";
       pageViewId_ = "";
+      entity_ = "";
       return this;
     }
 
@@ -2056,11 +2215,6 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
     }
 
     private void buildPartialRepeatedFields(com.google.cloud.retail.v2.UserEvent result) {
-      if (((bitField0_ & 0x00000010) != 0)) {
-        experimentIds_ = experimentIds_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000010);
-      }
-      result.experimentIds_ = experimentIds_;
       if (productDetailsBuilder_ == null) {
         if (((bitField0_ & 0x00000040) != 0)) {
           productDetails_ = java.util.Collections.unmodifiableList(productDetails_);
@@ -2070,11 +2224,6 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.productDetails_ = productDetailsBuilder_.build();
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
-        pageCategories_ = pageCategories_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00008000);
-      }
-      result.pageCategories_ = pageCategories_;
     }
 
     private void buildPartial0(com.google.cloud.retail.v2.UserEvent result) {
@@ -2090,6 +2239,10 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.eventTime_ = eventTimeBuilder_ == null ? eventTime_ : eventTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        experimentIds_.makeImmutable();
+        result.experimentIds_ = experimentIds_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.attributionToken_ = attributionToken_;
@@ -2123,6 +2276,10 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.offset_ = offset_;
       }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        pageCategories_.makeImmutable();
+        result.pageCategories_ = pageCategories_;
+      }
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.userInfo_ = userInfoBuilder_ == null ? userInfo_ : userInfoBuilder_.build();
       }
@@ -2134,6 +2291,9 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
         result.pageViewId_ = pageViewId_;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.entity_ = entity_;
       }
     }
 
@@ -2203,7 +2363,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       if (!other.experimentIds_.isEmpty()) {
         if (experimentIds_.isEmpty()) {
           experimentIds_ = other.experimentIds_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ |= 0x00000010;
         } else {
           ensureExperimentIdsIsMutable();
           experimentIds_.addAll(other.experimentIds_);
@@ -2276,7 +2436,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       if (!other.pageCategories_.isEmpty()) {
         if (pageCategories_.isEmpty()) {
           pageCategories_ = other.pageCategories_;
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ |= 0x00008000;
         } else {
           ensurePageCategoriesIsMutable();
           pageCategories_.addAll(other.pageCategories_);
@@ -2299,6 +2459,11 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       if (!other.getPageViewId().isEmpty()) {
         pageViewId_ = other.pageViewId_;
         bitField0_ |= 0x00080000;
+        onChanged();
+      }
+      if (!other.getEntity().isEmpty()) {
+        entity_ = other.entity_;
+        bitField0_ |= 0x00100000;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -2466,6 +2631,12 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
                 bitField0_ |= 0x00000080;
                 break;
               } // case 178
+            case 186:
+              {
+                entity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00100000;
+                break;
+              } // case 186
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -2491,6 +2662,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. User event type. Allowed values are:
+     *
      * * `add-to-cart`: Products being added to cart.
      * * `category-page-view`: Special pages such as sale or promotion pages
      *   viewed.
@@ -2523,6 +2695,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. User event type. Allowed values are:
+     *
      * * `add-to-cart`: Products being added to cart.
      * * `category-page-view`: Special pages such as sale or promotion pages
      *   viewed.
@@ -2555,6 +2728,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. User event type. Allowed values are:
+     *
      * * `add-to-cart`: Products being added to cart.
      * * `category-page-view`: Special pages such as sale or promotion pages
      *   viewed.
@@ -2586,6 +2760,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. User event type. Allowed values are:
+     *
      * * `add-to-cart`: Products being added to cart.
      * * `category-page-view`: Special pages such as sale or promotion pages
      *   viewed.
@@ -2613,6 +2788,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. User event type. Allowed values are:
+     *
      * * `add-to-cart`: Products being added to cart.
      * * `category-page-view`: Special pages such as sale or promotion pages
      *   viewed.
@@ -2647,14 +2823,18 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. A unique identifier for tracking visitors.
+     *
      * For example, this could be implemented with an HTTP cookie, which should be
      * able to uniquely identify a visitor on a single device. This unique
      * identifier should not change if the visitor log in/out of the website.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded model
      * quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * The field should not contain PII or user-data. We recommend to use Google
      * Analytics [Client
      * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#clientId)
@@ -2681,14 +2861,18 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. A unique identifier for tracking visitors.
+     *
      * For example, this could be implemented with an HTTP cookie, which should be
      * able to uniquely identify a visitor on a single device. This unique
      * identifier should not change if the visitor log in/out of the website.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded model
      * quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * The field should not contain PII or user-data. We recommend to use Google
      * Analytics [Client
      * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#clientId)
@@ -2715,14 +2899,18 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. A unique identifier for tracking visitors.
+     *
      * For example, this could be implemented with an HTTP cookie, which should be
      * able to uniquely identify a visitor on a single device. This unique
      * identifier should not change if the visitor log in/out of the website.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded model
      * quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * The field should not contain PII or user-data. We recommend to use Google
      * Analytics [Client
      * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#clientId)
@@ -2748,14 +2936,18 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. A unique identifier for tracking visitors.
+     *
      * For example, this could be implemented with an HTTP cookie, which should be
      * able to uniquely identify a visitor on a single device. This unique
      * identifier should not change if the visitor log in/out of the website.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded model
      * quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * The field should not contain PII or user-data. We recommend to use Google
      * Analytics [Client
      * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#clientId)
@@ -2777,14 +2969,18 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. A unique identifier for tracking visitors.
+     *
      * For example, this could be implemented with an HTTP cookie, which should be
      * able to uniquely identify a visitor on a single device. This unique
      * identifier should not change if the visitor log in/out of the website.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded model
      * quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * The field should not contain PII or user-data. We recommend to use Google
      * Analytics [Client
      * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#clientId)
@@ -2815,6 +3011,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * A unique identifier for tracking a visitor session with a length limit of
      * 128 bytes. A session is an aggregation of an end user behavior in a time
      * span.
+     *
      * A general guideline to populate the sesion_id:
      * 1. If user has no activity for 30 min, a new session_id should be assigned.
      * 2. The session_id should be unique across users, suggest use uuid or add
@@ -2843,6 +3040,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * A unique identifier for tracking a visitor session with a length limit of
      * 128 bytes. A session is an aggregation of an end user behavior in a time
      * span.
+     *
      * A general guideline to populate the sesion_id:
      * 1. If user has no activity for 30 min, a new session_id should be assigned.
      * 2. The session_id should be unique across users, suggest use uuid or add
@@ -2871,6 +3069,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * A unique identifier for tracking a visitor session with a length limit of
      * 128 bytes. A session is an aggregation of an end user behavior in a time
      * span.
+     *
      * A general guideline to populate the sesion_id:
      * 1. If user has no activity for 30 min, a new session_id should be assigned.
      * 2. The session_id should be unique across users, suggest use uuid or add
@@ -2898,6 +3097,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * A unique identifier for tracking a visitor session with a length limit of
      * 128 bytes. A session is an aggregation of an end user behavior in a time
      * span.
+     *
      * A general guideline to populate the sesion_id:
      * 1. If user has no activity for 30 min, a new session_id should be assigned.
      * 2. The session_id should be unique across users, suggest use uuid or add
@@ -2921,6 +3121,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * A unique identifier for tracking a visitor session with a length limit of
      * 128 bytes. A session is an aggregation of an end user behavior in a time
      * span.
+     *
      * A general guideline to populate the sesion_id:
      * 1. If user has no activity for 30 min, a new session_id should be assigned.
      * 2. The session_id should be unique across users, suggest use uuid or add
@@ -3140,14 +3341,14 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       return eventTimeBuilder_;
     }
 
-    private com.google.protobuf.LazyStringList experimentIds_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList experimentIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureExperimentIdsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!experimentIds_.isModifiable()) {
         experimentIds_ = new com.google.protobuf.LazyStringArrayList(experimentIds_);
-        bitField0_ |= 0x00000010;
       }
+      bitField0_ |= 0x00000010;
     }
     /**
      *
@@ -3164,7 +3365,8 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the experimentIds.
      */
     public com.google.protobuf.ProtocolStringList getExperimentIdsList() {
-      return experimentIds_.getUnmodifiableView();
+      experimentIds_.makeImmutable();
+      return experimentIds_;
     }
     /**
      *
@@ -3241,6 +3443,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       }
       ensureExperimentIdsIsMutable();
       experimentIds_.set(index, value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -3265,6 +3468,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       }
       ensureExperimentIdsIsMutable();
       experimentIds_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -3286,6 +3490,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllExperimentIds(java.lang.Iterable<java.lang.String> values) {
       ensureExperimentIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, experimentIds_);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -3304,8 +3509,9 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearExperimentIds() {
-      experimentIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      experimentIds_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000010);
+      ;
       onChanged();
       return this;
     }
@@ -3331,6 +3537,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureExperimentIdsIsMutable();
       experimentIds_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -3344,6 +3551,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict].
      * This field enables accurate attribution of recommendation model
      * performance.
+     *
      * The value must be a valid
      * [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
      * for user events that are the result of
@@ -3352,6 +3560,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [SearchResponse.attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token]
      * for user events that are the result of
      * [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+     *
      * This token enables us to accurately attribute page view or purchase back to
      * the event and the particular predict response containing this
      * clicked/purchased product. If user clicks on product K in the
@@ -3386,6 +3595,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict].
      * This field enables accurate attribution of recommendation model
      * performance.
+     *
      * The value must be a valid
      * [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
      * for user events that are the result of
@@ -3394,6 +3604,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [SearchResponse.attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token]
      * for user events that are the result of
      * [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+     *
      * This token enables us to accurately attribute page view or purchase back to
      * the event and the particular predict response containing this
      * clicked/purchased product. If user clicks on product K in the
@@ -3428,6 +3639,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict].
      * This field enables accurate attribution of recommendation model
      * performance.
+     *
      * The value must be a valid
      * [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
      * for user events that are the result of
@@ -3436,6 +3648,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [SearchResponse.attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token]
      * for user events that are the result of
      * [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+     *
      * This token enables us to accurately attribute page view or purchase back to
      * the event and the particular predict response containing this
      * clicked/purchased product. If user clicks on product K in the
@@ -3469,6 +3682,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict].
      * This field enables accurate attribution of recommendation model
      * performance.
+     *
      * The value must be a valid
      * [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
      * for user events that are the result of
@@ -3477,6 +3691,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [SearchResponse.attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token]
      * for user events that are the result of
      * [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+     *
      * This token enables us to accurately attribute page view or purchase back to
      * the event and the particular predict response containing this
      * clicked/purchased product. If user clicks on product K in the
@@ -3506,6 +3721,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict].
      * This field enables accurate attribution of recommendation model
      * performance.
+     *
      * The value must be a valid
      * [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
      * for user events that are the result of
@@ -3514,6 +3730,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * [SearchResponse.attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token]
      * for user events that are the result of
      * [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+     *
      * This token enables us to accurately attribute page view or purchase back to
      * the event and the particular predict response containing this
      * clicked/purchased product. If user clicks on product K in the
@@ -3563,10 +3780,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3590,10 +3810,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3617,10 +3840,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3644,10 +3870,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3677,10 +3906,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3708,10 +3940,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3741,10 +3976,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3774,10 +4012,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3805,10 +4046,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3836,10 +4080,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3867,10 +4114,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3897,10 +4147,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3927,10 +4180,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3950,10 +4206,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -3977,10 +4236,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -4005,10 +4267,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -4029,10 +4294,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -4053,10 +4321,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main product details related to the event.
+     *
      * This field is optional except for the following event types:
+     *
      * * `add-to-cart`
      * * `detail-page-view`
      * * `purchase-complete`
+     *
      * In a `search` event, this field represents the products returned to the end
      * user on the current page (the end user may have not finished browsing the
      * whole page yet). When a new page is returned to the end user, after
@@ -4104,6 +4375,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main auto-completion details related to the event.
+     *
      * This field should be set for `search` event when autocomplete function is
      * enabled and the user clicks a suggestion for search.
      * </pre>
@@ -4120,6 +4392,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main auto-completion details related to the event.
+     *
      * This field should be set for `search` event when autocomplete function is
      * enabled and the user clicks a suggestion for search.
      * </pre>
@@ -4142,6 +4415,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main auto-completion details related to the event.
+     *
      * This field should be set for `search` event when autocomplete function is
      * enabled and the user clicks a suggestion for search.
      * </pre>
@@ -4166,6 +4440,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main auto-completion details related to the event.
+     *
      * This field should be set for `search` event when autocomplete function is
      * enabled and the user clicks a suggestion for search.
      * </pre>
@@ -4188,6 +4463,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main auto-completion details related to the event.
+     *
      * This field should be set for `search` event when autocomplete function is
      * enabled and the user clicks a suggestion for search.
      * </pre>
@@ -4216,6 +4492,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main auto-completion details related to the event.
+     *
      * This field should be set for `search` event when autocomplete function is
      * enabled and the user clicks a suggestion for search.
      * </pre>
@@ -4237,6 +4514,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main auto-completion details related to the event.
+     *
      * This field should be set for `search` event when autocomplete function is
      * enabled and the user clicks a suggestion for search.
      * </pre>
@@ -4253,6 +4531,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main auto-completion details related to the event.
+     *
      * This field should be set for `search` event when autocomplete function is
      * enabled and the user clicks a suggestion for search.
      * </pre>
@@ -4273,6 +4552,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The main auto-completion details related to the event.
+     *
      * This field should be set for `search` event when autocomplete function is
      * enabled and the user clicks a suggestion for search.
      * </pre>
@@ -4333,20 +4613,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Extra user event features to include in the recommendation model.
+     *
      * If you provide custom attributes for ingested user events, also include
      * them in the user events that you associate with prediction requests. Custom
      * attribute formatting must be consistent between imported events and events
      * provided with prediction requests. This lets the Retail API use
      * those custom attributes when training models and serving predictions, which
      * helps improve recommendation quality.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * The key must be a UTF-8 encoded string with a length limit of 5,000
      *   characters.
      * * For text attributes, at most 400 values are allowed. Empty values are not
      *   allowed. Each value must be a UTF-8 encoded string with a length limit of
      *   256 characters.
      * * For number attributes, at most 400 values are allowed.
+     *
      * For product recommendations, an example of extra user information is
      * traffic_channel, which is how a user arrives at the site. Users can arrive
      * at the site by coming to the site directly, coming through Google
@@ -4374,20 +4658,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Extra user event features to include in the recommendation model.
+     *
      * If you provide custom attributes for ingested user events, also include
      * them in the user events that you associate with prediction requests. Custom
      * attribute formatting must be consistent between imported events and events
      * provided with prediction requests. This lets the Retail API use
      * those custom attributes when training models and serving predictions, which
      * helps improve recommendation quality.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * The key must be a UTF-8 encoded string with a length limit of 5,000
      *   characters.
      * * For text attributes, at most 400 values are allowed. Empty values are not
      *   allowed. Each value must be a UTF-8 encoded string with a length limit of
      *   256 characters.
      * * For number attributes, at most 400 values are allowed.
+     *
      * For product recommendations, an example of extra user information is
      * traffic_channel, which is how a user arrives at the site. Users can arrive
      * at the site by coming to the site directly, coming through Google
@@ -4406,20 +4694,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Extra user event features to include in the recommendation model.
+     *
      * If you provide custom attributes for ingested user events, also include
      * them in the user events that you associate with prediction requests. Custom
      * attribute formatting must be consistent between imported events and events
      * provided with prediction requests. This lets the Retail API use
      * those custom attributes when training models and serving predictions, which
      * helps improve recommendation quality.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * The key must be a UTF-8 encoded string with a length limit of 5,000
      *   characters.
      * * For text attributes, at most 400 values are allowed. Empty values are not
      *   allowed. Each value must be a UTF-8 encoded string with a length limit of
      *   256 characters.
      * * For number attributes, at most 400 values are allowed.
+     *
      * For product recommendations, an example of extra user information is
      * traffic_channel, which is how a user arrives at the site. Users can arrive
      * at the site by coming to the site directly, coming through Google
@@ -4445,20 +4737,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Extra user event features to include in the recommendation model.
+     *
      * If you provide custom attributes for ingested user events, also include
      * them in the user events that you associate with prediction requests. Custom
      * attribute formatting must be consistent between imported events and events
      * provided with prediction requests. This lets the Retail API use
      * those custom attributes when training models and serving predictions, which
      * helps improve recommendation quality.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * The key must be a UTF-8 encoded string with a length limit of 5,000
      *   characters.
      * * For text attributes, at most 400 values are allowed. Empty values are not
      *   allowed. Each value must be a UTF-8 encoded string with a length limit of
      *   256 characters.
      * * For number attributes, at most 400 values are allowed.
+     *
      * For product recommendations, an example of extra user information is
      * traffic_channel, which is how a user arrives at the site. Users can arrive
      * at the site by coming to the site directly, coming through Google
@@ -4490,20 +4786,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Extra user event features to include in the recommendation model.
+     *
      * If you provide custom attributes for ingested user events, also include
      * them in the user events that you associate with prediction requests. Custom
      * attribute formatting must be consistent between imported events and events
      * provided with prediction requests. This lets the Retail API use
      * those custom attributes when training models and serving predictions, which
      * helps improve recommendation quality.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * The key must be a UTF-8 encoded string with a length limit of 5,000
      *   characters.
      * * For text attributes, at most 400 values are allowed. Empty values are not
      *   allowed. Each value must be a UTF-8 encoded string with a length limit of
      *   256 characters.
      * * For number attributes, at most 400 values are allowed.
+     *
      * For product recommendations, an example of extra user information is
      * traffic_channel, which is how a user arrives at the site. Users can arrive
      * at the site by coming to the site directly, coming through Google
@@ -4531,20 +4831,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Extra user event features to include in the recommendation model.
+     *
      * If you provide custom attributes for ingested user events, also include
      * them in the user events that you associate with prediction requests. Custom
      * attribute formatting must be consistent between imported events and events
      * provided with prediction requests. This lets the Retail API use
      * those custom attributes when training models and serving predictions, which
      * helps improve recommendation quality.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * The key must be a UTF-8 encoded string with a length limit of 5,000
      *   characters.
      * * For text attributes, at most 400 values are allowed. Empty values are not
      *   allowed. Each value must be a UTF-8 encoded string with a length limit of
      *   256 characters.
      * * For number attributes, at most 400 values are allowed.
+     *
      * For product recommendations, an example of extra user information is
      * traffic_channel, which is how a user arrives at the site. Users can arrive
      * at the site by coming to the site directly, coming through Google
@@ -4570,20 +4874,24 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Extra user event features to include in the recommendation model.
+     *
      * If you provide custom attributes for ingested user events, also include
      * them in the user events that you associate with prediction requests. Custom
      * attribute formatting must be consistent between imported events and events
      * provided with prediction requests. This lets the Retail API use
      * those custom attributes when training models and serving predictions, which
      * helps improve recommendation quality.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * The key must be a UTF-8 encoded string with a length limit of 5,000
      *   characters.
      * * For text attributes, at most 400 values are allowed. Empty values are not
      *   allowed. Each value must be a UTF-8 encoded string with a length limit of
      *   256 characters.
      * * For number attributes, at most 400 values are allowed.
+     *
      * For product recommendations, an example of extra user information is
      * traffic_channel, which is how a user arrives at the site. Users can arrive
      * at the site by coming to the site directly, coming through Google
@@ -4606,6 +4914,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The ID or name of the associated shopping cart. This ID is used
      * to associate multiple items added or present in the cart before purchase.
+     *
      * This can only be set for `add-to-cart`, `purchase-complete`, or
      * `shopping-cart-page-view` events.
      * </pre>
@@ -4631,6 +4940,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The ID or name of the associated shopping cart. This ID is used
      * to associate multiple items added or present in the cart before purchase.
+     *
      * This can only be set for `add-to-cart`, `purchase-complete`, or
      * `shopping-cart-page-view` events.
      * </pre>
@@ -4656,6 +4966,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The ID or name of the associated shopping cart. This ID is used
      * to associate multiple items added or present in the cart before purchase.
+     *
      * This can only be set for `add-to-cart`, `purchase-complete`, or
      * `shopping-cart-page-view` events.
      * </pre>
@@ -4680,6 +4991,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The ID or name of the associated shopping cart. This ID is used
      * to associate multiple items added or present in the cart before purchase.
+     *
      * This can only be set for `add-to-cart`, `purchase-complete`, or
      * `shopping-cart-page-view` events.
      * </pre>
@@ -4700,6 +5012,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The ID or name of the associated shopping cart. This ID is used
      * to associate multiple items added or present in the cart before purchase.
+     *
      * This can only be set for `add-to-cart`, `purchase-complete`, or
      * `shopping-cart-page-view` events.
      * </pre>
@@ -4731,6 +5044,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A transaction represents the entire purchase transaction.
+     *
      * Required for `purchase-complete` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -4747,6 +5061,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A transaction represents the entire purchase transaction.
+     *
      * Required for `purchase-complete` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -4769,6 +5084,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A transaction represents the entire purchase transaction.
+     *
      * Required for `purchase-complete` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -4793,6 +5109,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A transaction represents the entire purchase transaction.
+     *
      * Required for `purchase-complete` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -4815,6 +5132,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A transaction represents the entire purchase transaction.
+     *
      * Required for `purchase-complete` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -4843,6 +5161,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A transaction represents the entire purchase transaction.
+     *
      * Required for `purchase-complete` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -4864,6 +5183,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A transaction represents the entire purchase transaction.
+     *
      * Required for `purchase-complete` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -4880,6 +5200,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A transaction represents the entire purchase transaction.
+     *
      * Required for `purchase-complete` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -4901,6 +5222,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A transaction represents the entire purchase transaction.
+     *
      * Required for `purchase-complete` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -4930,10 +5252,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The user's search query.
+     *
      * See [SearchRequest.query][google.cloud.retail.v2.SearchRequest.query] for
      * definition.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -4961,10 +5286,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The user's search query.
+     *
      * See [SearchRequest.query][google.cloud.retail.v2.SearchRequest.query] for
      * definition.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -4992,10 +5320,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The user's search query.
+     *
      * See [SearchRequest.query][google.cloud.retail.v2.SearchRequest.query] for
      * definition.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5022,10 +5353,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The user's search query.
+     *
      * See [SearchRequest.query][google.cloud.retail.v2.SearchRequest.query] for
      * definition.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5048,10 +5382,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The user's search query.
+     *
      * See [SearchRequest.query][google.cloud.retail.v2.SearchRequest.query] for
      * definition.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5082,8 +5419,10 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The filter syntax consists of an expression language for constructing a
      * predicate from one or more fields of the products being filtered.
+     *
      * See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
      * definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5109,8 +5448,10 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The filter syntax consists of an expression language for constructing a
      * predicate from one or more fields of the products being filtered.
+     *
      * See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
      * definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5136,8 +5477,10 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The filter syntax consists of an expression language for constructing a
      * predicate from one or more fields of the products being filtered.
+     *
      * See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
      * definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5162,8 +5505,10 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The filter syntax consists of an expression language for constructing a
      * predicate from one or more fields of the products being filtered.
+     *
      * See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
      * definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5184,8 +5529,10 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The filter syntax consists of an expression language for constructing a
      * predicate from one or more fields of the products being filtered.
+     *
      * See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
      * definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5212,10 +5559,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The order in which products are returned.
+     *
      * See [SearchRequest.order_by][google.cloud.retail.v2.SearchRequest.order_by]
      * for definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This can only be set for `search` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5240,10 +5590,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The order in which products are returned.
+     *
      * See [SearchRequest.order_by][google.cloud.retail.v2.SearchRequest.order_by]
      * for definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This can only be set for `search` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5268,10 +5621,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The order in which products are returned.
+     *
      * See [SearchRequest.order_by][google.cloud.retail.v2.SearchRequest.order_by]
      * for definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This can only be set for `search` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5295,10 +5651,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The order in which products are returned.
+     *
      * See [SearchRequest.order_by][google.cloud.retail.v2.SearchRequest.order_by]
      * for definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This can only be set for `search` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5318,10 +5677,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The order in which products are returned.
+     *
      * See [SearchRequest.order_by][google.cloud.retail.v2.SearchRequest.order_by]
      * for definition and syntax.
+     *
      * The value must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This can only be set for `search` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5349,9 +5711,12 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * An integer that specifies the current offset for pagination (the 0-indexed
      * starting location, amongst the products deemed by the API as relevant).
+     *
      * See [SearchRequest.offset][google.cloud.retail.v2.SearchRequest.offset] for
      * definition.
+     *
      * If this field is negative, an INVALID_ARGUMENT is returned.
+     *
      * This can only be set for `search` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5370,9 +5735,12 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * An integer that specifies the current offset for pagination (the 0-indexed
      * starting location, amongst the products deemed by the API as relevant).
+     *
      * See [SearchRequest.offset][google.cloud.retail.v2.SearchRequest.offset] for
      * definition.
+     *
      * If this field is negative, an INVALID_ARGUMENT is returned.
+     *
      * This can only be set for `search` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5395,9 +5763,12 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * An integer that specifies the current offset for pagination (the 0-indexed
      * starting location, amongst the products deemed by the API as relevant).
+     *
      * See [SearchRequest.offset][google.cloud.retail.v2.SearchRequest.offset] for
      * definition.
+     *
      * If this field is negative, an INVALID_ARGUMENT is returned.
+     *
      * This can only be set for `search` events. Other event types should not set
      * this field. Otherwise, an INVALID_ARGUMENT error is returned.
      * </pre>
@@ -5413,26 +5784,29 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private com.google.protobuf.LazyStringList pageCategories_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList pageCategories_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensurePageCategoriesIsMutable() {
-      if (!((bitField0_ & 0x00008000) != 0)) {
+      if (!pageCategories_.isModifiable()) {
         pageCategories_ = new com.google.protobuf.LazyStringArrayList(pageCategories_);
-        bitField0_ |= 0x00008000;
       }
+      bitField0_ |= 0x00008000;
     }
     /**
      *
      *
      * <pre>
      * The categories associated with a category page.
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * Category pages include special pages such as sales or promotions. For
      * instance, a special sale page may have the category hierarchy:
      * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     *
      * Required for `category-page-view` events. At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5445,19 +5819,23 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the pageCategories.
      */
     public com.google.protobuf.ProtocolStringList getPageCategoriesList() {
-      return pageCategories_.getUnmodifiableView();
+      pageCategories_.makeImmutable();
+      return pageCategories_;
     }
     /**
      *
      *
      * <pre>
      * The categories associated with a category page.
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * Category pages include special pages such as sales or promotions. For
      * instance, a special sale page may have the category hierarchy:
      * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     *
      * Required for `category-page-view` events. At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5477,12 +5855,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The categories associated with a category page.
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * Category pages include special pages such as sales or promotions. For
      * instance, a special sale page may have the category hierarchy:
      * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     *
      * Required for `category-page-view` events. At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5503,12 +5884,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The categories associated with a category page.
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * Category pages include special pages such as sales or promotions. For
      * instance, a special sale page may have the category hierarchy:
      * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     *
      * Required for `category-page-view` events. At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5529,12 +5913,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The categories associated with a category page.
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * Category pages include special pages such as sales or promotions. For
      * instance, a special sale page may have the category hierarchy:
      * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     *
      * Required for `category-page-view` events. At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5554,6 +5941,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       }
       ensurePageCategoriesIsMutable();
       pageCategories_.set(index, value);
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -5562,12 +5950,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The categories associated with a category page.
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * Category pages include special pages such as sales or promotions. For
      * instance, a special sale page may have the category hierarchy:
      * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     *
      * Required for `category-page-view` events. At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5586,6 +5977,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       }
       ensurePageCategoriesIsMutable();
       pageCategories_.add(value);
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -5594,12 +5986,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The categories associated with a category page.
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * Category pages include special pages such as sales or promotions. For
      * instance, a special sale page may have the category hierarchy:
      * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     *
      * Required for `category-page-view` events. At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5615,6 +6010,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllPageCategories(java.lang.Iterable<java.lang.String> values) {
       ensurePageCategoriesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, pageCategories_);
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -5623,12 +6019,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The categories associated with a category page.
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * Category pages include special pages such as sales or promotions. For
      * instance, a special sale page may have the category hierarchy:
      * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     *
      * Required for `category-page-view` events. At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5641,8 +6040,9 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearPageCategories() {
-      pageCategories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      pageCategories_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00008000);
+      ;
       onChanged();
       return this;
     }
@@ -5651,12 +6051,15 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The categories associated with a category page.
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * Category pages include special pages such as sales or promotions. For
      * instance, a special sale page may have the category hierarchy:
      * "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     *
      * Required for `category-page-view` events. At least one of
      * [search_query][google.cloud.retail.v2.UserEvent.search_query] or
      * [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
@@ -5676,6 +6079,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensurePageCategoriesIsMutable();
       pageCategories_.add(value);
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -5869,6 +6273,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Complete URL (window.location.href) of the user's current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically. Maximum length 5,000
      * characters.
@@ -5894,6 +6299,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Complete URL (window.location.href) of the user's current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically. Maximum length 5,000
      * characters.
@@ -5919,6 +6325,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Complete URL (window.location.href) of the user's current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically. Maximum length 5,000
      * characters.
@@ -5943,6 +6350,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Complete URL (window.location.href) of the user's current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically. Maximum length 5,000
      * characters.
@@ -5963,6 +6371,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Complete URL (window.location.href) of the user's current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically. Maximum length 5,000
      * characters.
@@ -5990,6 +6399,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The referrer URL of the current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6014,6 +6424,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The referrer URL of the current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6038,6 +6449,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The referrer URL of the current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6061,6 +6473,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The referrer URL of the current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6080,6 +6493,7 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The referrer URL of the current page.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6106,11 +6520,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A unique ID of a web page view.
+     *
      * This should be kept the same for all user events triggered from the same
      * pageview. For example, an item detail page view could trigger multiple
      * events as the user is browsing the page. The `pageViewId` property should
      * be kept the same for all these events so that they can be grouped together
      * properly.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6135,11 +6551,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A unique ID of a web page view.
+     *
      * This should be kept the same for all user events triggered from the same
      * pageview. For example, an item detail page view could trigger multiple
      * events as the user is browsing the page. The `pageViewId` property should
      * be kept the same for all these events so that they can be grouped together
      * properly.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6164,11 +6582,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A unique ID of a web page view.
+     *
      * This should be kept the same for all user events triggered from the same
      * pageview. For example, an item detail page view could trigger multiple
      * events as the user is browsing the page. The `pageViewId` property should
      * be kept the same for all these events so that they can be grouped together
      * properly.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6192,11 +6612,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A unique ID of a web page view.
+     *
      * This should be kept the same for all user events triggered from the same
      * pageview. For example, an item detail page view could trigger multiple
      * events as the user is browsing the page. The `pageViewId` property should
      * be kept the same for all these events so that they can be grouped together
      * properly.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6216,11 +6638,13 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * A unique ID of a web page view.
+     *
      * This should be kept the same for all user events triggered from the same
      * pageview. For example, an item detail page view could trigger multiple
      * events as the user is browsing the page. The `pageViewId` property should
      * be kept the same for all these events so that they can be grouped together
      * properly.
+     *
      * When using the client side event reporting with JavaScript pixel and Google
      * Tag Manager, this value is filled in automatically.
      * </pre>
@@ -6237,6 +6661,132 @@ public final class UserEvent extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       pageViewId_ = value;
       bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object entity_ = "";
+    /**
+     *
+     *
+     * <pre>
+     * The entity for customers that may run multiple different entities, domains,
+     * sites or regions, for example, `Google US`, `Google Ads`, `Waymo`,
+     * `google.com`, `youtube.com`, etc.
+     * It is recommended to set this field to get better per-entity search,
+     * completion and prediction results.
+     * </pre>
+     *
+     * <code>string entity = 23;</code>
+     *
+     * @return The entity.
+     */
+    public java.lang.String getEntity() {
+      java.lang.Object ref = entity_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entity_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The entity for customers that may run multiple different entities, domains,
+     * sites or regions, for example, `Google US`, `Google Ads`, `Waymo`,
+     * `google.com`, `youtube.com`, etc.
+     * It is recommended to set this field to get better per-entity search,
+     * completion and prediction results.
+     * </pre>
+     *
+     * <code>string entity = 23;</code>
+     *
+     * @return The bytes for entity.
+     */
+    public com.google.protobuf.ByteString getEntityBytes() {
+      java.lang.Object ref = entity_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        entity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The entity for customers that may run multiple different entities, domains,
+     * sites or regions, for example, `Google US`, `Google Ads`, `Waymo`,
+     * `google.com`, `youtube.com`, etc.
+     * It is recommended to set this field to get better per-entity search,
+     * completion and prediction results.
+     * </pre>
+     *
+     * <code>string entity = 23;</code>
+     *
+     * @param value The entity to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEntity(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      entity_ = value;
+      bitField0_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The entity for customers that may run multiple different entities, domains,
+     * sites or regions, for example, `Google US`, `Google Ads`, `Waymo`,
+     * `google.com`, `youtube.com`, etc.
+     * It is recommended to set this field to get better per-entity search,
+     * completion and prediction results.
+     * </pre>
+     *
+     * <code>string entity = 23;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearEntity() {
+      entity_ = getDefaultInstance().getEntity();
+      bitField0_ = (bitField0_ & ~0x00100000);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The entity for customers that may run multiple different entities, domains,
+     * sites or regions, for example, `Google US`, `Google Ads`, `Waymo`,
+     * `google.com`, `youtube.com`, etc.
+     * It is recommended to set this field to get better per-entity search,
+     * completion and prediction results.
+     * </pre>
+     *
+     * <code>string entity = 23;</code>
+     *
+     * @param value The bytes for entity to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEntityBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      entity_ = value;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }

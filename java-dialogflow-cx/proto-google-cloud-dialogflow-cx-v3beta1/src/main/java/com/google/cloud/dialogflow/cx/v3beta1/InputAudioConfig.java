@@ -39,7 +39,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
 
   private InputAudioConfig() {
     audioEncoding_ = 0;
-    phraseHints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    phraseHints_ = com.google.protobuf.LazyStringArrayList.emptyList();
     model_ = "";
     modelVariant_ = 0;
   }
@@ -48,11 +48,6 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new InputAudioConfig();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -159,13 +154,15 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
   public static final int PHRASE_HINTS_FIELD_NUMBER = 4;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList phraseHints_;
+  private com.google.protobuf.LazyStringArrayList phraseHints_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * Optional. A list of strings containing words and phrases that the speech
    * recognizer should recognize with higher likelihood.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
@@ -184,6 +181,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
    * <pre>
    * Optional. A list of strings containing words and phrases that the speech
    * recognizer should recognize with higher likelihood.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
@@ -202,6 +200,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
    * <pre>
    * Optional. A list of strings containing words and phrases that the speech
    * recognizer should recognize with higher likelihood.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
@@ -221,6 +220,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
    * <pre>
    * Optional. A list of strings containing words and phrases that the speech
    * recognizer should recognize with higher likelihood.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
@@ -254,6 +254,12 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
    * [Cloud Speech API
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
    * for more details.
+   * If you specify a model, the following models typically have the best
+   * performance:
+   *
+   * - phone_call (best for Agent Assist and telephony)
+   * - latest_short (best for Dialogflow non-telephony)
+   * - command_and_search (best for very short utterances and commands)
    * </pre>
    *
    * <code>string model = 7;</code>
@@ -287,6 +293,12 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
    * [Cloud Speech API
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
    * for more details.
+   * If you specify a model, the following models typically have the best
+   * performance:
+   *
+   * - phone_call (best for Agent Assist and telephony)
+   * - latest_short (best for Dialogflow non-telephony)
+   * - command_and_search (best for very short utterances and commands)
    * </pre>
    *
    * <code>string model = 7;</code>
@@ -643,8 +655,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
       audioEncoding_ = 0;
       sampleRateHertz_ = 0;
       enableWordInfo_ = false;
-      phraseHints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      phraseHints_ = com.google.protobuf.LazyStringArrayList.emptyList();
       model_ = "";
       modelVariant_ = 0;
       singleUtterance_ = false;
@@ -675,21 +686,11 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
     public com.google.cloud.dialogflow.cx.v3beta1.InputAudioConfig buildPartial() {
       com.google.cloud.dialogflow.cx.v3beta1.InputAudioConfig result =
           new com.google.cloud.dialogflow.cx.v3beta1.InputAudioConfig(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) {
         buildPartial0(result);
       }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(
-        com.google.cloud.dialogflow.cx.v3beta1.InputAudioConfig result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
-        phraseHints_ = phraseHints_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.phraseHints_ = phraseHints_;
     }
 
     private void buildPartial0(com.google.cloud.dialogflow.cx.v3beta1.InputAudioConfig result) {
@@ -702,6 +703,10 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.enableWordInfo_ = enableWordInfo_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        phraseHints_.makeImmutable();
+        result.phraseHints_ = phraseHints_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.model_ = model_;
@@ -772,7 +777,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
       if (!other.phraseHints_.isEmpty()) {
         if (phraseHints_.isEmpty()) {
           phraseHints_ = other.phraseHints_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ |= 0x00000008;
         } else {
           ensurePhraseHintsIsMutable();
           phraseHints_.addAll(other.phraseHints_);
@@ -1113,14 +1118,14 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
       return this;
     }
 
-    private com.google.protobuf.LazyStringList phraseHints_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList phraseHints_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensurePhraseHintsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!phraseHints_.isModifiable()) {
         phraseHints_ = new com.google.protobuf.LazyStringArrayList(phraseHints_);
-        bitField0_ |= 0x00000008;
       }
+      bitField0_ |= 0x00000008;
     }
     /**
      *
@@ -1128,6 +1133,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Optional. A list of strings containing words and phrases that the speech
      * recognizer should recognize with higher likelihood.
+     *
      * See [the Cloud Speech
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
      * for more details.
@@ -1138,7 +1144,8 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * @return A list containing the phraseHints.
      */
     public com.google.protobuf.ProtocolStringList getPhraseHintsList() {
-      return phraseHints_.getUnmodifiableView();
+      phraseHints_.makeImmutable();
+      return phraseHints_;
     }
     /**
      *
@@ -1146,6 +1153,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Optional. A list of strings containing words and phrases that the speech
      * recognizer should recognize with higher likelihood.
+     *
      * See [the Cloud Speech
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
      * for more details.
@@ -1164,6 +1172,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Optional. A list of strings containing words and phrases that the speech
      * recognizer should recognize with higher likelihood.
+     *
      * See [the Cloud Speech
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
      * for more details.
@@ -1183,6 +1192,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Optional. A list of strings containing words and phrases that the speech
      * recognizer should recognize with higher likelihood.
+     *
      * See [the Cloud Speech
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
      * for more details.
@@ -1202,6 +1212,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Optional. A list of strings containing words and phrases that the speech
      * recognizer should recognize with higher likelihood.
+     *
      * See [the Cloud Speech
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
      * for more details.
@@ -1219,6 +1230,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
       }
       ensurePhraseHintsIsMutable();
       phraseHints_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1228,6 +1240,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Optional. A list of strings containing words and phrases that the speech
      * recognizer should recognize with higher likelihood.
+     *
      * See [the Cloud Speech
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
      * for more details.
@@ -1244,6 +1257,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
       }
       ensurePhraseHintsIsMutable();
       phraseHints_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1253,6 +1267,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Optional. A list of strings containing words and phrases that the speech
      * recognizer should recognize with higher likelihood.
+     *
      * See [the Cloud Speech
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
      * for more details.
@@ -1266,6 +1281,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
     public Builder addAllPhraseHints(java.lang.Iterable<java.lang.String> values) {
       ensurePhraseHintsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, phraseHints_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1275,6 +1291,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Optional. A list of strings containing words and phrases that the speech
      * recognizer should recognize with higher likelihood.
+     *
      * See [the Cloud Speech
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
      * for more details.
@@ -1285,8 +1302,9 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * @return This builder for chaining.
      */
     public Builder clearPhraseHints() {
-      phraseHints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      phraseHints_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000008);
+      ;
       onChanged();
       return this;
     }
@@ -1296,6 +1314,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Optional. A list of strings containing words and phrases that the speech
      * recognizer should recognize with higher likelihood.
+     *
      * See [the Cloud Speech
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
      * for more details.
@@ -1313,6 +1332,7 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
       checkByteStringIsUtf8(value);
       ensurePhraseHintsIsMutable();
       phraseHints_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1333,6 +1353,12 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * [Cloud Speech API
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
      * for more details.
+     * If you specify a model, the following models typically have the best
+     * performance:
+     *
+     * - phone_call (best for Agent Assist and telephony)
+     * - latest_short (best for Dialogflow non-telephony)
+     * - command_and_search (best for very short utterances and commands)
      * </pre>
      *
      * <code>string model = 7;</code>
@@ -1365,6 +1391,12 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * [Cloud Speech API
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
      * for more details.
+     * If you specify a model, the following models typically have the best
+     * performance:
+     *
+     * - phone_call (best for Agent Assist and telephony)
+     * - latest_short (best for Dialogflow non-telephony)
+     * - command_and_search (best for very short utterances and commands)
      * </pre>
      *
      * <code>string model = 7;</code>
@@ -1397,6 +1429,12 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * [Cloud Speech API
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
      * for more details.
+     * If you specify a model, the following models typically have the best
+     * performance:
+     *
+     * - phone_call (best for Agent Assist and telephony)
+     * - latest_short (best for Dialogflow non-telephony)
+     * - command_and_search (best for very short utterances and commands)
      * </pre>
      *
      * <code>string model = 7;</code>
@@ -1428,6 +1466,12 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * [Cloud Speech API
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
      * for more details.
+     * If you specify a model, the following models typically have the best
+     * performance:
+     *
+     * - phone_call (best for Agent Assist and telephony)
+     * - latest_short (best for Dialogflow non-telephony)
+     * - command_and_search (best for very short utterances and commands)
      * </pre>
      *
      * <code>string model = 7;</code>
@@ -1455,6 +1499,12 @@ public final class InputAudioConfig extends com.google.protobuf.GeneratedMessage
      * [Cloud Speech API
      * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
      * for more details.
+     * If you specify a model, the following models typically have the best
+     * performance:
+     *
+     * - phone_call (best for Agent Assist and telephony)
+     * - latest_short (best for Dialogflow non-telephony)
+     * - command_and_search (best for very short utterances and commands)
      * </pre>
      *
      * <code>string model = 7;</code>

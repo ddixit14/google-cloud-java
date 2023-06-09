@@ -46,11 +46,6 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
     return new MembershipEndpoint();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.gkehub.v1.MembershipProto
         .internal_static_google_cloud_gkehub_v1_MembershipEndpoint_descriptor;
@@ -184,8 +179,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-   * registered cluster, in the steady state. These resources:
+   * Optional. The in-cluster Kubernetes Resources that should be applied for a
+   * correctly registered cluster, in the steady state. These resources:
+   *
    *   * Ensure that the cluster is exclusively registered to one and only one
    *     Hub Membership.
    *   * Propagate Workload Pool Information available in the Membership
@@ -207,8 +203,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-   * registered cluster, in the steady state. These resources:
+   * Optional. The in-cluster Kubernetes Resources that should be applied for a
+   * correctly registered cluster, in the steady state. These resources:
+   *
    *   * Ensure that the cluster is exclusively registered to one and only one
    *     Hub Membership.
    *   * Propagate Workload Pool Information available in the Membership
@@ -232,8 +229,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-   * registered cluster, in the steady state. These resources:
+   * Optional. The in-cluster Kubernetes Resources that should be applied for a
+   * correctly registered cluster, in the steady state. These resources:
+   *
    *   * Ensure that the cluster is exclusively registered to one and only one
    *     Hub Membership.
    *   * Propagate Workload Pool Information available in the Membership
@@ -250,6 +248,25 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
     return kubernetesResource_ == null
         ? com.google.cloud.gkehub.v1.KubernetesResource.getDefaultInstance()
         : kubernetesResource_;
+  }
+
+  public static final int GOOGLE_MANAGED_FIELD_NUMBER = 8;
+  private boolean googleManaged_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * Output only. Whether the lifecycle of this membership is managed by a
+   * google cluster platform service.
+   * </pre>
+   *
+   * <code>bool google_managed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
+   * @return The googleManaged.
+   */
+  @java.lang.Override
+  public boolean getGoogleManaged() {
+    return googleManaged_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -275,6 +292,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
     if (kubernetesResource_ != null) {
       output.writeMessage(3, getKubernetesResource());
     }
+    if (googleManaged_ != false) {
+      output.writeBool(8, googleManaged_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -292,6 +312,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
     }
     if (kubernetesResource_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getKubernetesResource());
+    }
+    if (googleManaged_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(8, googleManaged_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -321,6 +344,7 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
     if (hasKubernetesResource()) {
       if (!getKubernetesResource().equals(other.getKubernetesResource())) return false;
     }
+    if (getGoogleManaged() != other.getGoogleManaged()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -344,6 +368,8 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
       hash = (37 * hash) + KUBERNETES_RESOURCE_FIELD_NUMBER;
       hash = (53 * hash) + getKubernetesResource().hashCode();
     }
+    hash = (37 * hash) + GOOGLE_MANAGED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getGoogleManaged());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -499,6 +525,7 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
         kubernetesResourceBuilder_.dispose();
         kubernetesResourceBuilder_ = null;
       }
+      googleManaged_ = false;
       return this;
     }
 
@@ -549,6 +576,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
             kubernetesResourceBuilder_ == null
                 ? kubernetesResource_
                 : kubernetesResourceBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.googleManaged_ = googleManaged_;
       }
     }
 
@@ -606,6 +636,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
       if (other.hasKubernetesResource()) {
         mergeKubernetesResource(other.getKubernetesResource());
       }
+      if (other.getGoogleManaged() != false) {
+        setGoogleManaged(other.getGoogleManaged());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -652,6 +685,12 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+            case 64:
+              {
+                googleManaged_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 64
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -1085,8 +1124,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -1107,8 +1147,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -1135,8 +1176,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -1165,8 +1207,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -1193,8 +1236,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -1227,8 +1271,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -1254,8 +1299,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -1276,8 +1322,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -1302,8 +1349,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -1330,6 +1378,62 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
         kubernetesResource_ = null;
       }
       return kubernetesResourceBuilder_;
+    }
+
+    private boolean googleManaged_;
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Whether the lifecycle of this membership is managed by a
+     * google cluster platform service.
+     * </pre>
+     *
+     * <code>bool google_managed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @return The googleManaged.
+     */
+    @java.lang.Override
+    public boolean getGoogleManaged() {
+      return googleManaged_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Whether the lifecycle of this membership is managed by a
+     * google cluster platform service.
+     * </pre>
+     *
+     * <code>bool google_managed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @param value The googleManaged to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoogleManaged(boolean value) {
+
+      googleManaged_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Output only. Whether the lifecycle of this membership is managed by a
+     * google cluster platform service.
+     * </pre>
+     *
+     * <code>bool google_managed = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearGoogleManaged() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      googleManaged_ = false;
+      onChanged();
+      return this;
     }
 
     @java.lang.Override

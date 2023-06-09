@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -160,7 +160,9 @@ public class SessionsClientTest {
   @Test
   public void streamingDetectIntentTest() throws Exception {
     StreamingDetectIntentResponse expectedResponse =
-        StreamingDetectIntentResponse.newBuilder().build();
+        StreamingDetectIntentResponse.newBuilder()
+            .setDebuggingInfo(CloudConversationDebuggingInfo.newBuilder().build())
+            .build();
     mockSessions.addResponse(expectedResponse);
     StreamingDetectIntentRequest request =
         StreamingDetectIntentRequest.newBuilder()
@@ -172,6 +174,7 @@ public class SessionsClientTest {
             .setQueryInput(QueryInput.newBuilder().build())
             .setOutputAudioConfig(OutputAudioConfig.newBuilder().build())
             .setEnablePartialResponse(true)
+            .setEnableDebuggingInfo(true)
             .build();
 
     MockStreamObserver<StreamingDetectIntentResponse> responseObserver = new MockStreamObserver<>();
@@ -203,6 +206,7 @@ public class SessionsClientTest {
             .setQueryInput(QueryInput.newBuilder().build())
             .setOutputAudioConfig(OutputAudioConfig.newBuilder().build())
             .setEnablePartialResponse(true)
+            .setEnableDebuggingInfo(true)
             .build();
 
     MockStreamObserver<StreamingDetectIntentResponse> responseObserver = new MockStreamObserver<>();

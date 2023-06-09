@@ -100,7 +100,7 @@ public interface TaskGroupOrBuilder
    *
    * <pre>
    * Number of Tasks in the TaskGroup.
-   * default is 1
+   * Default is 1.
    * </pre>
    *
    * <code>int64 task_count = 4;</code>
@@ -115,6 +115,7 @@ public interface TaskGroupOrBuilder
    * <pre>
    * Max number of tasks that can run in parallel.
    * Default to min(task_count, 1000).
+   * Field parallelism must be 1 if the scheduling_policy is IN_ORDER.
    * </pre>
    *
    * <code>int64 parallelism = 5;</code>
@@ -128,6 +129,7 @@ public interface TaskGroupOrBuilder
    *
    * <pre>
    * Scheduling policy for Tasks in the TaskGroup.
+   * The default value is AS_SOON_AS_POSSIBLE.
    * </pre>
    *
    * <code>.google.cloud.batch.v1alpha.TaskGroup.SchedulingPolicy scheduling_policy = 6;</code>
@@ -140,6 +142,7 @@ public interface TaskGroupOrBuilder
    *
    * <pre>
    * Scheduling policy for Tasks in the TaskGroup.
+   * The default value is AS_SOON_AS_POSSIBLE.
    * </pre>
    *
    * <code>.google.cloud.batch.v1alpha.TaskGroup.SchedulingPolicy scheduling_policy = 6;</code>
@@ -277,10 +280,12 @@ public interface TaskGroupOrBuilder
    * matching indices. If task_environments is used then task_count should
    * not be specified in the request (and will be ignored). Task count will be
    * the length of task_environments.
+   *
    * Tasks get a BATCH_TASK_INDEX and BATCH_TASK_COUNT environment variable, in
    * addition to any environment variables set in task_environments, specifying
    * the number of Tasks in the Task's parent TaskGroup, and the specific Task's
    * index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
+   *
    * task_environments supports up to 200 entries.
    * </pre>
    *
@@ -295,10 +300,12 @@ public interface TaskGroupOrBuilder
    * matching indices. If task_environments is used then task_count should
    * not be specified in the request (and will be ignored). Task count will be
    * the length of task_environments.
+   *
    * Tasks get a BATCH_TASK_INDEX and BATCH_TASK_COUNT environment variable, in
    * addition to any environment variables set in task_environments, specifying
    * the number of Tasks in the Task's parent TaskGroup, and the specific Task's
    * index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
+   *
    * task_environments supports up to 200 entries.
    * </pre>
    *
@@ -313,10 +320,12 @@ public interface TaskGroupOrBuilder
    * matching indices. If task_environments is used then task_count should
    * not be specified in the request (and will be ignored). Task count will be
    * the length of task_environments.
+   *
    * Tasks get a BATCH_TASK_INDEX and BATCH_TASK_COUNT environment variable, in
    * addition to any environment variables set in task_environments, specifying
    * the number of Tasks in the Task's parent TaskGroup, and the specific Task's
    * index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
+   *
    * task_environments supports up to 200 entries.
    * </pre>
    *
@@ -331,10 +340,12 @@ public interface TaskGroupOrBuilder
    * matching indices. If task_environments is used then task_count should
    * not be specified in the request (and will be ignored). Task count will be
    * the length of task_environments.
+   *
    * Tasks get a BATCH_TASK_INDEX and BATCH_TASK_COUNT environment variable, in
    * addition to any environment variables set in task_environments, specifying
    * the number of Tasks in the Task's parent TaskGroup, and the specific Task's
    * index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
+   *
    * task_environments supports up to 200 entries.
    * </pre>
    *
@@ -350,10 +361,12 @@ public interface TaskGroupOrBuilder
    * matching indices. If task_environments is used then task_count should
    * not be specified in the request (and will be ignored). Task count will be
    * the length of task_environments.
+   *
    * Tasks get a BATCH_TASK_INDEX and BATCH_TASK_COUNT environment variable, in
    * addition to any environment variables set in task_environments, specifying
    * the number of Tasks in the Task's parent TaskGroup, and the specific Task's
    * index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
+   *
    * task_environments supports up to 200 entries.
    * </pre>
    *

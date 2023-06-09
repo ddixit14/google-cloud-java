@@ -72,7 +72,7 @@ public interface ExpandedDataSetFilterExpressionOrBuilder
    *
    *
    * <pre>
-   * A filter expression to be NOT'ed (i.e., inverted, complemented). It
+   * A filter expression to be NOT'ed (that is, inverted, complemented). It
    * must include a dimension_filter. This cannot be set on the
    * top level ExpandedDataSetFilterExpression.
    * </pre>
@@ -87,7 +87,7 @@ public interface ExpandedDataSetFilterExpressionOrBuilder
    *
    *
    * <pre>
-   * A filter expression to be NOT'ed (i.e., inverted, complemented). It
+   * A filter expression to be NOT'ed (that is, inverted, complemented). It
    * must include a dimension_filter. This cannot be set on the
    * top level ExpandedDataSetFilterExpression.
    * </pre>
@@ -102,7 +102,7 @@ public interface ExpandedDataSetFilterExpressionOrBuilder
    *
    *
    * <pre>
-   * A filter expression to be NOT'ed (i.e., inverted, complemented). It
+   * A filter expression to be NOT'ed (that is, inverted, complemented). It
    * must include a dimension_filter. This cannot be set on the
    * top level ExpandedDataSetFilterExpression.
    * </pre>
@@ -151,5 +151,5 @@ public interface ExpandedDataSetFilterExpressionOrBuilder
    */
   com.google.analytics.admin.v1alpha.ExpandedDataSetFilterOrBuilder getFilterOrBuilder();
 
-  public com.google.analytics.admin.v1alpha.ExpandedDataSetFilterExpression.ExprCase getExprCase();
+  com.google.analytics.admin.v1alpha.ExpandedDataSetFilterExpression.ExprCase getExprCase();
 }

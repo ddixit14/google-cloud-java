@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
   }
 
   private GcsSource() {
-    inputUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    inputUris_ = com.google.protobuf.LazyStringArrayList.emptyList();
     dataSchema_ = "";
   }
 
@@ -46,11 +46,6 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new GcsSource();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -71,7 +66,8 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
   public static final int INPUT_URIS_FIELD_NUMBER = 1;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList inputUris_;
+  private com.google.protobuf.LazyStringArrayList inputUris_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
@@ -79,8 +75,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
    * Required. Cloud Storage URIs to input files. URI can be up to
    * 2000 characters long. URIs can match the full object path (for example,
    * `gs://bucket/directory/object.json`) or a pattern matching one or more
-   * files, such as `gs://bucket/directory/&#42;.json`. A request can
-   * contain at most 100 files, and each file can be up to 2 GB.
+   * files, such as `gs://bucket/directory/&#42;.json`.
+   *
+   * A request can contain at most 100 files (or 100,000 files if `data_schema`
+   * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+   * `content`).
    * </pre>
    *
    * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -97,8 +96,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
    * Required. Cloud Storage URIs to input files. URI can be up to
    * 2000 characters long. URIs can match the full object path (for example,
    * `gs://bucket/directory/object.json`) or a pattern matching one or more
-   * files, such as `gs://bucket/directory/&#42;.json`. A request can
-   * contain at most 100 files, and each file can be up to 2 GB.
+   * files, such as `gs://bucket/directory/&#42;.json`.
+   *
+   * A request can contain at most 100 files (or 100,000 files if `data_schema`
+   * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+   * `content`).
    * </pre>
    *
    * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -115,8 +117,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
    * Required. Cloud Storage URIs to input files. URI can be up to
    * 2000 characters long. URIs can match the full object path (for example,
    * `gs://bucket/directory/object.json`) or a pattern matching one or more
-   * files, such as `gs://bucket/directory/&#42;.json`. A request can
-   * contain at most 100 files, and each file can be up to 2 GB.
+   * files, such as `gs://bucket/directory/&#42;.json`.
+   *
+   * A request can contain at most 100 files (or 100,000 files if `data_schema`
+   * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+   * `content`).
    * </pre>
    *
    * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -134,8 +139,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
    * Required. Cloud Storage URIs to input files. URI can be up to
    * 2000 characters long. URIs can match the full object path (for example,
    * `gs://bucket/directory/object.json`) or a pattern matching one or more
-   * files, such as `gs://bucket/directory/&#42;.json`. A request can
-   * contain at most 100 files, and each file can be up to 2 GB.
+   * files, such as `gs://bucket/directory/&#42;.json`.
+   *
+   * A request can contain at most 100 files (or 100,000 files if `data_schema`
+   * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+   * `content`).
    * </pre>
    *
    * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -156,13 +164,23 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The schema to use when parsing the data from the source.
+   *
    * Supported values for document imports:
+   *
    * * `document` (default): One JSON
    * [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
    * document must
    *   have a valid
    *   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+   * * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
+   *   `input_uris` will become a document, with the ID set to the first 128
+   *   bits of SHA256(URI) encoded as a hex string.
+   * * `custom`: One custom data JSON per row in arbitrary format that conforms
+   *   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+   *   data store. This can only be used by the GENERIC Data Store vertical.
+   *
    * Supported values for user even imports:
+   *
    * * `user_event` (default): One JSON
    * [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
    * </pre>
@@ -188,13 +206,23 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The schema to use when parsing the data from the source.
+   *
    * Supported values for document imports:
+   *
    * * `document` (default): One JSON
    * [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
    * document must
    *   have a valid
    *   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+   * * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
+   *   `input_uris` will become a document, with the ID set to the first 128
+   *   bits of SHA256(URI) encoded as a hex string.
+   * * `custom`: One custom data JSON per row in arbitrary format that conforms
+   *   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+   *   data store. This can only be used by the GENERIC Data Store vertical.
+   *
    * Supported values for user even imports:
+   *
    * * `user_event` (default): One JSON
    * [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
    * </pre>
@@ -430,8 +458,7 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      inputUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      inputUris_ = com.google.protobuf.LazyStringArrayList.emptyList();
       dataSchema_ = "";
       return this;
     }
@@ -460,7 +487,6 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
     public com.google.cloud.discoveryengine.v1beta.GcsSource buildPartial() {
       com.google.cloud.discoveryengine.v1beta.GcsSource result =
           new com.google.cloud.discoveryengine.v1beta.GcsSource(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) {
         buildPartial0(result);
       }
@@ -468,17 +494,12 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
       return result;
     }
 
-    private void buildPartialRepeatedFields(
-        com.google.cloud.discoveryengine.v1beta.GcsSource result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        inputUris_ = inputUris_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.inputUris_ = inputUris_;
-    }
-
     private void buildPartial0(com.google.cloud.discoveryengine.v1beta.GcsSource result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        inputUris_.makeImmutable();
+        result.inputUris_ = inputUris_;
+      }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.dataSchema_ = dataSchema_;
       }
@@ -533,7 +554,7 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
       if (!other.inputUris_.isEmpty()) {
         if (inputUris_.isEmpty()) {
           inputUris_ = other.inputUris_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureInputUrisIsMutable();
           inputUris_.addAll(other.inputUris_);
@@ -603,14 +624,14 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
 
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList inputUris_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList inputUris_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureInputUrisIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!inputUris_.isModifiable()) {
         inputUris_ = new com.google.protobuf.LazyStringArrayList(inputUris_);
-        bitField0_ |= 0x00000001;
       }
+      bitField0_ |= 0x00000001;
     }
     /**
      *
@@ -619,8 +640,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * Required. Cloud Storage URIs to input files. URI can be up to
      * 2000 characters long. URIs can match the full object path (for example,
      * `gs://bucket/directory/object.json`) or a pattern matching one or more
-     * files, such as `gs://bucket/directory/&#42;.json`. A request can
-     * contain at most 100 files, and each file can be up to 2 GB.
+     * files, such as `gs://bucket/directory/&#42;.json`.
+     *
+     * A request can contain at most 100 files (or 100,000 files if `data_schema`
+     * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+     * `content`).
      * </pre>
      *
      * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -628,7 +652,8 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the inputUris.
      */
     public com.google.protobuf.ProtocolStringList getInputUrisList() {
-      return inputUris_.getUnmodifiableView();
+      inputUris_.makeImmutable();
+      return inputUris_;
     }
     /**
      *
@@ -637,8 +662,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * Required. Cloud Storage URIs to input files. URI can be up to
      * 2000 characters long. URIs can match the full object path (for example,
      * `gs://bucket/directory/object.json`) or a pattern matching one or more
-     * files, such as `gs://bucket/directory/&#42;.json`. A request can
-     * contain at most 100 files, and each file can be up to 2 GB.
+     * files, such as `gs://bucket/directory/&#42;.json`.
+     *
+     * A request can contain at most 100 files (or 100,000 files if `data_schema`
+     * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+     * `content`).
      * </pre>
      *
      * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -655,8 +683,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * Required. Cloud Storage URIs to input files. URI can be up to
      * 2000 characters long. URIs can match the full object path (for example,
      * `gs://bucket/directory/object.json`) or a pattern matching one or more
-     * files, such as `gs://bucket/directory/&#42;.json`. A request can
-     * contain at most 100 files, and each file can be up to 2 GB.
+     * files, such as `gs://bucket/directory/&#42;.json`.
+     *
+     * A request can contain at most 100 files (or 100,000 files if `data_schema`
+     * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+     * `content`).
      * </pre>
      *
      * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -674,8 +705,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * Required. Cloud Storage URIs to input files. URI can be up to
      * 2000 characters long. URIs can match the full object path (for example,
      * `gs://bucket/directory/object.json`) or a pattern matching one or more
-     * files, such as `gs://bucket/directory/&#42;.json`. A request can
-     * contain at most 100 files, and each file can be up to 2 GB.
+     * files, such as `gs://bucket/directory/&#42;.json`.
+     *
+     * A request can contain at most 100 files (or 100,000 files if `data_schema`
+     * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+     * `content`).
      * </pre>
      *
      * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -693,8 +727,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * Required. Cloud Storage URIs to input files. URI can be up to
      * 2000 characters long. URIs can match the full object path (for example,
      * `gs://bucket/directory/object.json`) or a pattern matching one or more
-     * files, such as `gs://bucket/directory/&#42;.json`. A request can
-     * contain at most 100 files, and each file can be up to 2 GB.
+     * files, such as `gs://bucket/directory/&#42;.json`.
+     *
+     * A request can contain at most 100 files (or 100,000 files if `data_schema`
+     * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+     * `content`).
      * </pre>
      *
      * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -709,6 +746,7 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
       }
       ensureInputUrisIsMutable();
       inputUris_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -719,8 +757,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * Required. Cloud Storage URIs to input files. URI can be up to
      * 2000 characters long. URIs can match the full object path (for example,
      * `gs://bucket/directory/object.json`) or a pattern matching one or more
-     * files, such as `gs://bucket/directory/&#42;.json`. A request can
-     * contain at most 100 files, and each file can be up to 2 GB.
+     * files, such as `gs://bucket/directory/&#42;.json`.
+     *
+     * A request can contain at most 100 files (or 100,000 files if `data_schema`
+     * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+     * `content`).
      * </pre>
      *
      * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -734,6 +775,7 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
       }
       ensureInputUrisIsMutable();
       inputUris_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -744,8 +786,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * Required. Cloud Storage URIs to input files. URI can be up to
      * 2000 characters long. URIs can match the full object path (for example,
      * `gs://bucket/directory/object.json`) or a pattern matching one or more
-     * files, such as `gs://bucket/directory/&#42;.json`. A request can
-     * contain at most 100 files, and each file can be up to 2 GB.
+     * files, such as `gs://bucket/directory/&#42;.json`.
+     *
+     * A request can contain at most 100 files (or 100,000 files if `data_schema`
+     * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+     * `content`).
      * </pre>
      *
      * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -756,6 +801,7 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllInputUris(java.lang.Iterable<java.lang.String> values) {
       ensureInputUrisIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, inputUris_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -766,8 +812,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * Required. Cloud Storage URIs to input files. URI can be up to
      * 2000 characters long. URIs can match the full object path (for example,
      * `gs://bucket/directory/object.json`) or a pattern matching one or more
-     * files, such as `gs://bucket/directory/&#42;.json`. A request can
-     * contain at most 100 files, and each file can be up to 2 GB.
+     * files, such as `gs://bucket/directory/&#42;.json`.
+     *
+     * A request can contain at most 100 files (or 100,000 files if `data_schema`
+     * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+     * `content`).
      * </pre>
      *
      * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -775,8 +824,9 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearInputUris() {
-      inputUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      inputUris_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      ;
       onChanged();
       return this;
     }
@@ -787,8 +837,11 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      * Required. Cloud Storage URIs to input files. URI can be up to
      * 2000 characters long. URIs can match the full object path (for example,
      * `gs://bucket/directory/object.json`) or a pattern matching one or more
-     * files, such as `gs://bucket/directory/&#42;.json`. A request can
-     * contain at most 100 files, and each file can be up to 2 GB.
+     * files, such as `gs://bucket/directory/&#42;.json`.
+     *
+     * A request can contain at most 100 files (or 100,000 files if `data_schema`
+     * is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is
+     * `content`).
      * </pre>
      *
      * <code>repeated string input_uris = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -803,6 +856,7 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureInputUrisIsMutable();
       inputUris_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -813,13 +867,23 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The schema to use when parsing the data from the source.
+     *
      * Supported values for document imports:
+     *
      * * `document` (default): One JSON
      * [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
      * document must
      *   have a valid
      *   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+     * * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
+     *   `input_uris` will become a document, with the ID set to the first 128
+     *   bits of SHA256(URI) encoded as a hex string.
+     * * `custom`: One custom data JSON per row in arbitrary format that conforms
+     *   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+     *   data store. This can only be used by the GENERIC Data Store vertical.
+     *
      * Supported values for user even imports:
+     *
      * * `user_event` (default): One JSON
      * [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
      * </pre>
@@ -844,13 +908,23 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The schema to use when parsing the data from the source.
+     *
      * Supported values for document imports:
+     *
      * * `document` (default): One JSON
      * [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
      * document must
      *   have a valid
      *   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+     * * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
+     *   `input_uris` will become a document, with the ID set to the first 128
+     *   bits of SHA256(URI) encoded as a hex string.
+     * * `custom`: One custom data JSON per row in arbitrary format that conforms
+     *   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+     *   data store. This can only be used by the GENERIC Data Store vertical.
+     *
      * Supported values for user even imports:
+     *
      * * `user_event` (default): One JSON
      * [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
      * </pre>
@@ -875,13 +949,23 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The schema to use when parsing the data from the source.
+     *
      * Supported values for document imports:
+     *
      * * `document` (default): One JSON
      * [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
      * document must
      *   have a valid
      *   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+     * * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
+     *   `input_uris` will become a document, with the ID set to the first 128
+     *   bits of SHA256(URI) encoded as a hex string.
+     * * `custom`: One custom data JSON per row in arbitrary format that conforms
+     *   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+     *   data store. This can only be used by the GENERIC Data Store vertical.
+     *
      * Supported values for user even imports:
+     *
      * * `user_event` (default): One JSON
      * [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
      * </pre>
@@ -905,13 +989,23 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The schema to use when parsing the data from the source.
+     *
      * Supported values for document imports:
+     *
      * * `document` (default): One JSON
      * [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
      * document must
      *   have a valid
      *   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+     * * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
+     *   `input_uris` will become a document, with the ID set to the first 128
+     *   bits of SHA256(URI) encoded as a hex string.
+     * * `custom`: One custom data JSON per row in arbitrary format that conforms
+     *   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+     *   data store. This can only be used by the GENERIC Data Store vertical.
+     *
      * Supported values for user even imports:
+     *
      * * `user_event` (default): One JSON
      * [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
      * </pre>
@@ -931,13 +1025,23 @@ public final class GcsSource extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The schema to use when parsing the data from the source.
+     *
      * Supported values for document imports:
+     *
      * * `document` (default): One JSON
      * [Document][google.cloud.discoveryengine.v1beta.Document] per line. Each
      * document must
      *   have a valid
      *   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
+     * * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
+     *   `input_uris` will become a document, with the ID set to the first 128
+     *   bits of SHA256(URI) encoded as a hex string.
+     * * `custom`: One custom data JSON per row in arbitrary format that conforms
+     *   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+     *   data store. This can only be used by the GENERIC Data Store vertical.
+     *
      * Supported values for user even imports:
+     *
      * * `user_event` (default): One JSON
      * [UserEvent][google.cloud.discoveryengine.v1beta.UserEvent] per line.
      * </pre>

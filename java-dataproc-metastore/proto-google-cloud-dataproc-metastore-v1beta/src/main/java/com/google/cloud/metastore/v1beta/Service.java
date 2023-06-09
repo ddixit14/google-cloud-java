@@ -56,11 +56,6 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
     return new Service();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.metastore.v1beta.MetastoreProto
         .internal_static_google_cloud_metastore_v1beta_Service_descriptor;
@@ -844,6 +839,8 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int metastoreConfigCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object metastoreConfig_;
 
   public enum MetastoreConfigCase
@@ -952,6 +949,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Immutable. The relative resource name of the metastore service, in the
    * following format:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -977,6 +975,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Immutable. The relative resource name of the metastore service, in the
    * following format:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -1207,6 +1206,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Immutable. The relative resource name of the VPC network on which the
    * instance can be accessed. It is specified in the following form:
+   *
    * `projects/{project_number}/global/networks/{network_id}`.
    * </pre>
    *
@@ -1234,6 +1234,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Immutable. The relative resource name of the VPC network on which the
    * instance can be accessed. It is specified in the following form:
+   *
    * `projects/{project_number}/global/networks/{network_id}`.
    * </pre>
    *
@@ -1980,6 +1981,56 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
         : telemetryConfig_;
   }
 
+  public static final int SCALING_CONFIG_FIELD_NUMBER = 24;
+  private com.google.cloud.metastore.v1beta.ScalingConfig scalingConfig_;
+  /**
+   *
+   *
+   * <pre>
+   * Scaling configuration of the metastore service.
+   * </pre>
+   *
+   * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+   *
+   * @return Whether the scalingConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasScalingConfig() {
+    return scalingConfig_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Scaling configuration of the metastore service.
+   * </pre>
+   *
+   * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+   *
+   * @return The scalingConfig.
+   */
+  @java.lang.Override
+  public com.google.cloud.metastore.v1beta.ScalingConfig getScalingConfig() {
+    return scalingConfig_ == null
+        ? com.google.cloud.metastore.v1beta.ScalingConfig.getDefaultInstance()
+        : scalingConfig_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Scaling configuration of the metastore service.
+   * </pre>
+   *
+   * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+   */
+  @java.lang.Override
+  public com.google.cloud.metastore.v1beta.ScalingConfigOrBuilder getScalingConfigOrBuilder() {
+    return scalingConfig_ == null
+        ? com.google.cloud.metastore.v1beta.ScalingConfig.getDefaultInstance()
+        : scalingConfig_;
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -2060,6 +2111,9 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
     }
     if (telemetryConfig_ != null) {
       output.writeMessage(23, getTelemetryConfig());
+    }
+    if (scalingConfig_ != null) {
+      output.writeMessage(24, getScalingConfig());
     }
     getUnknownFields().writeTo(output);
   }
@@ -2149,6 +2203,9 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
     if (telemetryConfig_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(23, getTelemetryConfig());
     }
+    if (scalingConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(24, getScalingConfig());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2209,6 +2266,10 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
     if (hasTelemetryConfig() != other.hasTelemetryConfig()) return false;
     if (hasTelemetryConfig()) {
       if (!getTelemetryConfig().equals(other.getTelemetryConfig())) return false;
+    }
+    if (hasScalingConfig() != other.hasScalingConfig()) return false;
+    if (hasScalingConfig()) {
+      if (!getScalingConfig().equals(other.getScalingConfig())) return false;
     }
     if (!getMetastoreConfigCase().equals(other.getMetastoreConfigCase())) return false;
     switch (metastoreConfigCase_) {
@@ -2286,6 +2347,10 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
     if (hasTelemetryConfig()) {
       hash = (37 * hash) + TELEMETRY_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getTelemetryConfig().hashCode();
+    }
+    if (hasScalingConfig()) {
+      hash = (37 * hash) + SCALING_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getScalingConfig().hashCode();
     }
     switch (metastoreConfigCase_) {
       case 5:
@@ -2509,6 +2574,11 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
         telemetryConfigBuilder_.dispose();
         telemetryConfigBuilder_ = null;
       }
+      scalingConfig_ = null;
+      if (scalingConfigBuilder_ != null) {
+        scalingConfigBuilder_.dispose();
+        scalingConfigBuilder_ = null;
+      }
       metastoreConfigCase_ = 0;
       metastoreConfig_ = null;
       return this;
@@ -2620,6 +2690,10 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
       if (((from_bitField0_ & 0x00100000) != 0)) {
         result.telemetryConfig_ =
             telemetryConfigBuilder_ == null ? telemetryConfig_ : telemetryConfigBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.scalingConfig_ =
+            scalingConfigBuilder_ == null ? scalingConfig_ : scalingConfigBuilder_.build();
       }
     }
 
@@ -2746,6 +2820,9 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
       }
       if (other.hasTelemetryConfig()) {
         mergeTelemetryConfig(other.getTelemetryConfig());
+      }
+      if (other.hasScalingConfig()) {
+        mergeScalingConfig(other.getScalingConfig());
       }
       switch (other.getMetastoreConfigCase()) {
         case HIVE_METASTORE_CONFIG:
@@ -2921,6 +2998,12 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
                 bitField0_ |= 0x00100000;
                 break;
               } // case 186
+            case 194:
+              {
+                input.readMessage(getScalingConfigFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00200000;
+                break;
+              } // case 194
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -3185,6 +3268,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the metastore service, in the
      * following format:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -3209,6 +3293,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the metastore service, in the
      * following format:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -3233,6 +3318,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the metastore service, in the
      * following format:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -3256,6 +3342,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the metastore service, in the
      * following format:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -3275,6 +3362,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the metastore service, in the
      * following format:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -3866,6 +3954,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the VPC network on which the
      * instance can be accessed. It is specified in the following form:
+     *
      * `projects/{project_number}/global/networks/{network_id}`.
      * </pre>
      *
@@ -3892,6 +3981,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the VPC network on which the
      * instance can be accessed. It is specified in the following form:
+     *
      * `projects/{project_number}/global/networks/{network_id}`.
      * </pre>
      *
@@ -3918,6 +4008,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the VPC network on which the
      * instance can be accessed. It is specified in the following form:
+     *
      * `projects/{project_number}/global/networks/{network_id}`.
      * </pre>
      *
@@ -3943,6 +4034,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the VPC network on which the
      * instance can be accessed. It is specified in the following form:
+     *
      * `projects/{project_number}/global/networks/{network_id}`.
      * </pre>
      *
@@ -3964,6 +4056,7 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The relative resource name of the VPC network on which the
      * instance can be accessed. It is specified in the following form:
+     *
      * `projects/{project_number}/global/networks/{network_id}`.
      * </pre>
      *
@@ -6100,6 +6193,191 @@ public final class Service extends com.google.protobuf.GeneratedMessageV3
         telemetryConfig_ = null;
       }
       return telemetryConfigBuilder_;
+    }
+
+    private com.google.cloud.metastore.v1beta.ScalingConfig scalingConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.cloud.metastore.v1beta.ScalingConfig,
+            com.google.cloud.metastore.v1beta.ScalingConfig.Builder,
+            com.google.cloud.metastore.v1beta.ScalingConfigOrBuilder>
+        scalingConfigBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Scaling configuration of the metastore service.
+     * </pre>
+     *
+     * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+     *
+     * @return Whether the scalingConfig field is set.
+     */
+    public boolean hasScalingConfig() {
+      return ((bitField0_ & 0x00200000) != 0);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Scaling configuration of the metastore service.
+     * </pre>
+     *
+     * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+     *
+     * @return The scalingConfig.
+     */
+    public com.google.cloud.metastore.v1beta.ScalingConfig getScalingConfig() {
+      if (scalingConfigBuilder_ == null) {
+        return scalingConfig_ == null
+            ? com.google.cloud.metastore.v1beta.ScalingConfig.getDefaultInstance()
+            : scalingConfig_;
+      } else {
+        return scalingConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Scaling configuration of the metastore service.
+     * </pre>
+     *
+     * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+     */
+    public Builder setScalingConfig(com.google.cloud.metastore.v1beta.ScalingConfig value) {
+      if (scalingConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        scalingConfig_ = value;
+      } else {
+        scalingConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Scaling configuration of the metastore service.
+     * </pre>
+     *
+     * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+     */
+    public Builder setScalingConfig(
+        com.google.cloud.metastore.v1beta.ScalingConfig.Builder builderForValue) {
+      if (scalingConfigBuilder_ == null) {
+        scalingConfig_ = builderForValue.build();
+      } else {
+        scalingConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Scaling configuration of the metastore service.
+     * </pre>
+     *
+     * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+     */
+    public Builder mergeScalingConfig(com.google.cloud.metastore.v1beta.ScalingConfig value) {
+      if (scalingConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00200000) != 0)
+            && scalingConfig_ != null
+            && scalingConfig_
+                != com.google.cloud.metastore.v1beta.ScalingConfig.getDefaultInstance()) {
+          getScalingConfigBuilder().mergeFrom(value);
+        } else {
+          scalingConfig_ = value;
+        }
+      } else {
+        scalingConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Scaling configuration of the metastore service.
+     * </pre>
+     *
+     * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+     */
+    public Builder clearScalingConfig() {
+      bitField0_ = (bitField0_ & ~0x00200000);
+      scalingConfig_ = null;
+      if (scalingConfigBuilder_ != null) {
+        scalingConfigBuilder_.dispose();
+        scalingConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Scaling configuration of the metastore service.
+     * </pre>
+     *
+     * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+     */
+    public com.google.cloud.metastore.v1beta.ScalingConfig.Builder getScalingConfigBuilder() {
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return getScalingConfigFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Scaling configuration of the metastore service.
+     * </pre>
+     *
+     * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+     */
+    public com.google.cloud.metastore.v1beta.ScalingConfigOrBuilder getScalingConfigOrBuilder() {
+      if (scalingConfigBuilder_ != null) {
+        return scalingConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return scalingConfig_ == null
+            ? com.google.cloud.metastore.v1beta.ScalingConfig.getDefaultInstance()
+            : scalingConfig_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Scaling configuration of the metastore service.
+     * </pre>
+     *
+     * <code>.google.cloud.metastore.v1beta.ScalingConfig scaling_config = 24;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.cloud.metastore.v1beta.ScalingConfig,
+            com.google.cloud.metastore.v1beta.ScalingConfig.Builder,
+            com.google.cloud.metastore.v1beta.ScalingConfigOrBuilder>
+        getScalingConfigFieldBuilder() {
+      if (scalingConfigBuilder_ == null) {
+        scalingConfigBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.cloud.metastore.v1beta.ScalingConfig,
+                com.google.cloud.metastore.v1beta.ScalingConfig.Builder,
+                com.google.cloud.metastore.v1beta.ScalingConfigOrBuilder>(
+                getScalingConfig(), getParentForChildren(), isClean());
+        scalingConfig_ = null;
+      }
+      return scalingConfigBuilder_;
     }
 
     @java.lang.Override

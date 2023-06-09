@@ -45,11 +45,6 @@ public final class TCPSocketAction extends com.google.protobuf.GeneratedMessageV
     return new TCPSocketAction();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.run.v2.K8sMinProto
         .internal_static_google_cloud_run_v2_TCPSocketAction_descriptor;
@@ -72,7 +67,8 @@ public final class TCPSocketAction extends com.google.protobuf.GeneratedMessageV
    *
    * <pre>
    * Port number to access on the container. Must be in the range 1 to 65535.
-   * If not specified, defaults to 8080.
+   * If not specified, defaults to the exposed port of the container, which is
+   * the value of container.ports[0].containerPort.
    * </pre>
    *
    * <code>int32 port = 1;</code>
@@ -428,7 +424,8 @@ public final class TCPSocketAction extends com.google.protobuf.GeneratedMessageV
      *
      * <pre>
      * Port number to access on the container. Must be in the range 1 to 65535.
-     * If not specified, defaults to 8080.
+     * If not specified, defaults to the exposed port of the container, which is
+     * the value of container.ports[0].containerPort.
      * </pre>
      *
      * <code>int32 port = 1;</code>
@@ -444,7 +441,8 @@ public final class TCPSocketAction extends com.google.protobuf.GeneratedMessageV
      *
      * <pre>
      * Port number to access on the container. Must be in the range 1 to 65535.
-     * If not specified, defaults to 8080.
+     * If not specified, defaults to the exposed port of the container, which is
+     * the value of container.ports[0].containerPort.
      * </pre>
      *
      * <code>int32 port = 1;</code>
@@ -464,7 +462,8 @@ public final class TCPSocketAction extends com.google.protobuf.GeneratedMessageV
      *
      * <pre>
      * Port number to access on the container. Must be in the range 1 to 65535.
-     * If not specified, defaults to 8080.
+     * If not specified, defaults to the exposed port of the container, which is
+     * the value of container.ports[0].containerPort.
      * </pre>
      *
      * <code>int32 port = 1;</code>

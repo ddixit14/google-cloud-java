@@ -47,11 +47,6 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
     return new NetworkConfig();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.metastore.v1alpha.MetastoreProto
         .internal_static_google_cloud_metastore_v1alpha_NetworkConfig_descriptor;
@@ -82,6 +77,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
      * hosts in a subnet in the same region and same network. There must
      * be at least one IP address available in the subnet's primary range. The
      * subnet is specified in the following form:
+     *
      * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
      * </pre>
      *
@@ -102,6 +98,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
      * hosts in a subnet in the same region and same network. There must
      * be at least one IP address available in the subnet's primary range. The
      * subnet is specified in the following form:
+     *
      * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
      * </pre>
      *
@@ -122,6 +119,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
      * hosts in a subnet in the same region and same network. There must
      * be at least one IP address available in the subnet's primary range. The
      * subnet is specified in the following form:
+     *
      * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
      * </pre>
      *
@@ -160,8 +158,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
      */
     com.google.protobuf.ByteString getEndpointUriBytes();
 
-    public com.google.cloud.metastore.v1alpha.NetworkConfig.Consumer.VpcResourceCase
-        getVpcResourceCase();
+    com.google.cloud.metastore.v1alpha.NetworkConfig.Consumer.VpcResourceCase getVpcResourceCase();
   }
   /**
    *
@@ -192,11 +189,6 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
       return new Consumer();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.metastore.v1alpha.MetastoreProto
           .internal_static_google_cloud_metastore_v1alpha_NetworkConfig_Consumer_descriptor;
@@ -213,6 +205,8 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
     }
 
     private int vpcResourceCase_ = 0;
+
+    @SuppressWarnings("serial")
     private java.lang.Object vpcResource_;
 
     public enum VpcResourceCase
@@ -267,6 +261,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
      * hosts in a subnet in the same region and same network. There must
      * be at least one IP address available in the subnet's primary range. The
      * subnet is specified in the following form:
+     *
      * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
      * </pre>
      *
@@ -289,6 +284,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
      * hosts in a subnet in the same region and same network. There must
      * be at least one IP address available in the subnet's primary range. The
      * subnet is specified in the following form:
+     *
      * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
      * </pre>
      *
@@ -324,6 +320,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
      * hosts in a subnet in the same region and same network. There must
      * be at least one IP address available in the subnet's primary range. The
      * subnet is specified in the following form:
+     *
      * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
      * </pre>
      *
@@ -825,6 +822,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
        * hosts in a subnet in the same region and same network. There must
        * be at least one IP address available in the subnet's primary range. The
        * subnet is specified in the following form:
+       *
        * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
        * </pre>
        *
@@ -848,6 +846,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
        * hosts in a subnet in the same region and same network. There must
        * be at least one IP address available in the subnet's primary range. The
        * subnet is specified in the following form:
+       *
        * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
        * </pre>
        *
@@ -884,6 +883,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
        * hosts in a subnet in the same region and same network. There must
        * be at least one IP address available in the subnet's primary range. The
        * subnet is specified in the following form:
+       *
        * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
        * </pre>
        *
@@ -920,6 +920,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
        * hosts in a subnet in the same region and same network. There must
        * be at least one IP address available in the subnet's primary range. The
        * subnet is specified in the following form:
+       *
        * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
        * </pre>
        *
@@ -949,6 +950,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
        * hosts in a subnet in the same region and same network. There must
        * be at least one IP address available in the subnet's primary range. The
        * subnet is specified in the following form:
+       *
        * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
        * </pre>
        *
@@ -976,6 +978,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
        * hosts in a subnet in the same region and same network. There must
        * be at least one IP address available in the subnet's primary range. The
        * subnet is specified in the following form:
+       *
        * `projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}`
        * </pre>
        *
@@ -1261,6 +1264,25 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
     return consumers_.get(index);
   }
 
+  public static final int CUSTOM_ROUTES_ENABLED_FIELD_NUMBER = 2;
+  private boolean customRoutesEnabled_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * Enables custom routes to be imported and exported for the Dataproc
+   * Metastore service's peered VPC network.
+   * </pre>
+   *
+   * <code>bool custom_routes_enabled = 2;</code>
+   *
+   * @return The customRoutesEnabled.
+   */
+  @java.lang.Override
+  public boolean getCustomRoutesEnabled() {
+    return customRoutesEnabled_;
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -1278,6 +1300,9 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < consumers_.size(); i++) {
       output.writeMessage(1, consumers_.get(i));
     }
+    if (customRoutesEnabled_ != false) {
+      output.writeBool(2, customRoutesEnabled_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1289,6 +1314,9 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
     size = 0;
     for (int i = 0; i < consumers_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, consumers_.get(i));
+    }
+    if (customRoutesEnabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(2, customRoutesEnabled_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1307,6 +1335,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
         (com.google.cloud.metastore.v1alpha.NetworkConfig) obj;
 
     if (!getConsumersList().equals(other.getConsumersList())) return false;
+    if (getCustomRoutesEnabled() != other.getCustomRoutesEnabled()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1322,6 +1351,8 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + CONSUMERS_FIELD_NUMBER;
       hash = (53 * hash) + getConsumersList().hashCode();
     }
+    hash = (37 * hash) + CUSTOM_ROUTES_ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getCustomRoutesEnabled());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1468,6 +1499,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
         consumersBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      customRoutesEnabled_ = false;
       return this;
     }
 
@@ -1518,6 +1550,9 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
 
     private void buildPartial0(com.google.cloud.metastore.v1alpha.NetworkConfig result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.customRoutesEnabled_ = customRoutesEnabled_;
+      }
     }
 
     @java.lang.Override
@@ -1593,6 +1628,9 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
           }
         }
       }
+      if (other.getCustomRoutesEnabled() != false) {
+        setCustomRoutesEnabled(other.getCustomRoutesEnabled());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1633,6 +1671,12 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
                 }
                 break;
               } // case 10
+            case 16:
+              {
+                customRoutesEnabled_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -2069,6 +2113,62 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
         consumers_ = null;
       }
       return consumersBuilder_;
+    }
+
+    private boolean customRoutesEnabled_;
+    /**
+     *
+     *
+     * <pre>
+     * Enables custom routes to be imported and exported for the Dataproc
+     * Metastore service's peered VPC network.
+     * </pre>
+     *
+     * <code>bool custom_routes_enabled = 2;</code>
+     *
+     * @return The customRoutesEnabled.
+     */
+    @java.lang.Override
+    public boolean getCustomRoutesEnabled() {
+      return customRoutesEnabled_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Enables custom routes to be imported and exported for the Dataproc
+     * Metastore service's peered VPC network.
+     * </pre>
+     *
+     * <code>bool custom_routes_enabled = 2;</code>
+     *
+     * @param value The customRoutesEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomRoutesEnabled(boolean value) {
+
+      customRoutesEnabled_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Enables custom routes to be imported and exported for the Dataproc
+     * Metastore service's peered VPC network.
+     * </pre>
+     *
+     * <code>bool custom_routes_enabled = 2;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomRoutesEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      customRoutesEnabled_ = false;
+      onChanged();
+      return this;
     }
 
     @java.lang.Override

@@ -22,8 +22,8 @@ package com.google.cloud.dataplex.v1;
  *
  *
  * <pre>
- * DataQualityDimensionResult provides a more detailed, per-dimension level view
- * of the results.
+ * DataQualityDimensionResult provides a more detailed, per-dimension view of
+ * the results.
  * </pre>
  *
  * Protobuf type {@code google.cloud.dataplex.v1.DataQualityDimensionResult}
@@ -44,11 +44,6 @@ public final class DataQualityDimensionResult extends com.google.protobuf.Genera
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new DataQualityDimensionResult();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -248,8 +243,8 @@ public final class DataQualityDimensionResult extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * DataQualityDimensionResult provides a more detailed, per-dimension level view
-   * of the results.
+   * DataQualityDimensionResult provides a more detailed, per-dimension view of
+   * the results.
    * </pre>
    *
    * Protobuf type {@code google.cloud.dataplex.v1.DataQualityDimensionResult}

@@ -123,11 +123,9 @@ public interface JobOrBuilder
    *
    * <pre>
    * Input only. Specify the `template_id` to use for populating `Job.config`.
-   * The default is `preset/web-hd`.
-   * Preset Transcoder templates:
-   * - `preset/{preset_id}`
-   * - User defined JobTemplate:
-   *   `{job_template_id}`
+   * The default is `preset/web-hd`, which is the only supported preset.
+   *
+   * User defined JobTemplate: `{job_template_id}`
    * </pre>
    *
    * <code>string template_id = 4 [(.google.api.field_behavior) = INPUT_ONLY];</code>
@@ -140,11 +138,9 @@ public interface JobOrBuilder
    *
    * <pre>
    * Input only. Specify the `template_id` to use for populating `Job.config`.
-   * The default is `preset/web-hd`.
-   * Preset Transcoder templates:
-   * - `preset/{preset_id}`
-   * - User defined JobTemplate:
-   *   `{job_template_id}`
+   * The default is `preset/web-hd`, which is the only supported preset.
+   *
+   * User defined JobTemplate: `{job_template_id}`
    * </pre>
    *
    * <code>string template_id = 4 [(.google.api.field_behavior) = INPUT_ONLY];</code>
@@ -157,11 +153,9 @@ public interface JobOrBuilder
    *
    * <pre>
    * Input only. Specify the `template_id` to use for populating `Job.config`.
-   * The default is `preset/web-hd`.
-   * Preset Transcoder templates:
-   * - `preset/{preset_id}`
-   * - User defined JobTemplate:
-   *   `{job_template_id}`
+   * The default is `preset/web-hd`, which is the only supported preset.
+   *
+   * User defined JobTemplate: `{job_template_id}`
    * </pre>
    *
    * <code>string template_id = 4 [(.google.api.field_behavior) = INPUT_ONLY];</code>
@@ -464,5 +458,32 @@ public interface JobOrBuilder
    */
   com.google.rpc.StatusOrBuilder getErrorOrBuilder();
 
-  public com.google.cloud.video.transcoder.v1.Job.JobConfigCase getJobConfigCase();
+  /**
+   *
+   *
+   * <pre>
+   * The processing mode of the job.
+   * The default is `PROCESSING_MODE_INTERACTIVE`.
+   * </pre>
+   *
+   * <code>.google.cloud.video.transcoder.v1.Job.ProcessingMode mode = 20;</code>
+   *
+   * @return The enum numeric value on the wire for mode.
+   */
+  int getModeValue();
+  /**
+   *
+   *
+   * <pre>
+   * The processing mode of the job.
+   * The default is `PROCESSING_MODE_INTERACTIVE`.
+   * </pre>
+   *
+   * <code>.google.cloud.video.transcoder.v1.Job.ProcessingMode mode = 20;</code>
+   *
+   * @return The mode.
+   */
+  com.google.cloud.video.transcoder.v1.Job.ProcessingMode getMode();
+
+  com.google.cloud.video.transcoder.v1.Job.JobConfigCase getJobConfigCase();
 }

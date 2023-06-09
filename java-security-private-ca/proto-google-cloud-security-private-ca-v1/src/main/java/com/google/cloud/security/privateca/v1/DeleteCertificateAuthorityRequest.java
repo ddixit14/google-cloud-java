@@ -50,11 +50,6 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
     return new DeleteCertificateAuthorityRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.security.privateca.v1.PrivateCaProto
         .internal_static_google_cloud_security_privateca_v1_DeleteCertificateAuthorityRequest_descriptor;
@@ -141,11 +136,13 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
    * if you must retry your request, the server will know to ignore the request
    * if it has already been completed. The server will guarantee that for at
    * least 60 minutes since the first request.
+   *
    * For example, consider a situation where you make an initial request and
    * the request times out. If you make the request again with the same request
    * ID, the server can check if original operation with the same request ID
    * was received, and if so, will ignore the second request. This prevents
    * clients from accidentally creating duplicate commitments.
+   *
    * The request ID must be a valid UUID with the exception that zero UUID is
    * not supported (00000000-0000-0000-0000-000000000000).
    * </pre>
@@ -174,11 +171,13 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
    * if you must retry your request, the server will know to ignore the request
    * if it has already been completed. The server will guarantee that for at
    * least 60 minutes since the first request.
+   *
    * For example, consider a situation where you make an initial request and
    * the request times out. If you make the request again with the same request
    * ID, the server can check if original operation with the same request ID
    * was received, and if so, will ignore the second request. This prevents
    * clients from accidentally creating duplicate commitments.
+   *
    * The request ID must be a valid UUID with the exception that zero UUID is
    * not supported (00000000-0000-0000-0000-000000000000).
    * </pre>
@@ -239,6 +238,27 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
     return skipGracePeriod_;
   }
 
+  public static final int IGNORE_DEPENDENT_RESOURCES_FIELD_NUMBER = 6;
+  private boolean ignoreDependentResources_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * Optional. This field allows this ca to be deleted even if it's being
+   * depended on by another resource. However, doing so may result in unintended
+   * and unrecoverable effects on any dependent resource(s) since the CA will
+   * no longer be able to issue certificates.
+   * </pre>
+   *
+   * <code>bool ignore_dependent_resources = 6 [(.google.api.field_behavior) = OPTIONAL];</code>
+   *
+   * @return The ignoreDependentResources.
+   */
+  @java.lang.Override
+  public boolean getIgnoreDependentResources() {
+    return ignoreDependentResources_;
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -265,6 +285,9 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
     if (skipGracePeriod_ != false) {
       output.writeBool(5, skipGracePeriod_);
     }
+    if (ignoreDependentResources_ != false) {
+      output.writeBool(6, ignoreDependentResources_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -285,6 +308,9 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
     }
     if (skipGracePeriod_ != false) {
       size += com.google.protobuf.CodedOutputStream.computeBoolSize(5, skipGracePeriod_);
+    }
+    if (ignoreDependentResources_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(6, ignoreDependentResources_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -307,6 +333,7 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
     if (!getRequestId().equals(other.getRequestId())) return false;
     if (getIgnoreActiveCertificates() != other.getIgnoreActiveCertificates()) return false;
     if (getSkipGracePeriod() != other.getSkipGracePeriod()) return false;
+    if (getIgnoreDependentResources() != other.getIgnoreDependentResources()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -326,6 +353,8 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIgnoreActiveCertificates());
     hash = (37 * hash) + SKIP_GRACE_PERIOD_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSkipGracePeriod());
+    hash = (37 * hash) + IGNORE_DEPENDENT_RESOURCES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIgnoreDependentResources());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -474,6 +503,7 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
       requestId_ = "";
       ignoreActiveCertificates_ = false;
       skipGracePeriod_ = false;
+      ignoreDependentResources_ = false;
       return this;
     }
 
@@ -525,6 +555,9 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.skipGracePeriod_ = skipGracePeriod_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.ignoreDependentResources_ = ignoreDependentResources_;
       }
     }
 
@@ -594,6 +627,9 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
       if (other.getSkipGracePeriod() != false) {
         setSkipGracePeriod(other.getSkipGracePeriod());
       }
+      if (other.getIgnoreDependentResources() != false) {
+        setIgnoreDependentResources(other.getIgnoreDependentResources());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -644,6 +680,12 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
                 bitField0_ |= 0x00000008;
                 break;
               } // case 40
+            case 48:
+              {
+                ignoreDependentResources_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 48
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -798,11 +840,13 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
      * if you must retry your request, the server will know to ignore the request
      * if it has already been completed. The server will guarantee that for at
      * least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -830,11 +874,13 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
      * if you must retry your request, the server will know to ignore the request
      * if it has already been completed. The server will guarantee that for at
      * least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -862,11 +908,13 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
      * if you must retry your request, the server will know to ignore the request
      * if it has already been completed. The server will guarantee that for at
      * least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -893,11 +941,13 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
      * if you must retry your request, the server will know to ignore the request
      * if it has already been completed. The server will guarantee that for at
      * least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -920,11 +970,13 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
      * if you must retry your request, the server will know to ignore the request
      * if it has already been completed. The server will guarantee that for at
      * least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and
      * the request times out. If you make the request again with the same request
      * ID, the server can check if original operation with the same request ID
      * was received, and if so, will ignore the second request. This prevents
      * clients from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -1056,6 +1108,68 @@ public final class DeleteCertificateAuthorityRequest extends com.google.protobuf
     public Builder clearSkipGracePeriod() {
       bitField0_ = (bitField0_ & ~0x00000008);
       skipGracePeriod_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean ignoreDependentResources_;
+    /**
+     *
+     *
+     * <pre>
+     * Optional. This field allows this ca to be deleted even if it's being
+     * depended on by another resource. However, doing so may result in unintended
+     * and unrecoverable effects on any dependent resource(s) since the CA will
+     * no longer be able to issue certificates.
+     * </pre>
+     *
+     * <code>bool ignore_dependent_resources = 6 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return The ignoreDependentResources.
+     */
+    @java.lang.Override
+    public boolean getIgnoreDependentResources() {
+      return ignoreDependentResources_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. This field allows this ca to be deleted even if it's being
+     * depended on by another resource. However, doing so may result in unintended
+     * and unrecoverable effects on any dependent resource(s) since the CA will
+     * no longer be able to issue certificates.
+     * </pre>
+     *
+     * <code>bool ignore_dependent_resources = 6 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @param value The ignoreDependentResources to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIgnoreDependentResources(boolean value) {
+
+      ignoreDependentResources_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. This field allows this ca to be deleted even if it's being
+     * depended on by another resource. However, doing so may result in unintended
+     * and unrecoverable effects on any dependent resource(s) since the CA will
+     * no longer be able to issue certificates.
+     * </pre>
+     *
+     * <code>bool ignore_dependent_resources = 6 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearIgnoreDependentResources() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      ignoreDependentResources_ = false;
       onChanged();
       return this;
     }

@@ -98,6 +98,8 @@ public interface AnswerFeedbackOrBuilder
    * <pre>
    * Indicates whether the answer/item was clicked by the human agent
    * or not. Default to false.
+   * For knowledge search, the answer record is considered to be clicked if the
+   * answer was copied or any URI was clicked.
    * </pre>
    *
    * <code>bool clicked = 3;</code>
@@ -190,6 +192,5 @@ public interface AnswerFeedbackOrBuilder
    */
   com.google.protobuf.TimestampOrBuilder getDisplayTimeOrBuilder();
 
-  public com.google.cloud.dialogflow.v2beta1.AnswerFeedback.DetailFeedbackCase
-      getDetailFeedbackCase();
+  com.google.cloud.dialogflow.v2beta1.AnswerFeedback.DetailFeedbackCase getDetailFeedbackCase();
 }

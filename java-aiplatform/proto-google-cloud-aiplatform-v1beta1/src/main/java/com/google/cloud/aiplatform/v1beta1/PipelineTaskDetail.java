@@ -49,11 +49,6 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
     return new PipelineTaskDetail();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.aiplatform.v1beta1.Pipeline
         .internal_static_google_cloud_aiplatform_v1beta1_PipelineTaskDetail_descriptor;
@@ -550,11 +545,6 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new PipelineTaskStatus();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -1831,11 +1821,6 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
       return new ArtifactList();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.aiplatform.v1beta1.Pipeline
           .internal_static_google_cloud_aiplatform_v1beta1_PipelineTaskDetail_ArtifactList_descriptor;
@@ -2836,7 +2821,7 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Output only. The user specified name of the task that is defined in
-   * [PipelineJob.spec][].
+   * [pipeline_spec][google.cloud.aiplatform.v1beta1.PipelineJob.pipeline_spec].
    * </pre>
    *
    * <code>string task_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2860,7 +2845,7 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Output only. The user specified name of the task that is defined in
-   * [PipelineJob.spec][].
+   * [pipeline_spec][google.cloud.aiplatform.v1beta1.PipelineJob.pipeline_spec].
    * </pre>
    *
    * <code>string task_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4480,7 +4465,7 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The user specified name of the task that is defined in
-     * [PipelineJob.spec][].
+     * [pipeline_spec][google.cloud.aiplatform.v1beta1.PipelineJob.pipeline_spec].
      * </pre>
      *
      * <code>string task_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4503,7 +4488,7 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The user specified name of the task that is defined in
-     * [PipelineJob.spec][].
+     * [pipeline_spec][google.cloud.aiplatform.v1beta1.PipelineJob.pipeline_spec].
      * </pre>
      *
      * <code>string task_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4526,7 +4511,7 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The user specified name of the task that is defined in
-     * [PipelineJob.spec][].
+     * [pipeline_spec][google.cloud.aiplatform.v1beta1.PipelineJob.pipeline_spec].
      * </pre>
      *
      * <code>string task_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4548,7 +4533,7 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The user specified name of the task that is defined in
-     * [PipelineJob.spec][].
+     * [pipeline_spec][google.cloud.aiplatform.v1beta1.PipelineJob.pipeline_spec].
      * </pre>
      *
      * <code>string task_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4566,7 +4551,7 @@ public final class PipelineTaskDetail extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The user specified name of the task that is defined in
-     * [PipelineJob.spec][].
+     * [pipeline_spec][google.cloud.aiplatform.v1beta1.PipelineJob.pipeline_spec].
      * </pre>
      *
      * <code>string task_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -29,7 +29,10 @@ public interface HistogramQueryOrBuilder
    * <pre>
    * An expression specifies a histogram request against matching documents for
    * searches.
-   * See [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries] for details about syntax.
+   *
+   * See
+   * [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries]
+   * for details about syntax.
    * </pre>
    *
    * <code>string histogram_query = 1;</code>
@@ -43,7 +46,10 @@ public interface HistogramQueryOrBuilder
    * <pre>
    * An expression specifies a histogram request against matching documents for
    * searches.
-   * See [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries] for details about syntax.
+   *
+   * See
+   * [SearchDocumentsRequest.histogram_queries][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.histogram_queries]
+   * for details about syntax.
    * </pre>
    *
    * <code>string histogram_query = 1;</code>
@@ -58,6 +64,7 @@ public interface HistogramQueryOrBuilder
    * <pre>
    * Controls if the histogram query requires the return of a precise count.
    * Enable this flag may adversely impact performance.
+   *
    * Defaults to true.
    * </pre>
    *
@@ -71,11 +78,10 @@ public interface HistogramQueryOrBuilder
    *
    *
    * <pre>
-   * Optional. Filter the result of histogram query by the property names. It only works
-   * with histogram query count('FilterableProperties').
-   * It is an optional. It will perform histogram on all the property names for
-   * all the document schemas. Setting this field will have a better
-   * performance.
+   * Optional. Filter the result of histogram query by the property names. It
+   * only works with histogram query count('FilterableProperties'). It is an
+   * optional. It will perform histogram on all the property names for all the
+   * document schemas. Setting this field will have a better performance.
    * </pre>
    *
    * <code>
@@ -89,11 +95,10 @@ public interface HistogramQueryOrBuilder
    *
    *
    * <pre>
-   * Optional. Filter the result of histogram query by the property names. It only works
-   * with histogram query count('FilterableProperties').
-   * It is an optional. It will perform histogram on all the property names for
-   * all the document schemas. Setting this field will have a better
-   * performance.
+   * Optional. Filter the result of histogram query by the property names. It
+   * only works with histogram query count('FilterableProperties'). It is an
+   * optional. It will perform histogram on all the property names for all the
+   * document schemas. Setting this field will have a better performance.
    * </pre>
    *
    * <code>
@@ -107,11 +112,10 @@ public interface HistogramQueryOrBuilder
    *
    *
    * <pre>
-   * Optional. Filter the result of histogram query by the property names. It only works
-   * with histogram query count('FilterableProperties').
-   * It is an optional. It will perform histogram on all the property names for
-   * all the document schemas. Setting this field will have a better
-   * performance.
+   * Optional. Filter the result of histogram query by the property names. It
+   * only works with histogram query count('FilterableProperties'). It is an
+   * optional. It will perform histogram on all the property names for all the
+   * document schemas. Setting this field will have a better performance.
    * </pre>
    *
    * <code>

@@ -65,6 +65,7 @@ public interface ListSavedQueriesRequestOrBuilder
    * operators `AND` and `OR`. When `AND` and `OR` are both used in the
    * expression, parentheses must be appropriately used to group the
    * combinations. The expression may also contain regular expressions.
+   *
    * See https://google.aip.dev/160 for more information on the grammar.
    * </pre>
    *
@@ -82,6 +83,7 @@ public interface ListSavedQueriesRequestOrBuilder
    * operators `AND` and `OR`. When `AND` and `OR` are both used in the
    * expression, parentheses must be appropriately used to group the
    * combinations. The expression may also contain regular expressions.
+   *
    * See https://google.aip.dev/160 for more information on the grammar.
    * </pre>
    *
@@ -97,8 +99,8 @@ public interface ListSavedQueriesRequestOrBuilder
    * <pre>
    * Optional. The maximum number of saved queries to return per page. The
    * service may return fewer than this value. If unspecified, at most 50 will
-   * be returned.
-   *  The maximum value is 1000; values above 1000 will be coerced to 1000.
+   * be returned. The maximum value is 1000; values above 1000 will be coerced
+   * to 1000.
    * </pre>
    *
    * <code>int32 page_size = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -113,6 +115,7 @@ public interface ListSavedQueriesRequestOrBuilder
    * <pre>
    * Optional. A page token, received from a previous `ListSavedQueries` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to `ListSavedQueries` must
    * match the call that provided the page token.
    * </pre>
@@ -128,6 +131,7 @@ public interface ListSavedQueriesRequestOrBuilder
    * <pre>
    * Optional. A page token, received from a previous `ListSavedQueries` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to `ListSavedQueries` must
    * match the call that provided the page token.
    * </pre>

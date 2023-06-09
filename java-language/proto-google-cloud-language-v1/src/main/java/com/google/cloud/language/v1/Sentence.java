@@ -45,11 +45,6 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
     return new Sentence();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.language.v1.LanguageServiceProto
         .internal_static_google_cloud_language_v1_Sentence_descriptor;
@@ -118,8 +113,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * For calls to [AnalyzeSentiment][] or if
-   * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-   * true, this field will contain the sentiment for the sentence.
+   * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+   * is set to true, this field will contain the sentiment for the sentence.
    * </pre>
    *
    * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -135,8 +130,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * For calls to [AnalyzeSentiment][] or if
-   * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-   * true, this field will contain the sentiment for the sentence.
+   * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+   * is set to true, this field will contain the sentiment for the sentence.
    * </pre>
    *
    * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -154,8 +149,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * For calls to [AnalyzeSentiment][] or if
-   * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-   * true, this field will contain the sentiment for the sentence.
+   * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+   * is set to true, this field will contain the sentiment for the sentence.
    * </pre>
    *
    * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -734,8 +729,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeSentiment][] or if
-     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-     * true, this field will contain the sentiment for the sentence.
+     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+     * is set to true, this field will contain the sentiment for the sentence.
      * </pre>
      *
      * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -750,8 +745,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeSentiment][] or if
-     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-     * true, this field will contain the sentiment for the sentence.
+     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+     * is set to true, this field will contain the sentiment for the sentence.
      * </pre>
      *
      * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -772,8 +767,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeSentiment][] or if
-     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-     * true, this field will contain the sentiment for the sentence.
+     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+     * is set to true, this field will contain the sentiment for the sentence.
      * </pre>
      *
      * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -796,8 +791,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeSentiment][] or if
-     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-     * true, this field will contain the sentiment for the sentence.
+     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+     * is set to true, this field will contain the sentiment for the sentence.
      * </pre>
      *
      * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -817,8 +812,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeSentiment][] or if
-     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-     * true, this field will contain the sentiment for the sentence.
+     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+     * is set to true, this field will contain the sentiment for the sentence.
      * </pre>
      *
      * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -844,8 +839,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeSentiment][] or if
-     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-     * true, this field will contain the sentiment for the sentence.
+     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+     * is set to true, this field will contain the sentiment for the sentence.
      * </pre>
      *
      * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -865,8 +860,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeSentiment][] or if
-     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-     * true, this field will contain the sentiment for the sentence.
+     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+     * is set to true, this field will contain the sentiment for the sentence.
      * </pre>
      *
      * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -881,8 +876,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeSentiment][] or if
-     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-     * true, this field will contain the sentiment for the sentence.
+     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+     * is set to true, this field will contain the sentiment for the sentence.
      * </pre>
      *
      * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>
@@ -901,8 +896,8 @@ public final class Sentence extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * For calls to [AnalyzeSentiment][] or if
-     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-     * true, this field will contain the sentiment for the sentence.
+     * [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+     * is set to true, this field will contain the sentiment for the sentence.
      * </pre>
      *
      * <code>.google.cloud.language.v1.Sentiment sentiment = 2;</code>

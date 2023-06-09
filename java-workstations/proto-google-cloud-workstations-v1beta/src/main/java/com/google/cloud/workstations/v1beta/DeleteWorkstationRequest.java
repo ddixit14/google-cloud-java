@@ -48,11 +48,6 @@ public final class DeleteWorkstationRequest extends com.google.protobuf.Generate
     return new DeleteWorkstationRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.workstations.v1beta.WorkstationsProto
         .internal_static_google_cloud_workstations_v1beta_DeleteWorkstationRequest_descriptor;
@@ -151,7 +146,7 @@ public final class DeleteWorkstationRequest extends com.google.protobuf.Generate
    *
    * <pre>
    * If set, the request will be rejected if the latest version of the
-   * workstation on the server does not have this etag.
+   * workstation on the server does not have this ETag.
    * </pre>
    *
    * <code>string etag = 3;</code>
@@ -175,7 +170,7 @@ public final class DeleteWorkstationRequest extends com.google.protobuf.Generate
    *
    * <pre>
    * If set, the request will be rejected if the latest version of the
-   * workstation on the server does not have this etag.
+   * workstation on the server does not have this ETag.
    * </pre>
    *
    * <code>string etag = 3;</code>
@@ -765,7 +760,7 @@ public final class DeleteWorkstationRequest extends com.google.protobuf.Generate
      *
      * <pre>
      * If set, the request will be rejected if the latest version of the
-     * workstation on the server does not have this etag.
+     * workstation on the server does not have this ETag.
      * </pre>
      *
      * <code>string etag = 3;</code>
@@ -788,7 +783,7 @@ public final class DeleteWorkstationRequest extends com.google.protobuf.Generate
      *
      * <pre>
      * If set, the request will be rejected if the latest version of the
-     * workstation on the server does not have this etag.
+     * workstation on the server does not have this ETag.
      * </pre>
      *
      * <code>string etag = 3;</code>
@@ -811,7 +806,7 @@ public final class DeleteWorkstationRequest extends com.google.protobuf.Generate
      *
      * <pre>
      * If set, the request will be rejected if the latest version of the
-     * workstation on the server does not have this etag.
+     * workstation on the server does not have this ETag.
      * </pre>
      *
      * <code>string etag = 3;</code>
@@ -833,7 +828,7 @@ public final class DeleteWorkstationRequest extends com.google.protobuf.Generate
      *
      * <pre>
      * If set, the request will be rejected if the latest version of the
-     * workstation on the server does not have this etag.
+     * workstation on the server does not have this ETag.
      * </pre>
      *
      * <code>string etag = 3;</code>
@@ -851,7 +846,7 @@ public final class DeleteWorkstationRequest extends com.google.protobuf.Generate
      *
      * <pre>
      * If set, the request will be rejected if the latest version of the
-     * workstation on the server does not have this etag.
+     * workstation on the server does not have this ETag.
      * </pre>
      *
      * <code>string etag = 3;</code>

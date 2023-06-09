@@ -48,11 +48,6 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
     return new NodeNetworkConfig();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.container.v1.ClusterServiceProto
         .internal_static_google_container_v1_NodeNetworkConfig_descriptor;
@@ -144,11 +139,6 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new NetworkPerformanceConfig();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -924,10 +914,13 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
    * Input only. Whether to create a new range for pod IPs in this node pool.
    * Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they
    * are not specified.
+   *
    * If neither `create_pod_range` or `pod_range` are specified, the
    * cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is
    * used.
+   *
    * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+   *
    * This field cannot be changed after the node pool has been created.
    * </pre>
    *
@@ -952,7 +945,9 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
    * If `create_pod_range` is true, this ID is used for the new range.
    * If `create_pod_range` is false, uses an existing secondary range with this
    * ID.
+   *
    * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+   *
    * This field cannot be changed after the node pool has been created.
    * </pre>
    *
@@ -980,7 +975,9 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
    * If `create_pod_range` is true, this ID is used for the new range.
    * If `create_pod_range` is false, uses an existing secondary range with this
    * ID.
+   *
    * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+   *
    * This field cannot be changed after the node pool has been created.
    * </pre>
    *
@@ -1010,14 +1007,20 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
    *
    * <pre>
    * The IP address range for pod IPs in this node pool.
+   *
    * Only applicable if `create_pod_range` is true.
+   *
    * Set to blank to have a range chosen with the default size.
+   *
    * Set to /netmask (e.g. `/14`) to have a range chosen with a specific
    * netmask.
+   *
    * Set to a
    * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
    * notation (e.g. `10.96.0.0/14`) to pick a specific range to use.
+   *
    * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+   *
    * This field cannot be changed after the node pool has been created.
    * </pre>
    *
@@ -1042,14 +1045,20 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
    *
    * <pre>
    * The IP address range for pod IPs in this node pool.
+   *
    * Only applicable if `create_pod_range` is true.
+   *
    * Set to blank to have a range chosen with the default size.
+   *
    * Set to /netmask (e.g. `/14`) to have a range chosen with a specific
    * netmask.
+   *
    * Set to a
    * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
    * notation (e.g. `10.96.0.0/14`) to pick a specific range to use.
+   *
    * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+   *
    * This field cannot be changed after the node pool has been created.
    * </pre>
    *
@@ -1166,6 +1175,93 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
         : networkPerformanceConfig_;
   }
 
+  public static final int POD_CIDR_OVERPROVISION_CONFIG_FIELD_NUMBER = 13;
+  private com.google.container.v1.PodCIDROverprovisionConfig podCidrOverprovisionConfig_;
+  /**
+   *
+   *
+   * <pre>
+   * [PRIVATE FIELD]
+   * Pod CIDR size overprovisioning config for the nodepool.
+   *
+   * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+   * of max_pods_per_node is rounded off to next power of 2 and we then double
+   * that to get the size of pod CIDR block per node.
+   * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+   *
+   * This config can disable the doubling of IPs (we still round off to next
+   * power of 2)
+   * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+   * overprovisioning is disabled.
+   * </pre>
+   *
+   * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+   * </code>
+   *
+   * @return Whether the podCidrOverprovisionConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasPodCidrOverprovisionConfig() {
+    return podCidrOverprovisionConfig_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * [PRIVATE FIELD]
+   * Pod CIDR size overprovisioning config for the nodepool.
+   *
+   * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+   * of max_pods_per_node is rounded off to next power of 2 and we then double
+   * that to get the size of pod CIDR block per node.
+   * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+   *
+   * This config can disable the doubling of IPs (we still round off to next
+   * power of 2)
+   * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+   * overprovisioning is disabled.
+   * </pre>
+   *
+   * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+   * </code>
+   *
+   * @return The podCidrOverprovisionConfig.
+   */
+  @java.lang.Override
+  public com.google.container.v1.PodCIDROverprovisionConfig getPodCidrOverprovisionConfig() {
+    return podCidrOverprovisionConfig_ == null
+        ? com.google.container.v1.PodCIDROverprovisionConfig.getDefaultInstance()
+        : podCidrOverprovisionConfig_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * [PRIVATE FIELD]
+   * Pod CIDR size overprovisioning config for the nodepool.
+   *
+   * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+   * of max_pods_per_node is rounded off to next power of 2 and we then double
+   * that to get the size of pod CIDR block per node.
+   * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+   *
+   * This config can disable the doubling of IPs (we still round off to next
+   * power of 2)
+   * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+   * overprovisioning is disabled.
+   * </pre>
+   *
+   * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+   * </code>
+   */
+  @java.lang.Override
+  public com.google.container.v1.PodCIDROverprovisionConfigOrBuilder
+      getPodCidrOverprovisionConfigOrBuilder() {
+    return podCidrOverprovisionConfig_ == null
+        ? com.google.container.v1.PodCIDROverprovisionConfig.getDefaultInstance()
+        : podCidrOverprovisionConfig_;
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -1195,6 +1291,9 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(11, getNetworkPerformanceConfig());
     }
+    if (podCidrOverprovisionConfig_ != null) {
+      output.writeMessage(13, getPodCidrOverprovisionConfig());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1220,6 +1319,11 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
       size +=
           com.google.protobuf.CodedOutputStream.computeMessageSize(
               11, getNetworkPerformanceConfig());
+    }
+    if (podCidrOverprovisionConfig_ != null) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(
+              13, getPodCidrOverprovisionConfig());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1248,6 +1352,11 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
     if (hasNetworkPerformanceConfig()) {
       if (!getNetworkPerformanceConfig().equals(other.getNetworkPerformanceConfig())) return false;
     }
+    if (hasPodCidrOverprovisionConfig() != other.hasPodCidrOverprovisionConfig()) return false;
+    if (hasPodCidrOverprovisionConfig()) {
+      if (!getPodCidrOverprovisionConfig().equals(other.getPodCidrOverprovisionConfig()))
+        return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1272,6 +1381,10 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
     if (hasNetworkPerformanceConfig()) {
       hash = (37 * hash) + NETWORK_PERFORMANCE_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getNetworkPerformanceConfig().hashCode();
+    }
+    if (hasPodCidrOverprovisionConfig()) {
+      hash = (37 * hash) + POD_CIDR_OVERPROVISION_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getPodCidrOverprovisionConfig().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1414,6 +1527,7 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getNetworkPerformanceConfigFieldBuilder();
+        getPodCidrOverprovisionConfigFieldBuilder();
       }
     }
 
@@ -1429,6 +1543,11 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
       if (networkPerformanceConfigBuilder_ != null) {
         networkPerformanceConfigBuilder_.dispose();
         networkPerformanceConfigBuilder_ = null;
+      }
+      podCidrOverprovisionConfig_ = null;
+      if (podCidrOverprovisionConfigBuilder_ != null) {
+        podCidrOverprovisionConfigBuilder_.dispose();
+        podCidrOverprovisionConfigBuilder_ = null;
       }
       return this;
     }
@@ -1486,6 +1605,12 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
                 ? networkPerformanceConfig_
                 : networkPerformanceConfigBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.podCidrOverprovisionConfig_ =
+            podCidrOverprovisionConfigBuilder_ == null
+                ? podCidrOverprovisionConfig_
+                : podCidrOverprovisionConfigBuilder_.build();
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1554,6 +1679,9 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
       if (other.hasNetworkPerformanceConfig()) {
         mergeNetworkPerformanceConfig(other.getNetworkPerformanceConfig());
       }
+      if (other.hasPodCidrOverprovisionConfig()) {
+        mergePodCidrOverprovisionConfig(other.getPodCidrOverprovisionConfig());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1611,6 +1739,13 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
                 bitField0_ |= 0x00000010;
                 break;
               } // case 90
+            case 106:
+              {
+                input.readMessage(
+                    getPodCidrOverprovisionConfigFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 106
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -1638,10 +1773,13 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      * Input only. Whether to create a new range for pod IPs in this node pool.
      * Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they
      * are not specified.
+     *
      * If neither `create_pod_range` or `pod_range` are specified, the
      * cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is
      * used.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1660,10 +1798,13 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      * Input only. Whether to create a new range for pod IPs in this node pool.
      * Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they
      * are not specified.
+     *
      * If neither `create_pod_range` or `pod_range` are specified, the
      * cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is
      * used.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1686,10 +1827,13 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      * Input only. Whether to create a new range for pod IPs in this node pool.
      * Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they
      * are not specified.
+     *
      * If neither `create_pod_range` or `pod_range` are specified, the
      * cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is
      * used.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1713,7 +1857,9 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      * If `create_pod_range` is true, this ID is used for the new range.
      * If `create_pod_range` is false, uses an existing secondary range with this
      * ID.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1740,7 +1886,9 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      * If `create_pod_range` is true, this ID is used for the new range.
      * If `create_pod_range` is false, uses an existing secondary range with this
      * ID.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1767,7 +1915,9 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      * If `create_pod_range` is true, this ID is used for the new range.
      * If `create_pod_range` is false, uses an existing secondary range with this
      * ID.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1793,7 +1943,9 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      * If `create_pod_range` is true, this ID is used for the new range.
      * If `create_pod_range` is false, uses an existing secondary range with this
      * ID.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1815,7 +1967,9 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      * If `create_pod_range` is true, this ID is used for the new range.
      * If `create_pod_range` is false, uses an existing secondary range with this
      * ID.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1841,14 +1995,20 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The IP address range for pod IPs in this node pool.
+     *
      * Only applicable if `create_pod_range` is true.
+     *
      * Set to blank to have a range chosen with the default size.
+     *
      * Set to /netmask (e.g. `/14`) to have a range chosen with a specific
      * netmask.
+     *
      * Set to a
      * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
      * notation (e.g. `10.96.0.0/14`) to pick a specific range to use.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1872,14 +2032,20 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The IP address range for pod IPs in this node pool.
+     *
      * Only applicable if `create_pod_range` is true.
+     *
      * Set to blank to have a range chosen with the default size.
+     *
      * Set to /netmask (e.g. `/14`) to have a range chosen with a specific
      * netmask.
+     *
      * Set to a
      * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
      * notation (e.g. `10.96.0.0/14`) to pick a specific range to use.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1903,14 +2069,20 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The IP address range for pod IPs in this node pool.
+     *
      * Only applicable if `create_pod_range` is true.
+     *
      * Set to blank to have a range chosen with the default size.
+     *
      * Set to /netmask (e.g. `/14`) to have a range chosen with a specific
      * netmask.
+     *
      * Set to a
      * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
      * notation (e.g. `10.96.0.0/14`) to pick a specific range to use.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1933,14 +2105,20 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The IP address range for pod IPs in this node pool.
+     *
      * Only applicable if `create_pod_range` is true.
+     *
      * Set to blank to have a range chosen with the default size.
+     *
      * Set to /netmask (e.g. `/14`) to have a range chosen with a specific
      * netmask.
+     *
      * Set to a
      * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
      * notation (e.g. `10.96.0.0/14`) to pick a specific range to use.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -1959,14 +2137,20 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
      *
      * <pre>
      * The IP address range for pod IPs in this node pool.
+     *
      * Only applicable if `create_pod_range` is true.
+     *
      * Set to blank to have a range chosen with the default size.
+     *
      * Set to /netmask (e.g. `/14`) to have a range chosen with a specific
      * netmask.
+     *
      * Set to a
      * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
      * notation (e.g. `10.96.0.0/14`) to pick a specific range to use.
+     *
      * Only applicable if `ip_allocation_policy.use_ip_aliases` is true.
+     *
      * This field cannot be changed after the node pool has been created.
      * </pre>
      *
@@ -2273,6 +2457,303 @@ public final class NodeNetworkConfig extends com.google.protobuf.GeneratedMessag
         networkPerformanceConfig_ = null;
       }
       return networkPerformanceConfigBuilder_;
+    }
+
+    private com.google.container.v1.PodCIDROverprovisionConfig podCidrOverprovisionConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.PodCIDROverprovisionConfig,
+            com.google.container.v1.PodCIDROverprovisionConfig.Builder,
+            com.google.container.v1.PodCIDROverprovisionConfigOrBuilder>
+        podCidrOverprovisionConfigBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * [PRIVATE FIELD]
+     * Pod CIDR size overprovisioning config for the nodepool.
+     *
+     * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+     * of max_pods_per_node is rounded off to next power of 2 and we then double
+     * that to get the size of pod CIDR block per node.
+     * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+     *
+     * This config can disable the doubling of IPs (we still round off to next
+     * power of 2)
+     * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+     * overprovisioning is disabled.
+     * </pre>
+     *
+     * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+     * </code>
+     *
+     * @return Whether the podCidrOverprovisionConfig field is set.
+     */
+    public boolean hasPodCidrOverprovisionConfig() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [PRIVATE FIELD]
+     * Pod CIDR size overprovisioning config for the nodepool.
+     *
+     * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+     * of max_pods_per_node is rounded off to next power of 2 and we then double
+     * that to get the size of pod CIDR block per node.
+     * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+     *
+     * This config can disable the doubling of IPs (we still round off to next
+     * power of 2)
+     * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+     * overprovisioning is disabled.
+     * </pre>
+     *
+     * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+     * </code>
+     *
+     * @return The podCidrOverprovisionConfig.
+     */
+    public com.google.container.v1.PodCIDROverprovisionConfig getPodCidrOverprovisionConfig() {
+      if (podCidrOverprovisionConfigBuilder_ == null) {
+        return podCidrOverprovisionConfig_ == null
+            ? com.google.container.v1.PodCIDROverprovisionConfig.getDefaultInstance()
+            : podCidrOverprovisionConfig_;
+      } else {
+        return podCidrOverprovisionConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [PRIVATE FIELD]
+     * Pod CIDR size overprovisioning config for the nodepool.
+     *
+     * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+     * of max_pods_per_node is rounded off to next power of 2 and we then double
+     * that to get the size of pod CIDR block per node.
+     * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+     *
+     * This config can disable the doubling of IPs (we still round off to next
+     * power of 2)
+     * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+     * overprovisioning is disabled.
+     * </pre>
+     *
+     * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+     * </code>
+     */
+    public Builder setPodCidrOverprovisionConfig(
+        com.google.container.v1.PodCIDROverprovisionConfig value) {
+      if (podCidrOverprovisionConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        podCidrOverprovisionConfig_ = value;
+      } else {
+        podCidrOverprovisionConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [PRIVATE FIELD]
+     * Pod CIDR size overprovisioning config for the nodepool.
+     *
+     * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+     * of max_pods_per_node is rounded off to next power of 2 and we then double
+     * that to get the size of pod CIDR block per node.
+     * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+     *
+     * This config can disable the doubling of IPs (we still round off to next
+     * power of 2)
+     * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+     * overprovisioning is disabled.
+     * </pre>
+     *
+     * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+     * </code>
+     */
+    public Builder setPodCidrOverprovisionConfig(
+        com.google.container.v1.PodCIDROverprovisionConfig.Builder builderForValue) {
+      if (podCidrOverprovisionConfigBuilder_ == null) {
+        podCidrOverprovisionConfig_ = builderForValue.build();
+      } else {
+        podCidrOverprovisionConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [PRIVATE FIELD]
+     * Pod CIDR size overprovisioning config for the nodepool.
+     *
+     * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+     * of max_pods_per_node is rounded off to next power of 2 and we then double
+     * that to get the size of pod CIDR block per node.
+     * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+     *
+     * This config can disable the doubling of IPs (we still round off to next
+     * power of 2)
+     * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+     * overprovisioning is disabled.
+     * </pre>
+     *
+     * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+     * </code>
+     */
+    public Builder mergePodCidrOverprovisionConfig(
+        com.google.container.v1.PodCIDROverprovisionConfig value) {
+      if (podCidrOverprovisionConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)
+            && podCidrOverprovisionConfig_ != null
+            && podCidrOverprovisionConfig_
+                != com.google.container.v1.PodCIDROverprovisionConfig.getDefaultInstance()) {
+          getPodCidrOverprovisionConfigBuilder().mergeFrom(value);
+        } else {
+          podCidrOverprovisionConfig_ = value;
+        }
+      } else {
+        podCidrOverprovisionConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [PRIVATE FIELD]
+     * Pod CIDR size overprovisioning config for the nodepool.
+     *
+     * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+     * of max_pods_per_node is rounded off to next power of 2 and we then double
+     * that to get the size of pod CIDR block per node.
+     * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+     *
+     * This config can disable the doubling of IPs (we still round off to next
+     * power of 2)
+     * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+     * overprovisioning is disabled.
+     * </pre>
+     *
+     * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+     * </code>
+     */
+    public Builder clearPodCidrOverprovisionConfig() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      podCidrOverprovisionConfig_ = null;
+      if (podCidrOverprovisionConfigBuilder_ != null) {
+        podCidrOverprovisionConfigBuilder_.dispose();
+        podCidrOverprovisionConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [PRIVATE FIELD]
+     * Pod CIDR size overprovisioning config for the nodepool.
+     *
+     * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+     * of max_pods_per_node is rounded off to next power of 2 and we then double
+     * that to get the size of pod CIDR block per node.
+     * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+     *
+     * This config can disable the doubling of IPs (we still round off to next
+     * power of 2)
+     * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+     * overprovisioning is disabled.
+     * </pre>
+     *
+     * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+     * </code>
+     */
+    public com.google.container.v1.PodCIDROverprovisionConfig.Builder
+        getPodCidrOverprovisionConfigBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getPodCidrOverprovisionConfigFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [PRIVATE FIELD]
+     * Pod CIDR size overprovisioning config for the nodepool.
+     *
+     * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+     * of max_pods_per_node is rounded off to next power of 2 and we then double
+     * that to get the size of pod CIDR block per node.
+     * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+     *
+     * This config can disable the doubling of IPs (we still round off to next
+     * power of 2)
+     * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+     * overprovisioning is disabled.
+     * </pre>
+     *
+     * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+     * </code>
+     */
+    public com.google.container.v1.PodCIDROverprovisionConfigOrBuilder
+        getPodCidrOverprovisionConfigOrBuilder() {
+      if (podCidrOverprovisionConfigBuilder_ != null) {
+        return podCidrOverprovisionConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return podCidrOverprovisionConfig_ == null
+            ? com.google.container.v1.PodCIDROverprovisionConfig.getDefaultInstance()
+            : podCidrOverprovisionConfig_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [PRIVATE FIELD]
+     * Pod CIDR size overprovisioning config for the nodepool.
+     *
+     * Pod CIDR size per node depends on max_pods_per_node. By default, the value
+     * of max_pods_per_node is rounded off to next power of 2 and we then double
+     * that to get the size of pod CIDR block per node.
+     * Example: max_pods_per_node of 30 would result in 64 IPs (/26).
+     *
+     * This config can disable the doubling of IPs (we still round off to next
+     * power of 2)
+     * Example: max_pods_per_node of 30 will result in 32 IPs (/27) when
+     * overprovisioning is disabled.
+     * </pre>
+     *
+     * <code>.google.container.v1.PodCIDROverprovisionConfig pod_cidr_overprovision_config = 13;
+     * </code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.PodCIDROverprovisionConfig,
+            com.google.container.v1.PodCIDROverprovisionConfig.Builder,
+            com.google.container.v1.PodCIDROverprovisionConfigOrBuilder>
+        getPodCidrOverprovisionConfigFieldBuilder() {
+      if (podCidrOverprovisionConfigBuilder_ == null) {
+        podCidrOverprovisionConfigBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.PodCIDROverprovisionConfig,
+                com.google.container.v1.PodCIDROverprovisionConfig.Builder,
+                com.google.container.v1.PodCIDROverprovisionConfigOrBuilder>(
+                getPodCidrOverprovisionConfig(), getParentForChildren(), isClean());
+        podCidrOverprovisionConfig_ = null;
+      }
+      return podCidrOverprovisionConfigBuilder_;
     }
 
     @java.lang.Override

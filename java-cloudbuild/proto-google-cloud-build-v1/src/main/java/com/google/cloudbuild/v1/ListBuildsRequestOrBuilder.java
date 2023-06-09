@@ -28,7 +28,7 @@ public interface ListBuildsRequestOrBuilder
    *
    * <pre>
    * The parent of the collection of `Builds`.
-   * Format: `projects/{project}/locations/location`
+   * Format: `projects/{project}/locations/{location}`
    * </pre>
    *
    * <code>string parent = 9 [(.google.api.resource_reference) = { ... }</code>
@@ -41,7 +41,7 @@ public interface ListBuildsRequestOrBuilder
    *
    * <pre>
    * The parent of the collection of `Builds`.
-   * Format: `projects/{project}/locations/location`
+   * Format: `projects/{project}/locations/{location}`
    * </pre>
    *
    * <code>string parent = 9 [(.google.api.resource_reference) = { ... }</code>
@@ -93,10 +93,13 @@ public interface ListBuildsRequestOrBuilder
    *
    * <pre>
    * The page token for the next page of Builds.
+   *
    * If unspecified, the first page of results is returned.
+   *
    * If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
    * In this case, the token should be discarded, and pagination should be
    * restarted from the first page of results.
+   *
    * See https://google.aip.dev/158 for more.
    * </pre>
    *
@@ -110,10 +113,13 @@ public interface ListBuildsRequestOrBuilder
    *
    * <pre>
    * The page token for the next page of Builds.
+   *
    * If unspecified, the first page of results is returned.
+   *
    * If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
    * In this case, the token should be discarded, and pagination should be
    * restarted from the first page of results.
+   *
    * See https://google.aip.dev/158 for more.
    * </pre>
    *

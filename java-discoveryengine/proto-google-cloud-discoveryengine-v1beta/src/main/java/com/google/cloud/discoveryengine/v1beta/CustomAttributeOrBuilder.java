@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,12 +29,15 @@ public interface CustomAttributeOrBuilder
    * <pre>
    * The textual values of this custom attribute. For example, `["yellow",
    * "green"]` when the key is "color".
-   * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+   *
+   * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
    * returned.
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated string text = 1;</code>
@@ -48,12 +51,15 @@ public interface CustomAttributeOrBuilder
    * <pre>
    * The textual values of this custom attribute. For example, `["yellow",
    * "green"]` when the key is "color".
-   * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+   *
+   * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
    * returned.
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated string text = 1;</code>
@@ -67,12 +73,15 @@ public interface CustomAttributeOrBuilder
    * <pre>
    * The textual values of this custom attribute. For example, `["yellow",
    * "green"]` when the key is "color".
-   * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+   *
+   * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
    * returned.
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated string text = 1;</code>
@@ -87,12 +96,15 @@ public interface CustomAttributeOrBuilder
    * <pre>
    * The textual values of this custom attribute. For example, `["yellow",
    * "green"]` when the key is "color".
-   * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+   *
+   * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
    * returned.
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated string text = 1;</code>
@@ -108,10 +120,12 @@ public interface CustomAttributeOrBuilder
    * <pre>
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
    * when the key is "lengths_cm".
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated double numbers = 2;</code>
@@ -125,10 +139,12 @@ public interface CustomAttributeOrBuilder
    * <pre>
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
    * when the key is "lengths_cm".
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated double numbers = 2;</code>
@@ -142,10 +158,12 @@ public interface CustomAttributeOrBuilder
    * <pre>
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
    * when the key is "lengths_cm".
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated double numbers = 2;</code>

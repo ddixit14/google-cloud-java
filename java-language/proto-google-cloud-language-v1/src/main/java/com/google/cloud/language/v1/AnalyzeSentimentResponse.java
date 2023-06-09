@@ -48,11 +48,6 @@ public final class AnalyzeSentimentResponse extends com.google.protobuf.Generate
     return new AnalyzeSentimentResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.language.v1.LanguageServiceProto
         .internal_static_google_cloud_language_v1_AnalyzeSentimentResponse_descriptor;
@@ -128,7 +123,8 @@ public final class AnalyzeSentimentResponse extends com.google.protobuf.Generate
    * <pre>
    * The language of the text, which will be the same as the language specified
    * in the request or, if not specified, the automatically-detected language.
-   * See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+   * See [Document.language][google.cloud.language.v1.Document.language] field
+   * for more details.
    * </pre>
    *
    * <code>string language = 2;</code>
@@ -153,7 +149,8 @@ public final class AnalyzeSentimentResponse extends com.google.protobuf.Generate
    * <pre>
    * The language of the text, which will be the same as the language specified
    * in the request or, if not specified, the automatically-detected language.
-   * See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+   * See [Document.language][google.cloud.language.v1.Document.language] field
+   * for more details.
    * </pre>
    *
    * <code>string language = 2;</code>
@@ -885,7 +882,8 @@ public final class AnalyzeSentimentResponse extends com.google.protobuf.Generate
      * <pre>
      * The language of the text, which will be the same as the language specified
      * in the request or, if not specified, the automatically-detected language.
-     * See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+     * See [Document.language][google.cloud.language.v1.Document.language] field
+     * for more details.
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -909,7 +907,8 @@ public final class AnalyzeSentimentResponse extends com.google.protobuf.Generate
      * <pre>
      * The language of the text, which will be the same as the language specified
      * in the request or, if not specified, the automatically-detected language.
-     * See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+     * See [Document.language][google.cloud.language.v1.Document.language] field
+     * for more details.
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -933,7 +932,8 @@ public final class AnalyzeSentimentResponse extends com.google.protobuf.Generate
      * <pre>
      * The language of the text, which will be the same as the language specified
      * in the request or, if not specified, the automatically-detected language.
-     * See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+     * See [Document.language][google.cloud.language.v1.Document.language] field
+     * for more details.
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -956,7 +956,8 @@ public final class AnalyzeSentimentResponse extends com.google.protobuf.Generate
      * <pre>
      * The language of the text, which will be the same as the language specified
      * in the request or, if not specified, the automatically-detected language.
-     * See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+     * See [Document.language][google.cloud.language.v1.Document.language] field
+     * for more details.
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -975,7 +976,8 @@ public final class AnalyzeSentimentResponse extends com.google.protobuf.Generate
      * <pre>
      * The language of the text, which will be the same as the language specified
      * in the request or, if not specified, the automatically-detected language.
-     * See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+     * See [Document.language][google.cloud.language.v1.Document.language] field
+     * for more details.
      * </pre>
      *
      * <code>string language = 2;</code>

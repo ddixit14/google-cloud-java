@@ -460,14 +460,22 @@ public interface EntitlementOrBuilder
    * Extended entitlement parameters. When creating an entitlement, valid
    * parameter names and values are defined in the
    * [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions].
+   *
    * For Google Workspace, the following Parameters may be accepted as input:
+   *
    * - max_units: The maximum assignable units for a flexible offer
+   *
    * OR
+   *
    * - num_units: The total commitment for commitment-based offers
+   *
    * The response may additionally include the following output-only Parameters:
+   *
    * - assigned_units: The number of licenses assigned to users.
-   * For GCP billing subaccounts, the following Parameter may be accepted as
-   * input:
+   *
+   * For Google Cloud billing subaccounts, the following Parameter may be
+   * accepted as input:
+   *
    * - display_name: The display name of the billing subaccount.
    * </pre>
    *
@@ -481,14 +489,22 @@ public interface EntitlementOrBuilder
    * Extended entitlement parameters. When creating an entitlement, valid
    * parameter names and values are defined in the
    * [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions].
+   *
    * For Google Workspace, the following Parameters may be accepted as input:
+   *
    * - max_units: The maximum assignable units for a flexible offer
+   *
    * OR
+   *
    * - num_units: The total commitment for commitment-based offers
+   *
    * The response may additionally include the following output-only Parameters:
+   *
    * - assigned_units: The number of licenses assigned to users.
-   * For GCP billing subaccounts, the following Parameter may be accepted as
-   * input:
+   *
+   * For Google Cloud billing subaccounts, the following Parameter may be
+   * accepted as input:
+   *
    * - display_name: The display name of the billing subaccount.
    * </pre>
    *
@@ -502,14 +518,22 @@ public interface EntitlementOrBuilder
    * Extended entitlement parameters. When creating an entitlement, valid
    * parameter names and values are defined in the
    * [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions].
+   *
    * For Google Workspace, the following Parameters may be accepted as input:
+   *
    * - max_units: The maximum assignable units for a flexible offer
+   *
    * OR
+   *
    * - num_units: The total commitment for commitment-based offers
+   *
    * The response may additionally include the following output-only Parameters:
+   *
    * - assigned_units: The number of licenses assigned to users.
-   * For GCP billing subaccounts, the following Parameter may be accepted as
-   * input:
+   *
+   * For Google Cloud billing subaccounts, the following Parameter may be
+   * accepted as input:
+   *
    * - display_name: The display name of the billing subaccount.
    * </pre>
    *
@@ -523,14 +547,22 @@ public interface EntitlementOrBuilder
    * Extended entitlement parameters. When creating an entitlement, valid
    * parameter names and values are defined in the
    * [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions].
+   *
    * For Google Workspace, the following Parameters may be accepted as input:
+   *
    * - max_units: The maximum assignable units for a flexible offer
+   *
    * OR
+   *
    * - num_units: The total commitment for commitment-based offers
+   *
    * The response may additionally include the following output-only Parameters:
+   *
    * - assigned_units: The number of licenses assigned to users.
-   * For GCP billing subaccounts, the following Parameter may be accepted as
-   * input:
+   *
+   * For Google Cloud billing subaccounts, the following Parameter may be
+   * accepted as input:
+   *
    * - display_name: The display name of the billing subaccount.
    * </pre>
    *
@@ -545,18 +577,53 @@ public interface EntitlementOrBuilder
    * Extended entitlement parameters. When creating an entitlement, valid
    * parameter names and values are defined in the
    * [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions].
+   *
    * For Google Workspace, the following Parameters may be accepted as input:
+   *
    * - max_units: The maximum assignable units for a flexible offer
+   *
    * OR
+   *
    * - num_units: The total commitment for commitment-based offers
+   *
    * The response may additionally include the following output-only Parameters:
+   *
    * - assigned_units: The number of licenses assigned to users.
-   * For GCP billing subaccounts, the following Parameter may be accepted as
-   * input:
+   *
+   * For Google Cloud billing subaccounts, the following Parameter may be
+   * accepted as input:
+   *
    * - display_name: The display name of the billing subaccount.
    * </pre>
    *
    * <code>repeated .google.cloud.channel.v1.Parameter parameters = 26;</code>
    */
   com.google.cloud.channel.v1.ParameterOrBuilder getParametersOrBuilder(int index);
+
+  /**
+   *
+   *
+   * <pre>
+   * Optional. The billing account resource name that is used to pay for this
+   * entitlement.
+   * </pre>
+   *
+   * <code>string billing_account = 28 [(.google.api.field_behavior) = OPTIONAL];</code>
+   *
+   * @return The billingAccount.
+   */
+  java.lang.String getBillingAccount();
+  /**
+   *
+   *
+   * <pre>
+   * Optional. The billing account resource name that is used to pay for this
+   * entitlement.
+   * </pre>
+   *
+   * <code>string billing_account = 28 [(.google.api.field_behavior) = OPTIONAL];</code>
+   *
+   * @return The bytes for billingAccount.
+   */
+  com.google.protobuf.ByteString getBillingAccountBytes();
 }

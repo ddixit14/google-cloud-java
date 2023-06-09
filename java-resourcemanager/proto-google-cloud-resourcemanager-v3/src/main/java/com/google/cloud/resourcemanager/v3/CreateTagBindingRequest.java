@@ -45,11 +45,6 @@ public final class CreateTagBindingRequest extends com.google.protobuf.Generated
     return new CreateTagBindingRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.TagBindingsProto
         .internal_static_google_cloud_resourcemanager_v3_CreateTagBindingRequest_descriptor;
@@ -127,8 +122,8 @@ public final class CreateTagBindingRequest extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * Optional. Set to true to perform the validations necessary for creating the resource,
-   * but not actually perform the action.
+   * Optional. Set to true to perform the validations necessary for creating the
+   * resource, but not actually perform the action.
    * </pre>
    *
    * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -719,8 +714,8 @@ public final class CreateTagBindingRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Optional. Set to true to perform the validations necessary for creating the resource,
-     * but not actually perform the action.
+     * Optional. Set to true to perform the validations necessary for creating the
+     * resource, but not actually perform the action.
      * </pre>
      *
      * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -735,8 +730,8 @@ public final class CreateTagBindingRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Optional. Set to true to perform the validations necessary for creating the resource,
-     * but not actually perform the action.
+     * Optional. Set to true to perform the validations necessary for creating the
+     * resource, but not actually perform the action.
      * </pre>
      *
      * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -755,8 +750,8 @@ public final class CreateTagBindingRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Optional. Set to true to perform the validations necessary for creating the resource,
-     * but not actually perform the action.
+     * Optional. Set to true to perform the validations necessary for creating the
+     * resource, but not actually perform the action.
      * </pre>
      *
      * <code>bool validate_only = 2 [(.google.api.field_behavior) = OPTIONAL];</code>

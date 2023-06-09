@@ -36,6 +36,10 @@ public final class ModelServiceProto {
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_retail_v2beta_UpdateModelRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_retail_v2beta_GetModelRequest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_retail_v2beta_GetModelRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
       internal_static_google_cloud_retail_v2beta_PauseModelRequest_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_retail_v2beta_PauseModelRequest_fieldAccessorTable;
@@ -88,72 +92,79 @@ public final class ModelServiceProto {
           + "cloud/retail/v2beta/model.proto\032#google/"
           + "longrunning/operations.proto\032\033google/pro"
           + "tobuf/empty.proto\032 google/protobuf/field"
-          + "_mask.proto\"\230\001\n\022CreateModelRequest\0225\n\006pa"
-          + "rent\030\001 \001(\tB%\340A\002\372A\037\n\035retail.googleapis.co"
-          + "m/Catalog\0225\n\005model\030\002 \001(\0132!.google.cloud."
-          + "retail.v2beta.ModelB\003\340A\002\022\024\n\007dry_run\030\003 \001("
-          + "\010B\003\340A\001\"\201\001\n\022UpdateModelRequest\0225\n\005model\030\001"
-          + " \001(\0132!.google.cloud.retail.v2beta.ModelB"
-          + "\003\340A\002\0224\n\013update_mask\030\002 \001(\0132\032.google.proto"
-          + "buf.FieldMaskB\003\340A\001\"F\n\021PauseModelRequest\022"
-          + "1\n\004name\030\001 \001(\tB#\340A\002\372A\035\n\033retail.googleapis"
-          + ".com/Model\"\'\n\022ResumeModelRequest\022\021\n\004name"
-          + "\030\001 \001(\tB\003\340A\002\"{\n\021ListModelsRequest\0225\n\006pare"
-          + "nt\030\001 \001(\tB%\340A\002\372A\037\n\035retail.googleapis.com/"
-          + "Catalog\022\026\n\tpage_size\030\002 \001(\005B\003\340A\001\022\027\n\npage_"
-          + "token\030\003 \001(\tB\003\340A\001\"G\n\022DeleteModelRequest\0221"
-          + "\n\004name\030\001 \001(\tB#\340A\002\372A\035\n\033retail.googleapis."
-          + "com/Model\"`\n\022ListModelsResponse\0221\n\006model"
-          + "s\030\001 \003(\0132!.google.cloud.retail.v2beta.Mod"
-          + "el\022\027\n\017next_page_token\030\002 \001(\t\"E\n\020TuneModel"
-          + "Request\0221\n\004name\030\001 \001(\tB#\340A\002\372A\035\n\033retail.go"
-          + "ogleapis.com/Model\"$\n\023CreateModelMetadat"
-          + "a\022\r\n\005model\030\001 \001(\t\"\"\n\021TuneModelMetadata\022\r\n"
-          + "\005model\030\001 \001(\t\"\023\n\021TuneModelResponse2\202\014\n\014Mo"
-          + "delService\022\213\002\n\013CreateModel\022..google.clou"
-          + "d.retail.v2beta.CreateModelRequest\032\035.goo"
-          + "gle.longrunning.Operation\"\254\001\202\323\344\223\002B\"9/v2b"
-          + "eta/{parent=projects/*/locations/*/catal"
-          + "ogs/*}/models:\005model\332A\014parent,model\312AR\n "
-          + "google.cloud.retail.v2beta.Model\022.google"
-          + ".cloud.retail.v2beta.CreateModelMetadata"
-          + "\022\261\001\n\nPauseModel\022-.google.cloud.retail.v2"
-          + "beta.PauseModelRequest\032!.google.cloud.re"
-          + "tail.v2beta.Model\"Q\202\323\344\223\002D\"?/v2beta/{name"
-          + "=projects/*/locations/*/catalogs/*/model"
-          + "s/*}:pause:\001*\332A\004name\022\264\001\n\013ResumeModel\022..g"
-          + "oogle.cloud.retail.v2beta.ResumeModelReq"
-          + "uest\032!.google.cloud.retail.v2beta.Model\""
-          + "R\202\323\344\223\002E\"@/v2beta/{name=projects/*/locati"
-          + "ons/*/catalogs/*/models/*}:resume:\001*\332A\004n"
-          + "ame\022\237\001\n\013DeleteModel\022..google.cloud.retai"
-          + "l.v2beta.DeleteModelRequest\032\026.google.pro"
-          + "tobuf.Empty\"H\202\323\344\223\002;*9/v2beta/{name=proje"
-          + "cts/*/locations/*/catalogs/*/models/*}\332A"
-          + "\004name\022\267\001\n\nListModels\022-.google.cloud.reta"
-          + "il.v2beta.ListModelsRequest\032..google.clo"
-          + "ud.retail.v2beta.ListModelsResponse\"J\202\323\344"
-          + "\223\002;\0229/v2beta/{parent=projects/*/location"
-          + "s/*/catalogs/*}/models\332A\006parent\022\304\001\n\013Upda"
-          + "teModel\022..google.cloud.retail.v2beta.Upd"
-          + "ateModelRequest\032!.google.cloud.retail.v2"
-          + "beta.Model\"b\202\323\344\223\002H2?/v2beta/{model.name="
+          + "_mask.proto\"\233\001\n\022CreateModelRequest\0226\n\006pa"
+          + "rent\030\001 \001(\tB&\342A\001\002\372A\037\n\035retail.googleapis.c"
+          + "om/Catalog\0226\n\005model\030\002 \001(\0132!.google.cloud"
+          + ".retail.v2beta.ModelB\004\342A\001\002\022\025\n\007dry_run\030\003 "
+          + "\001(\010B\004\342A\001\001\"\203\001\n\022UpdateModelRequest\0226\n\005mode"
+          + "l\030\001 \001(\0132!.google.cloud.retail.v2beta.Mod"
+          + "elB\004\342A\001\002\0225\n\013update_mask\030\002 \001(\0132\032.google.p"
+          + "rotobuf.FieldMaskB\004\342A\001\001\"E\n\017GetModelReque"
+          + "st\0222\n\004name\030\001 \001(\tB$\342A\001\002\372A\035\n\033retail.google"
+          + "apis.com/Model\"G\n\021PauseModelRequest\0222\n\004n"
+          + "ame\030\001 \001(\tB$\342A\001\002\372A\035\n\033retail.googleapis.co"
+          + "m/Model\"(\n\022ResumeModelRequest\022\022\n\004name\030\001 "
+          + "\001(\tB\004\342A\001\002\"~\n\021ListModelsRequest\0226\n\006parent"
+          + "\030\001 \001(\tB&\342A\001\002\372A\037\n\035retail.googleapis.com/C"
+          + "atalog\022\027\n\tpage_size\030\002 \001(\005B\004\342A\001\001\022\030\n\npage_"
+          + "token\030\003 \001(\tB\004\342A\001\001\"H\n\022DeleteModelRequest\022"
+          + "2\n\004name\030\001 \001(\tB$\342A\001\002\372A\035\n\033retail.googleapi"
+          + "s.com/Model\"`\n\022ListModelsResponse\0221\n\006mod"
+          + "els\030\001 \003(\0132!.google.cloud.retail.v2beta.M"
+          + "odel\022\027\n\017next_page_token\030\002 \001(\t\"F\n\020TuneMod"
+          + "elRequest\0222\n\004name\030\001 \001(\tB$\342A\001\002\372A\035\n\033retail"
+          + ".googleapis.com/Model\"$\n\023CreateModelMeta"
+          + "data\022\r\n\005model\030\001 \001(\t\"\"\n\021TuneModelMetadata"
+          + "\022\r\n\005model\030\001 \001(\t\"\023\n\021TuneModelResponse2\251\r\n"
+          + "\014ModelService\022\213\002\n\013CreateModel\022..google.c"
+          + "loud.retail.v2beta.CreateModelRequest\032\035."
+          + "google.longrunning.Operation\"\254\001\312AR\n goog"
+          + "le.cloud.retail.v2beta.Model\022.google.clo"
+          + "ud.retail.v2beta.CreateModelMetadata\332A\014p"
+          + "arent,model\202\323\344\223\002B\"9/v2beta/{parent=proje"
+          + "cts/*/locations/*/catalogs/*}/models:\005mo"
+          + "del\022\244\001\n\010GetModel\022+.google.cloud.retail.v"
+          + "2beta.GetModelRequest\032!.google.cloud.ret"
+          + "ail.v2beta.Model\"H\332A\004name\202\323\344\223\002;\0229/v2beta"
+          + "/{name=projects/*/locations/*/catalogs/*"
+          + "/models/*}\022\261\001\n\nPauseModel\022-.google.cloud"
+          + ".retail.v2beta.PauseModelRequest\032!.googl"
+          + "e.cloud.retail.v2beta.Model\"Q\332A\004name\202\323\344\223"
+          + "\002D\"?/v2beta/{name=projects/*/locations/*"
+          + "/catalogs/*/models/*}:pause:\001*\022\264\001\n\013Resum"
+          + "eModel\022..google.cloud.retail.v2beta.Resu"
+          + "meModelRequest\032!.google.cloud.retail.v2b"
+          + "eta.Model\"R\332A\004name\202\323\344\223\002E\"@/v2beta/{name="
           + "projects/*/locations/*/catalogs/*/models"
-          + "/*}:\005model\332A\021model,update_mask\022\212\002\n\tTuneM"
-          + "odel\022,.google.cloud.retail.v2beta.TuneMo"
-          + "delRequest\032\035.google.longrunning.Operatio"
-          + "n\"\257\001\202\323\344\223\002C\">/v2beta/{name=projects/*/loc"
-          + "ations/*/catalogs/*/models/*}:tune:\001*\332A\004"
-          + "name\312A\\\n,google.cloud.retail.v2beta.Tune"
-          + "ModelResponse\022,google.cloud.retail.v2bet"
-          + "a.TuneModelMetadata\032I\312A\025retail.googleapi"
-          + "s.com\322A.https://www.googleapis.com/auth/"
-          + "cloud-platformB\320\001\n\036com.google.cloud.reta"
-          + "il.v2betaB\021ModelServiceProtoP\001Z6cloud.go"
-          + "ogle.com/go/retail/apiv2beta/retailpb;re"
-          + "tailpb\242\002\006RETAIL\252\002\032Google.Cloud.Retail.V2"
-          + "Beta\312\002\032Google\\Cloud\\Retail\\V2beta\352\002\035Goog"
-          + "le::Cloud::Retail::V2betab\006proto3"
+          + "/*}:resume:\001*\022\237\001\n\013DeleteModel\022..google.c"
+          + "loud.retail.v2beta.DeleteModelRequest\032\026."
+          + "google.protobuf.Empty\"H\332A\004name\202\323\344\223\002;*9/v"
+          + "2beta/{name=projects/*/locations/*/catal"
+          + "ogs/*/models/*}\022\267\001\n\nListModels\022-.google."
+          + "cloud.retail.v2beta.ListModelsRequest\032.."
+          + "google.cloud.retail.v2beta.ListModelsRes"
+          + "ponse\"J\332A\006parent\202\323\344\223\002;\0229/v2beta/{parent="
+          + "projects/*/locations/*/catalogs/*}/model"
+          + "s\022\304\001\n\013UpdateModel\022..google.cloud.retail."
+          + "v2beta.UpdateModelRequest\032!.google.cloud"
+          + ".retail.v2beta.Model\"b\332A\021model,update_ma"
+          + "sk\202\323\344\223\002H2?/v2beta/{model.name=projects/*"
+          + "/locations/*/catalogs/*/models/*}:\005model"
+          + "\022\212\002\n\tTuneModel\022,.google.cloud.retail.v2b"
+          + "eta.TuneModelRequest\032\035.google.longrunnin"
+          + "g.Operation\"\257\001\312A\\\n,google.cloud.retail.v"
+          + "2beta.TuneModelResponse\022,google.cloud.re"
+          + "tail.v2beta.TuneModelMetadata\332A\004name\202\323\344\223"
+          + "\002C\">/v2beta/{name=projects/*/locations/*"
+          + "/catalogs/*/models/*}:tune:\001*\032I\312A\025retail"
+          + ".googleapis.com\322A.https://www.googleapis"
+          + ".com/auth/cloud-platformB\320\001\n\036com.google."
+          + "cloud.retail.v2betaB\021ModelServiceProtoP\001"
+          + "Z6cloud.google.com/go/retail/apiv2beta/r"
+          + "etailpb;retailpb\242\002\006RETAIL\252\002\032Google.Cloud"
+          + ".Retail.V2Beta\312\002\032Google\\Cloud\\Retail\\V2b"
+          + "eta\352\002\035Google::Cloud::Retail::V2betab\006pro"
+          + "to3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -184,8 +195,16 @@ public final class ModelServiceProto {
             new java.lang.String[] {
               "Model", "UpdateMask",
             });
-    internal_static_google_cloud_retail_v2beta_PauseModelRequest_descriptor =
+    internal_static_google_cloud_retail_v2beta_GetModelRequest_descriptor =
         getDescriptor().getMessageTypes().get(2);
+    internal_static_google_cloud_retail_v2beta_GetModelRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_retail_v2beta_GetModelRequest_descriptor,
+            new java.lang.String[] {
+              "Name",
+            });
+    internal_static_google_cloud_retail_v2beta_PauseModelRequest_descriptor =
+        getDescriptor().getMessageTypes().get(3);
     internal_static_google_cloud_retail_v2beta_PauseModelRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_retail_v2beta_PauseModelRequest_descriptor,
@@ -193,7 +212,7 @@ public final class ModelServiceProto {
               "Name",
             });
     internal_static_google_cloud_retail_v2beta_ResumeModelRequest_descriptor =
-        getDescriptor().getMessageTypes().get(3);
+        getDescriptor().getMessageTypes().get(4);
     internal_static_google_cloud_retail_v2beta_ResumeModelRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_retail_v2beta_ResumeModelRequest_descriptor,
@@ -201,7 +220,7 @@ public final class ModelServiceProto {
               "Name",
             });
     internal_static_google_cloud_retail_v2beta_ListModelsRequest_descriptor =
-        getDescriptor().getMessageTypes().get(4);
+        getDescriptor().getMessageTypes().get(5);
     internal_static_google_cloud_retail_v2beta_ListModelsRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_retail_v2beta_ListModelsRequest_descriptor,
@@ -209,7 +228,7 @@ public final class ModelServiceProto {
               "Parent", "PageSize", "PageToken",
             });
     internal_static_google_cloud_retail_v2beta_DeleteModelRequest_descriptor =
-        getDescriptor().getMessageTypes().get(5);
+        getDescriptor().getMessageTypes().get(6);
     internal_static_google_cloud_retail_v2beta_DeleteModelRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_retail_v2beta_DeleteModelRequest_descriptor,
@@ -217,7 +236,7 @@ public final class ModelServiceProto {
               "Name",
             });
     internal_static_google_cloud_retail_v2beta_ListModelsResponse_descriptor =
-        getDescriptor().getMessageTypes().get(6);
+        getDescriptor().getMessageTypes().get(7);
     internal_static_google_cloud_retail_v2beta_ListModelsResponse_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_retail_v2beta_ListModelsResponse_descriptor,
@@ -225,7 +244,7 @@ public final class ModelServiceProto {
               "Models", "NextPageToken",
             });
     internal_static_google_cloud_retail_v2beta_TuneModelRequest_descriptor =
-        getDescriptor().getMessageTypes().get(7);
+        getDescriptor().getMessageTypes().get(8);
     internal_static_google_cloud_retail_v2beta_TuneModelRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_retail_v2beta_TuneModelRequest_descriptor,
@@ -233,7 +252,7 @@ public final class ModelServiceProto {
               "Name",
             });
     internal_static_google_cloud_retail_v2beta_CreateModelMetadata_descriptor =
-        getDescriptor().getMessageTypes().get(8);
+        getDescriptor().getMessageTypes().get(9);
     internal_static_google_cloud_retail_v2beta_CreateModelMetadata_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_retail_v2beta_CreateModelMetadata_descriptor,
@@ -241,7 +260,7 @@ public final class ModelServiceProto {
               "Model",
             });
     internal_static_google_cloud_retail_v2beta_TuneModelMetadata_descriptor =
-        getDescriptor().getMessageTypes().get(9);
+        getDescriptor().getMessageTypes().get(10);
     internal_static_google_cloud_retail_v2beta_TuneModelMetadata_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_retail_v2beta_TuneModelMetadata_descriptor,
@@ -249,7 +268,7 @@ public final class ModelServiceProto {
               "Model",
             });
     internal_static_google_cloud_retail_v2beta_TuneModelResponse_descriptor =
-        getDescriptor().getMessageTypes().get(10);
+        getDescriptor().getMessageTypes().get(11);
     internal_static_google_cloud_retail_v2beta_TuneModelResponse_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_retail_v2beta_TuneModelResponse_descriptor,

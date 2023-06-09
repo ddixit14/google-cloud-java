@@ -43,22 +43,22 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     id_ = "";
     type_ = 0;
     primaryProductId_ = "";
-    collectionMemberIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    collectionMemberIds_ = com.google.protobuf.LazyStringArrayList.emptyList();
     gtin_ = "";
-    categories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    categories_ = com.google.protobuf.LazyStringArrayList.emptyList();
     title_ = "";
-    brands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    brands_ = com.google.protobuf.LazyStringArrayList.emptyList();
     description_ = "";
     languageCode_ = "";
-    tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    tags_ = com.google.protobuf.LazyStringArrayList.emptyList();
     availability_ = 0;
     fulfillmentInfo_ = java.util.Collections.emptyList();
     uri_ = "";
     images_ = java.util.Collections.emptyList();
-    sizes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    materials_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    patterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    conditions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    sizes_ = com.google.protobuf.LazyStringArrayList.emptyList();
+    materials_ = com.google.protobuf.LazyStringArrayList.emptyList();
+    patterns_ = com.google.protobuf.LazyStringArrayList.emptyList();
+    conditions_ = com.google.protobuf.LazyStringArrayList.emptyList();
     promotions_ = java.util.Collections.emptyList();
     variants_ = java.util.Collections.emptyList();
     localInventories_ = java.util.Collections.emptyList();
@@ -68,11 +68,6 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Product();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -128,6 +123,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The primary type.
+     *
      * As the primary unit for predicting, indexing and search serving, a
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] is grouped with multiple
@@ -143,6 +139,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The variant type.
+     *
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]
      * [Product][google.cloud.retail.v2alpha.Product]s usually share some common
      * attributes on the same
@@ -189,6 +186,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The primary type.
+     *
      * As the primary unit for predicting, indexing and search serving, a
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] is grouped with multiple
@@ -204,6 +202,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The variant type.
+     *
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]
      * [Product][google.cloud.retail.v2alpha.Product]s usually share some common
      * attributes on the same
@@ -523,6 +522,8 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int expirationCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object expiration_;
 
   public enum ExpirationCase
@@ -583,6 +584,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
    * general, we suggest the users to delete the stale products explicitly,
    * instead of using this field to determine staleness.
+   *
    * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
    * available for
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -591,11 +593,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
    * and
    * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+   *
    * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
    * later than
    * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
    * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
    * otherwise an INVALID_ARGUMENT error is thrown.
+   *
    * Corresponding properties: Google Merchant Center property
    * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * </pre>
@@ -621,6 +625,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
    * general, we suggest the users to delete the stale products explicitly,
    * instead of using this field to determine staleness.
+   *
    * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
    * available for
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -629,11 +634,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
    * and
    * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+   *
    * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
    * later than
    * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
    * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
    * otherwise an INVALID_ARGUMENT error is thrown.
+   *
    * Corresponding properties: Google Merchant Center property
    * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * </pre>
@@ -662,6 +669,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
    * general, we suggest the users to delete the stale products explicitly,
    * instead of using this field to determine staleness.
+   *
    * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
    * available for
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -670,11 +678,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
    * and
    * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+   *
    * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
    * later than
    * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
    * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
    * otherwise an INVALID_ARGUMENT error is thrown.
+   *
    * Corresponding properties: Google Merchant Center property
    * [expiration_date](https://support.google.com/merchants/answer/6324499).
    * </pre>
@@ -702,6 +712,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
    * general, we suggest the users to delete the stale products explicitly,
    * instead of using this field to determine staleness.
+   *
    * If it is set, it must be a non-negative value, and
    * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
    * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -710,6 +721,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
    * is left blank when retrieving the
    * [Product][google.cloud.retail.v2alpha.Product].
+   *
    * If it is set, the product is not available for
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
    * after current timestamp plus
@@ -740,6 +752,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
    * general, we suggest the users to delete the stale products explicitly,
    * instead of using this field to determine staleness.
+   *
    * If it is set, it must be a non-negative value, and
    * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
    * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -748,6 +761,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
    * is left blank when retrieving the
    * [Product][google.cloud.retail.v2alpha.Product].
+   *
    * If it is set, the product is not available for
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
    * after current timestamp plus
@@ -781,6 +795,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
    * general, we suggest the users to delete the stale products explicitly,
    * instead of using this field to determine staleness.
+   *
    * If it is set, it must be a non-negative value, and
    * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
    * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -789,6 +804,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
    * is left blank when retrieving the
    * [Product][google.cloud.retail.v2alpha.Product].
+   *
    * If it is set, the product is not available for
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
    * after current timestamp plus
@@ -875,8 +891,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * For example, this field is "id_1", if
    * [name][google.cloud.retail.v2alpha.Product.name] is
    * `projects/&#42;&#47;locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 128
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [id](https://support.google.com/merchants/answer/6324405). Schema.org
    * property [Product.sku](https://schema.org/sku).
@@ -907,8 +925,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * For example, this field is "id_1", if
    * [name][google.cloud.retail.v2alpha.Product.name] is
    * `projects/&#42;&#47;locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 128
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [id](https://support.google.com/merchants/answer/6324405). Schema.org
    * property [Product.sku](https://schema.org/sku).
@@ -985,15 +1005,18 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * Variant group identifier. Must be an
    * [id][google.cloud.retail.v2alpha.Product.id], with the same parent branch
    * with this product. Otherwise, an error is thrown.
+   *
    * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product]s, this field can only be
    * empty or set to the same value as
    * [id][google.cloud.retail.v2alpha.Product.id].
+   *
    * For VARIANT [Product][google.cloud.retail.v2alpha.Product]s, this field
    * cannot be empty. A maximum of 2,000 products are allowed to share the same
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product]. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [item_group_id](https://support.google.com/merchants/answer/6324507).
    * Schema.org property
@@ -1023,15 +1046,18 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * Variant group identifier. Must be an
    * [id][google.cloud.retail.v2alpha.Product.id], with the same parent branch
    * with this product. Otherwise, an error is thrown.
+   *
    * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product]s, this field can only be
    * empty or set to the same value as
    * [id][google.cloud.retail.v2alpha.Product.id].
+   *
    * For VARIANT [Product][google.cloud.retail.v2alpha.Product]s, this field
    * cannot be empty. A maximum of 2,000 products are allowed to share the same
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product]. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [item_group_id](https://support.google.com/merchants/answer/6324507).
    * Schema.org property
@@ -1058,7 +1084,8 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   public static final int COLLECTION_MEMBER_IDS_FIELD_NUMBER = 5;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList collectionMemberIds_;
+  private com.google.protobuf.LazyStringArrayList collectionMemberIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
@@ -1066,6 +1093,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
    * when [type][google.cloud.retail.v2alpha.Product.type] is
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+   *
    * Non-existent product ids are allowed.
    * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
    * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -1089,6 +1117,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
    * when [type][google.cloud.retail.v2alpha.Product.type] is
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+   *
    * Non-existent product ids are allowed.
    * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
    * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -1112,6 +1141,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
    * when [type][google.cloud.retail.v2alpha.Product.type] is
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+   *
    * Non-existent product ids are allowed.
    * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
    * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -1136,6 +1166,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
    * when [type][google.cloud.retail.v2alpha.Product.type] is
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+   *
    * Non-existent product ids are allowed.
    * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
    * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -1163,10 +1194,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The Global Trade Item Number (GTIN) of the product.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 128
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is
    * returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [gtin](https://support.google.com/merchants/answer/6324461).
    * Schema.org property
@@ -1175,6 +1209,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [Product.gtin12](https://schema.org/gtin12),
    * [Product.gtin13](https://schema.org/gtin13), or
    * [Product.gtin14](https://schema.org/gtin14).
+   *
    * If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
    * </pre>
    *
@@ -1199,10 +1234,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The Global Trade Item Number (GTIN) of the product.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 128
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is
    * returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [gtin](https://support.google.com/merchants/answer/6324461).
    * Schema.org property
@@ -1211,6 +1249,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * [Product.gtin12](https://schema.org/gtin12),
    * [Product.gtin13](https://schema.org/gtin13), or
    * [Product.gtin14](https://schema.org/gtin14).
+   *
    * If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
    * </pre>
    *
@@ -1234,7 +1273,8 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   public static final int CATEGORIES_FIELD_NUMBER = 7;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList categories_;
+  private com.google.protobuf.LazyStringArrayList categories_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
@@ -1242,28 +1282,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * Product categories. This field is repeated for supporting one product
    * belonging to several parallel categories. Strongly recommended using the
    * full path for better search / recommendation quality.
+   *
+   *
    * To represent full path of category, use '&gt;' sign to separate different
    * hierarchies. If '&gt;' is part of the category name, replace it with
    * other character(s).
+   *
    * For example, if a shoes product belongs to both
    * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
    * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
    * represented as:
+   *
    *      "categories": [
    *        "Shoes &amp; Accessories &gt; Shoes",
    *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
    *      ]
+   *
    * Must be set for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product] otherwise an
    * INVALID_ARGUMENT error is returned.
+   *
    * At most 250 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
    * allowed. Each value must be a UTF-8 encoded string with a length limit of
    * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [google_product_category][mc_google_product_category]. Schema.org property
    * [Product.category] (https://schema.org/category).
+   *
    * [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * </pre>
@@ -1282,28 +1330,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * Product categories. This field is repeated for supporting one product
    * belonging to several parallel categories. Strongly recommended using the
    * full path for better search / recommendation quality.
+   *
+   *
    * To represent full path of category, use '&gt;' sign to separate different
    * hierarchies. If '&gt;' is part of the category name, replace it with
    * other character(s).
+   *
    * For example, if a shoes product belongs to both
    * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
    * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
    * represented as:
+   *
    *      "categories": [
    *        "Shoes &amp; Accessories &gt; Shoes",
    *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
    *      ]
+   *
    * Must be set for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product] otherwise an
    * INVALID_ARGUMENT error is returned.
+   *
    * At most 250 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
    * allowed. Each value must be a UTF-8 encoded string with a length limit of
    * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [google_product_category][mc_google_product_category]. Schema.org property
    * [Product.category] (https://schema.org/category).
+   *
    * [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * </pre>
@@ -1322,28 +1378,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * Product categories. This field is repeated for supporting one product
    * belonging to several parallel categories. Strongly recommended using the
    * full path for better search / recommendation quality.
+   *
+   *
    * To represent full path of category, use '&gt;' sign to separate different
    * hierarchies. If '&gt;' is part of the category name, replace it with
    * other character(s).
+   *
    * For example, if a shoes product belongs to both
    * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
    * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
    * represented as:
+   *
    *      "categories": [
    *        "Shoes &amp; Accessories &gt; Shoes",
    *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
    *      ]
+   *
    * Must be set for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product] otherwise an
    * INVALID_ARGUMENT error is returned.
+   *
    * At most 250 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
    * allowed. Each value must be a UTF-8 encoded string with a length limit of
    * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [google_product_category][mc_google_product_category]. Schema.org property
    * [Product.category] (https://schema.org/category).
+   *
    * [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * </pre>
@@ -1363,28 +1427,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * Product categories. This field is repeated for supporting one product
    * belonging to several parallel categories. Strongly recommended using the
    * full path for better search / recommendation quality.
+   *
+   *
    * To represent full path of category, use '&gt;' sign to separate different
    * hierarchies. If '&gt;' is part of the category name, replace it with
    * other character(s).
+   *
    * For example, if a shoes product belongs to both
    * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
    * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
    * represented as:
+   *
    *      "categories": [
    *        "Shoes &amp; Accessories &gt; Shoes",
    *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
    *      ]
+   *
    * Must be set for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product] otherwise an
    * INVALID_ARGUMENT error is returned.
+   *
    * At most 250 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
    * allowed. Each value must be a UTF-8 encoded string with a length limit of
    * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [google_product_category][mc_google_product_category]. Schema.org property
    * [Product.category] (https://schema.org/category).
+   *
    * [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * </pre>
@@ -1407,8 +1479,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Required. Product title.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 1,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [title](https://support.google.com/merchants/answer/6324415). Schema.org
    * property [Product.name](https://schema.org/name).
@@ -1435,8 +1509,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Required. Product title.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 1,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [title](https://support.google.com/merchants/answer/6324415). Schema.org
    * property [Product.name](https://schema.org/name).
@@ -1462,15 +1538,18 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   public static final int BRANDS_FIELD_NUMBER = 9;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList brands_;
+  private com.google.protobuf.LazyStringArrayList brands_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * The brands of the product.
+   *
    * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
    * string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
    * property [Product.brand](https://schema.org/brand).
@@ -1488,9 +1567,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The brands of the product.
+   *
    * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
    * string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
    * property [Product.brand](https://schema.org/brand).
@@ -1508,9 +1589,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The brands of the product.
+   *
    * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
    * string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
    * property [Product.brand](https://schema.org/brand).
@@ -1529,9 +1612,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The brands of the product.
+   *
    * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
    * string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
    * property [Product.brand](https://schema.org/brand).
@@ -1555,8 +1640,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Product description.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [description](https://support.google.com/merchants/answer/6324468).
    * Schema.org property [Product.description](https://schema.org/description).
@@ -1583,8 +1670,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Product description.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [description](https://support.google.com/merchants/answer/6324468).
    * Schema.org property [Product.description](https://schema.org/description).
@@ -1617,12 +1706,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Language of the title/description and other string attributes. Use language
    * tags defined by [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).
+   *
    * For product prediction, this field is ignored and the model automatically
    * detects the text language. The
    * [Product][google.cloud.retail.v2alpha.Product] can include text in
    * different languages, but duplicating
    * [Product][google.cloud.retail.v2alpha.Product]s to provide text in multiple
    * languages can result in degraded model performance.
+   *
    * For product search this field is in use. It defaults to "en-US" if unset.
    * </pre>
    *
@@ -1648,12 +1739,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Language of the title/description and other string attributes. Use language
    * tags defined by [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).
+   *
    * For product prediction, this field is ignored and the model automatically
    * detects the text language. The
    * [Product][google.cloud.retail.v2alpha.Product] can include text in
    * different languages, but duplicating
    * [Product][google.cloud.retail.v2alpha.Product]s to provide text in multiple
    * languages can result in degraded model performance.
+   *
    * For product search this field is in use. It defaults to "en-US" if unset.
    * </pre>
    *
@@ -1716,16 +1809,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * for products, this could include the store name, vendor, style, color, etc.
    * These are very strong signals for recommendation model, thus we highly
    * recommend providing the attributes here.
+   *
    * Features that can take on one of a limited number of possible values. Two
    * types of features can be set are:
+   *
    * Textual features. some examples would be the brand/maker of a product, or
    * country of a customer. Numerical features. Some examples would be the
    * height/weight of a product, or age of a customer.
+   *
    * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
    * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
    * }`.
+   *
    * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
    * error is returned:
+   *
    * * Max entries count: 200.
    * * The key must be a UTF-8 encoded string with a length limit of 128
    *   characters.
@@ -1762,16 +1860,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * for products, this could include the store name, vendor, style, color, etc.
    * These are very strong signals for recommendation model, thus we highly
    * recommend providing the attributes here.
+   *
    * Features that can take on one of a limited number of possible values. Two
    * types of features can be set are:
+   *
    * Textual features. some examples would be the brand/maker of a product, or
    * country of a customer. Numerical features. Some examples would be the
    * height/weight of a product, or age of a customer.
+   *
    * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
    * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
    * }`.
+   *
    * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
    * error is returned:
+   *
    * * Max entries count: 200.
    * * The key must be a UTF-8 encoded string with a length limit of 128
    *   characters.
@@ -1799,16 +1902,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * for products, this could include the store name, vendor, style, color, etc.
    * These are very strong signals for recommendation model, thus we highly
    * recommend providing the attributes here.
+   *
    * Features that can take on one of a limited number of possible values. Two
    * types of features can be set are:
+   *
    * Textual features. some examples would be the brand/maker of a product, or
    * country of a customer. Numerical features. Some examples would be the
    * height/weight of a product, or age of a customer.
+   *
    * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
    * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
    * }`.
+   *
    * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
    * error is returned:
+   *
    * * Max entries count: 200.
    * * The key must be a UTF-8 encoded string with a length limit of 128
    *   characters.
@@ -1843,16 +1951,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * for products, this could include the store name, vendor, style, color, etc.
    * These are very strong signals for recommendation model, thus we highly
    * recommend providing the attributes here.
+   *
    * Features that can take on one of a limited number of possible values. Two
    * types of features can be set are:
+   *
    * Textual features. some examples would be the brand/maker of a product, or
    * country of a customer. Numerical features. Some examples would be the
    * height/weight of a product, or age of a customer.
+   *
    * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
    * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
    * }`.
+   *
    * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
    * error is returned:
+   *
    * * Max entries count: 200.
    * * The key must be a UTF-8 encoded string with a length limit of 128
    *   characters.
@@ -1884,19 +1997,23 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   public static final int TAGS_FIELD_NUMBER = 13;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList tags_;
+  private com.google.protobuf.LazyStringArrayList tags_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * Custom tags associated with the product.
+   *
    * At most 250 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
    * encoded string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * This tag can be used for filtering recommendation results by passing the
    * tag as part of the
    * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+   *
    * Corresponding properties: Google Merchant Center property
    * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
    * </pre>
@@ -1913,13 +2030,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Custom tags associated with the product.
+   *
    * At most 250 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
    * encoded string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * This tag can be used for filtering recommendation results by passing the
    * tag as part of the
    * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+   *
    * Corresponding properties: Google Merchant Center property
    * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
    * </pre>
@@ -1936,13 +2056,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Custom tags associated with the product.
+   *
    * At most 250 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
    * encoded string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * This tag can be used for filtering recommendation results by passing the
    * tag as part of the
    * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+   *
    * Corresponding properties: Google Merchant Center property
    * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
    * </pre>
@@ -1960,13 +2083,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Custom tags associated with the product.
+   *
    * At most 250 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
    * encoded string with a length limit of 1,000 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * This tag can be used for filtering recommendation results by passing the
    * tag as part of the
    * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+   *
    * Corresponding properties: Google Merchant Center property
    * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
    * </pre>
@@ -1987,6 +2113,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Product price and cost information.
+   *
    * Corresponding properties: Google Merchant Center property
    * [price](https://support.google.com/merchants/answer/6324371).
    * </pre>
@@ -2004,6 +2131,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Product price and cost information.
+   *
    * Corresponding properties: Google Merchant Center property
    * [price](https://support.google.com/merchants/answer/6324371).
    * </pre>
@@ -2023,6 +2151,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Product price and cost information.
+   *
    * Corresponding properties: Google Merchant Center property
    * [price](https://support.google.com/merchants/answer/6324371).
    * </pre>
@@ -2162,6 +2291,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * The online availability of the
    * [Product][google.cloud.retail.v2alpha.Product]. Default to
    * [Availability.IN_STOCK][google.cloud.retail.v2alpha.Product.Availability.IN_STOCK].
+   *
    * Corresponding properties: Google Merchant Center property
    * [availability](https://support.google.com/merchants/answer/6324448).
    * Schema.org property [Offer.availability](https://schema.org/availability).
@@ -2182,6 +2312,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * The online availability of the
    * [Product][google.cloud.retail.v2alpha.Product]. Default to
    * [Availability.IN_STOCK][google.cloud.retail.v2alpha.Product.Availability.IN_STOCK].
+   *
    * Corresponding properties: Google Merchant Center property
    * [availability](https://support.google.com/merchants/answer/6324448).
    * Schema.org property [Offer.availability](https://schema.org/availability).
@@ -2260,6 +2391,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Fulfillment information, such as the store IDs for in-store pickup or
    * region IDs for different shipping methods.
+   *
    * All the elements must have distinct
    * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
    * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -2277,6 +2409,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Fulfillment information, such as the store IDs for in-store pickup or
    * region IDs for different shipping methods.
+   *
    * All the elements must have distinct
    * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
    * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -2295,6 +2428,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Fulfillment information, such as the store IDs for in-store pickup or
    * region IDs for different shipping methods.
+   *
    * All the elements must have distinct
    * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
    * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -2312,6 +2446,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Fulfillment information, such as the store IDs for in-store pickup or
    * region IDs for different shipping methods.
+   *
    * All the elements must have distinct
    * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
    * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -2329,6 +2464,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Fulfillment information, such as the store IDs for in-store pickup or
    * region IDs for different shipping methods.
+   *
    * All the elements must have distinct
    * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
    * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -2351,10 +2487,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Canonical URL directly linking to the product detail page.
+   *
    * It is strongly recommended to provide a valid uri for the product,
    * otherwise the service performance could be significantly degraded.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [link](https://support.google.com/merchants/answer/6324416). Schema.org
    * property [Offer.url](https://schema.org/url).
@@ -2381,10 +2520,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Canonical URL directly linking to the product detail page.
+   *
    * It is strongly recommended to provide a valid uri for the product,
    * otherwise the service performance could be significantly degraded.
+   *
    * This field must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [link](https://support.google.com/merchants/answer/6324416). Schema.org
    * property [Offer.url](https://schema.org/url).
@@ -2417,7 +2559,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Product images for the product. We highly recommend putting the main
    * image first.
+   *
    * A maximum of 300 images are allowed.
+   *
    * Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350).
    * Schema.org property [Product.image](https://schema.org/image).
@@ -2435,7 +2579,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Product images for the product. We highly recommend putting the main
    * image first.
+   *
    * A maximum of 300 images are allowed.
+   *
    * Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350).
    * Schema.org property [Product.image](https://schema.org/image).
@@ -2454,7 +2600,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Product images for the product. We highly recommend putting the main
    * image first.
+   *
    * A maximum of 300 images are allowed.
+   *
    * Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350).
    * Schema.org property [Product.image](https://schema.org/image).
@@ -2472,7 +2620,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Product images for the product. We highly recommend putting the main
    * image first.
+   *
    * A maximum of 300 images are allowed.
+   *
    * Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350).
    * Schema.org property [Product.image](https://schema.org/image).
@@ -2490,7 +2640,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Product images for the product. We highly recommend putting the main
    * image first.
+   *
    * A maximum of 300 images are allowed.
+   *
    * Corresponding properties: Google Merchant Center property
    * [image_link](https://support.google.com/merchants/answer/6324350).
    * Schema.org property [Product.image](https://schema.org/image).
@@ -2563,6 +2715,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The color of the product.
+   *
    * Corresponding properties: Google Merchant Center property
    * [color](https://support.google.com/merchants/answer/6324487). Schema.org
    * property [Product.color](https://schema.org/color).
@@ -2581,6 +2734,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The color of the product.
+   *
    * Corresponding properties: Google Merchant Center property
    * [color](https://support.google.com/merchants/answer/6324487). Schema.org
    * property [Product.color](https://schema.org/color).
@@ -2601,6 +2755,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The color of the product.
+   *
    * Corresponding properties: Google Merchant Center property
    * [color](https://support.google.com/merchants/answer/6324487). Schema.org
    * property [Product.color](https://schema.org/color).
@@ -2618,21 +2773,25 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   public static final int SIZES_FIELD_NUMBER = 26;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList sizes_;
+  private com.google.protobuf.LazyStringArrayList sizes_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * The size of the product. To represent different size systems or size types,
    * consider using this format: [[[size_system:]size_type:]size_value].
+   *
    * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
    * size type; "M" represents size value. In "GIRLS:27", size system is empty;
    * "GIRLS" represents size type; "27" represents size value. In "32 inches",
    * both size system and size type are empty, while size value is "32 inches".
+   *
    * A maximum of 20 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [size](https://support.google.com/merchants/answer/6324492),
    * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -2653,14 +2812,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The size of the product. To represent different size systems or size types,
    * consider using this format: [[[size_system:]size_type:]size_value].
+   *
    * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
    * size type; "M" represents size value. In "GIRLS:27", size system is empty;
    * "GIRLS" represents size type; "27" represents size value. In "32 inches",
    * both size system and size type are empty, while size value is "32 inches".
+   *
    * A maximum of 20 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [size](https://support.google.com/merchants/answer/6324492),
    * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -2681,14 +2843,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The size of the product. To represent different size systems or size types,
    * consider using this format: [[[size_system:]size_type:]size_value].
+   *
    * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
    * size type; "M" represents size value. In "GIRLS:27", size system is empty;
    * "GIRLS" represents size type; "27" represents size value. In "32 inches",
    * both size system and size type are empty, while size value is "32 inches".
+   *
    * A maximum of 20 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [size](https://support.google.com/merchants/answer/6324492),
    * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -2710,14 +2875,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The size of the product. To represent different size systems or size types,
    * consider using this format: [[[size_system:]size_type:]size_value].
+   *
    * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
    * size type; "M" represents size value. In "GIRLS:27", size system is empty;
    * "GIRLS" represents size type; "27" represents size value. In "32 inches",
    * both size system and size type are empty, while size value is "32 inches".
+   *
    * A maximum of 20 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [size](https://support.google.com/merchants/answer/6324492),
    * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -2737,15 +2905,18 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   public static final int MATERIALS_FIELD_NUMBER = 27;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList materials_;
+  private com.google.protobuf.LazyStringArrayList materials_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * The material of the product. For example, "leather", "wooden".
+   *
    * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
    * string with a length limit of 200 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [material](https://support.google.com/merchants/answer/6324410). Schema.org
    * property [Product.material](https://schema.org/material).
@@ -2763,9 +2934,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The material of the product. For example, "leather", "wooden".
+   *
    * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
    * string with a length limit of 200 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [material](https://support.google.com/merchants/answer/6324410). Schema.org
    * property [Product.material](https://schema.org/material).
@@ -2783,9 +2956,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The material of the product. For example, "leather", "wooden".
+   *
    * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
    * string with a length limit of 200 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [material](https://support.google.com/merchants/answer/6324410). Schema.org
    * property [Product.material](https://schema.org/material).
@@ -2804,9 +2979,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The material of the product. For example, "leather", "wooden".
+   *
    * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
    * string with a length limit of 200 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [material](https://support.google.com/merchants/answer/6324410). Schema.org
    * property [Product.material](https://schema.org/material).
@@ -2824,17 +3001,20 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   public static final int PATTERNS_FIELD_NUMBER = 28;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList patterns_;
+  private com.google.protobuf.LazyStringArrayList patterns_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * The pattern or graphic print of the product. For example, "striped", "polka
    * dot", "paisley".
+   *
    * A maximum of 20 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
    * property [Product.pattern](https://schema.org/pattern).
@@ -2853,10 +3033,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The pattern or graphic print of the product. For example, "striped", "polka
    * dot", "paisley".
+   *
    * A maximum of 20 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
    * property [Product.pattern](https://schema.org/pattern).
@@ -2875,10 +3057,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The pattern or graphic print of the product. For example, "striped", "polka
    * dot", "paisley".
+   *
    * A maximum of 20 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
    * property [Product.pattern](https://schema.org/pattern).
@@ -2898,10 +3082,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The pattern or graphic print of the product. For example, "striped", "polka
    * dot", "paisley".
+   *
    * A maximum of 20 values are allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
    * property [Product.pattern](https://schema.org/pattern).
@@ -2919,17 +3105,20 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
   public static final int CONDITIONS_FIELD_NUMBER = 29;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList conditions_;
+  private com.google.protobuf.LazyStringArrayList conditions_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * The condition of the product. Strongly encouraged to use the standard
    * values: "new", "refurbished", "used".
+   *
    * A maximum of 1 value is allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [condition](https://support.google.com/merchants/answer/6324469).
    * Schema.org property
@@ -2949,10 +3138,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The condition of the product. Strongly encouraged to use the standard
    * values: "new", "refurbished", "used".
+   *
    * A maximum of 1 value is allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [condition](https://support.google.com/merchants/answer/6324469).
    * Schema.org property
@@ -2972,10 +3163,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The condition of the product. Strongly encouraged to use the standard
    * values: "new", "refurbished", "used".
+   *
    * A maximum of 1 value is allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [condition](https://support.google.com/merchants/answer/6324469).
    * Schema.org property
@@ -2996,10 +3189,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The condition of the product. Strongly encouraged to use the standard
    * values: "new", "refurbished", "used".
+   *
    * A maximum of 1 value is allowed per
    * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
    * encoded string with a length limit of 128 characters. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * Corresponding properties: Google Merchant Center property
    * [condition](https://support.google.com/merchants/answer/6324469).
    * Schema.org property
@@ -3171,7 +3366,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * Indicates which fields in the
    * [Product][google.cloud.retail.v2alpha.Product]s are returned in
    * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+   *
    * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+   *
    * * [audience][google.cloud.retail.v2alpha.Product.audience]
    * * [availability][google.cloud.retail.v2alpha.Product.availability]
    * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -3186,34 +3383,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
    * * [title][google.cloud.retail.v2alpha.Product.title]
    * * [uri][google.cloud.retail.v2alpha.Product.uri]
+   *
    * Supported fields only for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+   *
    * * [categories][google.cloud.retail.v2alpha.Product.categories]
    * * [description][google.cloud.retail.v2alpha.Product.description]
    * * [images][google.cloud.retail.v2alpha.Product.images]
+   *
    * Supported fields only for
    * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+   *
    * * Only the first image in
    * [images][google.cloud.retail.v2alpha.Product.images]
+   *
    * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
    * retrievable, include paths of the form "attributes.key" where "key" is the
    * key of a custom attribute, as specified in
    * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+   *
    * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
    * following fields are always returned in
    * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+   *
    * * [name][google.cloud.retail.v2alpha.Product.name]
+   *
    * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
    * following fields are always returned in by default:
+   *
    * * [name][google.cloud.retail.v2alpha.Product.name]
    * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+   *
    * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
    * returned.
+   *
    * Note: Returning more fields in
    * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
    * response payload size and serving latency.
+   *
    * This field is deprecated. Use the retrievable site-wide control instead.
    * </pre>
    *
@@ -3235,7 +3444,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * Indicates which fields in the
    * [Product][google.cloud.retail.v2alpha.Product]s are returned in
    * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+   *
    * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+   *
    * * [audience][google.cloud.retail.v2alpha.Product.audience]
    * * [availability][google.cloud.retail.v2alpha.Product.availability]
    * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -3250,34 +3461,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
    * * [title][google.cloud.retail.v2alpha.Product.title]
    * * [uri][google.cloud.retail.v2alpha.Product.uri]
+   *
    * Supported fields only for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+   *
    * * [categories][google.cloud.retail.v2alpha.Product.categories]
    * * [description][google.cloud.retail.v2alpha.Product.description]
    * * [images][google.cloud.retail.v2alpha.Product.images]
+   *
    * Supported fields only for
    * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+   *
    * * Only the first image in
    * [images][google.cloud.retail.v2alpha.Product.images]
+   *
    * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
    * retrievable, include paths of the form "attributes.key" where "key" is the
    * key of a custom attribute, as specified in
    * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+   *
    * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
    * following fields are always returned in
    * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+   *
    * * [name][google.cloud.retail.v2alpha.Product.name]
+   *
    * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
    * following fields are always returned in by default:
+   *
    * * [name][google.cloud.retail.v2alpha.Product.name]
    * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+   *
    * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
    * returned.
+   *
    * Note: Returning more fields in
    * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
    * response payload size and serving latency.
+   *
    * This field is deprecated. Use the retrievable site-wide control instead.
    * </pre>
    *
@@ -3301,7 +3524,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * Indicates which fields in the
    * [Product][google.cloud.retail.v2alpha.Product]s are returned in
    * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+   *
    * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+   *
    * * [audience][google.cloud.retail.v2alpha.Product.audience]
    * * [availability][google.cloud.retail.v2alpha.Product.availability]
    * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -3316,34 +3541,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
    * * [title][google.cloud.retail.v2alpha.Product.title]
    * * [uri][google.cloud.retail.v2alpha.Product.uri]
+   *
    * Supported fields only for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+   *
    * * [categories][google.cloud.retail.v2alpha.Product.categories]
    * * [description][google.cloud.retail.v2alpha.Product.description]
    * * [images][google.cloud.retail.v2alpha.Product.images]
+   *
    * Supported fields only for
    * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+   *
    * * Only the first image in
    * [images][google.cloud.retail.v2alpha.Product.images]
+   *
    * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
    * retrievable, include paths of the form "attributes.key" where "key" is the
    * key of a custom attribute, as specified in
    * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+   *
    * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
    * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
    * following fields are always returned in
    * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+   *
    * * [name][google.cloud.retail.v2alpha.Product.name]
+   *
    * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
    * following fields are always returned in by default:
+   *
    * * [name][google.cloud.retail.v2alpha.Product.name]
    * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+   *
    * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
    * returned.
+   *
    * Note: Returning more fields in
    * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
    * response payload size and serving latency.
+   *
    * This field is deprecated. Use the retrievable site-wide control instead.
    * </pre>
    *
@@ -3371,6 +3608,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * for all the product variants. Only populated for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product]s.
+   *
    * Note: This field is OUTPUT_ONLY for
    * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
    * Do not set this field in API requests.
@@ -3394,6 +3632,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * for all the product variants. Only populated for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product]s.
+   *
    * Note: This field is OUTPUT_ONLY for
    * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
    * Do not set this field in API requests.
@@ -3418,6 +3657,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * for all the product variants. Only populated for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product]s.
+   *
    * Note: This field is OUTPUT_ONLY for
    * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
    * Do not set this field in API requests.
@@ -3441,6 +3681,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * for all the product variants. Only populated for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product]s.
+   *
    * Note: This field is OUTPUT_ONLY for
    * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
    * Do not set this field in API requests.
@@ -3464,6 +3705,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    * for all the product variants. Only populated for
    * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
    * [Product][google.cloud.retail.v2alpha.Product]s.
+   *
    * Note: This field is OUTPUT_ONLY for
    * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
    * Do not set this field in API requests.
@@ -3487,12 +3729,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Output only. A list of local inventories specific to different places.
-   * This is only available for users who have Retail Search enabled, and it can
-   * be managed by
+   *
+   * This field can be managed by
    * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
    * and
    * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-   * APIs.
+   * APIs if fine-grained, high-volume updates are necessary.
    * </pre>
    *
    * <code>
@@ -3508,12 +3750,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Output only. A list of local inventories specific to different places.
-   * This is only available for users who have Retail Search enabled, and it can
-   * be managed by
+   *
+   * This field can be managed by
    * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
    * and
    * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-   * APIs.
+   * APIs if fine-grained, high-volume updates are necessary.
    * </pre>
    *
    * <code>
@@ -3530,12 +3772,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Output only. A list of local inventories specific to different places.
-   * This is only available for users who have Retail Search enabled, and it can
-   * be managed by
+   *
+   * This field can be managed by
    * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
    * and
    * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-   * APIs.
+   * APIs if fine-grained, high-volume updates are necessary.
    * </pre>
    *
    * <code>
@@ -3551,12 +3793,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Output only. A list of local inventories specific to different places.
-   * This is only available for users who have Retail Search enabled, and it can
-   * be managed by
+   *
+   * This field can be managed by
    * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
    * and
    * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-   * APIs.
+   * APIs if fine-grained, high-volume updates are necessary.
    * </pre>
    *
    * <code>
@@ -3572,12 +3814,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Output only. A list of local inventories specific to different places.
-   * This is only available for users who have Retail Search enabled, and it can
-   * be managed by
+   *
+   * This field can be managed by
    * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
    * and
    * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-   * APIs.
+   * APIs if fine-grained, high-volume updates are necessary.
    * </pre>
    *
    * <code>
@@ -4258,19 +4500,15 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       id_ = "";
       type_ = 0;
       primaryProductId_ = "";
-      collectionMemberIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      collectionMemberIds_ = com.google.protobuf.LazyStringArrayList.emptyList();
       gtin_ = "";
-      categories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000100);
+      categories_ = com.google.protobuf.LazyStringArrayList.emptyList();
       title_ = "";
-      brands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      brands_ = com.google.protobuf.LazyStringArrayList.emptyList();
       description_ = "";
       languageCode_ = "";
       internalGetMutableAttributes().clear();
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00004000);
+      tags_ = com.google.protobuf.LazyStringArrayList.emptyList();
       priceInfo_ = null;
       if (priceInfoBuilder_ != null) {
         priceInfoBuilder_.dispose();
@@ -4317,14 +4555,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
         colorInfoBuilder_.dispose();
         colorInfoBuilder_ = null;
       }
-      sizes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x02000000);
-      materials_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x04000000);
-      patterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x08000000);
-      conditions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x10000000);
+      sizes_ = com.google.protobuf.LazyStringArrayList.emptyList();
+      materials_ = com.google.protobuf.LazyStringArrayList.emptyList();
+      patterns_ = com.google.protobuf.LazyStringArrayList.emptyList();
+      conditions_ = com.google.protobuf.LazyStringArrayList.emptyList();
       if (promotionsBuilder_ == null) {
         promotions_ = java.util.Collections.emptyList();
       } else {
@@ -4398,26 +4632,6 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     }
 
     private void buildPartialRepeatedFields(com.google.cloud.retail.v2alpha.Product result) {
-      if (((bitField0_ & 0x00000040) != 0)) {
-        collectionMemberIds_ = collectionMemberIds_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000040);
-      }
-      result.collectionMemberIds_ = collectionMemberIds_;
-      if (((bitField0_ & 0x00000100) != 0)) {
-        categories_ = categories_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000100);
-      }
-      result.categories_ = categories_;
-      if (((bitField0_ & 0x00000400) != 0)) {
-        brands_ = brands_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000400);
-      }
-      result.brands_ = brands_;
-      if (((bitField0_ & 0x00004000) != 0)) {
-        tags_ = tags_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00004000);
-      }
-      result.tags_ = tags_;
       if (fulfillmentInfoBuilder_ == null) {
         if (((bitField0_ & 0x00100000) != 0)) {
           fulfillmentInfo_ = java.util.Collections.unmodifiableList(fulfillmentInfo_);
@@ -4436,26 +4650,6 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.images_ = imagesBuilder_.build();
       }
-      if (((bitField0_ & 0x02000000) != 0)) {
-        sizes_ = sizes_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x02000000);
-      }
-      result.sizes_ = sizes_;
-      if (((bitField0_ & 0x04000000) != 0)) {
-        materials_ = materials_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x04000000);
-      }
-      result.materials_ = materials_;
-      if (((bitField0_ & 0x08000000) != 0)) {
-        patterns_ = patterns_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x08000000);
-      }
-      result.patterns_ = patterns_;
-      if (((bitField0_ & 0x10000000) != 0)) {
-        conditions_ = conditions_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x10000000);
-      }
-      result.conditions_ = conditions_;
       if (promotionsBuilder_ == null) {
         if (((bitField0_ & 0x20000000) != 0)) {
           promotions_ = java.util.Collections.unmodifiableList(promotions_);
@@ -4499,11 +4693,23 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.primaryProductId_ = primaryProductId_;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        collectionMemberIds_.makeImmutable();
+        result.collectionMemberIds_ = collectionMemberIds_;
+      }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.gtin_ = gtin_;
       }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        categories_.makeImmutable();
+        result.categories_ = categories_;
+      }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.title_ = title_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        brands_.makeImmutable();
+        result.brands_ = brands_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.description_ = description_;
@@ -4514,6 +4720,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.attributes_ = internalGetAttributes();
         result.attributes_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        tags_.makeImmutable();
+        result.tags_ = tags_;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.priceInfo_ = priceInfoBuilder_ == null ? priceInfo_ : priceInfoBuilder_.build();
@@ -4542,6 +4752,22 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       if (((from_bitField0_ & 0x01000000) != 0)) {
         result.colorInfo_ = colorInfoBuilder_ == null ? colorInfo_ : colorInfoBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        sizes_.makeImmutable();
+        result.sizes_ = sizes_;
+      }
+      if (((from_bitField0_ & 0x04000000) != 0)) {
+        materials_.makeImmutable();
+        result.materials_ = materials_;
+      }
+      if (((from_bitField0_ & 0x08000000) != 0)) {
+        patterns_.makeImmutable();
+        result.patterns_ = patterns_;
+      }
+      if (((from_bitField0_ & 0x10000000) != 0)) {
+        conditions_.makeImmutable();
+        result.conditions_ = conditions_;
       }
       if (((from_bitField0_ & 0x40000000) != 0)) {
         result.publishTime_ =
@@ -4636,7 +4862,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (!other.collectionMemberIds_.isEmpty()) {
         if (collectionMemberIds_.isEmpty()) {
           collectionMemberIds_ = other.collectionMemberIds_;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ |= 0x00000040;
         } else {
           ensureCollectionMemberIdsIsMutable();
           collectionMemberIds_.addAll(other.collectionMemberIds_);
@@ -4651,7 +4877,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (!other.categories_.isEmpty()) {
         if (categories_.isEmpty()) {
           categories_ = other.categories_;
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ |= 0x00000100;
         } else {
           ensureCategoriesIsMutable();
           categories_.addAll(other.categories_);
@@ -4666,7 +4892,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (!other.brands_.isEmpty()) {
         if (brands_.isEmpty()) {
           brands_ = other.brands_;
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ |= 0x00000400;
         } else {
           ensureBrandsIsMutable();
           brands_.addAll(other.brands_);
@@ -4688,7 +4914,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (!other.tags_.isEmpty()) {
         if (tags_.isEmpty()) {
           tags_ = other.tags_;
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ |= 0x00004000;
         } else {
           ensureTagsIsMutable();
           tags_.addAll(other.tags_);
@@ -4778,7 +5004,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (!other.sizes_.isEmpty()) {
         if (sizes_.isEmpty()) {
           sizes_ = other.sizes_;
-          bitField0_ = (bitField0_ & ~0x02000000);
+          bitField0_ |= 0x02000000;
         } else {
           ensureSizesIsMutable();
           sizes_.addAll(other.sizes_);
@@ -4788,7 +5014,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (!other.materials_.isEmpty()) {
         if (materials_.isEmpty()) {
           materials_ = other.materials_;
-          bitField0_ = (bitField0_ & ~0x04000000);
+          bitField0_ |= 0x04000000;
         } else {
           ensureMaterialsIsMutable();
           materials_.addAll(other.materials_);
@@ -4798,7 +5024,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (!other.patterns_.isEmpty()) {
         if (patterns_.isEmpty()) {
           patterns_ = other.patterns_;
-          bitField0_ = (bitField0_ & ~0x08000000);
+          bitField0_ |= 0x08000000;
         } else {
           ensurePatternsIsMutable();
           patterns_.addAll(other.patterns_);
@@ -4808,7 +5034,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       if (!other.conditions_.isEmpty()) {
         if (conditions_.isEmpty()) {
           conditions_ = other.conditions_;
-          bitField0_ = (bitField0_ & ~0x10000000);
+          bitField0_ |= 0x10000000;
         } else {
           ensureConditionsIsMutable();
           conditions_.addAll(other.conditions_);
@@ -5254,6 +5480,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
      * available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -5262,11 +5489,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
      * and
      * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+     *
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
      * later than
      * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
      * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
      * otherwise an INVALID_ARGUMENT error is thrown.
+     *
      * Corresponding properties: Google Merchant Center property
      * [expiration_date](https://support.google.com/merchants/answer/6324499).
      * </pre>
@@ -5292,6 +5521,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
      * available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -5300,11 +5530,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
      * and
      * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+     *
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
      * later than
      * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
      * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
      * otherwise an INVALID_ARGUMENT error is thrown.
+     *
      * Corresponding properties: Google Merchant Center property
      * [expiration_date](https://support.google.com/merchants/answer/6324499).
      * </pre>
@@ -5340,6 +5572,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
      * available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -5348,11 +5581,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
      * and
      * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+     *
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
      * later than
      * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
      * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
      * otherwise an INVALID_ARGUMENT error is thrown.
+     *
      * Corresponding properties: Google Merchant Center property
      * [expiration_date](https://support.google.com/merchants/answer/6324499).
      * </pre>
@@ -5385,6 +5620,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
      * available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -5393,11 +5629,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
      * and
      * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+     *
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
      * later than
      * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
      * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
      * otherwise an INVALID_ARGUMENT error is thrown.
+     *
      * Corresponding properties: Google Merchant Center property
      * [expiration_date](https://support.google.com/merchants/answer/6324499).
      * </pre>
@@ -5427,6 +5665,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
      * available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -5435,11 +5674,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
      * and
      * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+     *
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
      * later than
      * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
      * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
      * otherwise an INVALID_ARGUMENT error is thrown.
+     *
      * Corresponding properties: Google Merchant Center property
      * [expiration_date](https://support.google.com/merchants/answer/6324499).
      * </pre>
@@ -5481,6 +5722,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
      * available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -5489,11 +5731,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
      * and
      * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+     *
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
      * later than
      * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
      * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
      * otherwise an INVALID_ARGUMENT error is thrown.
+     *
      * Corresponding properties: Google Merchant Center property
      * [expiration_date](https://support.google.com/merchants/answer/6324499).
      * </pre>
@@ -5529,6 +5773,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
      * available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -5537,11 +5782,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
      * and
      * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+     *
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
      * later than
      * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
      * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
      * otherwise an INVALID_ARGUMENT error is thrown.
+     *
      * Corresponding properties: Google Merchant Center property
      * [expiration_date](https://support.google.com/merchants/answer/6324499).
      * </pre>
@@ -5564,6 +5811,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
      * available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -5572,11 +5820,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
      * and
      * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+     *
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
      * later than
      * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
      * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
      * otherwise an INVALID_ARGUMENT error is thrown.
+     *
      * Corresponding properties: Google Merchant Center property
      * [expiration_date](https://support.google.com/merchants/answer/6324499).
      * </pre>
@@ -5607,6 +5857,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, the [Product][google.cloud.retail.v2alpha.Product] is not
      * available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
@@ -5615,11 +5866,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct]
      * and
      * [ProductService.ListProducts][google.cloud.retail.v2alpha.ProductService.ListProducts].
+     *
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] must be
      * later than
      * [available_time][google.cloud.retail.v2alpha.Product.available_time] and
      * [publish_time][google.cloud.retail.v2alpha.Product.publish_time],
      * otherwise an INVALID_ARGUMENT error is thrown.
+     *
      * Corresponding properties: Google Merchant Center property
      * [expiration_date](https://support.google.com/merchants/answer/6324499).
      * </pre>
@@ -5665,6 +5918,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, it must be a non-negative value, and
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
      * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -5673,6 +5927,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
      * is left blank when retrieving the
      * [Product][google.cloud.retail.v2alpha.Product].
+     *
      * If it is set, the product is not available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
      * after current timestamp plus
@@ -5703,6 +5958,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, it must be a non-negative value, and
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
      * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -5711,6 +5967,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
      * is left blank when retrieving the
      * [Product][google.cloud.retail.v2alpha.Product].
+     *
      * If it is set, the product is not available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
      * after current timestamp plus
@@ -5751,6 +6008,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, it must be a non-negative value, and
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
      * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -5759,6 +6017,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
      * is left blank when retrieving the
      * [Product][google.cloud.retail.v2alpha.Product].
+     *
      * If it is set, the product is not available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
      * after current timestamp plus
@@ -5796,6 +6055,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, it must be a non-negative value, and
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
      * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -5804,6 +6064,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
      * is left blank when retrieving the
      * [Product][google.cloud.retail.v2alpha.Product].
+     *
      * If it is set, the product is not available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
      * after current timestamp plus
@@ -5838,6 +6099,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, it must be a non-negative value, and
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
      * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -5846,6 +6108,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
      * is left blank when retrieving the
      * [Product][google.cloud.retail.v2alpha.Product].
+     *
      * If it is set, the product is not available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
      * after current timestamp plus
@@ -5892,6 +6155,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, it must be a non-negative value, and
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
      * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -5900,6 +6164,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
      * is left blank when retrieving the
      * [Product][google.cloud.retail.v2alpha.Product].
+     *
      * If it is set, the product is not available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
      * after current timestamp plus
@@ -5940,6 +6205,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, it must be a non-negative value, and
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
      * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -5948,6 +6214,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
      * is left blank when retrieving the
      * [Product][google.cloud.retail.v2alpha.Product].
+     *
      * If it is set, the product is not available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
      * after current timestamp plus
@@ -5975,6 +6242,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, it must be a non-negative value, and
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
      * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -5983,6 +6251,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
      * is left blank when retrieving the
      * [Product][google.cloud.retail.v2alpha.Product].
+     *
      * If it is set, the product is not available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
      * after current timestamp plus
@@ -6018,6 +6287,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]. In
      * general, we suggest the users to delete the stale products explicitly,
      * instead of using this field to determine staleness.
+     *
      * If it is set, it must be a non-negative value, and
      * [expire_time][google.cloud.retail.v2alpha.Product.expire_time] is set as
      * current timestamp plus [ttl][google.cloud.retail.v2alpha.Product.ttl].
@@ -6026,6 +6296,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * returned in the output and [ttl][google.cloud.retail.v2alpha.Product.ttl]
      * is left blank when retrieving the
      * [Product][google.cloud.retail.v2alpha.Product].
+     *
      * If it is set, the product is not available for
      * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search]
      * after current timestamp plus
@@ -6181,8 +6452,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * For example, this field is "id_1", if
      * [name][google.cloud.retail.v2alpha.Product.name] is
      * `projects/&#42;&#47;locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [id](https://support.google.com/merchants/answer/6324405). Schema.org
      * property [Product.sku](https://schema.org/sku).
@@ -6212,8 +6485,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * For example, this field is "id_1", if
      * [name][google.cloud.retail.v2alpha.Product.name] is
      * `projects/&#42;&#47;locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [id](https://support.google.com/merchants/answer/6324405). Schema.org
      * property [Product.sku](https://schema.org/sku).
@@ -6243,8 +6518,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * For example, this field is "id_1", if
      * [name][google.cloud.retail.v2alpha.Product.name] is
      * `projects/&#42;&#47;locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [id](https://support.google.com/merchants/answer/6324405). Schema.org
      * property [Product.sku](https://schema.org/sku).
@@ -6273,8 +6550,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * For example, this field is "id_1", if
      * [name][google.cloud.retail.v2alpha.Product.name] is
      * `projects/&#42;&#47;locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [id](https://support.google.com/merchants/answer/6324405). Schema.org
      * property [Product.sku](https://schema.org/sku).
@@ -6299,8 +6578,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * For example, this field is "id_1", if
      * [name][google.cloud.retail.v2alpha.Product.name] is
      * `projects/&#42;&#47;locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [id](https://support.google.com/merchants/answer/6324405). Schema.org
      * property [Product.sku](https://schema.org/sku).
@@ -6440,15 +6721,18 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Variant group identifier. Must be an
      * [id][google.cloud.retail.v2alpha.Product.id], with the same parent branch
      * with this product. Otherwise, an error is thrown.
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s, this field can only be
      * empty or set to the same value as
      * [id][google.cloud.retail.v2alpha.Product.id].
+     *
      * For VARIANT [Product][google.cloud.retail.v2alpha.Product]s, this field
      * cannot be empty. A maximum of 2,000 products are allowed to share the same
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [item_group_id](https://support.google.com/merchants/answer/6324507).
      * Schema.org property
@@ -6477,15 +6761,18 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Variant group identifier. Must be an
      * [id][google.cloud.retail.v2alpha.Product.id], with the same parent branch
      * with this product. Otherwise, an error is thrown.
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s, this field can only be
      * empty or set to the same value as
      * [id][google.cloud.retail.v2alpha.Product.id].
+     *
      * For VARIANT [Product][google.cloud.retail.v2alpha.Product]s, this field
      * cannot be empty. A maximum of 2,000 products are allowed to share the same
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [item_group_id](https://support.google.com/merchants/answer/6324507).
      * Schema.org property
@@ -6514,15 +6801,18 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Variant group identifier. Must be an
      * [id][google.cloud.retail.v2alpha.Product.id], with the same parent branch
      * with this product. Otherwise, an error is thrown.
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s, this field can only be
      * empty or set to the same value as
      * [id][google.cloud.retail.v2alpha.Product.id].
+     *
      * For VARIANT [Product][google.cloud.retail.v2alpha.Product]s, this field
      * cannot be empty. A maximum of 2,000 products are allowed to share the same
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [item_group_id](https://support.google.com/merchants/answer/6324507).
      * Schema.org property
@@ -6550,15 +6840,18 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Variant group identifier. Must be an
      * [id][google.cloud.retail.v2alpha.Product.id], with the same parent branch
      * with this product. Otherwise, an error is thrown.
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s, this field can only be
      * empty or set to the same value as
      * [id][google.cloud.retail.v2alpha.Product.id].
+     *
      * For VARIANT [Product][google.cloud.retail.v2alpha.Product]s, this field
      * cannot be empty. A maximum of 2,000 products are allowed to share the same
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [item_group_id](https://support.google.com/merchants/answer/6324507).
      * Schema.org property
@@ -6582,15 +6875,18 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Variant group identifier. Must be an
      * [id][google.cloud.retail.v2alpha.Product.id], with the same parent branch
      * with this product. Otherwise, an error is thrown.
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s, this field can only be
      * empty or set to the same value as
      * [id][google.cloud.retail.v2alpha.Product.id].
+     *
      * For VARIANT [Product][google.cloud.retail.v2alpha.Product]s, this field
      * cannot be empty. A maximum of 2,000 products are allowed to share the same
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [item_group_id](https://support.google.com/merchants/answer/6324507).
      * Schema.org property
@@ -6613,14 +6909,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private com.google.protobuf.LazyStringList collectionMemberIds_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList collectionMemberIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureCollectionMemberIdsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!collectionMemberIds_.isModifiable()) {
         collectionMemberIds_ = new com.google.protobuf.LazyStringArrayList(collectionMemberIds_);
-        bitField0_ |= 0x00000040;
       }
+      bitField0_ |= 0x00000040;
     }
     /**
      *
@@ -6629,6 +6925,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
      * when [type][google.cloud.retail.v2alpha.Product.type] is
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+     *
      * Non-existent product ids are allowed.
      * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
      * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -6643,7 +6940,8 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the collectionMemberIds.
      */
     public com.google.protobuf.ProtocolStringList getCollectionMemberIdsList() {
-      return collectionMemberIds_.getUnmodifiableView();
+      collectionMemberIds_.makeImmutable();
+      return collectionMemberIds_;
     }
     /**
      *
@@ -6652,6 +6950,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
      * when [type][google.cloud.retail.v2alpha.Product.type] is
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+     *
      * Non-existent product ids are allowed.
      * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
      * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -6675,6 +6974,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
      * when [type][google.cloud.retail.v2alpha.Product.type] is
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+     *
      * Non-existent product ids are allowed.
      * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
      * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -6699,6 +6999,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
      * when [type][google.cloud.retail.v2alpha.Product.type] is
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+     *
      * Non-existent product ids are allowed.
      * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
      * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -6723,6 +7024,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
      * when [type][google.cloud.retail.v2alpha.Product.type] is
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+     *
      * Non-existent product ids are allowed.
      * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
      * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -6744,6 +7046,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureCollectionMemberIdsIsMutable();
       collectionMemberIds_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -6754,6 +7057,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
      * when [type][google.cloud.retail.v2alpha.Product.type] is
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+     *
      * Non-existent product ids are allowed.
      * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
      * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -6774,6 +7078,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureCollectionMemberIdsIsMutable();
       collectionMemberIds_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -6784,6 +7089,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
      * when [type][google.cloud.retail.v2alpha.Product.type] is
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+     *
      * Non-existent product ids are allowed.
      * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
      * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -6801,6 +7107,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllCollectionMemberIds(java.lang.Iterable<java.lang.String> values) {
       ensureCollectionMemberIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, collectionMemberIds_);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -6811,6 +7118,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
      * when [type][google.cloud.retail.v2alpha.Product.type] is
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+     *
      * Non-existent product ids are allowed.
      * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
      * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -6825,8 +7133,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearCollectionMemberIds() {
-      collectionMemberIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      collectionMemberIds_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000040);
+      ;
       onChanged();
       return this;
     }
@@ -6837,6 +7146,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The [id][google.cloud.retail.v2alpha.Product.id] of the collection members
      * when [type][google.cloud.retail.v2alpha.Product.type] is
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION].
+     *
      * Non-existent product ids are allowed.
      * The [type][google.cloud.retail.v2alpha.Product.type] of the members must be
      * either [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] or
@@ -6858,6 +7168,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureCollectionMemberIdsIsMutable();
       collectionMemberIds_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -6868,10 +7179,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The Global Trade Item Number (GTIN) of the product.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [gtin](https://support.google.com/merchants/answer/6324461).
      * Schema.org property
@@ -6880,6 +7194,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Product.gtin12](https://schema.org/gtin12),
      * [Product.gtin13](https://schema.org/gtin13), or
      * [Product.gtin14](https://schema.org/gtin14).
+     *
      * If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
      * </pre>
      *
@@ -6903,10 +7218,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The Global Trade Item Number (GTIN) of the product.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [gtin](https://support.google.com/merchants/answer/6324461).
      * Schema.org property
@@ -6915,6 +7233,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Product.gtin12](https://schema.org/gtin12),
      * [Product.gtin13](https://schema.org/gtin13), or
      * [Product.gtin14](https://schema.org/gtin14).
+     *
      * If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
      * </pre>
      *
@@ -6938,10 +7257,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The Global Trade Item Number (GTIN) of the product.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [gtin](https://support.google.com/merchants/answer/6324461).
      * Schema.org property
@@ -6950,6 +7272,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Product.gtin12](https://schema.org/gtin12),
      * [Product.gtin13](https://schema.org/gtin13), or
      * [Product.gtin14](https://schema.org/gtin14).
+     *
      * If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
      * </pre>
      *
@@ -6972,10 +7295,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The Global Trade Item Number (GTIN) of the product.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [gtin](https://support.google.com/merchants/answer/6324461).
      * Schema.org property
@@ -6984,6 +7310,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Product.gtin12](https://schema.org/gtin12),
      * [Product.gtin13](https://schema.org/gtin13), or
      * [Product.gtin14](https://schema.org/gtin14).
+     *
      * If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
      * </pre>
      *
@@ -7002,10 +7329,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The Global Trade Item Number (GTIN) of the product.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 128
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * This field must be a Unigram. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [gtin](https://support.google.com/merchants/answer/6324461).
      * Schema.org property
@@ -7014,6 +7344,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * [Product.gtin12](https://schema.org/gtin12),
      * [Product.gtin13](https://schema.org/gtin13), or
      * [Product.gtin14](https://schema.org/gtin14).
+     *
      * If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
      * </pre>
      *
@@ -7033,14 +7364,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private com.google.protobuf.LazyStringList categories_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList categories_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureCategoriesIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!categories_.isModifiable()) {
         categories_ = new com.google.protobuf.LazyStringArrayList(categories_);
-        bitField0_ |= 0x00000100;
       }
+      bitField0_ |= 0x00000100;
     }
     /**
      *
@@ -7049,28 +7380,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Product categories. This field is repeated for supporting one product
      * belonging to several parallel categories. Strongly recommended using the
      * full path for better search / recommendation quality.
+     *
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * For example, if a shoes product belongs to both
      * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
      * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
      * represented as:
+     *
      *      "categories": [
      *        "Shoes &amp; Accessories &gt; Shoes",
      *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
      *      ]
+     *
      * Must be set for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] otherwise an
      * INVALID_ARGUMENT error is returned.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
      * allowed. Each value must be a UTF-8 encoded string with a length limit of
      * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [google_product_category][mc_google_product_category]. Schema.org property
      * [Product.category] (https://schema.org/category).
+     *
      * [mc_google_product_category]:
      * https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -7080,7 +7419,8 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the categories.
      */
     public com.google.protobuf.ProtocolStringList getCategoriesList() {
-      return categories_.getUnmodifiableView();
+      categories_.makeImmutable();
+      return categories_;
     }
     /**
      *
@@ -7089,28 +7429,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Product categories. This field is repeated for supporting one product
      * belonging to several parallel categories. Strongly recommended using the
      * full path for better search / recommendation quality.
+     *
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * For example, if a shoes product belongs to both
      * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
      * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
      * represented as:
+     *
      *      "categories": [
      *        "Shoes &amp; Accessories &gt; Shoes",
      *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
      *      ]
+     *
      * Must be set for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] otherwise an
      * INVALID_ARGUMENT error is returned.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
      * allowed. Each value must be a UTF-8 encoded string with a length limit of
      * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [google_product_category][mc_google_product_category]. Schema.org property
      * [Product.category] (https://schema.org/category).
+     *
      * [mc_google_product_category]:
      * https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -7129,28 +7477,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Product categories. This field is repeated for supporting one product
      * belonging to several parallel categories. Strongly recommended using the
      * full path for better search / recommendation quality.
+     *
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * For example, if a shoes product belongs to both
      * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
      * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
      * represented as:
+     *
      *      "categories": [
      *        "Shoes &amp; Accessories &gt; Shoes",
      *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
      *      ]
+     *
      * Must be set for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] otherwise an
      * INVALID_ARGUMENT error is returned.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
      * allowed. Each value must be a UTF-8 encoded string with a length limit of
      * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [google_product_category][mc_google_product_category]. Schema.org property
      * [Product.category] (https://schema.org/category).
+     *
      * [mc_google_product_category]:
      * https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -7170,28 +7526,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Product categories. This field is repeated for supporting one product
      * belonging to several parallel categories. Strongly recommended using the
      * full path for better search / recommendation quality.
+     *
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * For example, if a shoes product belongs to both
      * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
      * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
      * represented as:
+     *
      *      "categories": [
      *        "Shoes &amp; Accessories &gt; Shoes",
      *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
      *      ]
+     *
      * Must be set for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] otherwise an
      * INVALID_ARGUMENT error is returned.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
      * allowed. Each value must be a UTF-8 encoded string with a length limit of
      * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [google_product_category][mc_google_product_category]. Schema.org property
      * [Product.category] (https://schema.org/category).
+     *
      * [mc_google_product_category]:
      * https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -7211,28 +7575,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Product categories. This field is repeated for supporting one product
      * belonging to several parallel categories. Strongly recommended using the
      * full path for better search / recommendation quality.
+     *
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * For example, if a shoes product belongs to both
      * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
      * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
      * represented as:
+     *
      *      "categories": [
      *        "Shoes &amp; Accessories &gt; Shoes",
      *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
      *      ]
+     *
      * Must be set for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] otherwise an
      * INVALID_ARGUMENT error is returned.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
      * allowed. Each value must be a UTF-8 encoded string with a length limit of
      * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [google_product_category][mc_google_product_category]. Schema.org property
      * [Product.category] (https://schema.org/category).
+     *
      * [mc_google_product_category]:
      * https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -7249,6 +7621,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureCategoriesIsMutable();
       categories_.set(index, value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -7259,28 +7632,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Product categories. This field is repeated for supporting one product
      * belonging to several parallel categories. Strongly recommended using the
      * full path for better search / recommendation quality.
+     *
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * For example, if a shoes product belongs to both
      * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
      * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
      * represented as:
+     *
      *      "categories": [
      *        "Shoes &amp; Accessories &gt; Shoes",
      *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
      *      ]
+     *
      * Must be set for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] otherwise an
      * INVALID_ARGUMENT error is returned.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
      * allowed. Each value must be a UTF-8 encoded string with a length limit of
      * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [google_product_category][mc_google_product_category]. Schema.org property
      * [Product.category] (https://schema.org/category).
+     *
      * [mc_google_product_category]:
      * https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -7296,6 +7677,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureCategoriesIsMutable();
       categories_.add(value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -7306,28 +7688,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Product categories. This field is repeated for supporting one product
      * belonging to several parallel categories. Strongly recommended using the
      * full path for better search / recommendation quality.
+     *
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * For example, if a shoes product belongs to both
      * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
      * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
      * represented as:
+     *
      *      "categories": [
      *        "Shoes &amp; Accessories &gt; Shoes",
      *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
      *      ]
+     *
      * Must be set for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] otherwise an
      * INVALID_ARGUMENT error is returned.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
      * allowed. Each value must be a UTF-8 encoded string with a length limit of
      * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [google_product_category][mc_google_product_category]. Schema.org property
      * [Product.category] (https://schema.org/category).
+     *
      * [mc_google_product_category]:
      * https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -7340,6 +7730,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllCategories(java.lang.Iterable<java.lang.String> values) {
       ensureCategoriesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, categories_);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -7350,28 +7741,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Product categories. This field is repeated for supporting one product
      * belonging to several parallel categories. Strongly recommended using the
      * full path for better search / recommendation quality.
+     *
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * For example, if a shoes product belongs to both
      * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
      * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
      * represented as:
+     *
      *      "categories": [
      *        "Shoes &amp; Accessories &gt; Shoes",
      *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
      *      ]
+     *
      * Must be set for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] otherwise an
      * INVALID_ARGUMENT error is returned.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
      * allowed. Each value must be a UTF-8 encoded string with a length limit of
      * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [google_product_category][mc_google_product_category]. Schema.org property
      * [Product.category] (https://schema.org/category).
+     *
      * [mc_google_product_category]:
      * https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -7381,8 +7780,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearCategories() {
-      categories_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      categories_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000100);
+      ;
       onChanged();
       return this;
     }
@@ -7393,28 +7793,36 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Product categories. This field is repeated for supporting one product
      * belonging to several parallel categories. Strongly recommended using the
      * full path for better search / recommendation quality.
+     *
+     *
      * To represent full path of category, use '&gt;' sign to separate different
      * hierarchies. If '&gt;' is part of the category name, replace it with
      * other character(s).
+     *
      * For example, if a shoes product belongs to both
      * ["Shoes &amp; Accessories" -&gt; "Shoes"] and
      * ["Sports &amp; Fitness" -&gt; "Athletic Clothing" -&gt; "Shoes"], it could be
      * represented as:
+     *
      *      "categories": [
      *        "Shoes &amp; Accessories &gt; Shoes",
      *        "Sports &amp; Fitness &gt; Athletic Clothing &gt; Shoes"
      *      ]
+     *
      * Must be set for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product] otherwise an
      * INVALID_ARGUMENT error is returned.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Empty values are not
      * allowed. Each value must be a UTF-8 encoded string with a length limit of
      * 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [google_product_category][mc_google_product_category]. Schema.org property
      * [Product.category] (https://schema.org/category).
+     *
      * [mc_google_product_category]:
      * https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -7431,6 +7839,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureCategoriesIsMutable();
       categories_.add(value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -7441,8 +7850,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. Product title.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [title](https://support.google.com/merchants/answer/6324415). Schema.org
      * property [Product.name](https://schema.org/name).
@@ -7468,8 +7879,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. Product title.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [title](https://support.google.com/merchants/answer/6324415). Schema.org
      * property [Product.name](https://schema.org/name).
@@ -7495,8 +7908,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. Product title.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [title](https://support.google.com/merchants/answer/6324415). Schema.org
      * property [Product.name](https://schema.org/name).
@@ -7521,8 +7936,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. Product title.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [title](https://support.google.com/merchants/answer/6324415). Schema.org
      * property [Product.name](https://schema.org/name).
@@ -7543,8 +7960,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Required. Product title.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 1,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [title](https://support.google.com/merchants/answer/6324415). Schema.org
      * property [Product.name](https://schema.org/name).
@@ -7566,23 +7985,25 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private com.google.protobuf.LazyStringList brands_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList brands_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureBrandsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!brands_.isModifiable()) {
         brands_ = new com.google.protobuf.LazyStringArrayList(brands_);
-        bitField0_ |= 0x00000400;
       }
+      bitField0_ |= 0x00000400;
     }
     /**
      *
      *
      * <pre>
      * The brands of the product.
+     *
      * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
      * string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
      * property [Product.brand](https://schema.org/brand).
@@ -7593,16 +8014,19 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the brands.
      */
     public com.google.protobuf.ProtocolStringList getBrandsList() {
-      return brands_.getUnmodifiableView();
+      brands_.makeImmutable();
+      return brands_;
     }
     /**
      *
      *
      * <pre>
      * The brands of the product.
+     *
      * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
      * string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
      * property [Product.brand](https://schema.org/brand).
@@ -7620,9 +8044,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The brands of the product.
+     *
      * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
      * string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
      * property [Product.brand](https://schema.org/brand).
@@ -7641,9 +8067,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The brands of the product.
+     *
      * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
      * string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
      * property [Product.brand](https://schema.org/brand).
@@ -7662,9 +8090,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The brands of the product.
+     *
      * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
      * string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
      * property [Product.brand](https://schema.org/brand).
@@ -7682,6 +8112,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureBrandsIsMutable();
       brands_.set(index, value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -7690,9 +8121,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The brands of the product.
+     *
      * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
      * string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
      * property [Product.brand](https://schema.org/brand).
@@ -7709,6 +8142,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureBrandsIsMutable();
       brands_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -7717,9 +8151,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The brands of the product.
+     *
      * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
      * string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
      * property [Product.brand](https://schema.org/brand).
@@ -7733,6 +8169,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllBrands(java.lang.Iterable<java.lang.String> values) {
       ensureBrandsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, brands_);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -7741,9 +8178,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The brands of the product.
+     *
      * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
      * string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
      * property [Product.brand](https://schema.org/brand).
@@ -7754,8 +8193,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearBrands() {
-      brands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      brands_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000400);
+      ;
       onChanged();
       return this;
     }
@@ -7764,9 +8204,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The brands of the product.
+     *
      * A maximum of 30 brands are allowed. Each brand must be a UTF-8 encoded
      * string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [brand](https://support.google.com/merchants/answer/6324351). Schema.org
      * property [Product.brand](https://schema.org/brand).
@@ -7784,6 +8226,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureBrandsIsMutable();
       brands_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -7794,8 +8237,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product description.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [description](https://support.google.com/merchants/answer/6324468).
      * Schema.org property [Product.description](https://schema.org/description).
@@ -7821,8 +8266,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product description.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [description](https://support.google.com/merchants/answer/6324468).
      * Schema.org property [Product.description](https://schema.org/description).
@@ -7848,8 +8295,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product description.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [description](https://support.google.com/merchants/answer/6324468).
      * Schema.org property [Product.description](https://schema.org/description).
@@ -7874,8 +8323,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product description.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [description](https://support.google.com/merchants/answer/6324468).
      * Schema.org property [Product.description](https://schema.org/description).
@@ -7896,8 +8347,10 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product description.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [description](https://support.google.com/merchants/answer/6324468).
      * Schema.org property [Product.description](https://schema.org/description).
@@ -7926,12 +8379,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Language of the title/description and other string attributes. Use language
      * tags defined by [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).
+     *
      * For product prediction, this field is ignored and the model automatically
      * detects the text language. The
      * [Product][google.cloud.retail.v2alpha.Product] can include text in
      * different languages, but duplicating
      * [Product][google.cloud.retail.v2alpha.Product]s to provide text in multiple
      * languages can result in degraded model performance.
+     *
      * For product search this field is in use. It defaults to "en-US" if unset.
      * </pre>
      *
@@ -7956,12 +8411,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Language of the title/description and other string attributes. Use language
      * tags defined by [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).
+     *
      * For product prediction, this field is ignored and the model automatically
      * detects the text language. The
      * [Product][google.cloud.retail.v2alpha.Product] can include text in
      * different languages, but duplicating
      * [Product][google.cloud.retail.v2alpha.Product]s to provide text in multiple
      * languages can result in degraded model performance.
+     *
      * For product search this field is in use. It defaults to "en-US" if unset.
      * </pre>
      *
@@ -7986,12 +8443,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Language of the title/description and other string attributes. Use language
      * tags defined by [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).
+     *
      * For product prediction, this field is ignored and the model automatically
      * detects the text language. The
      * [Product][google.cloud.retail.v2alpha.Product] can include text in
      * different languages, but duplicating
      * [Product][google.cloud.retail.v2alpha.Product]s to provide text in multiple
      * languages can result in degraded model performance.
+     *
      * For product search this field is in use. It defaults to "en-US" if unset.
      * </pre>
      *
@@ -8015,12 +8474,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Language of the title/description and other string attributes. Use language
      * tags defined by [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).
+     *
      * For product prediction, this field is ignored and the model automatically
      * detects the text language. The
      * [Product][google.cloud.retail.v2alpha.Product] can include text in
      * different languages, but duplicating
      * [Product][google.cloud.retail.v2alpha.Product]s to provide text in multiple
      * languages can result in degraded model performance.
+     *
      * For product search this field is in use. It defaults to "en-US" if unset.
      * </pre>
      *
@@ -8040,12 +8501,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Language of the title/description and other string attributes. Use language
      * tags defined by [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).
+     *
      * For product prediction, this field is ignored and the model automatically
      * detects the text language. The
      * [Product][google.cloud.retail.v2alpha.Product] can include text in
      * different languages, but duplicating
      * [Product][google.cloud.retail.v2alpha.Product]s to provide text in multiple
      * languages can result in degraded model performance.
+     *
      * For product search this field is in use. It defaults to "en-US" if unset.
      * </pre>
      *
@@ -8105,16 +8568,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for products, this could include the store name, vendor, style, color, etc.
      * These are very strong signals for recommendation model, thus we highly
      * recommend providing the attributes here.
+     *
      * Features that can take on one of a limited number of possible values. Two
      * types of features can be set are:
+     *
      * Textual features. some examples would be the brand/maker of a product, or
      * country of a customer. Numerical features. Some examples would be the
      * height/weight of a product, or age of a customer.
+     *
      * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
      * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
      * }`.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * Max entries count: 200.
      * * The key must be a UTF-8 encoded string with a length limit of 128
      *   characters.
@@ -8151,16 +8619,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for products, this could include the store name, vendor, style, color, etc.
      * These are very strong signals for recommendation model, thus we highly
      * recommend providing the attributes here.
+     *
      * Features that can take on one of a limited number of possible values. Two
      * types of features can be set are:
+     *
      * Textual features. some examples would be the brand/maker of a product, or
      * country of a customer. Numerical features. Some examples would be the
      * height/weight of a product, or age of a customer.
+     *
      * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
      * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
      * }`.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * Max entries count: 200.
      * * The key must be a UTF-8 encoded string with a length limit of 128
      *   characters.
@@ -8188,16 +8661,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for products, this could include the store name, vendor, style, color, etc.
      * These are very strong signals for recommendation model, thus we highly
      * recommend providing the attributes here.
+     *
      * Features that can take on one of a limited number of possible values. Two
      * types of features can be set are:
+     *
      * Textual features. some examples would be the brand/maker of a product, or
      * country of a customer. Numerical features. Some examples would be the
      * height/weight of a product, or age of a customer.
+     *
      * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
      * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
      * }`.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * Max entries count: 200.
      * * The key must be a UTF-8 encoded string with a length limit of 128
      *   characters.
@@ -8232,16 +8710,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for products, this could include the store name, vendor, style, color, etc.
      * These are very strong signals for recommendation model, thus we highly
      * recommend providing the attributes here.
+     *
      * Features that can take on one of a limited number of possible values. Two
      * types of features can be set are:
+     *
      * Textual features. some examples would be the brand/maker of a product, or
      * country of a customer. Numerical features. Some examples would be the
      * height/weight of a product, or age of a customer.
+     *
      * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
      * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
      * }`.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * Max entries count: 200.
      * * The key must be a UTF-8 encoded string with a length limit of 128
      *   characters.
@@ -8283,16 +8766,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for products, this could include the store name, vendor, style, color, etc.
      * These are very strong signals for recommendation model, thus we highly
      * recommend providing the attributes here.
+     *
      * Features that can take on one of a limited number of possible values. Two
      * types of features can be set are:
+     *
      * Textual features. some examples would be the brand/maker of a product, or
      * country of a customer. Numerical features. Some examples would be the
      * height/weight of a product, or age of a customer.
+     *
      * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
      * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
      * }`.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * Max entries count: 200.
      * * The key must be a UTF-8 encoded string with a length limit of 128
      *   characters.
@@ -8329,16 +8817,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for products, this could include the store name, vendor, style, color, etc.
      * These are very strong signals for recommendation model, thus we highly
      * recommend providing the attributes here.
+     *
      * Features that can take on one of a limited number of possible values. Two
      * types of features can be set are:
+     *
      * Textual features. some examples would be the brand/maker of a product, or
      * country of a customer. Numerical features. Some examples would be the
      * height/weight of a product, or age of a customer.
+     *
      * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
      * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
      * }`.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * Max entries count: 200.
      * * The key must be a UTF-8 encoded string with a length limit of 128
      *   characters.
@@ -8373,16 +8866,21 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for products, this could include the store name, vendor, style, color, etc.
      * These are very strong signals for recommendation model, thus we highly
      * recommend providing the attributes here.
+     *
      * Features that can take on one of a limited number of possible values. Two
      * types of features can be set are:
+     *
      * Textual features. some examples would be the brand/maker of a product, or
      * country of a customer. Numerical features. Some examples would be the
      * height/weight of a product, or age of a customer.
+     *
      * For example: `{ "vendor": {"text": ["vendor123", "vendor456"]},
      * "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]}
      * }`.
+     *
      * This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
      * error is returned:
+     *
      * * Max entries count: 200.
      * * The key must be a UTF-8 encoded string with a length limit of 128
      *   characters.
@@ -8404,27 +8902,30 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private com.google.protobuf.LazyStringList tags_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureTagsIsMutable() {
-      if (!((bitField0_ & 0x00004000) != 0)) {
+      if (!tags_.isModifiable()) {
         tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-        bitField0_ |= 0x00004000;
       }
+      bitField0_ |= 0x00004000;
     }
     /**
      *
      *
      * <pre>
      * Custom tags associated with the product.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
      * encoded string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * This tag can be used for filtering recommendation results by passing the
      * tag as part of the
      * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+     *
      * Corresponding properties: Google Merchant Center property
      * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
      * </pre>
@@ -8434,20 +8935,24 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList getTagsList() {
-      return tags_.getUnmodifiableView();
+      tags_.makeImmutable();
+      return tags_;
     }
     /**
      *
      *
      * <pre>
      * Custom tags associated with the product.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
      * encoded string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * This tag can be used for filtering recommendation results by passing the
      * tag as part of the
      * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+     *
      * Corresponding properties: Google Merchant Center property
      * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
      * </pre>
@@ -8464,13 +8969,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Custom tags associated with the product.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
      * encoded string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * This tag can be used for filtering recommendation results by passing the
      * tag as part of the
      * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+     *
      * Corresponding properties: Google Merchant Center property
      * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
      * </pre>
@@ -8488,13 +8996,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Custom tags associated with the product.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
      * encoded string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * This tag can be used for filtering recommendation results by passing the
      * tag as part of the
      * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+     *
      * Corresponding properties: Google Merchant Center property
      * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
      * </pre>
@@ -8512,13 +9023,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Custom tags associated with the product.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
      * encoded string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * This tag can be used for filtering recommendation results by passing the
      * tag as part of the
      * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+     *
      * Corresponding properties: Google Merchant Center property
      * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
      * </pre>
@@ -8535,6 +9049,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureTagsIsMutable();
       tags_.set(index, value);
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -8543,13 +9058,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Custom tags associated with the product.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
      * encoded string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * This tag can be used for filtering recommendation results by passing the
      * tag as part of the
      * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+     *
      * Corresponding properties: Google Merchant Center property
      * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
      * </pre>
@@ -8565,6 +9083,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureTagsIsMutable();
       tags_.add(value);
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -8573,13 +9092,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Custom tags associated with the product.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
      * encoded string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * This tag can be used for filtering recommendation results by passing the
      * tag as part of the
      * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+     *
      * Corresponding properties: Google Merchant Center property
      * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
      * </pre>
@@ -8592,6 +9114,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllTags(java.lang.Iterable<java.lang.String> values) {
       ensureTagsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, tags_);
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -8600,13 +9123,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Custom tags associated with the product.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
      * encoded string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * This tag can be used for filtering recommendation results by passing the
      * tag as part of the
      * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+     *
      * Corresponding properties: Google Merchant Center property
      * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
      * </pre>
@@ -8616,8 +9142,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearTags() {
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      tags_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00004000);
+      ;
       onChanged();
       return this;
     }
@@ -8626,13 +9153,16 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Custom tags associated with the product.
+     *
      * At most 250 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. This value must be a UTF-8
      * encoded string with a length limit of 1,000 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * This tag can be used for filtering recommendation results by passing the
      * tag as part of the
      * [PredictRequest.filter][google.cloud.retail.v2alpha.PredictRequest.filter].
+     *
      * Corresponding properties: Google Merchant Center property
      * [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
      * </pre>
@@ -8649,6 +9179,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureTagsIsMutable();
       tags_.add(value);
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -8664,6 +9195,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product price and cost information.
+     *
      * Corresponding properties: Google Merchant Center property
      * [price](https://support.google.com/merchants/answer/6324371).
      * </pre>
@@ -8680,6 +9212,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product price and cost information.
+     *
      * Corresponding properties: Google Merchant Center property
      * [price](https://support.google.com/merchants/answer/6324371).
      * </pre>
@@ -8702,6 +9235,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product price and cost information.
+     *
      * Corresponding properties: Google Merchant Center property
      * [price](https://support.google.com/merchants/answer/6324371).
      * </pre>
@@ -8726,6 +9260,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product price and cost information.
+     *
      * Corresponding properties: Google Merchant Center property
      * [price](https://support.google.com/merchants/answer/6324371).
      * </pre>
@@ -8747,6 +9282,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product price and cost information.
+     *
      * Corresponding properties: Google Merchant Center property
      * [price](https://support.google.com/merchants/answer/6324371).
      * </pre>
@@ -8774,6 +9310,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product price and cost information.
+     *
      * Corresponding properties: Google Merchant Center property
      * [price](https://support.google.com/merchants/answer/6324371).
      * </pre>
@@ -8795,6 +9332,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product price and cost information.
+     *
      * Corresponding properties: Google Merchant Center property
      * [price](https://support.google.com/merchants/answer/6324371).
      * </pre>
@@ -8811,6 +9349,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product price and cost information.
+     *
      * Corresponding properties: Google Merchant Center property
      * [price](https://support.google.com/merchants/answer/6324371).
      * </pre>
@@ -8831,6 +9370,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Product price and cost information.
+     *
      * Corresponding properties: Google Merchant Center property
      * [price](https://support.google.com/merchants/answer/6324371).
      * </pre>
@@ -9291,6 +9831,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The online availability of the
      * [Product][google.cloud.retail.v2alpha.Product]. Default to
      * [Availability.IN_STOCK][google.cloud.retail.v2alpha.Product.Availability.IN_STOCK].
+     *
      * Corresponding properties: Google Merchant Center property
      * [availability](https://support.google.com/merchants/answer/6324448).
      * Schema.org property [Offer.availability](https://schema.org/availability).
@@ -9311,6 +9852,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The online availability of the
      * [Product][google.cloud.retail.v2alpha.Product]. Default to
      * [Availability.IN_STOCK][google.cloud.retail.v2alpha.Product.Availability.IN_STOCK].
+     *
      * Corresponding properties: Google Merchant Center property
      * [availability](https://support.google.com/merchants/answer/6324448).
      * Schema.org property [Offer.availability](https://schema.org/availability).
@@ -9334,6 +9876,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The online availability of the
      * [Product][google.cloud.retail.v2alpha.Product]. Default to
      * [Availability.IN_STOCK][google.cloud.retail.v2alpha.Product.Availability.IN_STOCK].
+     *
      * Corresponding properties: Google Merchant Center property
      * [availability](https://support.google.com/merchants/answer/6324448).
      * Schema.org property [Offer.availability](https://schema.org/availability).
@@ -9358,6 +9901,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The online availability of the
      * [Product][google.cloud.retail.v2alpha.Product]. Default to
      * [Availability.IN_STOCK][google.cloud.retail.v2alpha.Product.Availability.IN_STOCK].
+     *
      * Corresponding properties: Google Merchant Center property
      * [availability](https://support.google.com/merchants/answer/6324448).
      * Schema.org property [Offer.availability](https://schema.org/availability).
@@ -9384,6 +9928,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * The online availability of the
      * [Product][google.cloud.retail.v2alpha.Product]. Default to
      * [Availability.IN_STOCK][google.cloud.retail.v2alpha.Product.Availability.IN_STOCK].
+     *
      * Corresponding properties: Google Merchant Center property
      * [availability](https://support.google.com/merchants/answer/6324448).
      * Schema.org property [Offer.availability](https://schema.org/availability).
@@ -9607,6 +10152,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9628,6 +10174,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9648,6 +10195,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9668,6 +10216,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9695,6 +10244,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9719,6 +10269,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9745,6 +10296,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9772,6 +10324,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9796,6 +10349,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9820,6 +10374,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9844,6 +10399,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9867,6 +10423,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9890,6 +10447,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9907,6 +10465,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9928,6 +10487,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9949,6 +10509,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9966,6 +10527,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -9984,6 +10546,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Fulfillment information, such as the store IDs for in-store pickup or
      * region IDs for different shipping methods.
+     *
      * All the elements must have distinct
      * [FulfillmentInfo.type][google.cloud.retail.v2alpha.FulfillmentInfo.type].
      * Otherwise, an INVALID_ARGUMENT error is returned.
@@ -10022,10 +10585,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Canonical URL directly linking to the product detail page.
+     *
      * It is strongly recommended to provide a valid uri for the product,
      * otherwise the service performance could be significantly degraded.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [link](https://support.google.com/merchants/answer/6324416). Schema.org
      * property [Offer.url](https://schema.org/url).
@@ -10051,10 +10617,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Canonical URL directly linking to the product detail page.
+     *
      * It is strongly recommended to provide a valid uri for the product,
      * otherwise the service performance could be significantly degraded.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [link](https://support.google.com/merchants/answer/6324416). Schema.org
      * property [Offer.url](https://schema.org/url).
@@ -10080,10 +10649,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Canonical URL directly linking to the product detail page.
+     *
      * It is strongly recommended to provide a valid uri for the product,
      * otherwise the service performance could be significantly degraded.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [link](https://support.google.com/merchants/answer/6324416). Schema.org
      * property [Offer.url](https://schema.org/url).
@@ -10108,10 +10680,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Canonical URL directly linking to the product detail page.
+     *
      * It is strongly recommended to provide a valid uri for the product,
      * otherwise the service performance could be significantly degraded.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [link](https://support.google.com/merchants/answer/6324416). Schema.org
      * property [Offer.url](https://schema.org/url).
@@ -10132,10 +10707,13 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Canonical URL directly linking to the product detail page.
+     *
      * It is strongly recommended to provide a valid uri for the product,
      * otherwise the service performance could be significantly degraded.
+     *
      * This field must be a UTF-8 encoded string with a length limit of 5,000
      * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [link](https://support.google.com/merchants/answer/6324416). Schema.org
      * property [Offer.url](https://schema.org/url).
@@ -10179,7 +10757,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10200,7 +10780,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10221,7 +10803,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10242,7 +10826,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10269,7 +10855,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10294,7 +10882,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10321,7 +10911,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10348,7 +10940,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10372,7 +10966,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10397,7 +10993,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10422,7 +11020,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10446,7 +11046,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10470,7 +11072,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10487,7 +11091,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10508,7 +11114,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10530,7 +11138,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10548,7 +11158,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10566,7 +11178,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Product images for the product. We highly recommend putting the main
      * image first.
+     *
      * A maximum of 300 images are allowed.
+     *
      * Corresponding properties: Google Merchant Center property
      * [image_link](https://support.google.com/merchants/answer/6324350).
      * Schema.org property [Product.image](https://schema.org/image).
@@ -10798,6 +11412,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The color of the product.
+     *
      * Corresponding properties: Google Merchant Center property
      * [color](https://support.google.com/merchants/answer/6324487). Schema.org
      * property [Product.color](https://schema.org/color).
@@ -10815,6 +11430,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The color of the product.
+     *
      * Corresponding properties: Google Merchant Center property
      * [color](https://support.google.com/merchants/answer/6324487). Schema.org
      * property [Product.color](https://schema.org/color).
@@ -10838,6 +11454,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The color of the product.
+     *
      * Corresponding properties: Google Merchant Center property
      * [color](https://support.google.com/merchants/answer/6324487). Schema.org
      * property [Product.color](https://schema.org/color).
@@ -10863,6 +11480,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The color of the product.
+     *
      * Corresponding properties: Google Merchant Center property
      * [color](https://support.google.com/merchants/answer/6324487). Schema.org
      * property [Product.color](https://schema.org/color).
@@ -10885,6 +11503,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The color of the product.
+     *
      * Corresponding properties: Google Merchant Center property
      * [color](https://support.google.com/merchants/answer/6324487). Schema.org
      * property [Product.color](https://schema.org/color).
@@ -10913,6 +11532,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The color of the product.
+     *
      * Corresponding properties: Google Merchant Center property
      * [color](https://support.google.com/merchants/answer/6324487). Schema.org
      * property [Product.color](https://schema.org/color).
@@ -10935,6 +11555,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The color of the product.
+     *
      * Corresponding properties: Google Merchant Center property
      * [color](https://support.google.com/merchants/answer/6324487). Schema.org
      * property [Product.color](https://schema.org/color).
@@ -10952,6 +11573,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The color of the product.
+     *
      * Corresponding properties: Google Merchant Center property
      * [color](https://support.google.com/merchants/answer/6324487). Schema.org
      * property [Product.color](https://schema.org/color).
@@ -10973,6 +11595,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The color of the product.
+     *
      * Corresponding properties: Google Merchant Center property
      * [color](https://support.google.com/merchants/answer/6324487). Schema.org
      * property [Product.color](https://schema.org/color).
@@ -10997,14 +11620,14 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       return colorInfoBuilder_;
     }
 
-    private com.google.protobuf.LazyStringList sizes_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList sizes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureSizesIsMutable() {
-      if (!((bitField0_ & 0x02000000) != 0)) {
+      if (!sizes_.isModifiable()) {
         sizes_ = new com.google.protobuf.LazyStringArrayList(sizes_);
-        bitField0_ |= 0x02000000;
       }
+      bitField0_ |= 0x02000000;
     }
     /**
      *
@@ -11012,14 +11635,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The size of the product. To represent different size systems or size types,
      * consider using this format: [[[size_system:]size_type:]size_value].
+     *
      * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
      * size type; "M" represents size value. In "GIRLS:27", size system is empty;
      * "GIRLS" represents size type; "27" represents size value. In "32 inches",
      * both size system and size type are empty, while size value is "32 inches".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [size](https://support.google.com/merchants/answer/6324492),
      * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -11032,7 +11658,8 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the sizes.
      */
     public com.google.protobuf.ProtocolStringList getSizesList() {
-      return sizes_.getUnmodifiableView();
+      sizes_.makeImmutable();
+      return sizes_;
     }
     /**
      *
@@ -11040,14 +11667,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The size of the product. To represent different size systems or size types,
      * consider using this format: [[[size_system:]size_type:]size_value].
+     *
      * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
      * size type; "M" represents size value. In "GIRLS:27", size system is empty;
      * "GIRLS" represents size type; "27" represents size value. In "32 inches",
      * both size system and size type are empty, while size value is "32 inches".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [size](https://support.google.com/merchants/answer/6324492),
      * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -11068,14 +11698,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The size of the product. To represent different size systems or size types,
      * consider using this format: [[[size_system:]size_type:]size_value].
+     *
      * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
      * size type; "M" represents size value. In "GIRLS:27", size system is empty;
      * "GIRLS" represents size type; "27" represents size value. In "32 inches",
      * both size system and size type are empty, while size value is "32 inches".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [size](https://support.google.com/merchants/answer/6324492),
      * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -11097,14 +11730,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The size of the product. To represent different size systems or size types,
      * consider using this format: [[[size_system:]size_type:]size_value].
+     *
      * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
      * size type; "M" represents size value. In "GIRLS:27", size system is empty;
      * "GIRLS" represents size type; "27" represents size value. In "32 inches",
      * both size system and size type are empty, while size value is "32 inches".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [size](https://support.google.com/merchants/answer/6324492),
      * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -11126,14 +11762,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The size of the product. To represent different size systems or size types,
      * consider using this format: [[[size_system:]size_type:]size_value].
+     *
      * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
      * size type; "M" represents size value. In "GIRLS:27", size system is empty;
      * "GIRLS" represents size type; "27" represents size value. In "32 inches",
      * both size system and size type are empty, while size value is "32 inches".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [size](https://support.google.com/merchants/answer/6324492),
      * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -11153,6 +11792,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureSizesIsMutable();
       sizes_.set(index, value);
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -11162,14 +11802,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The size of the product. To represent different size systems or size types,
      * consider using this format: [[[size_system:]size_type:]size_value].
+     *
      * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
      * size type; "M" represents size value. In "GIRLS:27", size system is empty;
      * "GIRLS" represents size type; "27" represents size value. In "32 inches",
      * both size system and size type are empty, while size value is "32 inches".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [size](https://support.google.com/merchants/answer/6324492),
      * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -11188,6 +11831,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureSizesIsMutable();
       sizes_.add(value);
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -11197,14 +11841,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The size of the product. To represent different size systems or size types,
      * consider using this format: [[[size_system:]size_type:]size_value].
+     *
      * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
      * size type; "M" represents size value. In "GIRLS:27", size system is empty;
      * "GIRLS" represents size type; "27" represents size value. In "32 inches",
      * both size system and size type are empty, while size value is "32 inches".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [size](https://support.google.com/merchants/answer/6324492),
      * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -11220,6 +11867,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllSizes(java.lang.Iterable<java.lang.String> values) {
       ensureSizesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, sizes_);
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -11229,14 +11877,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The size of the product. To represent different size systems or size types,
      * consider using this format: [[[size_system:]size_type:]size_value].
+     *
      * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
      * size type; "M" represents size value. In "GIRLS:27", size system is empty;
      * "GIRLS" represents size type; "27" represents size value. In "32 inches",
      * both size system and size type are empty, while size value is "32 inches".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [size](https://support.google.com/merchants/answer/6324492),
      * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -11249,8 +11900,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearSizes() {
-      sizes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      sizes_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x02000000);
+      ;
       onChanged();
       return this;
     }
@@ -11260,14 +11912,17 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The size of the product. To represent different size systems or size types,
      * consider using this format: [[[size_system:]size_type:]size_value].
+     *
      * For example, in "US:MENS:M", "US" represents size system; "MENS" represents
      * size type; "M" represents size value. In "GIRLS:27", size system is empty;
      * "GIRLS" represents size type; "27" represents size value. In "32 inches",
      * both size system and size type are empty, while size value is "32 inches".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [size](https://support.google.com/merchants/answer/6324492),
      * [size_type](https://support.google.com/merchants/answer/6324497), and
@@ -11287,27 +11942,30 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureSizesIsMutable();
       sizes_.add(value);
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList materials_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList materials_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureMaterialsIsMutable() {
-      if (!((bitField0_ & 0x04000000) != 0)) {
+      if (!materials_.isModifiable()) {
         materials_ = new com.google.protobuf.LazyStringArrayList(materials_);
-        bitField0_ |= 0x04000000;
       }
+      bitField0_ |= 0x04000000;
     }
     /**
      *
      *
      * <pre>
      * The material of the product. For example, "leather", "wooden".
+     *
      * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
      * string with a length limit of 200 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [material](https://support.google.com/merchants/answer/6324410). Schema.org
      * property [Product.material](https://schema.org/material).
@@ -11318,16 +11976,19 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the materials.
      */
     public com.google.protobuf.ProtocolStringList getMaterialsList() {
-      return materials_.getUnmodifiableView();
+      materials_.makeImmutable();
+      return materials_;
     }
     /**
      *
      *
      * <pre>
      * The material of the product. For example, "leather", "wooden".
+     *
      * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
      * string with a length limit of 200 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [material](https://support.google.com/merchants/answer/6324410). Schema.org
      * property [Product.material](https://schema.org/material).
@@ -11345,9 +12006,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The material of the product. For example, "leather", "wooden".
+     *
      * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
      * string with a length limit of 200 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [material](https://support.google.com/merchants/answer/6324410). Schema.org
      * property [Product.material](https://schema.org/material).
@@ -11366,9 +12029,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The material of the product. For example, "leather", "wooden".
+     *
      * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
      * string with a length limit of 200 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [material](https://support.google.com/merchants/answer/6324410). Schema.org
      * property [Product.material](https://schema.org/material).
@@ -11387,9 +12052,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The material of the product. For example, "leather", "wooden".
+     *
      * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
      * string with a length limit of 200 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [material](https://support.google.com/merchants/answer/6324410). Schema.org
      * property [Product.material](https://schema.org/material).
@@ -11407,6 +12074,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureMaterialsIsMutable();
       materials_.set(index, value);
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -11415,9 +12083,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The material of the product. For example, "leather", "wooden".
+     *
      * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
      * string with a length limit of 200 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [material](https://support.google.com/merchants/answer/6324410). Schema.org
      * property [Product.material](https://schema.org/material).
@@ -11434,6 +12104,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureMaterialsIsMutable();
       materials_.add(value);
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -11442,9 +12113,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The material of the product. For example, "leather", "wooden".
+     *
      * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
      * string with a length limit of 200 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [material](https://support.google.com/merchants/answer/6324410). Schema.org
      * property [Product.material](https://schema.org/material).
@@ -11458,6 +12131,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllMaterials(java.lang.Iterable<java.lang.String> values) {
       ensureMaterialsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, materials_);
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -11466,9 +12140,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The material of the product. For example, "leather", "wooden".
+     *
      * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
      * string with a length limit of 200 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [material](https://support.google.com/merchants/answer/6324410). Schema.org
      * property [Product.material](https://schema.org/material).
@@ -11479,8 +12155,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearMaterials() {
-      materials_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      materials_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x04000000);
+      ;
       onChanged();
       return this;
     }
@@ -11489,9 +12166,11 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The material of the product. For example, "leather", "wooden".
+     *
      * A maximum of 20 values are allowed. Each value must be a UTF-8 encoded
      * string with a length limit of 200 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [material](https://support.google.com/merchants/answer/6324410). Schema.org
      * property [Product.material](https://schema.org/material).
@@ -11509,18 +12188,19 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureMaterialsIsMutable();
       materials_.add(value);
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList patterns_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList patterns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensurePatternsIsMutable() {
-      if (!((bitField0_ & 0x08000000) != 0)) {
+      if (!patterns_.isModifiable()) {
         patterns_ = new com.google.protobuf.LazyStringArrayList(patterns_);
-        bitField0_ |= 0x08000000;
       }
+      bitField0_ |= 0x08000000;
     }
     /**
      *
@@ -11528,10 +12208,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The pattern or graphic print of the product. For example, "striped", "polka
      * dot", "paisley".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
      * property [Product.pattern](https://schema.org/pattern).
@@ -11542,7 +12224,8 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the patterns.
      */
     public com.google.protobuf.ProtocolStringList getPatternsList() {
-      return patterns_.getUnmodifiableView();
+      patterns_.makeImmutable();
+      return patterns_;
     }
     /**
      *
@@ -11550,10 +12233,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The pattern or graphic print of the product. For example, "striped", "polka
      * dot", "paisley".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
      * property [Product.pattern](https://schema.org/pattern).
@@ -11572,10 +12257,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The pattern or graphic print of the product. For example, "striped", "polka
      * dot", "paisley".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
      * property [Product.pattern](https://schema.org/pattern).
@@ -11595,10 +12282,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The pattern or graphic print of the product. For example, "striped", "polka
      * dot", "paisley".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
      * property [Product.pattern](https://schema.org/pattern).
@@ -11618,10 +12307,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The pattern or graphic print of the product. For example, "striped", "polka
      * dot", "paisley".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
      * property [Product.pattern](https://schema.org/pattern).
@@ -11639,6 +12330,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensurePatternsIsMutable();
       patterns_.set(index, value);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -11648,10 +12340,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The pattern or graphic print of the product. For example, "striped", "polka
      * dot", "paisley".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
      * property [Product.pattern](https://schema.org/pattern).
@@ -11668,6 +12362,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensurePatternsIsMutable();
       patterns_.add(value);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -11677,10 +12372,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The pattern or graphic print of the product. For example, "striped", "polka
      * dot", "paisley".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
      * property [Product.pattern](https://schema.org/pattern).
@@ -11694,6 +12391,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllPatterns(java.lang.Iterable<java.lang.String> values) {
       ensurePatternsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, patterns_);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -11703,10 +12401,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The pattern or graphic print of the product. For example, "striped", "polka
      * dot", "paisley".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
      * property [Product.pattern](https://schema.org/pattern).
@@ -11717,8 +12417,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearPatterns() {
-      patterns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      patterns_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x08000000);
+      ;
       onChanged();
       return this;
     }
@@ -11728,10 +12429,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The pattern or graphic print of the product. For example, "striped", "polka
      * dot", "paisley".
+     *
      * A maximum of 20 values are allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
      * property [Product.pattern](https://schema.org/pattern).
@@ -11749,18 +12452,19 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensurePatternsIsMutable();
       patterns_.add(value);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList conditions_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList conditions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureConditionsIsMutable() {
-      if (!((bitField0_ & 0x10000000) != 0)) {
+      if (!conditions_.isModifiable()) {
         conditions_ = new com.google.protobuf.LazyStringArrayList(conditions_);
-        bitField0_ |= 0x10000000;
       }
+      bitField0_ |= 0x10000000;
     }
     /**
      *
@@ -11768,10 +12472,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The condition of the product. Strongly encouraged to use the standard
      * values: "new", "refurbished", "used".
+     *
      * A maximum of 1 value is allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [condition](https://support.google.com/merchants/answer/6324469).
      * Schema.org property
@@ -11783,7 +12489,8 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the conditions.
      */
     public com.google.protobuf.ProtocolStringList getConditionsList() {
-      return conditions_.getUnmodifiableView();
+      conditions_.makeImmutable();
+      return conditions_;
     }
     /**
      *
@@ -11791,10 +12498,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The condition of the product. Strongly encouraged to use the standard
      * values: "new", "refurbished", "used".
+     *
      * A maximum of 1 value is allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [condition](https://support.google.com/merchants/answer/6324469).
      * Schema.org property
@@ -11814,10 +12523,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The condition of the product. Strongly encouraged to use the standard
      * values: "new", "refurbished", "used".
+     *
      * A maximum of 1 value is allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [condition](https://support.google.com/merchants/answer/6324469).
      * Schema.org property
@@ -11838,10 +12549,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The condition of the product. Strongly encouraged to use the standard
      * values: "new", "refurbished", "used".
+     *
      * A maximum of 1 value is allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [condition](https://support.google.com/merchants/answer/6324469).
      * Schema.org property
@@ -11862,10 +12575,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The condition of the product. Strongly encouraged to use the standard
      * values: "new", "refurbished", "used".
+     *
      * A maximum of 1 value is allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [condition](https://support.google.com/merchants/answer/6324469).
      * Schema.org property
@@ -11884,6 +12599,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureConditionsIsMutable();
       conditions_.set(index, value);
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -11893,10 +12609,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The condition of the product. Strongly encouraged to use the standard
      * values: "new", "refurbished", "used".
+     *
      * A maximum of 1 value is allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [condition](https://support.google.com/merchants/answer/6324469).
      * Schema.org property
@@ -11914,6 +12632,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       }
       ensureConditionsIsMutable();
       conditions_.add(value);
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -11923,10 +12642,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The condition of the product. Strongly encouraged to use the standard
      * values: "new", "refurbished", "used".
+     *
      * A maximum of 1 value is allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [condition](https://support.google.com/merchants/answer/6324469).
      * Schema.org property
@@ -11941,6 +12662,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllConditions(java.lang.Iterable<java.lang.String> values) {
       ensureConditionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, conditions_);
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -11950,10 +12672,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The condition of the product. Strongly encouraged to use the standard
      * values: "new", "refurbished", "used".
+     *
      * A maximum of 1 value is allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [condition](https://support.google.com/merchants/answer/6324469).
      * Schema.org property
@@ -11965,8 +12689,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearConditions() {
-      conditions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      conditions_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x10000000);
+      ;
       onChanged();
       return this;
     }
@@ -11976,10 +12701,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The condition of the product. Strongly encouraged to use the standard
      * values: "new", "refurbished", "used".
+     *
      * A maximum of 1 value is allowed per
      * [Product][google.cloud.retail.v2alpha.Product]. Each value must be a UTF-8
      * encoded string with a length limit of 128 characters. Otherwise, an
      * INVALID_ARGUMENT error is returned.
+     *
      * Corresponding properties: Google Merchant Center property
      * [condition](https://support.google.com/merchants/answer/6324469).
      * Schema.org property
@@ -11998,6 +12725,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureConditionsIsMutable();
       conditions_.add(value);
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -12648,7 +13376,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Indicates which fields in the
      * [Product][google.cloud.retail.v2alpha.Product]s are returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+     *
      * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+     *
      * * [audience][google.cloud.retail.v2alpha.Product.audience]
      * * [availability][google.cloud.retail.v2alpha.Product.availability]
      * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -12663,34 +13393,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
      * * [title][google.cloud.retail.v2alpha.Product.title]
      * * [uri][google.cloud.retail.v2alpha.Product.uri]
+     *
      * Supported fields only for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+     *
      * * [categories][google.cloud.retail.v2alpha.Product.categories]
      * * [description][google.cloud.retail.v2alpha.Product.description]
      * * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * Supported fields only for
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+     *
      * * Only the first image in
      * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
      * retrievable, include paths of the form "attributes.key" where "key" is the
      * key of a custom attribute, as specified in
      * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
      * following fields are always returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
+     *
      * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
      * following fields are always returned in by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
      * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+     *
      * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Note: Returning more fields in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
      * response payload size and serving latency.
+     *
      * This field is deprecated. Use the retrievable site-wide control instead.
      * </pre>
      *
@@ -12711,7 +13453,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Indicates which fields in the
      * [Product][google.cloud.retail.v2alpha.Product]s are returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+     *
      * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+     *
      * * [audience][google.cloud.retail.v2alpha.Product.audience]
      * * [availability][google.cloud.retail.v2alpha.Product.availability]
      * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -12726,34 +13470,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
      * * [title][google.cloud.retail.v2alpha.Product.title]
      * * [uri][google.cloud.retail.v2alpha.Product.uri]
+     *
      * Supported fields only for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+     *
      * * [categories][google.cloud.retail.v2alpha.Product.categories]
      * * [description][google.cloud.retail.v2alpha.Product.description]
      * * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * Supported fields only for
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+     *
      * * Only the first image in
      * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
      * retrievable, include paths of the form "attributes.key" where "key" is the
      * key of a custom attribute, as specified in
      * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
      * following fields are always returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
+     *
      * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
      * following fields are always returned in by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
      * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+     *
      * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Note: Returning more fields in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
      * response payload size and serving latency.
+     *
      * This field is deprecated. Use the retrievable site-wide control instead.
      * </pre>
      *
@@ -12780,7 +13536,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Indicates which fields in the
      * [Product][google.cloud.retail.v2alpha.Product]s are returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+     *
      * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+     *
      * * [audience][google.cloud.retail.v2alpha.Product.audience]
      * * [availability][google.cloud.retail.v2alpha.Product.availability]
      * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -12795,34 +13553,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
      * * [title][google.cloud.retail.v2alpha.Product.title]
      * * [uri][google.cloud.retail.v2alpha.Product.uri]
+     *
      * Supported fields only for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+     *
      * * [categories][google.cloud.retail.v2alpha.Product.categories]
      * * [description][google.cloud.retail.v2alpha.Product.description]
      * * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * Supported fields only for
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+     *
      * * Only the first image in
      * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
      * retrievable, include paths of the form "attributes.key" where "key" is the
      * key of a custom attribute, as specified in
      * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
      * following fields are always returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
+     *
      * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
      * following fields are always returned in by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
      * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+     *
      * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Note: Returning more fields in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
      * response payload size and serving latency.
+     *
      * This field is deprecated. Use the retrievable site-wide control instead.
      * </pre>
      *
@@ -12849,7 +13619,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Indicates which fields in the
      * [Product][google.cloud.retail.v2alpha.Product]s are returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+     *
      * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+     *
      * * [audience][google.cloud.retail.v2alpha.Product.audience]
      * * [availability][google.cloud.retail.v2alpha.Product.availability]
      * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -12864,34 +13636,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
      * * [title][google.cloud.retail.v2alpha.Product.title]
      * * [uri][google.cloud.retail.v2alpha.Product.uri]
+     *
      * Supported fields only for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+     *
      * * [categories][google.cloud.retail.v2alpha.Product.categories]
      * * [description][google.cloud.retail.v2alpha.Product.description]
      * * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * Supported fields only for
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+     *
      * * Only the first image in
      * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
      * retrievable, include paths of the form "attributes.key" where "key" is the
      * key of a custom attribute, as specified in
      * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
      * following fields are always returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
+     *
      * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
      * following fields are always returned in by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
      * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+     *
      * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Note: Returning more fields in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
      * response payload size and serving latency.
+     *
      * This field is deprecated. Use the retrievable site-wide control instead.
      * </pre>
      *
@@ -12915,7 +13699,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Indicates which fields in the
      * [Product][google.cloud.retail.v2alpha.Product]s are returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+     *
      * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+     *
      * * [audience][google.cloud.retail.v2alpha.Product.audience]
      * * [availability][google.cloud.retail.v2alpha.Product.availability]
      * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -12930,34 +13716,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
      * * [title][google.cloud.retail.v2alpha.Product.title]
      * * [uri][google.cloud.retail.v2alpha.Product.uri]
+     *
      * Supported fields only for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+     *
      * * [categories][google.cloud.retail.v2alpha.Product.categories]
      * * [description][google.cloud.retail.v2alpha.Product.description]
      * * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * Supported fields only for
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+     *
      * * Only the first image in
      * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
      * retrievable, include paths of the form "attributes.key" where "key" is the
      * key of a custom attribute, as specified in
      * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
      * following fields are always returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
+     *
      * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
      * following fields are always returned in by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
      * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+     *
      * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Note: Returning more fields in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
      * response payload size and serving latency.
+     *
      * This field is deprecated. Use the retrievable site-wide control instead.
      * </pre>
      *
@@ -12987,7 +13785,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Indicates which fields in the
      * [Product][google.cloud.retail.v2alpha.Product]s are returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+     *
      * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+     *
      * * [audience][google.cloud.retail.v2alpha.Product.audience]
      * * [availability][google.cloud.retail.v2alpha.Product.availability]
      * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -13002,34 +13802,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
      * * [title][google.cloud.retail.v2alpha.Product.title]
      * * [uri][google.cloud.retail.v2alpha.Product.uri]
+     *
      * Supported fields only for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+     *
      * * [categories][google.cloud.retail.v2alpha.Product.categories]
      * * [description][google.cloud.retail.v2alpha.Product.description]
      * * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * Supported fields only for
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+     *
      * * Only the first image in
      * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
      * retrievable, include paths of the form "attributes.key" where "key" is the
      * key of a custom attribute, as specified in
      * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
      * following fields are always returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
+     *
      * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
      * following fields are always returned in by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
      * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+     *
      * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Note: Returning more fields in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
      * response payload size and serving latency.
+     *
      * This field is deprecated. Use the retrievable site-wide control instead.
      * </pre>
      *
@@ -13053,7 +13865,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Indicates which fields in the
      * [Product][google.cloud.retail.v2alpha.Product]s are returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+     *
      * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+     *
      * * [audience][google.cloud.retail.v2alpha.Product.audience]
      * * [availability][google.cloud.retail.v2alpha.Product.availability]
      * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -13068,34 +13882,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
      * * [title][google.cloud.retail.v2alpha.Product.title]
      * * [uri][google.cloud.retail.v2alpha.Product.uri]
+     *
      * Supported fields only for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+     *
      * * [categories][google.cloud.retail.v2alpha.Product.categories]
      * * [description][google.cloud.retail.v2alpha.Product.description]
      * * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * Supported fields only for
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+     *
      * * Only the first image in
      * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
      * retrievable, include paths of the form "attributes.key" where "key" is the
      * key of a custom attribute, as specified in
      * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
      * following fields are always returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
+     *
      * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
      * following fields are always returned in by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
      * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+     *
      * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Note: Returning more fields in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
      * response payload size and serving latency.
+     *
      * This field is deprecated. Use the retrievable site-wide control instead.
      * </pre>
      *
@@ -13114,7 +13940,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Indicates which fields in the
      * [Product][google.cloud.retail.v2alpha.Product]s are returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+     *
      * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+     *
      * * [audience][google.cloud.retail.v2alpha.Product.audience]
      * * [availability][google.cloud.retail.v2alpha.Product.availability]
      * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -13129,34 +13957,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
      * * [title][google.cloud.retail.v2alpha.Product.title]
      * * [uri][google.cloud.retail.v2alpha.Product.uri]
+     *
      * Supported fields only for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+     *
      * * [categories][google.cloud.retail.v2alpha.Product.categories]
      * * [description][google.cloud.retail.v2alpha.Product.description]
      * * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * Supported fields only for
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+     *
      * * Only the first image in
      * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
      * retrievable, include paths of the form "attributes.key" where "key" is the
      * key of a custom attribute, as specified in
      * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
      * following fields are always returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
+     *
      * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
      * following fields are always returned in by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
      * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+     *
      * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Note: Returning more fields in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
      * response payload size and serving latency.
+     *
      * This field is deprecated. Use the retrievable site-wide control instead.
      * </pre>
      *
@@ -13179,7 +14019,9 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * Indicates which fields in the
      * [Product][google.cloud.retail.v2alpha.Product]s are returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse].
+     *
      * Supported fields for all [type][google.cloud.retail.v2alpha.Product.type]s:
+     *
      * * [audience][google.cloud.retail.v2alpha.Product.audience]
      * * [availability][google.cloud.retail.v2alpha.Product.availability]
      * * [brands][google.cloud.retail.v2alpha.Product.brands]
@@ -13194,34 +14036,46 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * * [sizes][google.cloud.retail.v2alpha.Product.sizes]
      * * [title][google.cloud.retail.v2alpha.Product.title]
      * * [uri][google.cloud.retail.v2alpha.Product.uri]
+     *
      * Supported fields only for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]:
+     *
      * * [categories][google.cloud.retail.v2alpha.Product.categories]
      * * [description][google.cloud.retail.v2alpha.Product.description]
      * * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * Supported fields only for
      * [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT]:
+     *
      * * Only the first image in
      * [images][google.cloud.retail.v2alpha.Product.images]
+     *
      * To mark [attributes][google.cloud.retail.v2alpha.Product.attributes] as
      * retrievable, include paths of the form "attributes.key" where "key" is the
      * key of a custom attribute, as specified in
      * [attributes][google.cloud.retail.v2alpha.Product.attributes].
+     *
      * For [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY] and
      * [Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION], the
      * following fields are always returned in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
+     *
      * For [Type.VARIANT][google.cloud.retail.v2alpha.Product.Type.VARIANT], the
      * following fields are always returned in by default:
+     *
      * * [name][google.cloud.retail.v2alpha.Product.name]
      * * [color_info][google.cloud.retail.v2alpha.Product.color_info]
+     *
      * The maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
      * returned.
+     *
      * Note: Returning more fields in
      * [SearchResponse][google.cloud.retail.v2alpha.SearchResponse] can increase
      * response payload size and serving latency.
+     *
      * This field is deprecated. Use the retrievable site-wide control instead.
      * </pre>
      *
@@ -13270,6 +14124,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13296,6 +14151,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13322,6 +14178,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13348,6 +14205,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13380,6 +14238,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13410,6 +14269,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13442,6 +14302,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13474,6 +14335,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13503,6 +14365,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13533,6 +14396,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13563,6 +14427,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13592,6 +14457,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13621,6 +14487,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13643,6 +14510,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13669,6 +14537,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13696,6 +14565,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13719,6 +14589,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13742,6 +14613,7 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      * for all the product variants. Only populated for
      * [Type.PRIMARY][google.cloud.retail.v2alpha.Product.Type.PRIMARY]
      * [Product][google.cloud.retail.v2alpha.Product]s.
+     *
      * Note: This field is OUTPUT_ONLY for
      * [ProductService.GetProduct][google.cloud.retail.v2alpha.ProductService.GetProduct].
      * Do not set this field in API requests.
@@ -13796,12 +14668,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -13821,12 +14693,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -13845,12 +14717,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -13869,12 +14741,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -13900,12 +14772,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -13928,12 +14800,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -13958,12 +14830,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -13989,12 +14861,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14017,12 +14889,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14045,12 +14917,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14073,12 +14945,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14100,12 +14972,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14127,12 +14999,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14148,12 +15020,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14173,12 +15045,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14198,12 +15070,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14219,12 +15091,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>
@@ -14241,12 +15113,12 @@ public final class Product extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Output only. A list of local inventories specific to different places.
-     * This is only available for users who have Retail Search enabled, and it can
-     * be managed by
+     *
+     * This field can be managed by
      * [ProductService.AddLocalInventories][google.cloud.retail.v2alpha.ProductService.AddLocalInventories]
      * and
      * [ProductService.RemoveLocalInventories][google.cloud.retail.v2alpha.ProductService.RemoveLocalInventories]
-     * APIs.
+     * APIs if fine-grained, high-volume updates are necessary.
      * </pre>
      *
      * <code>

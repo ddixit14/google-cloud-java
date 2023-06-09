@@ -24,6 +24,7 @@ package com.google.cloud.dialogflow.cx.v3;
  * <pre>
  * The request message for a webhook call. The request is sent as a JSON object
  * and the field names will be presented in camel cases.
+ *
  * You may see undocumented fields in an actual request. These fields are used
  * internally by Dialogflow and should be ignored.
  * </pre>
@@ -50,11 +51,6 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new WebhookRequest();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -141,11 +137,6 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new FulfillmentInfo();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -983,11 +974,6 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       return new IntentInfo();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.dialogflow.cx.v3.WebhookProto
           .internal_static_google_cloud_dialogflow_cx_v3_WebhookRequest_IntentInfo_descriptor;
@@ -1110,11 +1096,6 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
         return new IntentParameterValue();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-        return this.unknownFields;
       }
 
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -3407,11 +3388,6 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       return new SentimentAnalysisResult();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.dialogflow.cx.v3.WebhookProto
           .internal_static_google_cloud_dialogflow_cx_v3_WebhookRequest_SentimentAnalysisResult_descriptor;
@@ -4038,6 +4014,8 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int queryCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object query_;
 
   public enum QueryCase
@@ -4048,6 +4026,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
     TRIGGER_INTENT(11),
     TRANSCRIPT(12),
     TRIGGER_EVENT(14),
+    DTMF_DIGITS(17),
     QUERY_NOT_SET(0);
     private final int value;
 
@@ -4074,6 +4053,8 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
           return TRANSCRIPT;
         case 14:
           return TRIGGER_EVENT;
+        case 17:
+          return DTMF_DIGITS;
         case 0:
           return QUERY_NOT_SET;
         default:
@@ -4438,6 +4419,79 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       com.google.protobuf.ByteString b =
           com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
       if (queryCase_ == 14) {
+        query_ = b;
+      }
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DTMF_DIGITS_FIELD_NUMBER = 17;
+  /**
+   *
+   *
+   * <pre>
+   * If [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as input,
+   * this field will contain the DTMF digits.
+   * </pre>
+   *
+   * <code>string dtmf_digits = 17;</code>
+   *
+   * @return Whether the dtmfDigits field is set.
+   */
+  public boolean hasDtmfDigits() {
+    return queryCase_ == 17;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * If [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as input,
+   * this field will contain the DTMF digits.
+   * </pre>
+   *
+   * <code>string dtmf_digits = 17;</code>
+   *
+   * @return The dtmfDigits.
+   */
+  public java.lang.String getDtmfDigits() {
+    java.lang.Object ref = "";
+    if (queryCase_ == 17) {
+      ref = query_;
+    }
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (queryCase_ == 17) {
+        query_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   *
+   *
+   * <pre>
+   * If [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as input,
+   * this field will contain the DTMF digits.
+   * </pre>
+   *
+   * <code>string dtmf_digits = 17;</code>
+   *
+   * @return The bytes for dtmfDigits.
+   */
+  public com.google.protobuf.ByteString getDtmfDigitsBytes() {
+    java.lang.Object ref = "";
+    if (queryCase_ == 17) {
+      ref = query_;
+    }
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      if (queryCase_ == 17) {
         query_ = b;
       }
       return b;
@@ -4955,6 +5009,9 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, languageCode_);
     }
+    if (queryCase_ == 17) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, query_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -5003,6 +5060,9 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, languageCode_);
+    }
+    if (queryCase_ == 17) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, query_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -5060,6 +5120,9 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
         break;
       case 14:
         if (!getTriggerEvent().equals(other.getTriggerEvent())) return false;
+        break;
+      case 17:
+        if (!getDtmfDigits().equals(other.getDtmfDigits())) return false;
         break;
       case 0:
       default:
@@ -5123,6 +5186,10 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       case 14:
         hash = (37 * hash) + TRIGGER_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getTriggerEvent().hashCode();
+        break;
+      case 17:
+        hash = (37 * hash) + DTMF_DIGITS_FIELD_NUMBER;
+        hash = (53 * hash) + getDtmfDigits().hashCode();
         break;
       case 0:
       default:
@@ -5233,6 +5300,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The request message for a webhook call. The request is sent as a JSON object
    * and the field names will be presented in camel cases.
+   *
    * You may see undocumented fields in an actual request. These fields are used
    * internally by Dialogflow and should be ignored.
    * </pre>
@@ -5297,7 +5365,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
         messages_ = null;
         messagesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000800);
       payload_ = null;
       if (payloadBuilder_ != null) {
         payloadBuilder_.dispose();
@@ -5349,9 +5417,9 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
     private void buildPartialRepeatedFields(
         com.google.cloud.dialogflow.cx.v3.WebhookRequest result) {
       if (messagesBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (((bitField0_ & 0x00000800) != 0)) {
           messages_ = java.util.Collections.unmodifiableList(messages_);
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
         }
         result.messages_ = messages_;
       } else {
@@ -5364,27 +5432,27 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.detectIntentResponseId_ = detectIntentResponseId_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.languageCode_ = languageCode_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.fulfillmentInfo_ =
             fulfillmentInfoBuilder_ == null ? fulfillmentInfo_ : fulfillmentInfoBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.intentInfo_ = intentInfoBuilder_ == null ? intentInfo_ : intentInfoBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.pageInfo_ = pageInfoBuilder_ == null ? pageInfo_ : pageInfoBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.sessionInfo_ =
             sessionInfoBuilder_ == null ? sessionInfo_ : sessionInfoBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
+      if (((from_bitField0_ & 0x00001000) != 0)) {
         result.payload_ = payloadBuilder_ == null ? payload_ : payloadBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.sentimentAnalysisResult_ =
             sentimentAnalysisResultBuilder_ == null
                 ? sentimentAnalysisResult_
@@ -5450,7 +5518,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       }
       if (!other.getLanguageCode().isEmpty()) {
         languageCode_ = other.languageCode_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasFulfillmentInfo()) {
@@ -5469,7 +5537,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
         if (!other.messages_.isEmpty()) {
           if (messages_.isEmpty()) {
             messages_ = other.messages_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000800);
           } else {
             ensureMessagesIsMutable();
             messages_.addAll(other.messages_);
@@ -5482,7 +5550,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
             messagesBuilder_.dispose();
             messagesBuilder_ = null;
             messages_ = other.messages_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000800);
             messagesBuilder_ =
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
                     ? getMessagesFieldBuilder()
@@ -5527,6 +5595,13 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
             onChanged();
             break;
           }
+        case DTMF_DIGITS:
+          {
+            queryCase_ = 17;
+            query_ = other.query_;
+            onChanged();
+            break;
+          }
         case QUERY_NOT_SET:
           {
             break;
@@ -5567,25 +5642,25 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
             case 26:
               {
                 input.readMessage(getIntentInfoFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000080;
+                bitField0_ |= 0x00000100;
                 break;
               } // case 26
             case 34:
               {
                 input.readMessage(getPageInfoFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000100;
+                bitField0_ |= 0x00000200;
                 break;
               } // case 34
             case 42:
               {
                 input.readMessage(getSessionInfoFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000200;
+                bitField0_ |= 0x00000400;
                 break;
               } // case 42
             case 50:
               {
                 input.readMessage(getFulfillmentInfoFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000080;
                 break;
               } // case 50
             case 58:
@@ -5605,14 +5680,14 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
             case 66:
               {
                 input.readMessage(getPayloadFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00000800;
+                bitField0_ |= 0x00001000;
                 break;
               } // case 66
             case 74:
               {
                 input.readMessage(
                     getSentimentAnalysisResultFieldBuilder().getBuilder(), extensionRegistry);
-                bitField0_ |= 0x00001000;
+                bitField0_ |= 0x00002000;
                 break;
               } // case 74
             case 82:
@@ -5646,9 +5721,16 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
             case 122:
               {
                 languageCode_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000040;
                 break;
               } // case 122
+            case 138:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                queryCase_ = 17;
+                query_ = s;
+                break;
+              } // case 138
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -6376,6 +6458,146 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
+    /**
+     *
+     *
+     * <pre>
+     * If [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as input,
+     * this field will contain the DTMF digits.
+     * </pre>
+     *
+     * <code>string dtmf_digits = 17;</code>
+     *
+     * @return Whether the dtmfDigits field is set.
+     */
+    @java.lang.Override
+    public boolean hasDtmfDigits() {
+      return queryCase_ == 17;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as input,
+     * this field will contain the DTMF digits.
+     * </pre>
+     *
+     * <code>string dtmf_digits = 17;</code>
+     *
+     * @return The dtmfDigits.
+     */
+    @java.lang.Override
+    public java.lang.String getDtmfDigits() {
+      java.lang.Object ref = "";
+      if (queryCase_ == 17) {
+        ref = query_;
+      }
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (queryCase_ == 17) {
+          query_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as input,
+     * this field will contain the DTMF digits.
+     * </pre>
+     *
+     * <code>string dtmf_digits = 17;</code>
+     *
+     * @return The bytes for dtmfDigits.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDtmfDigitsBytes() {
+      java.lang.Object ref = "";
+      if (queryCase_ == 17) {
+        ref = query_;
+      }
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        if (queryCase_ == 17) {
+          query_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as input,
+     * this field will contain the DTMF digits.
+     * </pre>
+     *
+     * <code>string dtmf_digits = 17;</code>
+     *
+     * @param value The dtmfDigits to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDtmfDigits(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      queryCase_ = 17;
+      query_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as input,
+     * this field will contain the DTMF digits.
+     * </pre>
+     *
+     * <code>string dtmf_digits = 17;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearDtmfDigits() {
+      if (queryCase_ == 17) {
+        queryCase_ = 0;
+        query_ = null;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as input,
+     * this field will contain the DTMF digits.
+     * </pre>
+     *
+     * <code>string dtmf_digits = 17;</code>
+     *
+     * @param value The bytes for dtmfDigits to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDtmfDigitsBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      queryCase_ = 17;
+      query_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object languageCode_ = "";
     /**
      *
@@ -6441,7 +6663,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       languageCode_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -6459,7 +6681,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder clearLanguageCode() {
       languageCode_ = getDefaultInstance().getLanguageCode();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -6482,7 +6704,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       }
       checkByteStringIsUtf8(value);
       languageCode_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -6507,7 +6729,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the fulfillmentInfo field is set.
      */
     public boolean hasFulfillmentInfo() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      *
@@ -6552,7 +6774,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         fulfillmentInfoBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -6574,7 +6796,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         fulfillmentInfoBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -6592,7 +6814,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
     public Builder mergeFulfillmentInfo(
         com.google.cloud.dialogflow.cx.v3.WebhookRequest.FulfillmentInfo value) {
       if (fulfillmentInfoBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)
+        if (((bitField0_ & 0x00000080) != 0)
             && fulfillmentInfo_ != null
             && fulfillmentInfo_
                 != com.google.cloud.dialogflow.cx.v3.WebhookRequest.FulfillmentInfo
@@ -6604,7 +6826,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         fulfillmentInfoBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -6620,7 +6842,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * </code>
      */
     public Builder clearFulfillmentInfo() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       fulfillmentInfo_ = null;
       if (fulfillmentInfoBuilder_ != null) {
         fulfillmentInfoBuilder_.dispose();
@@ -6642,7 +6864,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      */
     public com.google.cloud.dialogflow.cx.v3.WebhookRequest.FulfillmentInfo.Builder
         getFulfillmentInfoBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getFulfillmentInfoFieldBuilder().getBuilder();
     }
@@ -6713,7 +6935,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the intentInfo field is set.
      */
     public boolean hasIntentInfo() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      *
@@ -6754,7 +6976,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         intentInfoBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -6774,7 +6996,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         intentInfoBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -6790,7 +7012,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
     public Builder mergeIntentInfo(
         com.google.cloud.dialogflow.cx.v3.WebhookRequest.IntentInfo value) {
       if (intentInfoBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)
+        if (((bitField0_ & 0x00000100) != 0)
             && intentInfo_ != null
             && intentInfo_
                 != com.google.cloud.dialogflow.cx.v3.WebhookRequest.IntentInfo
@@ -6802,7 +7024,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         intentInfoBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -6816,7 +7038,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.cloud.dialogflow.cx.v3.WebhookRequest.IntentInfo intent_info = 3;</code>
      */
     public Builder clearIntentInfo() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       intentInfo_ = null;
       if (intentInfoBuilder_ != null) {
         intentInfoBuilder_.dispose();
@@ -6836,7 +7058,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      */
     public com.google.cloud.dialogflow.cx.v3.WebhookRequest.IntentInfo.Builder
         getIntentInfoBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return getIntentInfoFieldBuilder().getBuilder();
     }
@@ -6903,7 +7125,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the pageInfo field is set.
      */
     public boolean hasPageInfo() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      *
@@ -6943,7 +7165,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         pageInfoBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -6962,7 +7184,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         pageInfoBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -6977,7 +7199,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder mergePageInfo(com.google.cloud.dialogflow.cx.v3.PageInfo value) {
       if (pageInfoBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)
+        if (((bitField0_ & 0x00000200) != 0)
             && pageInfo_ != null
             && pageInfo_ != com.google.cloud.dialogflow.cx.v3.PageInfo.getDefaultInstance()) {
           getPageInfoBuilder().mergeFrom(value);
@@ -6987,7 +7209,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         pageInfoBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -7001,7 +7223,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.cloud.dialogflow.cx.v3.PageInfo page_info = 4;</code>
      */
     public Builder clearPageInfo() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       pageInfo_ = null;
       if (pageInfoBuilder_ != null) {
         pageInfoBuilder_.dispose();
@@ -7020,7 +7242,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.cloud.dialogflow.cx.v3.PageInfo page_info = 4;</code>
      */
     public com.google.cloud.dialogflow.cx.v3.PageInfo.Builder getPageInfoBuilder() {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return getPageInfoFieldBuilder().getBuilder();
     }
@@ -7086,7 +7308,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the sessionInfo field is set.
      */
     public boolean hasSessionInfo() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      *
@@ -7126,7 +7348,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         sessionInfoBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -7146,7 +7368,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         sessionInfoBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -7161,7 +7383,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder mergeSessionInfo(com.google.cloud.dialogflow.cx.v3.SessionInfo value) {
       if (sessionInfoBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)
+        if (((bitField0_ & 0x00000400) != 0)
             && sessionInfo_ != null
             && sessionInfo_ != com.google.cloud.dialogflow.cx.v3.SessionInfo.getDefaultInstance()) {
           getSessionInfoBuilder().mergeFrom(value);
@@ -7171,7 +7393,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         sessionInfoBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -7185,7 +7407,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.cloud.dialogflow.cx.v3.SessionInfo session_info = 5;</code>
      */
     public Builder clearSessionInfo() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       sessionInfo_ = null;
       if (sessionInfoBuilder_ != null) {
         sessionInfoBuilder_.dispose();
@@ -7204,7 +7426,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.cloud.dialogflow.cx.v3.SessionInfo session_info = 5;</code>
      */
     public com.google.cloud.dialogflow.cx.v3.SessionInfo.Builder getSessionInfoBuilder() {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return getSessionInfoFieldBuilder().getBuilder();
     }
@@ -7256,10 +7478,10 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
         java.util.Collections.emptyList();
 
     private void ensureMessagesIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!((bitField0_ & 0x00000800) != 0)) {
         messages_ =
             new java.util.ArrayList<com.google.cloud.dialogflow.cx.v3.ResponseMessage>(messages_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
       }
     }
 
@@ -7497,7 +7719,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
     public Builder clearMessages() {
       if (messagesBuilder_ == null) {
         messages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
       } else {
         messagesBuilder_.clear();
@@ -7635,7 +7857,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
                 com.google.cloud.dialogflow.cx.v3.ResponseMessage,
                 com.google.cloud.dialogflow.cx.v3.ResponseMessage.Builder,
                 com.google.cloud.dialogflow.cx.v3.ResponseMessageOrBuilder>(
-                messages_, ((bitField0_ & 0x00000400) != 0), getParentForChildren(), isClean());
+                messages_, ((bitField0_ & 0x00000800) != 0), getParentForChildren(), isClean());
         messages_ = null;
       }
       return messagesBuilder_;
@@ -7660,7 +7882,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the payload field is set.
      */
     public boolean hasPayload() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      *
@@ -7700,7 +7922,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         payloadBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -7720,7 +7942,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         payloadBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -7736,7 +7958,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder mergePayload(com.google.protobuf.Struct value) {
       if (payloadBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0)
+        if (((bitField0_ & 0x00001000) != 0)
             && payload_ != null
             && payload_ != com.google.protobuf.Struct.getDefaultInstance()) {
           getPayloadBuilder().mergeFrom(value);
@@ -7746,7 +7968,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         payloadBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -7761,7 +7983,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.protobuf.Struct payload = 8;</code>
      */
     public Builder clearPayload() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00001000);
       payload_ = null;
       if (payloadBuilder_ != null) {
         payloadBuilder_.dispose();
@@ -7781,7 +8003,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.protobuf.Struct payload = 8;</code>
      */
     public com.google.protobuf.Struct.Builder getPayloadBuilder() {
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00001000;
       onChanged();
       return getPayloadFieldBuilder().getBuilder();
     }
@@ -7851,7 +8073,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * @return Whether the sentimentAnalysisResult field is set.
      */
     public boolean hasSentimentAnalysisResult() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      *
@@ -7900,7 +8122,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         sentimentAnalysisResultBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -7924,7 +8146,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         sentimentAnalysisResultBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -7943,7 +8165,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
     public Builder mergeSentimentAnalysisResult(
         com.google.cloud.dialogflow.cx.v3.WebhookRequest.SentimentAnalysisResult value) {
       if (sentimentAnalysisResultBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0)
+        if (((bitField0_ & 0x00002000) != 0)
             && sentimentAnalysisResult_ != null
             && sentimentAnalysisResult_
                 != com.google.cloud.dialogflow.cx.v3.WebhookRequest.SentimentAnalysisResult
@@ -7955,7 +8177,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
       } else {
         sentimentAnalysisResultBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -7972,7 +8194,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      * </code>
      */
     public Builder clearSentimentAnalysisResult() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       sentimentAnalysisResult_ = null;
       if (sentimentAnalysisResultBuilder_ != null) {
         sentimentAnalysisResultBuilder_.dispose();
@@ -7995,7 +8217,7 @@ public final class WebhookRequest extends com.google.protobuf.GeneratedMessageV3
      */
     public com.google.cloud.dialogflow.cx.v3.WebhookRequest.SentimentAnalysisResult.Builder
         getSentimentAnalysisResultBuilder() {
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return getSentimentAnalysisResultFieldBuilder().getBuilder();
     }

@@ -55,6 +55,18 @@ public final class TagBindingsProto {
       internal_static_google_cloud_resourcemanager_v3_ListTagBindingsResponse_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_resourcemanager_v3_ListTagBindingsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsRequest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsResponse_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_resourcemanager_v3_EffectiveTag_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_resourcemanager_v3_EffectiveTag_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
@@ -69,48 +81,67 @@ public final class TagBindingsProto {
           + "er.v3\032\034google/api/annotations.proto\032\027goo"
           + "gle/api/client.proto\032\037google/api/field_b"
           + "ehavior.proto\032\031google/api/resource.proto"
-          + "\032#google/longrunning/operations.proto\"\222\001"
-          + "\n\nTagBinding\022\021\n\004name\030\001 \001(\tB\003\340A\003\022\016\n\006paren"
-          + "t\030\002 \001(\t\022\021\n\ttag_value\030\003 \001(\t:N\352AK\n.cloudre"
-          + "sourcemanager.googleapis.com/TagBinding\022"
-          + "\031tagBindings/{tag_binding}\"\032\n\030CreateTagB"
-          + "indingMetadata\"|\n\027CreateTagBindingReques"
-          + "t\022E\n\013tag_binding\030\001 \001(\0132+.google.cloud.re"
-          + "sourcemanager.v3.TagBindingB\003\340A\002\022\032\n\rvali"
-          + "date_only\030\002 \001(\010B\003\340A\001\"\032\n\030DeleteTagBinding"
-          + "Metadata\"_\n\027DeleteTagBindingRequest\022D\n\004n"
-          + "ame\030\001 \001(\tB6\340A\002\372A0\n.cloudresourcemanager."
-          + "googleapis.com/TagBinding\"d\n\026ListTagBind"
-          + "ingsRequest\022\031\n\006parent\030\001 \001(\tB\t\340A\002\372A\003\022\001*\022\026"
-          + "\n\tpage_size\030\002 \001(\005B\003\340A\001\022\027\n\npage_token\030\003 \001"
-          + "(\tB\003\340A\001\"u\n\027ListTagBindingsResponse\022A\n\014ta"
-          + "g_bindings\030\001 \003(\0132+.google.cloud.resource"
-          + "manager.v3.TagBinding\022\027\n\017next_page_token"
-          + "\030\002 \001(\t2\340\005\n\013TagBindings\022\246\001\n\017ListTagBindin"
-          + "gs\0227.google.cloud.resourcemanager.v3.Lis"
-          + "tTagBindingsRequest\0328.google.cloud.resou"
-          + "rcemanager.v3.ListTagBindingsResponse\" \202"
-          + "\323\344\223\002\021\022\017/v3/tagBindings\332A\006parent\022\310\001\n\020Crea"
-          + "teTagBinding\0228.google.cloud.resourcemana"
-          + "ger.v3.CreateTagBindingRequest\032\035.google."
-          + "longrunning.Operation\"[\202\323\344\223\002\036\"\017/v3/tagBi"
-          + "ndings:\013tag_binding\332A\013tag_binding\312A&\n\nTa"
-          + "gBinding\022\030CreateTagBindingMetadata\022\311\001\n\020D"
-          + "eleteTagBinding\0228.google.cloud.resourcem"
-          + "anager.v3.DeleteTagBindingRequest\032\035.goog"
-          + "le.longrunning.Operation\"\\\202\323\344\223\002\033*\031/v3/{n"
-          + "ame=tagBindings/**}\332A\004name\312A1\n\025google.pr"
-          + "otobuf.Empty\022\030DeleteTagBindingMetadata\032\220"
-          + "\001\312A#cloudresourcemanager.googleapis.com\322"
-          + "Aghttps://www.googleapis.com/auth/cloud-"
-          + "platform,https://www.googleapis.com/auth"
-          + "/cloud-platform.read-onlyB\361\001\n#com.google"
-          + ".cloud.resourcemanager.v3B\020TagBindingsPr"
-          + "otoP\001ZMcloud.google.com/go/resourcemanag"
-          + "er/apiv3/resourcemanagerpb;resourcemanag"
-          + "erpb\252\002\037Google.Cloud.ResourceManager.V3\312\002"
-          + "\037Google\\Cloud\\ResourceManager\\V3\352\002\"Googl"
-          + "e::Cloud::ResourceManager::V3b\006proto3"
+          + "\032#google/longrunning/operations.proto\032\033g"
+          + "oogle/protobuf/empty.proto\"\266\001\n\nTagBindin"
+          + "g\022\022\n\004name\030\001 \001(\tB\004\342A\001\003\022\016\n\006parent\030\002 \001(\t\022\021\n"
+          + "\ttag_value\030\003 \001(\t\022!\n\031tag_value_namespaced"
+          + "_name\030\004 \001(\t:N\352AK\n.cloudresourcemanager.g"
+          + "oogleapis.com/TagBinding\022\031tagBindings/{t"
+          + "ag_binding}\"\032\n\030CreateTagBindingMetadata\""
+          + "~\n\027CreateTagBindingRequest\022F\n\013tag_bindin"
+          + "g\030\001 \001(\0132+.google.cloud.resourcemanager.v"
+          + "3.TagBindingB\004\342A\001\002\022\033\n\rvalidate_only\030\002 \001("
+          + "\010B\004\342A\001\001\"\032\n\030DeleteTagBindingMetadata\"`\n\027D"
+          + "eleteTagBindingRequest\022E\n\004name\030\001 \001(\tB7\342A"
+          + "\001\002\372A0\n.cloudresourcemanager.googleapis.c"
+          + "om/TagBinding\"g\n\026ListTagBindingsRequest\022"
+          + "\032\n\006parent\030\001 \001(\tB\n\342A\001\002\372A\003\022\001*\022\027\n\tpage_size"
+          + "\030\002 \001(\005B\004\342A\001\001\022\030\n\npage_token\030\003 \001(\tB\004\342A\001\001\"u"
+          + "\n\027ListTagBindingsResponse\022A\n\014tag_binding"
+          + "s\030\001 \003(\0132+.google.cloud.resourcemanager.v"
+          + "3.TagBinding\022\027\n\017next_page_token\030\002 \001(\t\"c\n"
+          + "\030ListEffectiveTagsRequest\022\024\n\006parent\030\001 \001("
+          + "\tB\004\342A\001\002\022\027\n\tpage_size\030\002 \001(\005B\004\342A\001\001\022\030\n\npage"
+          + "_token\030\003 \001(\tB\004\342A\001\001\"{\n\031ListEffectiveTagsR"
+          + "esponse\022E\n\016effective_tags\030\001 \003(\0132-.google"
+          + ".cloud.resourcemanager.v3.EffectiveTag\022\027"
+          + "\n\017next_page_token\030\002 \001(\t\"\200\002\n\014EffectiveTag"
+          + "\022D\n\ttag_value\030\001 \001(\tB1\372A.\n,cloudresourcem"
+          + "anager.googleapis.com/TagValue\022\034\n\024namesp"
+          + "aced_tag_value\030\002 \001(\t\022@\n\007tag_key\030\003 \001(\tB/\372"
+          + "A,\n*cloudresourcemanager.googleapis.com/"
+          + "TagKey\022\032\n\022namespaced_tag_key\030\004 \001(\t\022\033\n\023ta"
+          + "g_key_parent_name\030\006 \001(\t\022\021\n\tinherited\030\005 \001"
+          + "(\0102\221\007\n\013TagBindings\022\246\001\n\017ListTagBindings\0227"
+          + ".google.cloud.resourcemanager.v3.ListTag"
+          + "BindingsRequest\0328.google.cloud.resourcem"
+          + "anager.v3.ListTagBindingsResponse\" \332A\006pa"
+          + "rent\202\323\344\223\002\021\022\017/v3/tagBindings\022\310\001\n\020CreateTa"
+          + "gBinding\0228.google.cloud.resourcemanager."
+          + "v3.CreateTagBindingRequest\032\035.google.long"
+          + "running.Operation\"[\312A&\n\nTagBinding\022\030Crea"
+          + "teTagBindingMetadata\332A\013tag_binding\202\323\344\223\002\036"
+          + "\"\017/v3/tagBindings:\013tag_binding\022\311\001\n\020Delet"
+          + "eTagBinding\0228.google.cloud.resourcemanag"
+          + "er.v3.DeleteTagBindingRequest\032\035.google.l"
+          + "ongrunning.Operation\"\\\312A1\n\025google.protob"
+          + "uf.Empty\022\030DeleteTagBindingMetadata\332A\004nam"
+          + "e\202\323\344\223\002\033*\031/v3/{name=tagBindings/**}\022\256\001\n\021L"
+          + "istEffectiveTags\0229.google.cloud.resource"
+          + "manager.v3.ListEffectiveTagsRequest\032:.go"
+          + "ogle.cloud.resourcemanager.v3.ListEffect"
+          + "iveTagsResponse\"\"\332A\006parent\202\323\344\223\002\023\022\021/v3/ef"
+          + "fectiveTags\032\220\001\312A#cloudresourcemanager.go"
+          + "ogleapis.com\322Aghttps://www.googleapis.co"
+          + "m/auth/cloud-platform,https://www.google"
+          + "apis.com/auth/cloud-platform.read-onlyB\361"
+          + "\001\n#com.google.cloud.resourcemanager.v3B\020"
+          + "TagBindingsProtoP\001ZMcloud.google.com/go/"
+          + "resourcemanager/apiv3/resourcemanagerpb;"
+          + "resourcemanagerpb\252\002\037Google.Cloud.Resourc"
+          + "eManager.V3\312\002\037Google\\Cloud\\ResourceManag"
+          + "er\\V3\352\002\"Google::Cloud::ResourceManager::"
+          + "V3b\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -121,6 +152,7 @@ public final class TagBindingsProto {
               com.google.api.FieldBehaviorProto.getDescriptor(),
               com.google.api.ResourceProto.getDescriptor(),
               com.google.longrunning.OperationsProto.getDescriptor(),
+              com.google.protobuf.EmptyProto.getDescriptor(),
             });
     internal_static_google_cloud_resourcemanager_v3_TagBinding_descriptor =
         getDescriptor().getMessageTypes().get(0);
@@ -128,7 +160,7 @@ public final class TagBindingsProto {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_resourcemanager_v3_TagBinding_descriptor,
             new java.lang.String[] {
-              "Name", "Parent", "TagValue",
+              "Name", "Parent", "TagValue", "TagValueNamespacedName",
             });
     internal_static_google_cloud_resourcemanager_v3_CreateTagBindingMetadata_descriptor =
         getDescriptor().getMessageTypes().get(1);
@@ -174,6 +206,35 @@ public final class TagBindingsProto {
             new java.lang.String[] {
               "TagBindings", "NextPageToken",
             });
+    internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsRequest_descriptor =
+        getDescriptor().getMessageTypes().get(7);
+    internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsRequest_descriptor,
+            new java.lang.String[] {
+              "Parent", "PageSize", "PageToken",
+            });
+    internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsResponse_descriptor =
+        getDescriptor().getMessageTypes().get(8);
+    internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsResponse_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_resourcemanager_v3_ListEffectiveTagsResponse_descriptor,
+            new java.lang.String[] {
+              "EffectiveTags", "NextPageToken",
+            });
+    internal_static_google_cloud_resourcemanager_v3_EffectiveTag_descriptor =
+        getDescriptor().getMessageTypes().get(9);
+    internal_static_google_cloud_resourcemanager_v3_EffectiveTag_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_resourcemanager_v3_EffectiveTag_descriptor,
+            new java.lang.String[] {
+              "TagValue",
+              "NamespacedTagValue",
+              "TagKey",
+              "NamespacedTagKey",
+              "TagKeyParentName",
+              "Inherited",
+            });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
@@ -191,6 +252,7 @@ public final class TagBindingsProto {
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.longrunning.OperationsProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

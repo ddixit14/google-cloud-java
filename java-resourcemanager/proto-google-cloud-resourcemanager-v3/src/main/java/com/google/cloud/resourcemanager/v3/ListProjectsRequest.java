@@ -50,11 +50,6 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
     return new ListProjectsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.ProjectsProto
         .internal_static_google_cloud_resourcemanager_v3_ListProjectsRequest_descriptor;
@@ -78,9 +73,12 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The name of the parent resource to list projects under.
-   * For example, setting this field to 'folders/1234' would list all projects
-   * directly under that folder.
+   * Required. The name of the parent resource whose projects are being listed.
+   * Only children of this parent resource are listed; descendants are not
+   * listed.
+   *
+   * If the parent is a folder, use the value `folders/{folder_id}`. If the
+   * parent is an organization, use the value `organizations/{org_id}`.
    * </pre>
    *
    * <code>
@@ -105,9 +103,12 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The name of the parent resource to list projects under.
-   * For example, setting this field to 'folders/1234' would list all projects
-   * directly under that folder.
+   * Required. The name of the parent resource whose projects are being listed.
+   * Only children of this parent resource are listed; descendants are not
+   * listed.
+   *
+   * If the parent is a folder, use the value `folders/{folder_id}`. If the
+   * parent is an organization, use the value `organizations/{org_id}`.
    * </pre>
    *
    * <code>
@@ -137,9 +138,9 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Optional. A pagination token returned from a previous call to [ListProjects]
-   * [google.cloud.resourcemanager.v3.Projects.ListProjects]
-   * that indicates from where listing should continue.
+   * Optional. A pagination token returned from a previous call to
+   * [ListProjects] [google.cloud.resourcemanager.v3.Projects.ListProjects] that
+   * indicates from where listing should continue.
    * </pre>
    *
    * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -162,9 +163,9 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Optional. A pagination token returned from a previous call to [ListProjects]
-   * [google.cloud.resourcemanager.v3.Projects.ListProjects]
-   * that indicates from where listing should continue.
+   * Optional. A pagination token returned from a previous call to
+   * [ListProjects] [google.cloud.resourcemanager.v3.Projects.ListProjects] that
+   * indicates from where listing should continue.
    * </pre>
    *
    * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -210,8 +211,8 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Optional. Indicate that projects in the `DELETE_REQUESTED` state should also be
-   * returned. Normally only `ACTIVE` projects are returned.
+   * Optional. Indicate that projects in the `DELETE_REQUESTED` state should
+   * also be returned. Normally only `ACTIVE` projects are returned.
    * </pre>
    *
    * <code>bool show_deleted = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -641,9 +642,12 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The name of the parent resource to list projects under.
-     * For example, setting this field to 'folders/1234' would list all projects
-     * directly under that folder.
+     * Required. The name of the parent resource whose projects are being listed.
+     * Only children of this parent resource are listed; descendants are not
+     * listed.
+     *
+     * If the parent is a folder, use the value `folders/{folder_id}`. If the
+     * parent is an organization, use the value `organizations/{org_id}`.
      * </pre>
      *
      * <code>
@@ -667,9 +671,12 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The name of the parent resource to list projects under.
-     * For example, setting this field to 'folders/1234' would list all projects
-     * directly under that folder.
+     * Required. The name of the parent resource whose projects are being listed.
+     * Only children of this parent resource are listed; descendants are not
+     * listed.
+     *
+     * If the parent is a folder, use the value `folders/{folder_id}`. If the
+     * parent is an organization, use the value `organizations/{org_id}`.
      * </pre>
      *
      * <code>
@@ -693,9 +700,12 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The name of the parent resource to list projects under.
-     * For example, setting this field to 'folders/1234' would list all projects
-     * directly under that folder.
+     * Required. The name of the parent resource whose projects are being listed.
+     * Only children of this parent resource are listed; descendants are not
+     * listed.
+     *
+     * If the parent is a folder, use the value `folders/{folder_id}`. If the
+     * parent is an organization, use the value `organizations/{org_id}`.
      * </pre>
      *
      * <code>
@@ -718,9 +728,12 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The name of the parent resource to list projects under.
-     * For example, setting this field to 'folders/1234' would list all projects
-     * directly under that folder.
+     * Required. The name of the parent resource whose projects are being listed.
+     * Only children of this parent resource are listed; descendants are not
+     * listed.
+     *
+     * If the parent is a folder, use the value `folders/{folder_id}`. If the
+     * parent is an organization, use the value `organizations/{org_id}`.
      * </pre>
      *
      * <code>
@@ -739,9 +752,12 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The name of the parent resource to list projects under.
-     * For example, setting this field to 'folders/1234' would list all projects
-     * directly under that folder.
+     * Required. The name of the parent resource whose projects are being listed.
+     * Only children of this parent resource are listed; descendants are not
+     * listed.
+     *
+     * If the parent is a folder, use the value `folders/{folder_id}`. If the
+     * parent is an organization, use the value `organizations/{org_id}`.
      * </pre>
      *
      * <code>
@@ -767,9 +783,9 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to [ListProjects]
-     * [google.cloud.resourcemanager.v3.Projects.ListProjects]
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * [ListProjects] [google.cloud.resourcemanager.v3.Projects.ListProjects] that
+     * indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -791,9 +807,9 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to [ListProjects]
-     * [google.cloud.resourcemanager.v3.Projects.ListProjects]
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * [ListProjects] [google.cloud.resourcemanager.v3.Projects.ListProjects] that
+     * indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -815,9 +831,9 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to [ListProjects]
-     * [google.cloud.resourcemanager.v3.Projects.ListProjects]
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * [ListProjects] [google.cloud.resourcemanager.v3.Projects.ListProjects] that
+     * indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -838,9 +854,9 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to [ListProjects]
-     * [google.cloud.resourcemanager.v3.Projects.ListProjects]
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * [ListProjects] [google.cloud.resourcemanager.v3.Projects.ListProjects] that
+     * indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -857,9 +873,9 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to [ListProjects]
-     * [google.cloud.resourcemanager.v3.Projects.ListProjects]
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * [ListProjects] [google.cloud.resourcemanager.v3.Projects.ListProjects] that
+     * indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -942,8 +958,8 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Optional. Indicate that projects in the `DELETE_REQUESTED` state should also be
-     * returned. Normally only `ACTIVE` projects are returned.
+     * Optional. Indicate that projects in the `DELETE_REQUESTED` state should
+     * also be returned. Normally only `ACTIVE` projects are returned.
      * </pre>
      *
      * <code>bool show_deleted = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -958,8 +974,8 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Optional. Indicate that projects in the `DELETE_REQUESTED` state should also be
-     * returned. Normally only `ACTIVE` projects are returned.
+     * Optional. Indicate that projects in the `DELETE_REQUESTED` state should
+     * also be returned. Normally only `ACTIVE` projects are returned.
      * </pre>
      *
      * <code>bool show_deleted = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -978,8 +994,8 @@ public final class ListProjectsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Optional. Indicate that projects in the `DELETE_REQUESTED` state should also be
-     * returned. Normally only `ACTIVE` projects are returned.
+     * Optional. Indicate that projects in the `DELETE_REQUESTED` state should
+     * also be returned. Normally only `ACTIVE` projects are returned.
      * </pre>
      *
      * <code>bool show_deleted = 4 [(.google.api.field_behavior) = OPTIONAL];</code>

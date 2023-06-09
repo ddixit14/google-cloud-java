@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -116,6 +116,18 @@ public class DocumentServiceSettings extends ClientSettings<DocumentServiceSetti
           ImportDocumentsRequest, ImportDocumentsResponse, ImportDocumentsMetadata>
       importDocumentsOperationSettings() {
     return ((DocumentServiceStubSettings) getStubSettings()).importDocumentsOperationSettings();
+  }
+
+  /** Returns the object with the settings used for calls to purgeDocuments. */
+  public UnaryCallSettings<PurgeDocumentsRequest, Operation> purgeDocumentsSettings() {
+    return ((DocumentServiceStubSettings) getStubSettings()).purgeDocumentsSettings();
+  }
+
+  /** Returns the object with the settings used for calls to purgeDocuments. */
+  public OperationCallSettings<
+          PurgeDocumentsRequest, PurgeDocumentsResponse, PurgeDocumentsMetadata>
+      purgeDocumentsOperationSettings() {
+    return ((DocumentServiceStubSettings) getStubSettings()).purgeDocumentsOperationSettings();
   }
 
   public static final DocumentServiceSettings create(DocumentServiceStubSettings stub)
@@ -270,6 +282,18 @@ public class DocumentServiceSettings extends ClientSettings<DocumentServiceSetti
             ImportDocumentsRequest, ImportDocumentsResponse, ImportDocumentsMetadata>
         importDocumentsOperationSettings() {
       return getStubSettingsBuilder().importDocumentsOperationSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to purgeDocuments. */
+    public UnaryCallSettings.Builder<PurgeDocumentsRequest, Operation> purgeDocumentsSettings() {
+      return getStubSettingsBuilder().purgeDocumentsSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to purgeDocuments. */
+    public OperationCallSettings.Builder<
+            PurgeDocumentsRequest, PurgeDocumentsResponse, PurgeDocumentsMetadata>
+        purgeDocumentsOperationSettings() {
+      return getStubSettingsBuilder().purgeDocumentsOperationSettings();
     }
 
     @Override

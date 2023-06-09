@@ -48,11 +48,6 @@ public final class MoveFolderRequest extends com.google.protobuf.GeneratedMessag
     return new MoveFolderRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.FoldersProto
         .internal_static_google_cloud_resourcemanager_v3_MoveFolderRequest_descriptor;
@@ -133,9 +128,9 @@ public final class MoveFolderRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Required. The resource name of the folder or organization which should be the
-   * folder's new parent.
-   * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+   * Required. The resource name of the folder or organization which should be
+   * the folder's new parent. Must be of the form `folders/{folder_id}` or
+   * `organizations/{org_id}`.
    * </pre>
    *
    * <code>
@@ -160,9 +155,9 @@ public final class MoveFolderRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Required. The resource name of the folder or organization which should be the
-   * folder's new parent.
-   * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+   * Required. The resource name of the folder or organization which should be
+   * the folder's new parent. Must be of the form `folders/{folder_id}` or
+   * `organizations/{org_id}`.
    * </pre>
    *
    * <code>
@@ -677,9 +672,9 @@ public final class MoveFolderRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The resource name of the folder or organization which should be the
-     * folder's new parent.
-     * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+     * Required. The resource name of the folder or organization which should be
+     * the folder's new parent. Must be of the form `folders/{folder_id}` or
+     * `organizations/{org_id}`.
      * </pre>
      *
      * <code>
@@ -703,9 +698,9 @@ public final class MoveFolderRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The resource name of the folder or organization which should be the
-     * folder's new parent.
-     * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+     * Required. The resource name of the folder or organization which should be
+     * the folder's new parent. Must be of the form `folders/{folder_id}` or
+     * `organizations/{org_id}`.
      * </pre>
      *
      * <code>
@@ -729,9 +724,9 @@ public final class MoveFolderRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The resource name of the folder or organization which should be the
-     * folder's new parent.
-     * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+     * Required. The resource name of the folder or organization which should be
+     * the folder's new parent. Must be of the form `folders/{folder_id}` or
+     * `organizations/{org_id}`.
      * </pre>
      *
      * <code>
@@ -754,9 +749,9 @@ public final class MoveFolderRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The resource name of the folder or organization which should be the
-     * folder's new parent.
-     * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+     * Required. The resource name of the folder or organization which should be
+     * the folder's new parent. Must be of the form `folders/{folder_id}` or
+     * `organizations/{org_id}`.
      * </pre>
      *
      * <code>
@@ -775,9 +770,9 @@ public final class MoveFolderRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The resource name of the folder or organization which should be the
-     * folder's new parent.
-     * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+     * Required. The resource name of the folder or organization which should be
+     * the folder's new parent. Must be of the form `folders/{folder_id}` or
+     * `organizations/{org_id}`.
      * </pre>
      *
      * <code>

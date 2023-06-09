@@ -229,6 +229,8 @@ public class ModelServiceClientTest {
             .setTrainingPipeline(
                 TrainingPipelineName.of("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]")
                     .toString())
+            .setPipelineJob(
+                PipelineJobName.of("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]").toString())
             .setContainerSpec(ModelContainerSpec.newBuilder().build())
             .setArtifactUri("artifactUri-1130062278")
             .addAllSupportedDeploymentResourcesTypes(new ArrayList<Model.DeploymentResourcesType>())
@@ -296,6 +298,8 @@ public class ModelServiceClientTest {
             .setTrainingPipeline(
                 TrainingPipelineName.of("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]")
                     .toString())
+            .setPipelineJob(
+                PipelineJobName.of("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]").toString())
             .setContainerSpec(ModelContainerSpec.newBuilder().build())
             .setArtifactUri("artifactUri-1130062278")
             .addAllSupportedDeploymentResourcesTypes(new ArrayList<Model.DeploymentResourcesType>())
@@ -539,6 +543,8 @@ public class ModelServiceClientTest {
             .setTrainingPipeline(
                 TrainingPipelineName.of("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]")
                     .toString())
+            .setPipelineJob(
+                PipelineJobName.of("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]").toString())
             .setContainerSpec(ModelContainerSpec.newBuilder().build())
             .setArtifactUri("artifactUri-1130062278")
             .addAllSupportedDeploymentResourcesTypes(new ArrayList<Model.DeploymentResourcesType>())
@@ -777,6 +783,8 @@ public class ModelServiceClientTest {
             .setTrainingPipeline(
                 TrainingPipelineName.of("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]")
                     .toString())
+            .setPipelineJob(
+                PipelineJobName.of("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]").toString())
             .setContainerSpec(ModelContainerSpec.newBuilder().build())
             .setArtifactUri("artifactUri-1130062278")
             .addAllSupportedDeploymentResourcesTypes(new ArrayList<Model.DeploymentResourcesType>())
@@ -847,6 +855,8 @@ public class ModelServiceClientTest {
             .setTrainingPipeline(
                 TrainingPipelineName.of("[PROJECT]", "[LOCATION]", "[TRAINING_PIPELINE]")
                     .toString())
+            .setPipelineJob(
+                PipelineJobName.of("[PROJECT]", "[LOCATION]", "[PIPELINE_JOB]").toString())
             .setContainerSpec(ModelContainerSpec.newBuilder().build())
             .setArtifactUri("artifactUri-1130062278")
             .addAllSupportedDeploymentResourcesTypes(new ArrayList<Model.DeploymentResourcesType>())
@@ -1979,7 +1989,7 @@ public class ModelServiceClientTest {
     SetIamPolicyRequest request =
         SetIamPolicyRequest.newBuilder()
             .setResource(
-                EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+                EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]")
                     .toString())
             .setPolicy(Policy.newBuilder().build())
             .setUpdateMask(FieldMask.newBuilder().build())
@@ -2010,7 +2020,8 @@ public class ModelServiceClientTest {
       SetIamPolicyRequest request =
           SetIamPolicyRequest.newBuilder()
               .setResource(
-                  EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+                  EndpointName.ofProjectLocationEndpointName(
+                          "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
                       .toString())
               .setPolicy(Policy.newBuilder().build())
               .setUpdateMask(FieldMask.newBuilder().build())
@@ -2036,7 +2047,7 @@ public class ModelServiceClientTest {
     GetIamPolicyRequest request =
         GetIamPolicyRequest.newBuilder()
             .setResource(
-                EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+                EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]")
                     .toString())
             .setOptions(GetPolicyOptions.newBuilder().build())
             .build();
@@ -2065,7 +2076,8 @@ public class ModelServiceClientTest {
       GetIamPolicyRequest request =
           GetIamPolicyRequest.newBuilder()
               .setResource(
-                  EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+                  EndpointName.ofProjectLocationEndpointName(
+                          "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
                       .toString())
               .setOptions(GetPolicyOptions.newBuilder().build())
               .build();
@@ -2085,7 +2097,7 @@ public class ModelServiceClientTest {
     TestIamPermissionsRequest request =
         TestIamPermissionsRequest.newBuilder()
             .setResource(
-                EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+                EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]")
                     .toString())
             .addAllPermissions(new ArrayList<String>())
             .build();
@@ -2114,7 +2126,8 @@ public class ModelServiceClientTest {
       TestIamPermissionsRequest request =
           TestIamPermissionsRequest.newBuilder()
               .setResource(
-                  EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+                  EndpointName.ofProjectLocationEndpointName(
+                          "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
                       .toString())
               .addAllPermissions(new ArrayList<String>())
               .build();

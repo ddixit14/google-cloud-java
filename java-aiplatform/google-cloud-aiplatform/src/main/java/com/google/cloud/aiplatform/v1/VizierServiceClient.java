@@ -812,7 +812,7 @@ public class VizierServiceClient implements BackgroundResource {
    * Adds one or more Trials to a Study, with parameter values suggested by Vertex AI Vizier.
    * Returns a long-running operation associated with the generation of Trial suggestions. When this
    * long-running operation succeeds, it will contain a
-   * [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+   * [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
    *
    * <p>Sample code:
    *
@@ -846,7 +846,7 @@ public class VizierServiceClient implements BackgroundResource {
    * Adds one or more Trials to a Study, with parameter values suggested by Vertex AI Vizier.
    * Returns a long-running operation associated with the generation of Trial suggestions. When this
    * long-running operation succeeds, it will contain a
-   * [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+   * [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
    *
    * <p>Sample code:
    *
@@ -880,7 +880,7 @@ public class VizierServiceClient implements BackgroundResource {
    * Adds one or more Trials to a Study, with parameter values suggested by Vertex AI Vizier.
    * Returns a long-running operation associated with the generation of Trial suggestions. When this
    * long-running operation succeeds, it will contain a
-   * [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+   * [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
    *
    * <p>Sample code:
    *
@@ -1983,7 +1983,8 @@ public class VizierServiceClient implements BackgroundResource {
    *   SetIamPolicyRequest request =
    *       SetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setPolicy(Policy.newBuilder().build())
    *           .setUpdateMask(FieldMask.newBuilder().build())
@@ -2017,7 +2018,8 @@ public class VizierServiceClient implements BackgroundResource {
    *   SetIamPolicyRequest request =
    *       SetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setPolicy(Policy.newBuilder().build())
    *           .setUpdateMask(FieldMask.newBuilder().build())
@@ -2049,7 +2051,8 @@ public class VizierServiceClient implements BackgroundResource {
    *   GetIamPolicyRequest request =
    *       GetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setOptions(GetPolicyOptions.newBuilder().build())
    *           .build();
@@ -2081,7 +2084,8 @@ public class VizierServiceClient implements BackgroundResource {
    *   GetIamPolicyRequest request =
    *       GetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setOptions(GetPolicyOptions.newBuilder().build())
    *           .build();
@@ -2116,7 +2120,8 @@ public class VizierServiceClient implements BackgroundResource {
    *   TestIamPermissionsRequest request =
    *       TestIamPermissionsRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .addAllPermissions(new ArrayList<String>())
    *           .build();
@@ -2152,7 +2157,8 @@ public class VizierServiceClient implements BackgroundResource {
    *   TestIamPermissionsRequest request =
    *       TestIamPermissionsRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .addAllPermissions(new ArrayList<String>())
    *           .build();

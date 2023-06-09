@@ -20,14 +20,17 @@ import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.Aud
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAccessBindingsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAccountSummariesPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAccountsPagedResponse;
+import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAdSenseLinksPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAudiencesPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListBigQueryLinksPagedResponse;
+import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListChannelGroupsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListConversionEventsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListCustomDimensionsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListCustomMetricsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListDataStreamsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposalsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinksPagedResponse;
+import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListEventCreateRulesPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListExpandedDataSetsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListFirebaseLinksPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListGoogleAdsLinksPagedResponse;
@@ -738,6 +741,33 @@ public class AnalyticsAdminServiceSettings extends ClientSettings<AnalyticsAdmin
     return ((AnalyticsAdminServiceStubSettings) getStubSettings()).deleteExpandedDataSetSettings();
   }
 
+  /** Returns the object with the settings used for calls to getChannelGroup. */
+  public UnaryCallSettings<GetChannelGroupRequest, ChannelGroup> getChannelGroupSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).getChannelGroupSettings();
+  }
+
+  /** Returns the object with the settings used for calls to listChannelGroups. */
+  public PagedCallSettings<
+          ListChannelGroupsRequest, ListChannelGroupsResponse, ListChannelGroupsPagedResponse>
+      listChannelGroupsSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).listChannelGroupsSettings();
+  }
+
+  /** Returns the object with the settings used for calls to createChannelGroup. */
+  public UnaryCallSettings<CreateChannelGroupRequest, ChannelGroup> createChannelGroupSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).createChannelGroupSettings();
+  }
+
+  /** Returns the object with the settings used for calls to updateChannelGroup. */
+  public UnaryCallSettings<UpdateChannelGroupRequest, ChannelGroup> updateChannelGroupSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).updateChannelGroupSettings();
+  }
+
+  /** Returns the object with the settings used for calls to deleteChannelGroup. */
+  public UnaryCallSettings<DeleteChannelGroupRequest, Empty> deleteChannelGroupSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).deleteChannelGroupSettings();
+  }
+
   /** Returns the object with the settings used for calls to setAutomatedGa4ConfigurationOptOut. */
   public UnaryCallSettings<
           SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse>
@@ -797,6 +827,67 @@ public class AnalyticsAdminServiceSettings extends ClientSettings<AnalyticsAdmin
   public UnaryCallSettings<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse>
       listConnectedSiteTagsSettings() {
     return ((AnalyticsAdminServiceStubSettings) getStubSettings()).listConnectedSiteTagsSettings();
+  }
+
+  /** Returns the object with the settings used for calls to fetchConnectedGa4Property. */
+  public UnaryCallSettings<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>
+      fetchConnectedGa4PropertySettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings())
+        .fetchConnectedGa4PropertySettings();
+  }
+
+  /** Returns the object with the settings used for calls to getAdSenseLink. */
+  public UnaryCallSettings<GetAdSenseLinkRequest, AdSenseLink> getAdSenseLinkSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).getAdSenseLinkSettings();
+  }
+
+  /** Returns the object with the settings used for calls to createAdSenseLink. */
+  public UnaryCallSettings<CreateAdSenseLinkRequest, AdSenseLink> createAdSenseLinkSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).createAdSenseLinkSettings();
+  }
+
+  /** Returns the object with the settings used for calls to deleteAdSenseLink. */
+  public UnaryCallSettings<DeleteAdSenseLinkRequest, Empty> deleteAdSenseLinkSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).deleteAdSenseLinkSettings();
+  }
+
+  /** Returns the object with the settings used for calls to listAdSenseLinks. */
+  public PagedCallSettings<
+          ListAdSenseLinksRequest, ListAdSenseLinksResponse, ListAdSenseLinksPagedResponse>
+      listAdSenseLinksSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).listAdSenseLinksSettings();
+  }
+
+  /** Returns the object with the settings used for calls to getEventCreateRule. */
+  public UnaryCallSettings<GetEventCreateRuleRequest, EventCreateRule>
+      getEventCreateRuleSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).getEventCreateRuleSettings();
+  }
+
+  /** Returns the object with the settings used for calls to listEventCreateRules. */
+  public PagedCallSettings<
+          ListEventCreateRulesRequest,
+          ListEventCreateRulesResponse,
+          ListEventCreateRulesPagedResponse>
+      listEventCreateRulesSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).listEventCreateRulesSettings();
+  }
+
+  /** Returns the object with the settings used for calls to createEventCreateRule. */
+  public UnaryCallSettings<CreateEventCreateRuleRequest, EventCreateRule>
+      createEventCreateRuleSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).createEventCreateRuleSettings();
+  }
+
+  /** Returns the object with the settings used for calls to updateEventCreateRule. */
+  public UnaryCallSettings<UpdateEventCreateRuleRequest, EventCreateRule>
+      updateEventCreateRuleSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).updateEventCreateRuleSettings();
+  }
+
+  /** Returns the object with the settings used for calls to deleteEventCreateRule. */
+  public UnaryCallSettings<DeleteEventCreateRuleRequest, Empty> deleteEventCreateRuleSettings() {
+    return ((AnalyticsAdminServiceStubSettings) getStubSettings()).deleteEventCreateRuleSettings();
   }
 
   public static final AnalyticsAdminServiceSettings create(AnalyticsAdminServiceStubSettings stub)
@@ -1564,6 +1655,37 @@ public class AnalyticsAdminServiceSettings extends ClientSettings<AnalyticsAdmin
       return getStubSettingsBuilder().deleteExpandedDataSetSettings();
     }
 
+    /** Returns the builder for the settings used for calls to getChannelGroup. */
+    public UnaryCallSettings.Builder<GetChannelGroupRequest, ChannelGroup>
+        getChannelGroupSettings() {
+      return getStubSettingsBuilder().getChannelGroupSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to listChannelGroups. */
+    public PagedCallSettings.Builder<
+            ListChannelGroupsRequest, ListChannelGroupsResponse, ListChannelGroupsPagedResponse>
+        listChannelGroupsSettings() {
+      return getStubSettingsBuilder().listChannelGroupsSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to createChannelGroup. */
+    public UnaryCallSettings.Builder<CreateChannelGroupRequest, ChannelGroup>
+        createChannelGroupSettings() {
+      return getStubSettingsBuilder().createChannelGroupSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to updateChannelGroup. */
+    public UnaryCallSettings.Builder<UpdateChannelGroupRequest, ChannelGroup>
+        updateChannelGroupSettings() {
+      return getStubSettingsBuilder().updateChannelGroupSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to deleteChannelGroup. */
+    public UnaryCallSettings.Builder<DeleteChannelGroupRequest, Empty>
+        deleteChannelGroupSettings() {
+      return getStubSettingsBuilder().deleteChannelGroupSettings();
+    }
+
     /**
      * Returns the builder for the settings used for calls to setAutomatedGa4ConfigurationOptOut.
      */
@@ -1626,6 +1748,69 @@ public class AnalyticsAdminServiceSettings extends ClientSettings<AnalyticsAdmin
     public UnaryCallSettings.Builder<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse>
         listConnectedSiteTagsSettings() {
       return getStubSettingsBuilder().listConnectedSiteTagsSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to fetchConnectedGa4Property. */
+    public UnaryCallSettings.Builder<
+            FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>
+        fetchConnectedGa4PropertySettings() {
+      return getStubSettingsBuilder().fetchConnectedGa4PropertySettings();
+    }
+
+    /** Returns the builder for the settings used for calls to getAdSenseLink. */
+    public UnaryCallSettings.Builder<GetAdSenseLinkRequest, AdSenseLink> getAdSenseLinkSettings() {
+      return getStubSettingsBuilder().getAdSenseLinkSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to createAdSenseLink. */
+    public UnaryCallSettings.Builder<CreateAdSenseLinkRequest, AdSenseLink>
+        createAdSenseLinkSettings() {
+      return getStubSettingsBuilder().createAdSenseLinkSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to deleteAdSenseLink. */
+    public UnaryCallSettings.Builder<DeleteAdSenseLinkRequest, Empty> deleteAdSenseLinkSettings() {
+      return getStubSettingsBuilder().deleteAdSenseLinkSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to listAdSenseLinks. */
+    public PagedCallSettings.Builder<
+            ListAdSenseLinksRequest, ListAdSenseLinksResponse, ListAdSenseLinksPagedResponse>
+        listAdSenseLinksSettings() {
+      return getStubSettingsBuilder().listAdSenseLinksSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to getEventCreateRule. */
+    public UnaryCallSettings.Builder<GetEventCreateRuleRequest, EventCreateRule>
+        getEventCreateRuleSettings() {
+      return getStubSettingsBuilder().getEventCreateRuleSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to listEventCreateRules. */
+    public PagedCallSettings.Builder<
+            ListEventCreateRulesRequest,
+            ListEventCreateRulesResponse,
+            ListEventCreateRulesPagedResponse>
+        listEventCreateRulesSettings() {
+      return getStubSettingsBuilder().listEventCreateRulesSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to createEventCreateRule. */
+    public UnaryCallSettings.Builder<CreateEventCreateRuleRequest, EventCreateRule>
+        createEventCreateRuleSettings() {
+      return getStubSettingsBuilder().createEventCreateRuleSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to updateEventCreateRule. */
+    public UnaryCallSettings.Builder<UpdateEventCreateRuleRequest, EventCreateRule>
+        updateEventCreateRuleSettings() {
+      return getStubSettingsBuilder().updateEventCreateRuleSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to deleteEventCreateRule. */
+    public UnaryCallSettings.Builder<DeleteEventCreateRuleRequest, Empty>
+        deleteEventCreateRuleSettings() {
+      return getStubSettingsBuilder().deleteEventCreateRuleSettings();
     }
 
     @Override

@@ -208,13 +208,16 @@ public interface SettingsOrBuilder
    * A map that maps a notification trigger to a Pub/Sub topic. Each time a
    * specified trigger occurs, Insights will notify the corresponding Pub/Sub
    * topic.
+   *
    * Keys are notification triggers. Supported keys are:
+   *
    * * "all-triggers": Notify each time any of the supported triggers occurs.
    * * "create-analysis": Notify each time an analysis is created.
    * * "create-conversation": Notify each time a conversation is created.
    * * "export-insights-data": Notify each time an export is complete.
    * * "update-conversation": Notify each time a conversation is updated via
    * UpdateConversation.
+   *
    * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * </pre>
@@ -229,13 +232,16 @@ public interface SettingsOrBuilder
    * A map that maps a notification trigger to a Pub/Sub topic. Each time a
    * specified trigger occurs, Insights will notify the corresponding Pub/Sub
    * topic.
+   *
    * Keys are notification triggers. Supported keys are:
+   *
    * * "all-triggers": Notify each time any of the supported triggers occurs.
    * * "create-analysis": Notify each time an analysis is created.
    * * "create-conversation": Notify each time a conversation is created.
    * * "export-insights-data": Notify each time an export is complete.
    * * "update-conversation": Notify each time a conversation is updated via
    * UpdateConversation.
+   *
    * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * </pre>
@@ -253,13 +259,16 @@ public interface SettingsOrBuilder
    * A map that maps a notification trigger to a Pub/Sub topic. Each time a
    * specified trigger occurs, Insights will notify the corresponding Pub/Sub
    * topic.
+   *
    * Keys are notification triggers. Supported keys are:
+   *
    * * "all-triggers": Notify each time any of the supported triggers occurs.
    * * "create-analysis": Notify each time an analysis is created.
    * * "create-conversation": Notify each time a conversation is created.
    * * "export-insights-data": Notify each time an export is complete.
    * * "update-conversation": Notify each time a conversation is updated via
    * UpdateConversation.
+   *
    * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * </pre>
@@ -274,13 +283,16 @@ public interface SettingsOrBuilder
    * A map that maps a notification trigger to a Pub/Sub topic. Each time a
    * specified trigger occurs, Insights will notify the corresponding Pub/Sub
    * topic.
+   *
    * Keys are notification triggers. Supported keys are:
+   *
    * * "all-triggers": Notify each time any of the supported triggers occurs.
    * * "create-analysis": Notify each time an analysis is created.
    * * "create-conversation": Notify each time a conversation is created.
    * * "export-insights-data": Notify each time an export is complete.
    * * "update-conversation": Notify each time a conversation is updated via
    * UpdateConversation.
+   *
    * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * </pre>
@@ -299,13 +311,16 @@ public interface SettingsOrBuilder
    * A map that maps a notification trigger to a Pub/Sub topic. Each time a
    * specified trigger occurs, Insights will notify the corresponding Pub/Sub
    * topic.
+   *
    * Keys are notification triggers. Supported keys are:
+   *
    * * "all-triggers": Notify each time any of the supported triggers occurs.
    * * "create-analysis": Notify each time an analysis is created.
    * * "create-conversation": Notify each time a conversation is created.
    * * "export-insights-data": Notify each time an export is complete.
    * * "update-conversation": Notify each time a conversation is updated via
    * UpdateConversation.
+   *
    * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * </pre>
@@ -352,4 +367,42 @@ public interface SettingsOrBuilder
    */
   com.google.cloud.contactcenterinsights.v1.Settings.AnalysisConfigOrBuilder
       getAnalysisConfigOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Default DLP redaction resources to be applied while ingesting
+   * conversations.
+   * </pre>
+   *
+   * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+   *
+   * @return Whether the redactionConfig field is set.
+   */
+  boolean hasRedactionConfig();
+  /**
+   *
+   *
+   * <pre>
+   * Default DLP redaction resources to be applied while ingesting
+   * conversations.
+   * </pre>
+   *
+   * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+   *
+   * @return The redactionConfig.
+   */
+  com.google.cloud.contactcenterinsights.v1.RedactionConfig getRedactionConfig();
+  /**
+   *
+   *
+   * <pre>
+   * Default DLP redaction resources to be applied while ingesting
+   * conversations.
+   * </pre>
+   *
+   * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+   */
+  com.google.cloud.contactcenterinsights.v1.RedactionConfigOrBuilder getRedactionConfigOrBuilder();
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,6 +40,7 @@ public class SyncCreateDataScan {
               .setParent(LocationName.of("[PROJECT]", "[LOCATION]").toString())
               .setDataScan(DataScan.newBuilder().build())
               .setDataScanId("dataScanId1260787906")
+              .setValidateOnly(true)
               .build();
       DataScan response = dataScanServiceClient.createDataScanAsync(request).get();
     }

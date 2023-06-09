@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -102,6 +102,11 @@ public class DocumentServiceSettings extends ClientSettings<DocumentServiceSetti
           SearchDocumentsRequest, SearchDocumentsResponse, SearchDocumentsPagedResponse>
       searchDocumentsSettings() {
     return ((DocumentServiceStubSettings) getStubSettings()).searchDocumentsSettings();
+  }
+
+  /** Returns the object with the settings used for calls to lockDocument. */
+  public UnaryCallSettings<LockDocumentRequest, Document> lockDocumentSettings() {
+    return ((DocumentServiceStubSettings) getStubSettings()).lockDocumentSettings();
   }
 
   /** Returns the object with the settings used for calls to fetchAcl. */
@@ -256,6 +261,11 @@ public class DocumentServiceSettings extends ClientSettings<DocumentServiceSetti
             SearchDocumentsRequest, SearchDocumentsResponse, SearchDocumentsPagedResponse>
         searchDocumentsSettings() {
       return getStubSettingsBuilder().searchDocumentsSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to lockDocument. */
+    public UnaryCallSettings.Builder<LockDocumentRequest, Document> lockDocumentSettings() {
+      return getStubSettingsBuilder().lockDocumentSettings();
     }
 
     /** Returns the builder for the settings used for calls to fetchAcl. */

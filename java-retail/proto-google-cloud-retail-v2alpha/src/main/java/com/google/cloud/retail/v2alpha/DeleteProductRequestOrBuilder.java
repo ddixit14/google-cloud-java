@@ -30,11 +30,14 @@ public interface DeleteProductRequestOrBuilder
    * Required. Full resource name of
    * [Product][google.cloud.retail.v2alpha.Product], such as
    * `projects/&#42;&#47;locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
+   *
    * If the caller does not have permission to delete the
    * [Product][google.cloud.retail.v2alpha.Product], regardless of whether or
    * not it exists, a PERMISSION_DENIED error is returned.
+   *
    * If the [Product][google.cloud.retail.v2alpha.Product] to delete does not
    * exist, a NOT_FOUND error is returned.
+   *
    * The [Product][google.cloud.retail.v2alpha.Product] to delete can neither be
    * a
    * [Product.Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]
@@ -43,6 +46,7 @@ public interface DeleteProductRequestOrBuilder
    * [Product][google.cloud.retail.v2alpha.Product] with more than one
    * [variants][google.cloud.retail.v2alpha.Product.Type.VARIANT]. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * All inventory information for the named
    * [Product][google.cloud.retail.v2alpha.Product] will be deleted.
    * </pre>
@@ -61,11 +65,14 @@ public interface DeleteProductRequestOrBuilder
    * Required. Full resource name of
    * [Product][google.cloud.retail.v2alpha.Product], such as
    * `projects/&#42;&#47;locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
+   *
    * If the caller does not have permission to delete the
    * [Product][google.cloud.retail.v2alpha.Product], regardless of whether or
    * not it exists, a PERMISSION_DENIED error is returned.
+   *
    * If the [Product][google.cloud.retail.v2alpha.Product] to delete does not
    * exist, a NOT_FOUND error is returned.
+   *
    * The [Product][google.cloud.retail.v2alpha.Product] to delete can neither be
    * a
    * [Product.Type.COLLECTION][google.cloud.retail.v2alpha.Product.Type.COLLECTION]
@@ -74,6 +81,7 @@ public interface DeleteProductRequestOrBuilder
    * [Product][google.cloud.retail.v2alpha.Product] with more than one
    * [variants][google.cloud.retail.v2alpha.Product.Type.VARIANT]. Otherwise, an
    * INVALID_ARGUMENT error is returned.
+   *
    * All inventory information for the named
    * [Product][google.cloud.retail.v2alpha.Product] will be deleted.
    * </pre>
@@ -85,4 +93,24 @@ public interface DeleteProductRequestOrBuilder
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString getNameBytes();
+
+  /**
+   *
+   *
+   * <pre>
+   * This value only applies to the case when the target product is of type
+   * PRIMARY.
+   * When deleting a product of VARIANT/COLLECTION type, this value
+   * will be ignored.
+   * When set to true, the subsequent variant products will be
+   * deleted.
+   * When set to false, if the primary product has active variant products, an
+   * error will be returned.
+   * </pre>
+   *
+   * <code>bool force = 4;</code>
+   *
+   * @return The force.
+   */
+  boolean getForce();
 }

@@ -70,8 +70,9 @@ public interface ExportMetadataRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The relative resource name of the metastore service to run export, in the
-   * following form:
+   * Required. The relative resource name of the metastore service to run
+   * export, in the following form:
+   *
    * `projects/{project_id}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -86,8 +87,9 @@ public interface ExportMetadataRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The relative resource name of the metastore service to run export, in the
-   * following form:
+   * Required. The relative resource name of the metastore service to run
+   * export, in the following form:
+   *
    * `projects/{project_id}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -103,13 +105,15 @@ public interface ExportMetadataRequestOrBuilder
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format).
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -124,13 +128,15 @@ public interface ExportMetadataRequestOrBuilder
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format).
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -146,7 +152,8 @@ public interface ExportMetadataRequestOrBuilder
    *
    *
    * <pre>
-   * Optional. The type of the database dump. If unspecified, defaults to `MYSQL`.
+   * Optional. The type of the database dump. If unspecified, defaults to
+   * `MYSQL`.
    * </pre>
    *
    * <code>
@@ -160,7 +167,8 @@ public interface ExportMetadataRequestOrBuilder
    *
    *
    * <pre>
-   * Optional. The type of the database dump. If unspecified, defaults to `MYSQL`.
+   * Optional. The type of the database dump. If unspecified, defaults to
+   * `MYSQL`.
    * </pre>
    *
    * <code>
@@ -171,5 +179,5 @@ public interface ExportMetadataRequestOrBuilder
    */
   com.google.cloud.metastore.v1.DatabaseDumpSpec.Type getDatabaseDumpType();
 
-  public com.google.cloud.metastore.v1.ExportMetadataRequest.DestinationCase getDestinationCase();
+  com.google.cloud.metastore.v1.ExportMetadataRequest.DestinationCase getDestinationCase();
 }

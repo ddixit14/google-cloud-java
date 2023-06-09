@@ -48,11 +48,6 @@ public final class CreateFunctionRequest extends com.google.protobuf.GeneratedMe
     return new CreateFunctionRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.functions.v2.FunctionsProto
         .internal_static_google_cloud_functions_v2_CreateFunctionRequest_descriptor;
@@ -191,6 +186,7 @@ public final class CreateFunctionRequest extends com.google.protobuf.GeneratedMe
    * <pre>
    * The ID to use for the function, which will become the final component of
    * the function's resource name.
+   *
    * This value should be 4-63 characters, and valid characters
    * are /[a-z][0-9]-/.
    * </pre>
@@ -217,6 +213,7 @@ public final class CreateFunctionRequest extends com.google.protobuf.GeneratedMe
    * <pre>
    * The ID to use for the function, which will become the final component of
    * the function's resource name.
+   *
    * This value should be 4-63 characters, and valid characters
    * are /[a-z][0-9]-/.
    * </pre>
@@ -964,6 +961,7 @@ public final class CreateFunctionRequest extends com.google.protobuf.GeneratedMe
      * <pre>
      * The ID to use for the function, which will become the final component of
      * the function's resource name.
+     *
      * This value should be 4-63 characters, and valid characters
      * are /[a-z][0-9]-/.
      * </pre>
@@ -989,6 +987,7 @@ public final class CreateFunctionRequest extends com.google.protobuf.GeneratedMe
      * <pre>
      * The ID to use for the function, which will become the final component of
      * the function's resource name.
+     *
      * This value should be 4-63 characters, and valid characters
      * are /[a-z][0-9]-/.
      * </pre>
@@ -1014,6 +1013,7 @@ public final class CreateFunctionRequest extends com.google.protobuf.GeneratedMe
      * <pre>
      * The ID to use for the function, which will become the final component of
      * the function's resource name.
+     *
      * This value should be 4-63 characters, and valid characters
      * are /[a-z][0-9]-/.
      * </pre>
@@ -1038,6 +1038,7 @@ public final class CreateFunctionRequest extends com.google.protobuf.GeneratedMe
      * <pre>
      * The ID to use for the function, which will become the final component of
      * the function's resource name.
+     *
      * This value should be 4-63 characters, and valid characters
      * are /[a-z][0-9]-/.
      * </pre>
@@ -1058,6 +1059,7 @@ public final class CreateFunctionRequest extends com.google.protobuf.GeneratedMe
      * <pre>
      * The ID to use for the function, which will become the final component of
      * the function's resource name.
+     *
      * This value should be 4-63 characters, and valid characters
      * are /[a-z][0-9]-/.
      * </pre>

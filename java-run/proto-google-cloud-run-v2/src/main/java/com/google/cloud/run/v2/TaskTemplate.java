@@ -52,11 +52,6 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
     return new TaskTemplate();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.run.v2.TaskTemplateProto
         .internal_static_google_cloud_run_v2_TaskTemplate_descriptor;
@@ -73,6 +68,8 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int retriesCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object retries_;
 
   public enum RetriesCase
@@ -269,6 +266,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Number of retries allowed per Task, before marking this Task failed.
+   * Defaults to 3.
    * </pre>
    *
    * <code>int32 max_retries = 3;</code>
@@ -284,6 +282,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Number of retries allowed per Task, before marking this Task failed.
+   * Defaults to 3.
    * </pre>
    *
    * <code>int32 max_retries = 3;</code>
@@ -307,6 +306,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
    * Max allowed time duration the Task may be active before the system will
    * actively try to mark it failed and kill associated containers. This applies
    * per attempt of a task, meaning each retry can run for the full timeout.
+   * Defaults to 600 seconds.
    * </pre>
    *
    * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -324,6 +324,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
    * Max allowed time duration the Task may be active before the system will
    * actively try to mark it failed and kill associated containers. This applies
    * per attempt of a task, meaning each retry can run for the full timeout.
+   * Defaults to 600 seconds.
    * </pre>
    *
    * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -341,6 +342,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
    * Max allowed time duration the Task may be active before the system will
    * actively try to mark it failed and kill associated containers. This applies
    * per attempt of a task, meaning each retry can run for the full timeout.
+   * Defaults to 600 seconds.
    * </pre>
    *
    * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -1914,6 +1916,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Number of retries allowed per Task, before marking this Task failed.
+     * Defaults to 3.
      * </pre>
      *
      * <code>int32 max_retries = 3;</code>
@@ -1928,6 +1931,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Number of retries allowed per Task, before marking this Task failed.
+     * Defaults to 3.
      * </pre>
      *
      * <code>int32 max_retries = 3;</code>
@@ -1945,6 +1949,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Number of retries allowed per Task, before marking this Task failed.
+     * Defaults to 3.
      * </pre>
      *
      * <code>int32 max_retries = 3;</code>
@@ -1964,6 +1969,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Number of retries allowed per Task, before marking this Task failed.
+     * Defaults to 3.
      * </pre>
      *
      * <code>int32 max_retries = 3;</code>
@@ -1992,6 +1998,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      * Max allowed time duration the Task may be active before the system will
      * actively try to mark it failed and kill associated containers. This applies
      * per attempt of a task, meaning each retry can run for the full timeout.
+     * Defaults to 600 seconds.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -2008,6 +2015,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      * Max allowed time duration the Task may be active before the system will
      * actively try to mark it failed and kill associated containers. This applies
      * per attempt of a task, meaning each retry can run for the full timeout.
+     * Defaults to 600 seconds.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -2028,6 +2036,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      * Max allowed time duration the Task may be active before the system will
      * actively try to mark it failed and kill associated containers. This applies
      * per attempt of a task, meaning each retry can run for the full timeout.
+     * Defaults to 600 seconds.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -2052,6 +2061,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      * Max allowed time duration the Task may be active before the system will
      * actively try to mark it failed and kill associated containers. This applies
      * per attempt of a task, meaning each retry can run for the full timeout.
+     * Defaults to 600 seconds.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -2073,6 +2083,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      * Max allowed time duration the Task may be active before the system will
      * actively try to mark it failed and kill associated containers. This applies
      * per attempt of a task, meaning each retry can run for the full timeout.
+     * Defaults to 600 seconds.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -2100,6 +2111,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      * Max allowed time duration the Task may be active before the system will
      * actively try to mark it failed and kill associated containers. This applies
      * per attempt of a task, meaning each retry can run for the full timeout.
+     * Defaults to 600 seconds.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -2121,6 +2133,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      * Max allowed time duration the Task may be active before the system will
      * actively try to mark it failed and kill associated containers. This applies
      * per attempt of a task, meaning each retry can run for the full timeout.
+     * Defaults to 600 seconds.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -2137,6 +2150,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      * Max allowed time duration the Task may be active before the system will
      * actively try to mark it failed and kill associated containers. This applies
      * per attempt of a task, meaning each retry can run for the full timeout.
+     * Defaults to 600 seconds.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 4;</code>
@@ -2155,6 +2169,7 @@ public final class TaskTemplate extends com.google.protobuf.GeneratedMessageV3
      * Max allowed time duration the Task may be active before the system will
      * actively try to mark it failed and kill associated containers. This applies
      * per attempt of a task, meaning each retry can run for the full timeout.
+     * Defaults to 600 seconds.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 4;</code>

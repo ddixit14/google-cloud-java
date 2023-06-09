@@ -47,11 +47,6 @@ public final class DependencyEdge extends com.google.protobuf.GeneratedMessageV3
     return new DependencyEdge();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.language.v1beta2.LanguageServiceProto
         .internal_static_google_cloud_language_v1beta2_DependencyEdge_descriptor;

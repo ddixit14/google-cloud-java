@@ -48,11 +48,6 @@ public final class IntentCoverage extends com.google.protobuf.GeneratedMessageV3
     return new IntentCoverage();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dialogflow.cx.v3beta1.TestCaseProto
         .internal_static_google_cloud_dialogflow_cx_v3beta1_IntentCoverage_descriptor;
@@ -102,7 +97,7 @@ public final class IntentCoverage extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Whether or not the intent is covered by at least one of the agent's
+     * Whether the intent is covered by at least one of the agent's
      * test cases.
      * </pre>
      *
@@ -139,11 +134,6 @@ public final class IntentCoverage extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Intent();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -218,7 +208,7 @@ public final class IntentCoverage extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Whether or not the intent is covered by at least one of the agent's
+     * Whether the intent is covered by at least one of the agent's
      * test cases.
      * </pre>
      *
@@ -714,7 +704,7 @@ public final class IntentCoverage extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Whether or not the intent is covered by at least one of the agent's
+       * Whether the intent is covered by at least one of the agent's
        * test cases.
        * </pre>
        *
@@ -730,7 +720,7 @@ public final class IntentCoverage extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Whether or not the intent is covered by at least one of the agent's
+       * Whether the intent is covered by at least one of the agent's
        * test cases.
        * </pre>
        *
@@ -750,7 +740,7 @@ public final class IntentCoverage extends com.google.protobuf.GeneratedMessageV3
        *
        *
        * <pre>
-       * Whether or not the intent is covered by at least one of the agent's
+       * Whether the intent is covered by at least one of the agent's
        * test cases.
        * </pre>
        *

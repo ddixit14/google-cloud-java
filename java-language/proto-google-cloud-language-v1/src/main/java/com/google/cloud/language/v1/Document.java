@@ -48,11 +48,6 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
     return new Document();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.language.v1.LanguageServiceProto
         .internal_static_google_cloud_language_v1_Document_descriptor;
@@ -226,6 +221,8 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int sourceCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object source_;
 
   public enum SourceCase

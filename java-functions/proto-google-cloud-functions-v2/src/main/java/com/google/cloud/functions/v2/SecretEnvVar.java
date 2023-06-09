@@ -52,11 +52,6 @@ public final class SecretEnvVar extends com.google.protobuf.GeneratedMessageV3
     return new SecretEnvVar();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.functions.v2.FunctionsProto
         .internal_static_google_cloud_functions_v2_SecretEnvVar_descriptor;

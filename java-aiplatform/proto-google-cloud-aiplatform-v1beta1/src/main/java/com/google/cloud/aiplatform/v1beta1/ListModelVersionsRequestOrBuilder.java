@@ -71,8 +71,10 @@ public interface ListModelVersionsRequestOrBuilder
    * <pre>
    * The standard list page token.
    * Typically obtained via
-   * [ListModelVersionsResponse.next_page_token][google.cloud.aiplatform.v1beta1.ListModelVersionsResponse.next_page_token]
-   * of the previous [ModelService.ListModelversions][] call.
+   * [next_page_token][google.cloud.aiplatform.v1beta1.ListModelVersionsResponse.next_page_token]
+   * of the previous
+   * [ListModelVersions][google.cloud.aiplatform.v1beta1.ModelService.ListModelVersions]
+   * call.
    * </pre>
    *
    * <code>string page_token = 3;</code>
@@ -86,8 +88,10 @@ public interface ListModelVersionsRequestOrBuilder
    * <pre>
    * The standard list page token.
    * Typically obtained via
-   * [ListModelVersionsResponse.next_page_token][google.cloud.aiplatform.v1beta1.ListModelVersionsResponse.next_page_token]
-   * of the previous [ModelService.ListModelversions][] call.
+   * [next_page_token][google.cloud.aiplatform.v1beta1.ListModelVersionsResponse.next_page_token]
+   * of the previous
+   * [ListModelVersions][google.cloud.aiplatform.v1beta1.ModelService.ListModelVersions]
+   * call.
    * </pre>
    *
    * <code>string page_token = 3;</code>
@@ -102,11 +106,14 @@ public interface ListModelVersionsRequestOrBuilder
    * <pre>
    * An expression for filtering the results of the request. For field names
    * both snake_case and camelCase are supported.
+   *
    *   * `labels` supports general map functions that is:
    *     * `labels.key=value` - key:value equality
    *     * `labels.key:* or labels:key - key existence
    *     * A key including a space must be quoted. `labels."a key"`.
+   *
    * Some examples:
+   *
    *   * `labels.myKey="myValue"`
    * </pre>
    *
@@ -121,11 +128,14 @@ public interface ListModelVersionsRequestOrBuilder
    * <pre>
    * An expression for filtering the results of the request. For field names
    * both snake_case and camelCase are supported.
+   *
    *   * `labels` supports general map functions that is:
    *     * `labels.key=value` - key:value equality
    *     * `labels.key:* or labels:key - key existence
    *     * A key including a space must be quoted. `labels."a key"`.
+   *
    * Some examples:
+   *
    *   * `labels.myKey="myValue"`
    * </pre>
    *
@@ -177,8 +187,10 @@ public interface ListModelVersionsRequestOrBuilder
    * A comma-separated list of fields to order by, sorted in ascending order.
    * Use "desc" after a field name for descending.
    * Supported fields:
+   *
    *   * `create_time`
    *   * `update_time`
+   *
    * Example: `update_time asc, create_time desc`.
    * </pre>
    *
@@ -194,8 +206,10 @@ public interface ListModelVersionsRequestOrBuilder
    * A comma-separated list of fields to order by, sorted in ascending order.
    * Use "desc" after a field name for descending.
    * Supported fields:
+   *
    *   * `create_time`
    *   * `update_time`
+   *
    * Example: `update_time asc, create_time desc`.
    * </pre>
    *

@@ -48,11 +48,6 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
     return new ResourceOptions();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.gkehub.v1beta1.MembershipOuterClass
         .internal_static_google_cloud_gkehub_v1beta1_ResourceOptions_descriptor;
@@ -76,9 +71,9 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
    *
    *
    * <pre>
-   * Optional. The Connect agent version to use for connect_resources. Defaults to the
-   * latest GKE Connect version. The version must be a currently supported
-   * version, obsolete versions will be rejected.
+   * Optional. The Connect agent version to use for connect_resources. Defaults
+   * to the latest GKE Connect version. The version must be a currently
+   * supported version, obsolete versions will be rejected.
    * </pre>
    *
    * <code>string connect_version = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -101,9 +96,9 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
    *
    *
    * <pre>
-   * Optional. The Connect agent version to use for connect_resources. Defaults to the
-   * latest GKE Connect version. The version must be a currently supported
-   * version, obsolete versions will be rejected.
+   * Optional. The Connect agent version to use for connect_resources. Defaults
+   * to the latest GKE Connect version. The version must be a currently
+   * supported version, obsolete versions will be rejected.
    * </pre>
    *
    * <code>string connect_version = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -152,8 +147,8 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
    *
    *
    * <pre>
-   * Optional. Major version of the Kubernetes cluster. This is only used to determine
-   * which version to use for the CustomResourceDefinition resources,
+   * Optional. Major version of the Kubernetes cluster. This is only used to
+   * determine which version to use for the CustomResourceDefinition resources,
    * `apiextensions/v1beta1` or`apiextensions/v1`.
    * </pre>
    *
@@ -177,8 +172,8 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
    *
    *
    * <pre>
-   * Optional. Major version of the Kubernetes cluster. This is only used to determine
-   * which version to use for the CustomResourceDefinition resources,
+   * Optional. Major version of the Kubernetes cluster. This is only used to
+   * determine which version to use for the CustomResourceDefinition resources,
    * `apiextensions/v1beta1` or`apiextensions/v1`.
    * </pre>
    *
@@ -592,9 +587,9 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. The Connect agent version to use for connect_resources. Defaults to the
-     * latest GKE Connect version. The version must be a currently supported
-     * version, obsolete versions will be rejected.
+     * Optional. The Connect agent version to use for connect_resources. Defaults
+     * to the latest GKE Connect version. The version must be a currently
+     * supported version, obsolete versions will be rejected.
      * </pre>
      *
      * <code>string connect_version = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -616,9 +611,9 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. The Connect agent version to use for connect_resources. Defaults to the
-     * latest GKE Connect version. The version must be a currently supported
-     * version, obsolete versions will be rejected.
+     * Optional. The Connect agent version to use for connect_resources. Defaults
+     * to the latest GKE Connect version. The version must be a currently
+     * supported version, obsolete versions will be rejected.
      * </pre>
      *
      * <code>string connect_version = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -640,9 +635,9 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. The Connect agent version to use for connect_resources. Defaults to the
-     * latest GKE Connect version. The version must be a currently supported
-     * version, obsolete versions will be rejected.
+     * Optional. The Connect agent version to use for connect_resources. Defaults
+     * to the latest GKE Connect version. The version must be a currently
+     * supported version, obsolete versions will be rejected.
      * </pre>
      *
      * <code>string connect_version = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -663,9 +658,9 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. The Connect agent version to use for connect_resources. Defaults to the
-     * latest GKE Connect version. The version must be a currently supported
-     * version, obsolete versions will be rejected.
+     * Optional. The Connect agent version to use for connect_resources. Defaults
+     * to the latest GKE Connect version. The version must be a currently
+     * supported version, obsolete versions will be rejected.
      * </pre>
      *
      * <code>string connect_version = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -682,9 +677,9 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. The Connect agent version to use for connect_resources. Defaults to the
-     * latest GKE Connect version. The version must be a currently supported
-     * version, obsolete versions will be rejected.
+     * Optional. The Connect agent version to use for connect_resources. Defaults
+     * to the latest GKE Connect version. The version must be a currently
+     * supported version, obsolete versions will be rejected.
      * </pre>
      *
      * <code>string connect_version = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -770,8 +765,8 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. Major version of the Kubernetes cluster. This is only used to determine
-     * which version to use for the CustomResourceDefinition resources,
+     * Optional. Major version of the Kubernetes cluster. This is only used to
+     * determine which version to use for the CustomResourceDefinition resources,
      * `apiextensions/v1beta1` or`apiextensions/v1`.
      * </pre>
      *
@@ -794,8 +789,8 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. Major version of the Kubernetes cluster. This is only used to determine
-     * which version to use for the CustomResourceDefinition resources,
+     * Optional. Major version of the Kubernetes cluster. This is only used to
+     * determine which version to use for the CustomResourceDefinition resources,
      * `apiextensions/v1beta1` or`apiextensions/v1`.
      * </pre>
      *
@@ -818,8 +813,8 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. Major version of the Kubernetes cluster. This is only used to determine
-     * which version to use for the CustomResourceDefinition resources,
+     * Optional. Major version of the Kubernetes cluster. This is only used to
+     * determine which version to use for the CustomResourceDefinition resources,
      * `apiextensions/v1beta1` or`apiextensions/v1`.
      * </pre>
      *
@@ -841,8 +836,8 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. Major version of the Kubernetes cluster. This is only used to determine
-     * which version to use for the CustomResourceDefinition resources,
+     * Optional. Major version of the Kubernetes cluster. This is only used to
+     * determine which version to use for the CustomResourceDefinition resources,
      * `apiextensions/v1beta1` or`apiextensions/v1`.
      * </pre>
      *
@@ -860,8 +855,8 @@ public final class ResourceOptions extends com.google.protobuf.GeneratedMessageV
      *
      *
      * <pre>
-     * Optional. Major version of the Kubernetes cluster. This is only used to determine
-     * which version to use for the CustomResourceDefinition resources,
+     * Optional. Major version of the Kubernetes cluster. This is only used to
+     * determine which version to use for the CustomResourceDefinition resources,
      * `apiextensions/v1beta1` or`apiextensions/v1`.
      * </pre>
      *

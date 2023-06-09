@@ -50,11 +50,6 @@ public final class Condition extends com.google.protobuf.GeneratedMessageV3
     return new Condition();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.run.v2.ConditionProto
         .internal_static_google_cloud_run_v2_Condition_descriptor;
@@ -1313,6 +1308,16 @@ public final class Condition extends com.google.protobuf.GeneratedMessageV3
      * <code>CANCELLED = 3;</code>
      */
     CANCELLED(3),
+    /**
+     *
+     *
+     * <pre>
+     * The execution is in the process of being cancelled.
+     * </pre>
+     *
+     * <code>CANCELLING = 4;</code>
+     */
+    CANCELLING(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -1357,6 +1362,16 @@ public final class Condition extends com.google.protobuf.GeneratedMessageV3
      * <code>CANCELLED = 3;</code>
      */
     public static final int CANCELLED_VALUE = 3;
+    /**
+     *
+     *
+     * <pre>
+     * The execution is in the process of being cancelled.
+     * </pre>
+     *
+     * <code>CANCELLING = 4;</code>
+     */
+    public static final int CANCELLING_VALUE = 4;
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -1390,6 +1405,8 @@ public final class Condition extends com.google.protobuf.GeneratedMessageV3
           return NON_ZERO_EXIT_CODE;
         case 3:
           return CANCELLED;
+        case 4:
+          return CANCELLING;
         default:
           return null;
       }
@@ -1446,6 +1463,8 @@ public final class Condition extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int reasonsCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object reasons_;
 
   public enum ReasonsCase

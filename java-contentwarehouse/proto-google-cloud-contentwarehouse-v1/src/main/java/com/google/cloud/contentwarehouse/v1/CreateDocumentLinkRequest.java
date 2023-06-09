@@ -47,11 +47,6 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
     return new CreateDocumentLinkRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contentwarehouse.v1.DocumentLinkServiceProto
         .internal_static_google_cloud_contentwarehouse_v1_CreateDocumentLinkRequest_descriptor;
@@ -134,7 +129,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
    *
    *
    * <pre>
-   * Required. Document links associated with the source documents (source_document_id).
+   * Required. Document links associated with the source documents
+   * (source_document_id).
    * </pre>
    *
    * <code>
@@ -151,7 +147,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
    *
    *
    * <pre>
-   * Required. Document links associated with the source documents (source_document_id).
+   * Required. Document links associated with the source documents
+   * (source_document_id).
    * </pre>
    *
    * <code>
@@ -170,7 +167,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
    *
    *
    * <pre>
-   * Required. Document links associated with the source documents (source_document_id).
+   * Required. Document links associated with the source documents
+   * (source_document_id).
    * </pre>
    *
    * <code>
@@ -789,7 +787,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. Document links associated with the source documents (source_document_id).
+     * Required. Document links associated with the source documents
+     * (source_document_id).
      * </pre>
      *
      * <code>
@@ -805,7 +804,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. Document links associated with the source documents (source_document_id).
+     * Required. Document links associated with the source documents
+     * (source_document_id).
      * </pre>
      *
      * <code>
@@ -827,7 +827,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. Document links associated with the source documents (source_document_id).
+     * Required. Document links associated with the source documents
+     * (source_document_id).
      * </pre>
      *
      * <code>
@@ -851,7 +852,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. Document links associated with the source documents (source_document_id).
+     * Required. Document links associated with the source documents
+     * (source_document_id).
      * </pre>
      *
      * <code>
@@ -873,7 +875,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. Document links associated with the source documents (source_document_id).
+     * Required. Document links associated with the source documents
+     * (source_document_id).
      * </pre>
      *
      * <code>
@@ -901,7 +904,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. Document links associated with the source documents (source_document_id).
+     * Required. Document links associated with the source documents
+     * (source_document_id).
      * </pre>
      *
      * <code>
@@ -922,7 +926,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. Document links associated with the source documents (source_document_id).
+     * Required. Document links associated with the source documents
+     * (source_document_id).
      * </pre>
      *
      * <code>
@@ -938,7 +943,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. Document links associated with the source documents (source_document_id).
+     * Required. Document links associated with the source documents
+     * (source_document_id).
      * </pre>
      *
      * <code>
@@ -958,7 +964,8 @@ public final class CreateDocumentLinkRequest extends com.google.protobuf.Generat
      *
      *
      * <pre>
-     * Required. Document links associated with the source documents (source_document_id).
+     * Required. Document links associated with the source documents
+     * (source_document_id).
      * </pre>
      *
      * <code>

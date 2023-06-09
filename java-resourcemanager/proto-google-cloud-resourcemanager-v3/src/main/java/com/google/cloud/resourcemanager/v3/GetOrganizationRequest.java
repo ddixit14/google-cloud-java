@@ -48,11 +48,6 @@ public final class GetOrganizationRequest extends com.google.protobuf.GeneratedM
     return new GetOrganizationRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.OrganizationsProto
         .internal_static_google_cloud_resourcemanager_v3_GetOrganizationRequest_descriptor;
@@ -76,9 +71,9 @@ public final class GetOrganizationRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The resource name of the Organization to fetch. This is the organization's
-   * relative path in the API, formatted as "organizations/[organizationId]".
-   * For example, "organizations/1234".
+   * Required. The resource name of the Organization to fetch. This is the
+   * organization's relative path in the API, formatted as
+   * "organizations/[organizationId]". For example, "organizations/1234".
    * </pre>
    *
    * <code>
@@ -103,9 +98,9 @@ public final class GetOrganizationRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The resource name of the Organization to fetch. This is the organization's
-   * relative path in the API, formatted as "organizations/[organizationId]".
-   * For example, "organizations/1234".
+   * Required. The resource name of the Organization to fetch. This is the
+   * organization's relative path in the API, formatted as
+   * "organizations/[organizationId]". For example, "organizations/1234".
    * </pre>
    *
    * <code>
@@ -476,9 +471,9 @@ public final class GetOrganizationRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The resource name of the Organization to fetch. This is the organization's
-     * relative path in the API, formatted as "organizations/[organizationId]".
-     * For example, "organizations/1234".
+     * Required. The resource name of the Organization to fetch. This is the
+     * organization's relative path in the API, formatted as
+     * "organizations/[organizationId]". For example, "organizations/1234".
      * </pre>
      *
      * <code>
@@ -502,9 +497,9 @@ public final class GetOrganizationRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The resource name of the Organization to fetch. This is the organization's
-     * relative path in the API, formatted as "organizations/[organizationId]".
-     * For example, "organizations/1234".
+     * Required. The resource name of the Organization to fetch. This is the
+     * organization's relative path in the API, formatted as
+     * "organizations/[organizationId]". For example, "organizations/1234".
      * </pre>
      *
      * <code>
@@ -528,9 +523,9 @@ public final class GetOrganizationRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The resource name of the Organization to fetch. This is the organization's
-     * relative path in the API, formatted as "organizations/[organizationId]".
-     * For example, "organizations/1234".
+     * Required. The resource name of the Organization to fetch. This is the
+     * organization's relative path in the API, formatted as
+     * "organizations/[organizationId]". For example, "organizations/1234".
      * </pre>
      *
      * <code>
@@ -553,9 +548,9 @@ public final class GetOrganizationRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The resource name of the Organization to fetch. This is the organization's
-     * relative path in the API, formatted as "organizations/[organizationId]".
-     * For example, "organizations/1234".
+     * Required. The resource name of the Organization to fetch. This is the
+     * organization's relative path in the API, formatted as
+     * "organizations/[organizationId]". For example, "organizations/1234".
      * </pre>
      *
      * <code>
@@ -574,9 +569,9 @@ public final class GetOrganizationRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The resource name of the Organization to fetch. This is the organization's
-     * relative path in the API, formatted as "organizations/[organizationId]".
-     * For example, "organizations/1234".
+     * Required. The resource name of the Organization to fetch. This is the
+     * organization's relative path in the API, formatted as
+     * "organizations/[organizationId]". For example, "organizations/1234".
      * </pre>
      *
      * <code>

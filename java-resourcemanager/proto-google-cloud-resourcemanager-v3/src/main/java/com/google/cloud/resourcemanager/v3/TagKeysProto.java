@@ -32,6 +32,10 @@ public final class TagKeysProto {
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_resourcemanager_v3_TagKey_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_resourcemanager_v3_TagKey_PurposeDataEntry_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_resourcemanager_v3_TagKey_PurposeDataEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
       internal_static_google_cloud_resourcemanager_v3_ListTagKeysRequest_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_resourcemanager_v3_ListTagKeysRequest_fieldAccessorTable;
@@ -43,6 +47,10 @@ public final class TagKeysProto {
       internal_static_google_cloud_resourcemanager_v3_GetTagKeyRequest_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_cloud_resourcemanager_v3_GetTagKeyRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_google_cloud_resourcemanager_v3_GetNamespacedTagKeyRequest_descriptor;
+  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_cloud_resourcemanager_v3_GetNamespacedTagKeyRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
       internal_static_google_cloud_resourcemanager_v3_CreateTagKeyRequest_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -85,77 +93,91 @@ public final class TagKeysProto {
           + "/v1/policy.proto\032#google/longrunning/ope"
           + "rations.proto\032 google/protobuf/field_mas"
           + "k.proto\032\037google/protobuf/timestamp.proto"
-          + "\"\315\002\n\006TagKey\022\021\n\004name\030\001 \001(\tB\003\340A\005\022\023\n\006parent"
-          + "\030\002 \001(\tB\003\340A\005\022\032\n\nshort_name\030\003 \001(\tB\006\340A\002\340A\005\022"
-          + "\037\n\017namespaced_name\030\004 \001(\tB\006\340A\003\340A\005\022\030\n\013desc"
-          + "ription\030\005 \001(\tB\003\340A\001\0224\n\013create_time\030\006 \001(\0132"
-          + "\032.google.protobuf.TimestampB\003\340A\003\0224\n\013upda"
-          + "te_time\030\007 \001(\0132\032.google.protobuf.Timestam"
-          + "pB\003\340A\003\022\021\n\004etag\030\010 \001(\tB\003\340A\001:E\352AB\n*cloudres"
-          + "ourcemanager.googleapis.com/TagKey\022\021tagK"
-          + "eys/{tag_key}R\001\001\"`\n\022ListTagKeysRequest\022\031"
-          + "\n\006parent\030\001 \001(\tB\t\340A\002\372A\003\022\001*\022\026\n\tpage_size\030\002"
-          + " \001(\005B\003\340A\001\022\027\n\npage_token\030\003 \001(\tB\003\340A\001\"i\n\023Li"
-          + "stTagKeysResponse\0229\n\010tag_keys\030\001 \003(\0132\'.go"
-          + "ogle.cloud.resourcemanager.v3.TagKey\022\027\n\017"
-          + "next_page_token\030\002 \001(\t\"T\n\020GetTagKeyReques"
-          + "t\022@\n\004name\030\001 \001(\tB2\340A\002\372A,\n*cloudresourcema"
-          + "nager.googleapis.com/TagKey\"p\n\023CreateTag"
-          + "KeyRequest\022=\n\007tag_key\030\001 \001(\0132\'.google.clo"
-          + "ud.resourcemanager.v3.TagKeyB\003\340A\002\022\032\n\rval"
-          + "idate_only\030\002 \001(\010B\003\340A\001\"\026\n\024CreateTagKeyMet"
-          + "adata\"\234\001\n\023UpdateTagKeyRequest\022=\n\007tag_key"
-          + "\030\001 \001(\0132\'.google.cloud.resourcemanager.v3"
-          + ".TagKeyB\003\340A\002\022/\n\013update_mask\030\002 \001(\0132\032.goog"
-          + "le.protobuf.FieldMask\022\025\n\rvalidate_only\030\003"
-          + " \001(\010\"\026\n\024UpdateTagKeyMetadata\"\206\001\n\023DeleteT"
-          + "agKeyRequest\022@\n\004name\030\001 \001(\tB2\340A\002\372A,\n*clou"
-          + "dresourcemanager.googleapis.com/TagKey\022\032"
-          + "\n\rvalidate_only\030\002 \001(\010B\003\340A\001\022\021\n\004etag\030\003 \001(\t"
-          + "B\003\340A\001\"\026\n\024DeleteTagKeyMetadata2\277\013\n\007TagKey"
-          + "s\022\226\001\n\013ListTagKeys\0223.google.cloud.resourc"
-          + "emanager.v3.ListTagKeysRequest\0324.google."
-          + "cloud.resourcemanager.v3.ListTagKeysResp"
-          + "onse\"\034\202\323\344\223\002\r\022\013/v3/tagKeys\332A\006parent\022\214\001\n\tG"
-          + "etTagKey\0221.google.cloud.resourcemanager."
-          + "v3.GetTagKeyRequest\032\'.google.cloud.resou"
-          + "rcemanager.v3.TagKey\"#\202\323\344\223\002\026\022\024/v3/{name="
-          + "tagKeys/*}\332A\004name\022\254\001\n\014CreateTagKey\0224.goo"
-          + "gle.cloud.resourcemanager.v3.CreateTagKe"
-          + "yRequest\032\035.google.longrunning.Operation\""
-          + "G\202\323\344\223\002\026\"\013/v3/tagKeys:\007tag_key\332A\007tag_key\312"
-          + "A\036\n\006TagKey\022\024CreateTagKeyMetadata\022\311\001\n\014Upd"
-          + "ateTagKey\0224.google.cloud.resourcemanager"
-          + ".v3.UpdateTagKeyRequest\032\035.google.longrun"
-          + "ning.Operation\"d\202\323\344\223\002\'2\034/v3/{tag_key.nam"
-          + "e=tagKeys/*}:\007tag_key\332A\023tag_key,update_m"
-          + "ask\312A\036\n\006TagKey\022\024UpdateTagKeyMetadata\022\251\001\n"
-          + "\014DeleteTagKey\0224.google.cloud.resourceman"
-          + "ager.v3.DeleteTagKeyRequest\032\035.google.lon"
-          + "grunning.Operation\"D\202\323\344\223\002\026*\024/v3/{name=ta"
-          + "gKeys/*}\332A\004name\312A\036\n\006TagKey\022\024DeleteTagKey"
-          + "Metadata\022\206\001\n\014GetIamPolicy\022\".google.iam.v"
-          + "1.GetIamPolicyRequest\032\025.google.iam.v1.Po"
-          + "licy\";\202\323\344\223\002*\"%/v3/{resource=tagKeys/*}:g"
-          + "etIamPolicy:\001*\332A\010resource\022\215\001\n\014SetIamPoli"
-          + "cy\022\".google.iam.v1.SetIamPolicyRequest\032\025"
-          + ".google.iam.v1.Policy\"B\202\323\344\223\002*\"%/v3/{reso"
-          + "urce=tagKeys/*}:setIamPolicy:\001*\332A\017resour"
-          + "ce,policy\022\270\001\n\022TestIamPermissions\022(.googl"
-          + "e.iam.v1.TestIamPermissionsRequest\032).goo"
-          + "gle.iam.v1.TestIamPermissionsResponse\"M\202"
-          + "\323\344\223\0020\"+/v3/{resource=tagKeys/*}:testIamP"
-          + "ermissions:\001*\332A\024resource,permissions\032\220\001\312"
-          + "A#cloudresourcemanager.googleapis.com\322Ag"
-          + "https://www.googleapis.com/auth/cloud-pl"
-          + "atform,https://www.googleapis.com/auth/c"
-          + "loud-platform.read-onlyB\355\001\n#com.google.c"
-          + "loud.resourcemanager.v3B\014TagKeysProtoP\001Z"
-          + "Mcloud.google.com/go/resourcemanager/api"
-          + "v3/resourcemanagerpb;resourcemanagerpb\252\002"
-          + "\037Google.Cloud.ResourceManager.V3\312\002\037Googl"
-          + "e\\Cloud\\ResourceManager\\V3\352\002\"Google::Clo"
-          + "ud::ResourceManager::V3b\006proto3"
+          + "\"\234\004\n\006TagKey\022\022\n\004name\030\001 \001(\tB\004\342A\001\005\022\024\n\006paren"
+          + "t\030\002 \001(\tB\004\342A\001\005\022\031\n\nshort_name\030\003 \001(\tB\005\342A\002\002\005"
+          + "\022\036\n\017namespaced_name\030\004 \001(\tB\005\342A\002\003\005\022\031\n\013desc"
+          + "ription\030\005 \001(\tB\004\342A\001\001\0225\n\013create_time\030\006 \001(\013"
+          + "2\032.google.protobuf.TimestampB\004\342A\001\003\0225\n\013up"
+          + "date_time\030\007 \001(\0132\032.google.protobuf.Timest"
+          + "ampB\004\342A\001\003\022\022\n\004etag\030\010 \001(\tB\004\342A\001\001\022?\n\007purpose"
+          + "\030\013 \001(\0162(.google.cloud.resourcemanager.v3"
+          + ".PurposeB\004\342A\001\001\022T\n\014purpose_data\030\014 \003(\01328.g"
+          + "oogle.cloud.resourcemanager.v3.TagKey.Pu"
+          + "rposeDataEntryB\004\342A\001\001\0322\n\020PurposeDataEntry"
+          + "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:E\352AB\n*c"
+          + "loudresourcemanager.googleapis.com/TagKe"
+          + "y\022\021tagKeys/{tag_key}R\001\001\"c\n\022ListTagKeysRe"
+          + "quest\022\032\n\006parent\030\001 \001(\tB\n\342A\001\002\372A\003\022\001*\022\027\n\tpag"
+          + "e_size\030\002 \001(\005B\004\342A\001\001\022\030\n\npage_token\030\003 \001(\tB\004"
+          + "\342A\001\001\"i\n\023ListTagKeysResponse\0229\n\010tag_keys\030"
+          + "\001 \003(\0132\'.google.cloud.resourcemanager.v3."
+          + "TagKey\022\027\n\017next_page_token\030\002 \001(\t\"U\n\020GetTa"
+          + "gKeyRequest\022A\n\004name\030\001 \001(\tB3\342A\001\002\372A,\n*clou"
+          + "dresourcemanager.googleapis.com/TagKey\"_"
+          + "\n\032GetNamespacedTagKeyRequest\022A\n\004name\030\001 \001"
+          + "(\tB3\342A\001\002\372A,\n*cloudresourcemanager.google"
+          + "apis.com/TagKey\"r\n\023CreateTagKeyRequest\022>"
+          + "\n\007tag_key\030\001 \001(\0132\'.google.cloud.resourcem"
+          + "anager.v3.TagKeyB\004\342A\001\002\022\033\n\rvalidate_only\030"
+          + "\002 \001(\010B\004\342A\001\001\"\026\n\024CreateTagKeyMetadata\"\235\001\n\023"
+          + "UpdateTagKeyRequest\022>\n\007tag_key\030\001 \001(\0132\'.g"
+          + "oogle.cloud.resourcemanager.v3.TagKeyB\004\342"
+          + "A\001\002\022/\n\013update_mask\030\002 \001(\0132\032.google.protob"
+          + "uf.FieldMask\022\025\n\rvalidate_only\030\003 \001(\010\"\026\n\024U"
+          + "pdateTagKeyMetadata\"\211\001\n\023DeleteTagKeyRequ"
+          + "est\022A\n\004name\030\001 \001(\tB3\342A\001\002\372A,\n*cloudresourc"
+          + "emanager.googleapis.com/TagKey\022\033\n\rvalida"
+          + "te_only\030\002 \001(\010B\004\342A\001\001\022\022\n\004etag\030\003 \001(\tB\004\342A\001\001\""
+          + "\026\n\024DeleteTagKeyMetadata*4\n\007Purpose\022\027\n\023PU"
+          + "RPOSE_UNSPECIFIED\020\000\022\020\n\014GCE_FIREWALL\020\0012\344\014"
+          + "\n\007TagKeys\022\226\001\n\013ListTagKeys\0223.google.cloud"
+          + ".resourcemanager.v3.ListTagKeysRequest\0324"
+          + ".google.cloud.resourcemanager.v3.ListTag"
+          + "KeysResponse\"\034\332A\006parent\202\323\344\223\002\r\022\013/v3/tagKe"
+          + "ys\022\214\001\n\tGetTagKey\0221.google.cloud.resource"
+          + "manager.v3.GetTagKeyRequest\032\'.google.clo"
+          + "ud.resourcemanager.v3.TagKey\"#\332A\004name\202\323\344"
+          + "\223\002\026\022\024/v3/{name=tagKeys/*}\022\242\001\n\023GetNamespa"
+          + "cedTagKey\022;.google.cloud.resourcemanager"
+          + ".v3.GetNamespacedTagKeyRequest\032\'.google."
+          + "cloud.resourcemanager.v3.TagKey\"%\332A\004name"
+          + "\202\323\344\223\002\030\022\026/v3/tagKeys/namespaced\022\254\001\n\014Creat"
+          + "eTagKey\0224.google.cloud.resourcemanager.v"
+          + "3.CreateTagKeyRequest\032\035.google.longrunni"
+          + "ng.Operation\"G\312A\036\n\006TagKey\022\024CreateTagKeyM"
+          + "etadata\332A\007tag_key\202\323\344\223\002\026\"\013/v3/tagKeys:\007ta"
+          + "g_key\022\311\001\n\014UpdateTagKey\0224.google.cloud.re"
+          + "sourcemanager.v3.UpdateTagKeyRequest\032\035.g"
+          + "oogle.longrunning.Operation\"d\312A\036\n\006TagKey"
+          + "\022\024UpdateTagKeyMetadata\332A\023tag_key,update_"
+          + "mask\202\323\344\223\002\'2\034/v3/{tag_key.name=tagKeys/*}"
+          + ":\007tag_key\022\251\001\n\014DeleteTagKey\0224.google.clou"
+          + "d.resourcemanager.v3.DeleteTagKeyRequest"
+          + "\032\035.google.longrunning.Operation\"D\312A\036\n\006Ta"
+          + "gKey\022\024DeleteTagKeyMetadata\332A\004name\202\323\344\223\002\026*"
+          + "\024/v3/{name=tagKeys/*}\022\206\001\n\014GetIamPolicy\022\""
+          + ".google.iam.v1.GetIamPolicyRequest\032\025.goo"
+          + "gle.iam.v1.Policy\";\332A\010resource\202\323\344\223\002*\"%/v"
+          + "3/{resource=tagKeys/*}:getIamPolicy:\001*\022\215"
+          + "\001\n\014SetIamPolicy\022\".google.iam.v1.SetIamPo"
+          + "licyRequest\032\025.google.iam.v1.Policy\"B\332A\017r"
+          + "esource,policy\202\323\344\223\002*\"%/v3/{resource=tagK"
+          + "eys/*}:setIamPolicy:\001*\022\270\001\n\022TestIamPermis"
+          + "sions\022(.google.iam.v1.TestIamPermissions"
+          + "Request\032).google.iam.v1.TestIamPermissio"
+          + "nsResponse\"M\332A\024resource,permissions\202\323\344\223\002"
+          + "0\"+/v3/{resource=tagKeys/*}:testIamPermi"
+          + "ssions:\001*\032\220\001\312A#cloudresourcemanager.goog"
+          + "leapis.com\322Aghttps://www.googleapis.com/"
+          + "auth/cloud-platform,https://www.googleap"
+          + "is.com/auth/cloud-platform.read-onlyB\355\001\n"
+          + "#com.google.cloud.resourcemanager.v3B\014Ta"
+          + "gKeysProtoP\001ZMcloud.google.com/go/resour"
+          + "cemanager/apiv3/resourcemanagerpb;resour"
+          + "cemanagerpb\252\002\037Google.Cloud.ResourceManag"
+          + "er.V3\312\002\037Google\\Cloud\\ResourceManager\\V3\352"
+          + "\002\"Google::Cloud::ResourceManager::V3b\006pr"
+          + "oto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -185,6 +207,16 @@ public final class TagKeysProto {
               "CreateTime",
               "UpdateTime",
               "Etag",
+              "Purpose",
+              "PurposeData",
+            });
+    internal_static_google_cloud_resourcemanager_v3_TagKey_PurposeDataEntry_descriptor =
+        internal_static_google_cloud_resourcemanager_v3_TagKey_descriptor.getNestedTypes().get(0);
+    internal_static_google_cloud_resourcemanager_v3_TagKey_PurposeDataEntry_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_resourcemanager_v3_TagKey_PurposeDataEntry_descriptor,
+            new java.lang.String[] {
+              "Key", "Value",
             });
     internal_static_google_cloud_resourcemanager_v3_ListTagKeysRequest_descriptor =
         getDescriptor().getMessageTypes().get(1);
@@ -210,8 +242,16 @@ public final class TagKeysProto {
             new java.lang.String[] {
               "Name",
             });
-    internal_static_google_cloud_resourcemanager_v3_CreateTagKeyRequest_descriptor =
+    internal_static_google_cloud_resourcemanager_v3_GetNamespacedTagKeyRequest_descriptor =
         getDescriptor().getMessageTypes().get(4);
+    internal_static_google_cloud_resourcemanager_v3_GetNamespacedTagKeyRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_google_cloud_resourcemanager_v3_GetNamespacedTagKeyRequest_descriptor,
+            new java.lang.String[] {
+              "Name",
+            });
+    internal_static_google_cloud_resourcemanager_v3_CreateTagKeyRequest_descriptor =
+        getDescriptor().getMessageTypes().get(5);
     internal_static_google_cloud_resourcemanager_v3_CreateTagKeyRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_resourcemanager_v3_CreateTagKeyRequest_descriptor,
@@ -219,13 +259,13 @@ public final class TagKeysProto {
               "TagKey", "ValidateOnly",
             });
     internal_static_google_cloud_resourcemanager_v3_CreateTagKeyMetadata_descriptor =
-        getDescriptor().getMessageTypes().get(5);
+        getDescriptor().getMessageTypes().get(6);
     internal_static_google_cloud_resourcemanager_v3_CreateTagKeyMetadata_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_resourcemanager_v3_CreateTagKeyMetadata_descriptor,
             new java.lang.String[] {});
     internal_static_google_cloud_resourcemanager_v3_UpdateTagKeyRequest_descriptor =
-        getDescriptor().getMessageTypes().get(6);
+        getDescriptor().getMessageTypes().get(7);
     internal_static_google_cloud_resourcemanager_v3_UpdateTagKeyRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_resourcemanager_v3_UpdateTagKeyRequest_descriptor,
@@ -233,13 +273,13 @@ public final class TagKeysProto {
               "TagKey", "UpdateMask", "ValidateOnly",
             });
     internal_static_google_cloud_resourcemanager_v3_UpdateTagKeyMetadata_descriptor =
-        getDescriptor().getMessageTypes().get(7);
+        getDescriptor().getMessageTypes().get(8);
     internal_static_google_cloud_resourcemanager_v3_UpdateTagKeyMetadata_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_resourcemanager_v3_UpdateTagKeyMetadata_descriptor,
             new java.lang.String[] {});
     internal_static_google_cloud_resourcemanager_v3_DeleteTagKeyRequest_descriptor =
-        getDescriptor().getMessageTypes().get(8);
+        getDescriptor().getMessageTypes().get(9);
     internal_static_google_cloud_resourcemanager_v3_DeleteTagKeyRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_resourcemanager_v3_DeleteTagKeyRequest_descriptor,
@@ -247,7 +287,7 @@ public final class TagKeysProto {
               "Name", "ValidateOnly", "Etag",
             });
     internal_static_google_cloud_resourcemanager_v3_DeleteTagKeyMetadata_descriptor =
-        getDescriptor().getMessageTypes().get(9);
+        getDescriptor().getMessageTypes().get(10);
     internal_static_google_cloud_resourcemanager_v3_DeleteTagKeyMetadata_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_resourcemanager_v3_DeleteTagKeyMetadata_descriptor,

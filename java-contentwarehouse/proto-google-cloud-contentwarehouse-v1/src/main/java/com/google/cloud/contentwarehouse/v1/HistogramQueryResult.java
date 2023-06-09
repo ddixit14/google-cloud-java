@@ -22,7 +22,9 @@ package com.google.cloud.contentwarehouse.v1;
  *
  *
  * <pre>
- * Histogram result that matches [HistogramQuery][google.cloud.contentwarehouse.v1.HistogramQuery] specified in searches.
+ * Histogram result that matches
+ * [HistogramQuery][google.cloud.contentwarehouse.v1.HistogramQuery] specified
+ * in searches.
  * </pre>
  *
  * Protobuf type {@code google.cloud.contentwarehouse.v1.HistogramQueryResult}
@@ -45,11 +47,6 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new HistogramQueryResult();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -161,7 +158,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
    * <pre>
    * A map from the values of the facet associated with distinct values to the
    * number of matching entries with corresponding value.
+   *
    * The key format is:
+   *
    * * (for string histogram) string values stored in the field.
    * </pre>
    *
@@ -186,7 +185,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
    * <pre>
    * A map from the values of the facet associated with distinct values to the
    * number of matching entries with corresponding value.
+   *
    * The key format is:
+   *
    * * (for string histogram) string values stored in the field.
    * </pre>
    *
@@ -202,7 +203,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
    * <pre>
    * A map from the values of the facet associated with distinct values to the
    * number of matching entries with corresponding value.
+   *
    * The key format is:
+   *
    * * (for string histogram) string values stored in the field.
    * </pre>
    *
@@ -222,7 +225,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
    * <pre>
    * A map from the values of the facet associated with distinct values to the
    * number of matching entries with corresponding value.
+   *
    * The key format is:
+   *
    * * (for string histogram) string values stored in the field.
    * </pre>
    *
@@ -421,7 +426,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Histogram result that matches [HistogramQuery][google.cloud.contentwarehouse.v1.HistogramQuery] specified in searches.
+   * Histogram result that matches
+   * [HistogramQuery][google.cloud.contentwarehouse.v1.HistogramQuery] specified
+   * in searches.
    * </pre>
    *
    * Protobuf type {@code google.cloud.contentwarehouse.v1.HistogramQueryResult}
@@ -777,7 +784,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
      * <pre>
      * A map from the values of the facet associated with distinct values to the
      * number of matching entries with corresponding value.
+     *
      * The key format is:
+     *
      * * (for string histogram) string values stored in the field.
      * </pre>
      *
@@ -802,7 +811,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
      * <pre>
      * A map from the values of the facet associated with distinct values to the
      * number of matching entries with corresponding value.
+     *
      * The key format is:
+     *
      * * (for string histogram) string values stored in the field.
      * </pre>
      *
@@ -818,7 +829,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
      * <pre>
      * A map from the values of the facet associated with distinct values to the
      * number of matching entries with corresponding value.
+     *
      * The key format is:
+     *
      * * (for string histogram) string values stored in the field.
      * </pre>
      *
@@ -838,7 +851,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
      * <pre>
      * A map from the values of the facet associated with distinct values to the
      * number of matching entries with corresponding value.
+     *
      * The key format is:
+     *
      * * (for string histogram) string values stored in the field.
      * </pre>
      *
@@ -867,7 +882,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
      * <pre>
      * A map from the values of the facet associated with distinct values to the
      * number of matching entries with corresponding value.
+     *
      * The key format is:
+     *
      * * (for string histogram) string values stored in the field.
      * </pre>
      *
@@ -892,7 +909,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
      * <pre>
      * A map from the values of the facet associated with distinct values to the
      * number of matching entries with corresponding value.
+     *
      * The key format is:
+     *
      * * (for string histogram) string values stored in the field.
      * </pre>
      *
@@ -913,7 +932,9 @@ public final class HistogramQueryResult extends com.google.protobuf.GeneratedMes
      * <pre>
      * A map from the values of the facet associated with distinct values to the
      * number of matching entries with corresponding value.
+     *
      * The key format is:
+     *
      * * (for string histogram) string values stored in the field.
      * </pre>
      *

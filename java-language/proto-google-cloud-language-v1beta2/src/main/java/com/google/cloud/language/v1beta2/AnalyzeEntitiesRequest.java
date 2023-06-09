@@ -47,11 +47,6 @@ public final class AnalyzeEntitiesRequest extends com.google.protobuf.GeneratedM
     return new AnalyzeEntitiesRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.language.v1beta2.LanguageServiceProto
         .internal_static_google_cloud_language_v1beta2_AnalyzeEntitiesRequest_descriptor;

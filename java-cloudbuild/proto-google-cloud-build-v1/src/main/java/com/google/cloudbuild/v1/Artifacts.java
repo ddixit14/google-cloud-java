@@ -39,20 +39,16 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
   }
 
   private Artifacts() {
-    images_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    images_ = com.google.protobuf.LazyStringArrayList.emptyList();
     mavenArtifacts_ = java.util.Collections.emptyList();
     pythonPackages_ = java.util.Collections.emptyList();
+    npmPackages_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Artifacts();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -82,6 +78,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * Cloud Storage bucket and optional object path, in the form
      * "gs://bucket/path/to/somewhere/". (see [Bucket Name
      * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     *
      * Files in the workspace matching any path pattern will be uploaded to
      * Cloud Storage with this location as a prefix.
      * </pre>
@@ -98,6 +95,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * Cloud Storage bucket and optional object path, in the form
      * "gs://bucket/path/to/somewhere/". (see [Bucket Name
      * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     *
      * Files in the workspace matching any path pattern will be uploaded to
      * Cloud Storage with this location as a prefix.
      * </pre>
@@ -222,18 +220,13 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
 
     private ArtifactObjects() {
       location_ = "";
-      paths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      paths_ = com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new ArtifactObjects();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -262,6 +255,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * Cloud Storage bucket and optional object path, in the form
      * "gs://bucket/path/to/somewhere/". (see [Bucket Name
      * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     *
      * Files in the workspace matching any path pattern will be uploaded to
      * Cloud Storage with this location as a prefix.
      * </pre>
@@ -289,6 +283,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * Cloud Storage bucket and optional object path, in the form
      * "gs://bucket/path/to/somewhere/". (see [Bucket Name
      * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     *
      * Files in the workspace matching any path pattern will be uploaded to
      * Cloud Storage with this location as a prefix.
      * </pre>
@@ -313,7 +308,8 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     public static final int PATHS_FIELD_NUMBER = 2;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList paths_;
+    private com.google.protobuf.LazyStringArrayList paths_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      *
      *
@@ -657,8 +653,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         super.clear();
         bitField0_ = 0;
         location_ = "";
-        paths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        paths_ = com.google.protobuf.LazyStringArrayList.emptyList();
         timing_ = null;
         if (timingBuilder_ != null) {
           timingBuilder_.dispose();
@@ -691,7 +686,6 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       public com.google.cloudbuild.v1.Artifacts.ArtifactObjects buildPartial() {
         com.google.cloudbuild.v1.Artifacts.ArtifactObjects result =
             new com.google.cloudbuild.v1.Artifacts.ArtifactObjects(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
@@ -699,19 +693,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         return result;
       }
 
-      private void buildPartialRepeatedFields(
-          com.google.cloudbuild.v1.Artifacts.ArtifactObjects result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          paths_ = paths_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.paths_ = paths_;
-      }
-
       private void buildPartial0(com.google.cloudbuild.v1.Artifacts.ArtifactObjects result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.location_ = location_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          paths_.makeImmutable();
+          result.paths_ = paths_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.timing_ = timingBuilder_ == null ? timing_ : timingBuilder_.build();
@@ -774,7 +763,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         if (!other.paths_.isEmpty()) {
           if (paths_.isEmpty()) {
             paths_ = other.paths_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000002;
           } else {
             ensurePathsIsMutable();
             paths_.addAll(other.paths_);
@@ -856,6 +845,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * Cloud Storage bucket and optional object path, in the form
        * "gs://bucket/path/to/somewhere/". (see [Bucket Name
        * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Cloud Storage with this location as a prefix.
        * </pre>
@@ -882,6 +872,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * Cloud Storage bucket and optional object path, in the form
        * "gs://bucket/path/to/somewhere/". (see [Bucket Name
        * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Cloud Storage with this location as a prefix.
        * </pre>
@@ -908,6 +899,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * Cloud Storage bucket and optional object path, in the form
        * "gs://bucket/path/to/somewhere/". (see [Bucket Name
        * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Cloud Storage with this location as a prefix.
        * </pre>
@@ -933,6 +925,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * Cloud Storage bucket and optional object path, in the form
        * "gs://bucket/path/to/somewhere/". (see [Bucket Name
        * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Cloud Storage with this location as a prefix.
        * </pre>
@@ -954,6 +947,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * Cloud Storage bucket and optional object path, in the form
        * "gs://bucket/path/to/somewhere/". (see [Bucket Name
        * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Cloud Storage with this location as a prefix.
        * </pre>
@@ -974,14 +968,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
 
-      private com.google.protobuf.LazyStringList paths_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList paths_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensurePathsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!paths_.isModifiable()) {
           paths_ = new com.google.protobuf.LazyStringArrayList(paths_);
-          bitField0_ |= 0x00000002;
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        *
@@ -995,7 +989,8 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * @return A list containing the paths.
        */
       public com.google.protobuf.ProtocolStringList getPathsList() {
-        return paths_.getUnmodifiableView();
+        paths_.makeImmutable();
+        return paths_;
       }
       /**
        *
@@ -1060,6 +1055,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         }
         ensurePathsIsMutable();
         paths_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1081,6 +1077,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         }
         ensurePathsIsMutable();
         paths_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1099,6 +1096,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       public Builder addAllPaths(java.lang.Iterable<java.lang.String> values) {
         ensurePathsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, paths_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1114,8 +1112,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * @return This builder for chaining.
        */
       public Builder clearPaths() {
-        paths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        paths_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        ;
         onChanged();
         return this;
       }
@@ -1138,6 +1137,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         checkByteStringIsUtf8(value);
         ensurePathsIsMutable();
         paths_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1414,6 +1414,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Artifact Registry repository, in the form
      * "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+     *
      * Artifact in the workspace specified by path will be uploaded to
      * Artifact Registry with this location as a prefix.
      * </pre>
@@ -1429,6 +1430,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Artifact Registry repository, in the form
      * "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+     *
      * Artifact in the workspace specified by path will be uploaded to
      * Artifact Registry with this location as a prefix.
      * </pre>
@@ -1589,11 +1591,6 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       return new MavenArtifact();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloudbuild.v1.Cloudbuild
           .internal_static_google_devtools_cloudbuild_v1_Artifacts_MavenArtifact_descriptor;
@@ -1619,6 +1616,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Artifact Registry repository, in the form
      * "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+     *
      * Artifact in the workspace specified by path will be uploaded to
      * Artifact Registry with this location as a prefix.
      * </pre>
@@ -1645,6 +1643,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Artifact Registry repository, in the form
      * "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+     *
      * Artifact in the workspace specified by path will be uploaded to
      * Artifact Registry with this location as a prefix.
      * </pre>
@@ -2336,6 +2335,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Artifact in the workspace specified by path will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -2361,6 +2361,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Artifact in the workspace specified by path will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -2386,6 +2387,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Artifact in the workspace specified by path will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -2410,6 +2412,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Artifact in the workspace specified by path will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -2430,6 +2433,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Artifact in the workspace specified by path will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -2989,6 +2993,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Artifact Registry repository, in the form
      * "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+     *
      * Files in the workspace matching any path pattern will be uploaded to
      * Artifact Registry with this location as a prefix.
      * </pre>
@@ -3004,6 +3009,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Artifact Registry repository, in the form
      * "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+     *
      * Files in the workspace matching any path pattern will be uploaded to
      * Artifact Registry with this location as a prefix.
      * </pre>
@@ -3096,18 +3102,13 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
 
     private PythonPackage() {
       repository_ = "";
-      paths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      paths_ = com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new PythonPackage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -3135,6 +3136,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Artifact Registry repository, in the form
      * "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+     *
      * Files in the workspace matching any path pattern will be uploaded to
      * Artifact Registry with this location as a prefix.
      * </pre>
@@ -3161,6 +3163,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Artifact Registry repository, in the form
      * "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+     *
      * Files in the workspace matching any path pattern will be uploaded to
      * Artifact Registry with this location as a prefix.
      * </pre>
@@ -3185,7 +3188,8 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     public static final int PATHS_FIELD_NUMBER = 2;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList paths_;
+    private com.google.protobuf.LazyStringArrayList paths_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      *
      *
@@ -3472,8 +3476,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         super.clear();
         bitField0_ = 0;
         repository_ = "";
-        paths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        paths_ = com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -3501,7 +3504,6 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       public com.google.cloudbuild.v1.Artifacts.PythonPackage buildPartial() {
         com.google.cloudbuild.v1.Artifacts.PythonPackage result =
             new com.google.cloudbuild.v1.Artifacts.PythonPackage(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
@@ -3509,19 +3511,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         return result;
       }
 
-      private void buildPartialRepeatedFields(
-          com.google.cloudbuild.v1.Artifacts.PythonPackage result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          paths_ = paths_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.paths_ = paths_;
-      }
-
       private void buildPartial0(com.google.cloudbuild.v1.Artifacts.PythonPackage result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.repository_ = repository_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          paths_.makeImmutable();
+          result.paths_ = paths_;
         }
       }
 
@@ -3581,7 +3578,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         if (!other.paths_.isEmpty()) {
           if (paths_.isEmpty()) {
             paths_ = other.paths_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000002;
           } else {
             ensurePathsIsMutable();
             paths_.addAll(other.paths_);
@@ -3653,6 +3650,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -3678,6 +3676,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -3703,6 +3702,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -3727,6 +3727,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -3747,6 +3748,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * <pre>
        * Artifact Registry repository, in the form
        * "https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY"
+       *
        * Files in the workspace matching any path pattern will be uploaded to
        * Artifact Registry with this location as a prefix.
        * </pre>
@@ -3767,14 +3769,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
 
-      private com.google.protobuf.LazyStringList paths_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList paths_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensurePathsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!paths_.isModifiable()) {
           paths_ = new com.google.protobuf.LazyStringArrayList(paths_);
-          bitField0_ |= 0x00000002;
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        *
@@ -3790,7 +3792,8 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * @return A list containing the paths.
        */
       public com.google.protobuf.ProtocolStringList getPathsList() {
-        return paths_.getUnmodifiableView();
+        paths_.makeImmutable();
+        return paths_;
       }
       /**
        *
@@ -3863,6 +3866,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         }
         ensurePathsIsMutable();
         paths_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3886,6 +3890,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         }
         ensurePathsIsMutable();
         paths_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3906,6 +3911,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       public Builder addAllPaths(java.lang.Iterable<java.lang.String> values) {
         ensurePathsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, paths_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3923,8 +3929,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
        * @return This builder for chaining.
        */
       public Builder clearPaths() {
-        paths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        paths_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        ;
         onChanged();
         return this;
       }
@@ -3949,6 +3956,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         checkByteStringIsUtf8(value);
         ensurePathsIsMutable();
         paths_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4017,19 +4025,918 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
+  public interface NpmPackageOrBuilder
+      extends
+      // @@protoc_insertion_point(interface_extends:google.devtools.cloudbuild.v1.Artifacts.NpmPackage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     *
+     *
+     * <pre>
+     * Artifact Registry repository, in the form
+     * "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+     *
+     * Npm package in the workspace specified by path will be zipped and
+     * uploaded to Artifact Registry with this location as a prefix.
+     * </pre>
+     *
+     * <code>string repository = 1;</code>
+     *
+     * @return The repository.
+     */
+    java.lang.String getRepository();
+    /**
+     *
+     *
+     * <pre>
+     * Artifact Registry repository, in the form
+     * "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+     *
+     * Npm package in the workspace specified by path will be zipped and
+     * uploaded to Artifact Registry with this location as a prefix.
+     * </pre>
+     *
+     * <code>string repository = 1;</code>
+     *
+     * @return The bytes for repository.
+     */
+    com.google.protobuf.ByteString getRepositoryBytes();
+
+    /**
+     *
+     *
+     * <pre>
+     * Path to the package.json.
+     * e.g. workspace/path/to/package
+     * </pre>
+     *
+     * <code>string package_path = 2;</code>
+     *
+     * @return The packagePath.
+     */
+    java.lang.String getPackagePath();
+    /**
+     *
+     *
+     * <pre>
+     * Path to the package.json.
+     * e.g. workspace/path/to/package
+     * </pre>
+     *
+     * <code>string package_path = 2;</code>
+     *
+     * @return The bytes for packagePath.
+     */
+    com.google.protobuf.ByteString getPackagePathBytes();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Npm package to upload to Artifact Registry upon successful completion
+   * of all build steps.
+   * </pre>
+   *
+   * Protobuf type {@code google.devtools.cloudbuild.v1.Artifacts.NpmPackage}
+   */
+  public static final class NpmPackage extends com.google.protobuf.GeneratedMessageV3
+      implements
+      // @@protoc_insertion_point(message_implements:google.devtools.cloudbuild.v1.Artifacts.NpmPackage)
+      NpmPackageOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use NpmPackage.newBuilder() to construct.
+    private NpmPackage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private NpmPackage() {
+      repository_ = "";
+      packagePath_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      return new NpmPackage();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.google.cloudbuild.v1.Cloudbuild
+          .internal_static_google_devtools_cloudbuild_v1_Artifacts_NpmPackage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.cloudbuild.v1.Cloudbuild
+          .internal_static_google_devtools_cloudbuild_v1_Artifacts_NpmPackage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.cloudbuild.v1.Artifacts.NpmPackage.class,
+              com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder.class);
+    }
+
+    public static final int REPOSITORY_FIELD_NUMBER = 1;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object repository_ = "";
+    /**
+     *
+     *
+     * <pre>
+     * Artifact Registry repository, in the form
+     * "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+     *
+     * Npm package in the workspace specified by path will be zipped and
+     * uploaded to Artifact Registry with this location as a prefix.
+     * </pre>
+     *
+     * <code>string repository = 1;</code>
+     *
+     * @return The repository.
+     */
+    @java.lang.Override
+    public java.lang.String getRepository() {
+      java.lang.Object ref = repository_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        repository_ = s;
+        return s;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Artifact Registry repository, in the form
+     * "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+     *
+     * Npm package in the workspace specified by path will be zipped and
+     * uploaded to Artifact Registry with this location as a prefix.
+     * </pre>
+     *
+     * <code>string repository = 1;</code>
+     *
+     * @return The bytes for repository.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRepositoryBytes() {
+      java.lang.Object ref = repository_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        repository_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PACKAGE_PATH_FIELD_NUMBER = 2;
+
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object packagePath_ = "";
+    /**
+     *
+     *
+     * <pre>
+     * Path to the package.json.
+     * e.g. workspace/path/to/package
+     * </pre>
+     *
+     * <code>string package_path = 2;</code>
+     *
+     * @return The packagePath.
+     */
+    @java.lang.Override
+    public java.lang.String getPackagePath() {
+      java.lang.Object ref = packagePath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        packagePath_ = s;
+        return s;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Path to the package.json.
+     * e.g. workspace/path/to/package
+     * </pre>
+     *
+     * <code>string package_path = 2;</code>
+     *
+     * @return The bytes for packagePath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPackagePathBytes() {
+      java.lang.Object ref = packagePath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        packagePath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repository_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repository_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(packagePath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, packagePath_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(repository_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repository_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(packagePath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, packagePath_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.google.cloudbuild.v1.Artifacts.NpmPackage)) {
+        return super.equals(obj);
+      }
+      com.google.cloudbuild.v1.Artifacts.NpmPackage other =
+          (com.google.cloudbuild.v1.Artifacts.NpmPackage) obj;
+
+      if (!getRepository().equals(other.getRepository())) return false;
+      if (!getPackagePath().equals(other.getPackagePath())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REPOSITORY_FIELD_NUMBER;
+      hash = (53 * hash) + getRepository().hashCode();
+      hash = (37 * hash) + PACKAGE_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPackagePath().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseDelimitedFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(com.google.cloudbuild.v1.Artifacts.NpmPackage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Npm package to upload to Artifact Registry upon successful completion
+     * of all build steps.
+     * </pre>
+     *
+     * Protobuf type {@code google.devtools.cloudbuild.v1.Artifacts.NpmPackage}
+     */
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
+        // @@protoc_insertion_point(builder_implements:google.devtools.cloudbuild.v1.Artifacts.NpmPackage)
+        com.google.cloudbuild.v1.Artifacts.NpmPackageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.google.cloudbuild.v1.Cloudbuild
+            .internal_static_google_devtools_cloudbuild_v1_Artifacts_NpmPackage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.cloudbuild.v1.Cloudbuild
+            .internal_static_google_devtools_cloudbuild_v1_Artifacts_NpmPackage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.cloudbuild.v1.Artifacts.NpmPackage.class,
+                com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder.class);
+      }
+
+      // Construct using com.google.cloudbuild.v1.Artifacts.NpmPackage.newBuilder()
+      private Builder() {}
+
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        repository_ = "";
+        packagePath_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.google.cloudbuild.v1.Cloudbuild
+            .internal_static_google_devtools_cloudbuild_v1_Artifacts_NpmPackage_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.cloudbuild.v1.Artifacts.NpmPackage getDefaultInstanceForType() {
+        return com.google.cloudbuild.v1.Artifacts.NpmPackage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.cloudbuild.v1.Artifacts.NpmPackage build() {
+        com.google.cloudbuild.v1.Artifacts.NpmPackage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.cloudbuild.v1.Artifacts.NpmPackage buildPartial() {
+        com.google.cloudbuild.v1.Artifacts.NpmPackage result =
+            new com.google.cloudbuild.v1.Artifacts.NpmPackage(this);
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.cloudbuild.v1.Artifacts.NpmPackage result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.repository_ = repository_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.packagePath_ = packagePath_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index,
+          java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.cloudbuild.v1.Artifacts.NpmPackage) {
+          return mergeFrom((com.google.cloudbuild.v1.Artifacts.NpmPackage) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.cloudbuild.v1.Artifacts.NpmPackage other) {
+        if (other == com.google.cloudbuild.v1.Artifacts.NpmPackage.getDefaultInstance())
+          return this;
+        if (!other.getRepository().isEmpty()) {
+          repository_ = other.repository_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPackagePath().isEmpty()) {
+          packagePath_ = other.packagePath_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  repository_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+              case 18:
+                {
+                  packagePath_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object repository_ = "";
+      /**
+       *
+       *
+       * <pre>
+       * Artifact Registry repository, in the form
+       * "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+       *
+       * Npm package in the workspace specified by path will be zipped and
+       * uploaded to Artifact Registry with this location as a prefix.
+       * </pre>
+       *
+       * <code>string repository = 1;</code>
+       *
+       * @return The repository.
+       */
+      public java.lang.String getRepository() {
+        java.lang.Object ref = repository_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          repository_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Artifact Registry repository, in the form
+       * "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+       *
+       * Npm package in the workspace specified by path will be zipped and
+       * uploaded to Artifact Registry with this location as a prefix.
+       * </pre>
+       *
+       * <code>string repository = 1;</code>
+       *
+       * @return The bytes for repository.
+       */
+      public com.google.protobuf.ByteString getRepositoryBytes() {
+        java.lang.Object ref = repository_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          repository_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Artifact Registry repository, in the form
+       * "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+       *
+       * Npm package in the workspace specified by path will be zipped and
+       * uploaded to Artifact Registry with this location as a prefix.
+       * </pre>
+       *
+       * <code>string repository = 1;</code>
+       *
+       * @param value The repository to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepository(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        repository_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Artifact Registry repository, in the form
+       * "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+       *
+       * Npm package in the workspace specified by path will be zipped and
+       * uploaded to Artifact Registry with this location as a prefix.
+       * </pre>
+       *
+       * <code>string repository = 1;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearRepository() {
+        repository_ = getDefaultInstance().getRepository();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Artifact Registry repository, in the form
+       * "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY"
+       *
+       * Npm package in the workspace specified by path will be zipped and
+       * uploaded to Artifact Registry with this location as a prefix.
+       * </pre>
+       *
+       * <code>string repository = 1;</code>
+       *
+       * @param value The bytes for repository to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepositoryBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+        repository_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object packagePath_ = "";
+      /**
+       *
+       *
+       * <pre>
+       * Path to the package.json.
+       * e.g. workspace/path/to/package
+       * </pre>
+       *
+       * <code>string package_path = 2;</code>
+       *
+       * @return The packagePath.
+       */
+      public java.lang.String getPackagePath() {
+        java.lang.Object ref = packagePath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          packagePath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Path to the package.json.
+       * e.g. workspace/path/to/package
+       * </pre>
+       *
+       * <code>string package_path = 2;</code>
+       *
+       * @return The bytes for packagePath.
+       */
+      public com.google.protobuf.ByteString getPackagePathBytes() {
+        java.lang.Object ref = packagePath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          packagePath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Path to the package.json.
+       * e.g. workspace/path/to/package
+       * </pre>
+       *
+       * <code>string package_path = 2;</code>
+       *
+       * @param value The packagePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPackagePath(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        packagePath_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Path to the package.json.
+       * e.g. workspace/path/to/package
+       * </pre>
+       *
+       * <code>string package_path = 2;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPackagePath() {
+        packagePath_ = getDefaultInstance().getPackagePath();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Path to the package.json.
+       * e.g. workspace/path/to/package
+       * </pre>
+       *
+       * <code>string package_path = 2;</code>
+       *
+       * @param value The bytes for packagePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPackagePathBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+        packagePath_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+      // @@protoc_insertion_point(builder_scope:google.devtools.cloudbuild.v1.Artifacts.NpmPackage)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.devtools.cloudbuild.v1.Artifacts.NpmPackage)
+    private static final com.google.cloudbuild.v1.Artifacts.NpmPackage DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new com.google.cloudbuild.v1.Artifacts.NpmPackage();
+    }
+
+    public static com.google.cloudbuild.v1.Artifacts.NpmPackage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NpmPackage> PARSER =
+        new com.google.protobuf.AbstractParser<NpmPackage>() {
+          @java.lang.Override
+          public NpmPackage parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
+          }
+        };
+
+    public static com.google.protobuf.Parser<NpmPackage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NpmPackage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.cloudbuild.v1.Artifacts.NpmPackage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+  }
+
   public static final int IMAGES_FIELD_NUMBER = 1;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList images_;
+  private com.google.protobuf.LazyStringArrayList images_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * A list of images to be pushed upon the successful completion of all build
    * steps.
+   *
    * The images will be pushed using the builder service account's credentials.
+   *
    * The digests of the pushed images will be stored in the Build resource's
    * results field.
+   *
    * If any of the images fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4046,9 +4953,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of images to be pushed upon the successful completion of all build
    * steps.
+   *
    * The images will be pushed using the builder service account's credentials.
+   *
    * The digests of the pushed images will be stored in the Build resource's
    * results field.
+   *
    * If any of the images fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4065,9 +4975,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of images to be pushed upon the successful completion of all build
    * steps.
+   *
    * The images will be pushed using the builder service account's credentials.
+   *
    * The digests of the pushed images will be stored in the Build resource's
    * results field.
+   *
    * If any of the images fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4085,9 +4998,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of images to be pushed upon the successful completion of all build
    * steps.
+   *
    * The images will be pushed using the builder service account's credentials.
+   *
    * The digests of the pushed images will be stored in the Build resource's
    * results field.
+   *
    * If any of the images fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4108,11 +5024,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of objects to be uploaded to Cloud Storage upon successful
    * completion of all build steps.
+   *
    * Files in the workspace matching specified paths globs will be uploaded to
    * the specified Cloud Storage location using the builder service account's
    * credentials.
+   *
    * The location and generation of the uploaded objects will be stored in the
    * Build resource's results field.
+   *
    * If any objects fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4130,11 +5049,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of objects to be uploaded to Cloud Storage upon successful
    * completion of all build steps.
+   *
    * Files in the workspace matching specified paths globs will be uploaded to
    * the specified Cloud Storage location using the builder service account's
    * credentials.
+   *
    * The location and generation of the uploaded objects will be stored in the
    * Build resource's results field.
+   *
    * If any objects fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4154,11 +5076,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of objects to be uploaded to Cloud Storage upon successful
    * completion of all build steps.
+   *
    * Files in the workspace matching specified paths globs will be uploaded to
    * the specified Cloud Storage location using the builder service account's
    * credentials.
+   *
    * The location and generation of the uploaded objects will be stored in the
    * Build resource's results field.
+   *
    * If any objects fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4181,9 +5106,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Maven artifacts to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * Artifacts in the workspace matching specified paths globs will be uploaded
    * to the specified Artifact Registry repository using the builder service
    * account's credentials.
+   *
    * If any artifacts fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4200,9 +5127,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Maven artifacts to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * Artifacts in the workspace matching specified paths globs will be uploaded
    * to the specified Artifact Registry repository using the builder service
    * account's credentials.
+   *
    * If any artifacts fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4220,9 +5149,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Maven artifacts to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * Artifacts in the workspace matching specified paths globs will be uploaded
    * to the specified Artifact Registry repository using the builder service
    * account's credentials.
+   *
    * If any artifacts fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4239,9 +5170,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Maven artifacts to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * Artifacts in the workspace matching specified paths globs will be uploaded
    * to the specified Artifact Registry repository using the builder service
    * account's credentials.
+   *
    * If any artifacts fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4258,9 +5191,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Maven artifacts to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * Artifacts in the workspace matching specified paths globs will be uploaded
    * to the specified Artifact Registry repository using the builder service
    * account's credentials.
+   *
    * If any artifacts fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4283,7 +5218,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Python packages to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * The build service account credentials will be used to perform the upload.
+   *
    * If any objects fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4300,7 +5237,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Python packages to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * The build service account credentials will be used to perform the upload.
+   *
    * If any objects fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4318,7 +5257,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Python packages to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * The build service account credentials will be used to perform the upload.
+   *
    * If any objects fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4335,7 +5276,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Python packages to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * The build service account credentials will be used to perform the upload.
+   *
    * If any objects fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4352,7 +5295,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * A list of Python packages to be uploaded to Artifact Registry upon
    * successful completion of all build steps.
+   *
    * The build service account credentials will be used to perform the upload.
+   *
    * If any objects fail to be pushed, the build is marked FAILURE.
    * </pre>
    *
@@ -4363,6 +5308,112 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
   public com.google.cloudbuild.v1.Artifacts.PythonPackageOrBuilder getPythonPackagesOrBuilder(
       int index) {
     return pythonPackages_.get(index);
+  }
+
+  public static final int NPM_PACKAGES_FIELD_NUMBER = 6;
+
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.cloudbuild.v1.Artifacts.NpmPackage> npmPackages_;
+  /**
+   *
+   *
+   * <pre>
+   * A list of npm packages to be uploaded to Artifact Registry upon
+   * successful completion of all build steps.
+   *
+   * Npm packages in the specified paths will be uploaded
+   * to the specified Artifact Registry repository using the builder service
+   * account's credentials.
+   *
+   * If any packages fail to be pushed, the build is marked FAILURE.
+   * </pre>
+   *
+   * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.cloudbuild.v1.Artifacts.NpmPackage> getNpmPackagesList() {
+    return npmPackages_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * A list of npm packages to be uploaded to Artifact Registry upon
+   * successful completion of all build steps.
+   *
+   * Npm packages in the specified paths will be uploaded
+   * to the specified Artifact Registry repository using the builder service
+   * account's credentials.
+   *
+   * If any packages fail to be pushed, the build is marked FAILURE.
+   * </pre>
+   *
+   * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.cloudbuild.v1.Artifacts.NpmPackageOrBuilder>
+      getNpmPackagesOrBuilderList() {
+    return npmPackages_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * A list of npm packages to be uploaded to Artifact Registry upon
+   * successful completion of all build steps.
+   *
+   * Npm packages in the specified paths will be uploaded
+   * to the specified Artifact Registry repository using the builder service
+   * account's credentials.
+   *
+   * If any packages fail to be pushed, the build is marked FAILURE.
+   * </pre>
+   *
+   * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+   */
+  @java.lang.Override
+  public int getNpmPackagesCount() {
+    return npmPackages_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * A list of npm packages to be uploaded to Artifact Registry upon
+   * successful completion of all build steps.
+   *
+   * Npm packages in the specified paths will be uploaded
+   * to the specified Artifact Registry repository using the builder service
+   * account's credentials.
+   *
+   * If any packages fail to be pushed, the build is marked FAILURE.
+   * </pre>
+   *
+   * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+   */
+  @java.lang.Override
+  public com.google.cloudbuild.v1.Artifacts.NpmPackage getNpmPackages(int index) {
+    return npmPackages_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * A list of npm packages to be uploaded to Artifact Registry upon
+   * successful completion of all build steps.
+   *
+   * Npm packages in the specified paths will be uploaded
+   * to the specified Artifact Registry repository using the builder service
+   * account's credentials.
+   *
+   * If any packages fail to be pushed, the build is marked FAILURE.
+   * </pre>
+   *
+   * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+   */
+  @java.lang.Override
+  public com.google.cloudbuild.v1.Artifacts.NpmPackageOrBuilder getNpmPackagesOrBuilder(int index) {
+    return npmPackages_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -4391,6 +5442,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < pythonPackages_.size(); i++) {
       output.writeMessage(5, pythonPackages_.get(i));
     }
+    for (int i = 0; i < npmPackages_.size(); i++) {
+      output.writeMessage(6, npmPackages_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -4417,6 +5471,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < pythonPackages_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, pythonPackages_.get(i));
     }
+    for (int i = 0; i < npmPackages_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, npmPackages_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -4439,6 +5496,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     }
     if (!getMavenArtifactsList().equals(other.getMavenArtifactsList())) return false;
     if (!getPythonPackagesList().equals(other.getPythonPackagesList())) return false;
+    if (!getNpmPackagesList().equals(other.getNpmPackagesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -4465,6 +5523,10 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     if (getPythonPackagesCount() > 0) {
       hash = (37 * hash) + PYTHON_PACKAGES_FIELD_NUMBER;
       hash = (53 * hash) + getPythonPackagesList().hashCode();
+    }
+    if (getNpmPackagesCount() > 0) {
+      hash = (37 * hash) + NPM_PACKAGES_FIELD_NUMBER;
+      hash = (53 * hash) + getNpmPackagesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -4605,8 +5667,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      images_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      images_ = com.google.protobuf.LazyStringArrayList.emptyList();
       objects_ = null;
       if (objectsBuilder_ != null) {
         objectsBuilder_.dispose();
@@ -4626,6 +5687,13 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         pythonPackagesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000008);
+      if (npmPackagesBuilder_ == null) {
+        npmPackages_ = java.util.Collections.emptyList();
+      } else {
+        npmPackages_ = null;
+        npmPackagesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -4661,11 +5729,6 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     }
 
     private void buildPartialRepeatedFields(com.google.cloudbuild.v1.Artifacts result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        images_ = images_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.images_ = images_;
       if (mavenArtifactsBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0)) {
           mavenArtifacts_ = java.util.Collections.unmodifiableList(mavenArtifacts_);
@@ -4684,10 +5747,23 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.pythonPackages_ = pythonPackagesBuilder_.build();
       }
+      if (npmPackagesBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          npmPackages_ = java.util.Collections.unmodifiableList(npmPackages_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.npmPackages_ = npmPackages_;
+      } else {
+        result.npmPackages_ = npmPackagesBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.google.cloudbuild.v1.Artifacts result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        images_.makeImmutable();
+        result.images_ = images_;
+      }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.objects_ = objectsBuilder_ == null ? objects_ : objectsBuilder_.build();
       }
@@ -4741,7 +5817,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       if (!other.images_.isEmpty()) {
         if (images_.isEmpty()) {
           images_ = other.images_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureImagesIsMutable();
           images_.addAll(other.images_);
@@ -4802,6 +5878,33 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
                     : null;
           } else {
             pythonPackagesBuilder_.addAllMessages(other.pythonPackages_);
+          }
+        }
+      }
+      if (npmPackagesBuilder_ == null) {
+        if (!other.npmPackages_.isEmpty()) {
+          if (npmPackages_.isEmpty()) {
+            npmPackages_ = other.npmPackages_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureNpmPackagesIsMutable();
+            npmPackages_.addAll(other.npmPackages_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.npmPackages_.isEmpty()) {
+          if (npmPackagesBuilder_.isEmpty()) {
+            npmPackagesBuilder_.dispose();
+            npmPackagesBuilder_ = null;
+            npmPackages_ = other.npmPackages_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            npmPackagesBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getNpmPackagesFieldBuilder()
+                    : null;
+          } else {
+            npmPackagesBuilder_.addAllMessages(other.npmPackages_);
           }
         }
       }
@@ -4872,6 +5975,19 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
                 }
                 break;
               } // case 42
+            case 50:
+              {
+                com.google.cloudbuild.v1.Artifacts.NpmPackage m =
+                    input.readMessage(
+                        com.google.cloudbuild.v1.Artifacts.NpmPackage.parser(), extensionRegistry);
+                if (npmPackagesBuilder_ == null) {
+                  ensureNpmPackagesIsMutable();
+                  npmPackages_.add(m);
+                } else {
+                  npmPackagesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -4891,14 +6007,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
 
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList images_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList images_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureImagesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!images_.isModifiable()) {
         images_ = new com.google.protobuf.LazyStringArrayList(images_);
-        bitField0_ |= 0x00000001;
       }
+      bitField0_ |= 0x00000001;
     }
     /**
      *
@@ -4906,9 +6022,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of images to be pushed upon the successful completion of all build
      * steps.
+     *
      * The images will be pushed using the builder service account's credentials.
+     *
      * The digests of the pushed images will be stored in the Build resource's
      * results field.
+     *
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -4917,7 +6036,8 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the images.
      */
     public com.google.protobuf.ProtocolStringList getImagesList() {
-      return images_.getUnmodifiableView();
+      images_.makeImmutable();
+      return images_;
     }
     /**
      *
@@ -4925,9 +6045,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of images to be pushed upon the successful completion of all build
      * steps.
+     *
      * The images will be pushed using the builder service account's credentials.
+     *
      * The digests of the pushed images will be stored in the Build resource's
      * results field.
+     *
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -4944,9 +6067,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of images to be pushed upon the successful completion of all build
      * steps.
+     *
      * The images will be pushed using the builder service account's credentials.
+     *
      * The digests of the pushed images will be stored in the Build resource's
      * results field.
+     *
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -4964,9 +6090,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of images to be pushed upon the successful completion of all build
      * steps.
+     *
      * The images will be pushed using the builder service account's credentials.
+     *
      * The digests of the pushed images will be stored in the Build resource's
      * results field.
+     *
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -4984,9 +6113,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of images to be pushed upon the successful completion of all build
      * steps.
+     *
      * The images will be pushed using the builder service account's credentials.
+     *
      * The digests of the pushed images will be stored in the Build resource's
      * results field.
+     *
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5002,6 +6134,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       }
       ensureImagesIsMutable();
       images_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5011,9 +6144,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of images to be pushed upon the successful completion of all build
      * steps.
+     *
      * The images will be pushed using the builder service account's credentials.
+     *
      * The digests of the pushed images will be stored in the Build resource's
      * results field.
+     *
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5028,6 +6164,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       }
       ensureImagesIsMutable();
       images_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5037,9 +6174,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of images to be pushed upon the successful completion of all build
      * steps.
+     *
      * The images will be pushed using the builder service account's credentials.
+     *
      * The digests of the pushed images will be stored in the Build resource's
      * results field.
+     *
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5051,6 +6191,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllImages(java.lang.Iterable<java.lang.String> values) {
       ensureImagesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, images_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5060,9 +6201,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of images to be pushed upon the successful completion of all build
      * steps.
+     *
      * The images will be pushed using the builder service account's credentials.
+     *
      * The digests of the pushed images will be stored in the Build resource's
      * results field.
+     *
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5071,8 +6215,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearImages() {
-      images_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      images_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      ;
       onChanged();
       return this;
     }
@@ -5082,9 +6227,12 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of images to be pushed upon the successful completion of all build
      * steps.
+     *
      * The images will be pushed using the builder service account's credentials.
+     *
      * The digests of the pushed images will be stored in the Build resource's
      * results field.
+     *
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5100,6 +6248,7 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureImagesIsMutable();
       images_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5116,11 +6265,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of objects to be uploaded to Cloud Storage upon successful
      * completion of all build steps.
+     *
      * Files in the workspace matching specified paths globs will be uploaded to
      * the specified Cloud Storage location using the builder service account's
      * credentials.
+     *
      * The location and generation of the uploaded objects will be stored in the
      * Build resource's results field.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5137,11 +6289,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of objects to be uploaded to Cloud Storage upon successful
      * completion of all build steps.
+     *
      * Files in the workspace matching specified paths globs will be uploaded to
      * the specified Cloud Storage location using the builder service account's
      * credentials.
+     *
      * The location and generation of the uploaded objects will be stored in the
      * Build resource's results field.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5164,11 +6319,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of objects to be uploaded to Cloud Storage upon successful
      * completion of all build steps.
+     *
      * Files in the workspace matching specified paths globs will be uploaded to
      * the specified Cloud Storage location using the builder service account's
      * credentials.
+     *
      * The location and generation of the uploaded objects will be stored in the
      * Build resource's results field.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5193,11 +6351,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of objects to be uploaded to Cloud Storage upon successful
      * completion of all build steps.
+     *
      * Files in the workspace matching specified paths globs will be uploaded to
      * the specified Cloud Storage location using the builder service account's
      * credentials.
+     *
      * The location and generation of the uploaded objects will be stored in the
      * Build resource's results field.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5220,11 +6381,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of objects to be uploaded to Cloud Storage upon successful
      * completion of all build steps.
+     *
      * Files in the workspace matching specified paths globs will be uploaded to
      * the specified Cloud Storage location using the builder service account's
      * credentials.
+     *
      * The location and generation of the uploaded objects will be stored in the
      * Build resource's results field.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5253,11 +6417,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of objects to be uploaded to Cloud Storage upon successful
      * completion of all build steps.
+     *
      * Files in the workspace matching specified paths globs will be uploaded to
      * the specified Cloud Storage location using the builder service account's
      * credentials.
+     *
      * The location and generation of the uploaded objects will be stored in the
      * Build resource's results field.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5279,11 +6446,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of objects to be uploaded to Cloud Storage upon successful
      * completion of all build steps.
+     *
      * Files in the workspace matching specified paths globs will be uploaded to
      * the specified Cloud Storage location using the builder service account's
      * credentials.
+     *
      * The location and generation of the uploaded objects will be stored in the
      * Build resource's results field.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5300,11 +6470,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of objects to be uploaded to Cloud Storage upon successful
      * completion of all build steps.
+     *
      * Files in the workspace matching specified paths globs will be uploaded to
      * the specified Cloud Storage location using the builder service account's
      * credentials.
+     *
      * The location and generation of the uploaded objects will be stored in the
      * Build resource's results field.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5325,11 +6498,14 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of objects to be uploaded to Cloud Storage upon successful
      * completion of all build steps.
+     *
      * Files in the workspace matching specified paths globs will be uploaded to
      * the specified Cloud Storage location using the builder service account's
      * credentials.
+     *
      * The location and generation of the uploaded objects will be stored in the
      * Build resource's results field.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5376,9 +6552,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5399,9 +6577,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5421,9 +6601,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5443,9 +6625,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5472,9 +6656,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5498,9 +6684,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5526,9 +6714,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5555,9 +6745,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5581,9 +6773,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5607,9 +6801,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5633,9 +6829,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5658,9 +6856,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5683,9 +6883,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5702,9 +6904,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5725,9 +6929,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5748,9 +6954,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5767,9 +6975,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5787,9 +6997,11 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Maven artifacts to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * Artifacts in the workspace matching specified paths globs will be uploaded
      * to the specified Artifact Registry repository using the builder service
      * account's credentials.
+     *
      * If any artifacts fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5845,7 +7057,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5866,7 +7080,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5886,7 +7102,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5906,7 +7124,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5933,7 +7153,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5957,7 +7179,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -5983,7 +7207,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6010,7 +7236,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6034,7 +7262,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6058,7 +7288,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6082,7 +7314,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6105,7 +7339,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6128,7 +7364,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6145,7 +7383,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6166,7 +7406,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6187,7 +7429,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6204,7 +7448,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6222,7 +7468,9 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * A list of Python packages to be uploaded to Artifact Registry upon
      * successful completion of all build steps.
+     *
      * The build service account credentials will be used to perform the upload.
+     *
      * If any objects fail to be pushed, the build is marked FAILURE.
      * </pre>
      *
@@ -6252,6 +7500,484 @@ public final class Artifacts extends com.google.protobuf.GeneratedMessageV3
         pythonPackages_ = null;
       }
       return pythonPackagesBuilder_;
+    }
+
+    private java.util.List<com.google.cloudbuild.v1.Artifacts.NpmPackage> npmPackages_ =
+        java.util.Collections.emptyList();
+
+    private void ensureNpmPackagesIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        npmPackages_ =
+            new java.util.ArrayList<com.google.cloudbuild.v1.Artifacts.NpmPackage>(npmPackages_);
+        bitField0_ |= 0x00000010;
+      }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.cloudbuild.v1.Artifacts.NpmPackage,
+            com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder,
+            com.google.cloudbuild.v1.Artifacts.NpmPackageOrBuilder>
+        npmPackagesBuilder_;
+
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public java.util.List<com.google.cloudbuild.v1.Artifacts.NpmPackage> getNpmPackagesList() {
+      if (npmPackagesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(npmPackages_);
+      } else {
+        return npmPackagesBuilder_.getMessageList();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public int getNpmPackagesCount() {
+      if (npmPackagesBuilder_ == null) {
+        return npmPackages_.size();
+      } else {
+        return npmPackagesBuilder_.getCount();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public com.google.cloudbuild.v1.Artifacts.NpmPackage getNpmPackages(int index) {
+      if (npmPackagesBuilder_ == null) {
+        return npmPackages_.get(index);
+      } else {
+        return npmPackagesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public Builder setNpmPackages(int index, com.google.cloudbuild.v1.Artifacts.NpmPackage value) {
+      if (npmPackagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureNpmPackagesIsMutable();
+        npmPackages_.set(index, value);
+        onChanged();
+      } else {
+        npmPackagesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public Builder setNpmPackages(
+        int index, com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder builderForValue) {
+      if (npmPackagesBuilder_ == null) {
+        ensureNpmPackagesIsMutable();
+        npmPackages_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        npmPackagesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public Builder addNpmPackages(com.google.cloudbuild.v1.Artifacts.NpmPackage value) {
+      if (npmPackagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureNpmPackagesIsMutable();
+        npmPackages_.add(value);
+        onChanged();
+      } else {
+        npmPackagesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public Builder addNpmPackages(int index, com.google.cloudbuild.v1.Artifacts.NpmPackage value) {
+      if (npmPackagesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureNpmPackagesIsMutable();
+        npmPackages_.add(index, value);
+        onChanged();
+      } else {
+        npmPackagesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public Builder addNpmPackages(
+        com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder builderForValue) {
+      if (npmPackagesBuilder_ == null) {
+        ensureNpmPackagesIsMutable();
+        npmPackages_.add(builderForValue.build());
+        onChanged();
+      } else {
+        npmPackagesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public Builder addNpmPackages(
+        int index, com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder builderForValue) {
+      if (npmPackagesBuilder_ == null) {
+        ensureNpmPackagesIsMutable();
+        npmPackages_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        npmPackagesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public Builder addAllNpmPackages(
+        java.lang.Iterable<? extends com.google.cloudbuild.v1.Artifacts.NpmPackage> values) {
+      if (npmPackagesBuilder_ == null) {
+        ensureNpmPackagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, npmPackages_);
+        onChanged();
+      } else {
+        npmPackagesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public Builder clearNpmPackages() {
+      if (npmPackagesBuilder_ == null) {
+        npmPackages_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        npmPackagesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public Builder removeNpmPackages(int index) {
+      if (npmPackagesBuilder_ == null) {
+        ensureNpmPackagesIsMutable();
+        npmPackages_.remove(index);
+        onChanged();
+      } else {
+        npmPackagesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder getNpmPackagesBuilder(int index) {
+      return getNpmPackagesFieldBuilder().getBuilder(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public com.google.cloudbuild.v1.Artifacts.NpmPackageOrBuilder getNpmPackagesOrBuilder(
+        int index) {
+      if (npmPackagesBuilder_ == null) {
+        return npmPackages_.get(index);
+      } else {
+        return npmPackagesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public java.util.List<? extends com.google.cloudbuild.v1.Artifacts.NpmPackageOrBuilder>
+        getNpmPackagesOrBuilderList() {
+      if (npmPackagesBuilder_ != null) {
+        return npmPackagesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(npmPackages_);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder addNpmPackagesBuilder() {
+      return getNpmPackagesFieldBuilder()
+          .addBuilder(com.google.cloudbuild.v1.Artifacts.NpmPackage.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder addNpmPackagesBuilder(int index) {
+      return getNpmPackagesFieldBuilder()
+          .addBuilder(index, com.google.cloudbuild.v1.Artifacts.NpmPackage.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * A list of npm packages to be uploaded to Artifact Registry upon
+     * successful completion of all build steps.
+     *
+     * Npm packages in the specified paths will be uploaded
+     * to the specified Artifact Registry repository using the builder service
+     * account's credentials.
+     *
+     * If any packages fail to be pushed, the build is marked FAILURE.
+     * </pre>
+     *
+     * <code>repeated .google.devtools.cloudbuild.v1.Artifacts.NpmPackage npm_packages = 6;</code>
+     */
+    public java.util.List<com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder>
+        getNpmPackagesBuilderList() {
+      return getNpmPackagesFieldBuilder().getBuilderList();
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.cloudbuild.v1.Artifacts.NpmPackage,
+            com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder,
+            com.google.cloudbuild.v1.Artifacts.NpmPackageOrBuilder>
+        getNpmPackagesFieldBuilder() {
+      if (npmPackagesBuilder_ == null) {
+        npmPackagesBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.cloudbuild.v1.Artifacts.NpmPackage,
+                com.google.cloudbuild.v1.Artifacts.NpmPackage.Builder,
+                com.google.cloudbuild.v1.Artifacts.NpmPackageOrBuilder>(
+                npmPackages_, ((bitField0_ & 0x00000010) != 0), getParentForChildren(), isClean());
+        npmPackages_ = null;
+      }
+      return npmPackagesBuilder_;
     }
 
     @java.lang.Override

@@ -233,7 +233,34 @@ public interface QueuedResourceOrBuilder
    */
   com.google.cloud.tpu.v2alpha1.QueuedResourceStateOrBuilder getStateOrBuilder();
 
-  public com.google.cloud.tpu.v2alpha1.QueuedResource.ResourceCase getResourceCase();
+  /**
+   *
+   *
+   * <pre>
+   * Name of the reservation in which the resource should be provisioned.
+   * Format: projects/{project}/locations/{zone}/reservations/{reservation}
+   * </pre>
+   *
+   * <code>string reservation_name = 8;</code>
+   *
+   * @return The reservationName.
+   */
+  java.lang.String getReservationName();
+  /**
+   *
+   *
+   * <pre>
+   * Name of the reservation in which the resource should be provisioned.
+   * Format: projects/{project}/locations/{zone}/reservations/{reservation}
+   * </pre>
+   *
+   * <code>string reservation_name = 8;</code>
+   *
+   * @return The bytes for reservationName.
+   */
+  com.google.protobuf.ByteString getReservationNameBytes();
 
-  public com.google.cloud.tpu.v2alpha1.QueuedResource.TierCase getTierCase();
+  com.google.cloud.tpu.v2alpha1.QueuedResource.ResourceCase getResourceCase();
+
+  com.google.cloud.tpu.v2alpha1.QueuedResource.TierCase getTierCase();
 }

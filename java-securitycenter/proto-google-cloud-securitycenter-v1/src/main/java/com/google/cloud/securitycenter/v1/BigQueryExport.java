@@ -52,11 +52,6 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
     return new BigQueryExport();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.securitycenter.v1.BigQueryExportProto
         .internal_static_google_cloud_securitycenter_v1_BigQueryExport_descriptor;
@@ -200,14 +195,19 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    * of findings. The expression is a list of zero or more restrictions combined
    * via logical operators `AND` and `OR`. Parentheses are supported, and `OR`
    * has higher precedence than `AND`.
+   *
    * Restrictions have the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;` and may have a
    * `-` character in front of them to indicate negation. The fields map to
    * those defined in the corresponding resource.
+   *
    * The supported operators are:
+   *
    * * `=` for all value types.
    * * `&gt;`, `&lt;`, `&gt;=`, `&lt;=` for integer values.
    * * `:`, meaning substring matching, for strings.
+   *
    * The supported value types are:
+   *
    * * string literals in quotes.
    * * integer literals without quotes.
    * * boolean literals `true` and `false` without quotes.
@@ -237,14 +237,19 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    * of findings. The expression is a list of zero or more restrictions combined
    * via logical operators `AND` and `OR`. Parentheses are supported, and `OR`
    * has higher precedence than `AND`.
+   *
    * Restrictions have the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;` and may have a
    * `-` character in front of them to indicate negation. The fields map to
    * those defined in the corresponding resource.
+   *
    * The supported operators are:
+   *
    * * `=` for all value types.
    * * `&gt;`, `&lt;`, `&gt;=`, `&lt;=` for integer values.
    * * `:`, meaning substring matching, for strings.
+   *
    * The supported value types are:
+   *
    * * string literals in quotes.
    * * integer literals without quotes.
    * * boolean literals `true` and `false` without quotes.
@@ -330,7 +335,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The time at which the big query export was created.
+   * Output only. The time at which the BigQuery export was created.
    * This field is set by the server and will be ignored if provided on export
    * on creation.
    * </pre>
@@ -348,7 +353,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The time at which the big query export was created.
+   * Output only. The time at which the BigQuery export was created.
    * This field is set by the server and will be ignored if provided on export
    * on creation.
    * </pre>
@@ -366,7 +371,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The time at which the big query export was created.
+   * Output only. The time at which the BigQuery export was created.
    * This field is set by the server and will be ignored if provided on export
    * on creation.
    * </pre>
@@ -385,7 +390,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The most recent time at which the big export was updated.
+   * Output only. The most recent time at which the BigQuery export was updated.
    * This field is set by the server and will be ignored if provided on export
    * creation or update.
    * </pre>
@@ -403,7 +408,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The most recent time at which the big export was updated.
+   * Output only. The most recent time at which the BigQuery export was updated.
    * This field is set by the server and will be ignored if provided on export
    * creation or update.
    * </pre>
@@ -421,7 +426,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The most recent time at which the big export was updated.
+   * Output only. The most recent time at which the BigQuery export was updated.
    * This field is set by the server and will be ignored if provided on export
    * creation or update.
    * </pre>
@@ -442,7 +447,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. Email address of the user who last edited the big query export.
+   * Output only. Email address of the user who last edited the BigQuery export.
    * This field is set by the server and will be ignored if provided on export
    * creation or update.
    * </pre>
@@ -467,7 +472,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. Email address of the user who last edited the big query export.
+   * Output only. Email address of the user who last edited the BigQuery export.
    * This field is set by the server and will be ignored if provided on export
    * creation or update.
    * </pre>
@@ -497,8 +502,8 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The service account that needs permission to create table, upload data to
-   * the big query dataset.
+   * Output only. The service account that needs permission to create table and
+   * upload data to the BigQuery dataset.
    * </pre>
    *
    * <code>string principal = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -521,8 +526,8 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The service account that needs permission to create table, upload data to
-   * the big query dataset.
+   * Output only. The service account that needs permission to create table and
+   * upload data to the BigQuery dataset.
    * </pre>
    *
    * <code>string principal = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1322,14 +1327,19 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      * of findings. The expression is a list of zero or more restrictions combined
      * via logical operators `AND` and `OR`. Parentheses are supported, and `OR`
      * has higher precedence than `AND`.
+     *
      * Restrictions have the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;` and may have a
      * `-` character in front of them to indicate negation. The fields map to
      * those defined in the corresponding resource.
+     *
      * The supported operators are:
+     *
      * * `=` for all value types.
      * * `&gt;`, `&lt;`, `&gt;=`, `&lt;=` for integer values.
      * * `:`, meaning substring matching, for strings.
+     *
      * The supported value types are:
+     *
      * * string literals in quotes.
      * * integer literals without quotes.
      * * boolean literals `true` and `false` without quotes.
@@ -1358,14 +1368,19 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      * of findings. The expression is a list of zero or more restrictions combined
      * via logical operators `AND` and `OR`. Parentheses are supported, and `OR`
      * has higher precedence than `AND`.
+     *
      * Restrictions have the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;` and may have a
      * `-` character in front of them to indicate negation. The fields map to
      * those defined in the corresponding resource.
+     *
      * The supported operators are:
+     *
      * * `=` for all value types.
      * * `&gt;`, `&lt;`, `&gt;=`, `&lt;=` for integer values.
      * * `:`, meaning substring matching, for strings.
+     *
      * The supported value types are:
+     *
      * * string literals in quotes.
      * * integer literals without quotes.
      * * boolean literals `true` and `false` without quotes.
@@ -1394,14 +1409,19 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      * of findings. The expression is a list of zero or more restrictions combined
      * via logical operators `AND` and `OR`. Parentheses are supported, and `OR`
      * has higher precedence than `AND`.
+     *
      * Restrictions have the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;` and may have a
      * `-` character in front of them to indicate negation. The fields map to
      * those defined in the corresponding resource.
+     *
      * The supported operators are:
+     *
      * * `=` for all value types.
      * * `&gt;`, `&lt;`, `&gt;=`, `&lt;=` for integer values.
      * * `:`, meaning substring matching, for strings.
+     *
      * The supported value types are:
+     *
      * * string literals in quotes.
      * * integer literals without quotes.
      * * boolean literals `true` and `false` without quotes.
@@ -1429,14 +1449,19 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      * of findings. The expression is a list of zero or more restrictions combined
      * via logical operators `AND` and `OR`. Parentheses are supported, and `OR`
      * has higher precedence than `AND`.
+     *
      * Restrictions have the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;` and may have a
      * `-` character in front of them to indicate negation. The fields map to
      * those defined in the corresponding resource.
+     *
      * The supported operators are:
+     *
      * * `=` for all value types.
      * * `&gt;`, `&lt;`, `&gt;=`, `&lt;=` for integer values.
      * * `:`, meaning substring matching, for strings.
+     *
      * The supported value types are:
+     *
      * * string literals in quotes.
      * * integer literals without quotes.
      * * boolean literals `true` and `false` without quotes.
@@ -1460,14 +1485,19 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      * of findings. The expression is a list of zero or more restrictions combined
      * via logical operators `AND` and `OR`. Parentheses are supported, and `OR`
      * has higher precedence than `AND`.
+     *
      * Restrictions have the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;` and may have a
      * `-` character in front of them to indicate negation. The fields map to
      * those defined in the corresponding resource.
+     *
      * The supported operators are:
+     *
      * * `=` for all value types.
      * * `&gt;`, `&lt;`, `&gt;=`, `&lt;=` for integer values.
      * * `:`, meaning substring matching, for strings.
+     *
      * The supported value types are:
+     *
      * * string literals in quotes.
      * * integer literals without quotes.
      * * boolean literals `true` and `false` without quotes.
@@ -1620,7 +1650,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The time at which the big query export was created.
+     * Output only. The time at which the BigQuery export was created.
      * This field is set by the server and will be ignored if provided on export
      * on creation.
      * </pre>
@@ -1638,7 +1668,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The time at which the big query export was created.
+     * Output only. The time at which the BigQuery export was created.
      * This field is set by the server and will be ignored if provided on export
      * on creation.
      * </pre>
@@ -1662,7 +1692,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The time at which the big query export was created.
+     * Output only. The time at which the BigQuery export was created.
      * This field is set by the server and will be ignored if provided on export
      * on creation.
      * </pre>
@@ -1688,7 +1718,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The time at which the big query export was created.
+     * Output only. The time at which the BigQuery export was created.
      * This field is set by the server and will be ignored if provided on export
      * on creation.
      * </pre>
@@ -1711,7 +1741,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The time at which the big query export was created.
+     * Output only. The time at which the BigQuery export was created.
      * This field is set by the server and will be ignored if provided on export
      * on creation.
      * </pre>
@@ -1740,7 +1770,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The time at which the big query export was created.
+     * Output only. The time at which the BigQuery export was created.
      * This field is set by the server and will be ignored if provided on export
      * on creation.
      * </pre>
@@ -1763,7 +1793,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The time at which the big query export was created.
+     * Output only. The time at which the BigQuery export was created.
      * This field is set by the server and will be ignored if provided on export
      * on creation.
      * </pre>
@@ -1781,7 +1811,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The time at which the big query export was created.
+     * Output only. The time at which the BigQuery export was created.
      * This field is set by the server and will be ignored if provided on export
      * on creation.
      * </pre>
@@ -1803,7 +1833,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The time at which the big query export was created.
+     * Output only. The time at which the BigQuery export was created.
      * This field is set by the server and will be ignored if provided on export
      * on creation.
      * </pre>
@@ -1839,7 +1869,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The most recent time at which the big export was updated.
+     * Output only. The most recent time at which the BigQuery export was updated.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -1857,7 +1887,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The most recent time at which the big export was updated.
+     * Output only. The most recent time at which the BigQuery export was updated.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -1881,7 +1911,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The most recent time at which the big export was updated.
+     * Output only. The most recent time at which the BigQuery export was updated.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -1907,7 +1937,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The most recent time at which the big export was updated.
+     * Output only. The most recent time at which the BigQuery export was updated.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -1930,7 +1960,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The most recent time at which the big export was updated.
+     * Output only. The most recent time at which the BigQuery export was updated.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -1959,7 +1989,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The most recent time at which the big export was updated.
+     * Output only. The most recent time at which the BigQuery export was updated.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -1982,7 +2012,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The most recent time at which the big export was updated.
+     * Output only. The most recent time at which the BigQuery export was updated.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -2000,7 +2030,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The most recent time at which the big export was updated.
+     * Output only. The most recent time at which the BigQuery export was updated.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -2022,7 +2052,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The most recent time at which the big export was updated.
+     * Output only. The most recent time at which the BigQuery export was updated.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -2053,7 +2083,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Email address of the user who last edited the big query export.
+     * Output only. Email address of the user who last edited the BigQuery export.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -2077,7 +2107,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Email address of the user who last edited the big query export.
+     * Output only. Email address of the user who last edited the BigQuery export.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -2101,7 +2131,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Email address of the user who last edited the big query export.
+     * Output only. Email address of the user who last edited the BigQuery export.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -2124,7 +2154,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Email address of the user who last edited the big query export.
+     * Output only. Email address of the user who last edited the BigQuery export.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -2143,7 +2173,7 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Email address of the user who last edited the big query export.
+     * Output only. Email address of the user who last edited the BigQuery export.
      * This field is set by the server and will be ignored if provided on export
      * creation or update.
      * </pre>
@@ -2169,8 +2199,8 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The service account that needs permission to create table, upload data to
-     * the big query dataset.
+     * Output only. The service account that needs permission to create table and
+     * upload data to the BigQuery dataset.
      * </pre>
      *
      * <code>string principal = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2192,8 +2222,8 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The service account that needs permission to create table, upload data to
-     * the big query dataset.
+     * Output only. The service account that needs permission to create table and
+     * upload data to the BigQuery dataset.
      * </pre>
      *
      * <code>string principal = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2215,8 +2245,8 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The service account that needs permission to create table, upload data to
-     * the big query dataset.
+     * Output only. The service account that needs permission to create table and
+     * upload data to the BigQuery dataset.
      * </pre>
      *
      * <code>string principal = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2237,8 +2267,8 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The service account that needs permission to create table, upload data to
-     * the big query dataset.
+     * Output only. The service account that needs permission to create table and
+     * upload data to the BigQuery dataset.
      * </pre>
      *
      * <code>string principal = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2255,8 +2285,8 @@ public final class BigQueryExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The service account that needs permission to create table, upload data to
-     * the big query dataset.
+     * Output only. The service account that needs permission to create table and
+     * upload data to the BigQuery dataset.
      * </pre>
      *
      * <code>string principal = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

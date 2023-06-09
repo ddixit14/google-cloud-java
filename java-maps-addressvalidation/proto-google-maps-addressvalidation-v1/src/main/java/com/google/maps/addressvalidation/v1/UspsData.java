@@ -22,7 +22,10 @@ package com.google.maps.addressvalidation.v1;
  *
  *
  * <pre>
- * The USPS data for the address.
+ * The USPS data for the address. `uspsData` is not guaranteed to be fully
+ * populated for every US or PR address sent to the Address Validation API. It's
+ * recommended to integrate the backup address fields in the response if you
+ * utilize uspsData as the primary part of the response.
  * </pre>
  *
  * Protobuf type {@code google.maps.addressvalidation.v1.UspsData}
@@ -67,11 +70,6 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new UspsData();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -257,6 +255,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The possible values for DPV confirmation. Returns a single character.
+   *
    * * `Y`: Address was DPV confirmed for primary and any secondary numbers.
    * * `N`: Primary and any secondary number information failed to
    * DPV confirm.
@@ -287,6 +286,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The possible values for DPV confirmation. Returns a single character.
+   *
    * * `Y`: Address was DPV confirmed for primary and any secondary numbers.
    * * `N`: Primary and any secondary number information failed to
    * DPV confirm.
@@ -323,6 +323,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The footnotes from delivery point validation.
    * Multiple footnotes may be strung together in the same string.
+   *
    * * `AA`: Input address matched to the ZIP+4 file
    * * `A1`: Input address was not matched to the ZIP+4 file
    * * `BB`: Matched to DPV (all components)
@@ -363,6 +364,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The footnotes from delivery point validation.
    * Multiple footnotes may be strung together in the same string.
+   *
    * * `AA`: Input address matched to the ZIP+4 file
    * * `A1`: Input address was not matched to the ZIP+4 file
    * * `BB`: Matched to DPV (all components)
@@ -408,6 +410,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Indicates if the address is a CMRA (Commercial Mail Receiving Agency)--a
    * private business receiving mail for clients. Returns a single character.
+   *
    * * `Y`: The address is a CMRA
    * * `N`: The address is not a CMRA
    * </pre>
@@ -434,6 +437,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Indicates if the address is a CMRA (Commercial Mail Receiving Agency)--a
    * private business receiving mail for clients. Returns a single character.
+   *
    * * `Y`: The address is a CMRA
    * * `N`: The address is not a CMRA
    * </pre>
@@ -465,6 +469,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Is this place vacant?
    * Returns a single character.
+   *
    * * `Y`: The address is vacant
    * * `N`: The address is not vacant
    * </pre>
@@ -491,6 +496,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Is this place vacant?
    * Returns a single character.
+   *
    * * `Y`: The address is vacant
    * * `N`: The address is not vacant
    * </pre>
@@ -523,6 +529,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * Is this a no stat address or an active address?
    * No stat addresses are ones which are not continuously occupied or addresses
    * that the USPS does not service. Returns a single character.
+   *
    * * `Y`: The address is not active
    * * `N`: The address is active
    * </pre>
@@ -550,6 +557,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * Is this a no stat address or an active address?
    * No stat addresses are ones which are not continuously occupied or addresses
    * that the USPS does not service. Returns a single character.
+   *
    * * `Y`: The address is not active
    * * `N`: The address is active
    * </pre>
@@ -582,7 +590,9 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * The carrier route code.
    * A four character code consisting of a one letter prefix and a three digit
    * route designator.
+   *
    * Prefixes:
+   *
    * * `C`: Carrier route (or city route)
    * * `R`: Rural route
    * * `H`: Highway Contract Route
@@ -613,7 +623,9 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * The carrier route code.
    * A four character code consisting of a one letter prefix and a three digit
    * route designator.
+   *
    * Prefixes:
+   *
    * * `C`: Carrier route (or city route)
    * * `R`: Rural route
    * * `H`: Highway Contract Route
@@ -1195,6 +1207,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Footnotes from matching a street or highrise record to suite information.
    * If business name match is found, the secondary number is returned.
+   *
    * * `A`: SuiteLink record match, business address improved.
    * * `00`: No match, business address is not improved.
    * </pre>
@@ -1221,6 +1234,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Footnotes from matching a street or highrise record to suite information.
    * If business name match is found, the secondary number is returned.
+   *
    * * `A`: SuiteLink record match, business address improved.
    * * `00`: No match, business address is not improved.
    * </pre>
@@ -1353,6 +1367,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Type of the address record that matches the input address.
+   *
    * * `F`: FIRM. This is a match to a Firm Record, which is the finest level of
    * match available for an address.
    * * `G`: GENERAL DELIVERY. This is a match to a General Delivery record.
@@ -1387,6 +1402,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Type of the address record that matches the input address.
+   *
    * * `F`: FIRM. This is a match to a Firm Record, which is the finest level of
    * match available for an address.
    * * `G`: GENERAL DELIVERY. This is a match to a General Delivery record.
@@ -1447,6 +1463,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * Error message for USPS data retrieval. This is populated when USPS
    * processing is suspended because of the detection of artificially created
    * addresses.
+   *
    * The USPS data fields might not be populated when this error is present.
    * </pre>
    *
@@ -1473,6 +1490,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    * Error message for USPS data retrieval. This is populated when USPS
    * processing is suspended because of the detection of artificially created
    * addresses.
+   *
    * The USPS data fields might not be populated when this error is present.
    * </pre>
    *
@@ -1922,7 +1940,10 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * The USPS data for the address.
+   * The USPS data for the address. `uspsData` is not guaranteed to be fully
+   * populated for every US or PR address sent to the Address Validation API. It's
+   * recommended to integrate the backup address fields in the response if you
+   * utilize uspsData as the primary part of the response.
    * </pre>
    *
    * Protobuf type {@code google.maps.addressvalidation.v1.UspsData}
@@ -2924,6 +2945,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The possible values for DPV confirmation. Returns a single character.
+     *
      * * `Y`: Address was DPV confirmed for primary and any secondary numbers.
      * * `N`: Primary and any secondary number information failed to
      * DPV confirm.
@@ -2953,6 +2975,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The possible values for DPV confirmation. Returns a single character.
+     *
      * * `Y`: Address was DPV confirmed for primary and any secondary numbers.
      * * `N`: Primary and any secondary number information failed to
      * DPV confirm.
@@ -2982,6 +3005,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The possible values for DPV confirmation. Returns a single character.
+     *
      * * `Y`: Address was DPV confirmed for primary and any secondary numbers.
      * * `N`: Primary and any secondary number information failed to
      * DPV confirm.
@@ -3010,6 +3034,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The possible values for DPV confirmation. Returns a single character.
+     *
      * * `Y`: Address was DPV confirmed for primary and any secondary numbers.
      * * `N`: Primary and any secondary number information failed to
      * DPV confirm.
@@ -3034,6 +3059,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The possible values for DPV confirmation. Returns a single character.
+     *
      * * `Y`: Address was DPV confirmed for primary and any secondary numbers.
      * * `N`: Primary and any secondary number information failed to
      * DPV confirm.
@@ -3066,6 +3092,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The footnotes from delivery point validation.
      * Multiple footnotes may be strung together in the same string.
+     *
      * * `AA`: Input address matched to the ZIP+4 file
      * * `A1`: Input address was not matched to the ZIP+4 file
      * * `BB`: Matched to DPV (all components)
@@ -3105,6 +3132,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The footnotes from delivery point validation.
      * Multiple footnotes may be strung together in the same string.
+     *
      * * `AA`: Input address matched to the ZIP+4 file
      * * `A1`: Input address was not matched to the ZIP+4 file
      * * `BB`: Matched to DPV (all components)
@@ -3144,6 +3172,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The footnotes from delivery point validation.
      * Multiple footnotes may be strung together in the same string.
+     *
      * * `AA`: Input address matched to the ZIP+4 file
      * * `A1`: Input address was not matched to the ZIP+4 file
      * * `BB`: Matched to DPV (all components)
@@ -3182,6 +3211,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The footnotes from delivery point validation.
      * Multiple footnotes may be strung together in the same string.
+     *
      * * `AA`: Input address matched to the ZIP+4 file
      * * `A1`: Input address was not matched to the ZIP+4 file
      * * `BB`: Matched to DPV (all components)
@@ -3216,6 +3246,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The footnotes from delivery point validation.
      * Multiple footnotes may be strung together in the same string.
+     *
      * * `AA`: Input address matched to the ZIP+4 file
      * * `A1`: Input address was not matched to the ZIP+4 file
      * * `BB`: Matched to DPV (all components)
@@ -3257,6 +3288,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Indicates if the address is a CMRA (Commercial Mail Receiving Agency)--a
      * private business receiving mail for clients. Returns a single character.
+     *
      * * `Y`: The address is a CMRA
      * * `N`: The address is not a CMRA
      * </pre>
@@ -3282,6 +3314,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Indicates if the address is a CMRA (Commercial Mail Receiving Agency)--a
      * private business receiving mail for clients. Returns a single character.
+     *
      * * `Y`: The address is a CMRA
      * * `N`: The address is not a CMRA
      * </pre>
@@ -3307,6 +3340,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Indicates if the address is a CMRA (Commercial Mail Receiving Agency)--a
      * private business receiving mail for clients. Returns a single character.
+     *
      * * `Y`: The address is a CMRA
      * * `N`: The address is not a CMRA
      * </pre>
@@ -3331,6 +3365,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Indicates if the address is a CMRA (Commercial Mail Receiving Agency)--a
      * private business receiving mail for clients. Returns a single character.
+     *
      * * `Y`: The address is a CMRA
      * * `N`: The address is not a CMRA
      * </pre>
@@ -3351,6 +3386,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Indicates if the address is a CMRA (Commercial Mail Receiving Agency)--a
      * private business receiving mail for clients. Returns a single character.
+     *
      * * `Y`: The address is a CMRA
      * * `N`: The address is not a CMRA
      * </pre>
@@ -3378,6 +3414,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Is this place vacant?
      * Returns a single character.
+     *
      * * `Y`: The address is vacant
      * * `N`: The address is not vacant
      * </pre>
@@ -3403,6 +3440,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Is this place vacant?
      * Returns a single character.
+     *
      * * `Y`: The address is vacant
      * * `N`: The address is not vacant
      * </pre>
@@ -3428,6 +3466,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Is this place vacant?
      * Returns a single character.
+     *
      * * `Y`: The address is vacant
      * * `N`: The address is not vacant
      * </pre>
@@ -3452,6 +3491,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Is this place vacant?
      * Returns a single character.
+     *
      * * `Y`: The address is vacant
      * * `N`: The address is not vacant
      * </pre>
@@ -3472,6 +3512,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Is this place vacant?
      * Returns a single character.
+     *
      * * `Y`: The address is vacant
      * * `N`: The address is not vacant
      * </pre>
@@ -3500,6 +3541,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Is this a no stat address or an active address?
      * No stat addresses are ones which are not continuously occupied or addresses
      * that the USPS does not service. Returns a single character.
+     *
      * * `Y`: The address is not active
      * * `N`: The address is active
      * </pre>
@@ -3526,6 +3568,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Is this a no stat address or an active address?
      * No stat addresses are ones which are not continuously occupied or addresses
      * that the USPS does not service. Returns a single character.
+     *
      * * `Y`: The address is not active
      * * `N`: The address is active
      * </pre>
@@ -3552,6 +3595,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Is this a no stat address or an active address?
      * No stat addresses are ones which are not continuously occupied or addresses
      * that the USPS does not service. Returns a single character.
+     *
      * * `Y`: The address is not active
      * * `N`: The address is active
      * </pre>
@@ -3577,6 +3621,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Is this a no stat address or an active address?
      * No stat addresses are ones which are not continuously occupied or addresses
      * that the USPS does not service. Returns a single character.
+     *
      * * `Y`: The address is not active
      * * `N`: The address is active
      * </pre>
@@ -3598,6 +3643,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Is this a no stat address or an active address?
      * No stat addresses are ones which are not continuously occupied or addresses
      * that the USPS does not service. Returns a single character.
+     *
      * * `Y`: The address is not active
      * * `N`: The address is active
      * </pre>
@@ -3626,7 +3672,9 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * The carrier route code.
      * A four character code consisting of a one letter prefix and a three digit
      * route designator.
+     *
      * Prefixes:
+     *
      * * `C`: Carrier route (or city route)
      * * `R`: Rural route
      * * `H`: Highway Contract Route
@@ -3656,7 +3704,9 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * The carrier route code.
      * A four character code consisting of a one letter prefix and a three digit
      * route designator.
+     *
      * Prefixes:
+     *
      * * `C`: Carrier route (or city route)
      * * `R`: Rural route
      * * `H`: Highway Contract Route
@@ -3686,7 +3736,9 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * The carrier route code.
      * A four character code consisting of a one letter prefix and a three digit
      * route designator.
+     *
      * Prefixes:
+     *
      * * `C`: Carrier route (or city route)
      * * `R`: Rural route
      * * `H`: Highway Contract Route
@@ -3715,7 +3767,9 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * The carrier route code.
      * A four character code consisting of a one letter prefix and a three digit
      * route designator.
+     *
      * Prefixes:
+     *
      * * `C`: Carrier route (or city route)
      * * `R`: Rural route
      * * `H`: Highway Contract Route
@@ -3740,7 +3794,9 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * The carrier route code.
      * A four character code consisting of a one letter prefix and a three digit
      * route designator.
+     *
      * Prefixes:
+     *
      * * `C`: Carrier route (or city route)
      * * `R`: Rural route
      * * `H`: Highway Contract Route
@@ -4940,6 +4996,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Footnotes from matching a street or highrise record to suite information.
      * If business name match is found, the secondary number is returned.
+     *
      * * `A`: SuiteLink record match, business address improved.
      * * `00`: No match, business address is not improved.
      * </pre>
@@ -4965,6 +5022,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Footnotes from matching a street or highrise record to suite information.
      * If business name match is found, the secondary number is returned.
+     *
      * * `A`: SuiteLink record match, business address improved.
      * * `00`: No match, business address is not improved.
      * </pre>
@@ -4990,6 +5048,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Footnotes from matching a street or highrise record to suite information.
      * If business name match is found, the secondary number is returned.
+     *
      * * `A`: SuiteLink record match, business address improved.
      * * `00`: No match, business address is not improved.
      * </pre>
@@ -5014,6 +5073,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Footnotes from matching a street or highrise record to suite information.
      * If business name match is found, the secondary number is returned.
+     *
      * * `A`: SuiteLink record match, business address improved.
      * * `00`: No match, business address is not improved.
      * </pre>
@@ -5034,6 +5094,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Footnotes from matching a street or highrise record to suite information.
      * If business name match is found, the secondary number is returned.
+     *
      * * `A`: SuiteLink record match, business address improved.
      * * `00`: No match, business address is not improved.
      * </pre>
@@ -5272,6 +5333,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Type of the address record that matches the input address.
+     *
      * * `F`: FIRM. This is a match to a Firm Record, which is the finest level of
      * match available for an address.
      * * `G`: GENERAL DELIVERY. This is a match to a General Delivery record.
@@ -5305,6 +5367,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Type of the address record that matches the input address.
+     *
      * * `F`: FIRM. This is a match to a Firm Record, which is the finest level of
      * match available for an address.
      * * `G`: GENERAL DELIVERY. This is a match to a General Delivery record.
@@ -5338,6 +5401,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Type of the address record that matches the input address.
+     *
      * * `F`: FIRM. This is a match to a Firm Record, which is the finest level of
      * match available for an address.
      * * `G`: GENERAL DELIVERY. This is a match to a General Delivery record.
@@ -5370,6 +5434,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Type of the address record that matches the input address.
+     *
      * * `F`: FIRM. This is a match to a Firm Record, which is the finest level of
      * match available for an address.
      * * `G`: GENERAL DELIVERY. This is a match to a General Delivery record.
@@ -5398,6 +5463,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Type of the address record that matches the input address.
+     *
      * * `F`: FIRM. This is a match to a Firm Record, which is the finest level of
      * match available for an address.
      * * `G`: GENERAL DELIVERY. This is a match to a General Delivery record.
@@ -5491,6 +5557,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Error message for USPS data retrieval. This is populated when USPS
      * processing is suspended because of the detection of artificially created
      * addresses.
+     *
      * The USPS data fields might not be populated when this error is present.
      * </pre>
      *
@@ -5516,6 +5583,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Error message for USPS data retrieval. This is populated when USPS
      * processing is suspended because of the detection of artificially created
      * addresses.
+     *
      * The USPS data fields might not be populated when this error is present.
      * </pre>
      *
@@ -5541,6 +5609,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Error message for USPS data retrieval. This is populated when USPS
      * processing is suspended because of the detection of artificially created
      * addresses.
+     *
      * The USPS data fields might not be populated when this error is present.
      * </pre>
      *
@@ -5565,6 +5634,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Error message for USPS data retrieval. This is populated when USPS
      * processing is suspended because of the detection of artificially created
      * addresses.
+     *
      * The USPS data fields might not be populated when this error is present.
      * </pre>
      *
@@ -5585,6 +5655,7 @@ public final class UspsData extends com.google.protobuf.GeneratedMessageV3
      * Error message for USPS data retrieval. This is populated when USPS
      * processing is suspended because of the detection of artificially created
      * addresses.
+     *
      * The USPS data fields might not be populated when this error is present.
      * </pre>
      *

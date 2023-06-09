@@ -22,7 +22,8 @@ package com.google.cloud.metastore.v1;
  *
  *
  * <pre>
- * Request message for [DataprocMetastore.GetService][google.cloud.metastore.v1.DataprocMetastore.GetService].
+ * Request message for
+ * [DataprocMetastore.GetService][google.cloud.metastore.v1.DataprocMetastore.GetService].
  * </pre>
  *
  * Protobuf type {@code google.cloud.metastore.v1.GetServiceRequest}
@@ -45,11 +46,6 @@ public final class GetServiceRequest extends com.google.protobuf.GeneratedMessag
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new GetServiceRequest();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -75,8 +71,9 @@ public final class GetServiceRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Required. The relative resource name of the metastore service to retrieve, in the
-   * following form:
+   * Required. The relative resource name of the metastore service to retrieve,
+   * in the following form:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -102,8 +99,9 @@ public final class GetServiceRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Required. The relative resource name of the metastore service to retrieve, in the
-   * following form:
+   * Required. The relative resource name of the metastore service to retrieve,
+   * in the following form:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
    * </pre>
    *
@@ -289,7 +287,8 @@ public final class GetServiceRequest extends com.google.protobuf.GeneratedMessag
    *
    *
    * <pre>
-   * Request message for [DataprocMetastore.GetService][google.cloud.metastore.v1.DataprocMetastore.GetService].
+   * Request message for
+   * [DataprocMetastore.GetService][google.cloud.metastore.v1.DataprocMetastore.GetService].
    * </pre>
    *
    * Protobuf type {@code google.cloud.metastore.v1.GetServiceRequest}
@@ -473,8 +472,9 @@ public final class GetServiceRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to retrieve, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to retrieve,
+     * in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -499,8 +499,9 @@ public final class GetServiceRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to retrieve, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to retrieve,
+     * in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -525,8 +526,9 @@ public final class GetServiceRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to retrieve, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to retrieve,
+     * in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -550,8 +552,9 @@ public final class GetServiceRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to retrieve, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to retrieve,
+     * in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *
@@ -571,8 +574,9 @@ public final class GetServiceRequest extends com.google.protobuf.GeneratedMessag
      *
      *
      * <pre>
-     * Required. The relative resource name of the metastore service to retrieve, in the
-     * following form:
+     * Required. The relative resource name of the metastore service to retrieve,
+     * in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}`.
      * </pre>
      *

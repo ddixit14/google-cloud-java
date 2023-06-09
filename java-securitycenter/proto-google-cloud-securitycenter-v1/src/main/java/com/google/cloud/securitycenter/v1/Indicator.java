@@ -22,10 +22,11 @@ package com.google.cloud.securitycenter.v1;
  *
  *
  * <pre>
- * Represents what's commonly known as an Indicator of compromise (IoC) in
+ * Represents what's commonly known as an _indicator of compromise_ (IoC) in
  * computer forensics. This is an artifact observed on a network or in an
  * operating system that, with high confidence, indicates a computer intrusion.
- * Reference: https://en.wikipedia.org/wiki/Indicator_of_compromise
+ * For more information, see [Indicator of
+ * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
  * </pre>
  *
  * Protobuf type {@code google.cloud.securitycenter.v1.Indicator}
@@ -41,21 +42,16 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
   }
 
   private Indicator() {
-    ipAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    domains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    ipAddresses_ = com.google.protobuf.LazyStringArrayList.emptyList();
+    domains_ = com.google.protobuf.LazyStringArrayList.emptyList();
     signatures_ = java.util.Collections.emptyList();
-    uris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    uris_ = com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Indicator();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -164,8 +160,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
     com.google.cloud.securitycenter.v1.Indicator.ProcessSignature.YaraRuleSignatureOrBuilder
         getYaraRuleSignatureOrBuilder();
 
-    public com.google.cloud.securitycenter.v1.Indicator.ProcessSignature.SignatureCase
-        getSignatureCase();
+    com.google.cloud.securitycenter.v1.Indicator.ProcessSignature.SignatureCase getSignatureCase();
   }
   /**
    *
@@ -192,11 +187,6 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new ProcessSignature();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -351,11 +341,6 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
         return new MemoryHashSignature();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-        return this.unknownFields;
-      }
-
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
         return com.google.cloud.securitycenter.v1.IndicatorProto
             .internal_static_google_cloud_securitycenter_v1_Indicator_ProcessSignature_MemoryHashSignature_descriptor;
@@ -447,11 +432,6 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
         @SuppressWarnings({"unused"})
         protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
           return new Detection();
-        }
-
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-          return this.unknownFields;
         }
 
         public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -2538,11 +2518,6 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
         return new YaraRuleSignature();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-        return this.unknownFields;
-      }
-
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
         return com.google.cloud.securitycenter.v1.IndicatorProto
             .internal_static_google_cloud_securitycenter_v1_Indicator_ProcessSignature_YaraRuleSignature_descriptor;
@@ -3163,6 +3138,8 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
     }
 
     private int signatureCase_ = 0;
+
+    @SuppressWarnings("serial")
     private java.lang.Object signature_;
 
     public enum SignatureCase
@@ -4357,12 +4334,13 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
   public static final int IP_ADDRESSES_FIELD_NUMBER = 1;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList ipAddresses_;
+  private com.google.protobuf.LazyStringArrayList ipAddresses_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
-   * List of ip addresses associated to the Finding.
+   * The list of IP addresses that are associated with the finding.
    * </pre>
    *
    * <code>repeated string ip_addresses = 1;</code>
@@ -4376,7 +4354,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * List of ip addresses associated to the Finding.
+   * The list of IP addresses that are associated with the finding.
    * </pre>
    *
    * <code>repeated string ip_addresses = 1;</code>
@@ -4390,7 +4368,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * List of ip addresses associated to the Finding.
+   * The list of IP addresses that are associated with the finding.
    * </pre>
    *
    * <code>repeated string ip_addresses = 1;</code>
@@ -4405,7 +4383,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * List of ip addresses associated to the Finding.
+   * The list of IP addresses that are associated with the finding.
    * </pre>
    *
    * <code>repeated string ip_addresses = 1;</code>
@@ -4420,7 +4398,8 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
   public static final int DOMAINS_FIELD_NUMBER = 2;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList domains_;
+  private com.google.protobuf.LazyStringArrayList domains_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
@@ -4567,7 +4546,8 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
   public static final int URIS_FIELD_NUMBER = 4;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList uris_;
+  private com.google.protobuf.LazyStringArrayList uris_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
@@ -4840,10 +4820,11 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Represents what's commonly known as an Indicator of compromise (IoC) in
+   * Represents what's commonly known as an _indicator of compromise_ (IoC) in
    * computer forensics. This is an artifact observed on a network or in an
    * operating system that, with high confidence, indicates a computer intrusion.
-   * Reference: https://en.wikipedia.org/wiki/Indicator_of_compromise
+   * For more information, see [Indicator of
+   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * </pre>
    *
    * Protobuf type {@code google.cloud.securitycenter.v1.Indicator}
@@ -4878,10 +4859,8 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      ipAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
-      domains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      ipAddresses_ = com.google.protobuf.LazyStringArrayList.emptyList();
+      domains_ = com.google.protobuf.LazyStringArrayList.emptyList();
       if (signaturesBuilder_ == null) {
         signatures_ = java.util.Collections.emptyList();
       } else {
@@ -4889,8 +4868,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
         signaturesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
-      uris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      uris_ = com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -4927,16 +4905,6 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
     }
 
     private void buildPartialRepeatedFields(com.google.cloud.securitycenter.v1.Indicator result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        ipAddresses_ = ipAddresses_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.ipAddresses_ = ipAddresses_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        domains_ = domains_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.domains_ = domains_;
       if (signaturesBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0)) {
           signatures_ = java.util.Collections.unmodifiableList(signatures_);
@@ -4946,15 +4914,22 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.signatures_ = signaturesBuilder_.build();
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        uris_ = uris_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.uris_ = uris_;
     }
 
     private void buildPartial0(com.google.cloud.securitycenter.v1.Indicator result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        ipAddresses_.makeImmutable();
+        result.ipAddresses_ = ipAddresses_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        domains_.makeImmutable();
+        result.domains_ = domains_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        uris_.makeImmutable();
+        result.uris_ = uris_;
+      }
     }
 
     @java.lang.Override
@@ -5005,7 +4980,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       if (!other.ipAddresses_.isEmpty()) {
         if (ipAddresses_.isEmpty()) {
           ipAddresses_ = other.ipAddresses_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureIpAddressesIsMutable();
           ipAddresses_.addAll(other.ipAddresses_);
@@ -5015,7 +4990,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       if (!other.domains_.isEmpty()) {
         if (domains_.isEmpty()) {
           domains_ = other.domains_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000002;
         } else {
           ensureDomainsIsMutable();
           domains_.addAll(other.domains_);
@@ -5052,7 +5027,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       if (!other.uris_.isEmpty()) {
         if (uris_.isEmpty()) {
           uris_ = other.uris_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ |= 0x00000008;
         } else {
           ensureUrisIsMutable();
           uris_.addAll(other.uris_);
@@ -5139,20 +5114,20 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
 
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList ipAddresses_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList ipAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureIpAddressesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!ipAddresses_.isModifiable()) {
         ipAddresses_ = new com.google.protobuf.LazyStringArrayList(ipAddresses_);
-        bitField0_ |= 0x00000001;
       }
+      bitField0_ |= 0x00000001;
     }
     /**
      *
      *
      * <pre>
-     * List of ip addresses associated to the Finding.
+     * The list of IP addresses that are associated with the finding.
      * </pre>
      *
      * <code>repeated string ip_addresses = 1;</code>
@@ -5160,13 +5135,14 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the ipAddresses.
      */
     public com.google.protobuf.ProtocolStringList getIpAddressesList() {
-      return ipAddresses_.getUnmodifiableView();
+      ipAddresses_.makeImmutable();
+      return ipAddresses_;
     }
     /**
      *
      *
      * <pre>
-     * List of ip addresses associated to the Finding.
+     * The list of IP addresses that are associated with the finding.
      * </pre>
      *
      * <code>repeated string ip_addresses = 1;</code>
@@ -5180,7 +5156,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * List of ip addresses associated to the Finding.
+     * The list of IP addresses that are associated with the finding.
      * </pre>
      *
      * <code>repeated string ip_addresses = 1;</code>
@@ -5195,7 +5171,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * List of ip addresses associated to the Finding.
+     * The list of IP addresses that are associated with the finding.
      * </pre>
      *
      * <code>repeated string ip_addresses = 1;</code>
@@ -5210,7 +5186,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * List of ip addresses associated to the Finding.
+     * The list of IP addresses that are associated with the finding.
      * </pre>
      *
      * <code>repeated string ip_addresses = 1;</code>
@@ -5225,6 +5201,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       }
       ensureIpAddressesIsMutable();
       ipAddresses_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5232,7 +5209,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * List of ip addresses associated to the Finding.
+     * The list of IP addresses that are associated with the finding.
      * </pre>
      *
      * <code>repeated string ip_addresses = 1;</code>
@@ -5246,6 +5223,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       }
       ensureIpAddressesIsMutable();
       ipAddresses_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5253,7 +5231,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * List of ip addresses associated to the Finding.
+     * The list of IP addresses that are associated with the finding.
      * </pre>
      *
      * <code>repeated string ip_addresses = 1;</code>
@@ -5264,6 +5242,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllIpAddresses(java.lang.Iterable<java.lang.String> values) {
       ensureIpAddressesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, ipAddresses_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5271,7 +5250,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * List of ip addresses associated to the Finding.
+     * The list of IP addresses that are associated with the finding.
      * </pre>
      *
      * <code>repeated string ip_addresses = 1;</code>
@@ -5279,8 +5258,9 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearIpAddresses() {
-      ipAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      ipAddresses_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      ;
       onChanged();
       return this;
     }
@@ -5288,7 +5268,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * List of ip addresses associated to the Finding.
+     * The list of IP addresses that are associated with the finding.
      * </pre>
      *
      * <code>repeated string ip_addresses = 1;</code>
@@ -5303,18 +5283,19 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureIpAddressesIsMutable();
       ipAddresses_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList domains_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList domains_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureDomainsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!domains_.isModifiable()) {
         domains_ = new com.google.protobuf.LazyStringArrayList(domains_);
-        bitField0_ |= 0x00000002;
       }
+      bitField0_ |= 0x00000002;
     }
     /**
      *
@@ -5328,7 +5309,8 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the domains.
      */
     public com.google.protobuf.ProtocolStringList getDomainsList() {
-      return domains_.getUnmodifiableView();
+      domains_.makeImmutable();
+      return domains_;
     }
     /**
      *
@@ -5393,6 +5375,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       }
       ensureDomainsIsMutable();
       domains_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -5414,6 +5397,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       }
       ensureDomainsIsMutable();
       domains_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -5432,6 +5416,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllDomains(java.lang.Iterable<java.lang.String> values) {
       ensureDomainsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, domains_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -5447,8 +5432,9 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearDomains() {
-      domains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      domains_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000002);
+      ;
       onChanged();
       return this;
     }
@@ -5471,6 +5457,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureDomainsIsMutable();
       domains_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -5878,14 +5865,14 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       return signaturesBuilder_;
     }
 
-    private com.google.protobuf.LazyStringList uris_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList uris_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureUrisIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!uris_.isModifiable()) {
         uris_ = new com.google.protobuf.LazyStringArrayList(uris_);
-        bitField0_ |= 0x00000008;
       }
+      bitField0_ |= 0x00000008;
     }
     /**
      *
@@ -5899,7 +5886,8 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      * @return A list containing the uris.
      */
     public com.google.protobuf.ProtocolStringList getUrisList() {
-      return uris_.getUnmodifiableView();
+      uris_.makeImmutable();
+      return uris_;
     }
     /**
      *
@@ -5964,6 +5952,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       }
       ensureUrisIsMutable();
       uris_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -5985,6 +5974,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       }
       ensureUrisIsMutable();
       uris_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -6003,6 +5993,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
     public Builder addAllUris(java.lang.Iterable<java.lang.String> values) {
       ensureUrisIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, uris_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -6018,8 +6009,9 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
      * @return This builder for chaining.
      */
     public Builder clearUris() {
-      uris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      uris_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000008);
+      ;
       onChanged();
       return this;
     }
@@ -6042,6 +6034,7 @@ public final class Indicator extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
       ensureUrisIsMutable();
       uris_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

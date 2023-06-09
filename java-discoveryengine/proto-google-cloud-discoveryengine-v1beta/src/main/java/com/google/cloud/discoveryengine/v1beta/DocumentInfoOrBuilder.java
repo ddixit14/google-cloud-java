@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -65,7 +65,7 @@ public interface DocumentInfoOrBuilder
    *
    * <pre>
    * Required. The Document resource full name, of the form:
-   * projects/{project&#92;_id}/locations/{location}/collections/{collection&#92;_id}/dataStores/{data&#92;_store&#92;_id}/branches/{branch&#92;_id}/documents/{document&#92;_id}
+   * `projects/{project_id}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * </pre>
    *
    * <code>
@@ -80,7 +80,7 @@ public interface DocumentInfoOrBuilder
    *
    * <pre>
    * Required. The Document resource full name, of the form:
-   * projects/{project&#92;_id}/locations/{location}/collections/{collection&#92;_id}/dataStores/{data&#92;_store&#92;_id}/branches/{branch&#92;_id}/documents/{document&#92;_id}
+   * `projects/{project_id}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * </pre>
    *
    * <code>
@@ -95,7 +95,7 @@ public interface DocumentInfoOrBuilder
    *
    * <pre>
    * Required. The Document resource full name, of the form:
-   * projects/{project&#92;_id}/locations/{location}/collections/{collection&#92;_id}/dataStores/{data&#92;_store&#92;_id}/branches/{branch&#92;_id}/documents/{document&#92;_id}
+   * `projects/{project_id}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * </pre>
    *
    * <code>
@@ -111,9 +111,12 @@ public interface DocumentInfoOrBuilder
    *
    * <pre>
    * Quantity of the Document associated with the user event. Defaults to 1.
+   *
    * For example, this field will be 2 if two quantities of the same Document
    * are involved in a `add-to-cart` event.
+   *
    * Required for events of the following event types:
+   *
    * * `add-to-cart`
    * * `purchase`
    * </pre>
@@ -128,9 +131,12 @@ public interface DocumentInfoOrBuilder
    *
    * <pre>
    * Quantity of the Document associated with the user event. Defaults to 1.
+   *
    * For example, this field will be 2 if two quantities of the same Document
    * are involved in a `add-to-cart` event.
+   *
    * Required for events of the following event types:
+   *
    * * `add-to-cart`
    * * `purchase`
    * </pre>
@@ -196,6 +202,6 @@ public interface DocumentInfoOrBuilder
    */
   com.google.protobuf.ByteString getPromotionIdsBytes(int index);
 
-  public com.google.cloud.discoveryengine.v1beta.DocumentInfo.DocumentDescriptorCase
+  com.google.cloud.discoveryengine.v1beta.DocumentInfo.DocumentDescriptorCase
       getDocumentDescriptorCase();
 }

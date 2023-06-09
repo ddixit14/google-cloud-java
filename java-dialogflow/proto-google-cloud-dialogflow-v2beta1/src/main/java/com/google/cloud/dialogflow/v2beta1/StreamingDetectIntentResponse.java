@@ -24,16 +24,20 @@ package com.google.cloud.dialogflow.v2beta1;
  * <pre>
  * The top-level message returned from the
  * `StreamingDetectIntent` method.
+ *
  * Multiple response messages can be returned in order:
+ *
  * 1.  If the `StreamingDetectIntentRequest.input_audio` field was
  *     set, the `recognition_result` field is populated for one
  *     or more messages.
  *     See the
  *     [StreamingRecognitionResult][google.cloud.dialogflow.v2beta1.StreamingRecognitionResult]
  *     message for details about the result message sequence.
+ *
  * 2.  The next message contains `response_id`, `query_result`,
  *     `alternative_query_results` and optionally `webhook_status` if a WebHook
  *     was called.
+ *
  * 3.  If `output_audio_config` was specified in the request or agent-level
  *     speech synthesizer is configured, all subsequent messages contain
  *     `output_audio` and `output_audio_config`.
@@ -61,11 +65,6 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new StreamingDetectIntentResponse();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -414,6 +413,7 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
    * multiple default text responses exist, they will be concatenated when
    * generating audio. If no default platform text responses exist, the
    * generated audio content will be empty.
+   *
    * In some scenarios, multiple output audio fields may be present in the
    * response structure. In these cases, only the top-most-level audio output
    * has content.
@@ -479,6 +479,63 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
         : outputAudioConfig_;
   }
 
+  public static final int DEBUGGING_INFO_FIELD_NUMBER = 8;
+  private com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debuggingInfo_;
+  /**
+   *
+   *
+   * <pre>
+   * Debugging info that would get populated when
+   * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+   * </pre>
+   *
+   * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+   * </code>
+   *
+   * @return Whether the debuggingInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasDebuggingInfo() {
+    return debuggingInfo_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Debugging info that would get populated when
+   * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+   * </pre>
+   *
+   * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+   * </code>
+   *
+   * @return The debuggingInfo.
+   */
+  @java.lang.Override
+  public com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo getDebuggingInfo() {
+    return debuggingInfo_ == null
+        ? com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo.getDefaultInstance()
+        : debuggingInfo_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Debugging info that would get populated when
+   * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+   * </pre>
+   *
+   * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+   * </code>
+   */
+  @java.lang.Override
+  public com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfoOrBuilder
+      getDebuggingInfoOrBuilder() {
+    return debuggingInfo_ == null
+        ? com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo.getDefaultInstance()
+        : debuggingInfo_;
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -514,6 +571,9 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
     for (int i = 0; i < alternativeQueryResults_.size(); i++) {
       output.writeMessage(7, alternativeQueryResults_.get(i));
     }
+    if (debuggingInfo_ != null) {
+      output.writeMessage(8, getDebuggingInfo());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -545,6 +605,9 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
       size +=
           com.google.protobuf.CodedOutputStream.computeMessageSize(
               7, alternativeQueryResults_.get(i));
+    }
+    if (debuggingInfo_ != null) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(8, getDebuggingInfo());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -582,6 +645,10 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
     if (hasOutputAudioConfig()) {
       if (!getOutputAudioConfig().equals(other.getOutputAudioConfig())) return false;
     }
+    if (hasDebuggingInfo() != other.hasDebuggingInfo()) return false;
+    if (hasDebuggingInfo()) {
+      if (!getDebuggingInfo().equals(other.getDebuggingInfo())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -616,6 +683,10 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
     if (hasOutputAudioConfig()) {
       hash = (37 * hash) + OUTPUT_AUDIO_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getOutputAudioConfig().hashCode();
+    }
+    if (hasDebuggingInfo()) {
+      hash = (37 * hash) + DEBUGGING_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getDebuggingInfo().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -725,16 +796,20 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
    * <pre>
    * The top-level message returned from the
    * `StreamingDetectIntent` method.
+   *
    * Multiple response messages can be returned in order:
+   *
    * 1.  If the `StreamingDetectIntentRequest.input_audio` field was
    *     set, the `recognition_result` field is populated for one
    *     or more messages.
    *     See the
    *     [StreamingRecognitionResult][google.cloud.dialogflow.v2beta1.StreamingRecognitionResult]
    *     message for details about the result message sequence.
+   *
    * 2.  The next message contains `response_id`, `query_result`,
    *     `alternative_query_results` and optionally `webhook_status` if a WebHook
    *     was called.
+   *
    * 3.  If `output_audio_config` was specified in the request or agent-level
    *     speech synthesizer is configured, all subsequent messages contain
    *     `output_audio` and `output_audio_config`.
@@ -801,6 +876,11 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
       if (outputAudioConfigBuilder_ != null) {
         outputAudioConfigBuilder_.dispose();
         outputAudioConfigBuilder_ = null;
+      }
+      debuggingInfo_ = null;
+      if (debuggingInfoBuilder_ != null) {
+        debuggingInfoBuilder_.dispose();
+        debuggingInfoBuilder_ = null;
       }
       return this;
     }
@@ -880,6 +960,10 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
             outputAudioConfigBuilder_ == null
                 ? outputAudioConfig_
                 : outputAudioConfigBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.debuggingInfo_ =
+            debuggingInfoBuilder_ == null ? debuggingInfo_ : debuggingInfoBuilder_.build();
       }
     }
 
@@ -978,6 +1062,9 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
       if (other.hasOutputAudioConfig()) {
         mergeOutputAudioConfig(other.getOutputAudioConfig());
       }
+      if (other.hasDebuggingInfo()) {
+        mergeDebuggingInfo(other.getDebuggingInfo());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1056,6 +1143,12 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
                 }
                 break;
               } // case 58
+            case 66:
+              {
+                input.readMessage(getDebuggingInfoFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -2272,6 +2365,7 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
      * multiple default text responses exist, they will be concatenated when
      * generating audio. If no default platform text responses exist, the
      * generated audio content will be empty.
+     *
      * In some scenarios, multiple output audio fields may be present in the
      * response structure. In these cases, only the top-most-level audio output
      * has content.
@@ -2295,6 +2389,7 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
      * multiple default text responses exist, they will be concatenated when
      * generating audio. If no default platform text responses exist, the
      * generated audio content will be empty.
+     *
      * In some scenarios, multiple output audio fields may be present in the
      * response structure. In these cases, only the top-most-level audio output
      * has content.
@@ -2324,6 +2419,7 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
      * multiple default text responses exist, they will be concatenated when
      * generating audio. If no default platform text responses exist, the
      * generated audio content will be empty.
+     *
      * In some scenarios, multiple output audio fields may be present in the
      * response structure. In these cases, only the top-most-level audio output
      * has content.
@@ -2527,6 +2623,217 @@ public final class StreamingDetectIntentResponse extends com.google.protobuf.Gen
         outputAudioConfig_ = null;
       }
       return outputAudioConfigBuilder_;
+    }
+
+    private com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debuggingInfo_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo,
+            com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo.Builder,
+            com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfoOrBuilder>
+        debuggingInfoBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Debugging info that would get populated when
+     * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+     * </pre>
+     *
+     * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+     * </code>
+     *
+     * @return Whether the debuggingInfo field is set.
+     */
+    public boolean hasDebuggingInfo() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Debugging info that would get populated when
+     * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+     * </pre>
+     *
+     * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+     * </code>
+     *
+     * @return The debuggingInfo.
+     */
+    public com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo getDebuggingInfo() {
+      if (debuggingInfoBuilder_ == null) {
+        return debuggingInfo_ == null
+            ? com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo
+                .getDefaultInstance()
+            : debuggingInfo_;
+      } else {
+        return debuggingInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Debugging info that would get populated when
+     * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+     * </pre>
+     *
+     * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+     * </code>
+     */
+    public Builder setDebuggingInfo(
+        com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo value) {
+      if (debuggingInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        debuggingInfo_ = value;
+      } else {
+        debuggingInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Debugging info that would get populated when
+     * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+     * </pre>
+     *
+     * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+     * </code>
+     */
+    public Builder setDebuggingInfo(
+        com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo.Builder
+            builderForValue) {
+      if (debuggingInfoBuilder_ == null) {
+        debuggingInfo_ = builderForValue.build();
+      } else {
+        debuggingInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Debugging info that would get populated when
+     * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+     * </pre>
+     *
+     * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+     * </code>
+     */
+    public Builder mergeDebuggingInfo(
+        com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo value) {
+      if (debuggingInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)
+            && debuggingInfo_ != null
+            && debuggingInfo_
+                != com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo
+                    .getDefaultInstance()) {
+          getDebuggingInfoBuilder().mergeFrom(value);
+        } else {
+          debuggingInfo_ = value;
+        }
+      } else {
+        debuggingInfoBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Debugging info that would get populated when
+     * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+     * </pre>
+     *
+     * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+     * </code>
+     */
+    public Builder clearDebuggingInfo() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      debuggingInfo_ = null;
+      if (debuggingInfoBuilder_ != null) {
+        debuggingInfoBuilder_.dispose();
+        debuggingInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Debugging info that would get populated when
+     * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+     * </pre>
+     *
+     * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+     * </code>
+     */
+    public com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo.Builder
+        getDebuggingInfoBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getDebuggingInfoFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Debugging info that would get populated when
+     * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+     * </pre>
+     *
+     * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+     * </code>
+     */
+    public com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfoOrBuilder
+        getDebuggingInfoOrBuilder() {
+      if (debuggingInfoBuilder_ != null) {
+        return debuggingInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return debuggingInfo_ == null
+            ? com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo
+                .getDefaultInstance()
+            : debuggingInfo_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Debugging info that would get populated when
+     * `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+     * </pre>
+     *
+     * <code>.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo debugging_info = 8;
+     * </code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo,
+            com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo.Builder,
+            com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfoOrBuilder>
+        getDebuggingInfoFieldBuilder() {
+      if (debuggingInfoBuilder_ == null) {
+        debuggingInfoBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo,
+                com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfo.Builder,
+                com.google.cloud.dialogflow.v2beta1.CloudConversationDebuggingInfoOrBuilder>(
+                getDebuggingInfo(), getParentForChildren(), isClean());
+        debuggingInfo_ = null;
+      }
+      return debuggingInfoBuilder_;
     }
 
     @java.lang.Override

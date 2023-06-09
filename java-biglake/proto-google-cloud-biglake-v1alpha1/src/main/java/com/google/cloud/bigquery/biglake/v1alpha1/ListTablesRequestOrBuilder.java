@@ -78,6 +78,7 @@ public interface ListTablesRequestOrBuilder
    * <pre>
    * A page token, received from a previous `ListTables` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to `ListTables` must match
    * the call that provided the page token.
    * </pre>
@@ -93,6 +94,7 @@ public interface ListTablesRequestOrBuilder
    * <pre>
    * A page token, received from a previous `ListTables` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to `ListTables` must match
    * the call that provided the page token.
    * </pre>
@@ -102,4 +104,29 @@ public interface ListTablesRequestOrBuilder
    * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString getPageTokenBytes();
+
+  /**
+   *
+   *
+   * <pre>
+   * The view for the returned tables.
+   * </pre>
+   *
+   * <code>.google.cloud.bigquery.biglake.v1alpha1.TableView view = 4;</code>
+   *
+   * @return The enum numeric value on the wire for view.
+   */
+  int getViewValue();
+  /**
+   *
+   *
+   * <pre>
+   * The view for the returned tables.
+   * </pre>
+   *
+   * <code>.google.cloud.bigquery.biglake.v1alpha1.TableView view = 4;</code>
+   *
+   * @return The view.
+   */
+  com.google.cloud.bigquery.biglake.v1alpha1.TableView getView();
 }

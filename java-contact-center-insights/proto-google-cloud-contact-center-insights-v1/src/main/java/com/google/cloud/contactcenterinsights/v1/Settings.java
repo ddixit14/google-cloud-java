@@ -48,11 +48,6 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
     return new Settings();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contactcenterinsights.v1.ResourcesProto
         .internal_static_google_cloud_contactcenterinsights_v1_Settings_descriptor;
@@ -176,11 +171,6 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new AnalysisConfig();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -1404,13 +1394,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
    * A map that maps a notification trigger to a Pub/Sub topic. Each time a
    * specified trigger occurs, Insights will notify the corresponding Pub/Sub
    * topic.
+   *
    * Keys are notification triggers. Supported keys are:
+   *
    * * "all-triggers": Notify each time any of the supported triggers occurs.
    * * "create-analysis": Notify each time an analysis is created.
    * * "create-conversation": Notify each time a conversation is created.
    * * "export-insights-data": Notify each time an export is complete.
    * * "update-conversation": Notify each time a conversation is updated via
    * UpdateConversation.
+   *
    * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * </pre>
@@ -1437,13 +1430,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
    * A map that maps a notification trigger to a Pub/Sub topic. Each time a
    * specified trigger occurs, Insights will notify the corresponding Pub/Sub
    * topic.
+   *
    * Keys are notification triggers. Supported keys are:
+   *
    * * "all-triggers": Notify each time any of the supported triggers occurs.
    * * "create-analysis": Notify each time an analysis is created.
    * * "create-conversation": Notify each time a conversation is created.
    * * "export-insights-data": Notify each time an export is complete.
    * * "update-conversation": Notify each time a conversation is updated via
    * UpdateConversation.
+   *
    * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * </pre>
@@ -1461,13 +1457,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
    * A map that maps a notification trigger to a Pub/Sub topic. Each time a
    * specified trigger occurs, Insights will notify the corresponding Pub/Sub
    * topic.
+   *
    * Keys are notification triggers. Supported keys are:
+   *
    * * "all-triggers": Notify each time any of the supported triggers occurs.
    * * "create-analysis": Notify each time an analysis is created.
    * * "create-conversation": Notify each time a conversation is created.
    * * "export-insights-data": Notify each time an export is complete.
    * * "update-conversation": Notify each time a conversation is updated via
    * UpdateConversation.
+   *
    * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * </pre>
@@ -1493,13 +1492,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
    * A map that maps a notification trigger to a Pub/Sub topic. Each time a
    * specified trigger occurs, Insights will notify the corresponding Pub/Sub
    * topic.
+   *
    * Keys are notification triggers. Supported keys are:
+   *
    * * "all-triggers": Notify each time any of the supported triggers occurs.
    * * "create-analysis": Notify each time an analysis is created.
    * * "create-conversation": Notify each time a conversation is created.
    * * "export-insights-data": Notify each time an export is complete.
    * * "update-conversation": Notify each time a conversation is updated via
    * UpdateConversation.
+   *
    * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * </pre>
@@ -1573,6 +1575,60 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
         : analysisConfig_;
   }
 
+  public static final int REDACTION_CONFIG_FIELD_NUMBER = 10;
+  private com.google.cloud.contactcenterinsights.v1.RedactionConfig redactionConfig_;
+  /**
+   *
+   *
+   * <pre>
+   * Default DLP redaction resources to be applied while ingesting
+   * conversations.
+   * </pre>
+   *
+   * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+   *
+   * @return Whether the redactionConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasRedactionConfig() {
+    return redactionConfig_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Default DLP redaction resources to be applied while ingesting
+   * conversations.
+   * </pre>
+   *
+   * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+   *
+   * @return The redactionConfig.
+   */
+  @java.lang.Override
+  public com.google.cloud.contactcenterinsights.v1.RedactionConfig getRedactionConfig() {
+    return redactionConfig_ == null
+        ? com.google.cloud.contactcenterinsights.v1.RedactionConfig.getDefaultInstance()
+        : redactionConfig_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Default DLP redaction resources to be applied while ingesting
+   * conversations.
+   * </pre>
+   *
+   * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+   */
+  @java.lang.Override
+  public com.google.cloud.contactcenterinsights.v1.RedactionConfigOrBuilder
+      getRedactionConfigOrBuilder() {
+    return redactionConfig_ == null
+        ? com.google.cloud.contactcenterinsights.v1.RedactionConfig.getDefaultInstance()
+        : redactionConfig_;
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -1609,6 +1665,9 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
         6);
     if (analysisConfig_ != null) {
       output.writeMessage(7, getAnalysisConfig());
+    }
+    if (redactionConfig_ != null) {
+      output.writeMessage(10, getRedactionConfig());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1649,6 +1708,9 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
     if (analysisConfig_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(7, getAnalysisConfig());
     }
+    if (redactionConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(10, getRedactionConfig());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1685,6 +1747,10 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
     if (hasAnalysisConfig()) {
       if (!getAnalysisConfig().equals(other.getAnalysisConfig())) return false;
     }
+    if (hasRedactionConfig() != other.hasRedactionConfig()) return false;
+    if (hasRedactionConfig()) {
+      if (!getRedactionConfig().equals(other.getRedactionConfig())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1719,6 +1785,10 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
     if (hasAnalysisConfig()) {
       hash = (37 * hash) + ANALYSIS_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getAnalysisConfig().hashCode();
+    }
+    if (hasRedactionConfig()) {
+      hash = (37 * hash) + REDACTION_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getRedactionConfig().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1902,6 +1972,11 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
         analysisConfigBuilder_.dispose();
         analysisConfigBuilder_ = null;
       }
+      redactionConfig_ = null;
+      if (redactionConfigBuilder_ != null) {
+        redactionConfigBuilder_.dispose();
+        redactionConfigBuilder_ = null;
+      }
       return this;
     }
 
@@ -1961,6 +2036,10 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.analysisConfig_ =
             analysisConfigBuilder_ == null ? analysisConfig_ : analysisConfigBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.redactionConfig_ =
+            redactionConfigBuilder_ == null ? redactionConfig_ : redactionConfigBuilder_.build();
       }
     }
 
@@ -2034,6 +2113,9 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
       bitField0_ |= 0x00000020;
       if (other.hasAnalysisConfig()) {
         mergeAnalysisConfig(other.getAnalysisConfig());
+      }
+      if (other.hasRedactionConfig()) {
+        mergeRedactionConfig(other.getRedactionConfig());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2113,6 +2195,12 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
                 bitField0_ |= 0x00000040;
                 break;
               } // case 58
+            case 82:
+              {
+                input.readMessage(getRedactionConfigFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 82
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -3013,13 +3101,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
      * A map that maps a notification trigger to a Pub/Sub topic. Each time a
      * specified trigger occurs, Insights will notify the corresponding Pub/Sub
      * topic.
+     *
      * Keys are notification triggers. Supported keys are:
+     *
      * * "all-triggers": Notify each time any of the supported triggers occurs.
      * * "create-analysis": Notify each time an analysis is created.
      * * "create-conversation": Notify each time a conversation is created.
      * * "export-insights-data": Notify each time an export is complete.
      * * "update-conversation": Notify each time a conversation is updated via
      * UpdateConversation.
+     *
      * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
      * projects/{project}/topics/{topic}
      * </pre>
@@ -3046,13 +3137,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
      * A map that maps a notification trigger to a Pub/Sub topic. Each time a
      * specified trigger occurs, Insights will notify the corresponding Pub/Sub
      * topic.
+     *
      * Keys are notification triggers. Supported keys are:
+     *
      * * "all-triggers": Notify each time any of the supported triggers occurs.
      * * "create-analysis": Notify each time an analysis is created.
      * * "create-conversation": Notify each time a conversation is created.
      * * "export-insights-data": Notify each time an export is complete.
      * * "update-conversation": Notify each time a conversation is updated via
      * UpdateConversation.
+     *
      * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
      * projects/{project}/topics/{topic}
      * </pre>
@@ -3070,13 +3164,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
      * A map that maps a notification trigger to a Pub/Sub topic. Each time a
      * specified trigger occurs, Insights will notify the corresponding Pub/Sub
      * topic.
+     *
      * Keys are notification triggers. Supported keys are:
+     *
      * * "all-triggers": Notify each time any of the supported triggers occurs.
      * * "create-analysis": Notify each time an analysis is created.
      * * "create-conversation": Notify each time a conversation is created.
      * * "export-insights-data": Notify each time an export is complete.
      * * "update-conversation": Notify each time a conversation is updated via
      * UpdateConversation.
+     *
      * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
      * projects/{project}/topics/{topic}
      * </pre>
@@ -3102,13 +3199,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
      * A map that maps a notification trigger to a Pub/Sub topic. Each time a
      * specified trigger occurs, Insights will notify the corresponding Pub/Sub
      * topic.
+     *
      * Keys are notification triggers. Supported keys are:
+     *
      * * "all-triggers": Notify each time any of the supported triggers occurs.
      * * "create-analysis": Notify each time an analysis is created.
      * * "create-conversation": Notify each time a conversation is created.
      * * "export-insights-data": Notify each time an export is complete.
      * * "update-conversation": Notify each time a conversation is updated via
      * UpdateConversation.
+     *
      * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
      * projects/{project}/topics/{topic}
      * </pre>
@@ -3140,13 +3240,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
      * A map that maps a notification trigger to a Pub/Sub topic. Each time a
      * specified trigger occurs, Insights will notify the corresponding Pub/Sub
      * topic.
+     *
      * Keys are notification triggers. Supported keys are:
+     *
      * * "all-triggers": Notify each time any of the supported triggers occurs.
      * * "create-analysis": Notify each time an analysis is created.
      * * "create-conversation": Notify each time a conversation is created.
      * * "export-insights-data": Notify each time an export is complete.
      * * "update-conversation": Notify each time a conversation is updated via
      * UpdateConversation.
+     *
      * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
      * projects/{project}/topics/{topic}
      * </pre>
@@ -3174,13 +3277,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
      * A map that maps a notification trigger to a Pub/Sub topic. Each time a
      * specified trigger occurs, Insights will notify the corresponding Pub/Sub
      * topic.
+     *
      * Keys are notification triggers. Supported keys are:
+     *
      * * "all-triggers": Notify each time any of the supported triggers occurs.
      * * "create-analysis": Notify each time an analysis is created.
      * * "create-conversation": Notify each time a conversation is created.
      * * "export-insights-data": Notify each time an export is complete.
      * * "update-conversation": Notify each time a conversation is updated via
      * UpdateConversation.
+     *
      * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
      * projects/{project}/topics/{topic}
      * </pre>
@@ -3205,13 +3311,16 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
      * A map that maps a notification trigger to a Pub/Sub topic. Each time a
      * specified trigger occurs, Insights will notify the corresponding Pub/Sub
      * topic.
+     *
      * Keys are notification triggers. Supported keys are:
+     *
      * * "all-triggers": Notify each time any of the supported triggers occurs.
      * * "create-analysis": Notify each time an analysis is created.
      * * "create-conversation": Notify each time a conversation is created.
      * * "export-insights-data": Notify each time an export is complete.
      * * "update-conversation": Notify each time a conversation is updated via
      * UpdateConversation.
+     *
      * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
      * projects/{project}/topics/{topic}
      * </pre>
@@ -3422,6 +3531,204 @@ public final class Settings extends com.google.protobuf.GeneratedMessageV3
         analysisConfig_ = null;
       }
       return analysisConfigBuilder_;
+    }
+
+    private com.google.cloud.contactcenterinsights.v1.RedactionConfig redactionConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.cloud.contactcenterinsights.v1.RedactionConfig,
+            com.google.cloud.contactcenterinsights.v1.RedactionConfig.Builder,
+            com.google.cloud.contactcenterinsights.v1.RedactionConfigOrBuilder>
+        redactionConfigBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Default DLP redaction resources to be applied while ingesting
+     * conversations.
+     * </pre>
+     *
+     * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+     *
+     * @return Whether the redactionConfig field is set.
+     */
+    public boolean hasRedactionConfig() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Default DLP redaction resources to be applied while ingesting
+     * conversations.
+     * </pre>
+     *
+     * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+     *
+     * @return The redactionConfig.
+     */
+    public com.google.cloud.contactcenterinsights.v1.RedactionConfig getRedactionConfig() {
+      if (redactionConfigBuilder_ == null) {
+        return redactionConfig_ == null
+            ? com.google.cloud.contactcenterinsights.v1.RedactionConfig.getDefaultInstance()
+            : redactionConfig_;
+      } else {
+        return redactionConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Default DLP redaction resources to be applied while ingesting
+     * conversations.
+     * </pre>
+     *
+     * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+     */
+    public Builder setRedactionConfig(
+        com.google.cloud.contactcenterinsights.v1.RedactionConfig value) {
+      if (redactionConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        redactionConfig_ = value;
+      } else {
+        redactionConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Default DLP redaction resources to be applied while ingesting
+     * conversations.
+     * </pre>
+     *
+     * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+     */
+    public Builder setRedactionConfig(
+        com.google.cloud.contactcenterinsights.v1.RedactionConfig.Builder builderForValue) {
+      if (redactionConfigBuilder_ == null) {
+        redactionConfig_ = builderForValue.build();
+      } else {
+        redactionConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Default DLP redaction resources to be applied while ingesting
+     * conversations.
+     * </pre>
+     *
+     * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+     */
+    public Builder mergeRedactionConfig(
+        com.google.cloud.contactcenterinsights.v1.RedactionConfig value) {
+      if (redactionConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)
+            && redactionConfig_ != null
+            && redactionConfig_
+                != com.google.cloud.contactcenterinsights.v1.RedactionConfig.getDefaultInstance()) {
+          getRedactionConfigBuilder().mergeFrom(value);
+        } else {
+          redactionConfig_ = value;
+        }
+      } else {
+        redactionConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Default DLP redaction resources to be applied while ingesting
+     * conversations.
+     * </pre>
+     *
+     * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+     */
+    public Builder clearRedactionConfig() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      redactionConfig_ = null;
+      if (redactionConfigBuilder_ != null) {
+        redactionConfigBuilder_.dispose();
+        redactionConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Default DLP redaction resources to be applied while ingesting
+     * conversations.
+     * </pre>
+     *
+     * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+     */
+    public com.google.cloud.contactcenterinsights.v1.RedactionConfig.Builder
+        getRedactionConfigBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getRedactionConfigFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Default DLP redaction resources to be applied while ingesting
+     * conversations.
+     * </pre>
+     *
+     * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+     */
+    public com.google.cloud.contactcenterinsights.v1.RedactionConfigOrBuilder
+        getRedactionConfigOrBuilder() {
+      if (redactionConfigBuilder_ != null) {
+        return redactionConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return redactionConfig_ == null
+            ? com.google.cloud.contactcenterinsights.v1.RedactionConfig.getDefaultInstance()
+            : redactionConfig_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Default DLP redaction resources to be applied while ingesting
+     * conversations.
+     * </pre>
+     *
+     * <code>.google.cloud.contactcenterinsights.v1.RedactionConfig redaction_config = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.cloud.contactcenterinsights.v1.RedactionConfig,
+            com.google.cloud.contactcenterinsights.v1.RedactionConfig.Builder,
+            com.google.cloud.contactcenterinsights.v1.RedactionConfigOrBuilder>
+        getRedactionConfigFieldBuilder() {
+      if (redactionConfigBuilder_ == null) {
+        redactionConfigBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.cloud.contactcenterinsights.v1.RedactionConfig,
+                com.google.cloud.contactcenterinsights.v1.RedactionConfig.Builder,
+                com.google.cloud.contactcenterinsights.v1.RedactionConfigOrBuilder>(
+                getRedactionConfig(), getParentForChildren(), isClean());
+        redactionConfig_ = null;
+      }
+      return redactionConfigBuilder_;
     }
 
     @java.lang.Override

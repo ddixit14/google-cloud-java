@@ -133,8 +133,12 @@ public interface SearchDocumentsRequestOrBuilder
    * <pre>
    * An integer that specifies the current offset (that is, starting result
    * location, amongst the documents deemed by the API as relevant) in search
-   * results. This field is only considered if [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token] is unset.
+   * results. This field is only considered if
+   * [page_token][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.page_token]
+   * is unset.
+   *
    * The maximum allowed value is 5000. Otherwise an error is thrown.
+   *
    * For example, 0 means to  return results starting from the first matching
    * document, and 10 means to return from the 11th document. This can be used
    * for pagination, (for example, pageSize = 10 and offset = 10 means to return
@@ -167,8 +171,9 @@ public interface SearchDocumentsRequestOrBuilder
    *
    * <pre>
    * The token specifying the current offset within search results.
-   * See [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token] for an explanation of how
-   * to obtain the next set of query results.
+   * See
+   * [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token]
+   * for an explanation of how to obtain the next set of query results.
    * </pre>
    *
    * <code>string page_token = 7;</code>
@@ -181,8 +186,9 @@ public interface SearchDocumentsRequestOrBuilder
    *
    * <pre>
    * The token specifying the current offset within search results.
-   * See [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token] for an explanation of how
-   * to obtain the next set of query results.
+   * See
+   * [SearchDocumentsResponse.next_page_token][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.next_page_token]
+   * for an explanation of how to obtain the next set of query results.
    * </pre>
    *
    * <code>string page_token = 7;</code>
@@ -198,13 +204,18 @@ public interface SearchDocumentsRequestOrBuilder
    * The criteria determining how search results are sorted. For non-empty
    * query, default is `"relevance desc"`. For empty query, default is
    * `"upload_date desc"`.
+   *
    * Supported options are:
+   *
    * * `"relevance desc"`: By relevance descending, as determined by the API
    *   algorithms.
    * * `"upload_date desc"`: By upload date descending.
    * * `"upload_date"`: By upload date ascending.
    * * `"update_date desc"`: By last updated date descending.
    * * `"update_date"`: By last updated date ascending.
+   * * `"retrieval_importance desc"`: By retrieval importance of properties
+   *   descending. This feature is still under development, please do not use
+   *   unless otherwise instructed to do so.
    * </pre>
    *
    * <code>string order_by = 8;</code>
@@ -219,13 +230,18 @@ public interface SearchDocumentsRequestOrBuilder
    * The criteria determining how search results are sorted. For non-empty
    * query, default is `"relevance desc"`. For empty query, default is
    * `"upload_date desc"`.
+   *
    * Supported options are:
+   *
    * * `"relevance desc"`: By relevance descending, as determined by the API
    *   algorithms.
    * * `"upload_date desc"`: By upload date descending.
    * * `"upload_date"`: By upload date ascending.
    * * `"update_date desc"`: By last updated date descending.
    * * `"update_date"`: By last updated date ascending.
+   * * `"retrieval_importance desc"`: By retrieval importance of properties
+   *   descending. This feature is still under development, please do not use
+   *   unless otherwise instructed to do so.
    * </pre>
    *
    * <code>string order_by = 8;</code>
@@ -241,10 +257,14 @@ public interface SearchDocumentsRequestOrBuilder
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -256,9 +276,12 @@ public interface SearchDocumentsRequestOrBuilder
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -273,10 +296,14 @@ public interface SearchDocumentsRequestOrBuilder
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -288,9 +315,12 @@ public interface SearchDocumentsRequestOrBuilder
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -305,10 +335,14 @@ public interface SearchDocumentsRequestOrBuilder
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -320,9 +354,12 @@ public interface SearchDocumentsRequestOrBuilder
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -337,10 +374,14 @@ public interface SearchDocumentsRequestOrBuilder
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -352,9 +393,12 @@ public interface SearchDocumentsRequestOrBuilder
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -370,10 +414,14 @@ public interface SearchDocumentsRequestOrBuilder
    * An expression specifying a histogram request against matching
    * documents. Expression syntax is an aggregation function call with
    * histogram facets and other options.
+   *
    * The following aggregation functions are supported:
+   *
    * * `count(string_histogram_facet)`: Count the number of matching entities
    * for each distinct attribute value.
+   *
    * Data types:
+   *
    * * Histogram facet (aka filterable properties): Facet names with format
    * &amp;lt;schema id&amp;gt;.&amp;lt;facet&amp;gt;. Facets will have the
    * format of: `[a-zA-Z][a-zA-Z0-9_:/-.]`. If the facet is a child
@@ -385,9 +433,12 @@ public interface SearchDocumentsRequestOrBuilder
    * * DocumentSchemaId: (with no schema id prefix) to get
    * histograms for each document type (returns the schema id path, e.g.
    * projects/12345/locations/us-west/documentSchemas/abc123).
+   *
    * Example expression:
+   *
    * * Document type counts:
    *   count('DocumentSchemaId')
+   *
    * * For schema id, abc123, get the counts for MORTGAGE_TYPE:
    *   count('abc123.MORTGAGE_TYPE')
    * </pre>
@@ -401,11 +452,14 @@ public interface SearchDocumentsRequestOrBuilder
    *
    *
    * <pre>
-   * Optional. Controls if the search document request requires the return of a total size
-   * of matched documents. See [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+   * Controls if the search document request requires the return of a total size
+   * of matched documents. See
+   * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+   *
    * Enabling this flag may adversely impact performance. Hint: If this is
    * used with pagination, set this flag on the initial query but set this
    * to false on subsequent page calls (keep the total count locally).
+   *
    * Defaults to false.
    * </pre>
    *
@@ -414,6 +468,39 @@ public interface SearchDocumentsRequestOrBuilder
    * @return The requireTotalSize.
    */
   boolean getRequireTotalSize();
+
+  /**
+   *
+   *
+   * <pre>
+   * Controls if the search document request requires the return of a total size
+   * of matched documents. See
+   * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+   * </pre>
+   *
+   * <code>
+   * .google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize total_result_size = 12;
+   * </code>
+   *
+   * @return The enum numeric value on the wire for totalResultSize.
+   */
+  int getTotalResultSizeValue();
+  /**
+   *
+   *
+   * <pre>
+   * Controls if the search document request requires the return of a total size
+   * of matched documents. See
+   * [SearchDocumentsResponse.total_size][google.cloud.contentwarehouse.v1.SearchDocumentsResponse.total_size].
+   * </pre>
+   *
+   * <code>
+   * .google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize total_result_size = 12;
+   * </code>
+   *
+   * @return The totalResultSize.
+   */
+  com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest.TotalResultSize getTotalResultSize();
 
   /**
    *

@@ -45,11 +45,6 @@ public final class UpdateServiceRequest extends com.google.protobuf.GeneratedMes
     return new UpdateServiceRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.run.v2.ServiceProto
         .internal_static_google_cloud_run_v2_UpdateServiceRequest_descriptor;
@@ -140,8 +135,8 @@ public final class UpdateServiceRequest extends com.google.protobuf.GeneratedMes
    *
    * <pre>
    * If set to true, and if the Service does not exist, it will create a new
-   * one. Caller must have both create and update permissions for this call if
-   * this is set to true.
+   * one. The caller must have 'run.services.create' permissions if this is set
+   * to true and the Service does not exist.
    * </pre>
    *
    * <code>bool allow_missing = 4;</code>
@@ -795,8 +790,8 @@ public final class UpdateServiceRequest extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * If set to true, and if the Service does not exist, it will create a new
-     * one. Caller must have both create and update permissions for this call if
-     * this is set to true.
+     * one. The caller must have 'run.services.create' permissions if this is set
+     * to true and the Service does not exist.
      * </pre>
      *
      * <code>bool allow_missing = 4;</code>
@@ -812,8 +807,8 @@ public final class UpdateServiceRequest extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * If set to true, and if the Service does not exist, it will create a new
-     * one. Caller must have both create and update permissions for this call if
-     * this is set to true.
+     * one. The caller must have 'run.services.create' permissions if this is set
+     * to true and the Service does not exist.
      * </pre>
      *
      * <code>bool allow_missing = 4;</code>
@@ -833,8 +828,8 @@ public final class UpdateServiceRequest extends com.google.protobuf.GeneratedMes
      *
      * <pre>
      * If set to true, and if the Service does not exist, it will create a new
-     * one. Caller must have both create and update permissions for this call if
-     * this is set to true.
+     * one. The caller must have 'run.services.create' permissions if this is set
+     * to true and the Service does not exist.
      * </pre>
      *
      * <code>bool allow_missing = 4;</code>

@@ -48,11 +48,6 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
     return new CreateDataScanRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dataplex.v1.DataScansProto
         .internal_static_google_cloud_dataplex_v1_CreateDataScanRequest_descriptor;
@@ -194,6 +189,7 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
    *
    * <pre>
    * Required. DataScan identifier.
+   *
    * * Must contain only lowercase letters, numbers and hyphens.
    * * Must start with a letter.
    * * Must end with a number or a letter.
@@ -222,6 +218,7 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
    *
    * <pre>
    * Required. DataScan identifier.
+   *
    * * Must contain only lowercase letters, numbers and hyphens.
    * * Must start with a letter.
    * * Must end with a number or a letter.
@@ -244,6 +241,25 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int VALIDATE_ONLY_FIELD_NUMBER = 4;
+  private boolean validateOnly_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * Optional. Only validate the request, but do not perform mutations.
+   * The default is `false`.
+   * </pre>
+   *
+   * <code>bool validate_only = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
+   *
+   * @return The validateOnly.
+   */
+  @java.lang.Override
+  public boolean getValidateOnly() {
+    return validateOnly_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -269,6 +285,9 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataScanId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dataScanId_);
     }
+    if (validateOnly_ != false) {
+      output.writeBool(4, validateOnly_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -286,6 +305,9 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataScanId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dataScanId_);
+    }
+    if (validateOnly_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(4, validateOnly_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -309,6 +331,7 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
       if (!getDataScan().equals(other.getDataScan())) return false;
     }
     if (!getDataScanId().equals(other.getDataScanId())) return false;
+    if (getValidateOnly() != other.getValidateOnly()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -328,6 +351,8 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
     }
     hash = (37 * hash) + DATA_SCAN_ID_FIELD_NUMBER;
     hash = (53 * hash) + getDataScanId().hashCode();
+    hash = (37 * hash) + VALIDATE_ONLY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getValidateOnly());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -474,6 +499,7 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
         dataScanBuilder_ = null;
       }
       dataScanId_ = "";
+      validateOnly_ = false;
       return this;
     }
 
@@ -518,6 +544,9 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.dataScanId_ = dataScanId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.validateOnly_ = validateOnly_;
       }
     }
 
@@ -580,6 +609,9 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (other.getValidateOnly() != false) {
+        setValidateOnly(other.getValidateOnly());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -624,6 +656,12 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+            case 32:
+              {
+                validateOnly_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -981,6 +1019,7 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. DataScan identifier.
+     *
      * * Must contain only lowercase letters, numbers and hyphens.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -1008,6 +1047,7 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. DataScan identifier.
+     *
      * * Must contain only lowercase letters, numbers and hyphens.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -1035,6 +1075,7 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. DataScan identifier.
+     *
      * * Must contain only lowercase letters, numbers and hyphens.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -1061,6 +1102,7 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. DataScan identifier.
+     *
      * * Must contain only lowercase letters, numbers and hyphens.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -1083,6 +1125,7 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. DataScan identifier.
+     *
      * * Must contain only lowercase letters, numbers and hyphens.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -1102,6 +1145,62 @@ public final class CreateDataScanRequest extends com.google.protobuf.GeneratedMe
       checkByteStringIsUtf8(value);
       dataScanId_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private boolean validateOnly_;
+    /**
+     *
+     *
+     * <pre>
+     * Optional. Only validate the request, but do not perform mutations.
+     * The default is `false`.
+     * </pre>
+     *
+     * <code>bool validate_only = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return The validateOnly.
+     */
+    @java.lang.Override
+    public boolean getValidateOnly() {
+      return validateOnly_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. Only validate the request, but do not perform mutations.
+     * The default is `false`.
+     * </pre>
+     *
+     * <code>bool validate_only = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @param value The validateOnly to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValidateOnly(boolean value) {
+
+      validateOnly_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. Only validate the request, but do not perform mutations.
+     * The default is `false`.
+     * </pre>
+     *
+     * <code>bool validate_only = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearValidateOnly() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      validateOnly_ = false;
       onChanged();
       return this;
     }

@@ -48,11 +48,6 @@ public final class TestRunDifference extends com.google.protobuf.GeneratedMessag
     return new TestRunDifference();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dialogflow.cx.v3.TestCaseProto
         .internal_static_google_cloud_dialogflow_cx_v3_TestRunDifference_descriptor;
@@ -128,6 +123,16 @@ public final class TestRunDifference extends com.google.protobuf.GeneratedMessag
      * <code>UTTERANCE = 4;</code>
      */
     UTTERANCE(4),
+    /**
+     *
+     *
+     * <pre>
+     * The flow.
+     * </pre>
+     *
+     * <code>FLOW = 5;</code>
+     */
+    FLOW(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -181,6 +186,16 @@ public final class TestRunDifference extends com.google.protobuf.GeneratedMessag
      * <code>UTTERANCE = 4;</code>
      */
     public static final int UTTERANCE_VALUE = 4;
+    /**
+     *
+     *
+     * <pre>
+     * The flow.
+     * </pre>
+     *
+     * <code>FLOW = 5;</code>
+     */
+    public static final int FLOW_VALUE = 5;
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -216,6 +231,8 @@ public final class TestRunDifference extends com.google.protobuf.GeneratedMessag
           return PARAMETERS;
         case 4:
           return UTTERANCE;
+        case 5:
+          return FLOW;
         default:
           return null;
       }

@@ -50,11 +50,6 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
     return new CreatePrivateConnectionRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.datastream.v1.DatastreamProto
         .internal_static_google_cloud_datastream_v1_CreatePrivateConnectionRequest_descriptor;
@@ -244,11 +239,13 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
    * so that if you must retry your request, the server will know to ignore
    * the request if it has already been completed. The server will guarantee
    * that for at least 60 minutes since the first request.
+   *
    * For example, consider a situation where you make an initial request and the
    * request times out. If you make the request again with the same request ID,
    * the server can check if original operation with the same request ID was
    * received, and if so, will ignore the second request. This prevents clients
    * from accidentally creating duplicate commitments.
+   *
    * The request ID must be a valid UUID with the exception that zero UUID is
    * not supported (00000000-0000-0000-0000-000000000000).
    * </pre>
@@ -277,11 +274,13 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
    * so that if you must retry your request, the server will know to ignore
    * the request if it has already been completed. The server will guarantee
    * that for at least 60 minutes since the first request.
+   *
    * For example, consider a situation where you make an initial request and the
    * request times out. If you make the request again with the same request ID,
    * the server can check if original operation with the same request ID was
    * received, and if so, will ignore the second request. This prevents clients
    * from accidentally creating duplicate commitments.
+   *
    * The request ID must be a valid UUID with the exception that zero UUID is
    * not supported (00000000-0000-0000-0000-000000000000).
    * </pre>
@@ -301,6 +300,24 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int FORCE_FIELD_NUMBER = 6;
+  private boolean force_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * Optional. If set to true, will skip validations.
+   * </pre>
+   *
+   * <code>bool force = 6 [(.google.api.field_behavior) = OPTIONAL];</code>
+   *
+   * @return The force.
+   */
+  @java.lang.Override
+  public boolean getForce() {
+    return force_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -329,6 +346,9 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, requestId_);
     }
+    if (force_ != false) {
+      output.writeBool(6, force_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -349,6 +369,9 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, requestId_);
+    }
+    if (force_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(6, force_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -373,6 +396,7 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
       if (!getPrivateConnection().equals(other.getPrivateConnection())) return false;
     }
     if (!getRequestId().equals(other.getRequestId())) return false;
+    if (getForce() != other.getForce()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -394,6 +418,8 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
     }
     hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRequestId().hashCode();
+    hash = (37 * hash) + FORCE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getForce());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -542,6 +568,7 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
         privateConnectionBuilder_ = null;
       }
       requestId_ = "";
+      force_ = false;
       return this;
     }
 
@@ -594,6 +621,9 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.requestId_ = requestId_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.force_ = force_;
       }
     }
 
@@ -662,6 +692,9 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.getForce() != false) {
+        setForce(other.getForce());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -713,6 +746,12 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+            case 48:
+              {
+                force_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 48
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -1167,11 +1206,13 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and the
      * request times out. If you make the request again with the same request ID,
      * the server can check if original operation with the same request ID was
      * received, and if so, will ignore the second request. This prevents clients
      * from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -1199,11 +1240,13 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and the
      * request times out. If you make the request again with the same request ID,
      * the server can check if original operation with the same request ID was
      * received, and if so, will ignore the second request. This prevents clients
      * from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -1231,11 +1274,13 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and the
      * request times out. If you make the request again with the same request ID,
      * the server can check if original operation with the same request ID was
      * received, and if so, will ignore the second request. This prevents clients
      * from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -1262,11 +1307,13 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and the
      * request times out. If you make the request again with the same request ID,
      * the server can check if original operation with the same request ID was
      * received, and if so, will ignore the second request. This prevents clients
      * from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -1289,11 +1336,13 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
      * so that if you must retry your request, the server will know to ignore
      * the request if it has already been completed. The server will guarantee
      * that for at least 60 minutes since the first request.
+     *
      * For example, consider a situation where you make an initial request and the
      * request times out. If you make the request again with the same request ID,
      * the server can check if original operation with the same request ID was
      * received, and if so, will ignore the second request. This prevents clients
      * from accidentally creating duplicate commitments.
+     *
      * The request ID must be a valid UUID with the exception that zero UUID is
      * not supported (00000000-0000-0000-0000-000000000000).
      * </pre>
@@ -1310,6 +1359,59 @@ public final class CreatePrivateConnectionRequest extends com.google.protobuf.Ge
       checkByteStringIsUtf8(value);
       requestId_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private boolean force_;
+    /**
+     *
+     *
+     * <pre>
+     * Optional. If set to true, will skip validations.
+     * </pre>
+     *
+     * <code>bool force = 6 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return The force.
+     */
+    @java.lang.Override
+    public boolean getForce() {
+      return force_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. If set to true, will skip validations.
+     * </pre>
+     *
+     * <code>bool force = 6 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @param value The force to set.
+     * @return This builder for chaining.
+     */
+    public Builder setForce(boolean value) {
+
+      force_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Optional. If set to true, will skip validations.
+     * </pre>
+     *
+     * <code>bool force = 6 [(.google.api.field_behavior) = OPTIONAL];</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearForce() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      force_ = false;
       onChanged();
       return this;
     }

@@ -51,11 +51,6 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
     return new DeployedModel();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.aiplatform.v1beta1.EndpointProto
         .internal_static_google_cloud_aiplatform_v1beta1_DeployedModel_descriptor;
@@ -72,6 +67,8 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int predictionResourcesCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object predictionResources_;
 
   public enum PredictionResourcesCase
@@ -317,6 +314,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Immutable. The ID of the DeployedModel. If not provided upon deployment,
    * Vertex AI will generate a value for this ID.
+   *
    * This value should be 1-10 characters, and valid characters are /[0-9]/.
    * </pre>
    *
@@ -342,6 +340,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Immutable. The ID of the DeployedModel. If not provided upon deployment,
    * Vertex AI will generate a value for this ID.
+   *
    * This value should be 1-10 characters, and valid characters are /[0-9]/.
    * </pre>
    *
@@ -373,6 +372,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    * Required. The resource name of the Model that this is the deployment of.
    * Note that the Model may be in a different location than the DeployedModel's
    * Endpoint.
+   *
    * The resource name may contain version id or version alias to specify the
    * version.
    *  Example: `projects/{project}/locations/{location}/models/{model}&#64;2`
@@ -406,6 +406,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    * Required. The resource name of the Model that this is the deployment of.
    * Note that the Model may be in a different location than the DeployedModel's
    * Endpoint.
+   *
    * The resource name may contain version id or version alias to specify the
    * version.
    *  Example: `projects/{project}/locations/{location}/models/{model}&#64;2`
@@ -593,6 +594,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Explanation configuration for this DeployedModel.
+   *
    * When deploying a Model using
    * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
    * this value overrides the value of
@@ -623,6 +625,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Explanation configuration for this DeployedModel.
+   *
    * When deploying a Model using
    * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
    * this value overrides the value of
@@ -655,6 +658,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Explanation configuration for this DeployedModel.
+   *
    * When deploying a Model using
    * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
    * this value overrides the value of
@@ -716,6 +720,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    * email address of the service account. If this service account is not
    * specified, the container runs as a service account that doesn't have access
    * to the resource project.
+   *
    * Users deploying the Model must have the `iam.serviceAccounts.actAs`
    * permission on this service account.
    * </pre>
@@ -744,6 +749,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    * email address of the service account. If this service account is not
    * specified, the container runs as a service account that doesn't have access
    * to the resource project.
+   *
    * Users deploying the Model must have the `iam.serviceAccounts.actAs`
    * permission on this service account.
    * </pre>
@@ -772,7 +778,8 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * If true, the container of the DeployedModel instances will send `stderr`
-   * and `stdout` streams to Stackdriver Logging.
+   * and `stdout` streams to Cloud Logging.
+   *
    * Only supported for custom-trained Models and AutoML Tabular Models.
    * </pre>
    *
@@ -791,11 +798,12 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * If true, online prediction access logs are sent to StackDriver
+   * If true, online prediction access logs are sent to Cloud
    * Logging.
    * These logs are like standard server access logs, containing
    * information like timestamp and latency for each prediction request.
-   * Note that Stackdriver logs may incur a cost, especially if your project
+   *
+   * Note that logs may incur a cost, especially if your project
    * receives prediction requests at a high queries per second rate (QPS).
    * Estimate your costs before enabling this option.
    * </pre>
@@ -2208,6 +2216,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The ID of the DeployedModel. If not provided upon deployment,
      * Vertex AI will generate a value for this ID.
+     *
      * This value should be 1-10 characters, and valid characters are /[0-9]/.
      * </pre>
      *
@@ -2232,6 +2241,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The ID of the DeployedModel. If not provided upon deployment,
      * Vertex AI will generate a value for this ID.
+     *
      * This value should be 1-10 characters, and valid characters are /[0-9]/.
      * </pre>
      *
@@ -2256,6 +2266,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The ID of the DeployedModel. If not provided upon deployment,
      * Vertex AI will generate a value for this ID.
+     *
      * This value should be 1-10 characters, and valid characters are /[0-9]/.
      * </pre>
      *
@@ -2279,6 +2290,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The ID of the DeployedModel. If not provided upon deployment,
      * Vertex AI will generate a value for this ID.
+     *
      * This value should be 1-10 characters, and valid characters are /[0-9]/.
      * </pre>
      *
@@ -2298,6 +2310,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Immutable. The ID of the DeployedModel. If not provided upon deployment,
      * Vertex AI will generate a value for this ID.
+     *
      * This value should be 1-10 characters, and valid characters are /[0-9]/.
      * </pre>
      *
@@ -2325,6 +2338,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * Required. The resource name of the Model that this is the deployment of.
      * Note that the Model may be in a different location than the DeployedModel's
      * Endpoint.
+     *
      * The resource name may contain version id or version alias to specify the
      * version.
      *  Example: `projects/{project}/locations/{location}/models/{model}&#64;2`
@@ -2357,6 +2371,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * Required. The resource name of the Model that this is the deployment of.
      * Note that the Model may be in a different location than the DeployedModel's
      * Endpoint.
+     *
      * The resource name may contain version id or version alias to specify the
      * version.
      *  Example: `projects/{project}/locations/{location}/models/{model}&#64;2`
@@ -2389,6 +2404,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * Required. The resource name of the Model that this is the deployment of.
      * Note that the Model may be in a different location than the DeployedModel's
      * Endpoint.
+     *
      * The resource name may contain version id or version alias to specify the
      * version.
      *  Example: `projects/{project}/locations/{location}/models/{model}&#64;2`
@@ -2420,6 +2436,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * Required. The resource name of the Model that this is the deployment of.
      * Note that the Model may be in a different location than the DeployedModel's
      * Endpoint.
+     *
      * The resource name may contain version id or version alias to specify the
      * version.
      *  Example: `projects/{project}/locations/{location}/models/{model}&#64;2`
@@ -2447,6 +2464,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * Required. The resource name of the Model that this is the deployment of.
      * Note that the Model may be in a different location than the DeployedModel's
      * Endpoint.
+     *
      * The resource name may contain version id or version alias to specify the
      * version.
      *  Example: `projects/{project}/locations/{location}/models/{model}&#64;2`
@@ -2902,6 +2920,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Explanation configuration for this DeployedModel.
+     *
      * When deploying a Model using
      * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
      * this value overrides the value of
@@ -2931,6 +2950,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Explanation configuration for this DeployedModel.
+     *
      * When deploying a Model using
      * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
      * this value overrides the value of
@@ -2966,6 +2986,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Explanation configuration for this DeployedModel.
+     *
      * When deploying a Model using
      * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
      * this value overrides the value of
@@ -3003,6 +3024,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Explanation configuration for this DeployedModel.
+     *
      * When deploying a Model using
      * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
      * this value overrides the value of
@@ -3038,6 +3060,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Explanation configuration for this DeployedModel.
+     *
      * When deploying a Model using
      * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
      * this value overrides the value of
@@ -3079,6 +3102,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Explanation configuration for this DeployedModel.
+     *
      * When deploying a Model using
      * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
      * this value overrides the value of
@@ -3113,6 +3137,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Explanation configuration for this DeployedModel.
+     *
      * When deploying a Model using
      * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
      * this value overrides the value of
@@ -3142,6 +3167,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Explanation configuration for this DeployedModel.
+     *
      * When deploying a Model using
      * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
      * this value overrides the value of
@@ -3176,6 +3202,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Explanation configuration for this DeployedModel.
+     *
      * When deploying a Model using
      * [EndpointService.DeployModel][google.cloud.aiplatform.v1beta1.EndpointService.DeployModel],
      * this value overrides the value of
@@ -3286,6 +3313,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * email address of the service account. If this service account is not
      * specified, the container runs as a service account that doesn't have access
      * to the resource project.
+     *
      * Users deploying the Model must have the `iam.serviceAccounts.actAs`
      * permission on this service account.
      * </pre>
@@ -3313,6 +3341,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * email address of the service account. If this service account is not
      * specified, the container runs as a service account that doesn't have access
      * to the resource project.
+     *
      * Users deploying the Model must have the `iam.serviceAccounts.actAs`
      * permission on this service account.
      * </pre>
@@ -3340,6 +3369,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * email address of the service account. If this service account is not
      * specified, the container runs as a service account that doesn't have access
      * to the resource project.
+     *
      * Users deploying the Model must have the `iam.serviceAccounts.actAs`
      * permission on this service account.
      * </pre>
@@ -3366,6 +3396,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * email address of the service account. If this service account is not
      * specified, the container runs as a service account that doesn't have access
      * to the resource project.
+     *
      * Users deploying the Model must have the `iam.serviceAccounts.actAs`
      * permission on this service account.
      * </pre>
@@ -3388,6 +3419,7 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      * email address of the service account. If this service account is not
      * specified, the container runs as a service account that doesn't have access
      * to the resource project.
+     *
      * Users deploying the Model must have the `iam.serviceAccounts.actAs`
      * permission on this service account.
      * </pre>
@@ -3414,7 +3446,8 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * If true, the container of the DeployedModel instances will send `stderr`
-     * and `stdout` streams to Stackdriver Logging.
+     * and `stdout` streams to Cloud Logging.
+     *
      * Only supported for custom-trained Models and AutoML Tabular Models.
      * </pre>
      *
@@ -3431,7 +3464,8 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * If true, the container of the DeployedModel instances will send `stderr`
-     * and `stdout` streams to Stackdriver Logging.
+     * and `stdout` streams to Cloud Logging.
+     *
      * Only supported for custom-trained Models and AutoML Tabular Models.
      * </pre>
      *
@@ -3452,7 +3486,8 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * If true, the container of the DeployedModel instances will send `stderr`
-     * and `stdout` streams to Stackdriver Logging.
+     * and `stdout` streams to Cloud Logging.
+     *
      * Only supported for custom-trained Models and AutoML Tabular Models.
      * </pre>
      *
@@ -3472,11 +3507,12 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If true, online prediction access logs are sent to StackDriver
+     * If true, online prediction access logs are sent to Cloud
      * Logging.
      * These logs are like standard server access logs, containing
      * information like timestamp and latency for each prediction request.
-     * Note that Stackdriver logs may incur a cost, especially if your project
+     *
+     * Note that logs may incur a cost, especially if your project
      * receives prediction requests at a high queries per second rate (QPS).
      * Estimate your costs before enabling this option.
      * </pre>
@@ -3493,11 +3529,12 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If true, online prediction access logs are sent to StackDriver
+     * If true, online prediction access logs are sent to Cloud
      * Logging.
      * These logs are like standard server access logs, containing
      * information like timestamp and latency for each prediction request.
-     * Note that Stackdriver logs may incur a cost, especially if your project
+     *
+     * Note that logs may incur a cost, especially if your project
      * receives prediction requests at a high queries per second rate (QPS).
      * Estimate your costs before enabling this option.
      * </pre>
@@ -3518,11 +3555,12 @@ public final class DeployedModel extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If true, online prediction access logs are sent to StackDriver
+     * If true, online prediction access logs are sent to Cloud
      * Logging.
      * These logs are like standard server access logs, containing
      * information like timestamp and latency for each prediction request.
-     * Note that Stackdriver logs may incur a cost, especially if your project
+     *
+     * Note that logs may incur a cost, especially if your project
      * receives prediction requests at a high queries per second rate (QPS).
      * Estimate your costs before enabling this option.
      * </pre>

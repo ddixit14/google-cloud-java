@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
   }
 
   private CustomAttribute() {
-    text_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    text_ = com.google.protobuf.LazyStringArrayList.emptyList();
     numbers_ = emptyDoubleList();
   }
 
@@ -47,11 +47,6 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new CustomAttribute();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -72,19 +67,23 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
   public static final int TEXT_FIELD_NUMBER = 1;
 
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList text_;
+  private com.google.protobuf.LazyStringArrayList text_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    *
    *
    * <pre>
    * The textual values of this custom attribute. For example, `["yellow",
    * "green"]` when the key is "color".
-   * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+   *
+   * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
    * returned.
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated string text = 1;</code>
@@ -100,12 +99,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
    * <pre>
    * The textual values of this custom attribute. For example, `["yellow",
    * "green"]` when the key is "color".
-   * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+   *
+   * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
    * returned.
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated string text = 1;</code>
@@ -121,12 +123,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
    * <pre>
    * The textual values of this custom attribute. For example, `["yellow",
    * "green"]` when the key is "color".
-   * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+   *
+   * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
    * returned.
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated string text = 1;</code>
@@ -143,12 +148,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
    * <pre>
    * The textual values of this custom attribute. For example, `["yellow",
    * "green"]` when the key is "color".
-   * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+   *
+   * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
    * returned.
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated string text = 1;</code>
@@ -170,10 +178,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
    * <pre>
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
    * when the key is "lengths_cm".
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated double numbers = 2;</code>
@@ -190,10 +200,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
    * <pre>
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
    * when the key is "lengths_cm".
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated double numbers = 2;</code>
@@ -209,10 +221,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
    * <pre>
    * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
    * when the key is "lengths_cm".
+   *
    * Exactly one of
-   * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-   * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-   * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+   * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+   * or
+   * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+   * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>repeated double numbers = 2;</code>
@@ -456,8 +470,7 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      text_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      text_ = com.google.protobuf.LazyStringArrayList.emptyList();
       numbers_ = emptyDoubleList();
       return this;
     }
@@ -496,11 +509,6 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
 
     private void buildPartialRepeatedFields(
         com.google.cloud.discoveryengine.v1beta.CustomAttribute result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        text_ = text_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.text_ = text_;
       if (((bitField0_ & 0x00000002) != 0)) {
         numbers_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -510,6 +518,10 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
 
     private void buildPartial0(com.google.cloud.discoveryengine.v1beta.CustomAttribute result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        text_.makeImmutable();
+        result.text_ = text_;
+      }
     }
 
     @java.lang.Override
@@ -561,7 +573,7 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
       if (!other.text_.isEmpty()) {
         if (text_.isEmpty()) {
           text_ = other.text_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureTextIsMutable();
           text_.addAll(other.text_);
@@ -648,14 +660,14 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
 
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList text_ =
-        com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList text_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
 
     private void ensureTextIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!text_.isModifiable()) {
         text_ = new com.google.protobuf.LazyStringArrayList(text_);
-        bitField0_ |= 0x00000001;
       }
+      bitField0_ |= 0x00000001;
     }
     /**
      *
@@ -663,12 +675,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The textual values of this custom attribute. For example, `["yellow",
      * "green"]` when the key is "color".
-     * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+     *
+     * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
      * returned.
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated string text = 1;</code>
@@ -676,7 +691,8 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * @return A list containing the text.
      */
     public com.google.protobuf.ProtocolStringList getTextList() {
-      return text_.getUnmodifiableView();
+      text_.makeImmutable();
+      return text_;
     }
     /**
      *
@@ -684,12 +700,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The textual values of this custom attribute. For example, `["yellow",
      * "green"]` when the key is "color".
-     * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+     *
+     * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
      * returned.
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated string text = 1;</code>
@@ -705,12 +724,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The textual values of this custom attribute. For example, `["yellow",
      * "green"]` when the key is "color".
-     * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+     *
+     * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
      * returned.
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated string text = 1;</code>
@@ -727,12 +749,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The textual values of this custom attribute. For example, `["yellow",
      * "green"]` when the key is "color".
-     * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+     *
+     * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
      * returned.
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated string text = 1;</code>
@@ -749,12 +774,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The textual values of this custom attribute. For example, `["yellow",
      * "green"]` when the key is "color".
-     * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+     *
+     * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
      * returned.
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated string text = 1;</code>
@@ -769,6 +797,7 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
       }
       ensureTextIsMutable();
       text_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -778,12 +807,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The textual values of this custom attribute. For example, `["yellow",
      * "green"]` when the key is "color".
-     * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+     *
+     * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
      * returned.
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated string text = 1;</code>
@@ -797,6 +829,7 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
       }
       ensureTextIsMutable();
       text_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -806,12 +839,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The textual values of this custom attribute. For example, `["yellow",
      * "green"]` when the key is "color".
-     * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+     *
+     * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
      * returned.
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated string text = 1;</code>
@@ -822,6 +858,7 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
     public Builder addAllText(java.lang.Iterable<java.lang.String> values) {
       ensureTextIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(values, text_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -831,12 +868,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The textual values of this custom attribute. For example, `["yellow",
      * "green"]` when the key is "color".
-     * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+     *
+     * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
      * returned.
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated string text = 1;</code>
@@ -844,8 +884,9 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * @return This builder for chaining.
      */
     public Builder clearText() {
-      text_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      text_ = com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      ;
       onChanged();
       return this;
     }
@@ -855,12 +896,15 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The textual values of this custom attribute. For example, `["yellow",
      * "green"]` when the key is "color".
-     * Empty string is not allowed. Otherwise, an INVALID_ARGUMENT error is
+     *
+     * Empty string is not allowed. Otherwise, an `INVALID_ARGUMENT` error is
      * returned.
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated string text = 1;</code>
@@ -875,6 +919,7 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
       checkByteStringIsUtf8(value);
       ensureTextIsMutable();
       text_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -893,10 +938,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
      * when the key is "lengths_cm".
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated double numbers = 2;</code>
@@ -914,10 +961,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
      * when the key is "lengths_cm".
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated double numbers = 2;</code>
@@ -933,10 +982,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
      * when the key is "lengths_cm".
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated double numbers = 2;</code>
@@ -953,10 +1004,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
      * when the key is "lengths_cm".
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated double numbers = 2;</code>
@@ -978,10 +1031,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
      * when the key is "lengths_cm".
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated double numbers = 2;</code>
@@ -1002,10 +1057,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
      * when the key is "lengths_cm".
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated double numbers = 2;</code>
@@ -1025,10 +1082,12 @@ public final class CustomAttribute extends com.google.protobuf.GeneratedMessageV
      * <pre>
      * The numerical values of this custom attribute. For example, `[2.3, 15.4]`
      * when the key is "lengths_cm".
+     *
      * Exactly one of
-     * [text][google.cloud.discoveryengine.v1beta.CustomAttribute.text] or
-     * [numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
-     * should be set. Otherwise, an INVALID_ARGUMENT error is returned.
+     * [CustomAttribute.text][google.cloud.discoveryengine.v1beta.CustomAttribute.text]
+     * or
+     * [CustomAttribute.numbers][google.cloud.discoveryengine.v1beta.CustomAttribute.numbers]
+     * should be set. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>repeated double numbers = 2;</code>

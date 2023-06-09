@@ -147,7 +147,7 @@ public interface GenerateSshScriptRequestOrBuilder
    *
    *
    * <pre>
-   * The port that will be open on the bastion host
+   * The port that will be open on the bastion host.
    * </pre>
    *
    * <code>int32 vm_port = 3;</code>
@@ -156,5 +156,5 @@ public interface GenerateSshScriptRequestOrBuilder
    */
   int getVmPort();
 
-  public com.google.cloud.clouddms.v1.GenerateSshScriptRequest.VmConfigCase getVmConfigCase();
+  com.google.cloud.clouddms.v1.GenerateSshScriptRequest.VmConfigCase getVmConfigCase();
 }

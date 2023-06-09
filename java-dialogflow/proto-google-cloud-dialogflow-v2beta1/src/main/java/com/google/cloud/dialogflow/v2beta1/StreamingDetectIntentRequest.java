@@ -25,7 +25,9 @@ package com.google.cloud.dialogflow.v2beta1;
  * The top-level message sent by the client to the
  * [Sessions.StreamingDetectIntent][google.cloud.dialogflow.v2beta1.Sessions.StreamingDetectIntent]
  * method.
+ *
  * Multiple request messages should be sent in order:
+ *
  * 1.  The first message must contain
  * [session][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.session],
  *     [query_input][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.query_input]
@@ -45,11 +47,14 @@ package com.google.cloud.dialogflow.v2beta1;
  *     intent from text input after you already started Speech recognition,
  *     please send a message with
  *     [query_input.text][google.cloud.dialogflow.v2beta1.QueryInput.text].
+ *
  *     However, note that:
+ *
  *     * Dialogflow will bill you for the audio duration so far.
  *     * Dialogflow discards all Speech recognition results in favor of the
  *       input text.
  *     * Dialogflow will use the language code from the first message.
+ *
  * After you sent all input, you must half-close or abort the request stream.
  * </pre>
  *
@@ -74,11 +79,6 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new StreamingDetectIntentRequest();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -114,14 +114,17 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    * - `projects/&lt;Project ID&gt;/locations/&lt;Location
    *   ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
    *   ID&gt;`,
+   *
    * If `Location ID` is not specified we assume default 'us' location. If
    * `Environment ID` is not specified, we assume default 'draft' environment.
    * If `User ID` is not specified, we are using "-". It's up to the API caller
    * to choose an appropriate `Session ID` and `User Id`. They can be a random
    * number or some type of user and session identifiers (preferably hashed).
    * The length of the `Session ID` and `User ID` must not exceed 36 characters.
+   *
    * For more information, see the [API interactions
    * guide](https://cloud.google.com/dialogflow/docs/api-overview).
+   *
    * Note: Always use agent versions for production traffic.
    * See [Versions and
    * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
@@ -159,14 +162,17 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    * - `projects/&lt;Project ID&gt;/locations/&lt;Location
    *   ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
    *   ID&gt;`,
+   *
    * If `Location ID` is not specified we assume default 'us' location. If
    * `Environment ID` is not specified, we assume default 'draft' environment.
    * If `User ID` is not specified, we are using "-". It's up to the API caller
    * to choose an appropriate `Session ID` and `User Id`. They can be a random
    * number or some type of user and session identifiers (preferably hashed).
    * The length of the `Session ID` and `User ID` must not exceed 36 characters.
+   *
    * For more information, see the [API interactions
    * guide](https://cloud.google.com/dialogflow/docs/api-overview).
+   *
    * Note: Always use agent versions for production traffic.
    * See [Versions and
    * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
@@ -248,9 +254,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    *
    * <pre>
    * Required. The input specification. It can be set to:
+   *
    * 1.  an audio config which instructs the speech recognizer how to process
    *     the speech audio,
+   *
    * 2.  a conversational query in the form of text, or
+   *
    * 3.  an event that specifies which intent to trigger.
    * </pre>
    *
@@ -269,9 +278,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    *
    * <pre>
    * Required. The input specification. It can be set to:
+   *
    * 1.  an audio config which instructs the speech recognizer how to process
    *     the speech audio,
+   *
    * 2.  a conversational query in the form of text, or
+   *
    * 3.  an event that specifies which intent to trigger.
    * </pre>
    *
@@ -292,9 +304,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    *
    * <pre>
    * Required. The input specification. It can be set to:
+   *
    * 1.  an audio config which instructs the speech recognizer how to process
    *     the speech audio,
+   *
    * 2.  a conversational query in the form of text, or
+   *
    * 3.  an event that specifies which intent to trigger.
    * </pre>
    *
@@ -405,6 +420,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
    * indicating which settings in this request-level config should override
    * speech synthesizer settings defined at agent-level.
+   *
    * If unspecified or empty,
    * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
    * replaces the agent-level config in its entirety.
@@ -426,6 +442,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
    * indicating which settings in this request-level config should override
    * speech synthesizer settings defined at agent-level.
+   *
    * If unspecified or empty,
    * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
    * replaces the agent-level config in its entirety.
@@ -449,6 +466,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
    * indicating which settings in this request-level config should override
    * speech synthesizer settings defined at agent-level.
+   *
    * If unspecified or empty,
    * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
    * replaces the agent-level config in its entirety.
@@ -481,6 +499,24 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
   @java.lang.Override
   public com.google.protobuf.ByteString getInputAudio() {
     return inputAudio_;
+  }
+
+  public static final int ENABLE_DEBUGGING_INFO_FIELD_NUMBER = 8;
+  private boolean enableDebuggingInfo_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * If true, `StreamingDetectIntentResponse.debugging_info` will get populated.
+   * </pre>
+   *
+   * <code>bool enable_debugging_info = 8;</code>
+   *
+   * @return The enableDebuggingInfo.
+   */
+  @java.lang.Override
+  public boolean getEnableDebuggingInfo() {
+    return enableDebuggingInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -518,6 +554,9 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
     if (outputAudioConfigMask_ != null) {
       output.writeMessage(7, getOutputAudioConfigMask());
     }
+    if (enableDebuggingInfo_ != false) {
+      output.writeBool(8, enableDebuggingInfo_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -548,6 +587,9 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
     if (outputAudioConfigMask_ != null) {
       size +=
           com.google.protobuf.CodedOutputStream.computeMessageSize(7, getOutputAudioConfigMask());
+    }
+    if (enableDebuggingInfo_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(8, enableDebuggingInfo_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -584,6 +626,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
       if (!getOutputAudioConfigMask().equals(other.getOutputAudioConfigMask())) return false;
     }
     if (!getInputAudio().equals(other.getInputAudio())) return false;
+    if (getEnableDebuggingInfo() != other.getEnableDebuggingInfo()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -617,6 +660,8 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
     }
     hash = (37 * hash) + INPUT_AUDIO_FIELD_NUMBER;
     hash = (53 * hash) + getInputAudio().hashCode();
+    hash = (37 * hash) + ENABLE_DEBUGGING_INFO_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getEnableDebuggingInfo());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -725,7 +770,9 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    * The top-level message sent by the client to the
    * [Sessions.StreamingDetectIntent][google.cloud.dialogflow.v2beta1.Sessions.StreamingDetectIntent]
    * method.
+   *
    * Multiple request messages should be sent in order:
+   *
    * 1.  The first message must contain
    * [session][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.session],
    *     [query_input][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.query_input]
@@ -745,11 +792,14 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
    *     intent from text input after you already started Speech recognition,
    *     please send a message with
    *     [query_input.text][google.cloud.dialogflow.v2beta1.QueryInput.text].
+   *
    *     However, note that:
+   *
    *     * Dialogflow will bill you for the audio duration so far.
    *     * Dialogflow discards all Speech recognition results in favor of the
    *       input text.
    *     * Dialogflow will use the language code from the first message.
+   *
    * After you sent all input, you must half-close or abort the request stream.
    * </pre>
    *
@@ -808,6 +858,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
         outputAudioConfigMaskBuilder_ = null;
       }
       inputAudio_ = com.google.protobuf.ByteString.EMPTY;
+      enableDebuggingInfo_ = false;
       return this;
     }
 
@@ -873,6 +924,9 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.inputAudio_ = inputAudio_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.enableDebuggingInfo_ = enableDebuggingInfo_;
       }
     }
 
@@ -947,6 +1001,9 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
       if (other.getInputAudio() != com.google.protobuf.ByteString.EMPTY) {
         setInputAudio(other.getInputAudio());
       }
+      if (other.getEnableDebuggingInfo() != false) {
+        setEnableDebuggingInfo(other.getEnableDebuggingInfo());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1017,6 +1074,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
                 bitField0_ |= 0x00000020;
                 break;
               } // case 58
+            case 64:
+              {
+                enableDebuggingInfo_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -1051,14 +1114,17 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * - `projects/&lt;Project ID&gt;/locations/&lt;Location
      *   ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
      *   ID&gt;`,
+     *
      * If `Location ID` is not specified we assume default 'us' location. If
      * `Environment ID` is not specified, we assume default 'draft' environment.
      * If `User ID` is not specified, we are using "-". It's up to the API caller
      * to choose an appropriate `Session ID` and `User Id`. They can be a random
      * number or some type of user and session identifiers (preferably hashed).
      * The length of the `Session ID` and `User ID` must not exceed 36 characters.
+     *
      * For more information, see the [API interactions
      * guide](https://cloud.google.com/dialogflow/docs/api-overview).
+     *
      * Note: Always use agent versions for production traffic.
      * See [Versions and
      * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
@@ -1095,14 +1161,17 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * - `projects/&lt;Project ID&gt;/locations/&lt;Location
      *   ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
      *   ID&gt;`,
+     *
      * If `Location ID` is not specified we assume default 'us' location. If
      * `Environment ID` is not specified, we assume default 'draft' environment.
      * If `User ID` is not specified, we are using "-". It's up to the API caller
      * to choose an appropriate `Session ID` and `User Id`. They can be a random
      * number or some type of user and session identifiers (preferably hashed).
      * The length of the `Session ID` and `User ID` must not exceed 36 characters.
+     *
      * For more information, see the [API interactions
      * guide](https://cloud.google.com/dialogflow/docs/api-overview).
+     *
      * Note: Always use agent versions for production traffic.
      * See [Versions and
      * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
@@ -1139,14 +1208,17 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * - `projects/&lt;Project ID&gt;/locations/&lt;Location
      *   ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
      *   ID&gt;`,
+     *
      * If `Location ID` is not specified we assume default 'us' location. If
      * `Environment ID` is not specified, we assume default 'draft' environment.
      * If `User ID` is not specified, we are using "-". It's up to the API caller
      * to choose an appropriate `Session ID` and `User Id`. They can be a random
      * number or some type of user and session identifiers (preferably hashed).
      * The length of the `Session ID` and `User ID` must not exceed 36 characters.
+     *
      * For more information, see the [API interactions
      * guide](https://cloud.google.com/dialogflow/docs/api-overview).
+     *
      * Note: Always use agent versions for production traffic.
      * See [Versions and
      * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
@@ -1182,14 +1254,17 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * - `projects/&lt;Project ID&gt;/locations/&lt;Location
      *   ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
      *   ID&gt;`,
+     *
      * If `Location ID` is not specified we assume default 'us' location. If
      * `Environment ID` is not specified, we assume default 'draft' environment.
      * If `User ID` is not specified, we are using "-". It's up to the API caller
      * to choose an appropriate `Session ID` and `User Id`. They can be a random
      * number or some type of user and session identifiers (preferably hashed).
      * The length of the `Session ID` and `User ID` must not exceed 36 characters.
+     *
      * For more information, see the [API interactions
      * guide](https://cloud.google.com/dialogflow/docs/api-overview).
+     *
      * Note: Always use agent versions for production traffic.
      * See [Versions and
      * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
@@ -1221,14 +1296,17 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * - `projects/&lt;Project ID&gt;/locations/&lt;Location
      *   ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
      *   ID&gt;`,
+     *
      * If `Location ID` is not specified we assume default 'us' location. If
      * `Environment ID` is not specified, we assume default 'draft' environment.
      * If `User ID` is not specified, we are using "-". It's up to the API caller
      * to choose an appropriate `Session ID` and `User Id`. They can be a random
      * number or some type of user and session identifiers (preferably hashed).
      * The length of the `Session ID` and `User ID` must not exceed 36 characters.
+     *
      * For more information, see the [API interactions
      * guide](https://cloud.google.com/dialogflow/docs/api-overview).
+     *
      * Note: Always use agent versions for production traffic.
      * See [Versions and
      * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
@@ -1448,9 +1526,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      *
      * <pre>
      * Required. The input specification. It can be set to:
+     *
      * 1.  an audio config which instructs the speech recognizer how to process
      *     the speech audio,
+     *
      * 2.  a conversational query in the form of text, or
+     *
      * 3.  an event that specifies which intent to trigger.
      * </pre>
      *
@@ -1468,9 +1549,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      *
      * <pre>
      * Required. The input specification. It can be set to:
+     *
      * 1.  an audio config which instructs the speech recognizer how to process
      *     the speech audio,
+     *
      * 2.  a conversational query in the form of text, or
+     *
      * 3.  an event that specifies which intent to trigger.
      * </pre>
      *
@@ -1494,9 +1578,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      *
      * <pre>
      * Required. The input specification. It can be set to:
+     *
      * 1.  an audio config which instructs the speech recognizer how to process
      *     the speech audio,
+     *
      * 2.  a conversational query in the form of text, or
+     *
      * 3.  an event that specifies which intent to trigger.
      * </pre>
      *
@@ -1522,9 +1609,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      *
      * <pre>
      * Required. The input specification. It can be set to:
+     *
      * 1.  an audio config which instructs the speech recognizer how to process
      *     the speech audio,
+     *
      * 2.  a conversational query in the form of text, or
+     *
      * 3.  an event that specifies which intent to trigger.
      * </pre>
      *
@@ -1548,9 +1638,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      *
      * <pre>
      * Required. The input specification. It can be set to:
+     *
      * 1.  an audio config which instructs the speech recognizer how to process
      *     the speech audio,
+     *
      * 2.  a conversational query in the form of text, or
+     *
      * 3.  an event that specifies which intent to trigger.
      * </pre>
      *
@@ -1579,9 +1672,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      *
      * <pre>
      * Required. The input specification. It can be set to:
+     *
      * 1.  an audio config which instructs the speech recognizer how to process
      *     the speech audio,
+     *
      * 2.  a conversational query in the form of text, or
+     *
      * 3.  an event that specifies which intent to trigger.
      * </pre>
      *
@@ -1604,9 +1700,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      *
      * <pre>
      * Required. The input specification. It can be set to:
+     *
      * 1.  an audio config which instructs the speech recognizer how to process
      *     the speech audio,
+     *
      * 2.  a conversational query in the form of text, or
+     *
      * 3.  an event that specifies which intent to trigger.
      * </pre>
      *
@@ -1624,9 +1723,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      *
      * <pre>
      * Required. The input specification. It can be set to:
+     *
      * 1.  an audio config which instructs the speech recognizer how to process
      *     the speech audio,
+     *
      * 2.  a conversational query in the form of text, or
+     *
      * 3.  an event that specifies which intent to trigger.
      * </pre>
      *
@@ -1648,9 +1750,12 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      *
      * <pre>
      * Required. The input specification. It can be set to:
+     *
      * 1.  an audio config which instructs the speech recognizer how to process
      *     the speech audio,
+     *
      * 2.  a conversational query in the form of text, or
+     *
      * 3.  an event that specifies which intent to trigger.
      * </pre>
      *
@@ -1982,6 +2087,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * indicating which settings in this request-level config should override
      * speech synthesizer settings defined at agent-level.
+     *
      * If unspecified or empty,
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * replaces the agent-level config in its entirety.
@@ -2002,6 +2108,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * indicating which settings in this request-level config should override
      * speech synthesizer settings defined at agent-level.
+     *
      * If unspecified or empty,
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * replaces the agent-level config in its entirety.
@@ -2028,6 +2135,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * indicating which settings in this request-level config should override
      * speech synthesizer settings defined at agent-level.
+     *
      * If unspecified or empty,
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * replaces the agent-level config in its entirety.
@@ -2056,6 +2164,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * indicating which settings in this request-level config should override
      * speech synthesizer settings defined at agent-level.
+     *
      * If unspecified or empty,
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * replaces the agent-level config in its entirety.
@@ -2081,6 +2190,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * indicating which settings in this request-level config should override
      * speech synthesizer settings defined at agent-level.
+     *
      * If unspecified or empty,
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * replaces the agent-level config in its entirety.
@@ -2112,6 +2222,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * indicating which settings in this request-level config should override
      * speech synthesizer settings defined at agent-level.
+     *
      * If unspecified or empty,
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * replaces the agent-level config in its entirety.
@@ -2137,6 +2248,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * indicating which settings in this request-level config should override
      * speech synthesizer settings defined at agent-level.
+     *
      * If unspecified or empty,
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * replaces the agent-level config in its entirety.
@@ -2157,6 +2269,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * indicating which settings in this request-level config should override
      * speech synthesizer settings defined at agent-level.
+     *
      * If unspecified or empty,
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * replaces the agent-level config in its entirety.
@@ -2181,6 +2294,7 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * indicating which settings in this request-level config should override
      * speech synthesizer settings defined at agent-level.
+     *
      * If unspecified or empty,
      * [output_audio_config][google.cloud.dialogflow.v2beta1.StreamingDetectIntentRequest.output_audio_config]
      * replaces the agent-level config in its entirety.
@@ -2262,6 +2376,59 @@ public final class StreamingDetectIntentRequest extends com.google.protobuf.Gene
     public Builder clearInputAudio() {
       bitField0_ = (bitField0_ & ~0x00000040);
       inputAudio_ = getDefaultInstance().getInputAudio();
+      onChanged();
+      return this;
+    }
+
+    private boolean enableDebuggingInfo_;
+    /**
+     *
+     *
+     * <pre>
+     * If true, `StreamingDetectIntentResponse.debugging_info` will get populated.
+     * </pre>
+     *
+     * <code>bool enable_debugging_info = 8;</code>
+     *
+     * @return The enableDebuggingInfo.
+     */
+    @java.lang.Override
+    public boolean getEnableDebuggingInfo() {
+      return enableDebuggingInfo_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If true, `StreamingDetectIntentResponse.debugging_info` will get populated.
+     * </pre>
+     *
+     * <code>bool enable_debugging_info = 8;</code>
+     *
+     * @param value The enableDebuggingInfo to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnableDebuggingInfo(boolean value) {
+
+      enableDebuggingInfo_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If true, `StreamingDetectIntentResponse.debugging_info` will get populated.
+     * </pre>
+     *
+     * <code>bool enable_debugging_info = 8;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearEnableDebuggingInfo() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      enableDebuggingInfo_ = false;
       onChanged();
       return this;
     }

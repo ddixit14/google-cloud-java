@@ -27,11 +27,15 @@ public interface QueueOrBuilder
    *
    *
    * <pre>
-   * Caller-specified and required in [CreateQueue][google.cloud.tasks.v2beta3.CloudTasks.CreateQueue],
-   * after which it becomes output only.
+   * Caller-specified and required in
+   * [CreateQueue][google.cloud.tasks.v2beta3.CloudTasks.CreateQueue], after
+   * which it becomes output only.
+   *
    * The queue name.
+   *
    * The queue name must have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+   *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),
    *    hyphens (-), colons (:), or periods (.).
    *    For more information, see
@@ -54,11 +58,15 @@ public interface QueueOrBuilder
    *
    *
    * <pre>
-   * Caller-specified and required in [CreateQueue][google.cloud.tasks.v2beta3.CloudTasks.CreateQueue],
-   * after which it becomes output only.
+   * Caller-specified and required in
+   * [CreateQueue][google.cloud.tasks.v2beta3.CloudTasks.CreateQueue], after
+   * which it becomes output only.
+   *
    * The queue name.
+   *
    * The queue name must have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+   *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),
    *    hyphens (-), colons (:), or periods (.).
    *    For more information, see
@@ -82,9 +90,11 @@ public interface QueueOrBuilder
    *
    *
    * <pre>
-   * [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] settings apply only to
-   * [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
-   * [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by this proto.
+   * [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue]
+   * settings apply only to [App Engine
+   * tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
+   * [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by
+   * this proto.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2beta3.AppEngineHttpQueue app_engine_http_queue = 3;</code>
@@ -96,9 +106,11 @@ public interface QueueOrBuilder
    *
    *
    * <pre>
-   * [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] settings apply only to
-   * [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
-   * [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by this proto.
+   * [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue]
+   * settings apply only to [App Engine
+   * tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
+   * [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by
+   * this proto.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2beta3.AppEngineHttpQueue app_engine_http_queue = 3;</code>
@@ -110,9 +122,11 @@ public interface QueueOrBuilder
    *
    *
    * <pre>
-   * [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] settings apply only to
-   * [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
-   * [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by this proto.
+   * [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue]
+   * settings apply only to [App Engine
+   * tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
+   * [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by
+   * this proto.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2beta3.AppEngineHttpQueue app_engine_http_queue = 3;</code>
@@ -124,20 +138,28 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Rate limits for task dispatches.
-   * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are
-   * related because they both control task attempts. However they control task
-   * attempts in different ways:
-   * * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] controls the total rate of
+   *
+   * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and
+   * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are related
+   * because they both control task attempts. However they control task attempts
+   * in different ways:
+   *
+   * * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] controls the
+   * total rate of
    *   dispatches from a queue (i.e. all traffic dispatched from the
    *   queue, regardless of whether the dispatch is from a first
    *   attempt or a retry).
-   * * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls what happens to
+   * * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls
+   * what happens to
    *   particular a task after its first attempt fails. That is,
-   *   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls task retries (the
-   *   second attempt, third attempt, etc).
+   *   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls
+   *   task retries (the second attempt, third attempt, etc).
+   *
    * The queue's actual dispatch rate is the result of:
+   *
    * * Number of tasks in the queue
-   * * User-specified throttling: [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits],
+   * * User-specified throttling:
+   * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits],
    *   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config], and the
    *   [queue's state][google.cloud.tasks.v2beta3.Queue.state].
    * * System throttling due to `429` (Too Many Requests) or `503` (Service
@@ -155,20 +177,28 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Rate limits for task dispatches.
-   * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are
-   * related because they both control task attempts. However they control task
-   * attempts in different ways:
-   * * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] controls the total rate of
+   *
+   * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and
+   * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are related
+   * because they both control task attempts. However they control task attempts
+   * in different ways:
+   *
+   * * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] controls the
+   * total rate of
    *   dispatches from a queue (i.e. all traffic dispatched from the
    *   queue, regardless of whether the dispatch is from a first
    *   attempt or a retry).
-   * * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls what happens to
+   * * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls
+   * what happens to
    *   particular a task after its first attempt fails. That is,
-   *   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls task retries (the
-   *   second attempt, third attempt, etc).
+   *   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls
+   *   task retries (the second attempt, third attempt, etc).
+   *
    * The queue's actual dispatch rate is the result of:
+   *
    * * Number of tasks in the queue
-   * * User-specified throttling: [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits],
+   * * User-specified throttling:
+   * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits],
    *   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config], and the
    *   [queue's state][google.cloud.tasks.v2beta3.Queue.state].
    * * System throttling due to `429` (Too Many Requests) or `503` (Service
@@ -186,20 +216,28 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Rate limits for task dispatches.
-   * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are
-   * related because they both control task attempts. However they control task
-   * attempts in different ways:
-   * * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] controls the total rate of
+   *
+   * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and
+   * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are related
+   * because they both control task attempts. However they control task attempts
+   * in different ways:
+   *
+   * * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] controls the
+   * total rate of
    *   dispatches from a queue (i.e. all traffic dispatched from the
    *   queue, regardless of whether the dispatch is from a first
    *   attempt or a retry).
-   * * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls what happens to
+   * * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls
+   * what happens to
    *   particular a task after its first attempt fails. That is,
-   *   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls task retries (the
-   *   second attempt, third attempt, etc).
+   *   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls
+   *   task retries (the second attempt, third attempt, etc).
+   *
    * The queue's actual dispatch rate is the result of:
+   *
    * * Number of tasks in the queue
-   * * User-specified throttling: [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits],
+   * * User-specified throttling:
+   * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits],
    *   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config], and the
    *   [queue's state][google.cloud.tasks.v2beta3.Queue.state].
    * * System throttling due to `429` (Too Many Requests) or `503` (Service
@@ -216,6 +254,7 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Settings that determine the retry behavior.
+   *
    * * For tasks created using Cloud Tasks: the queue-level retry settings
    *   apply to all tasks in the queue that were created using Cloud Tasks.
    *   Retry settings cannot be set on individual tasks.
@@ -236,6 +275,7 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Settings that determine the retry behavior.
+   *
    * * For tasks created using Cloud Tasks: the queue-level retry settings
    *   apply to all tasks in the queue that were created using Cloud Tasks.
    *   Retry settings cannot be set on individual tasks.
@@ -256,6 +296,7 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Settings that determine the retry behavior.
+   *
    * * For tasks created using Cloud Tasks: the queue-level retry settings
    *   apply to all tasks in the queue that were created using Cloud Tasks.
    *   Retry settings cannot be set on individual tasks.
@@ -275,11 +316,14 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The state of the queue.
+   *
    * `state` can only be changed by calling
    * [PauseQueue][google.cloud.tasks.v2beta3.CloudTasks.PauseQueue],
-   * [ResumeQueue][google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue], or uploading
+   * [ResumeQueue][google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue], or
+   * uploading
    * [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref).
-   * [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] cannot be used to change `state`.
+   * [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] cannot be
+   * used to change `state`.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2beta3.Queue.State state = 6;</code>
@@ -292,11 +336,14 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The state of the queue.
+   *
    * `state` can only be changed by calling
    * [PauseQueue][google.cloud.tasks.v2beta3.CloudTasks.PauseQueue],
-   * [ResumeQueue][google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue], or uploading
+   * [ResumeQueue][google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue], or
+   * uploading
    * [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref).
-   * [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] cannot be used to change `state`.
+   * [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] cannot be
+   * used to change `state`.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2beta3.Queue.State state = 6;</code>
@@ -310,11 +357,15 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The last time this queue was purged.
-   * All tasks that were [created][google.cloud.tasks.v2beta3.Task.create_time] before this time
-   * were purged.
-   * A queue can be purged using [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue], the
-   * [App Engine Task Queue SDK, or the Cloud
+   *
+   * All tasks that were [created][google.cloud.tasks.v2beta3.Task.create_time]
+   * before this time were purged.
+   *
+   * A queue can be purged using
+   * [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue], the [App
+   * Engine Task Queue SDK, or the Cloud
    * Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue).
+   *
    * Purge time will be truncated to the nearest microsecond. Purge
    * time will be unset if the queue has never been purged.
    * </pre>
@@ -329,11 +380,15 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The last time this queue was purged.
-   * All tasks that were [created][google.cloud.tasks.v2beta3.Task.create_time] before this time
-   * were purged.
-   * A queue can be purged using [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue], the
-   * [App Engine Task Queue SDK, or the Cloud
+   *
+   * All tasks that were [created][google.cloud.tasks.v2beta3.Task.create_time]
+   * before this time were purged.
+   *
+   * A queue can be purged using
+   * [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue], the [App
+   * Engine Task Queue SDK, or the Cloud
    * Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue).
+   *
    * Purge time will be truncated to the nearest microsecond. Purge
    * time will be unset if the queue has never been purged.
    * </pre>
@@ -348,11 +403,15 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The last time this queue was purged.
-   * All tasks that were [created][google.cloud.tasks.v2beta3.Task.create_time] before this time
-   * were purged.
-   * A queue can be purged using [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue], the
-   * [App Engine Task Queue SDK, or the Cloud
+   *
+   * All tasks that were [created][google.cloud.tasks.v2beta3.Task.create_time]
+   * before this time were purged.
+   *
+   * A queue can be purged using
+   * [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue], the [App
+   * Engine Task Queue SDK, or the Cloud
    * Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue).
+   *
    * Purge time will be truncated to the nearest microsecond. Purge
    * time will be unset if the queue has never been purged.
    * </pre>
@@ -367,9 +426,11 @@ public interface QueueOrBuilder
    * <pre>
    * The maximum amount of time that a task will be retained in
    * this queue.
+   *
    * Queues created by Cloud Tasks have a default `task_ttl` of 31 days.
    * After a task has lived for `task_ttl`, the task will be deleted
    * regardless of whether it was dispatched or not.
+   *
    * The `task_ttl` for queues created via queue.yaml/xml is equal to the
    * maximum duration because there is a
    * [storage quota](https://cloud.google.com/appengine/quotas#Task_Queue) for
@@ -388,9 +449,11 @@ public interface QueueOrBuilder
    * <pre>
    * The maximum amount of time that a task will be retained in
    * this queue.
+   *
    * Queues created by Cloud Tasks have a default `task_ttl` of 31 days.
    * After a task has lived for `task_ttl`, the task will be deleted
    * regardless of whether it was dispatched or not.
+   *
    * The `task_ttl` for queues created via queue.yaml/xml is equal to the
    * maximum duration because there is a
    * [storage quota](https://cloud.google.com/appengine/quotas#Task_Queue) for
@@ -409,9 +472,11 @@ public interface QueueOrBuilder
    * <pre>
    * The maximum amount of time that a task will be retained in
    * this queue.
+   *
    * Queues created by Cloud Tasks have a default `task_ttl` of 31 days.
    * After a task has lived for `task_ttl`, the task will be deleted
    * regardless of whether it was dispatched or not.
+   *
    * The `task_ttl` for queues created via queue.yaml/xml is equal to the
    * maximum duration because there is a
    * [storage quota](https://cloud.google.com/appengine/quotas#Task_Queue) for
@@ -428,12 +493,14 @@ public interface QueueOrBuilder
    *
    * <pre>
    * The task tombstone time to live (TTL).
+   *
    * After a task is deleted or executed, the task's tombstone is
    * retained for the length of time specified by `tombstone_ttl`.
    * The tombstone is used by task de-duplication; another task with the same
    * name can't be created until the tombstone has expired. For more information
    * about task de-duplication, see the documentation for
    * [CreateTaskRequest][google.cloud.tasks.v2beta3.CreateTaskRequest.task].
+   *
    * Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
    * </pre>
    *
@@ -447,12 +514,14 @@ public interface QueueOrBuilder
    *
    * <pre>
    * The task tombstone time to live (TTL).
+   *
    * After a task is deleted or executed, the task's tombstone is
    * retained for the length of time specified by `tombstone_ttl`.
    * The tombstone is used by task de-duplication; another task with the same
    * name can't be created until the tombstone has expired. For more information
    * about task de-duplication, see the documentation for
    * [CreateTaskRequest][google.cloud.tasks.v2beta3.CreateTaskRequest.task].
+   *
    * Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
    * </pre>
    *
@@ -466,12 +535,14 @@ public interface QueueOrBuilder
    *
    * <pre>
    * The task tombstone time to live (TTL).
+   *
    * After a task is deleted or executed, the task's tombstone is
    * retained for the length of time specified by `tombstone_ttl`.
    * The tombstone is used by task de-duplication; another task with the same
    * name can't be created until the tombstone has expired. For more information
    * about task de-duplication, see the documentation for
    * [CreateTaskRequest][google.cloud.tasks.v2beta3.CreateTaskRequest.task].
+   *
    * Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
    * </pre>
    *
@@ -529,6 +600,7 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Immutable. The type of a queue (push or pull).
+   *
    * `Queue.type` is an immutable property of the queue that is set at the queue
    * creation time. When left unspecified, the default value of `PUSH` is
    * selected.
@@ -546,6 +618,7 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Immutable. The type of a queue (push or pull).
+   *
    * `Queue.type` is an immutable property of the queue that is set at the queue
    * creation time. When left unspecified, the default value of `PUSH` is
    * selected.
@@ -606,5 +679,5 @@ public interface QueueOrBuilder
    */
   com.google.cloud.tasks.v2beta3.QueueStatsOrBuilder getStatsOrBuilder();
 
-  public com.google.cloud.tasks.v2beta3.Queue.QueueTypeCase getQueueTypeCase();
+  com.google.cloud.tasks.v2beta3.Queue.QueueTypeCase getQueueTypeCase();
 }

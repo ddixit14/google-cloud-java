@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -120,6 +120,12 @@ public class ConversationsSettings extends ClientSettings<ConversationsSettings>
   public UnaryCallSettings<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>
       suggestConversationSummarySettings() {
     return ((ConversationsStubSettings) getStubSettings()).suggestConversationSummarySettings();
+  }
+
+  /** Returns the object with the settings used for calls to generateStatelessSummary. */
+  public UnaryCallSettings<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+      generateStatelessSummarySettings() {
+    return ((ConversationsStubSettings) getStubSettings()).generateStatelessSummarySettings();
   }
 
   /** Returns the object with the settings used for calls to listLocations. */
@@ -291,6 +297,13 @@ public class ConversationsSettings extends ClientSettings<ConversationsSettings>
             SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>
         suggestConversationSummarySettings() {
       return getStubSettingsBuilder().suggestConversationSummarySettings();
+    }
+
+    /** Returns the builder for the settings used for calls to generateStatelessSummary. */
+    public UnaryCallSettings.Builder<
+            GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+        generateStatelessSummarySettings() {
+      return getStubSettingsBuilder().generateStatelessSummarySettings();
     }
 
     /** Returns the builder for the settings used for calls to listLocations. */

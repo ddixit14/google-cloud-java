@@ -25,7 +25,9 @@ package com.google.cloud.dialogflow.v2;
  * The top-level message sent by the client to the
  * [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2.Participants.StreamingAnalyzeContent]
  * method.
+ *
  * Multiple request messages should be sent in order:
+ *
  * 1.  The first message must contain
  *     [participant][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.participant],
  *     [config][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.config]
@@ -35,6 +37,7 @@ package com.google.cloud.dialogflow.v2;
  *     [reply_audio_config][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.reply_audio_config].
  *     The message must not contain
  *     [input][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.input].
+ *
  * 2.  If
  * [config][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.config] in
  * the first message
@@ -43,9 +46,11 @@ package com.google.cloud.dialogflow.v2;
  *     all subsequent messages must contain
  *     [input_audio][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.input_audio]
  *     to continue with Speech recognition. However, note that:
+ *
  *     * Dialogflow will bill you for the audio so far.
  *     * Dialogflow discards all Speech recognition results in favor of the
  *       text input.
+ *
  *  3. If
  *  [StreamingAnalyzeContentRequest.config][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.config]
  *  in the first message was set
@@ -54,6 +59,7 @@ package com.google.cloud.dialogflow.v2;
  *    then the second message must contain only
  *    [input_text][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.input_text].
  *    Moreover, you must not send more than two messages.
+ *
  *  After you sent all input, you must half-close or abort the request stream.
  * </pre>
  *
@@ -80,11 +86,6 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
     return new StreamingAnalyzeContentRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dialogflow.v2.ParticipantProto
         .internal_static_google_cloud_dialogflow_v2_StreamingAnalyzeContentRequest_descriptor;
@@ -101,6 +102,8 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
   }
 
   private int configCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object config_;
 
   public enum ConfigCase
@@ -148,6 +151,8 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
   }
 
   private int inputCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object input_;
 
   public enum InputCase
@@ -544,6 +549,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    *
    * <pre>
    * The DTMF digits used to invoke intent and fill in parameter value.
+   *
    * This input is ignored if the previous response indicated that DTMF input
    * is not accepted.
    * </pre>
@@ -561,6 +567,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    *
    * <pre>
    * The DTMF digits used to invoke intent and fill in parameter value.
+   *
    * This input is ignored if the previous response indicated that DTMF input
    * is not accepted.
    * </pre>
@@ -581,6 +588,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    *
    * <pre>
    * The DTMF digits used to invoke intent and fill in parameter value.
+   *
    * This input is ignored if the previous response indicated that DTMF input
    * is not accepted.
    * </pre>
@@ -705,6 +713,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    * Additional parameters to be put into Dialogflow CX session parameters. To
    * remove a parameter from the session, clients should explicitly set the
    * parameter value to null.
+   *
    * Note: this field should only be used if you are connecting to a Dialogflow
    * CX agent.
    * </pre>
@@ -724,6 +733,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    * Additional parameters to be put into Dialogflow CX session parameters. To
    * remove a parameter from the session, clients should explicitly set the
    * parameter value to null.
+   *
    * Note: this field should only be used if you are connecting to a Dialogflow
    * CX agent.
    * </pre>
@@ -743,6 +753,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    * Additional parameters to be put into Dialogflow CX session parameters. To
    * remove a parameter from the session, clients should explicitly set the
    * parameter value to null.
+   *
    * Note: this field should only be used if you are connecting to a Dialogflow
    * CX agent.
    * </pre>
@@ -773,6 +784,25 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
   @java.lang.Override
   public boolean getEnablePartialAutomatedAgentReply() {
     return enablePartialAutomatedAgentReply_;
+  }
+
+  public static final int ENABLE_DEBUGGING_INFO_FIELD_NUMBER = 19;
+  private boolean enableDebuggingInfo_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * If true, `StreamingAnalyzeContentResponse.debugging_info` will get
+   * populated.
+   * </pre>
+   *
+   * <code>bool enable_debugging_info = 19;</code>
+   *
+   * @return The enableDebuggingInfo.
+   */
+  @java.lang.Override
+  public boolean getEnableDebuggingInfo() {
+    return enableDebuggingInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -821,6 +851,9 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
     }
     if (cxParameters_ != null) {
       output.writeMessage(13, getCxParameters());
+    }
+    if (enableDebuggingInfo_ != false) {
+      output.writeBool(19, enableDebuggingInfo_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -874,6 +907,9 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
     if (cxParameters_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(13, getCxParameters());
     }
+    if (enableDebuggingInfo_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(19, enableDebuggingInfo_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -909,6 +945,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
     }
     if (getEnablePartialAutomatedAgentReply() != other.getEnablePartialAutomatedAgentReply())
       return false;
+    if (getEnableDebuggingInfo() != other.getEnableDebuggingInfo()) return false;
     if (!getConfigCase().equals(other.getConfigCase())) return false;
     switch (configCase_) {
       case 2:
@@ -967,6 +1004,8 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
     hash =
         (53 * hash)
             + com.google.protobuf.Internal.hashBoolean(getEnablePartialAutomatedAgentReply());
+    hash = (37 * hash) + ENABLE_DEBUGGING_INFO_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getEnableDebuggingInfo());
     switch (configCase_) {
       case 2:
         hash = (37 * hash) + AUDIO_CONFIG_FIELD_NUMBER;
@@ -1103,7 +1142,9 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    * The top-level message sent by the client to the
    * [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2.Participants.StreamingAnalyzeContent]
    * method.
+   *
    * Multiple request messages should be sent in order:
+   *
    * 1.  The first message must contain
    *     [participant][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.participant],
    *     [config][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.config]
@@ -1113,6 +1154,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    *     [reply_audio_config][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.reply_audio_config].
    *     The message must not contain
    *     [input][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.input].
+   *
    * 2.  If
    * [config][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.config] in
    * the first message
@@ -1121,9 +1163,11 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    *     all subsequent messages must contain
    *     [input_audio][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.input_audio]
    *     to continue with Speech recognition. However, note that:
+   *
    *     * Dialogflow will bill you for the audio so far.
    *     * Dialogflow discards all Speech recognition results in favor of the
    *       text input.
+   *
    *  3. If
    *  [StreamingAnalyzeContentRequest.config][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.config]
    *  in the first message was set
@@ -1132,6 +1176,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
    *    then the second message must contain only
    *    [input_text][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest.input_text].
    *    Moreover, you must not send more than two messages.
+   *
    *  After you sent all input, you must half-close or abort the request stream.
    * </pre>
    *
@@ -1198,6 +1243,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
         cxParametersBuilder_ = null;
       }
       enablePartialAutomatedAgentReply_ = false;
+      enableDebuggingInfo_ = false;
       configCase_ = 0;
       config_ = null;
       inputCase_ = 0;
@@ -1264,6 +1310,9 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.enablePartialAutomatedAgentReply_ = enablePartialAutomatedAgentReply_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.enableDebuggingInfo_ = enableDebuggingInfo_;
       }
     }
 
@@ -1350,6 +1399,9 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
       }
       if (other.getEnablePartialAutomatedAgentReply() != false) {
         setEnablePartialAutomatedAgentReply(other.getEnablePartialAutomatedAgentReply());
+      }
+      if (other.getEnableDebuggingInfo() != false) {
+        setEnableDebuggingInfo(other.getEnableDebuggingInfo());
       }
       switch (other.getConfigCase()) {
         case AUDIO_CONFIG:
@@ -1485,6 +1537,12 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
                 bitField0_ |= 0x00000200;
                 break;
               } // case 106
+            case 152:
+              {
+                enableDebuggingInfo_ = input.readBool();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 152
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -2540,6 +2598,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      *
      * <pre>
      * The DTMF digits used to invoke intent and fill in parameter value.
+     *
      * This input is ignored if the previous response indicated that DTMF input
      * is not accepted.
      * </pre>
@@ -2557,6 +2616,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      *
      * <pre>
      * The DTMF digits used to invoke intent and fill in parameter value.
+     *
      * This input is ignored if the previous response indicated that DTMF input
      * is not accepted.
      * </pre>
@@ -2584,6 +2644,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      *
      * <pre>
      * The DTMF digits used to invoke intent and fill in parameter value.
+     *
      * This input is ignored if the previous response indicated that DTMF input
      * is not accepted.
      * </pre>
@@ -2608,6 +2669,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      *
      * <pre>
      * The DTMF digits used to invoke intent and fill in parameter value.
+     *
      * This input is ignored if the previous response indicated that DTMF input
      * is not accepted.
      * </pre>
@@ -2630,6 +2692,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      *
      * <pre>
      * The DTMF digits used to invoke intent and fill in parameter value.
+     *
      * This input is ignored if the previous response indicated that DTMF input
      * is not accepted.
      * </pre>
@@ -2664,6 +2727,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      *
      * <pre>
      * The DTMF digits used to invoke intent and fill in parameter value.
+     *
      * This input is ignored if the previous response indicated that DTMF input
      * is not accepted.
      * </pre>
@@ -2691,6 +2755,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      *
      * <pre>
      * The DTMF digits used to invoke intent and fill in parameter value.
+     *
      * This input is ignored if the previous response indicated that DTMF input
      * is not accepted.
      * </pre>
@@ -2705,6 +2770,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      *
      * <pre>
      * The DTMF digits used to invoke intent and fill in parameter value.
+     *
      * This input is ignored if the previous response indicated that DTMF input
      * is not accepted.
      * </pre>
@@ -2727,6 +2793,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      *
      * <pre>
      * The DTMF digits used to invoke intent and fill in parameter value.
+     *
      * This input is ignored if the previous response indicated that DTMF input
      * is not accepted.
      * </pre>
@@ -3144,6 +3211,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      * Additional parameters to be put into Dialogflow CX session parameters. To
      * remove a parameter from the session, clients should explicitly set the
      * parameter value to null.
+     *
      * Note: this field should only be used if you are connecting to a Dialogflow
      * CX agent.
      * </pre>
@@ -3162,6 +3230,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      * Additional parameters to be put into Dialogflow CX session parameters. To
      * remove a parameter from the session, clients should explicitly set the
      * parameter value to null.
+     *
      * Note: this field should only be used if you are connecting to a Dialogflow
      * CX agent.
      * </pre>
@@ -3186,6 +3255,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      * Additional parameters to be put into Dialogflow CX session parameters. To
      * remove a parameter from the session, clients should explicitly set the
      * parameter value to null.
+     *
      * Note: this field should only be used if you are connecting to a Dialogflow
      * CX agent.
      * </pre>
@@ -3212,6 +3282,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      * Additional parameters to be put into Dialogflow CX session parameters. To
      * remove a parameter from the session, clients should explicitly set the
      * parameter value to null.
+     *
      * Note: this field should only be used if you are connecting to a Dialogflow
      * CX agent.
      * </pre>
@@ -3235,6 +3306,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      * Additional parameters to be put into Dialogflow CX session parameters. To
      * remove a parameter from the session, clients should explicitly set the
      * parameter value to null.
+     *
      * Note: this field should only be used if you are connecting to a Dialogflow
      * CX agent.
      * </pre>
@@ -3264,6 +3336,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      * Additional parameters to be put into Dialogflow CX session parameters. To
      * remove a parameter from the session, clients should explicitly set the
      * parameter value to null.
+     *
      * Note: this field should only be used if you are connecting to a Dialogflow
      * CX agent.
      * </pre>
@@ -3287,6 +3360,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      * Additional parameters to be put into Dialogflow CX session parameters. To
      * remove a parameter from the session, clients should explicitly set the
      * parameter value to null.
+     *
      * Note: this field should only be used if you are connecting to a Dialogflow
      * CX agent.
      * </pre>
@@ -3305,6 +3379,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      * Additional parameters to be put into Dialogflow CX session parameters. To
      * remove a parameter from the session, clients should explicitly set the
      * parameter value to null.
+     *
      * Note: this field should only be used if you are connecting to a Dialogflow
      * CX agent.
      * </pre>
@@ -3327,6 +3402,7 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
      * Additional parameters to be put into Dialogflow CX session parameters. To
      * remove a parameter from the session, clients should explicitly set the
      * parameter value to null.
+     *
      * Note: this field should only be used if you are connecting to a Dialogflow
      * CX agent.
      * </pre>
@@ -3408,6 +3484,62 @@ public final class StreamingAnalyzeContentRequest extends com.google.protobuf.Ge
     public Builder clearEnablePartialAutomatedAgentReply() {
       bitField0_ = (bitField0_ & ~0x00000400);
       enablePartialAutomatedAgentReply_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean enableDebuggingInfo_;
+    /**
+     *
+     *
+     * <pre>
+     * If true, `StreamingAnalyzeContentResponse.debugging_info` will get
+     * populated.
+     * </pre>
+     *
+     * <code>bool enable_debugging_info = 19;</code>
+     *
+     * @return The enableDebuggingInfo.
+     */
+    @java.lang.Override
+    public boolean getEnableDebuggingInfo() {
+      return enableDebuggingInfo_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If true, `StreamingAnalyzeContentResponse.debugging_info` will get
+     * populated.
+     * </pre>
+     *
+     * <code>bool enable_debugging_info = 19;</code>
+     *
+     * @param value The enableDebuggingInfo to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnableDebuggingInfo(boolean value) {
+
+      enableDebuggingInfo_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If true, `StreamingAnalyzeContentResponse.debugging_info` will get
+     * populated.
+     * </pre>
+     *
+     * <code>bool enable_debugging_info = 19;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearEnableDebuggingInfo() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      enableDebuggingInfo_ = false;
       onChanged();
       return this;
     }

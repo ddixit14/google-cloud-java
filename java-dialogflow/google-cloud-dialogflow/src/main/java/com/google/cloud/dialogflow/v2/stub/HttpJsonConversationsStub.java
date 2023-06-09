@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,10 +31,13 @@ import com.google.api.gax.httpjson.ProtoMessageRequestFormatter;
 import com.google.api.gax.httpjson.ProtoMessageResponseParser;
 import com.google.api.gax.httpjson.ProtoRestSerializer;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.cloud.dialogflow.v2.CompleteConversationRequest;
 import com.google.cloud.dialogflow.v2.Conversation;
 import com.google.cloud.dialogflow.v2.CreateConversationRequest;
+import com.google.cloud.dialogflow.v2.GenerateStatelessSummaryRequest;
+import com.google.cloud.dialogflow.v2.GenerateStatelessSummaryResponse;
 import com.google.cloud.dialogflow.v2.GetConversationRequest;
 import com.google.cloud.dialogflow.v2.ListConversationsRequest;
 import com.google.cloud.dialogflow.v2.ListConversationsResponse;
@@ -301,6 +304,51 @@ public class HttpJsonConversationsStub extends ConversationsStub {
                       .build())
               .build();
 
+  private static final ApiMethodDescriptor<
+          GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+      generateStatelessSummaryMethodDescriptor =
+          ApiMethodDescriptor
+              .<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>newBuilder()
+              .setFullMethodName(
+                  "google.cloud.dialogflow.v2.Conversations/GenerateStatelessSummary")
+              .setHttpMethod("POST")
+              .setType(ApiMethodDescriptor.MethodType.UNARY)
+              .setRequestFormatter(
+                  ProtoMessageRequestFormatter.<GenerateStatelessSummaryRequest>newBuilder()
+                      .setPath(
+                          "/v2/{statelessConversation.parent=projects/*}/suggestions:generateStatelessSummary",
+                          request -> {
+                            Map<String, String> fields = new HashMap<>();
+                            ProtoRestSerializer<GenerateStatelessSummaryRequest> serializer =
+                                ProtoRestSerializer.create();
+                            serializer.putPathParam(
+                                fields,
+                                "statelessConversation.parent",
+                                request.getStatelessConversation().getParent());
+                            return fields;
+                          })
+                      .setAdditionalPaths(
+                          "/v2/{statelessConversation.parent=projects/*/locations/*}/suggestions:generateStatelessSummary")
+                      .setQueryParamsExtractor(
+                          request -> {
+                            Map<String, List<String>> fields = new HashMap<>();
+                            ProtoRestSerializer<GenerateStatelessSummaryRequest> serializer =
+                                ProtoRestSerializer.create();
+                            serializer.putQueryParam(fields, "$alt", "json;enum-encoding=int");
+                            return fields;
+                          })
+                      .setRequestBodyExtractor(
+                          request ->
+                              ProtoRestSerializer.create()
+                                  .toBody("*", request.toBuilder().build(), true))
+                      .build())
+              .setResponseParser(
+                  ProtoMessageResponseParser.<GenerateStatelessSummaryResponse>newBuilder()
+                      .setDefaultInstance(GenerateStatelessSummaryResponse.getDefaultInstance())
+                      .setDefaultTypeRegistry(typeRegistry)
+                      .build())
+              .build();
+
   private static final ApiMethodDescriptor<ListLocationsRequest, ListLocationsResponse>
       listLocationsMethodDescriptor =
           ApiMethodDescriptor.<ListLocationsRequest, ListLocationsResponse>newBuilder()
@@ -382,6 +430,8 @@ public class HttpJsonConversationsStub extends ConversationsStub {
       listMessagesPagedCallable;
   private final UnaryCallable<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>
       suggestConversationSummaryCallable;
+  private final UnaryCallable<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+      generateStatelessSummaryCallable;
   private final UnaryCallable<ListLocationsRequest, ListLocationsResponse> listLocationsCallable;
   private final UnaryCallable<ListLocationsRequest, ListLocationsPagedResponse>
       listLocationsPagedCallable;
@@ -434,28 +484,58 @@ public class HttpJsonConversationsStub extends ConversationsStub {
             HttpJsonCallSettings.<CreateConversationRequest, Conversation>newBuilder()
                 .setMethodDescriptor(createConversationMethodDescriptor)
                 .setTypeRegistry(typeRegistry)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("parent", String.valueOf(request.getParent()));
+                      return builder.build();
+                    })
                 .build();
     HttpJsonCallSettings<ListConversationsRequest, ListConversationsResponse>
         listConversationsTransportSettings =
             HttpJsonCallSettings.<ListConversationsRequest, ListConversationsResponse>newBuilder()
                 .setMethodDescriptor(listConversationsMethodDescriptor)
                 .setTypeRegistry(typeRegistry)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("parent", String.valueOf(request.getParent()));
+                      return builder.build();
+                    })
                 .build();
     HttpJsonCallSettings<GetConversationRequest, Conversation> getConversationTransportSettings =
         HttpJsonCallSettings.<GetConversationRequest, Conversation>newBuilder()
             .setMethodDescriptor(getConversationMethodDescriptor)
             .setTypeRegistry(typeRegistry)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
+                })
             .build();
     HttpJsonCallSettings<CompleteConversationRequest, Conversation>
         completeConversationTransportSettings =
             HttpJsonCallSettings.<CompleteConversationRequest, Conversation>newBuilder()
                 .setMethodDescriptor(completeConversationMethodDescriptor)
                 .setTypeRegistry(typeRegistry)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("name", String.valueOf(request.getName()));
+                      return builder.build();
+                    })
                 .build();
     HttpJsonCallSettings<ListMessagesRequest, ListMessagesResponse> listMessagesTransportSettings =
         HttpJsonCallSettings.<ListMessagesRequest, ListMessagesResponse>newBuilder()
             .setMethodDescriptor(listMessagesMethodDescriptor)
             .setTypeRegistry(typeRegistry)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("parent", String.valueOf(request.getParent()));
+                  return builder.build();
+                })
             .build();
     HttpJsonCallSettings<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>
         suggestConversationSummaryTransportSettings =
@@ -463,17 +543,50 @@ public class HttpJsonConversationsStub extends ConversationsStub {
                 .<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>newBuilder()
                 .setMethodDescriptor(suggestConversationSummaryMethodDescriptor)
                 .setTypeRegistry(typeRegistry)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("conversation", String.valueOf(request.getConversation()));
+                      return builder.build();
+                    })
+                .build();
+    HttpJsonCallSettings<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+        generateStatelessSummaryTransportSettings =
+            HttpJsonCallSettings
+                .<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>newBuilder()
+                .setMethodDescriptor(generateStatelessSummaryMethodDescriptor)
+                .setTypeRegistry(typeRegistry)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add(
+                          "stateless_conversation.parent",
+                          String.valueOf(request.getStatelessConversation().getParent()));
+                      return builder.build();
+                    })
                 .build();
     HttpJsonCallSettings<ListLocationsRequest, ListLocationsResponse>
         listLocationsTransportSettings =
             HttpJsonCallSettings.<ListLocationsRequest, ListLocationsResponse>newBuilder()
                 .setMethodDescriptor(listLocationsMethodDescriptor)
                 .setTypeRegistry(typeRegistry)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("name", String.valueOf(request.getName()));
+                      return builder.build();
+                    })
                 .build();
     HttpJsonCallSettings<GetLocationRequest, Location> getLocationTransportSettings =
         HttpJsonCallSettings.<GetLocationRequest, Location>newBuilder()
             .setMethodDescriptor(getLocationMethodDescriptor)
             .setTypeRegistry(typeRegistry)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
+                })
             .build();
 
     this.createConversationCallable =
@@ -510,6 +623,11 @@ public class HttpJsonConversationsStub extends ConversationsStub {
             suggestConversationSummaryTransportSettings,
             settings.suggestConversationSummarySettings(),
             clientContext);
+    this.generateStatelessSummaryCallable =
+        callableFactory.createUnaryCallable(
+            generateStatelessSummaryTransportSettings,
+            settings.generateStatelessSummarySettings(),
+            clientContext);
     this.listLocationsCallable =
         callableFactory.createUnaryCallable(
             listLocationsTransportSettings, settings.listLocationsSettings(), clientContext);
@@ -533,6 +651,7 @@ public class HttpJsonConversationsStub extends ConversationsStub {
     methodDescriptors.add(completeConversationMethodDescriptor);
     methodDescriptors.add(listMessagesMethodDescriptor);
     methodDescriptors.add(suggestConversationSummaryMethodDescriptor);
+    methodDescriptors.add(generateStatelessSummaryMethodDescriptor);
     methodDescriptors.add(listLocationsMethodDescriptor);
     methodDescriptors.add(getLocationMethodDescriptor);
     return methodDescriptors;
@@ -579,6 +698,12 @@ public class HttpJsonConversationsStub extends ConversationsStub {
   public UnaryCallable<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>
       suggestConversationSummaryCallable() {
     return suggestConversationSummaryCallable;
+  }
+
+  @Override
+  public UnaryCallable<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>
+      generateStatelessSummaryCallable() {
+    return generateStatelessSummaryCallable;
   }
 
   @Override

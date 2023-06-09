@@ -1272,7 +1272,6 @@ public class MetadataServiceClient implements BackgroundResource {
    *     Artifact to be updated. Format:
    *     `projects/{project}/locations/{location}/metadataStores/{metadatastore}/artifacts/{artifact}`
    * @param updateMask Optional. A FieldMask indicating which fields should be updated.
-   *     Functionality of this field is not yet supported.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Artifact updateArtifact(Artifact artifact, FieldMask updateMask) {
@@ -2110,7 +2109,6 @@ public class MetadataServiceClient implements BackgroundResource {
    *     Context to be updated. Format:
    *     `projects/{project}/locations/{location}/metadataStores/{metadatastore}/contexts/{context}`
    * @param updateMask Optional. A FieldMask indicating which fields should be updated.
-   *     Functionality of this field is not yet supported.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Context updateContext(Context context, FieldMask updateMask) {
@@ -3537,7 +3535,6 @@ public class MetadataServiceClient implements BackgroundResource {
    *     Execution to be updated. Format:
    *     `projects/{project}/locations/{location}/metadataStores/{metadatastore}/executions/{execution}`
    * @param updateMask Optional. A FieldMask indicating which fields should be updated.
-   *     Functionality of this field is not yet supported.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Execution updateExecution(Execution execution, FieldMask updateMask) {
@@ -4954,7 +4951,8 @@ public class MetadataServiceClient implements BackgroundResource {
    *   SetIamPolicyRequest request =
    *       SetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setPolicy(Policy.newBuilder().build())
    *           .setUpdateMask(FieldMask.newBuilder().build())
@@ -4988,7 +4986,8 @@ public class MetadataServiceClient implements BackgroundResource {
    *   SetIamPolicyRequest request =
    *       SetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setPolicy(Policy.newBuilder().build())
    *           .setUpdateMask(FieldMask.newBuilder().build())
@@ -5020,7 +5019,8 @@ public class MetadataServiceClient implements BackgroundResource {
    *   GetIamPolicyRequest request =
    *       GetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setOptions(GetPolicyOptions.newBuilder().build())
    *           .build();
@@ -5052,7 +5052,8 @@ public class MetadataServiceClient implements BackgroundResource {
    *   GetIamPolicyRequest request =
    *       GetIamPolicyRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .setOptions(GetPolicyOptions.newBuilder().build())
    *           .build();
@@ -5087,7 +5088,8 @@ public class MetadataServiceClient implements BackgroundResource {
    *   TestIamPermissionsRequest request =
    *       TestIamPermissionsRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .addAllPermissions(new ArrayList<String>())
    *           .build();
@@ -5123,7 +5125,8 @@ public class MetadataServiceClient implements BackgroundResource {
    *   TestIamPermissionsRequest request =
    *       TestIamPermissionsRequest.newBuilder()
    *           .setResource(
-   *               EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]")
+   *               EndpointName.ofProjectLocationEndpointName(
+   *                       "[PROJECT]", "[LOCATION]", "[ENDPOINT]")
    *                   .toString())
    *           .addAllPermissions(new ArrayList<String>())
    *           .build();

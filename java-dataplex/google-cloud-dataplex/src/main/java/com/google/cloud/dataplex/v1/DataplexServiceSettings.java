@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -293,6 +293,11 @@ public class DataplexServiceSettings extends ClientSettings<DataplexServiceSetti
   public PagedCallSettings<ListJobsRequest, ListJobsResponse, ListJobsPagedResponse>
       listJobsSettings() {
     return ((DataplexServiceStubSettings) getStubSettings()).listJobsSettings();
+  }
+
+  /** Returns the object with the settings used for calls to runTask. */
+  public UnaryCallSettings<RunTaskRequest, RunTaskResponse> runTaskSettings() {
+    return ((DataplexServiceStubSettings) getStubSettings()).runTaskSettings();
   }
 
   /** Returns the object with the settings used for calls to getJob. */
@@ -683,6 +688,11 @@ public class DataplexServiceSettings extends ClientSettings<DataplexServiceSetti
     public PagedCallSettings.Builder<ListJobsRequest, ListJobsResponse, ListJobsPagedResponse>
         listJobsSettings() {
       return getStubSettingsBuilder().listJobsSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to runTask. */
+    public UnaryCallSettings.Builder<RunTaskRequest, RunTaskResponse> runTaskSettings() {
+      return getStubSettingsBuilder().runTaskSettings();
     }
 
     /** Returns the builder for the settings used for calls to getJob. */

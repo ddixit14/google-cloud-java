@@ -28,6 +28,7 @@ public interface JobOrBuilder
    *
    * <pre>
    * The fully qualified name of this Job.
+   *
    * Format:
    * projects/{project}/locations/{location}/jobs/{job}
    * </pre>
@@ -42,6 +43,7 @@ public interface JobOrBuilder
    *
    * <pre>
    * The fully qualified name of this Job.
+   *
    * Format:
    * projects/{project}/locations/{location}/jobs/{job}
    * </pre>
@@ -99,12 +101,14 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style labels for the resource.
+   * Unstructured key value map that can be used to organize and categorize
+   * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -118,12 +122,14 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style labels for the resource.
+   * Unstructured key value map that can be used to organize and categorize
+   * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -140,12 +146,14 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style labels for the resource.
+   * Unstructured key value map that can be used to organize and categorize
+   * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -159,12 +167,14 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style labels for the resource.
+   * Unstructured key value map that can be used to organize and categorize
+   * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -182,12 +192,14 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style labels for the resource.
+   * Unstructured key value map that can be used to organize and categorize
+   * objects.
    * User-provided labels are shared with Google's billing system, so they can
    * be used to filter, or break down billing charges by team, component,
    * environment, state, etc. For more information, visit
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
-   * https://cloud.google.com/run/docs/configuring/labels
+   * https://cloud.google.com/run/docs/configuring/labels.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support labels with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
    * namespaces, and they will be rejected. All system labels in v1 now have a
@@ -202,16 +214,18 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style annotations for the resource. Unstructured key value map that may
+   * Unstructured key value map that may
    * be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Job.
+   * namespaces, and they will be rejected on new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Job.
+   *
    * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-   * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -221,16 +235,18 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style annotations for the resource. Unstructured key value map that may
+   * Unstructured key value map that may
    * be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Job.
+   * namespaces, and they will be rejected on new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Job.
+   *
    * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-   * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -243,16 +259,18 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style annotations for the resource. Unstructured key value map that may
+   * Unstructured key value map that may
    * be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Job.
+   * namespaces, and they will be rejected on new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Job.
+   *
    * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-   * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -262,16 +280,18 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style annotations for the resource. Unstructured key value map that may
+   * Unstructured key value map that may
    * be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Job.
+   * namespaces, and they will be rejected on new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Job.
+   *
    * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-   * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -285,16 +305,18 @@ public interface JobOrBuilder
    *
    *
    * <pre>
-   * KRM-style annotations for the resource. Unstructured key value map that may
+   * Unstructured key value map that may
    * be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved
    * when modifying objects.
+   *
    * &lt;p&gt;Cloud Run API v2 does not support annotations with `run.googleapis.com`,
    * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
-   * namespaces, and they will be rejected. All system annotations in v1 now
-   * have a corresponding field in v2 Job.
+   * namespaces, and they will be rejected on new resources. All system
+   * annotations in v1 now have a corresponding field in v2 Job.
+   *
    * &lt;p&gt;This field follows Kubernetes annotations' namespacing, limits, and
-   * rules. More info: https://kubernetes.io/docs/user-guide/annotations
+   * rules.
    * </pre>
    *
    * <code>map&lt;string, string&gt; annotations = 5;</code>
@@ -564,6 +586,12 @@ public interface JobOrBuilder
    * Launch Stages](https://cloud.google.com/terms/launch-stages).
    * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
    * is assumed.
+   * Set the launch stage to a preview stage on input to allow use of preview
+   * features in that stage. On read (or output), describes whether the resource
+   * uses preview features.
+   * &lt;p&gt;
+   * For example, if ALPHA is provided as input, but only BETA and GA-level
+   * features are used, this field will be BETA on output.
    * </pre>
    *
    * <code>.google.api.LaunchStage launch_stage = 14;</code>
@@ -579,6 +607,12 @@ public interface JobOrBuilder
    * Launch Stages](https://cloud.google.com/terms/launch-stages).
    * Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA
    * is assumed.
+   * Set the launch stage to a preview stage on input to allow use of preview
+   * features in that stage. On read (or output), describes whether the resource
+   * uses preview features.
+   * &lt;p&gt;
+   * For example, if ALPHA is provided as input, but only BETA and GA-level
+   * features are used, this field will be BETA on output.
    * </pre>
    *
    * <code>.google.api.LaunchStage launch_stage = 14;</code>
@@ -857,6 +891,7 @@ public interface JobOrBuilder
    * <pre>
    * Output only. Returns true if the Job is currently being acted upon by the
    * system to bring it into the desired state.
+   *
    * When a new Job is created, or an existing one is updated, Cloud Run
    * will asynchronously perform all necessary steps to bring the Job to the
    * desired state. This process is called reconciliation.
@@ -866,9 +901,11 @@ public interface JobOrBuilder
    * false), there are two possible outcomes: reconciliation succeeded and the
    * state matches the Job, or there was an error,  and reconciliation failed.
    * This state can be found in `terminal_condition.state`.
+   *
    * If reconciliation succeeded, the following fields will match:
    * `observed_generation` and `generation`, `latest_succeeded_execution` and
    * `latest_created_execution`.
+   *
    * If reconciliation failed, `observed_generation` and
    * `latest_succeeded_execution` will have the state of the last succeeded
    * execution or empty for newly created Job. Additional information on the
@@ -880,6 +917,19 @@ public interface JobOrBuilder
    * @return The reconciling.
    */
   boolean getReconciling();
+
+  /**
+   *
+   *
+   * <pre>
+   * Output only. Reserved for future use.
+   * </pre>
+   *
+   * <code>bool satisfies_pzs = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   *
+   * @return The satisfiesPzs.
+   */
+  boolean getSatisfiesPzs();
 
   /**
    *

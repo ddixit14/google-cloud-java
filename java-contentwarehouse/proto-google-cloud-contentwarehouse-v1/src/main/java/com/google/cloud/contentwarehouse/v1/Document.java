@@ -47,6 +47,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
     structuredContentUri_ = "";
     properties_ = java.util.Collections.emptyList();
     rawDocumentFileType_ = 0;
+    contentCategory_ = 0;
     creator_ = "";
     updater_ = "";
   }
@@ -55,11 +56,6 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new Document();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -78,6 +74,8 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int structuredContentCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object structuredContent_;
 
   public enum StructuredContentCase
@@ -125,6 +123,8 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int rawDocumentCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object rawDocument_;
 
   public enum RawDocumentCase
@@ -182,6 +182,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    * The resource name of the document.
    * Format:
    * projects/{project_number}/locations/{location}/documents/{document_id}.
+   *
    * The name is ignored when creating a document.
    * </pre>
    *
@@ -208,6 +209,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    * The resource name of the document.
    * Format:
    * projects/{project_number}/locations/{location}/documents/{document_id}.
+   *
    * The name is ignored when creating a document.
    * </pre>
    *
@@ -287,11 +289,10 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Required. Display name of the document given by the user. This name will be displayed
-   * in the UI.
-   * Customer can populate this field with the name of the document. This
-   * differs from the 'title' field as 'title' is optional and stores the top
-   * heading in the document.
+   * Required. Display name of the document given by the user. This name will be
+   * displayed in the UI. Customer can populate this field with the name of the
+   * document. This differs from the 'title' field as 'title' is optional and
+   * stores the top heading in the document.
    * </pre>
    *
    * <code>string display_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -314,11 +315,10 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Required. Display name of the document given by the user. This name will be displayed
-   * in the UI.
-   * Customer can populate this field with the name of the document. This
-   * differs from the 'title' field as 'title' is optional and stores the top
-   * heading in the document.
+   * Required. Display name of the document given by the user. This name will be
+   * displayed in the UI. Customer can populate this field with the name of the
+   * document. This differs from the 'title' field as 'title' is optional and
+   * stores the top heading in the document.
    * </pre>
    *
    * <code>string display_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -347,8 +347,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Title that describes the document.
-   * This is usually present in the top section of the document, and is a
-   * mandatory field for the question-answering feature.
+   * This can be the top heading or text that describes the document.
    * </pre>
    *
    * <code>string title = 18;</code>
@@ -372,8 +371,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Title that describes the document.
-   * This is usually present in the top section of the document, and is a
-   * mandatory field for the question-answering feature.
+   * This can be the top heading or text that describes the document.
    * </pre>
    *
    * <code>string title = 18;</code>
@@ -631,11 +629,14 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    * A path linked to structured content file.
    * </pre>
    *
-   * <code>string structured_content_uri = 16;</code>
+   * <code>string structured_content_uri = 16 [deprecated = true];</code>
    *
+   * @deprecated google.cloud.contentwarehouse.v1.Document.structured_content_uri is deprecated. See
+   *     google/cloud/contentwarehouse/v1/document.proto;l=79
    * @return The structuredContentUri.
    */
   @java.lang.Override
+  @java.lang.Deprecated
   public java.lang.String getStructuredContentUri() {
     java.lang.Object ref = structuredContentUri_;
     if (ref instanceof java.lang.String) {
@@ -654,11 +655,14 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    * A path linked to structured content file.
    * </pre>
    *
-   * <code>string structured_content_uri = 16;</code>
+   * <code>string structured_content_uri = 16 [deprecated = true];</code>
    *
+   * @deprecated google.cloud.contentwarehouse.v1.Document.structured_content_uri is deprecated. See
+   *     google/cloud/contentwarehouse/v1/document.proto;l=79
    * @return The bytes for structuredContentUri.
    */
   @java.lang.Override
+  @java.lang.Deprecated
   public com.google.protobuf.ByteString getStructuredContentUriBytes() {
     java.lang.Object ref = structuredContentUri_;
     if (ref instanceof java.lang.String) {
@@ -997,13 +1001,53 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    * If true, makes the document visible to asynchronous policies and rules.
    * </pre>
    *
-   * <code>bool async_enabled = 12;</code>
+   * <code>bool async_enabled = 12 [deprecated = true];</code>
    *
+   * @deprecated google.cloud.contentwarehouse.v1.Document.async_enabled is deprecated. See
+   *     google/cloud/contentwarehouse/v1/document.proto;l=108
    * @return The asyncEnabled.
    */
   @java.lang.Override
+  @java.lang.Deprecated
   public boolean getAsyncEnabled() {
     return asyncEnabled_;
+  }
+
+  public static final int CONTENT_CATEGORY_FIELD_NUMBER = 20;
+  private int contentCategory_ = 0;
+  /**
+   *
+   *
+   * <pre>
+   * Indicates the category (image, audio, video etc.) of the original content.
+   * </pre>
+   *
+   * <code>.google.cloud.contentwarehouse.v1.ContentCategory content_category = 20;</code>
+   *
+   * @return The enum numeric value on the wire for contentCategory.
+   */
+  @java.lang.Override
+  public int getContentCategoryValue() {
+    return contentCategory_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Indicates the category (image, audio, video etc.) of the original content.
+   * </pre>
+   *
+   * <code>.google.cloud.contentwarehouse.v1.ContentCategory content_category = 20;</code>
+   *
+   * @return The contentCategory.
+   */
+  @java.lang.Override
+  public com.google.cloud.contentwarehouse.v1.ContentCategory getContentCategory() {
+    com.google.cloud.contentwarehouse.v1.ContentCategory result =
+        com.google.cloud.contentwarehouse.v1.ContentCategory.forNumber(contentCategory_);
+    return result == null
+        ? com.google.cloud.contentwarehouse.v1.ContentCategory.UNRECOGNIZED
+        : result;
   }
 
   public static final int TEXT_EXTRACTION_DISABLED_FIELD_NUMBER = 19;
@@ -1015,13 +1059,34 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
    * If true, text extraction will not be performed.
    * </pre>
    *
-   * <code>bool text_extraction_disabled = 19;</code>
+   * <code>bool text_extraction_disabled = 19 [deprecated = true];</code>
    *
+   * @deprecated google.cloud.contentwarehouse.v1.Document.text_extraction_disabled is deprecated.
+   *     See google/cloud/contentwarehouse/v1/document.proto;l=114
    * @return The textExtractionDisabled.
    */
   @java.lang.Override
+  @java.lang.Deprecated
   public boolean getTextExtractionDisabled() {
     return textExtractionDisabled_;
+  }
+
+  public static final int TEXT_EXTRACTION_ENABLED_FIELD_NUMBER = 21;
+  private boolean textExtractionEnabled_ = false;
+  /**
+   *
+   *
+   * <pre>
+   * If true, text extraction will be performed.
+   * </pre>
+   *
+   * <code>bool text_extraction_enabled = 21;</code>
+   *
+   * @return The textExtractionEnabled.
+   */
+  @java.lang.Override
+  public boolean getTextExtractionEnabled() {
+    return textExtractionEnabled_;
   }
 
   public static final int CREATOR_FIELD_NUMBER = 13;
@@ -1200,6 +1265,14 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
     if (textExtractionDisabled_ != false) {
       output.writeBool(19, textExtractionDisabled_);
     }
+    if (contentCategory_
+        != com.google.cloud.contentwarehouse.v1.ContentCategory.CONTENT_CATEGORY_UNSPECIFIED
+            .getNumber()) {
+      output.writeEnum(20, contentCategory_);
+    }
+    if (textExtractionEnabled_ != false) {
+      output.writeBool(21, textExtractionEnabled_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1273,6 +1346,14 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
     if (textExtractionDisabled_ != false) {
       size += com.google.protobuf.CodedOutputStream.computeBoolSize(19, textExtractionDisabled_);
     }
+    if (contentCategory_
+        != com.google.cloud.contentwarehouse.v1.ContentCategory.CONTENT_CATEGORY_UNSPECIFIED
+            .getNumber()) {
+      size += com.google.protobuf.CodedOutputStream.computeEnumSize(20, contentCategory_);
+    }
+    if (textExtractionEnabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(21, textExtractionEnabled_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1307,7 +1388,9 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
     }
     if (rawDocumentFileType_ != other.rawDocumentFileType_) return false;
     if (getAsyncEnabled() != other.getAsyncEnabled()) return false;
+    if (contentCategory_ != other.contentCategory_) return false;
     if (getTextExtractionDisabled() != other.getTextExtractionDisabled()) return false;
+    if (getTextExtractionEnabled() != other.getTextExtractionEnabled()) return false;
     if (!getCreator().equals(other.getCreator())) return false;
     if (!getUpdater().equals(other.getUpdater())) return false;
     if (!getStructuredContentCase().equals(other.getStructuredContentCase())) return false;
@@ -1373,8 +1456,12 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + rawDocumentFileType_;
     hash = (37 * hash) + ASYNC_ENABLED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getAsyncEnabled());
+    hash = (37 * hash) + CONTENT_CATEGORY_FIELD_NUMBER;
+    hash = (53 * hash) + contentCategory_;
     hash = (37 * hash) + TEXT_EXTRACTION_DISABLED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getTextExtractionDisabled());
+    hash = (37 * hash) + TEXT_EXTRACTION_ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getTextExtractionEnabled());
     hash = (37 * hash) + CREATOR_FIELD_NUMBER;
     hash = (53 * hash) + getCreator().hashCode();
     hash = (37 * hash) + UPDATER_FIELD_NUMBER;
@@ -1571,7 +1658,9 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
       }
       rawDocumentFileType_ = 0;
       asyncEnabled_ = false;
+      contentCategory_ = 0;
       textExtractionDisabled_ = false;
+      textExtractionEnabled_ = false;
       creator_ = "";
       updater_ = "";
       structuredContentCase_ = 0;
@@ -1662,12 +1751,18 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
         result.asyncEnabled_ = asyncEnabled_;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.textExtractionDisabled_ = textExtractionDisabled_;
+        result.contentCategory_ = contentCategory_;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
-        result.creator_ = creator_;
+        result.textExtractionDisabled_ = textExtractionDisabled_;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.textExtractionEnabled_ = textExtractionEnabled_;
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.creator_ = creator_;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
         result.updater_ = updater_;
       }
     }
@@ -1801,17 +1896,23 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
       if (other.getAsyncEnabled() != false) {
         setAsyncEnabled(other.getAsyncEnabled());
       }
+      if (other.contentCategory_ != 0) {
+        setContentCategoryValue(other.getContentCategoryValue());
+      }
       if (other.getTextExtractionDisabled() != false) {
         setTextExtractionDisabled(other.getTextExtractionDisabled());
       }
+      if (other.getTextExtractionEnabled() != false) {
+        setTextExtractionEnabled(other.getTextExtractionEnabled());
+      }
       if (!other.getCreator().isEmpty()) {
         creator_ = other.creator_;
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00080000;
         onChanged();
       }
       if (!other.getUpdater().isEmpty()) {
         updater_ = other.updater_;
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00100000;
         onChanged();
       }
       switch (other.getStructuredContentCase()) {
@@ -1959,13 +2060,13 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
             case 106:
               {
                 creator_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00020000;
+                bitField0_ |= 0x00080000;
                 break;
               } // case 106
             case 114:
               {
                 updater_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00040000;
+                bitField0_ |= 0x00100000;
                 break;
               } // case 114
             case 122:
@@ -1996,9 +2097,21 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
             case 152:
               {
                 textExtractionDisabled_ = input.readBool();
-                bitField0_ |= 0x00010000;
+                bitField0_ |= 0x00020000;
                 break;
               } // case 152
+            case 160:
+              {
+                contentCategory_ = input.readEnum();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 160
+            case 168:
+              {
+                textExtractionEnabled_ = input.readBool();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 168
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -2054,6 +2167,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * The resource name of the document.
      * Format:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     *
      * The name is ignored when creating a document.
      * </pre>
      *
@@ -2079,6 +2193,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * The resource name of the document.
      * Format:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     *
      * The name is ignored when creating a document.
      * </pre>
      *
@@ -2104,6 +2219,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * The resource name of the document.
      * Format:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     *
      * The name is ignored when creating a document.
      * </pre>
      *
@@ -2128,6 +2244,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * The resource name of the document.
      * Format:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     *
      * The name is ignored when creating a document.
      * </pre>
      *
@@ -2148,6 +2265,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * The resource name of the document.
      * Format:
      * projects/{project_number}/locations/{location}/documents/{document_id}.
+     *
      * The name is ignored when creating a document.
      * </pre>
      *
@@ -2278,11 +2396,10 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Display name of the document given by the user. This name will be displayed
-     * in the UI.
-     * Customer can populate this field with the name of the document. This
-     * differs from the 'title' field as 'title' is optional and stores the top
-     * heading in the document.
+     * Required. Display name of the document given by the user. This name will be
+     * displayed in the UI. Customer can populate this field with the name of the
+     * document. This differs from the 'title' field as 'title' is optional and
+     * stores the top heading in the document.
      * </pre>
      *
      * <code>string display_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2304,11 +2421,10 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Display name of the document given by the user. This name will be displayed
-     * in the UI.
-     * Customer can populate this field with the name of the document. This
-     * differs from the 'title' field as 'title' is optional and stores the top
-     * heading in the document.
+     * Required. Display name of the document given by the user. This name will be
+     * displayed in the UI. Customer can populate this field with the name of the
+     * document. This differs from the 'title' field as 'title' is optional and
+     * stores the top heading in the document.
      * </pre>
      *
      * <code>string display_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2330,11 +2446,10 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Display name of the document given by the user. This name will be displayed
-     * in the UI.
-     * Customer can populate this field with the name of the document. This
-     * differs from the 'title' field as 'title' is optional and stores the top
-     * heading in the document.
+     * Required. Display name of the document given by the user. This name will be
+     * displayed in the UI. Customer can populate this field with the name of the
+     * document. This differs from the 'title' field as 'title' is optional and
+     * stores the top heading in the document.
      * </pre>
      *
      * <code>string display_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2355,11 +2470,10 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Display name of the document given by the user. This name will be displayed
-     * in the UI.
-     * Customer can populate this field with the name of the document. This
-     * differs from the 'title' field as 'title' is optional and stores the top
-     * heading in the document.
+     * Required. Display name of the document given by the user. This name will be
+     * displayed in the UI. Customer can populate this field with the name of the
+     * document. This differs from the 'title' field as 'title' is optional and
+     * stores the top heading in the document.
      * </pre>
      *
      * <code>string display_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2376,11 +2490,10 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Required. Display name of the document given by the user. This name will be displayed
-     * in the UI.
-     * Customer can populate this field with the name of the document. This
-     * differs from the 'title' field as 'title' is optional and stores the top
-     * heading in the document.
+     * Required. Display name of the document given by the user. This name will be
+     * displayed in the UI. Customer can populate this field with the name of the
+     * document. This differs from the 'title' field as 'title' is optional and
+     * stores the top heading in the document.
      * </pre>
      *
      * <code>string display_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2405,8 +2518,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Title that describes the document.
-     * This is usually present in the top section of the document, and is a
-     * mandatory field for the question-answering feature.
+     * This can be the top heading or text that describes the document.
      * </pre>
      *
      * <code>string title = 18;</code>
@@ -2429,8 +2541,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Title that describes the document.
-     * This is usually present in the top section of the document, and is a
-     * mandatory field for the question-answering feature.
+     * This can be the top heading or text that describes the document.
      * </pre>
      *
      * <code>string title = 18;</code>
@@ -2453,8 +2564,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Title that describes the document.
-     * This is usually present in the top section of the document, and is a
-     * mandatory field for the question-answering feature.
+     * This can be the top heading or text that describes the document.
      * </pre>
      *
      * <code>string title = 18;</code>
@@ -2476,8 +2586,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Title that describes the document.
-     * This is usually present in the top section of the document, and is a
-     * mandatory field for the question-answering feature.
+     * This can be the top heading or text that describes the document.
      * </pre>
      *
      * <code>string title = 18;</code>
@@ -2495,8 +2604,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Title that describes the document.
-     * This is usually present in the top section of the document, and is a
-     * mandatory field for the question-answering feature.
+     * This can be the top heading or text that describes the document.
      * </pre>
      *
      * <code>string title = 18;</code>
@@ -3088,10 +3196,13 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * A path linked to structured content file.
      * </pre>
      *
-     * <code>string structured_content_uri = 16;</code>
+     * <code>string structured_content_uri = 16 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.structured_content_uri is deprecated.
+     *     See google/cloud/contentwarehouse/v1/document.proto;l=79
      * @return The structuredContentUri.
      */
+    @java.lang.Deprecated
     public java.lang.String getStructuredContentUri() {
       java.lang.Object ref = structuredContentUri_;
       if (!(ref instanceof java.lang.String)) {
@@ -3110,10 +3221,13 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * A path linked to structured content file.
      * </pre>
      *
-     * <code>string structured_content_uri = 16;</code>
+     * <code>string structured_content_uri = 16 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.structured_content_uri is deprecated.
+     *     See google/cloud/contentwarehouse/v1/document.proto;l=79
      * @return The bytes for structuredContentUri.
      */
+    @java.lang.Deprecated
     public com.google.protobuf.ByteString getStructuredContentUriBytes() {
       java.lang.Object ref = structuredContentUri_;
       if (ref instanceof String) {
@@ -3132,11 +3246,14 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * A path linked to structured content file.
      * </pre>
      *
-     * <code>string structured_content_uri = 16;</code>
+     * <code>string structured_content_uri = 16 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.structured_content_uri is deprecated.
+     *     See google/cloud/contentwarehouse/v1/document.proto;l=79
      * @param value The structuredContentUri to set.
      * @return This builder for chaining.
      */
+    @java.lang.Deprecated
     public Builder setStructuredContentUri(java.lang.String value) {
       if (value == null) {
         throw new NullPointerException();
@@ -3153,10 +3270,13 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * A path linked to structured content file.
      * </pre>
      *
-     * <code>string structured_content_uri = 16;</code>
+     * <code>string structured_content_uri = 16 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.structured_content_uri is deprecated.
+     *     See google/cloud/contentwarehouse/v1/document.proto;l=79
      * @return This builder for chaining.
      */
+    @java.lang.Deprecated
     public Builder clearStructuredContentUri() {
       structuredContentUri_ = getDefaultInstance().getStructuredContentUri();
       bitField0_ = (bitField0_ & ~0x00000100);
@@ -3170,11 +3290,14 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * A path linked to structured content file.
      * </pre>
      *
-     * <code>string structured_content_uri = 16;</code>
+     * <code>string structured_content_uri = 16 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.structured_content_uri is deprecated.
+     *     See google/cloud/contentwarehouse/v1/document.proto;l=79
      * @param value The bytes for structuredContentUri to set.
      * @return This builder for chaining.
      */
+    @java.lang.Deprecated
     public Builder setStructuredContentUriBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
         throw new NullPointerException();
@@ -4267,11 +4390,14 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * If true, makes the document visible to asynchronous policies and rules.
      * </pre>
      *
-     * <code>bool async_enabled = 12;</code>
+     * <code>bool async_enabled = 12 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.async_enabled is deprecated. See
+     *     google/cloud/contentwarehouse/v1/document.proto;l=108
      * @return The asyncEnabled.
      */
     @java.lang.Override
+    @java.lang.Deprecated
     public boolean getAsyncEnabled() {
       return asyncEnabled_;
     }
@@ -4282,11 +4408,14 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * If true, makes the document visible to asynchronous policies and rules.
      * </pre>
      *
-     * <code>bool async_enabled = 12;</code>
+     * <code>bool async_enabled = 12 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.async_enabled is deprecated. See
+     *     google/cloud/contentwarehouse/v1/document.proto;l=108
      * @param value The asyncEnabled to set.
      * @return This builder for chaining.
      */
+    @java.lang.Deprecated
     public Builder setAsyncEnabled(boolean value) {
 
       asyncEnabled_ = value;
@@ -4301,13 +4430,108 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * If true, makes the document visible to asynchronous policies and rules.
      * </pre>
      *
-     * <code>bool async_enabled = 12;</code>
+     * <code>bool async_enabled = 12 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.async_enabled is deprecated. See
+     *     google/cloud/contentwarehouse/v1/document.proto;l=108
      * @return This builder for chaining.
      */
+    @java.lang.Deprecated
     public Builder clearAsyncEnabled() {
       bitField0_ = (bitField0_ & ~0x00008000);
       asyncEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int contentCategory_ = 0;
+    /**
+     *
+     *
+     * <pre>
+     * Indicates the category (image, audio, video etc.) of the original content.
+     * </pre>
+     *
+     * <code>.google.cloud.contentwarehouse.v1.ContentCategory content_category = 20;</code>
+     *
+     * @return The enum numeric value on the wire for contentCategory.
+     */
+    @java.lang.Override
+    public int getContentCategoryValue() {
+      return contentCategory_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Indicates the category (image, audio, video etc.) of the original content.
+     * </pre>
+     *
+     * <code>.google.cloud.contentwarehouse.v1.ContentCategory content_category = 20;</code>
+     *
+     * @param value The enum numeric value on the wire for contentCategory to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContentCategoryValue(int value) {
+      contentCategory_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Indicates the category (image, audio, video etc.) of the original content.
+     * </pre>
+     *
+     * <code>.google.cloud.contentwarehouse.v1.ContentCategory content_category = 20;</code>
+     *
+     * @return The contentCategory.
+     */
+    @java.lang.Override
+    public com.google.cloud.contentwarehouse.v1.ContentCategory getContentCategory() {
+      com.google.cloud.contentwarehouse.v1.ContentCategory result =
+          com.google.cloud.contentwarehouse.v1.ContentCategory.forNumber(contentCategory_);
+      return result == null
+          ? com.google.cloud.contentwarehouse.v1.ContentCategory.UNRECOGNIZED
+          : result;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Indicates the category (image, audio, video etc.) of the original content.
+     * </pre>
+     *
+     * <code>.google.cloud.contentwarehouse.v1.ContentCategory content_category = 20;</code>
+     *
+     * @param value The contentCategory to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContentCategory(com.google.cloud.contentwarehouse.v1.ContentCategory value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00010000;
+      contentCategory_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Indicates the category (image, audio, video etc.) of the original content.
+     * </pre>
+     *
+     * <code>.google.cloud.contentwarehouse.v1.ContentCategory content_category = 20;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearContentCategory() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      contentCategory_ = 0;
       onChanged();
       return this;
     }
@@ -4320,11 +4544,14 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * If true, text extraction will not be performed.
      * </pre>
      *
-     * <code>bool text_extraction_disabled = 19;</code>
+     * <code>bool text_extraction_disabled = 19 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.text_extraction_disabled is deprecated.
+     *     See google/cloud/contentwarehouse/v1/document.proto;l=114
      * @return The textExtractionDisabled.
      */
     @java.lang.Override
+    @java.lang.Deprecated
     public boolean getTextExtractionDisabled() {
       return textExtractionDisabled_;
     }
@@ -4335,15 +4562,18 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * If true, text extraction will not be performed.
      * </pre>
      *
-     * <code>bool text_extraction_disabled = 19;</code>
+     * <code>bool text_extraction_disabled = 19 [deprecated = true];</code>
      *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.text_extraction_disabled is deprecated.
+     *     See google/cloud/contentwarehouse/v1/document.proto;l=114
      * @param value The textExtractionDisabled to set.
      * @return This builder for chaining.
      */
+    @java.lang.Deprecated
     public Builder setTextExtractionDisabled(boolean value) {
 
       textExtractionDisabled_ = value;
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -4354,13 +4584,69 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      * If true, text extraction will not be performed.
      * </pre>
      *
-     * <code>bool text_extraction_disabled = 19;</code>
+     * <code>bool text_extraction_disabled = 19 [deprecated = true];</code>
+     *
+     * @deprecated google.cloud.contentwarehouse.v1.Document.text_extraction_disabled is deprecated.
+     *     See google/cloud/contentwarehouse/v1/document.proto;l=114
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated
+    public Builder clearTextExtractionDisabled() {
+      bitField0_ = (bitField0_ & ~0x00020000);
+      textExtractionDisabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean textExtractionEnabled_;
+    /**
+     *
+     *
+     * <pre>
+     * If true, text extraction will be performed.
+     * </pre>
+     *
+     * <code>bool text_extraction_enabled = 21;</code>
+     *
+     * @return The textExtractionEnabled.
+     */
+    @java.lang.Override
+    public boolean getTextExtractionEnabled() {
+      return textExtractionEnabled_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If true, text extraction will be performed.
+     * </pre>
+     *
+     * <code>bool text_extraction_enabled = 21;</code>
+     *
+     * @param value The textExtractionEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTextExtractionEnabled(boolean value) {
+
+      textExtractionEnabled_ = value;
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * If true, text extraction will be performed.
+     * </pre>
+     *
+     * <code>bool text_extraction_enabled = 21;</code>
      *
      * @return This builder for chaining.
      */
-    public Builder clearTextExtractionDisabled() {
-      bitField0_ = (bitField0_ & ~0x00010000);
-      textExtractionDisabled_ = false;
+    public Builder clearTextExtractionEnabled() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      textExtractionEnabled_ = false;
       onChanged();
       return this;
     }
@@ -4427,7 +4713,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       creator_ = value;
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -4444,7 +4730,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder clearCreator() {
       creator_ = getDefaultInstance().getCreator();
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00080000);
       onChanged();
       return this;
     }
@@ -4466,7 +4752,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
       }
       checkByteStringIsUtf8(value);
       creator_ = value;
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -4533,7 +4819,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
       updater_ = value;
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -4550,7 +4836,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder clearUpdater() {
       updater_ = getDefaultInstance().getUpdater();
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       onChanged();
       return this;
     }
@@ -4572,7 +4858,7 @@ public final class Document extends com.google.protobuf.GeneratedMessageV3
       }
       checkByteStringIsUtf8(value);
       updater_ = value;
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }

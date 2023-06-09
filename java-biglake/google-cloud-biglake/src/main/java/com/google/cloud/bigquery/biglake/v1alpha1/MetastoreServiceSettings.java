@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -140,6 +140,11 @@ public class MetastoreServiceSettings extends ClientSettings<MetastoreServiceSet
   /** Returns the object with the settings used for calls to updateTable. */
   public UnaryCallSettings<UpdateTableRequest, Table> updateTableSettings() {
     return ((MetastoreServiceStubSettings) getStubSettings()).updateTableSettings();
+  }
+
+  /** Returns the object with the settings used for calls to renameTable. */
+  public UnaryCallSettings<RenameTableRequest, Table> renameTableSettings() {
+    return ((MetastoreServiceStubSettings) getStubSettings()).renameTableSettings();
   }
 
   /** Returns the object with the settings used for calls to getTable. */
@@ -351,6 +356,11 @@ public class MetastoreServiceSettings extends ClientSettings<MetastoreServiceSet
     /** Returns the builder for the settings used for calls to updateTable. */
     public UnaryCallSettings.Builder<UpdateTableRequest, Table> updateTableSettings() {
       return getStubSettingsBuilder().updateTableSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to renameTable. */
+    public UnaryCallSettings.Builder<RenameTableRequest, Table> renameTableSettings() {
+      return getStubSettingsBuilder().renameTableSettings();
     }
 
     /** Returns the builder for the settings used for calls to getTable. */

@@ -45,11 +45,6 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
     return new UpdateTagKeyRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.TagKeysProto
         .internal_static_google_cloud_resourcemanager_v3_UpdateTagKeyRequest_descriptor;
@@ -71,10 +66,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-   * can be updated by this request. If the `etag` field is not empty, it
-   * must match the `etag` field of the existing tag key. Otherwise,
-   * `FAILED_PRECONDITION` will be returned.
+   * Required. The new definition of the TagKey. Only the `description` and
+   * `etag` fields can be updated by this request. If the `etag` field is not
+   * empty, it must match the `etag` field of the existing tag key. Otherwise,
+   * `ABORTED` will be returned.
    * </pre>
    *
    * <code>
@@ -91,10 +86,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-   * can be updated by this request. If the `etag` field is not empty, it
-   * must match the `etag` field of the existing tag key. Otherwise,
-   * `FAILED_PRECONDITION` will be returned.
+   * Required. The new definition of the TagKey. Only the `description` and
+   * `etag` fields can be updated by this request. If the `etag` field is not
+   * empty, it must match the `etag` field of the existing tag key. Otherwise,
+   * `ABORTED` will be returned.
    * </pre>
    *
    * <code>
@@ -113,10 +108,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-   * can be updated by this request. If the `etag` field is not empty, it
-   * must match the `etag` field of the existing tag key. Otherwise,
-   * `FAILED_PRECONDITION` will be returned.
+   * Required. The new definition of the TagKey. Only the `description` and
+   * `etag` fields can be updated by this request. If the `etag` field is not
+   * empty, it must match the `etag` field of the existing tag key. Otherwise,
+   * `ABORTED` will be returned.
    * </pre>
    *
    * <code>
@@ -614,10 +609,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-     * can be updated by this request. If the `etag` field is not empty, it
-     * must match the `etag` field of the existing tag key. Otherwise,
-     * `FAILED_PRECONDITION` will be returned.
+     * Required. The new definition of the TagKey. Only the `description` and
+     * `etag` fields can be updated by this request. If the `etag` field is not
+     * empty, it must match the `etag` field of the existing tag key. Otherwise,
+     * `ABORTED` will be returned.
      * </pre>
      *
      * <code>
@@ -633,10 +628,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-     * can be updated by this request. If the `etag` field is not empty, it
-     * must match the `etag` field of the existing tag key. Otherwise,
-     * `FAILED_PRECONDITION` will be returned.
+     * Required. The new definition of the TagKey. Only the `description` and
+     * `etag` fields can be updated by this request. If the `etag` field is not
+     * empty, it must match the `etag` field of the existing tag key. Otherwise,
+     * `ABORTED` will be returned.
      * </pre>
      *
      * <code>
@@ -658,10 +653,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-     * can be updated by this request. If the `etag` field is not empty, it
-     * must match the `etag` field of the existing tag key. Otherwise,
-     * `FAILED_PRECONDITION` will be returned.
+     * Required. The new definition of the TagKey. Only the `description` and
+     * `etag` fields can be updated by this request. If the `etag` field is not
+     * empty, it must match the `etag` field of the existing tag key. Otherwise,
+     * `ABORTED` will be returned.
      * </pre>
      *
      * <code>
@@ -685,10 +680,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-     * can be updated by this request. If the `etag` field is not empty, it
-     * must match the `etag` field of the existing tag key. Otherwise,
-     * `FAILED_PRECONDITION` will be returned.
+     * Required. The new definition of the TagKey. Only the `description` and
+     * `etag` fields can be updated by this request. If the `etag` field is not
+     * empty, it must match the `etag` field of the existing tag key. Otherwise,
+     * `ABORTED` will be returned.
      * </pre>
      *
      * <code>
@@ -709,10 +704,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-     * can be updated by this request. If the `etag` field is not empty, it
-     * must match the `etag` field of the existing tag key. Otherwise,
-     * `FAILED_PRECONDITION` will be returned.
+     * Required. The new definition of the TagKey. Only the `description` and
+     * `etag` fields can be updated by this request. If the `etag` field is not
+     * empty, it must match the `etag` field of the existing tag key. Otherwise,
+     * `ABORTED` will be returned.
      * </pre>
      *
      * <code>
@@ -739,10 +734,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-     * can be updated by this request. If the `etag` field is not empty, it
-     * must match the `etag` field of the existing tag key. Otherwise,
-     * `FAILED_PRECONDITION` will be returned.
+     * Required. The new definition of the TagKey. Only the `description` and
+     * `etag` fields can be updated by this request. If the `etag` field is not
+     * empty, it must match the `etag` field of the existing tag key. Otherwise,
+     * `ABORTED` will be returned.
      * </pre>
      *
      * <code>
@@ -763,10 +758,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-     * can be updated by this request. If the `etag` field is not empty, it
-     * must match the `etag` field of the existing tag key. Otherwise,
-     * `FAILED_PRECONDITION` will be returned.
+     * Required. The new definition of the TagKey. Only the `description` and
+     * `etag` fields can be updated by this request. If the `etag` field is not
+     * empty, it must match the `etag` field of the existing tag key. Otherwise,
+     * `ABORTED` will be returned.
      * </pre>
      *
      * <code>
@@ -782,10 +777,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-     * can be updated by this request. If the `etag` field is not empty, it
-     * must match the `etag` field of the existing tag key. Otherwise,
-     * `FAILED_PRECONDITION` will be returned.
+     * Required. The new definition of the TagKey. Only the `description` and
+     * `etag` fields can be updated by this request. If the `etag` field is not
+     * empty, it must match the `etag` field of the existing tag key. Otherwise,
+     * `ABORTED` will be returned.
      * </pre>
      *
      * <code>
@@ -805,10 +800,10 @@ public final class UpdateTagKeyRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. The new definition of the TagKey. Only the `description` and `etag` fields
-     * can be updated by this request. If the `etag` field is not empty, it
-     * must match the `etag` field of the existing tag key. Otherwise,
-     * `FAILED_PRECONDITION` will be returned.
+     * Required. The new definition of the TagKey. Only the `description` and
+     * `etag` fields can be updated by this request. If the `etag` field is not
+     * empty, it must match the `etag` field of the existing tag key. Otherwise,
+     * `ABORTED` will be returned.
      * </pre>
      *
      * <code>

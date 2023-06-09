@@ -47,11 +47,6 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
     return new CreateDocumentRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contentwarehouse.v1.DocumentServiceRequestProto
         .internal_static_google_cloud_contentwarehouse_v1_CreateDocumentRequest_descriptor;
@@ -240,8 +235,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Default document policy during creation. Conditions defined in the policy
-   * will be ignored.
+   * Default document policy during creation.
+   * This refers to an Identity and Access (IAM) policy, which specifies access
+   * controls for the Document.
+   * Conditions defined in the policy will be ignored.
    * </pre>
    *
    * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -256,8 +253,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Default document policy during creation. Conditions defined in the policy
-   * will be ignored.
+   * Default document policy during creation.
+   * This refers to an Identity and Access (IAM) policy, which specifies access
+   * controls for the Document.
+   * Conditions defined in the policy will be ignored.
    * </pre>
    *
    * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -272,8 +271,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Default document policy during creation. Conditions defined in the policy
-   * will be ignored.
+   * Default document policy during creation.
+   * This refers to an Identity and Access (IAM) policy, which specifies access
+   * controls for the Document.
+   * Conditions defined in the policy will be ignored.
    * </pre>
    *
    * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -289,7 +290,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Request Option for processing Cloud AI Document in CW Document.
+   * Request Option for processing Cloud AI Document in Document Warehouse.
+   * This field offers limited support for mapping entities from Cloud AI
+   * Document to Warehouse Document. Please consult with product team before
+   * using this field and other available options.
    * </pre>
    *
    * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -305,7 +309,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Request Option for processing Cloud AI Document in CW Document.
+   * Request Option for processing Cloud AI Document in Document Warehouse.
+   * This field offers limited support for mapping entities from Cloud AI
+   * Document to Warehouse Document. Please consult with product team before
+   * using this field and other available options.
    * </pre>
    *
    * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -323,7 +330,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Request Option for processing Cloud AI Document in CW Document.
+   * Request Option for processing Cloud AI Document in Document Warehouse.
+   * This field offers limited support for mapping entities from Cloud AI
+   * Document to Warehouse Document. Please consult with product team before
+   * using this field and other available options.
    * </pre>
    *
    * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -347,7 +357,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
    * it means all fields are masked.
    * For the `FieldMask` definition,
    * see
-   * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+   * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -366,7 +376,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
    * it means all fields are masked.
    * For the `FieldMask` definition,
    * see
-   * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+   * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -385,7 +395,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
    * it means all fields are masked.
    * For the `FieldMask` definition,
    * see
-   * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+   * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -1429,8 +1439,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Default document policy during creation. Conditions defined in the policy
-     * will be ignored.
+     * Default document policy during creation.
+     * This refers to an Identity and Access (IAM) policy, which specifies access
+     * controls for the Document.
+     * Conditions defined in the policy will be ignored.
      * </pre>
      *
      * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -1444,8 +1456,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Default document policy during creation. Conditions defined in the policy
-     * will be ignored.
+     * Default document policy during creation.
+     * This refers to an Identity and Access (IAM) policy, which specifies access
+     * controls for the Document.
+     * Conditions defined in the policy will be ignored.
      * </pre>
      *
      * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -1463,8 +1477,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Default document policy during creation. Conditions defined in the policy
-     * will be ignored.
+     * Default document policy during creation.
+     * This refers to an Identity and Access (IAM) policy, which specifies access
+     * controls for the Document.
+     * Conditions defined in the policy will be ignored.
      * </pre>
      *
      * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -1486,8 +1502,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Default document policy during creation. Conditions defined in the policy
-     * will be ignored.
+     * Default document policy during creation.
+     * This refers to an Identity and Access (IAM) policy, which specifies access
+     * controls for the Document.
+     * Conditions defined in the policy will be ignored.
      * </pre>
      *
      * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -1506,8 +1524,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Default document policy during creation. Conditions defined in the policy
-     * will be ignored.
+     * Default document policy during creation.
+     * This refers to an Identity and Access (IAM) policy, which specifies access
+     * controls for the Document.
+     * Conditions defined in the policy will be ignored.
      * </pre>
      *
      * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -1532,8 +1552,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Default document policy during creation. Conditions defined in the policy
-     * will be ignored.
+     * Default document policy during creation.
+     * This refers to an Identity and Access (IAM) policy, which specifies access
+     * controls for the Document.
+     * Conditions defined in the policy will be ignored.
      * </pre>
      *
      * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -1552,8 +1574,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Default document policy during creation. Conditions defined in the policy
-     * will be ignored.
+     * Default document policy during creation.
+     * This refers to an Identity and Access (IAM) policy, which specifies access
+     * controls for the Document.
+     * Conditions defined in the policy will be ignored.
      * </pre>
      *
      * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -1567,8 +1591,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Default document policy during creation. Conditions defined in the policy
-     * will be ignored.
+     * Default document policy during creation.
+     * This refers to an Identity and Access (IAM) policy, which specifies access
+     * controls for the Document.
+     * Conditions defined in the policy will be ignored.
      * </pre>
      *
      * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -1584,8 +1610,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Default document policy during creation. Conditions defined in the policy
-     * will be ignored.
+     * Default document policy during creation.
+     * This refers to an Identity and Access (IAM) policy, which specifies access
+     * controls for the Document.
+     * Conditions defined in the policy will be ignored.
      * </pre>
      *
      * <code>.google.iam.v1.Policy policy = 4;</code>
@@ -1616,7 +1644,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Request Option for processing Cloud AI Document in CW Document.
+     * Request Option for processing Cloud AI Document in Document Warehouse.
+     * This field offers limited support for mapping entities from Cloud AI
+     * Document to Warehouse Document. Please consult with product team before
+     * using this field and other available options.
      * </pre>
      *
      * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -1631,7 +1662,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Request Option for processing Cloud AI Document in CW Document.
+     * Request Option for processing Cloud AI Document in Document Warehouse.
+     * This field offers limited support for mapping entities from Cloud AI
+     * Document to Warehouse Document. Please consult with product team before
+     * using this field and other available options.
      * </pre>
      *
      * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -1652,7 +1686,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Request Option for processing Cloud AI Document in CW Document.
+     * Request Option for processing Cloud AI Document in Document Warehouse.
+     * This field offers limited support for mapping entities from Cloud AI
+     * Document to Warehouse Document. Please consult with product team before
+     * using this field and other available options.
      * </pre>
      *
      * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -1676,7 +1713,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Request Option for processing Cloud AI Document in CW Document.
+     * Request Option for processing Cloud AI Document in Document Warehouse.
+     * This field offers limited support for mapping entities from Cloud AI
+     * Document to Warehouse Document. Please consult with product team before
+     * using this field and other available options.
      * </pre>
      *
      * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -1697,7 +1737,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Request Option for processing Cloud AI Document in CW Document.
+     * Request Option for processing Cloud AI Document in Document Warehouse.
+     * This field offers limited support for mapping entities from Cloud AI
+     * Document to Warehouse Document. Please consult with product team before
+     * using this field and other available options.
      * </pre>
      *
      * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -1726,7 +1769,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Request Option for processing Cloud AI Document in CW Document.
+     * Request Option for processing Cloud AI Document in Document Warehouse.
+     * This field offers limited support for mapping entities from Cloud AI
+     * Document to Warehouse Document. Please consult with product team before
+     * using this field and other available options.
      * </pre>
      *
      * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -1746,7 +1792,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Request Option for processing Cloud AI Document in CW Document.
+     * Request Option for processing Cloud AI Document in Document Warehouse.
+     * This field offers limited support for mapping entities from Cloud AI
+     * Document to Warehouse Document. Please consult with product team before
+     * using this field and other available options.
      * </pre>
      *
      * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -1762,7 +1811,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Request Option for processing Cloud AI Document in CW Document.
+     * Request Option for processing Cloud AI Document in Document Warehouse.
+     * This field offers limited support for mapping entities from Cloud AI
+     * Document to Warehouse Document. Please consult with product team before
+     * using this field and other available options.
      * </pre>
      *
      * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -1782,7 +1834,10 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      *
      *
      * <pre>
-     * Request Option for processing Cloud AI Document in CW Document.
+     * Request Option for processing Cloud AI Document in Document Warehouse.
+     * This field offers limited support for mapping entities from Cloud AI
+     * Document to Warehouse Document. Please consult with product team before
+     * using this field and other available options.
      * </pre>
      *
      * <code>.google.cloud.contentwarehouse.v1.CloudAIDocumentOption cloud_ai_document_option = 5;
@@ -1819,7 +1874,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      * it means all fields are masked.
      * For the `FieldMask` definition,
      * see
-     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -1837,7 +1892,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      * it means all fields are masked.
      * For the `FieldMask` definition,
      * see
-     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -1861,7 +1916,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      * it means all fields are masked.
      * For the `FieldMask` definition,
      * see
-     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -1887,7 +1942,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      * it means all fields are masked.
      * For the `FieldMask` definition,
      * see
-     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -1910,7 +1965,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      * it means all fields are masked.
      * For the `FieldMask` definition,
      * see
-     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -1939,7 +1994,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      * it means all fields are masked.
      * For the `FieldMask` definition,
      * see
-     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -1962,7 +2017,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      * it means all fields are masked.
      * For the `FieldMask` definition,
      * see
-     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -1980,7 +2035,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      * it means all fields are masked.
      * For the `FieldMask` definition,
      * see
-     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask create_mask = 6;</code>
@@ -2002,7 +2057,7 @@ public final class CreateDocumentRequest extends com.google.protobuf.GeneratedMe
      * it means all fields are masked.
      * For the `FieldMask` definition,
      * see
-     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+     * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask create_mask = 6;</code>

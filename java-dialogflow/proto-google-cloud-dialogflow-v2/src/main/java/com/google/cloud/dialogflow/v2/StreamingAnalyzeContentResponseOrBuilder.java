@@ -92,10 +92,12 @@ public interface StreamingAnalyzeContentResponseOrBuilder
    * <pre>
    * The audio data bytes encoded as specified in the request.
    * This field is set if:
+   *
    *  - The `reply_audio_config` field is specified in the request.
    *  - The automated agent, which this output comes from, responded with audio.
    *    In such case, the `reply_audio.config` field contains settings used to
    *    synthesize the speech.
+   *
    * In some scenarios, multiple output audio fields may be present in the
    * response structure. In these cases, only the top-most-level audio output
    * has content.
@@ -112,10 +114,12 @@ public interface StreamingAnalyzeContentResponseOrBuilder
    * <pre>
    * The audio data bytes encoded as specified in the request.
    * This field is set if:
+   *
    *  - The `reply_audio_config` field is specified in the request.
    *  - The automated agent, which this output comes from, responded with audio.
    *    In such case, the `reply_audio.config` field contains settings used to
    *    synthesize the speech.
+   *
    * In some scenarios, multiple output audio fields may be present in the
    * response structure. In these cases, only the top-most-level audio output
    * has content.
@@ -132,10 +136,12 @@ public interface StreamingAnalyzeContentResponseOrBuilder
    * <pre>
    * The audio data bytes encoded as specified in the request.
    * This field is set if:
+   *
    *  - The `reply_audio_config` field is specified in the request.
    *  - The automated agent, which this output comes from, responded with audio.
    *    In such case, the `reply_audio.config` field contains settings used to
    *    synthesize the speech.
+   *
    * In some scenarios, multiple output audio fields may be present in the
    * response structure. In these cases, only the top-most-level audio output
    * has content.
@@ -411,4 +417,43 @@ public interface StreamingAnalyzeContentResponseOrBuilder
    * <code>.google.cloud.dialogflow.v2.DtmfParameters dtmf_parameters = 10;</code>
    */
   com.google.cloud.dialogflow.v2.DtmfParametersOrBuilder getDtmfParametersOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Debugging info that would get populated when
+   * `StreamingAnalyzeContentRequest.enable_debugging_info` is set to true.
+   * </pre>
+   *
+   * <code>.google.cloud.dialogflow.v2.CloudConversationDebuggingInfo debugging_info = 11;</code>
+   *
+   * @return Whether the debuggingInfo field is set.
+   */
+  boolean hasDebuggingInfo();
+  /**
+   *
+   *
+   * <pre>
+   * Debugging info that would get populated when
+   * `StreamingAnalyzeContentRequest.enable_debugging_info` is set to true.
+   * </pre>
+   *
+   * <code>.google.cloud.dialogflow.v2.CloudConversationDebuggingInfo debugging_info = 11;</code>
+   *
+   * @return The debuggingInfo.
+   */
+  com.google.cloud.dialogflow.v2.CloudConversationDebuggingInfo getDebuggingInfo();
+  /**
+   *
+   *
+   * <pre>
+   * Debugging info that would get populated when
+   * `StreamingAnalyzeContentRequest.enable_debugging_info` is set to true.
+   * </pre>
+   *
+   * <code>.google.cloud.dialogflow.v2.CloudConversationDebuggingInfo debugging_info = 11;</code>
+   */
+  com.google.cloud.dialogflow.v2.CloudConversationDebuggingInfoOrBuilder
+      getDebuggingInfoOrBuilder();
 }

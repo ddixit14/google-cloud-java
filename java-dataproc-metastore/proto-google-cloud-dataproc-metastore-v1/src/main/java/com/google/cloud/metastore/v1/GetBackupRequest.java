@@ -22,7 +22,8 @@ package com.google.cloud.metastore.v1;
  *
  *
  * <pre>
- * Request message for [DataprocMetastore.GetBackup][google.cloud.metastore.v1.DataprocMetastore.GetBackup].
+ * Request message for
+ * [DataprocMetastore.GetBackup][google.cloud.metastore.v1.DataprocMetastore.GetBackup].
  * </pre>
  *
  * Protobuf type {@code google.cloud.metastore.v1.GetBackupRequest}
@@ -45,11 +46,6 @@ public final class GetBackupRequest extends com.google.protobuf.GeneratedMessage
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new GetBackupRequest();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -77,6 +73,7 @@ public final class GetBackupRequest extends com.google.protobuf.GeneratedMessage
    * <pre>
    * Required. The relative resource name of the backup to retrieve, in the
    * following form:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
    * </pre>
    *
@@ -104,6 +101,7 @@ public final class GetBackupRequest extends com.google.protobuf.GeneratedMessage
    * <pre>
    * Required. The relative resource name of the backup to retrieve, in the
    * following form:
+   *
    * `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
    * </pre>
    *
@@ -289,7 +287,8 @@ public final class GetBackupRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * Request message for [DataprocMetastore.GetBackup][google.cloud.metastore.v1.DataprocMetastore.GetBackup].
+   * Request message for
+   * [DataprocMetastore.GetBackup][google.cloud.metastore.v1.DataprocMetastore.GetBackup].
    * </pre>
    *
    * Protobuf type {@code google.cloud.metastore.v1.GetBackupRequest}
@@ -474,6 +473,7 @@ public final class GetBackupRequest extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Required. The relative resource name of the backup to retrieve, in the
      * following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
      * </pre>
      *
@@ -500,6 +500,7 @@ public final class GetBackupRequest extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Required. The relative resource name of the backup to retrieve, in the
      * following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
      * </pre>
      *
@@ -526,6 +527,7 @@ public final class GetBackupRequest extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Required. The relative resource name of the backup to retrieve, in the
      * following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
      * </pre>
      *
@@ -551,6 +553,7 @@ public final class GetBackupRequest extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Required. The relative resource name of the backup to retrieve, in the
      * following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
      * </pre>
      *
@@ -572,6 +575,7 @@ public final class GetBackupRequest extends com.google.protobuf.GeneratedMessage
      * <pre>
      * Required. The relative resource name of the backup to retrieve, in the
      * following form:
+     *
      * `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
      * </pre>
      *

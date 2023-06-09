@@ -51,7 +51,8 @@
  * // - It may require specifying regional endpoints when creating the service client as shown in
  * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (EndpointServiceClient endpointServiceClient = EndpointServiceClient.create()) {
- *   EndpointName name = EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+ *   EndpointName name =
+ *       EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
  *   Endpoint response = endpointServiceClient.getEndpoint(name);
  * }
  * }</pre>
@@ -151,6 +152,32 @@
  * }
  * }</pre>
  *
+ * <p>======================= MatchServiceClient =======================
+ *
+ * <p>Service Description: MatchService is a Google managed service for efficient vector similarity
+ * search at scale.
+ *
+ * <p>Sample for MatchServiceClient:
+ *
+ * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+ * try (MatchServiceClient matchServiceClient = MatchServiceClient.create()) {
+ *   FindNeighborsRequest request =
+ *       FindNeighborsRequest.newBuilder()
+ *           .setIndexEndpoint(
+ *               IndexEndpointName.of("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]").toString())
+ *           .setDeployedIndexId("deployedIndexId-1101212953")
+ *           .addAllQueries(new ArrayList<FindNeighborsRequest.Query>())
+ *           .setReturnFullDatapoint(true)
+ *           .build();
+ *   FindNeighborsResponse response = matchServiceClient.findNeighbors(request);
+ * }
+ * }</pre>
+ *
  * <p>======================= MetadataServiceClient =======================
  *
  * <p>Service Description: Service for reading and writing metadata entries.
@@ -206,6 +233,24 @@
  * }
  * }</pre>
  *
+ * <p>======================= ModelGardenServiceClient =======================
+ *
+ * <p>Service Description: The interface of Model Garden Service.
+ *
+ * <p>Sample for ModelGardenServiceClient:
+ *
+ * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+ * try (ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.create()) {
+ *   PublisherModelName name = PublisherModelName.of("[PUBLISHER]", "[MODEL]");
+ *   PublisherModel response = modelGardenServiceClient.getPublisherModel(name);
+ * }
+ * }</pre>
+ *
  * <p>======================= PipelineServiceClient =======================
  *
  * <p>Service Description: A service for creating and managing Vertex AI's pipelines. This includes
@@ -241,7 +286,8 @@
  * // - It may require specifying regional endpoints when creating the service client as shown in
  * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (PredictionServiceClient predictionServiceClient = PredictionServiceClient.create()) {
- *   EndpointName endpoint = EndpointName.of("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+ *   EndpointName endpoint =
+ *       EndpointName.ofProjectLocationEndpointName("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
  *   List<Value> instances = new ArrayList<>();
  *   Value parameters = Value.newBuilder().setBoolValue(true).build();
  *   PredictResponse response = predictionServiceClient.predict(endpoint, instances, parameters);

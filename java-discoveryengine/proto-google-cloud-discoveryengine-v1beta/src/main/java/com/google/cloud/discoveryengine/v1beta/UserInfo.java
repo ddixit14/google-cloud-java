@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,11 +48,6 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
     return new UserInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.discoveryengine.v1beta.CommonProto
         .internal_static_google_cloud_discoveryengine_v1beta_UserInfo_descriptor;
@@ -78,12 +73,15 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Highly recommended for logged-in users. Unique identifier for logged-in
    * user, such as a user name. Don't set for anonymous users.
+   *
    * Always use a hashed value for this ID.
+   *
    * Don't set the field to the same fixed ID for different users. This mixes
    * the event history of those users together, which results in degraded
    * model quality.
+   *
    * The field must be a UTF-8 encoded string with a length limit of 128
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>string user_id = 1;</code>
@@ -108,12 +106,15 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Highly recommended for logged-in users. Unique identifier for logged-in
    * user, such as a user name. Don't set for anonymous users.
+   *
    * Always use a hashed value for this ID.
+   *
    * Don't set the field to the same fixed ID for different users. This mixes
    * the event history of those users together, which results in degraded
    * model quality.
+   *
    * The field must be a UTF-8 encoded string with a length limit of 128
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * </pre>
    *
    * <code>string user_id = 1;</code>
@@ -143,12 +144,16 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * User agent as included in the HTTP header. Required for getting
    * [SearchResponse.sponsored_results][].
+   *
    * The field must be a UTF-8 encoded string with a length limit of 1,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   *
    * This should not be set when using the client side event reporting with
    * GTM or JavaScript tag in
    * [UserEventService.CollectUserEvent][google.cloud.discoveryengine.v1beta.UserEventService.CollectUserEvent]
-   * or if [direct_user_request][] is set.
+   * or if
+   * [UserEvent.direct_user_request][google.cloud.discoveryengine.v1beta.UserEvent.direct_user_request]
+   * is set.
    * </pre>
    *
    * <code>string user_agent = 2;</code>
@@ -173,12 +178,16 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * User agent as included in the HTTP header. Required for getting
    * [SearchResponse.sponsored_results][].
+   *
    * The field must be a UTF-8 encoded string with a length limit of 1,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   *
    * This should not be set when using the client side event reporting with
    * GTM or JavaScript tag in
    * [UserEventService.CollectUserEvent][google.cloud.discoveryengine.v1beta.UserEventService.CollectUserEvent]
-   * or if [direct_user_request][] is set.
+   * or if
+   * [UserEvent.direct_user_request][google.cloud.discoveryengine.v1beta.UserEvent.direct_user_request]
+   * is set.
    * </pre>
    *
    * <code>string user_agent = 2;</code>
@@ -571,12 +580,15 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Highly recommended for logged-in users. Unique identifier for logged-in
      * user, such as a user name. Don't set for anonymous users.
+     *
      * Always use a hashed value for this ID.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded
      * model quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>string user_id = 1;</code>
@@ -600,12 +612,15 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Highly recommended for logged-in users. Unique identifier for logged-in
      * user, such as a user name. Don't set for anonymous users.
+     *
      * Always use a hashed value for this ID.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded
      * model quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>string user_id = 1;</code>
@@ -629,12 +644,15 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Highly recommended for logged-in users. Unique identifier for logged-in
      * user, such as a user name. Don't set for anonymous users.
+     *
      * Always use a hashed value for this ID.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded
      * model quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>string user_id = 1;</code>
@@ -657,12 +675,15 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Highly recommended for logged-in users. Unique identifier for logged-in
      * user, such as a user name. Don't set for anonymous users.
+     *
      * Always use a hashed value for this ID.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded
      * model quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>string user_id = 1;</code>
@@ -681,12 +702,15 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Highly recommended for logged-in users. Unique identifier for logged-in
      * user, such as a user name. Don't set for anonymous users.
+     *
      * Always use a hashed value for this ID.
+     *
      * Don't set the field to the same fixed ID for different users. This mixes
      * the event history of those users together, which results in degraded
      * model quality.
+     *
      * The field must be a UTF-8 encoded string with a length limit of 128
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
      * </pre>
      *
      * <code>string user_id = 1;</code>
@@ -712,12 +736,16 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * User agent as included in the HTTP header. Required for getting
      * [SearchResponse.sponsored_results][].
+     *
      * The field must be a UTF-8 encoded string with a length limit of 1,000
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+     *
      * This should not be set when using the client side event reporting with
      * GTM or JavaScript tag in
      * [UserEventService.CollectUserEvent][google.cloud.discoveryengine.v1beta.UserEventService.CollectUserEvent]
-     * or if [direct_user_request][] is set.
+     * or if
+     * [UserEvent.direct_user_request][google.cloud.discoveryengine.v1beta.UserEvent.direct_user_request]
+     * is set.
      * </pre>
      *
      * <code>string user_agent = 2;</code>
@@ -741,12 +769,16 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * User agent as included in the HTTP header. Required for getting
      * [SearchResponse.sponsored_results][].
+     *
      * The field must be a UTF-8 encoded string with a length limit of 1,000
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+     *
      * This should not be set when using the client side event reporting with
      * GTM or JavaScript tag in
      * [UserEventService.CollectUserEvent][google.cloud.discoveryengine.v1beta.UserEventService.CollectUserEvent]
-     * or if [direct_user_request][] is set.
+     * or if
+     * [UserEvent.direct_user_request][google.cloud.discoveryengine.v1beta.UserEvent.direct_user_request]
+     * is set.
      * </pre>
      *
      * <code>string user_agent = 2;</code>
@@ -770,12 +802,16 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * User agent as included in the HTTP header. Required for getting
      * [SearchResponse.sponsored_results][].
+     *
      * The field must be a UTF-8 encoded string with a length limit of 1,000
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+     *
      * This should not be set when using the client side event reporting with
      * GTM or JavaScript tag in
      * [UserEventService.CollectUserEvent][google.cloud.discoveryengine.v1beta.UserEventService.CollectUserEvent]
-     * or if [direct_user_request][] is set.
+     * or if
+     * [UserEvent.direct_user_request][google.cloud.discoveryengine.v1beta.UserEvent.direct_user_request]
+     * is set.
      * </pre>
      *
      * <code>string user_agent = 2;</code>
@@ -798,12 +834,16 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * User agent as included in the HTTP header. Required for getting
      * [SearchResponse.sponsored_results][].
+     *
      * The field must be a UTF-8 encoded string with a length limit of 1,000
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+     *
      * This should not be set when using the client side event reporting with
      * GTM or JavaScript tag in
      * [UserEventService.CollectUserEvent][google.cloud.discoveryengine.v1beta.UserEventService.CollectUserEvent]
-     * or if [direct_user_request][] is set.
+     * or if
+     * [UserEvent.direct_user_request][google.cloud.discoveryengine.v1beta.UserEvent.direct_user_request]
+     * is set.
      * </pre>
      *
      * <code>string user_agent = 2;</code>
@@ -822,12 +862,16 @@ public final class UserInfo extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * User agent as included in the HTTP header. Required for getting
      * [SearchResponse.sponsored_results][].
+     *
      * The field must be a UTF-8 encoded string with a length limit of 1,000
-     * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+     *
      * This should not be set when using the client side event reporting with
      * GTM or JavaScript tag in
      * [UserEventService.CollectUserEvent][google.cloud.discoveryengine.v1beta.UserEventService.CollectUserEvent]
-     * or if [direct_user_request][] is set.
+     * or if
+     * [UserEvent.direct_user_request][google.cloud.discoveryengine.v1beta.UserEvent.direct_user_request]
+     * is set.
      * </pre>
      *
      * <code>string user_agent = 2;</code>

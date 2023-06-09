@@ -48,11 +48,6 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
     return new MetadataExport();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.metastore.v1.MetastoreProto
         .internal_static_google_cloud_metastore_v1_MetadataExport_descriptor;
@@ -270,6 +265,8 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int destinationCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object destination_;
 
   public enum DestinationCase
@@ -318,8 +315,9 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-   * form of `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
+   * Output only. A Cloud Storage URI of a folder that metadata are exported
+   * to, in the form of
+   * `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
    * `&lt;export_folder&gt;` is automatically generated.
    * </pre>
    *
@@ -334,8 +332,9 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-   * form of `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
+   * Output only. A Cloud Storage URI of a folder that metadata are exported
+   * to, in the form of
+   * `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
    * `&lt;export_folder&gt;` is automatically generated.
    * </pre>
    *
@@ -363,8 +362,9 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-   * form of `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
+   * Output only. A Cloud Storage URI of a folder that metadata are exported
+   * to, in the form of
+   * `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
    * `&lt;export_folder&gt;` is automatically generated.
    * </pre>
    *
@@ -1064,8 +1064,9 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-     * form of `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
+     * Output only. A Cloud Storage URI of a folder that metadata are exported
+     * to, in the form of
+     * `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
      * `&lt;export_folder&gt;` is automatically generated.
      * </pre>
      *
@@ -1081,8 +1082,9 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-     * form of `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
+     * Output only. A Cloud Storage URI of a folder that metadata are exported
+     * to, in the form of
+     * `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
      * `&lt;export_folder&gt;` is automatically generated.
      * </pre>
      *
@@ -1111,8 +1113,9 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-     * form of `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
+     * Output only. A Cloud Storage URI of a folder that metadata are exported
+     * to, in the form of
+     * `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
      * `&lt;export_folder&gt;` is automatically generated.
      * </pre>
      *
@@ -1141,8 +1144,9 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-     * form of `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
+     * Output only. A Cloud Storage URI of a folder that metadata are exported
+     * to, in the form of
+     * `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
      * `&lt;export_folder&gt;` is automatically generated.
      * </pre>
      *
@@ -1164,8 +1168,9 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-     * form of `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
+     * Output only. A Cloud Storage URI of a folder that metadata are exported
+     * to, in the form of
+     * `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
      * `&lt;export_folder&gt;` is automatically generated.
      * </pre>
      *
@@ -1185,8 +1190,9 @@ public final class MetadataExport extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-     * form of `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
+     * Output only. A Cloud Storage URI of a folder that metadata are exported
+     * to, in the form of
+     * `gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;/&lt;export_folder&gt;`, where
      * `&lt;export_folder&gt;` is automatically generated.
      * </pre>
      *

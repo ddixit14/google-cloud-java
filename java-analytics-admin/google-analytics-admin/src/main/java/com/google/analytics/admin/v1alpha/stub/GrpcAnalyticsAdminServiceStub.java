@@ -20,14 +20,17 @@ import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.Aud
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAccessBindingsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAccountSummariesPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAccountsPagedResponse;
+import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAdSenseLinksPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAudiencesPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListBigQueryLinksPagedResponse;
+import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListChannelGroupsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListConversionEventsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListCustomDimensionsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListCustomMetricsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListDataStreamsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposalsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinksPagedResponse;
+import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListEventCreateRulesPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListExpandedDataSetsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListFirebaseLinksPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListGoogleAdsLinksPagedResponse;
@@ -41,6 +44,7 @@ import com.google.analytics.admin.v1alpha.AccessBinding;
 import com.google.analytics.admin.v1alpha.Account;
 import com.google.analytics.admin.v1alpha.AcknowledgeUserDataCollectionRequest;
 import com.google.analytics.admin.v1alpha.AcknowledgeUserDataCollectionResponse;
+import com.google.analytics.admin.v1alpha.AdSenseLink;
 import com.google.analytics.admin.v1alpha.ApproveDisplayVideo360AdvertiserLinkProposalRequest;
 import com.google.analytics.admin.v1alpha.ApproveDisplayVideo360AdvertiserLinkProposalResponse;
 import com.google.analytics.admin.v1alpha.ArchiveAudienceRequest;
@@ -66,9 +70,12 @@ import com.google.analytics.admin.v1alpha.BatchUpdateUserLinksRequest;
 import com.google.analytics.admin.v1alpha.BatchUpdateUserLinksResponse;
 import com.google.analytics.admin.v1alpha.BigQueryLink;
 import com.google.analytics.admin.v1alpha.CancelDisplayVideo360AdvertiserLinkProposalRequest;
+import com.google.analytics.admin.v1alpha.ChannelGroup;
 import com.google.analytics.admin.v1alpha.ConversionEvent;
 import com.google.analytics.admin.v1alpha.CreateAccessBindingRequest;
+import com.google.analytics.admin.v1alpha.CreateAdSenseLinkRequest;
 import com.google.analytics.admin.v1alpha.CreateAudienceRequest;
+import com.google.analytics.admin.v1alpha.CreateChannelGroupRequest;
 import com.google.analytics.admin.v1alpha.CreateConnectedSiteTagRequest;
 import com.google.analytics.admin.v1alpha.CreateConnectedSiteTagResponse;
 import com.google.analytics.admin.v1alpha.CreateConversionEventRequest;
@@ -77,6 +84,7 @@ import com.google.analytics.admin.v1alpha.CreateCustomMetricRequest;
 import com.google.analytics.admin.v1alpha.CreateDataStreamRequest;
 import com.google.analytics.admin.v1alpha.CreateDisplayVideo360AdvertiserLinkProposalRequest;
 import com.google.analytics.admin.v1alpha.CreateDisplayVideo360AdvertiserLinkRequest;
+import com.google.analytics.admin.v1alpha.CreateEventCreateRuleRequest;
 import com.google.analytics.admin.v1alpha.CreateExpandedDataSetRequest;
 import com.google.analytics.admin.v1alpha.CreateFirebaseLinkRequest;
 import com.google.analytics.admin.v1alpha.CreateGoogleAdsLinkRequest;
@@ -91,11 +99,14 @@ import com.google.analytics.admin.v1alpha.DataSharingSettings;
 import com.google.analytics.admin.v1alpha.DataStream;
 import com.google.analytics.admin.v1alpha.DeleteAccessBindingRequest;
 import com.google.analytics.admin.v1alpha.DeleteAccountRequest;
+import com.google.analytics.admin.v1alpha.DeleteAdSenseLinkRequest;
+import com.google.analytics.admin.v1alpha.DeleteChannelGroupRequest;
 import com.google.analytics.admin.v1alpha.DeleteConnectedSiteTagRequest;
 import com.google.analytics.admin.v1alpha.DeleteConversionEventRequest;
 import com.google.analytics.admin.v1alpha.DeleteDataStreamRequest;
 import com.google.analytics.admin.v1alpha.DeleteDisplayVideo360AdvertiserLinkProposalRequest;
 import com.google.analytics.admin.v1alpha.DeleteDisplayVideo360AdvertiserLinkRequest;
+import com.google.analytics.admin.v1alpha.DeleteEventCreateRuleRequest;
 import com.google.analytics.admin.v1alpha.DeleteExpandedDataSetRequest;
 import com.google.analytics.admin.v1alpha.DeleteFirebaseLinkRequest;
 import com.google.analytics.admin.v1alpha.DeleteGoogleAdsLinkRequest;
@@ -106,15 +117,20 @@ import com.google.analytics.admin.v1alpha.DeleteUserLinkRequest;
 import com.google.analytics.admin.v1alpha.DisplayVideo360AdvertiserLink;
 import com.google.analytics.admin.v1alpha.DisplayVideo360AdvertiserLinkProposal;
 import com.google.analytics.admin.v1alpha.EnhancedMeasurementSettings;
+import com.google.analytics.admin.v1alpha.EventCreateRule;
 import com.google.analytics.admin.v1alpha.ExpandedDataSet;
 import com.google.analytics.admin.v1alpha.FetchAutomatedGa4ConfigurationOptOutRequest;
 import com.google.analytics.admin.v1alpha.FetchAutomatedGa4ConfigurationOptOutResponse;
+import com.google.analytics.admin.v1alpha.FetchConnectedGa4PropertyRequest;
+import com.google.analytics.admin.v1alpha.FetchConnectedGa4PropertyResponse;
 import com.google.analytics.admin.v1alpha.FirebaseLink;
 import com.google.analytics.admin.v1alpha.GetAccessBindingRequest;
 import com.google.analytics.admin.v1alpha.GetAccountRequest;
+import com.google.analytics.admin.v1alpha.GetAdSenseLinkRequest;
 import com.google.analytics.admin.v1alpha.GetAttributionSettingsRequest;
 import com.google.analytics.admin.v1alpha.GetAudienceRequest;
 import com.google.analytics.admin.v1alpha.GetBigQueryLinkRequest;
+import com.google.analytics.admin.v1alpha.GetChannelGroupRequest;
 import com.google.analytics.admin.v1alpha.GetConversionEventRequest;
 import com.google.analytics.admin.v1alpha.GetCustomDimensionRequest;
 import com.google.analytics.admin.v1alpha.GetCustomMetricRequest;
@@ -124,6 +140,7 @@ import com.google.analytics.admin.v1alpha.GetDataStreamRequest;
 import com.google.analytics.admin.v1alpha.GetDisplayVideo360AdvertiserLinkProposalRequest;
 import com.google.analytics.admin.v1alpha.GetDisplayVideo360AdvertiserLinkRequest;
 import com.google.analytics.admin.v1alpha.GetEnhancedMeasurementSettingsRequest;
+import com.google.analytics.admin.v1alpha.GetEventCreateRuleRequest;
 import com.google.analytics.admin.v1alpha.GetExpandedDataSetRequest;
 import com.google.analytics.admin.v1alpha.GetGlobalSiteTagRequest;
 import com.google.analytics.admin.v1alpha.GetGoogleSignalsSettingsRequest;
@@ -140,10 +157,14 @@ import com.google.analytics.admin.v1alpha.ListAccountSummariesRequest;
 import com.google.analytics.admin.v1alpha.ListAccountSummariesResponse;
 import com.google.analytics.admin.v1alpha.ListAccountsRequest;
 import com.google.analytics.admin.v1alpha.ListAccountsResponse;
+import com.google.analytics.admin.v1alpha.ListAdSenseLinksRequest;
+import com.google.analytics.admin.v1alpha.ListAdSenseLinksResponse;
 import com.google.analytics.admin.v1alpha.ListAudiencesRequest;
 import com.google.analytics.admin.v1alpha.ListAudiencesResponse;
 import com.google.analytics.admin.v1alpha.ListBigQueryLinksRequest;
 import com.google.analytics.admin.v1alpha.ListBigQueryLinksResponse;
+import com.google.analytics.admin.v1alpha.ListChannelGroupsRequest;
+import com.google.analytics.admin.v1alpha.ListChannelGroupsResponse;
 import com.google.analytics.admin.v1alpha.ListConnectedSiteTagsRequest;
 import com.google.analytics.admin.v1alpha.ListConnectedSiteTagsResponse;
 import com.google.analytics.admin.v1alpha.ListConversionEventsRequest;
@@ -158,6 +179,8 @@ import com.google.analytics.admin.v1alpha.ListDisplayVideo360AdvertiserLinkPropo
 import com.google.analytics.admin.v1alpha.ListDisplayVideo360AdvertiserLinkProposalsResponse;
 import com.google.analytics.admin.v1alpha.ListDisplayVideo360AdvertiserLinksRequest;
 import com.google.analytics.admin.v1alpha.ListDisplayVideo360AdvertiserLinksResponse;
+import com.google.analytics.admin.v1alpha.ListEventCreateRulesRequest;
+import com.google.analytics.admin.v1alpha.ListEventCreateRulesResponse;
 import com.google.analytics.admin.v1alpha.ListExpandedDataSetsRequest;
 import com.google.analytics.admin.v1alpha.ListExpandedDataSetsResponse;
 import com.google.analytics.admin.v1alpha.ListFirebaseLinksRequest;
@@ -187,12 +210,14 @@ import com.google.analytics.admin.v1alpha.UpdateAccessBindingRequest;
 import com.google.analytics.admin.v1alpha.UpdateAccountRequest;
 import com.google.analytics.admin.v1alpha.UpdateAttributionSettingsRequest;
 import com.google.analytics.admin.v1alpha.UpdateAudienceRequest;
+import com.google.analytics.admin.v1alpha.UpdateChannelGroupRequest;
 import com.google.analytics.admin.v1alpha.UpdateCustomDimensionRequest;
 import com.google.analytics.admin.v1alpha.UpdateCustomMetricRequest;
 import com.google.analytics.admin.v1alpha.UpdateDataRetentionSettingsRequest;
 import com.google.analytics.admin.v1alpha.UpdateDataStreamRequest;
 import com.google.analytics.admin.v1alpha.UpdateDisplayVideo360AdvertiserLinkRequest;
 import com.google.analytics.admin.v1alpha.UpdateEnhancedMeasurementSettingsRequest;
+import com.google.analytics.admin.v1alpha.UpdateEventCreateRuleRequest;
 import com.google.analytics.admin.v1alpha.UpdateExpandedDataSetRequest;
 import com.google.analytics.admin.v1alpha.UpdateGoogleAdsLinkRequest;
 import com.google.analytics.admin.v1alpha.UpdateGoogleSignalsSettingsRequest;
@@ -1407,6 +1432,62 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
               .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<GetChannelGroupRequest, ChannelGroup>
+      getChannelGroupMethodDescriptor =
+          MethodDescriptor.<GetChannelGroupRequest, ChannelGroup>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/GetChannelGroup")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(GetChannelGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(ChannelGroup.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<ListChannelGroupsRequest, ListChannelGroupsResponse>
+      listChannelGroupsMethodDescriptor =
+          MethodDescriptor.<ListChannelGroupsRequest, ListChannelGroupsResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/ListChannelGroups")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(ListChannelGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(ListChannelGroupsResponse.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<CreateChannelGroupRequest, ChannelGroup>
+      createChannelGroupMethodDescriptor =
+          MethodDescriptor.<CreateChannelGroupRequest, ChannelGroup>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/CreateChannelGroup")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(CreateChannelGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(ChannelGroup.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<UpdateChannelGroupRequest, ChannelGroup>
+      updateChannelGroupMethodDescriptor =
+          MethodDescriptor.<UpdateChannelGroupRequest, ChannelGroup>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateChannelGroup")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(UpdateChannelGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(ChannelGroup.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<DeleteChannelGroupRequest, Empty>
+      deleteChannelGroupMethodDescriptor =
+          MethodDescriptor.<DeleteChannelGroupRequest, Empty>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteChannelGroup")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(DeleteChannelGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
+              .build();
+
   private static final MethodDescriptor<
           SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse>
       setAutomatedGa4ConfigurationOptOutMethodDescriptor =
@@ -1530,6 +1611,121 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
                   ProtoUtils.marshaller(ListConnectedSiteTagsRequest.getDefaultInstance()))
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListConnectedSiteTagsResponse.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<
+          FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>
+      fetchConnectedGa4PropertyMethodDescriptor =
+          MethodDescriptor
+              .<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/FetchConnectedGa4Property")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(FetchConnectedGa4PropertyRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(FetchConnectedGa4PropertyResponse.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<GetAdSenseLinkRequest, AdSenseLink>
+      getAdSenseLinkMethodDescriptor =
+          MethodDescriptor.<GetAdSenseLinkRequest, AdSenseLink>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/GetAdSenseLink")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(GetAdSenseLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(AdSenseLink.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<CreateAdSenseLinkRequest, AdSenseLink>
+      createAdSenseLinkMethodDescriptor =
+          MethodDescriptor.<CreateAdSenseLinkRequest, AdSenseLink>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/CreateAdSenseLink")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(CreateAdSenseLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(AdSenseLink.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<DeleteAdSenseLinkRequest, Empty>
+      deleteAdSenseLinkMethodDescriptor =
+          MethodDescriptor.<DeleteAdSenseLinkRequest, Empty>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteAdSenseLink")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(DeleteAdSenseLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<ListAdSenseLinksRequest, ListAdSenseLinksResponse>
+      listAdSenseLinksMethodDescriptor =
+          MethodDescriptor.<ListAdSenseLinksRequest, ListAdSenseLinksResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/ListAdSenseLinks")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(ListAdSenseLinksRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(ListAdSenseLinksResponse.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<GetEventCreateRuleRequest, EventCreateRule>
+      getEventCreateRuleMethodDescriptor =
+          MethodDescriptor.<GetEventCreateRuleRequest, EventCreateRule>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/GetEventCreateRule")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(GetEventCreateRuleRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(EventCreateRule.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<ListEventCreateRulesRequest, ListEventCreateRulesResponse>
+      listEventCreateRulesMethodDescriptor =
+          MethodDescriptor.<ListEventCreateRulesRequest, ListEventCreateRulesResponse>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/ListEventCreateRules")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(ListEventCreateRulesRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(ListEventCreateRulesResponse.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<CreateEventCreateRuleRequest, EventCreateRule>
+      createEventCreateRuleMethodDescriptor =
+          MethodDescriptor.<CreateEventCreateRuleRequest, EventCreateRule>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/CreateEventCreateRule")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(CreateEventCreateRuleRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(EventCreateRule.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<UpdateEventCreateRuleRequest, EventCreateRule>
+      updateEventCreateRuleMethodDescriptor =
+          MethodDescriptor.<UpdateEventCreateRuleRequest, EventCreateRule>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/UpdateEventCreateRule")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(UpdateEventCreateRuleRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(EventCreateRule.getDefaultInstance()))
+              .build();
+
+  private static final MethodDescriptor<DeleteEventCreateRuleRequest, Empty>
+      deleteEventCreateRuleMethodDescriptor =
+          MethodDescriptor.<DeleteEventCreateRuleRequest, Empty>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.analytics.admin.v1alpha.AnalyticsAdminService/DeleteEventCreateRule")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(DeleteEventCreateRuleRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
               .build();
 
   private final UnaryCallable<GetAccountRequest, Account> getAccountCallable;
@@ -1746,6 +1942,14 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
   private final UnaryCallable<UpdateExpandedDataSetRequest, ExpandedDataSet>
       updateExpandedDataSetCallable;
   private final UnaryCallable<DeleteExpandedDataSetRequest, Empty> deleteExpandedDataSetCallable;
+  private final UnaryCallable<GetChannelGroupRequest, ChannelGroup> getChannelGroupCallable;
+  private final UnaryCallable<ListChannelGroupsRequest, ListChannelGroupsResponse>
+      listChannelGroupsCallable;
+  private final UnaryCallable<ListChannelGroupsRequest, ListChannelGroupsPagedResponse>
+      listChannelGroupsPagedCallable;
+  private final UnaryCallable<CreateChannelGroupRequest, ChannelGroup> createChannelGroupCallable;
+  private final UnaryCallable<UpdateChannelGroupRequest, ChannelGroup> updateChannelGroupCallable;
+  private final UnaryCallable<DeleteChannelGroupRequest, Empty> deleteChannelGroupCallable;
   private final UnaryCallable<
           SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse>
       setAutomatedGa4ConfigurationOptOutCallable;
@@ -1766,6 +1970,26 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
   private final UnaryCallable<DeleteConnectedSiteTagRequest, Empty> deleteConnectedSiteTagCallable;
   private final UnaryCallable<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse>
       listConnectedSiteTagsCallable;
+  private final UnaryCallable<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>
+      fetchConnectedGa4PropertyCallable;
+  private final UnaryCallable<GetAdSenseLinkRequest, AdSenseLink> getAdSenseLinkCallable;
+  private final UnaryCallable<CreateAdSenseLinkRequest, AdSenseLink> createAdSenseLinkCallable;
+  private final UnaryCallable<DeleteAdSenseLinkRequest, Empty> deleteAdSenseLinkCallable;
+  private final UnaryCallable<ListAdSenseLinksRequest, ListAdSenseLinksResponse>
+      listAdSenseLinksCallable;
+  private final UnaryCallable<ListAdSenseLinksRequest, ListAdSenseLinksPagedResponse>
+      listAdSenseLinksPagedCallable;
+  private final UnaryCallable<GetEventCreateRuleRequest, EventCreateRule>
+      getEventCreateRuleCallable;
+  private final UnaryCallable<ListEventCreateRulesRequest, ListEventCreateRulesResponse>
+      listEventCreateRulesCallable;
+  private final UnaryCallable<ListEventCreateRulesRequest, ListEventCreateRulesPagedResponse>
+      listEventCreateRulesPagedCallable;
+  private final UnaryCallable<CreateEventCreateRuleRequest, EventCreateRule>
+      createEventCreateRuleCallable;
+  private final UnaryCallable<UpdateEventCreateRuleRequest, EventCreateRule>
+      updateEventCreateRuleCallable;
+  private final UnaryCallable<DeleteEventCreateRuleRequest, Empty> deleteEventCreateRuleCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -2890,6 +3114,58 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
                   return params.build();
                 })
             .build();
+    GrpcCallSettings<GetChannelGroupRequest, ChannelGroup> getChannelGroupTransportSettings =
+        GrpcCallSettings.<GetChannelGroupRequest, ChannelGroup>newBuilder()
+            .setMethodDescriptor(getChannelGroupMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("name", String.valueOf(request.getName()));
+                  return params.build();
+                })
+            .build();
+    GrpcCallSettings<ListChannelGroupsRequest, ListChannelGroupsResponse>
+        listChannelGroupsTransportSettings =
+            GrpcCallSettings.<ListChannelGroupsRequest, ListChannelGroupsResponse>newBuilder()
+                .setMethodDescriptor(listChannelGroupsMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("parent", String.valueOf(request.getParent()));
+                      return params.build();
+                    })
+                .build();
+    GrpcCallSettings<CreateChannelGroupRequest, ChannelGroup> createChannelGroupTransportSettings =
+        GrpcCallSettings.<CreateChannelGroupRequest, ChannelGroup>newBuilder()
+            .setMethodDescriptor(createChannelGroupMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("parent", String.valueOf(request.getParent()));
+                  return params.build();
+                })
+            .build();
+    GrpcCallSettings<UpdateChannelGroupRequest, ChannelGroup> updateChannelGroupTransportSettings =
+        GrpcCallSettings.<UpdateChannelGroupRequest, ChannelGroup>newBuilder()
+            .setMethodDescriptor(updateChannelGroupMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put(
+                      "channel_group.name", String.valueOf(request.getChannelGroup().getName()));
+                  return params.build();
+                })
+            .build();
+    GrpcCallSettings<DeleteChannelGroupRequest, Empty> deleteChannelGroupTransportSettings =
+        GrpcCallSettings.<DeleteChannelGroupRequest, Empty>newBuilder()
+            .setMethodDescriptor(deleteChannelGroupMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("name", String.valueOf(request.getName()));
+                  return params.build();
+                })
+            .build();
     GrpcCallSettings<
             SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse>
         setAutomatedGa4ConfigurationOptOutTransportSettings =
@@ -2972,6 +3248,109 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
                 .<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse>newBuilder()
                 .setMethodDescriptor(listConnectedSiteTagsMethodDescriptor)
                 .build();
+    GrpcCallSettings<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>
+        fetchConnectedGa4PropertyTransportSettings =
+            GrpcCallSettings
+                .<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>newBuilder()
+                .setMethodDescriptor(fetchConnectedGa4PropertyMethodDescriptor)
+                .build();
+    GrpcCallSettings<GetAdSenseLinkRequest, AdSenseLink> getAdSenseLinkTransportSettings =
+        GrpcCallSettings.<GetAdSenseLinkRequest, AdSenseLink>newBuilder()
+            .setMethodDescriptor(getAdSenseLinkMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("name", String.valueOf(request.getName()));
+                  return params.build();
+                })
+            .build();
+    GrpcCallSettings<CreateAdSenseLinkRequest, AdSenseLink> createAdSenseLinkTransportSettings =
+        GrpcCallSettings.<CreateAdSenseLinkRequest, AdSenseLink>newBuilder()
+            .setMethodDescriptor(createAdSenseLinkMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("parent", String.valueOf(request.getParent()));
+                  return params.build();
+                })
+            .build();
+    GrpcCallSettings<DeleteAdSenseLinkRequest, Empty> deleteAdSenseLinkTransportSettings =
+        GrpcCallSettings.<DeleteAdSenseLinkRequest, Empty>newBuilder()
+            .setMethodDescriptor(deleteAdSenseLinkMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("name", String.valueOf(request.getName()));
+                  return params.build();
+                })
+            .build();
+    GrpcCallSettings<ListAdSenseLinksRequest, ListAdSenseLinksResponse>
+        listAdSenseLinksTransportSettings =
+            GrpcCallSettings.<ListAdSenseLinksRequest, ListAdSenseLinksResponse>newBuilder()
+                .setMethodDescriptor(listAdSenseLinksMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("parent", String.valueOf(request.getParent()));
+                      return params.build();
+                    })
+                .build();
+    GrpcCallSettings<GetEventCreateRuleRequest, EventCreateRule>
+        getEventCreateRuleTransportSettings =
+            GrpcCallSettings.<GetEventCreateRuleRequest, EventCreateRule>newBuilder()
+                .setMethodDescriptor(getEventCreateRuleMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("name", String.valueOf(request.getName()));
+                      return params.build();
+                    })
+                .build();
+    GrpcCallSettings<ListEventCreateRulesRequest, ListEventCreateRulesResponse>
+        listEventCreateRulesTransportSettings =
+            GrpcCallSettings.<ListEventCreateRulesRequest, ListEventCreateRulesResponse>newBuilder()
+                .setMethodDescriptor(listEventCreateRulesMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("parent", String.valueOf(request.getParent()));
+                      return params.build();
+                    })
+                .build();
+    GrpcCallSettings<CreateEventCreateRuleRequest, EventCreateRule>
+        createEventCreateRuleTransportSettings =
+            GrpcCallSettings.<CreateEventCreateRuleRequest, EventCreateRule>newBuilder()
+                .setMethodDescriptor(createEventCreateRuleMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("parent", String.valueOf(request.getParent()));
+                      return params.build();
+                    })
+                .build();
+    GrpcCallSettings<UpdateEventCreateRuleRequest, EventCreateRule>
+        updateEventCreateRuleTransportSettings =
+            GrpcCallSettings.<UpdateEventCreateRuleRequest, EventCreateRule>newBuilder()
+                .setMethodDescriptor(updateEventCreateRuleMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put(
+                          "event_create_rule.name",
+                          String.valueOf(request.getEventCreateRule().getName()));
+                      return params.build();
+                    })
+                .build();
+    GrpcCallSettings<DeleteEventCreateRuleRequest, Empty> deleteEventCreateRuleTransportSettings =
+        GrpcCallSettings.<DeleteEventCreateRuleRequest, Empty>newBuilder()
+            .setMethodDescriptor(deleteEventCreateRuleMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("name", String.valueOf(request.getName()));
+                  return params.build();
+                })
+            .build();
 
     this.getAccountCallable =
         callableFactory.createUnaryCallable(
@@ -3488,6 +3867,34 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
             deleteExpandedDataSetTransportSettings,
             settings.deleteExpandedDataSetSettings(),
             clientContext);
+    this.getChannelGroupCallable =
+        callableFactory.createUnaryCallable(
+            getChannelGroupTransportSettings, settings.getChannelGroupSettings(), clientContext);
+    this.listChannelGroupsCallable =
+        callableFactory.createUnaryCallable(
+            listChannelGroupsTransportSettings,
+            settings.listChannelGroupsSettings(),
+            clientContext);
+    this.listChannelGroupsPagedCallable =
+        callableFactory.createPagedCallable(
+            listChannelGroupsTransportSettings,
+            settings.listChannelGroupsSettings(),
+            clientContext);
+    this.createChannelGroupCallable =
+        callableFactory.createUnaryCallable(
+            createChannelGroupTransportSettings,
+            settings.createChannelGroupSettings(),
+            clientContext);
+    this.updateChannelGroupCallable =
+        callableFactory.createUnaryCallable(
+            updateChannelGroupTransportSettings,
+            settings.updateChannelGroupSettings(),
+            clientContext);
+    this.deleteChannelGroupCallable =
+        callableFactory.createUnaryCallable(
+            deleteChannelGroupTransportSettings,
+            settings.deleteChannelGroupSettings(),
+            clientContext);
     this.setAutomatedGa4ConfigurationOptOutCallable =
         callableFactory.createUnaryCallable(
             setAutomatedGa4ConfigurationOptOutTransportSettings,
@@ -3535,6 +3942,60 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
         callableFactory.createUnaryCallable(
             listConnectedSiteTagsTransportSettings,
             settings.listConnectedSiteTagsSettings(),
+            clientContext);
+    this.fetchConnectedGa4PropertyCallable =
+        callableFactory.createUnaryCallable(
+            fetchConnectedGa4PropertyTransportSettings,
+            settings.fetchConnectedGa4PropertySettings(),
+            clientContext);
+    this.getAdSenseLinkCallable =
+        callableFactory.createUnaryCallable(
+            getAdSenseLinkTransportSettings, settings.getAdSenseLinkSettings(), clientContext);
+    this.createAdSenseLinkCallable =
+        callableFactory.createUnaryCallable(
+            createAdSenseLinkTransportSettings,
+            settings.createAdSenseLinkSettings(),
+            clientContext);
+    this.deleteAdSenseLinkCallable =
+        callableFactory.createUnaryCallable(
+            deleteAdSenseLinkTransportSettings,
+            settings.deleteAdSenseLinkSettings(),
+            clientContext);
+    this.listAdSenseLinksCallable =
+        callableFactory.createUnaryCallable(
+            listAdSenseLinksTransportSettings, settings.listAdSenseLinksSettings(), clientContext);
+    this.listAdSenseLinksPagedCallable =
+        callableFactory.createPagedCallable(
+            listAdSenseLinksTransportSettings, settings.listAdSenseLinksSettings(), clientContext);
+    this.getEventCreateRuleCallable =
+        callableFactory.createUnaryCallable(
+            getEventCreateRuleTransportSettings,
+            settings.getEventCreateRuleSettings(),
+            clientContext);
+    this.listEventCreateRulesCallable =
+        callableFactory.createUnaryCallable(
+            listEventCreateRulesTransportSettings,
+            settings.listEventCreateRulesSettings(),
+            clientContext);
+    this.listEventCreateRulesPagedCallable =
+        callableFactory.createPagedCallable(
+            listEventCreateRulesTransportSettings,
+            settings.listEventCreateRulesSettings(),
+            clientContext);
+    this.createEventCreateRuleCallable =
+        callableFactory.createUnaryCallable(
+            createEventCreateRuleTransportSettings,
+            settings.createEventCreateRuleSettings(),
+            clientContext);
+    this.updateEventCreateRuleCallable =
+        callableFactory.createUnaryCallable(
+            updateEventCreateRuleTransportSettings,
+            settings.updateEventCreateRuleSettings(),
+            clientContext);
+    this.deleteEventCreateRuleCallable =
+        callableFactory.createUnaryCallable(
+            deleteEventCreateRuleTransportSettings,
+            settings.deleteEventCreateRuleSettings(),
             clientContext);
 
     this.backgroundResources =
@@ -4212,6 +4673,38 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
   }
 
   @Override
+  public UnaryCallable<GetChannelGroupRequest, ChannelGroup> getChannelGroupCallable() {
+    return getChannelGroupCallable;
+  }
+
+  @Override
+  public UnaryCallable<ListChannelGroupsRequest, ListChannelGroupsResponse>
+      listChannelGroupsCallable() {
+    return listChannelGroupsCallable;
+  }
+
+  @Override
+  public UnaryCallable<ListChannelGroupsRequest, ListChannelGroupsPagedResponse>
+      listChannelGroupsPagedCallable() {
+    return listChannelGroupsPagedCallable;
+  }
+
+  @Override
+  public UnaryCallable<CreateChannelGroupRequest, ChannelGroup> createChannelGroupCallable() {
+    return createChannelGroupCallable;
+  }
+
+  @Override
+  public UnaryCallable<UpdateChannelGroupRequest, ChannelGroup> updateChannelGroupCallable() {
+    return updateChannelGroupCallable;
+  }
+
+  @Override
+  public UnaryCallable<DeleteChannelGroupRequest, Empty> deleteChannelGroupCallable() {
+    return deleteChannelGroupCallable;
+  }
+
+  @Override
   public UnaryCallable<
           SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse>
       setAutomatedGa4ConfigurationOptOutCallable() {
@@ -4269,6 +4762,73 @@ public class GrpcAnalyticsAdminServiceStub extends AnalyticsAdminServiceStub {
   public UnaryCallable<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse>
       listConnectedSiteTagsCallable() {
     return listConnectedSiteTagsCallable;
+  }
+
+  @Override
+  public UnaryCallable<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>
+      fetchConnectedGa4PropertyCallable() {
+    return fetchConnectedGa4PropertyCallable;
+  }
+
+  @Override
+  public UnaryCallable<GetAdSenseLinkRequest, AdSenseLink> getAdSenseLinkCallable() {
+    return getAdSenseLinkCallable;
+  }
+
+  @Override
+  public UnaryCallable<CreateAdSenseLinkRequest, AdSenseLink> createAdSenseLinkCallable() {
+    return createAdSenseLinkCallable;
+  }
+
+  @Override
+  public UnaryCallable<DeleteAdSenseLinkRequest, Empty> deleteAdSenseLinkCallable() {
+    return deleteAdSenseLinkCallable;
+  }
+
+  @Override
+  public UnaryCallable<ListAdSenseLinksRequest, ListAdSenseLinksResponse>
+      listAdSenseLinksCallable() {
+    return listAdSenseLinksCallable;
+  }
+
+  @Override
+  public UnaryCallable<ListAdSenseLinksRequest, ListAdSenseLinksPagedResponse>
+      listAdSenseLinksPagedCallable() {
+    return listAdSenseLinksPagedCallable;
+  }
+
+  @Override
+  public UnaryCallable<GetEventCreateRuleRequest, EventCreateRule> getEventCreateRuleCallable() {
+    return getEventCreateRuleCallable;
+  }
+
+  @Override
+  public UnaryCallable<ListEventCreateRulesRequest, ListEventCreateRulesResponse>
+      listEventCreateRulesCallable() {
+    return listEventCreateRulesCallable;
+  }
+
+  @Override
+  public UnaryCallable<ListEventCreateRulesRequest, ListEventCreateRulesPagedResponse>
+      listEventCreateRulesPagedCallable() {
+    return listEventCreateRulesPagedCallable;
+  }
+
+  @Override
+  public UnaryCallable<CreateEventCreateRuleRequest, EventCreateRule>
+      createEventCreateRuleCallable() {
+    return createEventCreateRuleCallable;
+  }
+
+  @Override
+  public UnaryCallable<UpdateEventCreateRuleRequest, EventCreateRule>
+      updateEventCreateRuleCallable() {
+    return updateEventCreateRuleCallable;
+  }
+
+  @Override
+  public UnaryCallable<DeleteEventCreateRuleRequest, Empty> deleteEventCreateRuleCallable() {
+    return deleteEventCreateRuleCallable;
   }
 
   @Override

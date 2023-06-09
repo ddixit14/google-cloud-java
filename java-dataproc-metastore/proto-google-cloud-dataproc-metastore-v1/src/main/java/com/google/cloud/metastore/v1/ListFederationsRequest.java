@@ -50,11 +50,6 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
     return new ListFederationsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.metastore.v1.MetastoreFederationProto
         .internal_static_google_cloud_metastore_v1_ListFederationsRequest_descriptor;
@@ -78,8 +73,8 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The relative resource name of the location of metastore federations
-   * to list, in the following form:
+   * Required. The relative resource name of the location of metastore
+   * federations to list, in the following form:
    * `projects/{project_number}/locations/{location_id}`.
    * </pre>
    *
@@ -105,8 +100,8 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The relative resource name of the location of metastore federations
-   * to list, in the following form:
+   * Required. The relative resource name of the location of metastore
+   * federations to list, in the following form:
    * `projects/{project_number}/locations/{location_id}`.
    * </pre>
    *
@@ -135,9 +130,10 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Optional. The maximum number of federations to return. The response may contain less
-   * than the maximum number. If unspecified, no more than 500 services are
-   * returned. The maximum value is 1000; values above 1000 are changed to 1000.
+   * Optional. The maximum number of federations to return. The response may
+   * contain less than the maximum number. If unspecified, no more than 500
+   * services are returned. The maximum value is 1000; values above 1000 are
+   * changed to 1000.
    * </pre>
    *
    * <code>int32 page_size = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -159,7 +155,9 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
    * <pre>
    * Optional. A page token, received from a previous ListFederationServices
    * call. Provide this token to retrieve the subsequent page.
+   *
    * To retrieve the first page, supply an empty page token.
+   *
    * When paginating, other parameters provided to
    * ListFederationServices must match the call that provided the
    * page token.
@@ -187,7 +185,9 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
    * <pre>
    * Optional. A page token, received from a previous ListFederationServices
    * call. Provide this token to retrieve the subsequent page.
+   *
    * To retrieve the first page, supply an empty page token.
+   *
    * When paginating, other parameters provided to
    * ListFederationServices must match the call that provided the
    * page token.
@@ -757,8 +757,8 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative resource name of the location of metastore federations
-     * to list, in the following form:
+     * Required. The relative resource name of the location of metastore
+     * federations to list, in the following form:
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -783,8 +783,8 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative resource name of the location of metastore federations
-     * to list, in the following form:
+     * Required. The relative resource name of the location of metastore
+     * federations to list, in the following form:
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -809,8 +809,8 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative resource name of the location of metastore federations
-     * to list, in the following form:
+     * Required. The relative resource name of the location of metastore
+     * federations to list, in the following form:
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -834,8 +834,8 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative resource name of the location of metastore federations
-     * to list, in the following form:
+     * Required. The relative resource name of the location of metastore
+     * federations to list, in the following form:
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -855,8 +855,8 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The relative resource name of the location of metastore federations
-     * to list, in the following form:
+     * Required. The relative resource name of the location of metastore
+     * federations to list, in the following form:
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -883,9 +883,10 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. The maximum number of federations to return. The response may contain less
-     * than the maximum number. If unspecified, no more than 500 services are
-     * returned. The maximum value is 1000; values above 1000 are changed to 1000.
+     * Optional. The maximum number of federations to return. The response may
+     * contain less than the maximum number. If unspecified, no more than 500
+     * services are returned. The maximum value is 1000; values above 1000 are
+     * changed to 1000.
      * </pre>
      *
      * <code>int32 page_size = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -900,9 +901,10 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. The maximum number of federations to return. The response may contain less
-     * than the maximum number. If unspecified, no more than 500 services are
-     * returned. The maximum value is 1000; values above 1000 are changed to 1000.
+     * Optional. The maximum number of federations to return. The response may
+     * contain less than the maximum number. If unspecified, no more than 500
+     * services are returned. The maximum value is 1000; values above 1000 are
+     * changed to 1000.
      * </pre>
      *
      * <code>int32 page_size = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -921,9 +923,10 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. The maximum number of federations to return. The response may contain less
-     * than the maximum number. If unspecified, no more than 500 services are
-     * returned. The maximum value is 1000; values above 1000 are changed to 1000.
+     * Optional. The maximum number of federations to return. The response may
+     * contain less than the maximum number. If unspecified, no more than 500
+     * services are returned. The maximum value is 1000; values above 1000 are
+     * changed to 1000.
      * </pre>
      *
      * <code>int32 page_size = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -944,7 +947,9 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      * <pre>
      * Optional. A page token, received from a previous ListFederationServices
      * call. Provide this token to retrieve the subsequent page.
+     *
      * To retrieve the first page, supply an empty page token.
+     *
      * When paginating, other parameters provided to
      * ListFederationServices must match the call that provided the
      * page token.
@@ -971,7 +976,9 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      * <pre>
      * Optional. A page token, received from a previous ListFederationServices
      * call. Provide this token to retrieve the subsequent page.
+     *
      * To retrieve the first page, supply an empty page token.
+     *
      * When paginating, other parameters provided to
      * ListFederationServices must match the call that provided the
      * page token.
@@ -998,7 +1005,9 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      * <pre>
      * Optional. A page token, received from a previous ListFederationServices
      * call. Provide this token to retrieve the subsequent page.
+     *
      * To retrieve the first page, supply an empty page token.
+     *
      * When paginating, other parameters provided to
      * ListFederationServices must match the call that provided the
      * page token.
@@ -1024,7 +1033,9 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      * <pre>
      * Optional. A page token, received from a previous ListFederationServices
      * call. Provide this token to retrieve the subsequent page.
+     *
      * To retrieve the first page, supply an empty page token.
+     *
      * When paginating, other parameters provided to
      * ListFederationServices must match the call that provided the
      * page token.
@@ -1046,7 +1057,9 @@ public final class ListFederationsRequest extends com.google.protobuf.GeneratedM
      * <pre>
      * Optional. A page token, received from a previous ListFederationServices
      * call. Provide this token to retrieve the subsequent page.
+     *
      * To retrieve the first page, supply an empty page token.
+     *
      * When paginating, other parameters provided to
      * ListFederationServices must match the call that provided the
      * page token.

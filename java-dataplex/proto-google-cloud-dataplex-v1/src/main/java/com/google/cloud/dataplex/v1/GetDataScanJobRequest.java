@@ -48,11 +48,6 @@ public final class GetDataScanJobRequest extends com.google.protobuf.GeneratedMe
     return new GetDataScanJobRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dataplex.v1.DataScansProto
         .internal_static_google_cloud_dataplex_v1_GetDataScanJobRequest_descriptor;
@@ -238,7 +233,7 @@ public final class GetDataScanJobRequest extends com.google.protobuf.GeneratedMe
    *
    * <pre>
    * Required. The resource name of the DataScanJob:
-   * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+   * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
    * where `project` refers to a *project_id* or *project_number* and
    * `location_id` refers to a GCP region.
    * </pre>
@@ -266,7 +261,7 @@ public final class GetDataScanJobRequest extends com.google.protobuf.GeneratedMe
    *
    * <pre>
    * Required. The resource name of the DataScanJob:
-   * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+   * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
    * where `project` refers to a *project_id* or *project_number* and
    * `location_id` refers to a GCP region.
    * </pre>
@@ -707,7 +702,7 @@ public final class GetDataScanJobRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. The resource name of the DataScanJob:
-     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
      * where `project` refers to a *project_id* or *project_number* and
      * `location_id` refers to a GCP region.
      * </pre>
@@ -734,7 +729,7 @@ public final class GetDataScanJobRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. The resource name of the DataScanJob:
-     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
      * where `project` refers to a *project_id* or *project_number* and
      * `location_id` refers to a GCP region.
      * </pre>
@@ -761,7 +756,7 @@ public final class GetDataScanJobRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. The resource name of the DataScanJob:
-     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
      * where `project` refers to a *project_id* or *project_number* and
      * `location_id` refers to a GCP region.
      * </pre>
@@ -787,7 +782,7 @@ public final class GetDataScanJobRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. The resource name of the DataScanJob:
-     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
      * where `project` refers to a *project_id* or *project_number* and
      * `location_id` refers to a GCP region.
      * </pre>
@@ -809,7 +804,7 @@ public final class GetDataScanJobRequest extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Required. The resource name of the DataScanJob:
-     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data_scan_job_id}`
+     * `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
      * where `project` refers to a *project_id* or *project_number* and
      * `location_id` refers to a GCP region.
      * </pre>

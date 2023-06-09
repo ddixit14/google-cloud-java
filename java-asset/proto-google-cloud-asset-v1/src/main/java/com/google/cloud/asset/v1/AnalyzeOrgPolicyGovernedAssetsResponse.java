@@ -51,11 +51,6 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
     return new AnalyzeOrgPolicyGovernedAssetsResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.asset.v1.AssetServiceProto
         .internal_static_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedAssetsResponse_descriptor;
@@ -140,7 +135,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The project that this resource belongs to, in the form of
+     * The project that this resource belongs to, in the format of
      * projects/{PROJECT_NUMBER}. This field is available when the resource
      * belongs to a project.
      * </pre>
@@ -154,7 +149,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The project that this resource belongs to, in the form of
+     * The project that this resource belongs to, in the format of
      * projects/{PROJECT_NUMBER}. This field is available when the resource
      * belongs to a project.
      * </pre>
@@ -169,9 +164,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this resource belongs to, in the form of
+     * The folder(s) that this resource belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the resource
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -183,9 +178,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this resource belongs to, in the form of
+     * The folder(s) that this resource belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the resource
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -197,9 +192,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this resource belongs to, in the form of
+     * The folder(s) that this resource belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the resource
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -212,9 +207,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this resource belongs to, in the form of
+     * The folder(s) that this resource belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the resource
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -228,9 +223,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The organization that this resource belongs to, in the form of
+     * The organization that this resource belongs to, in the format of
      * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-     * resource belongs(directly or cascadingly) to an organization.
+     * resource belongs (directly or cascadingly) to an organization.
      * </pre>
      *
      * <code>string organization = 7;</code>
@@ -242,9 +237,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The organization that this resource belongs to, in the form of
+     * The organization that this resource belongs to, in the format of
      * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-     * resource belongs(directly or cascadingly) to an organization.
+     * resource belongs (directly or cascadingly) to an organization.
      * </pre>
      *
      * <code>string organization = 7;</code>
@@ -278,7 +273,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
       fullResourceName_ = "";
       parent_ = "";
       project_ = "";
-      folders_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      folders_ = com.google.protobuf.LazyStringArrayList.emptyList();
       organization_ = "";
     }
 
@@ -286,11 +281,6 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new GovernedResource();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -430,7 +420,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The project that this resource belongs to, in the form of
+     * The project that this resource belongs to, in the format of
      * projects/{PROJECT_NUMBER}. This field is available when the resource
      * belongs to a project.
      * </pre>
@@ -455,7 +445,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The project that this resource belongs to, in the form of
+     * The project that this resource belongs to, in the format of
      * projects/{PROJECT_NUMBER}. This field is available when the resource
      * belongs to a project.
      * </pre>
@@ -480,14 +470,15 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
     public static final int FOLDERS_FIELD_NUMBER = 6;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList folders_;
+    private com.google.protobuf.LazyStringArrayList folders_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      *
      *
      * <pre>
-     * The folder(s) that this resource belongs to, in the form of
+     * The folder(s) that this resource belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the resource
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -501,9 +492,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this resource belongs to, in the form of
+     * The folder(s) that this resource belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the resource
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -517,9 +508,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this resource belongs to, in the form of
+     * The folder(s) that this resource belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the resource
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -534,9 +525,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this resource belongs to, in the form of
+     * The folder(s) that this resource belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the resource
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -556,9 +547,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The organization that this resource belongs to, in the form of
+     * The organization that this resource belongs to, in the format of
      * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-     * resource belongs(directly or cascadingly) to an organization.
+     * resource belongs (directly or cascadingly) to an organization.
      * </pre>
      *
      * <code>string organization = 7;</code>
@@ -581,9 +572,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The organization that this resource belongs to, in the form of
+     * The organization that this resource belongs to, in the format of
      * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-     * resource belongs(directly or cascadingly) to an organization.
+     * resource belongs (directly or cascadingly) to an organization.
      * </pre>
      *
      * <code>string organization = 7;</code>
@@ -864,8 +855,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         fullResourceName_ = "";
         parent_ = "";
         project_ = "";
-        folders_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        folders_ = com.google.protobuf.LazyStringArrayList.emptyList();
         organization_ = "";
         return this;
       }
@@ -900,22 +890,11 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         com.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource result =
             new com.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource(
                 this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(
-          com.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource
-              result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          folders_ = folders_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.folders_ = folders_;
       }
 
       private void buildPartial0(
@@ -930,6 +909,10 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.project_ = project_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          folders_.makeImmutable();
+          result.folders_ = folders_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.organization_ = organization_;
@@ -1008,7 +991,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         if (!other.folders_.isEmpty()) {
           if (folders_.isEmpty()) {
             folders_ = other.folders_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ |= 0x00000008;
           } else {
             ensureFoldersIsMutable();
             folders_.addAll(other.folders_);
@@ -1338,7 +1321,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this resource belongs to, in the form of
+       * The project that this resource belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the resource
        * belongs to a project.
        * </pre>
@@ -1362,7 +1345,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this resource belongs to, in the form of
+       * The project that this resource belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the resource
        * belongs to a project.
        * </pre>
@@ -1386,7 +1369,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this resource belongs to, in the form of
+       * The project that this resource belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the resource
        * belongs to a project.
        * </pre>
@@ -1409,7 +1392,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this resource belongs to, in the form of
+       * The project that this resource belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the resource
        * belongs to a project.
        * </pre>
@@ -1428,7 +1411,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this resource belongs to, in the form of
+       * The project that this resource belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the resource
        * belongs to a project.
        * </pre>
@@ -1449,22 +1432,22 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         return this;
       }
 
-      private com.google.protobuf.LazyStringList folders_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList folders_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensureFoldersIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!folders_.isModifiable()) {
           folders_ = new com.google.protobuf.LazyStringArrayList(folders_);
-          bitField0_ |= 0x00000008;
         }
+        bitField0_ |= 0x00000008;
       }
       /**
        *
        *
        * <pre>
-       * The folder(s) that this resource belongs to, in the form of
+       * The folder(s) that this resource belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the resource
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -1472,15 +1455,16 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * @return A list containing the folders.
        */
       public com.google.protobuf.ProtocolStringList getFoldersList() {
-        return folders_.getUnmodifiableView();
+        folders_.makeImmutable();
+        return folders_;
       }
       /**
        *
        *
        * <pre>
-       * The folder(s) that this resource belongs to, in the form of
+       * The folder(s) that this resource belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the resource
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -1494,9 +1478,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this resource belongs to, in the form of
+       * The folder(s) that this resource belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the resource
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -1511,9 +1495,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this resource belongs to, in the form of
+       * The folder(s) that this resource belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the resource
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -1528,9 +1512,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this resource belongs to, in the form of
+       * The folder(s) that this resource belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the resource
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -1545,6 +1529,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         }
         ensureFoldersIsMutable();
         folders_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1552,9 +1537,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this resource belongs to, in the form of
+       * The folder(s) that this resource belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the resource
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -1568,6 +1553,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         }
         ensureFoldersIsMutable();
         folders_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1575,9 +1561,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this resource belongs to, in the form of
+       * The folder(s) that this resource belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the resource
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -1588,6 +1574,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
       public Builder addAllFolders(java.lang.Iterable<java.lang.String> values) {
         ensureFoldersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, folders_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1595,9 +1582,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this resource belongs to, in the form of
+       * The folder(s) that this resource belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the resource
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -1605,8 +1592,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * @return This builder for chaining.
        */
       public Builder clearFolders() {
-        folders_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        folders_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
+        ;
         onChanged();
         return this;
       }
@@ -1614,9 +1602,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this resource belongs to, in the form of
+       * The folder(s) that this resource belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the resource
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -1631,6 +1619,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         checkByteStringIsUtf8(value);
         ensureFoldersIsMutable();
         folders_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1640,9 +1629,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this resource belongs to, in the form of
+       * The organization that this resource belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * resource belongs(directly or cascadingly) to an organization.
+       * resource belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -1664,9 +1653,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this resource belongs to, in the form of
+       * The organization that this resource belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * resource belongs(directly or cascadingly) to an organization.
+       * resource belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -1688,9 +1677,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this resource belongs to, in the form of
+       * The organization that this resource belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * resource belongs(directly or cascadingly) to an organization.
+       * resource belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -1711,9 +1700,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this resource belongs to, in the form of
+       * The organization that this resource belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * resource belongs(directly or cascadingly) to an organization.
+       * resource belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -1730,9 +1719,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this resource belongs to, in the form of
+       * The organization that this resource belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * resource belongs(directly or cascadingly) to an organization.
+       * resource belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -1899,7 +1888,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The project that this IAM policy belongs to, in the form of
+     * The project that this IAM policy belongs to, in the format of
      * projects/{PROJECT_NUMBER}. This field is available when the IAM policy
      * belongs to a project.
      * </pre>
@@ -1913,7 +1902,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The project that this IAM policy belongs to, in the form of
+     * The project that this IAM policy belongs to, in the format of
      * projects/{PROJECT_NUMBER}. This field is available when the IAM policy
      * belongs to a project.
      * </pre>
@@ -1928,9 +1917,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this IAM policy belongs to, in the form of
+     * The folder(s) that this IAM policy belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -1942,9 +1931,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this IAM policy belongs to, in the form of
+     * The folder(s) that this IAM policy belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -1956,9 +1945,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this IAM policy belongs to, in the form of
+     * The folder(s) that this IAM policy belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -1971,9 +1960,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this IAM policy belongs to, in the form of
+     * The folder(s) that this IAM policy belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -1987,9 +1976,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The organization that this IAM policy belongs to, in the form of
+     * The organization that this IAM policy belongs to, in the format of
      * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-     * IAM policy belongs(directly or cascadingly) to an organization.
+     * IAM policy belongs (directly or cascadingly) to an organization.
      * </pre>
      *
      * <code>string organization = 7;</code>
@@ -2001,9 +1990,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The organization that this IAM policy belongs to, in the form of
+     * The organization that this IAM policy belongs to, in the format of
      * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-     * IAM policy belongs(directly or cascadingly) to an organization.
+     * IAM policy belongs (directly or cascadingly) to an organization.
      * </pre>
      *
      * <code>string organization = 7;</code>
@@ -2036,7 +2025,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
     private GovernedIamPolicy() {
       attachedResource_ = "";
       project_ = "";
-      folders_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      folders_ = com.google.protobuf.LazyStringArrayList.emptyList();
       organization_ = "";
     }
 
@@ -2044,11 +2033,6 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new GovernedIamPolicy();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -2183,7 +2167,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The project that this IAM policy belongs to, in the form of
+     * The project that this IAM policy belongs to, in the format of
      * projects/{PROJECT_NUMBER}. This field is available when the IAM policy
      * belongs to a project.
      * </pre>
@@ -2208,7 +2192,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The project that this IAM policy belongs to, in the form of
+     * The project that this IAM policy belongs to, in the format of
      * projects/{PROJECT_NUMBER}. This field is available when the IAM policy
      * belongs to a project.
      * </pre>
@@ -2233,14 +2217,15 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
     public static final int FOLDERS_FIELD_NUMBER = 6;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList folders_;
+    private com.google.protobuf.LazyStringArrayList folders_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      *
      *
      * <pre>
-     * The folder(s) that this IAM policy belongs to, in the form of
+     * The folder(s) that this IAM policy belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -2254,9 +2239,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this IAM policy belongs to, in the form of
+     * The folder(s) that this IAM policy belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -2270,9 +2255,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this IAM policy belongs to, in the form of
+     * The folder(s) that this IAM policy belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -2287,9 +2272,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The folder(s) that this IAM policy belongs to, in the form of
+     * The folder(s) that this IAM policy belongs to, in the format of
      * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-     * belongs(directly or cascadingly) to one or more folders.
+     * belongs (directly or cascadingly) to one or more folders.
      * </pre>
      *
      * <code>repeated string folders = 6;</code>
@@ -2309,9 +2294,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The organization that this IAM policy belongs to, in the form of
+     * The organization that this IAM policy belongs to, in the format of
      * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-     * IAM policy belongs(directly or cascadingly) to an organization.
+     * IAM policy belongs (directly or cascadingly) to an organization.
      * </pre>
      *
      * <code>string organization = 7;</code>
@@ -2334,9 +2319,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      *
      *
      * <pre>
-     * The organization that this IAM policy belongs to, in the form of
+     * The organization that this IAM policy belongs to, in the format of
      * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-     * IAM policy belongs(directly or cascadingly) to an organization.
+     * IAM policy belongs (directly or cascadingly) to an organization.
      * </pre>
      *
      * <code>string organization = 7;</code>
@@ -2627,8 +2612,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
           policyBuilder_ = null;
         }
         project_ = "";
-        folders_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        folders_ = com.google.protobuf.LazyStringArrayList.emptyList();
         organization_ = "";
         return this;
       }
@@ -2663,22 +2647,11 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         com.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedIamPolicy result =
             new com.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedIamPolicy(
                 this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(
-          com.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedIamPolicy
-              result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          folders_ = folders_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.folders_ = folders_;
       }
 
       private void buildPartial0(
@@ -2693,6 +2666,10 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.project_ = project_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          folders_.makeImmutable();
+          result.folders_ = folders_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.organization_ = organization_;
@@ -2770,7 +2747,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         if (!other.folders_.isEmpty()) {
           if (folders_.isEmpty()) {
             folders_ = other.folders_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ |= 0x00000008;
           } else {
             ensureFoldersIsMutable();
             folders_.addAll(other.folders_);
@@ -3173,7 +3150,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this IAM policy belongs to, in the form of
+       * The project that this IAM policy belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the IAM policy
        * belongs to a project.
        * </pre>
@@ -3197,7 +3174,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this IAM policy belongs to, in the form of
+       * The project that this IAM policy belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the IAM policy
        * belongs to a project.
        * </pre>
@@ -3221,7 +3198,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this IAM policy belongs to, in the form of
+       * The project that this IAM policy belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the IAM policy
        * belongs to a project.
        * </pre>
@@ -3244,7 +3221,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this IAM policy belongs to, in the form of
+       * The project that this IAM policy belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the IAM policy
        * belongs to a project.
        * </pre>
@@ -3263,7 +3240,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The project that this IAM policy belongs to, in the form of
+       * The project that this IAM policy belongs to, in the format of
        * projects/{PROJECT_NUMBER}. This field is available when the IAM policy
        * belongs to a project.
        * </pre>
@@ -3284,22 +3261,22 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         return this;
       }
 
-      private com.google.protobuf.LazyStringList folders_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList folders_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensureFoldersIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!folders_.isModifiable()) {
           folders_ = new com.google.protobuf.LazyStringArrayList(folders_);
-          bitField0_ |= 0x00000008;
         }
+        bitField0_ |= 0x00000008;
       }
       /**
        *
        *
        * <pre>
-       * The folder(s) that this IAM policy belongs to, in the form of
+       * The folder(s) that this IAM policy belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -3307,15 +3284,16 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * @return A list containing the folders.
        */
       public com.google.protobuf.ProtocolStringList getFoldersList() {
-        return folders_.getUnmodifiableView();
+        folders_.makeImmutable();
+        return folders_;
       }
       /**
        *
        *
        * <pre>
-       * The folder(s) that this IAM policy belongs to, in the form of
+       * The folder(s) that this IAM policy belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -3329,9 +3307,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this IAM policy belongs to, in the form of
+       * The folder(s) that this IAM policy belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -3346,9 +3324,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this IAM policy belongs to, in the form of
+       * The folder(s) that this IAM policy belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -3363,9 +3341,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this IAM policy belongs to, in the form of
+       * The folder(s) that this IAM policy belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -3380,6 +3358,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         }
         ensureFoldersIsMutable();
         folders_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3387,9 +3366,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this IAM policy belongs to, in the form of
+       * The folder(s) that this IAM policy belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -3403,6 +3382,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         }
         ensureFoldersIsMutable();
         folders_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3410,9 +3390,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this IAM policy belongs to, in the form of
+       * The folder(s) that this IAM policy belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -3423,6 +3403,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
       public Builder addAllFolders(java.lang.Iterable<java.lang.String> values) {
         ensureFoldersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, folders_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3430,9 +3411,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this IAM policy belongs to, in the form of
+       * The folder(s) that this IAM policy belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -3440,8 +3421,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * @return This builder for chaining.
        */
       public Builder clearFolders() {
-        folders_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        folders_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
+        ;
         onChanged();
         return this;
       }
@@ -3449,9 +3431,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The folder(s) that this IAM policy belongs to, in the form of
+       * The folder(s) that this IAM policy belongs to, in the format of
        * folders/{FOLDER_NUMBER}. This field is available when the IAM policy
-       * belongs(directly or cascadingly) to one or more folders.
+       * belongs (directly or cascadingly) to one or more folders.
        * </pre>
        *
        * <code>repeated string folders = 6;</code>
@@ -3466,6 +3448,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
         checkByteStringIsUtf8(value);
         ensureFoldersIsMutable();
         folders_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3475,9 +3458,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this IAM policy belongs to, in the form of
+       * The organization that this IAM policy belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * IAM policy belongs(directly or cascadingly) to an organization.
+       * IAM policy belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -3499,9 +3482,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this IAM policy belongs to, in the form of
+       * The organization that this IAM policy belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * IAM policy belongs(directly or cascadingly) to an organization.
+       * IAM policy belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -3523,9 +3506,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this IAM policy belongs to, in the form of
+       * The organization that this IAM policy belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * IAM policy belongs(directly or cascadingly) to an organization.
+       * IAM policy belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -3546,9 +3529,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this IAM policy belongs to, in the form of
+       * The organization that this IAM policy belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * IAM policy belongs(directly or cascadingly) to an organization.
+       * IAM policy belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -3565,9 +3548,9 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        *
        *
        * <pre>
-       * The organization that this IAM policy belongs to, in the form of
+       * The organization that this IAM policy belongs to, in the format of
        * organizations/{ORGANIZATION_NUMBER}. This field is available when the
-       * IAM policy belongs(directly or cascadingly) to an organization.
+       * IAM policy belongs (directly or cascadingly) to an organization.
        * </pre>
        *
        * <code>string organization = 7;</code>
@@ -3812,6 +3795,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -3826,6 +3810,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -3840,6 +3825,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -3854,6 +3840,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -3869,6 +3856,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -3877,8 +3865,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      */
     com.google.cloud.asset.v1.AnalyzerOrgPolicyOrBuilder getPolicyBundleOrBuilder(int index);
 
-    public com.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset
-            .GovernedAssetCase
+    com.google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.GovernedAssetCase
         getGovernedAssetCase();
   }
   /**
@@ -3913,11 +3900,6 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
       return new GovernedAsset();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.asset.v1.AssetServiceProto
           .internal_static_google_cloud_asset_v1_AnalyzeOrgPolicyGovernedAssetsResponse_GovernedAsset_descriptor;
@@ -3935,6 +3917,8 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
     }
 
     private int governedAssetCase_ = 0;
+
+    @SuppressWarnings("serial")
     private java.lang.Object governedAsset_;
 
     public enum GovernedAssetCase
@@ -4194,6 +4178,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -4211,6 +4196,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -4229,6 +4215,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -4246,6 +4233,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -4263,6 +4251,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
      * The ordered list of all organization policies from the
      * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
      * to the scope specified in the request.
+     *
      * If the constraint is defined with default policy, it will also appear in
      * the list.
      * </pre>
@@ -5645,6 +5634,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5665,6 +5655,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5685,6 +5676,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5705,6 +5697,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5731,6 +5724,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5755,6 +5749,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5781,6 +5776,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5807,6 +5803,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5831,6 +5828,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5855,6 +5853,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5879,6 +5878,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5902,6 +5902,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5925,6 +5926,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5941,6 +5943,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5962,6 +5965,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -5983,6 +5987,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -6000,6 +6005,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>
@@ -6017,6 +6023,7 @@ public final class AnalyzeOrgPolicyGovernedAssetsResponse
        * The ordered list of all organization policies from the
        * [AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource][]
        * to the scope specified in the request.
+       *
        * If the constraint is defined with default policy, it will also appear in
        * the list.
        * </pre>

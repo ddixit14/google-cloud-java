@@ -46,11 +46,6 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
     return new ReadFeatureValuesResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.aiplatform.v1beta1.FeaturestoreOnlineServiceProto
         .internal_static_google_cloud_aiplatform_v1beta1_ReadFeatureValuesResponse_descriptor;
@@ -124,11 +119,6 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new FeatureDescriptor();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -786,7 +776,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -800,7 +790,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -814,7 +804,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -827,7 +817,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -844,7 +834,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -884,11 +874,6 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Header();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -974,7 +959,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -992,7 +977,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -1012,7 +997,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -1028,7 +1013,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -1045,7 +1030,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
      *
      * <pre>
      * List of Feature metadata corresponding to each piece of
-     * [ReadFeatureValuesResponse.data][].
+     * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
      * </pre>
      *
      * <code>
@@ -1640,7 +1625,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1661,7 +1646,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1680,7 +1665,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1700,7 +1685,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1727,7 +1712,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1752,7 +1737,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1778,7 +1763,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1805,7 +1790,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1829,7 +1814,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1854,7 +1839,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1881,7 +1866,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1903,7 +1888,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1925,7 +1910,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1941,7 +1926,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1962,7 +1947,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -1985,7 +1970,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -2004,7 +1989,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -2024,7 +2009,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        *
        * <pre>
        * List of Feature metadata corresponding to each piece of
-       * [ReadFeatureValuesResponse.data][].
+       * [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.data].
        * </pre>
        *
        * <code>
@@ -2282,11 +2267,6 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
       return new EntityView();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.aiplatform.v1beta1.FeaturestoreOnlineServiceProto
           .internal_static_google_cloud_aiplatform_v1beta1_ReadFeatureValuesResponse_EntityView_descriptor;
@@ -2387,7 +2367,7 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
        */
       com.google.cloud.aiplatform.v1beta1.FeatureValueListOrBuilder getValuesOrBuilder();
 
-      public com.google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.Data.DataCase
+      com.google.cloud.aiplatform.v1beta1.ReadFeatureValuesResponse.EntityView.Data.DataCase
           getDataCase();
     }
     /**
@@ -2419,11 +2399,6 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
         return new Data();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-        return this.unknownFields;
-      }
-
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
         return com.google.cloud.aiplatform.v1beta1.FeaturestoreOnlineServiceProto
             .internal_static_google_cloud_aiplatform_v1beta1_ReadFeatureValuesResponse_EntityView_Data_descriptor;
@@ -2441,6 +2416,8 @@ public final class ReadFeatureValuesResponse extends com.google.protobuf.Generat
       }
 
       private int dataCase_ = 0;
+
+      @SuppressWarnings("serial")
       private java.lang.Object data_;
 
       public enum DataCase

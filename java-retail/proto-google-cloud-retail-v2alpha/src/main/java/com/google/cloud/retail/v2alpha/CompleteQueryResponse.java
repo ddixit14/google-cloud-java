@@ -22,7 +22,7 @@ package com.google.cloud.retail.v2alpha;
  *
  *
  * <pre>
- * Response of the auto-complete query.
+ * Response of the autocomplete query.
  * </pre>
  *
  * Protobuf type {@code google.cloud.retail.v2alpha.CompleteQueryResponse}
@@ -47,11 +47,6 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new CompleteQueryResponse();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -115,8 +110,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Custom attributes for the suggestion term.
+     *
      * * For "user-data", the attributes are additional custom attributes
      * ingested through BigQuery.
+     *
      * * For "cloud-retail", the attributes are product attributes generated
      * by Cloud Retail. It requires
      * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -131,8 +128,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Custom attributes for the suggestion term.
+     *
      * * For "user-data", the attributes are additional custom attributes
      * ingested through BigQuery.
+     *
      * * For "cloud-retail", the attributes are product attributes generated
      * by Cloud Retail. It requires
      * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -151,8 +150,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Custom attributes for the suggestion term.
+     *
      * * For "user-data", the attributes are additional custom attributes
      * ingested through BigQuery.
+     *
      * * For "cloud-retail", the attributes are product attributes generated
      * by Cloud Retail. It requires
      * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -168,8 +169,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Custom attributes for the suggestion term.
+     *
      * * For "user-data", the attributes are additional custom attributes
      * ingested through BigQuery.
+     *
      * * For "cloud-retail", the attributes are product attributes generated
      * by Cloud Retail. It requires
      * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -188,8 +191,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Custom attributes for the suggestion term.
+     *
      * * For "user-data", the attributes are additional custom attributes
      * ingested through BigQuery.
+     *
      * * For "cloud-retail", the attributes are product attributes generated
      * by Cloud Retail. It requires
      * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -199,6 +204,94 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * <code>map&lt;string, .google.cloud.retail.v2alpha.CustomAttribute&gt; attributes = 2;</code>
      */
     com.google.cloud.retail.v2alpha.CustomAttribute getAttributesOrThrow(java.lang.String key);
+
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    java.util.List<com.google.cloud.retail.v2alpha.SearchResponse.Facet> getFacetsList();
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    com.google.cloud.retail.v2alpha.SearchResponse.Facet getFacets(int index);
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    int getFacetsCount();
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    java.util.List<? extends com.google.cloud.retail.v2alpha.SearchResponse.FacetOrBuilder>
+        getFacetsOrBuilderList();
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    com.google.cloud.retail.v2alpha.SearchResponse.FacetOrBuilder getFacetsOrBuilder(int index);
+
+    /**
+     *
+     *
+     * <pre>
+     * Total number of products associated with a search with this suggestion.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>int32 total_product_count = 4;</code>
+     *
+     * @return The totalProductCount.
+     */
+    int getTotalProductCount();
   }
   /**
    *
@@ -221,17 +314,13 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
 
     private CompletionResult() {
       suggestion_ = "";
+      facets_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new CompletionResult();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -351,8 +440,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Custom attributes for the suggestion term.
+     *
      * * For "user-data", the attributes are additional custom attributes
      * ingested through BigQuery.
+     *
      * * For "cloud-retail", the attributes are product attributes generated
      * by Cloud Retail. It requires
      * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -380,8 +471,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Custom attributes for the suggestion term.
+     *
      * * For "user-data", the attributes are additional custom attributes
      * ingested through BigQuery.
+     *
      * * For "cloud-retail", the attributes are product attributes generated
      * by Cloud Retail. It requires
      * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -400,8 +493,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Custom attributes for the suggestion term.
+     *
      * * For "user-data", the attributes are additional custom attributes
      * ingested through BigQuery.
+     *
      * * For "cloud-retail", the attributes are product attributes generated
      * by Cloud Retail. It requires
      * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -427,8 +522,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      *
      * <pre>
      * Custom attributes for the suggestion term.
+     *
      * * For "user-data", the attributes are additional custom attributes
      * ingested through BigQuery.
+     *
      * * For "cloud-retail", the attributes are product attributes generated
      * by Cloud Retail. It requires
      * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -451,6 +548,119 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
       return map.get(key);
     }
 
+    public static final int FACETS_FIELD_NUMBER = 3;
+
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.cloud.retail.v2alpha.SearchResponse.Facet> facets_;
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.cloud.retail.v2alpha.SearchResponse.Facet> getFacetsList() {
+      return facets_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.cloud.retail.v2alpha.SearchResponse.FacetOrBuilder>
+        getFacetsOrBuilderList() {
+      return facets_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    @java.lang.Override
+    public int getFacetsCount() {
+      return facets_.size();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.cloud.retail.v2alpha.SearchResponse.Facet getFacets(int index) {
+      return facets_.get(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Facet information for the suggestion term. Gives the number of items
+     * resulting from a search with this suggestion term for each facet.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.cloud.retail.v2alpha.SearchResponse.FacetOrBuilder getFacetsOrBuilder(
+        int index) {
+      return facets_.get(index);
+    }
+
+    public static final int TOTAL_PRODUCT_COUNT_FIELD_NUMBER = 4;
+    private int totalProductCount_ = 0;
+    /**
+     *
+     *
+     * <pre>
+     * Total number of products associated with a search with this suggestion.
+     *
+     * This is an experimental feature for limited customers. Please reach out
+     * to the support team if you would like to receive this information.
+     * </pre>
+     *
+     * <code>int32 total_product_count = 4;</code>
+     *
+     * @return The totalProductCount.
+     */
+    @java.lang.Override
+    public int getTotalProductCount() {
+      return totalProductCount_;
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -470,6 +680,12 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
       }
       com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
           output, internalGetAttributes(), AttributesDefaultEntryHolder.defaultEntry, 2);
+      for (int i = 0; i < facets_.size(); i++) {
+        output.writeMessage(3, facets_.get(i));
+      }
+      if (totalProductCount_ != 0) {
+        output.writeInt32(4, totalProductCount_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -494,6 +710,12 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
                     .build();
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, attributes__);
       }
+      for (int i = 0; i < facets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, facets_.get(i));
+      }
+      if (totalProductCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(4, totalProductCount_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -513,6 +735,8 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
 
       if (!getSuggestion().equals(other.getSuggestion())) return false;
       if (!internalGetAttributes().equals(other.internalGetAttributes())) return false;
+      if (!getFacetsList().equals(other.getFacetsList())) return false;
+      if (getTotalProductCount() != other.getTotalProductCount()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -530,6 +754,12 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
         hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
         hash = (53 * hash) + internalGetAttributes().hashCode();
       }
+      if (getFacetsCount() > 0) {
+        hash = (37 * hash) + FACETS_FIELD_NUMBER;
+        hash = (53 * hash) + getFacetsList().hashCode();
+      }
+      hash = (37 * hash) + TOTAL_PRODUCT_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalProductCount();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -697,6 +927,14 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
         bitField0_ = 0;
         suggestion_ = "";
         internalGetMutableAttributes().clear();
+        if (facetsBuilder_ == null) {
+          facets_ = java.util.Collections.emptyList();
+        } else {
+          facets_ = null;
+          facetsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalProductCount_ = 0;
         return this;
       }
 
@@ -727,11 +965,25 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
       public com.google.cloud.retail.v2alpha.CompleteQueryResponse.CompletionResult buildPartial() {
         com.google.cloud.retail.v2alpha.CompleteQueryResponse.CompletionResult result =
             new com.google.cloud.retail.v2alpha.CompleteQueryResponse.CompletionResult(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(
+          com.google.cloud.retail.v2alpha.CompleteQueryResponse.CompletionResult result) {
+        if (facetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            facets_ = java.util.Collections.unmodifiableList(facets_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.facets_ = facets_;
+        } else {
+          result.facets_ = facetsBuilder_.build();
+        }
       }
 
       private void buildPartial0(
@@ -743,6 +995,9 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.attributes_ = internalGetAttributes();
           result.attributes_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.totalProductCount_ = totalProductCount_;
         }
       }
 
@@ -805,6 +1060,36 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
         }
         internalGetMutableAttributes().mergeFrom(other.internalGetAttributes());
         bitField0_ |= 0x00000002;
+        if (facetsBuilder_ == null) {
+          if (!other.facets_.isEmpty()) {
+            if (facets_.isEmpty()) {
+              facets_ = other.facets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureFacetsIsMutable();
+              facets_.addAll(other.facets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.facets_.isEmpty()) {
+            if (facetsBuilder_.isEmpty()) {
+              facetsBuilder_.dispose();
+              facetsBuilder_ = null;
+              facets_ = other.facets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              facetsBuilder_ =
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                      ? getFacetsFieldBuilder()
+                      : null;
+            } else {
+              facetsBuilder_.addAllMessages(other.facets_);
+            }
+          }
+        }
+        if (other.getTotalProductCount() != 0) {
+          setTotalProductCount(other.getTotalProductCount());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -851,6 +1136,26 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
                   bitField0_ |= 0x00000002;
                   break;
                 } // case 18
+              case 26:
+                {
+                  com.google.cloud.retail.v2alpha.SearchResponse.Facet m =
+                      input.readMessage(
+                          com.google.cloud.retail.v2alpha.SearchResponse.Facet.parser(),
+                          extensionRegistry);
+                  if (facetsBuilder_ == null) {
+                    ensureFacetsIsMutable();
+                    facets_.add(m);
+                  } else {
+                    facetsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 26
+              case 32:
+                {
+                  totalProductCount_ = input.readInt32();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
               default:
                 {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -1013,8 +1318,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
        *
        * <pre>
        * Custom attributes for the suggestion term.
+       *
        * * For "user-data", the attributes are additional custom attributes
        * ingested through BigQuery.
+       *
        * * For "cloud-retail", the attributes are product attributes generated
        * by Cloud Retail. It requires
        * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -1043,8 +1350,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
        *
        * <pre>
        * Custom attributes for the suggestion term.
+       *
        * * For "user-data", the attributes are additional custom attributes
        * ingested through BigQuery.
+       *
        * * For "cloud-retail", the attributes are product attributes generated
        * by Cloud Retail. It requires
        * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -1064,8 +1373,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
        *
        * <pre>
        * Custom attributes for the suggestion term.
+       *
        * * For "user-data", the attributes are additional custom attributes
        * ingested through BigQuery.
+       *
        * * For "cloud-retail", the attributes are product attributes generated
        * by Cloud Retail. It requires
        * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -1092,8 +1403,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
        *
        * <pre>
        * Custom attributes for the suggestion term.
+       *
        * * For "user-data", the attributes are additional custom attributes
        * ingested through BigQuery.
+       *
        * * For "cloud-retail", the attributes are product attributes generated
        * by Cloud Retail. It requires
        * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -1127,8 +1440,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
        *
        * <pre>
        * Custom attributes for the suggestion term.
+       *
        * * For "user-data", the attributes are additional custom attributes
        * ingested through BigQuery.
+       *
        * * For "cloud-retail", the attributes are product attributes generated
        * by Cloud Retail. It requires
        * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -1157,8 +1472,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
        *
        * <pre>
        * Custom attributes for the suggestion term.
+       *
        * * For "user-data", the attributes are additional custom attributes
        * ingested through BigQuery.
+       *
        * * For "cloud-retail", the attributes are product attributes generated
        * by Cloud Retail. It requires
        * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -1185,8 +1502,10 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
        *
        * <pre>
        * Custom attributes for the suggestion term.
+       *
        * * For "user-data", the attributes are additional custom attributes
        * ingested through BigQuery.
+       *
        * * For "cloud-retail", the attributes are product attributes generated
        * by Cloud Retail. It requires
        * [UserEvent.product_details][google.cloud.retail.v2alpha.UserEvent.product_details]
@@ -1200,6 +1519,499 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
           java.util.Map<java.lang.String, com.google.cloud.retail.v2alpha.CustomAttribute> values) {
         internalGetMutableAttributes().getMutableMap().putAll(values);
         bitField0_ |= 0x00000002;
+        return this;
+      }
+
+      private java.util.List<com.google.cloud.retail.v2alpha.SearchResponse.Facet> facets_ =
+          java.util.Collections.emptyList();
+
+      private void ensureFacetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          facets_ =
+              new java.util.ArrayList<com.google.cloud.retail.v2alpha.SearchResponse.Facet>(
+                  facets_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.cloud.retail.v2alpha.SearchResponse.Facet,
+              com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder,
+              com.google.cloud.retail.v2alpha.SearchResponse.FacetOrBuilder>
+          facetsBuilder_;
+
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public java.util.List<com.google.cloud.retail.v2alpha.SearchResponse.Facet> getFacetsList() {
+        if (facetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(facets_);
+        } else {
+          return facetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public int getFacetsCount() {
+        if (facetsBuilder_ == null) {
+          return facets_.size();
+        } else {
+          return facetsBuilder_.getCount();
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public com.google.cloud.retail.v2alpha.SearchResponse.Facet getFacets(int index) {
+        if (facetsBuilder_ == null) {
+          return facets_.get(index);
+        } else {
+          return facetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public Builder setFacets(
+          int index, com.google.cloud.retail.v2alpha.SearchResponse.Facet value) {
+        if (facetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFacetsIsMutable();
+          facets_.set(index, value);
+          onChanged();
+        } else {
+          facetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public Builder setFacets(
+          int index, com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder builderForValue) {
+        if (facetsBuilder_ == null) {
+          ensureFacetsIsMutable();
+          facets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          facetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public Builder addFacets(com.google.cloud.retail.v2alpha.SearchResponse.Facet value) {
+        if (facetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFacetsIsMutable();
+          facets_.add(value);
+          onChanged();
+        } else {
+          facetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public Builder addFacets(
+          int index, com.google.cloud.retail.v2alpha.SearchResponse.Facet value) {
+        if (facetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFacetsIsMutable();
+          facets_.add(index, value);
+          onChanged();
+        } else {
+          facetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public Builder addFacets(
+          com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder builderForValue) {
+        if (facetsBuilder_ == null) {
+          ensureFacetsIsMutable();
+          facets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          facetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public Builder addFacets(
+          int index, com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder builderForValue) {
+        if (facetsBuilder_ == null) {
+          ensureFacetsIsMutable();
+          facets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          facetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public Builder addAllFacets(
+          java.lang.Iterable<? extends com.google.cloud.retail.v2alpha.SearchResponse.Facet>
+              values) {
+        if (facetsBuilder_ == null) {
+          ensureFacetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(values, facets_);
+          onChanged();
+        } else {
+          facetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public Builder clearFacets() {
+        if (facetsBuilder_ == null) {
+          facets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          facetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public Builder removeFacets(int index) {
+        if (facetsBuilder_ == null) {
+          ensureFacetsIsMutable();
+          facets_.remove(index);
+          onChanged();
+        } else {
+          facetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder getFacetsBuilder(
+          int index) {
+        return getFacetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public com.google.cloud.retail.v2alpha.SearchResponse.FacetOrBuilder getFacetsOrBuilder(
+          int index) {
+        if (facetsBuilder_ == null) {
+          return facets_.get(index);
+        } else {
+          return facetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public java.util.List<? extends com.google.cloud.retail.v2alpha.SearchResponse.FacetOrBuilder>
+          getFacetsOrBuilderList() {
+        if (facetsBuilder_ != null) {
+          return facetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(facets_);
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder addFacetsBuilder() {
+        return getFacetsFieldBuilder()
+            .addBuilder(com.google.cloud.retail.v2alpha.SearchResponse.Facet.getDefaultInstance());
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder addFacetsBuilder(
+          int index) {
+        return getFacetsFieldBuilder()
+            .addBuilder(
+                index, com.google.cloud.retail.v2alpha.SearchResponse.Facet.getDefaultInstance());
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Facet information for the suggestion term. Gives the number of items
+       * resulting from a search with this suggestion term for each facet.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>repeated .google.cloud.retail.v2alpha.SearchResponse.Facet facets = 3;</code>
+       */
+      public java.util.List<com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder>
+          getFacetsBuilderList() {
+        return getFacetsFieldBuilder().getBuilderList();
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.cloud.retail.v2alpha.SearchResponse.Facet,
+              com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder,
+              com.google.cloud.retail.v2alpha.SearchResponse.FacetOrBuilder>
+          getFacetsFieldBuilder() {
+        if (facetsBuilder_ == null) {
+          facetsBuilder_ =
+              new com.google.protobuf.RepeatedFieldBuilderV3<
+                  com.google.cloud.retail.v2alpha.SearchResponse.Facet,
+                  com.google.cloud.retail.v2alpha.SearchResponse.Facet.Builder,
+                  com.google.cloud.retail.v2alpha.SearchResponse.FacetOrBuilder>(
+                  facets_, ((bitField0_ & 0x00000004) != 0), getParentForChildren(), isClean());
+          facets_ = null;
+        }
+        return facetsBuilder_;
+      }
+
+      private int totalProductCount_;
+      /**
+       *
+       *
+       * <pre>
+       * Total number of products associated with a search with this suggestion.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>int32 total_product_count = 4;</code>
+       *
+       * @return The totalProductCount.
+       */
+      @java.lang.Override
+      public int getTotalProductCount() {
+        return totalProductCount_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Total number of products associated with a search with this suggestion.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>int32 total_product_count = 4;</code>
+       *
+       * @param value The totalProductCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalProductCount(int value) {
+
+        totalProductCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Total number of products associated with a search with this suggestion.
+       *
+       * This is an experimental feature for limited customers. Please reach out
+       * to the support team if you would like to receive this information.
+       * </pre>
+       *
+       * <code>int32 total_product_count = 4;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalProductCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        totalProductCount_ = 0;
+        onChanged();
         return this;
       }
 
@@ -1328,11 +2140,6 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RecentSearchResult();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -2017,18 +2824,13 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
     }
 
     private AttributeResult() {
-      suggestions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      suggestions_ = com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new AttributeResult();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -2049,7 +2851,8 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
     public static final int SUGGESTIONS_FIELD_NUMBER = 1;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList suggestions_;
+    private com.google.protobuf.LazyStringArrayList suggestions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      *
      *
@@ -2320,8 +3123,7 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        suggestions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        suggestions_ = com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -2352,7 +3154,6 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
       public com.google.cloud.retail.v2alpha.CompleteQueryResponse.AttributeResult buildPartial() {
         com.google.cloud.retail.v2alpha.CompleteQueryResponse.AttributeResult result =
             new com.google.cloud.retail.v2alpha.CompleteQueryResponse.AttributeResult(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
@@ -2360,18 +3161,13 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
         return result;
       }
 
-      private void buildPartialRepeatedFields(
-          com.google.cloud.retail.v2alpha.CompleteQueryResponse.AttributeResult result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          suggestions_ = suggestions_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.suggestions_ = suggestions_;
-      }
-
       private void buildPartial0(
           com.google.cloud.retail.v2alpha.CompleteQueryResponse.AttributeResult result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          suggestions_.makeImmutable();
+          result.suggestions_ = suggestions_;
+        }
       }
 
       @java.lang.Override
@@ -2429,7 +3225,7 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
         if (!other.suggestions_.isEmpty()) {
           if (suggestions_.isEmpty()) {
             suggestions_ = other.suggestions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureSuggestionsIsMutable();
             suggestions_.addAll(other.suggestions_);
@@ -2488,14 +3284,14 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
 
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList suggestions_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList suggestions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensureSuggestionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!suggestions_.isModifiable()) {
           suggestions_ = new com.google.protobuf.LazyStringArrayList(suggestions_);
-          bitField0_ |= 0x00000001;
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        *
@@ -2509,7 +3305,8 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
        * @return A list containing the suggestions.
        */
       public com.google.protobuf.ProtocolStringList getSuggestionsList() {
-        return suggestions_.getUnmodifiableView();
+        suggestions_.makeImmutable();
+        return suggestions_;
       }
       /**
        *
@@ -2574,6 +3371,7 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
         }
         ensureSuggestionsIsMutable();
         suggestions_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2595,6 +3393,7 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
         }
         ensureSuggestionsIsMutable();
         suggestions_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2613,6 +3412,7 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
       public Builder addAllSuggestions(java.lang.Iterable<java.lang.String> values) {
         ensureSuggestionsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, suggestions_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2628,8 +3428,9 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
        * @return This builder for chaining.
        */
       public Builder clearSuggestions() {
-        suggestions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        suggestions_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        ;
         onChanged();
         return this;
       }
@@ -2652,6 +3453,7 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
         checkByteStringIsUtf8(value);
         ensureSuggestionsIsMutable();
         suggestions_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2884,16 +3686,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    * Matched recent searches of this user. The maximum number of recent searches
    * is 10. This field is a restricted feature. Contact Retail Search support
    * team if you are interested in enabling it.
+   *
    * This feature is only available when
    * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
    * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
    * imported. The recent searches satisfy the follow rules:
+   *
    *  * They are ordered from latest to oldest.
+   *
    *  * They are matched with
    *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
    *  case insensitively.
+   *
    *  * They are transformed to lower case.
+   *
    *  * They are UTF-8 safe.
+   *
    * Recent searches are deduplicated. More recent searches will be reserved
    * when duplication happens.
    * </pre>
@@ -2914,16 +3722,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    * Matched recent searches of this user. The maximum number of recent searches
    * is 10. This field is a restricted feature. Contact Retail Search support
    * team if you are interested in enabling it.
+   *
    * This feature is only available when
    * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
    * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
    * imported. The recent searches satisfy the follow rules:
+   *
    *  * They are ordered from latest to oldest.
+   *
    *  * They are matched with
    *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
    *  case insensitively.
+   *
    *  * They are transformed to lower case.
+   *
    *  * They are UTF-8 safe.
+   *
    * Recent searches are deduplicated. More recent searches will be reserved
    * when duplication happens.
    * </pre>
@@ -2946,16 +3760,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    * Matched recent searches of this user. The maximum number of recent searches
    * is 10. This field is a restricted feature. Contact Retail Search support
    * team if you are interested in enabling it.
+   *
    * This feature is only available when
    * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
    * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
    * imported. The recent searches satisfy the follow rules:
+   *
    *  * They are ordered from latest to oldest.
+   *
    *  * They are matched with
    *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
    *  case insensitively.
+   *
    *  * They are transformed to lower case.
+   *
    *  * They are UTF-8 safe.
+   *
    * Recent searches are deduplicated. More recent searches will be reserved
    * when duplication happens.
    * </pre>
@@ -2975,16 +3795,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    * Matched recent searches of this user. The maximum number of recent searches
    * is 10. This field is a restricted feature. Contact Retail Search support
    * team if you are interested in enabling it.
+   *
    * This feature is only available when
    * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
    * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
    * imported. The recent searches satisfy the follow rules:
+   *
    *  * They are ordered from latest to oldest.
+   *
    *  * They are matched with
    *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
    *  case insensitively.
+   *
    *  * They are transformed to lower case.
+   *
    *  * They are UTF-8 safe.
+   *
    * Recent searches are deduplicated. More recent searches will be reserved
    * when duplication happens.
    * </pre>
@@ -3005,16 +3831,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    * Matched recent searches of this user. The maximum number of recent searches
    * is 10. This field is a restricted feature. Contact Retail Search support
    * team if you are interested in enabling it.
+   *
    * This feature is only available when
    * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
    * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
    * imported. The recent searches satisfy the follow rules:
+   *
    *  * They are ordered from latest to oldest.
+   *
    *  * They are matched with
    *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
    *  case insensitively.
+   *
    *  * They are transformed to lower case.
+   *
    *  * They are UTF-8 safe.
+   *
    * Recent searches are deduplicated. More recent searches will be reserved
    * when duplication happens.
    * </pre>
@@ -3072,8 +3904,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    * <pre>
    * A map of matched attribute suggestions. This field is only available for
    * "cloud-retail" dataset.
+   *
    * Current supported keys:
+   *
    * * `brands`
+   *
    * * `categories`
    * </pre>
    *
@@ -3102,8 +3937,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    * <pre>
    * A map of matched attribute suggestions. This field is only available for
    * "cloud-retail" dataset.
+   *
    * Current supported keys:
+   *
    * * `brands`
+   *
    * * `categories`
    * </pre>
    *
@@ -3123,8 +3961,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    * <pre>
    * A map of matched attribute suggestions. This field is only available for
    * "cloud-retail" dataset.
+   *
    * Current supported keys:
+   *
    * * `brands`
+   *
    * * `categories`
    * </pre>
    *
@@ -3152,8 +3993,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    * <pre>
    * A map of matched attribute suggestions. This field is only available for
    * "cloud-retail" dataset.
+   *
    * Current supported keys:
+   *
    * * `brands`
+   *
    * * `categories`
    * </pre>
    *
@@ -3385,7 +4229,7 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
    *
    *
    * <pre>
-   * Response of the auto-complete query.
+   * Response of the autocomplete query.
    * </pre>
    *
    * Protobuf type {@code google.cloud.retail.v2alpha.CompleteQueryResponse}
@@ -4308,16 +5152,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4341,16 +5191,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4373,16 +5229,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4406,16 +5268,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4445,16 +5313,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4483,16 +5357,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4522,16 +5402,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4561,16 +5447,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4598,16 +5490,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4636,16 +5534,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4674,16 +5578,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4709,16 +5619,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4744,16 +5660,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4773,16 +5695,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4806,16 +5734,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4841,16 +5775,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4873,16 +5813,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4906,16 +5852,22 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * Matched recent searches of this user. The maximum number of recent searches
      * is 10. This field is a restricted feature. Contact Retail Search support
      * team if you are interested in enabling it.
+     *
      * This feature is only available when
      * [CompleteQueryRequest.visitor_id][google.cloud.retail.v2alpha.CompleteQueryRequest.visitor_id]
      * field is set and [UserEvent][google.cloud.retail.v2alpha.UserEvent] is
      * imported. The recent searches satisfy the follow rules:
+     *
      *  * They are ordered from latest to oldest.
+     *
      *  * They are matched with
      *  [CompleteQueryRequest.query][google.cloud.retail.v2alpha.CompleteQueryRequest.query]
      *  case insensitively.
+     *
      *  * They are transformed to lower case.
+     *
      *  * They are UTF-8 safe.
+     *
      * Recent searches are deduplicated. More recent searches will be reserved
      * when duplication happens.
      * </pre>
@@ -4989,8 +5941,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * <pre>
      * A map of matched attribute suggestions. This field is only available for
      * "cloud-retail" dataset.
+     *
      * Current supported keys:
+     *
      * * `brands`
+     *
      * * `categories`
      * </pre>
      *
@@ -5019,8 +5974,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * <pre>
      * A map of matched attribute suggestions. This field is only available for
      * "cloud-retail" dataset.
+     *
      * Current supported keys:
+     *
      * * `brands`
+     *
      * * `categories`
      * </pre>
      *
@@ -5040,8 +5998,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * <pre>
      * A map of matched attribute suggestions. This field is only available for
      * "cloud-retail" dataset.
+     *
      * Current supported keys:
+     *
      * * `brands`
+     *
      * * `categories`
      * </pre>
      *
@@ -5070,8 +6031,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * <pre>
      * A map of matched attribute suggestions. This field is only available for
      * "cloud-retail" dataset.
+     *
      * Current supported keys:
+     *
      * * `brands`
+     *
      * * `categories`
      * </pre>
      *
@@ -5106,8 +6070,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * <pre>
      * A map of matched attribute suggestions. This field is only available for
      * "cloud-retail" dataset.
+     *
      * Current supported keys:
+     *
      * * `brands`
+     *
      * * `categories`
      * </pre>
      *
@@ -5136,8 +6103,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * <pre>
      * A map of matched attribute suggestions. This field is only available for
      * "cloud-retail" dataset.
+     *
      * Current supported keys:
+     *
      * * `brands`
+     *
      * * `categories`
      * </pre>
      *
@@ -5164,8 +6134,11 @@ public final class CompleteQueryResponse extends com.google.protobuf.GeneratedMe
      * <pre>
      * A map of matched attribute suggestions. This field is only available for
      * "cloud-retail" dataset.
+     *
      * Current supported keys:
+     *
      * * `brands`
+     *
      * * `categories`
      * </pre>
      *

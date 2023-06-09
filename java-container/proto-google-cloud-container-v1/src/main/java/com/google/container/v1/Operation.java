@@ -60,11 +60,6 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     return new Operation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.container.v1.ClusterServiceProto
         .internal_static_google_container_v1_Operation_descriptor;
@@ -285,7 +280,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Operation type.
+   * Operation type categorizes the operation.
    * </pre>
    *
    * Protobuf enum {@code google.container.v1.Operation.Type}
@@ -305,7 +300,11 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Cluster create.
+     * The cluster is being created. The cluster should be assumed to be
+     * unusable until the operation finishes.
+     *
+     * In the event of the operation failing, the cluster will enter the [ERROR
+     * state][Cluster.Status.ERROR] and eventually be deleted.
      * </pre>
      *
      * <code>CREATE_CLUSTER = 1;</code>
@@ -315,7 +314,12 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Cluster delete.
+     * The cluster is being deleted. The cluster should be assumed to be
+     * unusable as soon as this operation starts.
+     *
+     * In the event of the operation failing, the cluster will enter the [ERROR
+     * state][Cluster.Status.ERROR] and the deletion will be automatically
+     * retried until completed.
      * </pre>
      *
      * <code>DELETE_CLUSTER = 2;</code>
@@ -325,7 +329,13 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * A master upgrade.
+     * The [cluster
+     * version][google.container.v1.ClusterUpdate.desired_master_version] is
+     * being updated. Note that this includes "upgrades" to the same version,
+     * which are simply a recreation. This also includes
+     * [auto-upgrades](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-upgrades#upgrading_automatically).
+     * For more details, see [documentation on cluster
+     * upgrades](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-upgrades#cluster_upgrades).
      * </pre>
      *
      * <code>UPGRADE_MASTER = 3;</code>
@@ -335,7 +345,17 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * A node upgrade.
+     * A node pool is being updated. Despite calling this an "upgrade", this
+     * includes most forms of updates to node pools. This also includes
+     * [auto-upgrades](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-upgrades).
+     *
+     * This operation sets the
+     * [progress][google.container.v1.Operation.progress] field and may be
+     * [canceled][google.container.v1.ClusterManager.CancelOperation].
+     *
+     * The upgrade strategy depends on [node pool
+     * configuration](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies).
+     * The nodes are generally still usable during this operation.
      * </pre>
      *
      * <code>UPGRADE_NODES = 4;</code>
@@ -345,7 +365,10 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Cluster repair.
+     * A problem has been detected with the control plane and is being repaired.
+     * This operation type is initiated by GKE. For more details, see
+     * [documentation on
+     * repairs](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions#repairs).
      * </pre>
      *
      * <code>REPAIR_CLUSTER = 5;</code>
@@ -355,7 +378,19 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Cluster update.
+     * The cluster is being updated. This is a broad category of operations and
+     * includes operations that only change metadata as well as those that must
+     * recreate the entire cluster. If the control plane must be recreated, this
+     * will cause temporary downtime for zonal clusters.
+     *
+     * Some features require recreating the nodes as well. Those will be
+     * recreated as separate operations and the update may not be completely
+     * functional until the node pools recreations finish. Node recreations will
+     * generally follow [maintenance
+     * policies](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions).
+     *
+     * Some GKE-initiated operations use this type. This includes certain types
+     * of auto-upgrades and incident mitigations.
      * </pre>
      *
      * <code>UPDATE_CLUSTER = 6;</code>
@@ -365,7 +400,13 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Node pool create.
+     * A node pool is being created. The node pool should be assumed to be
+     * unusable until this operation finishes. In the event of an error, the
+     * node pool may be partially created.
+     *
+     * If enabled, [node
+     * autoprovisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+     * may have automatically initiated such operations.
      * </pre>
      *
      * <code>CREATE_NODE_POOL = 7;</code>
@@ -375,7 +416,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Node pool delete.
+     * The node pool is being deleted. The node pool should be assumed to be
+     * unusable as soon as this operation starts.
      * </pre>
      *
      * <code>DELETE_NODE_POOL = 8;</code>
@@ -385,7 +427,9 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Set node pool management.
+     * The node pool's [manamagent][google.container.v1.NodePool.management]
+     * field is being updated. These operations only update metadata and may be
+     * concurrent with most other operations.
      * </pre>
      *
      * <code>SET_NODE_POOL_MANAGEMENT = 9;</code>
@@ -395,7 +439,11 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Automatic node pool repair.
+     * A problem has been detected with nodes and [they are being
+     * repaired](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-repair).
+     * This operation type is initiated by GKE, typically automatically. This
+     * operation may be concurrent with other operations and there may be
+     * multiple repairs occurring on the same node pool.
      * </pre>
      *
      * <code>AUTO_REPAIR_NODES = 10;</code>
@@ -405,37 +453,44 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Automatic node upgrade.
+     * Unused. Automatic node upgrade uses
+     * [UPGRADE_NODES][google.container.v1.Operation.Type.UPGRADE_NODES].
      * </pre>
      *
-     * <code>AUTO_UPGRADE_NODES = 11;</code>
+     * <code>AUTO_UPGRADE_NODES = 11 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     AUTO_UPGRADE_NODES(11),
     /**
      *
      *
      * <pre>
-     * Set labels.
+     * Unused. Updating labels uses
+     * [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
      * </pre>
      *
-     * <code>SET_LABELS = 12;</code>
+     * <code>SET_LABELS = 12 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     SET_LABELS(12),
     /**
      *
      *
      * <pre>
-     * Set/generate master auth materials
+     * Unused. Updating master auth uses
+     * [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
      * </pre>
      *
-     * <code>SET_MASTER_AUTH = 13;</code>
+     * <code>SET_MASTER_AUTH = 13 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     SET_MASTER_AUTH(13),
     /**
      *
      *
      * <pre>
-     * Set node pool size.
+     * The node pool is being resized. With the exception of resizing to or from
+     * size zero, the node pool is generally usable during this operation.
      * </pre>
      *
      * <code>SET_NODE_POOL_SIZE = 14;</code>
@@ -445,22 +500,41 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Updates network policy for a cluster.
+     * Unused. Updating network policy uses
+     * [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
      * </pre>
      *
-     * <code>SET_NETWORK_POLICY = 15;</code>
+     * <code>SET_NETWORK_POLICY = 15 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     SET_NETWORK_POLICY(15),
     /**
      *
      *
      * <pre>
-     * Set the maintenance policy.
+     * Unused. Updating maintenance policy uses
+     * [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
      * </pre>
      *
-     * <code>SET_MAINTENANCE_POLICY = 16;</code>
+     * <code>SET_MAINTENANCE_POLICY = 16 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     SET_MAINTENANCE_POLICY(16),
+    /**
+     *
+     *
+     * <pre>
+     * The control plane is being resized. This operation type is initiated by
+     * GKE. These operations are often performed preemptively to ensure that the
+     * control plane has sufficient resources and is not typically an indication
+     * of issues. For more details, see
+     * [documentation on
+     * resizes](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions#repairs).
+     * </pre>
+     *
+     * <code>RESIZE_CLUSTER = 18;</code>
+     */
+    RESIZE_CLUSTER(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -478,7 +552,11 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Cluster create.
+     * The cluster is being created. The cluster should be assumed to be
+     * unusable until the operation finishes.
+     *
+     * In the event of the operation failing, the cluster will enter the [ERROR
+     * state][Cluster.Status.ERROR] and eventually be deleted.
      * </pre>
      *
      * <code>CREATE_CLUSTER = 1;</code>
@@ -488,7 +566,12 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Cluster delete.
+     * The cluster is being deleted. The cluster should be assumed to be
+     * unusable as soon as this operation starts.
+     *
+     * In the event of the operation failing, the cluster will enter the [ERROR
+     * state][Cluster.Status.ERROR] and the deletion will be automatically
+     * retried until completed.
      * </pre>
      *
      * <code>DELETE_CLUSTER = 2;</code>
@@ -498,7 +581,13 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * A master upgrade.
+     * The [cluster
+     * version][google.container.v1.ClusterUpdate.desired_master_version] is
+     * being updated. Note that this includes "upgrades" to the same version,
+     * which are simply a recreation. This also includes
+     * [auto-upgrades](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-upgrades#upgrading_automatically).
+     * For more details, see [documentation on cluster
+     * upgrades](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-upgrades#cluster_upgrades).
      * </pre>
      *
      * <code>UPGRADE_MASTER = 3;</code>
@@ -508,7 +597,17 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * A node upgrade.
+     * A node pool is being updated. Despite calling this an "upgrade", this
+     * includes most forms of updates to node pools. This also includes
+     * [auto-upgrades](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-upgrades).
+     *
+     * This operation sets the
+     * [progress][google.container.v1.Operation.progress] field and may be
+     * [canceled][google.container.v1.ClusterManager.CancelOperation].
+     *
+     * The upgrade strategy depends on [node pool
+     * configuration](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pool-upgrade-strategies).
+     * The nodes are generally still usable during this operation.
      * </pre>
      *
      * <code>UPGRADE_NODES = 4;</code>
@@ -518,7 +617,10 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Cluster repair.
+     * A problem has been detected with the control plane and is being repaired.
+     * This operation type is initiated by GKE. For more details, see
+     * [documentation on
+     * repairs](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions#repairs).
      * </pre>
      *
      * <code>REPAIR_CLUSTER = 5;</code>
@@ -528,7 +630,19 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Cluster update.
+     * The cluster is being updated. This is a broad category of operations and
+     * includes operations that only change metadata as well as those that must
+     * recreate the entire cluster. If the control plane must be recreated, this
+     * will cause temporary downtime for zonal clusters.
+     *
+     * Some features require recreating the nodes as well. Those will be
+     * recreated as separate operations and the update may not be completely
+     * functional until the node pools recreations finish. Node recreations will
+     * generally follow [maintenance
+     * policies](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions).
+     *
+     * Some GKE-initiated operations use this type. This includes certain types
+     * of auto-upgrades and incident mitigations.
      * </pre>
      *
      * <code>UPDATE_CLUSTER = 6;</code>
@@ -538,7 +652,13 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Node pool create.
+     * A node pool is being created. The node pool should be assumed to be
+     * unusable until this operation finishes. In the event of an error, the
+     * node pool may be partially created.
+     *
+     * If enabled, [node
+     * autoprovisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+     * may have automatically initiated such operations.
      * </pre>
      *
      * <code>CREATE_NODE_POOL = 7;</code>
@@ -548,7 +668,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Node pool delete.
+     * The node pool is being deleted. The node pool should be assumed to be
+     * unusable as soon as this operation starts.
      * </pre>
      *
      * <code>DELETE_NODE_POOL = 8;</code>
@@ -558,7 +679,9 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Set node pool management.
+     * The node pool's [manamagent][google.container.v1.NodePool.management]
+     * field is being updated. These operations only update metadata and may be
+     * concurrent with most other operations.
      * </pre>
      *
      * <code>SET_NODE_POOL_MANAGEMENT = 9;</code>
@@ -568,7 +691,11 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Automatic node pool repair.
+     * A problem has been detected with nodes and [they are being
+     * repaired](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-repair).
+     * This operation type is initiated by GKE, typically automatically. This
+     * operation may be concurrent with other operations and there may be
+     * multiple repairs occurring on the same node pool.
      * </pre>
      *
      * <code>AUTO_REPAIR_NODES = 10;</code>
@@ -578,37 +705,41 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Automatic node upgrade.
+     * Unused. Automatic node upgrade uses
+     * [UPGRADE_NODES][google.container.v1.Operation.Type.UPGRADE_NODES].
      * </pre>
      *
-     * <code>AUTO_UPGRADE_NODES = 11;</code>
+     * <code>AUTO_UPGRADE_NODES = 11 [deprecated = true];</code>
      */
-    public static final int AUTO_UPGRADE_NODES_VALUE = 11;
+    @java.lang.Deprecated public static final int AUTO_UPGRADE_NODES_VALUE = 11;
     /**
      *
      *
      * <pre>
-     * Set labels.
+     * Unused. Updating labels uses
+     * [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
      * </pre>
      *
-     * <code>SET_LABELS = 12;</code>
+     * <code>SET_LABELS = 12 [deprecated = true];</code>
      */
-    public static final int SET_LABELS_VALUE = 12;
+    @java.lang.Deprecated public static final int SET_LABELS_VALUE = 12;
     /**
      *
      *
      * <pre>
-     * Set/generate master auth materials
+     * Unused. Updating master auth uses
+     * [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
      * </pre>
      *
-     * <code>SET_MASTER_AUTH = 13;</code>
+     * <code>SET_MASTER_AUTH = 13 [deprecated = true];</code>
      */
-    public static final int SET_MASTER_AUTH_VALUE = 13;
+    @java.lang.Deprecated public static final int SET_MASTER_AUTH_VALUE = 13;
     /**
      *
      *
      * <pre>
-     * Set node pool size.
+     * The node pool is being resized. With the exception of resizing to or from
+     * size zero, the node pool is generally usable during this operation.
      * </pre>
      *
      * <code>SET_NODE_POOL_SIZE = 14;</code>
@@ -618,22 +749,39 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Updates network policy for a cluster.
+     * Unused. Updating network policy uses
+     * [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
      * </pre>
      *
-     * <code>SET_NETWORK_POLICY = 15;</code>
+     * <code>SET_NETWORK_POLICY = 15 [deprecated = true];</code>
      */
-    public static final int SET_NETWORK_POLICY_VALUE = 15;
+    @java.lang.Deprecated public static final int SET_NETWORK_POLICY_VALUE = 15;
     /**
      *
      *
      * <pre>
-     * Set the maintenance policy.
+     * Unused. Updating maintenance policy uses
+     * [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
      * </pre>
      *
-     * <code>SET_MAINTENANCE_POLICY = 16;</code>
+     * <code>SET_MAINTENANCE_POLICY = 16 [deprecated = true];</code>
      */
-    public static final int SET_MAINTENANCE_POLICY_VALUE = 16;
+    @java.lang.Deprecated public static final int SET_MAINTENANCE_POLICY_VALUE = 16;
+    /**
+     *
+     *
+     * <pre>
+     * The control plane is being resized. This operation type is initiated by
+     * GKE. These operations are often performed preemptively to ensure that the
+     * control plane has sufficient resources and is not typically an indication
+     * of issues. For more details, see
+     * [documentation on
+     * resizes](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions#repairs).
+     * </pre>
+     *
+     * <code>RESIZE_CLUSTER = 18;</code>
+     */
+    public static final int RESIZE_CLUSTER_VALUE = 18;
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -693,6 +841,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
           return SET_NETWORK_POLICY;
         case 16:
           return SET_MAINTENANCE_POLICY;
+        case 18:
+          return RESIZE_CLUSTER;
         default:
           return null;
       }
@@ -813,7 +963,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * <code>string zone = 2 [deprecated = true];</code>
    *
    * @deprecated google.container.v1.Operation.zone is deprecated. See
-   *     google/container/v1/cluster_service.proto;l=2111
+   *     google/container/v1/cluster_service.proto;l=2309
    * @return The zone.
    */
   @java.lang.Override
@@ -841,7 +991,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * <code>string zone = 2 [deprecated = true];</code>
    *
    * @deprecated google.container.v1.Operation.zone is deprecated. See
-   *     google/container/v1/cluster_service.proto;l=2111
+   *     google/container/v1/cluster_service.proto;l=2309
    * @return The bytes for zone.
    */
   @java.lang.Override
@@ -996,7 +1146,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * </code>
    *
    * @deprecated google.container.v1.Operation.status_message is deprecated. See
-   *     google/container/v1/cluster_service.proto;l=2124
+   *     google/container/v1/cluster_service.proto;l=2322
    * @return The statusMessage.
    */
   @java.lang.Override
@@ -1025,7 +1175,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    * </code>
    *
    * @deprecated google.container.v1.Operation.status_message is deprecated. See
-   *     google/container/v1/cluster_service.proto;l=2124
+   *     google/container/v1/cluster_service.proto;l=2322
    * @return The bytes for statusMessage.
    */
   @java.lang.Override
@@ -1050,7 +1200,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Server-defined URL for the resource.
+   * Server-defined URI for the operation. Example:
+   * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`.
    * </pre>
    *
    * <code>string self_link = 6;</code>
@@ -1073,7 +1224,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Server-defined URL for the resource.
+   * Server-defined URI for the operation. Example:
+   * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`.
    * </pre>
    *
    * <code>string self_link = 6;</code>
@@ -1101,7 +1253,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Server-defined URL for the target of the operation.
+   * Server-defined URI for the target of the operation. The format of this is a
+   * URI to the resource being modified (such as a cluster, node pool, or node).
+   * For node pool repairs, there may be multiple nodes being repaired, but only
+   * one will be the target.
+   *
+   * Examples:
+   *
+   * -
+   * ##
+   * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
+   *
+   * ##
+   * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
+   *
+   * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
    * </pre>
    *
    * <code>string target_link = 7;</code>
@@ -1124,7 +1290,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Server-defined URL for the target of the operation.
+   * Server-defined URI for the target of the operation. The format of this is a
+   * URI to the resource being modified (such as a cluster, node pool, or node).
+   * For node pool repairs, there may be multiple nodes being repaired, but only
+   * one will be the target.
+   *
+   * Examples:
+   *
+   * -
+   * ##
+   * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
+   *
+   * ##
+   * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
+   *
+   * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
    * </pre>
    *
    * <code>string target_link = 7;</code>
@@ -2490,7 +2670,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 2 [deprecated = true];</code>
      *
      * @deprecated google.container.v1.Operation.zone is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2111
+     *     google/container/v1/cluster_service.proto;l=2309
      * @return The zone.
      */
     @java.lang.Deprecated
@@ -2517,7 +2697,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 2 [deprecated = true];</code>
      *
      * @deprecated google.container.v1.Operation.zone is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2111
+     *     google/container/v1/cluster_service.proto;l=2309
      * @return The bytes for zone.
      */
     @java.lang.Deprecated
@@ -2544,7 +2724,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 2 [deprecated = true];</code>
      *
      * @deprecated google.container.v1.Operation.zone is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2111
+     *     google/container/v1/cluster_service.proto;l=2309
      * @param value The zone to set.
      * @return This builder for chaining.
      */
@@ -2570,7 +2750,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 2 [deprecated = true];</code>
      *
      * @deprecated google.container.v1.Operation.zone is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2111
+     *     google/container/v1/cluster_service.proto;l=2309
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -2592,7 +2772,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 2 [deprecated = true];</code>
      *
      * @deprecated google.container.v1.Operation.zone is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2111
+     *     google/container/v1/cluster_service.proto;l=2309
      * @param value The bytes for zone to set.
      * @return This builder for chaining.
      */
@@ -2908,7 +3088,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </code>
      *
      * @deprecated google.container.v1.Operation.status_message is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2124
+     *     google/container/v1/cluster_service.proto;l=2322
      * @return The statusMessage.
      */
     @java.lang.Deprecated
@@ -2936,7 +3116,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </code>
      *
      * @deprecated google.container.v1.Operation.status_message is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2124
+     *     google/container/v1/cluster_service.proto;l=2322
      * @return The bytes for statusMessage.
      */
     @java.lang.Deprecated
@@ -2964,7 +3144,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </code>
      *
      * @deprecated google.container.v1.Operation.status_message is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2124
+     *     google/container/v1/cluster_service.proto;l=2322
      * @param value The statusMessage to set.
      * @return This builder for chaining.
      */
@@ -2991,7 +3171,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </code>
      *
      * @deprecated google.container.v1.Operation.status_message is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2124
+     *     google/container/v1/cluster_service.proto;l=2322
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -3014,7 +3194,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      * </code>
      *
      * @deprecated google.container.v1.Operation.status_message is deprecated. See
-     *     google/container/v1/cluster_service.proto;l=2124
+     *     google/container/v1/cluster_service.proto;l=2322
      * @param value The bytes for statusMessage to set.
      * @return This builder for chaining.
      */
@@ -3035,7 +3215,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the resource.
+     * Server-defined URI for the operation. Example:
+     * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`.
      * </pre>
      *
      * <code>string self_link = 6;</code>
@@ -3057,7 +3238,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the resource.
+     * Server-defined URI for the operation. Example:
+     * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`.
      * </pre>
      *
      * <code>string self_link = 6;</code>
@@ -3079,7 +3261,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the resource.
+     * Server-defined URI for the operation. Example:
+     * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`.
      * </pre>
      *
      * <code>string self_link = 6;</code>
@@ -3100,7 +3283,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the resource.
+     * Server-defined URI for the operation. Example:
+     * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`.
      * </pre>
      *
      * <code>string self_link = 6;</code>
@@ -3117,7 +3301,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the resource.
+     * Server-defined URI for the operation. Example:
+     * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`.
      * </pre>
      *
      * <code>string self_link = 6;</code>
@@ -3141,7 +3326,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the target of the operation.
+     * Server-defined URI for the target of the operation. The format of this is a
+     * URI to the resource being modified (such as a cluster, node pool, or node).
+     * For node pool repairs, there may be multiple nodes being repaired, but only
+     * one will be the target.
+     *
+     * Examples:
+     *
+     * -
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
+     *
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
+     *
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
      * </pre>
      *
      * <code>string target_link = 7;</code>
@@ -3163,7 +3362,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the target of the operation.
+     * Server-defined URI for the target of the operation. The format of this is a
+     * URI to the resource being modified (such as a cluster, node pool, or node).
+     * For node pool repairs, there may be multiple nodes being repaired, but only
+     * one will be the target.
+     *
+     * Examples:
+     *
+     * -
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
+     *
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
+     *
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
      * </pre>
      *
      * <code>string target_link = 7;</code>
@@ -3185,7 +3398,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the target of the operation.
+     * Server-defined URI for the target of the operation. The format of this is a
+     * URI to the resource being modified (such as a cluster, node pool, or node).
+     * For node pool repairs, there may be multiple nodes being repaired, but only
+     * one will be the target.
+     *
+     * Examples:
+     *
+     * -
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
+     *
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
+     *
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
      * </pre>
      *
      * <code>string target_link = 7;</code>
@@ -3206,7 +3433,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the target of the operation.
+     * Server-defined URI for the target of the operation. The format of this is a
+     * URI to the resource being modified (such as a cluster, node pool, or node).
+     * For node pool repairs, there may be multiple nodes being repaired, but only
+     * one will be the target.
+     *
+     * Examples:
+     *
+     * -
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
+     *
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
+     *
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
      * </pre>
      *
      * <code>string target_link = 7;</code>
@@ -3223,7 +3464,21 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Server-defined URL for the target of the operation.
+     * Server-defined URI for the target of the operation. The format of this is a
+     * URI to the resource being modified (such as a cluster, node pool, or node).
+     * For node pool repairs, there may be multiple nodes being repaired, but only
+     * one will be the target.
+     *
+     * Examples:
+     *
+     * -
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
+     *
+     * ##
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
+     *
+     * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
      * </pre>
      *
      * <code>string target_link = 7;</code>

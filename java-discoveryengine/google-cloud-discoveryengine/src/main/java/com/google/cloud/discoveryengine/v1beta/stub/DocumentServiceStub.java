@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +31,9 @@ import com.google.cloud.discoveryengine.v1beta.ImportDocumentsRequest;
 import com.google.cloud.discoveryengine.v1beta.ImportDocumentsResponse;
 import com.google.cloud.discoveryengine.v1beta.ListDocumentsRequest;
 import com.google.cloud.discoveryengine.v1beta.ListDocumentsResponse;
+import com.google.cloud.discoveryengine.v1beta.PurgeDocumentsMetadata;
+import com.google.cloud.discoveryengine.v1beta.PurgeDocumentsRequest;
+import com.google.cloud.discoveryengine.v1beta.PurgeDocumentsResponse;
 import com.google.cloud.discoveryengine.v1beta.UpdateDocumentRequest;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.OperationsStub;
@@ -87,6 +90,15 @@ public abstract class DocumentServiceStub implements BackgroundResource {
 
   public UnaryCallable<ImportDocumentsRequest, Operation> importDocumentsCallable() {
     throw new UnsupportedOperationException("Not implemented: importDocumentsCallable()");
+  }
+
+  public OperationCallable<PurgeDocumentsRequest, PurgeDocumentsResponse, PurgeDocumentsMetadata>
+      purgeDocumentsOperationCallable() {
+    throw new UnsupportedOperationException("Not implemented: purgeDocumentsOperationCallable()");
+  }
+
+  public UnaryCallable<PurgeDocumentsRequest, Operation> purgeDocumentsCallable() {
+    throw new UnsupportedOperationException("Not implemented: purgeDocumentsCallable()");
   }
 
   @Override

@@ -27,8 +27,8 @@ public interface CreateSubmissionRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The name of the project that is making the submission. This string is in
-   * the format "projects/{project_number}".
+   * Required. The name of the project that is making the submission. This
+   * string is in the format "projects/{project_number}".
    * </pre>
    *
    * <code>
@@ -42,8 +42,8 @@ public interface CreateSubmissionRequestOrBuilder
    *
    *
    * <pre>
-   * Required. The name of the project that is making the submission. This string is in
-   * the format "projects/{project_number}".
+   * Required. The name of the project that is making the submission. This
+   * string is in the format "projects/{project_number}".
    * </pre>
    *
    * <code>

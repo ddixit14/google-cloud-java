@@ -46,11 +46,6 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
     return new Probe();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.run.v2.K8sMinProto.internal_static_google_cloud_run_v2_Probe_descriptor;
   }
@@ -65,6 +60,8 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int probeTypeCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object probeType_;
 
   public enum ProbeTypeCase
@@ -124,8 +121,6 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
    * initiated.
    * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe
    * is 3600. Maximum value for startup probe is 240.
-   * More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * </pre>
    *
    * <code>int32 initial_delay_seconds = 1;</code>
@@ -146,8 +141,6 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
    * Number of seconds after which the probe times out.
    * Defaults to 1 second. Minimum value is 1. Maximum value is 3600.
    * Must be smaller than period_seconds.
-   * More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * </pre>
    *
    * <code>int32 timeout_seconds = 2;</code>
@@ -905,8 +898,6 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
      * initiated.
      * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe
      * is 3600. Maximum value for startup probe is 240.
-     * More info:
-     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * </pre>
      *
      * <code>int32 initial_delay_seconds = 1;</code>
@@ -925,8 +916,6 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
      * initiated.
      * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe
      * is 3600. Maximum value for startup probe is 240.
-     * More info:
-     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * </pre>
      *
      * <code>int32 initial_delay_seconds = 1;</code>
@@ -949,8 +938,6 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
      * initiated.
      * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe
      * is 3600. Maximum value for startup probe is 240.
-     * More info:
-     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * </pre>
      *
      * <code>int32 initial_delay_seconds = 1;</code>
@@ -972,8 +959,6 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
      * Number of seconds after which the probe times out.
      * Defaults to 1 second. Minimum value is 1. Maximum value is 3600.
      * Must be smaller than period_seconds.
-     * More info:
-     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * </pre>
      *
      * <code>int32 timeout_seconds = 2;</code>
@@ -991,8 +976,6 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
      * Number of seconds after which the probe times out.
      * Defaults to 1 second. Minimum value is 1. Maximum value is 3600.
      * Must be smaller than period_seconds.
-     * More info:
-     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * </pre>
      *
      * <code>int32 timeout_seconds = 2;</code>
@@ -1014,8 +997,6 @@ public final class Probe extends com.google.protobuf.GeneratedMessageV3
      * Number of seconds after which the probe times out.
      * Defaults to 1 second. Minimum value is 1. Maximum value is 3600.
      * Must be smaller than period_seconds.
-     * More info:
-     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * </pre>
      *
      * <code>int32 timeout_seconds = 2;</code>

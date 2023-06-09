@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +25,7 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
+import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.cloud.discoveryengine.v1beta.CreateDocumentRequest;
 import com.google.cloud.discoveryengine.v1beta.DeleteDocumentRequest;
@@ -35,8 +36,10 @@ import com.google.cloud.discoveryengine.v1beta.ImportDocumentsRequest;
 import com.google.cloud.discoveryengine.v1beta.ImportDocumentsResponse;
 import com.google.cloud.discoveryengine.v1beta.ListDocumentsRequest;
 import com.google.cloud.discoveryengine.v1beta.ListDocumentsResponse;
+import com.google.cloud.discoveryengine.v1beta.PurgeDocumentsMetadata;
+import com.google.cloud.discoveryengine.v1beta.PurgeDocumentsRequest;
+import com.google.cloud.discoveryengine.v1beta.PurgeDocumentsResponse;
 import com.google.cloud.discoveryengine.v1beta.UpdateDocumentRequest;
-import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import com.google.protobuf.Empty;
@@ -119,6 +122,17 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
               .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<PurgeDocumentsRequest, Operation>
+      purgeDocumentsMethodDescriptor =
+          MethodDescriptor.<PurgeDocumentsRequest, Operation>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.cloud.discoveryengine.v1beta.DocumentService/PurgeDocuments")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(PurgeDocumentsRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(Operation.getDefaultInstance()))
+              .build();
+
   private final UnaryCallable<GetDocumentRequest, Document> getDocumentCallable;
   private final UnaryCallable<ListDocumentsRequest, ListDocumentsResponse> listDocumentsCallable;
   private final UnaryCallable<ListDocumentsRequest, ListDocumentsPagedResponse>
@@ -130,6 +144,10 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
   private final OperationCallable<
           ImportDocumentsRequest, ImportDocumentsResponse, ImportDocumentsMetadata>
       importDocumentsOperationCallable;
+  private final UnaryCallable<PurgeDocumentsRequest, Operation> purgeDocumentsCallable;
+  private final OperationCallable<
+          PurgeDocumentsRequest, PurgeDocumentsResponse, PurgeDocumentsMetadata>
+      purgeDocumentsOperationCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -180,9 +198,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
             .setMethodDescriptor(getDocumentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("name", String.valueOf(request.getName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<ListDocumentsRequest, ListDocumentsResponse> listDocumentsTransportSettings =
@@ -190,9 +208,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
             .setMethodDescriptor(listDocumentsMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("parent", String.valueOf(request.getParent()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("parent", String.valueOf(request.getParent()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<CreateDocumentRequest, Document> createDocumentTransportSettings =
@@ -200,9 +218,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
             .setMethodDescriptor(createDocumentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("parent", String.valueOf(request.getParent()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("parent", String.valueOf(request.getParent()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<UpdateDocumentRequest, Document> updateDocumentTransportSettings =
@@ -210,9 +228,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
             .setMethodDescriptor(updateDocumentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("document.name", String.valueOf(request.getDocument().getName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("document.name", String.valueOf(request.getDocument().getName()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<DeleteDocumentRequest, Empty> deleteDocumentTransportSettings =
@@ -220,9 +238,9 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
             .setMethodDescriptor(deleteDocumentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("name", String.valueOf(request.getName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<ImportDocumentsRequest, Operation> importDocumentsTransportSettings =
@@ -230,9 +248,19 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
             .setMethodDescriptor(importDocumentsMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("parent", String.valueOf(request.getParent()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("parent", String.valueOf(request.getParent()));
+                  return builder.build();
+                })
+            .build();
+    GrpcCallSettings<PurgeDocumentsRequest, Operation> purgeDocumentsTransportSettings =
+        GrpcCallSettings.<PurgeDocumentsRequest, Operation>newBuilder()
+            .setMethodDescriptor(purgeDocumentsMethodDescriptor)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("parent", String.valueOf(request.getParent()));
+                  return builder.build();
                 })
             .build();
 
@@ -261,6 +289,15 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
         callableFactory.createOperationCallable(
             importDocumentsTransportSettings,
             settings.importDocumentsOperationSettings(),
+            clientContext,
+            operationsStub);
+    this.purgeDocumentsCallable =
+        callableFactory.createUnaryCallable(
+            purgeDocumentsTransportSettings, settings.purgeDocumentsSettings(), clientContext);
+    this.purgeDocumentsOperationCallable =
+        callableFactory.createOperationCallable(
+            purgeDocumentsTransportSettings,
+            settings.purgeDocumentsOperationSettings(),
             clientContext,
             operationsStub);
 
@@ -312,6 +349,17 @@ public class GrpcDocumentServiceStub extends DocumentServiceStub {
   public OperationCallable<ImportDocumentsRequest, ImportDocumentsResponse, ImportDocumentsMetadata>
       importDocumentsOperationCallable() {
     return importDocumentsOperationCallable;
+  }
+
+  @Override
+  public UnaryCallable<PurgeDocumentsRequest, Operation> purgeDocumentsCallable() {
+    return purgeDocumentsCallable;
+  }
+
+  @Override
+  public OperationCallable<PurgeDocumentsRequest, PurgeDocumentsResponse, PurgeDocumentsMetadata>
+      purgeDocumentsOperationCallable() {
+    return purgeDocumentsOperationCallable;
   }
 
   @Override

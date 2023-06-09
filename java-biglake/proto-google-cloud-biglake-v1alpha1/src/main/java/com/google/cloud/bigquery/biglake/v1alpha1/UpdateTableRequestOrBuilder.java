@@ -28,7 +28,8 @@ public interface UpdateTableRequestOrBuilder
    *
    * <pre>
    * Required. The table to update.
-   * The table's `name` field is used to identify the database to update.
+   *
+   * The table's `name` field is used to identify the table to update.
    * Format:
    * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
    * </pre>
@@ -45,7 +46,8 @@ public interface UpdateTableRequestOrBuilder
    *
    * <pre>
    * Required. The table to update.
-   * The table's `name` field is used to identify the database to update.
+   *
+   * The table's `name` field is used to identify the table to update.
    * Format:
    * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
    * </pre>
@@ -62,7 +64,8 @@ public interface UpdateTableRequestOrBuilder
    *
    * <pre>
    * Required. The table to update.
-   * The table's `name` field is used to identify the database to update.
+   *
+   * The table's `name` field is used to identify the table to update.
    * Format:
    * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
    * </pre>
@@ -78,6 +81,7 @@ public interface UpdateTableRequestOrBuilder
    *
    * <pre>
    * The list of fields to update.
+   *
    * For the `FieldMask` definition, see
    * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
    * If not set, defaults to all of the fields that are allowed to update.
@@ -93,6 +97,7 @@ public interface UpdateTableRequestOrBuilder
    *
    * <pre>
    * The list of fields to update.
+   *
    * For the `FieldMask` definition, see
    * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
    * If not set, defaults to all of the fields that are allowed to update.
@@ -108,6 +113,7 @@ public interface UpdateTableRequestOrBuilder
    *
    * <pre>
    * The list of fields to update.
+   *
    * For the `FieldMask` definition, see
    * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
    * If not set, defaults to all of the fields that are allowed to update.

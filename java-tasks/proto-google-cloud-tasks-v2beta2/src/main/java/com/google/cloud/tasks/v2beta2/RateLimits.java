@@ -23,10 +23,14 @@ package com.google.cloud.tasks.v2beta2;
  *
  * <pre>
  * Rate limits.
+ *
  * This message determines the maximum rate that tasks can be dispatched by a
  * queue, regardless of whether the dispatch is a first task attempt or a retry.
- * Note: The debugging command, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask], will run a task
- * even if the queue has reached its [RateLimits][google.cloud.tasks.v2beta2.RateLimits].
+ *
+ * Note: The debugging command,
+ * [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask], will run a task
+ * even if the queue has reached its
+ * [RateLimits][google.cloud.tasks.v2beta2.RateLimits].
  * </pre>
  *
  * Protobuf type {@code google.cloud.tasks.v2beta2.RateLimits}
@@ -47,11 +51,6 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new RateLimits();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -76,13 +75,20 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The maximum rate at which tasks are dispatched from this queue.
+   *
    * If unspecified when the queue is created, Cloud Tasks will pick the
    * default.
-   * * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget], the maximum allowed value
+   *
+   * * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget],
+   * the maximum allowed value
    *   is 500.
-   * * This field is output only   for [pull queues][google.cloud.tasks.v2beta2.PullTarget]. In addition to the
+   * * This field is output only   for [pull
+   * queues][google.cloud.tasks.v2beta2.PullTarget]. In addition to the
    *   `max_tasks_dispatched_per_second` limit, a maximum of 10 QPS of
-   *   [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests are allowed per pull queue.
+   *   [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests
+   *   are allowed per pull queue.
+   *
+   *
    * This field has the same meaning as
    * [rate in
    * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
@@ -104,11 +110,13 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The max burst size.
+   *
    * Max burst size limits how fast tasks in queue are processed when
    * many tasks are in the queue and the rate is high. This field
    * allows the queue to have a high rate so processing starts shortly
    * after a task is enqueued, but still limits resource usage when
    * many tasks are enqueued in a short period of time.
+   *
    * The [token bucket](https://wikipedia.org/wiki/Token_Bucket)
    * algorithm is used to control the rate of task dispatches. Each
    * queue has a token bucket that holds tokens, up to the maximum
@@ -117,19 +125,22 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
    * the queue's bucket runs out of tokens. The bucket will be
    * continuously refilled with new tokens based on
    * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+   *
    * The default value of `max_burst_size` is picked by Cloud Tasks
    * based on the value of
    * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+   *
    * The maximum value of `max_burst_size` is 500.
+   *
    * For App Engine queues that were created or updated using
    * `queue.yaml/xml`, `max_burst_size` is equal to
    * [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
    * If
-   * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is called on a queue without
-   * explicitly setting a value for `max_burst_size`,
+   * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is called
+   * on a queue without explicitly setting a value for `max_burst_size`,
    * `max_burst_size` value will get updated if
-   * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is updating
-   * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+   * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is
+   * updating [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
    * </pre>
    *
    * <code>int32 max_burst_size = 2;</code>
@@ -151,12 +162,19 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
    * to be dispatched for this queue. After this threshold has been
    * reached, Cloud Tasks stops dispatching tasks until the number of
    * concurrent requests decreases.
+   *
    * If unspecified when the queue is created, Cloud Tasks will pick the
    * default.
+   *
+   *
    * The maximum allowed value is 5,000.
+   *
    * This field is output only for
-   * [pull queues][google.cloud.tasks.v2beta2.PullTarget] and always -1, which indicates no limit. No other
-   * queue types can have `max_concurrent_tasks` set to -1.
+   * [pull queues][google.cloud.tasks.v2beta2.PullTarget] and always -1, which
+   * indicates no limit. No other queue types can have `max_concurrent_tasks`
+   * set to -1.
+   *
+   *
    * This field has the same meaning as
    * [max_concurrent_requests in
    * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).
@@ -358,10 +376,14 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Rate limits.
+   *
    * This message determines the maximum rate that tasks can be dispatched by a
    * queue, regardless of whether the dispatch is a first task attempt or a retry.
-   * Note: The debugging command, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask], will run a task
-   * even if the queue has reached its [RateLimits][google.cloud.tasks.v2beta2.RateLimits].
+   *
+   * Note: The debugging command,
+   * [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask], will run a task
+   * even if the queue has reached its
+   * [RateLimits][google.cloud.tasks.v2beta2.RateLimits].
    * </pre>
    *
    * Protobuf type {@code google.cloud.tasks.v2beta2.RateLimits}
@@ -569,13 +591,20 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The maximum rate at which tasks are dispatched from this queue.
+     *
      * If unspecified when the queue is created, Cloud Tasks will pick the
      * default.
-     * * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget], the maximum allowed value
+     *
+     * * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget],
+     * the maximum allowed value
      *   is 500.
-     * * This field is output only   for [pull queues][google.cloud.tasks.v2beta2.PullTarget]. In addition to the
+     * * This field is output only   for [pull
+     * queues][google.cloud.tasks.v2beta2.PullTarget]. In addition to the
      *   `max_tasks_dispatched_per_second` limit, a maximum of 10 QPS of
-     *   [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests are allowed per pull queue.
+     *   [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests
+     *   are allowed per pull queue.
+     *
+     *
      * This field has the same meaning as
      * [rate in
      * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
@@ -594,13 +623,20 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The maximum rate at which tasks are dispatched from this queue.
+     *
      * If unspecified when the queue is created, Cloud Tasks will pick the
      * default.
-     * * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget], the maximum allowed value
+     *
+     * * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget],
+     * the maximum allowed value
      *   is 500.
-     * * This field is output only   for [pull queues][google.cloud.tasks.v2beta2.PullTarget]. In addition to the
+     * * This field is output only   for [pull
+     * queues][google.cloud.tasks.v2beta2.PullTarget]. In addition to the
      *   `max_tasks_dispatched_per_second` limit, a maximum of 10 QPS of
-     *   [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests are allowed per pull queue.
+     *   [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests
+     *   are allowed per pull queue.
+     *
+     *
      * This field has the same meaning as
      * [rate in
      * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
@@ -623,13 +659,20 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The maximum rate at which tasks are dispatched from this queue.
+     *
      * If unspecified when the queue is created, Cloud Tasks will pick the
      * default.
-     * * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget], the maximum allowed value
+     *
+     * * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget],
+     * the maximum allowed value
      *   is 500.
-     * * This field is output only   for [pull queues][google.cloud.tasks.v2beta2.PullTarget]. In addition to the
+     * * This field is output only   for [pull
+     * queues][google.cloud.tasks.v2beta2.PullTarget]. In addition to the
      *   `max_tasks_dispatched_per_second` limit, a maximum of 10 QPS of
-     *   [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests are allowed per pull queue.
+     *   [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests
+     *   are allowed per pull queue.
+     *
+     *
      * This field has the same meaning as
      * [rate in
      * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
@@ -652,11 +695,13 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The max burst size.
+     *
      * Max burst size limits how fast tasks in queue are processed when
      * many tasks are in the queue and the rate is high. This field
      * allows the queue to have a high rate so processing starts shortly
      * after a task is enqueued, but still limits resource usage when
      * many tasks are enqueued in a short period of time.
+     *
      * The [token bucket](https://wikipedia.org/wiki/Token_Bucket)
      * algorithm is used to control the rate of task dispatches. Each
      * queue has a token bucket that holds tokens, up to the maximum
@@ -665,19 +710,22 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      * the queue's bucket runs out of tokens. The bucket will be
      * continuously refilled with new tokens based on
      * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+     *
      * The default value of `max_burst_size` is picked by Cloud Tasks
      * based on the value of
      * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+     *
      * The maximum value of `max_burst_size` is 500.
+     *
      * For App Engine queues that were created or updated using
      * `queue.yaml/xml`, `max_burst_size` is equal to
      * [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
      * If
-     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is called on a queue without
-     * explicitly setting a value for `max_burst_size`,
+     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is called
+     * on a queue without explicitly setting a value for `max_burst_size`,
      * `max_burst_size` value will get updated if
-     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is updating
-     * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is
+     * updating [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
      * </pre>
      *
      * <code>int32 max_burst_size = 2;</code>
@@ -693,11 +741,13 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The max burst size.
+     *
      * Max burst size limits how fast tasks in queue are processed when
      * many tasks are in the queue and the rate is high. This field
      * allows the queue to have a high rate so processing starts shortly
      * after a task is enqueued, but still limits resource usage when
      * many tasks are enqueued in a short period of time.
+     *
      * The [token bucket](https://wikipedia.org/wiki/Token_Bucket)
      * algorithm is used to control the rate of task dispatches. Each
      * queue has a token bucket that holds tokens, up to the maximum
@@ -706,19 +756,22 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      * the queue's bucket runs out of tokens. The bucket will be
      * continuously refilled with new tokens based on
      * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+     *
      * The default value of `max_burst_size` is picked by Cloud Tasks
      * based on the value of
      * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+     *
      * The maximum value of `max_burst_size` is 500.
+     *
      * For App Engine queues that were created or updated using
      * `queue.yaml/xml`, `max_burst_size` is equal to
      * [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
      * If
-     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is called on a queue without
-     * explicitly setting a value for `max_burst_size`,
+     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is called
+     * on a queue without explicitly setting a value for `max_burst_size`,
      * `max_burst_size` value will get updated if
-     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is updating
-     * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is
+     * updating [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
      * </pre>
      *
      * <code>int32 max_burst_size = 2;</code>
@@ -738,11 +791,13 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The max burst size.
+     *
      * Max burst size limits how fast tasks in queue are processed when
      * many tasks are in the queue and the rate is high. This field
      * allows the queue to have a high rate so processing starts shortly
      * after a task is enqueued, but still limits resource usage when
      * many tasks are enqueued in a short period of time.
+     *
      * The [token bucket](https://wikipedia.org/wiki/Token_Bucket)
      * algorithm is used to control the rate of task dispatches. Each
      * queue has a token bucket that holds tokens, up to the maximum
@@ -751,19 +806,22 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      * the queue's bucket runs out of tokens. The bucket will be
      * continuously refilled with new tokens based on
      * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+     *
      * The default value of `max_burst_size` is picked by Cloud Tasks
      * based on the value of
      * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+     *
      * The maximum value of `max_burst_size` is 500.
+     *
      * For App Engine queues that were created or updated using
      * `queue.yaml/xml`, `max_burst_size` is equal to
      * [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
      * If
-     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is called on a queue without
-     * explicitly setting a value for `max_burst_size`,
+     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is called
+     * on a queue without explicitly setting a value for `max_burst_size`,
      * `max_burst_size` value will get updated if
-     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is updating
-     * [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
+     * [UpdateQueue][google.cloud.tasks.v2beta2.CloudTasks.UpdateQueue] is
+     * updating [max_dispatches_per_second][RateLimits.max_dispatches_per_second].
      * </pre>
      *
      * <code>int32 max_burst_size = 2;</code>
@@ -786,12 +844,19 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      * to be dispatched for this queue. After this threshold has been
      * reached, Cloud Tasks stops dispatching tasks until the number of
      * concurrent requests decreases.
+     *
      * If unspecified when the queue is created, Cloud Tasks will pick the
      * default.
+     *
+     *
      * The maximum allowed value is 5,000.
+     *
      * This field is output only for
-     * [pull queues][google.cloud.tasks.v2beta2.PullTarget] and always -1, which indicates no limit. No other
-     * queue types can have `max_concurrent_tasks` set to -1.
+     * [pull queues][google.cloud.tasks.v2beta2.PullTarget] and always -1, which
+     * indicates no limit. No other queue types can have `max_concurrent_tasks`
+     * set to -1.
+     *
+     *
      * This field has the same meaning as
      * [max_concurrent_requests in
      * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).
@@ -813,12 +878,19 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      * to be dispatched for this queue. After this threshold has been
      * reached, Cloud Tasks stops dispatching tasks until the number of
      * concurrent requests decreases.
+     *
      * If unspecified when the queue is created, Cloud Tasks will pick the
      * default.
+     *
+     *
      * The maximum allowed value is 5,000.
+     *
      * This field is output only for
-     * [pull queues][google.cloud.tasks.v2beta2.PullTarget] and always -1, which indicates no limit. No other
-     * queue types can have `max_concurrent_tasks` set to -1.
+     * [pull queues][google.cloud.tasks.v2beta2.PullTarget] and always -1, which
+     * indicates no limit. No other queue types can have `max_concurrent_tasks`
+     * set to -1.
+     *
+     *
      * This field has the same meaning as
      * [max_concurrent_requests in
      * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).
@@ -844,12 +916,19 @@ public final class RateLimits extends com.google.protobuf.GeneratedMessageV3
      * to be dispatched for this queue. After this threshold has been
      * reached, Cloud Tasks stops dispatching tasks until the number of
      * concurrent requests decreases.
+     *
      * If unspecified when the queue is created, Cloud Tasks will pick the
      * default.
+     *
+     *
      * The maximum allowed value is 5,000.
+     *
      * This field is output only for
-     * [pull queues][google.cloud.tasks.v2beta2.PullTarget] and always -1, which indicates no limit. No other
-     * queue types can have `max_concurrent_tasks` set to -1.
+     * [pull queues][google.cloud.tasks.v2beta2.PullTarget] and always -1, which
+     * indicates no limit. No other queue types can have `max_concurrent_tasks`
+     * set to -1.
+     *
+     *
      * This field has the same meaning as
      * [max_concurrent_requests in
      * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).

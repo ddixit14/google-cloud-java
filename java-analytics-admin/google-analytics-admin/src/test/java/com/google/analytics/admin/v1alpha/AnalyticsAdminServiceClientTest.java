@@ -20,14 +20,17 @@ import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.Aud
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAccessBindingsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAccountSummariesPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAccountsPagedResponse;
+import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAdSenseLinksPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListAudiencesPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListBigQueryLinksPagedResponse;
+import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListChannelGroupsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListConversionEventsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListCustomDimensionsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListCustomMetricsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListDataStreamsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinkProposalsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListDisplayVideo360AdvertiserLinksPagedResponse;
+import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListEventCreateRulesPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListExpandedDataSetsPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListFirebaseLinksPagedResponse;
 import static com.google.analytics.admin.v1alpha.AnalyticsAdminServiceClient.ListGoogleAdsLinksPagedResponse;
@@ -7392,6 +7395,381 @@ public class AnalyticsAdminServiceClientTest {
   }
 
   @Test
+  public void getChannelGroupTest() throws Exception {
+    ChannelGroup expectedResponse =
+        ChannelGroup.newBuilder()
+            .setName(ChannelGroupName.of("[PROPERTY]", "[CHANNEL_GROUP]").toString())
+            .setDisplayName("displayName1714148973")
+            .setDescription("description-1724546052")
+            .addAllGroupingRule(new ArrayList<GroupingRule>())
+            .setSystemDefined(true)
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    ChannelGroupName name = ChannelGroupName.of("[PROPERTY]", "[CHANNEL_GROUP]");
+
+    ChannelGroup actualResponse = client.getChannelGroup(name);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GetChannelGroupRequest actualRequest = ((GetChannelGroupRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name.toString(), actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void getChannelGroupExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      ChannelGroupName name = ChannelGroupName.of("[PROPERTY]", "[CHANNEL_GROUP]");
+      client.getChannelGroup(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void getChannelGroupTest2() throws Exception {
+    ChannelGroup expectedResponse =
+        ChannelGroup.newBuilder()
+            .setName(ChannelGroupName.of("[PROPERTY]", "[CHANNEL_GROUP]").toString())
+            .setDisplayName("displayName1714148973")
+            .setDescription("description-1724546052")
+            .addAllGroupingRule(new ArrayList<GroupingRule>())
+            .setSystemDefined(true)
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String name = "name3373707";
+
+    ChannelGroup actualResponse = client.getChannelGroup(name);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GetChannelGroupRequest actualRequest = ((GetChannelGroupRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name, actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void getChannelGroupExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String name = "name3373707";
+      client.getChannelGroup(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void listChannelGroupsTest() throws Exception {
+    ChannelGroup responsesElement = ChannelGroup.newBuilder().build();
+    ListChannelGroupsResponse expectedResponse =
+        ListChannelGroupsResponse.newBuilder()
+            .setNextPageToken("")
+            .addAllChannelGroups(Arrays.asList(responsesElement))
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    PropertyName parent = PropertyName.of("[PROPERTY]");
+
+    ListChannelGroupsPagedResponse pagedListResponse = client.listChannelGroups(parent);
+
+    List<ChannelGroup> resources = Lists.newArrayList(pagedListResponse.iterateAll());
+
+    Assert.assertEquals(1, resources.size());
+    Assert.assertEquals(expectedResponse.getChannelGroupsList().get(0), resources.get(0));
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    ListChannelGroupsRequest actualRequest = ((ListChannelGroupsRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent.toString(), actualRequest.getParent());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void listChannelGroupsExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      PropertyName parent = PropertyName.of("[PROPERTY]");
+      client.listChannelGroups(parent);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void listChannelGroupsTest2() throws Exception {
+    ChannelGroup responsesElement = ChannelGroup.newBuilder().build();
+    ListChannelGroupsResponse expectedResponse =
+        ListChannelGroupsResponse.newBuilder()
+            .setNextPageToken("")
+            .addAllChannelGroups(Arrays.asList(responsesElement))
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String parent = "parent-995424086";
+
+    ListChannelGroupsPagedResponse pagedListResponse = client.listChannelGroups(parent);
+
+    List<ChannelGroup> resources = Lists.newArrayList(pagedListResponse.iterateAll());
+
+    Assert.assertEquals(1, resources.size());
+    Assert.assertEquals(expectedResponse.getChannelGroupsList().get(0), resources.get(0));
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    ListChannelGroupsRequest actualRequest = ((ListChannelGroupsRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent, actualRequest.getParent());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void listChannelGroupsExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String parent = "parent-995424086";
+      client.listChannelGroups(parent);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void createChannelGroupTest() throws Exception {
+    ChannelGroup expectedResponse =
+        ChannelGroup.newBuilder()
+            .setName(ChannelGroupName.of("[PROPERTY]", "[CHANNEL_GROUP]").toString())
+            .setDisplayName("displayName1714148973")
+            .setDescription("description-1724546052")
+            .addAllGroupingRule(new ArrayList<GroupingRule>())
+            .setSystemDefined(true)
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    PropertyName parent = PropertyName.of("[PROPERTY]");
+    ChannelGroup channelGroup = ChannelGroup.newBuilder().build();
+
+    ChannelGroup actualResponse = client.createChannelGroup(parent, channelGroup);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateChannelGroupRequest actualRequest = ((CreateChannelGroupRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent.toString(), actualRequest.getParent());
+    Assert.assertEquals(channelGroup, actualRequest.getChannelGroup());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void createChannelGroupExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      PropertyName parent = PropertyName.of("[PROPERTY]");
+      ChannelGroup channelGroup = ChannelGroup.newBuilder().build();
+      client.createChannelGroup(parent, channelGroup);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void createChannelGroupTest2() throws Exception {
+    ChannelGroup expectedResponse =
+        ChannelGroup.newBuilder()
+            .setName(ChannelGroupName.of("[PROPERTY]", "[CHANNEL_GROUP]").toString())
+            .setDisplayName("displayName1714148973")
+            .setDescription("description-1724546052")
+            .addAllGroupingRule(new ArrayList<GroupingRule>())
+            .setSystemDefined(true)
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String parent = "parent-995424086";
+    ChannelGroup channelGroup = ChannelGroup.newBuilder().build();
+
+    ChannelGroup actualResponse = client.createChannelGroup(parent, channelGroup);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateChannelGroupRequest actualRequest = ((CreateChannelGroupRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent, actualRequest.getParent());
+    Assert.assertEquals(channelGroup, actualRequest.getChannelGroup());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void createChannelGroupExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String parent = "parent-995424086";
+      ChannelGroup channelGroup = ChannelGroup.newBuilder().build();
+      client.createChannelGroup(parent, channelGroup);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void updateChannelGroupTest() throws Exception {
+    ChannelGroup expectedResponse =
+        ChannelGroup.newBuilder()
+            .setName(ChannelGroupName.of("[PROPERTY]", "[CHANNEL_GROUP]").toString())
+            .setDisplayName("displayName1714148973")
+            .setDescription("description-1724546052")
+            .addAllGroupingRule(new ArrayList<GroupingRule>())
+            .setSystemDefined(true)
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    ChannelGroup channelGroup = ChannelGroup.newBuilder().build();
+    FieldMask updateMask = FieldMask.newBuilder().build();
+
+    ChannelGroup actualResponse = client.updateChannelGroup(channelGroup, updateMask);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    UpdateChannelGroupRequest actualRequest = ((UpdateChannelGroupRequest) actualRequests.get(0));
+
+    Assert.assertEquals(channelGroup, actualRequest.getChannelGroup());
+    Assert.assertEquals(updateMask, actualRequest.getUpdateMask());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void updateChannelGroupExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      ChannelGroup channelGroup = ChannelGroup.newBuilder().build();
+      FieldMask updateMask = FieldMask.newBuilder().build();
+      client.updateChannelGroup(channelGroup, updateMask);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void deleteChannelGroupTest() throws Exception {
+    Empty expectedResponse = Empty.newBuilder().build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    ChannelGroupName name = ChannelGroupName.of("[PROPERTY]", "[CHANNEL_GROUP]");
+
+    client.deleteChannelGroup(name);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    DeleteChannelGroupRequest actualRequest = ((DeleteChannelGroupRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name.toString(), actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void deleteChannelGroupExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      ChannelGroupName name = ChannelGroupName.of("[PROPERTY]", "[CHANNEL_GROUP]");
+      client.deleteChannelGroup(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void deleteChannelGroupTest2() throws Exception {
+    Empty expectedResponse = Empty.newBuilder().build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String name = "name3373707";
+
+    client.deleteChannelGroup(name);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    DeleteChannelGroupRequest actualRequest = ((DeleteChannelGroupRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name, actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void deleteChannelGroupExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String name = "name3373707";
+      client.deleteChannelGroup(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
   public void setAutomatedGa4ConfigurationOptOutTest() throws Exception {
     SetAutomatedGa4ConfigurationOptOutResponse expectedResponse =
         SetAutomatedGa4ConfigurationOptOutResponse.newBuilder().build();
@@ -7943,6 +8321,765 @@ public class AnalyticsAdminServiceClientTest {
       ListConnectedSiteTagsRequest request =
           ListConnectedSiteTagsRequest.newBuilder().setProperty("property-993141291").build();
       client.listConnectedSiteTags(request);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void fetchConnectedGa4PropertyTest() throws Exception {
+    FetchConnectedGa4PropertyResponse expectedResponse =
+        FetchConnectedGa4PropertyResponse.newBuilder()
+            .setProperty(PropertyName.of("[PROPERTY]").toString())
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    FetchConnectedGa4PropertyRequest request =
+        FetchConnectedGa4PropertyRequest.newBuilder()
+            .setProperty(PropertyName.of("[PROPERTY]").toString())
+            .build();
+
+    FetchConnectedGa4PropertyResponse actualResponse = client.fetchConnectedGa4Property(request);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    FetchConnectedGa4PropertyRequest actualRequest =
+        ((FetchConnectedGa4PropertyRequest) actualRequests.get(0));
+
+    Assert.assertEquals(request.getProperty(), actualRequest.getProperty());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void fetchConnectedGa4PropertyExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      FetchConnectedGa4PropertyRequest request =
+          FetchConnectedGa4PropertyRequest.newBuilder()
+              .setProperty(PropertyName.of("[PROPERTY]").toString())
+              .build();
+      client.fetchConnectedGa4Property(request);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void getAdSenseLinkTest() throws Exception {
+    AdSenseLink expectedResponse =
+        AdSenseLink.newBuilder()
+            .setName(AdSenseLinkName.of("[PROPERTY]", "[ADSENSE_LINK]").toString())
+            .setAdClientCode("adClientCode-869953317")
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    AdSenseLinkName name = AdSenseLinkName.of("[PROPERTY]", "[ADSENSE_LINK]");
+
+    AdSenseLink actualResponse = client.getAdSenseLink(name);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GetAdSenseLinkRequest actualRequest = ((GetAdSenseLinkRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name.toString(), actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void getAdSenseLinkExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      AdSenseLinkName name = AdSenseLinkName.of("[PROPERTY]", "[ADSENSE_LINK]");
+      client.getAdSenseLink(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void getAdSenseLinkTest2() throws Exception {
+    AdSenseLink expectedResponse =
+        AdSenseLink.newBuilder()
+            .setName(AdSenseLinkName.of("[PROPERTY]", "[ADSENSE_LINK]").toString())
+            .setAdClientCode("adClientCode-869953317")
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String name = "name3373707";
+
+    AdSenseLink actualResponse = client.getAdSenseLink(name);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GetAdSenseLinkRequest actualRequest = ((GetAdSenseLinkRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name, actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void getAdSenseLinkExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String name = "name3373707";
+      client.getAdSenseLink(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void createAdSenseLinkTest() throws Exception {
+    AdSenseLink expectedResponse =
+        AdSenseLink.newBuilder()
+            .setName(AdSenseLinkName.of("[PROPERTY]", "[ADSENSE_LINK]").toString())
+            .setAdClientCode("adClientCode-869953317")
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    PropertyName parent = PropertyName.of("[PROPERTY]");
+    AdSenseLink adsenseLink = AdSenseLink.newBuilder().build();
+
+    AdSenseLink actualResponse = client.createAdSenseLink(parent, adsenseLink);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateAdSenseLinkRequest actualRequest = ((CreateAdSenseLinkRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent.toString(), actualRequest.getParent());
+    Assert.assertEquals(adsenseLink, actualRequest.getAdsenseLink());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void createAdSenseLinkExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      PropertyName parent = PropertyName.of("[PROPERTY]");
+      AdSenseLink adsenseLink = AdSenseLink.newBuilder().build();
+      client.createAdSenseLink(parent, adsenseLink);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void createAdSenseLinkTest2() throws Exception {
+    AdSenseLink expectedResponse =
+        AdSenseLink.newBuilder()
+            .setName(AdSenseLinkName.of("[PROPERTY]", "[ADSENSE_LINK]").toString())
+            .setAdClientCode("adClientCode-869953317")
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String parent = "parent-995424086";
+    AdSenseLink adsenseLink = AdSenseLink.newBuilder().build();
+
+    AdSenseLink actualResponse = client.createAdSenseLink(parent, adsenseLink);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateAdSenseLinkRequest actualRequest = ((CreateAdSenseLinkRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent, actualRequest.getParent());
+    Assert.assertEquals(adsenseLink, actualRequest.getAdsenseLink());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void createAdSenseLinkExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String parent = "parent-995424086";
+      AdSenseLink adsenseLink = AdSenseLink.newBuilder().build();
+      client.createAdSenseLink(parent, adsenseLink);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void deleteAdSenseLinkTest() throws Exception {
+    Empty expectedResponse = Empty.newBuilder().build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    AdSenseLinkName name = AdSenseLinkName.of("[PROPERTY]", "[ADSENSE_LINK]");
+
+    client.deleteAdSenseLink(name);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    DeleteAdSenseLinkRequest actualRequest = ((DeleteAdSenseLinkRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name.toString(), actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void deleteAdSenseLinkExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      AdSenseLinkName name = AdSenseLinkName.of("[PROPERTY]", "[ADSENSE_LINK]");
+      client.deleteAdSenseLink(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void deleteAdSenseLinkTest2() throws Exception {
+    Empty expectedResponse = Empty.newBuilder().build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String name = "name3373707";
+
+    client.deleteAdSenseLink(name);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    DeleteAdSenseLinkRequest actualRequest = ((DeleteAdSenseLinkRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name, actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void deleteAdSenseLinkExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String name = "name3373707";
+      client.deleteAdSenseLink(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void listAdSenseLinksTest() throws Exception {
+    AdSenseLink responsesElement = AdSenseLink.newBuilder().build();
+    ListAdSenseLinksResponse expectedResponse =
+        ListAdSenseLinksResponse.newBuilder()
+            .setNextPageToken("")
+            .addAllAdsenseLinks(Arrays.asList(responsesElement))
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    PropertyName parent = PropertyName.of("[PROPERTY]");
+
+    ListAdSenseLinksPagedResponse pagedListResponse = client.listAdSenseLinks(parent);
+
+    List<AdSenseLink> resources = Lists.newArrayList(pagedListResponse.iterateAll());
+
+    Assert.assertEquals(1, resources.size());
+    Assert.assertEquals(expectedResponse.getAdsenseLinksList().get(0), resources.get(0));
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    ListAdSenseLinksRequest actualRequest = ((ListAdSenseLinksRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent.toString(), actualRequest.getParent());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void listAdSenseLinksExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      PropertyName parent = PropertyName.of("[PROPERTY]");
+      client.listAdSenseLinks(parent);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void listAdSenseLinksTest2() throws Exception {
+    AdSenseLink responsesElement = AdSenseLink.newBuilder().build();
+    ListAdSenseLinksResponse expectedResponse =
+        ListAdSenseLinksResponse.newBuilder()
+            .setNextPageToken("")
+            .addAllAdsenseLinks(Arrays.asList(responsesElement))
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String parent = "parent-995424086";
+
+    ListAdSenseLinksPagedResponse pagedListResponse = client.listAdSenseLinks(parent);
+
+    List<AdSenseLink> resources = Lists.newArrayList(pagedListResponse.iterateAll());
+
+    Assert.assertEquals(1, resources.size());
+    Assert.assertEquals(expectedResponse.getAdsenseLinksList().get(0), resources.get(0));
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    ListAdSenseLinksRequest actualRequest = ((ListAdSenseLinksRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent, actualRequest.getParent());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void listAdSenseLinksExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String parent = "parent-995424086";
+      client.listAdSenseLinks(parent);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void getEventCreateRuleTest() throws Exception {
+    EventCreateRule expectedResponse =
+        EventCreateRule.newBuilder()
+            .setName(
+                EventCreateRuleName.of("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]")
+                    .toString())
+            .setDestinationEvent("destinationEvent1181456172")
+            .addAllEventConditions(new ArrayList<MatchingCondition>())
+            .setSourceCopyParameters(true)
+            .addAllParameterMutations(new ArrayList<ParameterMutation>())
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    EventCreateRuleName name =
+        EventCreateRuleName.of("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]");
+
+    EventCreateRule actualResponse = client.getEventCreateRule(name);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GetEventCreateRuleRequest actualRequest = ((GetEventCreateRuleRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name.toString(), actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void getEventCreateRuleExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      EventCreateRuleName name =
+          EventCreateRuleName.of("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]");
+      client.getEventCreateRule(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void getEventCreateRuleTest2() throws Exception {
+    EventCreateRule expectedResponse =
+        EventCreateRule.newBuilder()
+            .setName(
+                EventCreateRuleName.of("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]")
+                    .toString())
+            .setDestinationEvent("destinationEvent1181456172")
+            .addAllEventConditions(new ArrayList<MatchingCondition>())
+            .setSourceCopyParameters(true)
+            .addAllParameterMutations(new ArrayList<ParameterMutation>())
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String name = "name3373707";
+
+    EventCreateRule actualResponse = client.getEventCreateRule(name);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GetEventCreateRuleRequest actualRequest = ((GetEventCreateRuleRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name, actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void getEventCreateRuleExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String name = "name3373707";
+      client.getEventCreateRule(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void listEventCreateRulesTest() throws Exception {
+    EventCreateRule responsesElement = EventCreateRule.newBuilder().build();
+    ListEventCreateRulesResponse expectedResponse =
+        ListEventCreateRulesResponse.newBuilder()
+            .setNextPageToken("")
+            .addAllEventCreateRules(Arrays.asList(responsesElement))
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    DataStreamName parent = DataStreamName.of("[PROPERTY]", "[DATA_STREAM]");
+
+    ListEventCreateRulesPagedResponse pagedListResponse = client.listEventCreateRules(parent);
+
+    List<EventCreateRule> resources = Lists.newArrayList(pagedListResponse.iterateAll());
+
+    Assert.assertEquals(1, resources.size());
+    Assert.assertEquals(expectedResponse.getEventCreateRulesList().get(0), resources.get(0));
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    ListEventCreateRulesRequest actualRequest =
+        ((ListEventCreateRulesRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent.toString(), actualRequest.getParent());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void listEventCreateRulesExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      DataStreamName parent = DataStreamName.of("[PROPERTY]", "[DATA_STREAM]");
+      client.listEventCreateRules(parent);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void listEventCreateRulesTest2() throws Exception {
+    EventCreateRule responsesElement = EventCreateRule.newBuilder().build();
+    ListEventCreateRulesResponse expectedResponse =
+        ListEventCreateRulesResponse.newBuilder()
+            .setNextPageToken("")
+            .addAllEventCreateRules(Arrays.asList(responsesElement))
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String parent = "parent-995424086";
+
+    ListEventCreateRulesPagedResponse pagedListResponse = client.listEventCreateRules(parent);
+
+    List<EventCreateRule> resources = Lists.newArrayList(pagedListResponse.iterateAll());
+
+    Assert.assertEquals(1, resources.size());
+    Assert.assertEquals(expectedResponse.getEventCreateRulesList().get(0), resources.get(0));
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    ListEventCreateRulesRequest actualRequest =
+        ((ListEventCreateRulesRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent, actualRequest.getParent());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void listEventCreateRulesExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String parent = "parent-995424086";
+      client.listEventCreateRules(parent);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void createEventCreateRuleTest() throws Exception {
+    EventCreateRule expectedResponse =
+        EventCreateRule.newBuilder()
+            .setName(
+                EventCreateRuleName.of("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]")
+                    .toString())
+            .setDestinationEvent("destinationEvent1181456172")
+            .addAllEventConditions(new ArrayList<MatchingCondition>())
+            .setSourceCopyParameters(true)
+            .addAllParameterMutations(new ArrayList<ParameterMutation>())
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    DataStreamName parent = DataStreamName.of("[PROPERTY]", "[DATA_STREAM]");
+    EventCreateRule eventCreateRule = EventCreateRule.newBuilder().build();
+
+    EventCreateRule actualResponse = client.createEventCreateRule(parent, eventCreateRule);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateEventCreateRuleRequest actualRequest =
+        ((CreateEventCreateRuleRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent.toString(), actualRequest.getParent());
+    Assert.assertEquals(eventCreateRule, actualRequest.getEventCreateRule());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void createEventCreateRuleExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      DataStreamName parent = DataStreamName.of("[PROPERTY]", "[DATA_STREAM]");
+      EventCreateRule eventCreateRule = EventCreateRule.newBuilder().build();
+      client.createEventCreateRule(parent, eventCreateRule);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void createEventCreateRuleTest2() throws Exception {
+    EventCreateRule expectedResponse =
+        EventCreateRule.newBuilder()
+            .setName(
+                EventCreateRuleName.of("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]")
+                    .toString())
+            .setDestinationEvent("destinationEvent1181456172")
+            .addAllEventConditions(new ArrayList<MatchingCondition>())
+            .setSourceCopyParameters(true)
+            .addAllParameterMutations(new ArrayList<ParameterMutation>())
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String parent = "parent-995424086";
+    EventCreateRule eventCreateRule = EventCreateRule.newBuilder().build();
+
+    EventCreateRule actualResponse = client.createEventCreateRule(parent, eventCreateRule);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateEventCreateRuleRequest actualRequest =
+        ((CreateEventCreateRuleRequest) actualRequests.get(0));
+
+    Assert.assertEquals(parent, actualRequest.getParent());
+    Assert.assertEquals(eventCreateRule, actualRequest.getEventCreateRule());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void createEventCreateRuleExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String parent = "parent-995424086";
+      EventCreateRule eventCreateRule = EventCreateRule.newBuilder().build();
+      client.createEventCreateRule(parent, eventCreateRule);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void updateEventCreateRuleTest() throws Exception {
+    EventCreateRule expectedResponse =
+        EventCreateRule.newBuilder()
+            .setName(
+                EventCreateRuleName.of("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]")
+                    .toString())
+            .setDestinationEvent("destinationEvent1181456172")
+            .addAllEventConditions(new ArrayList<MatchingCondition>())
+            .setSourceCopyParameters(true)
+            .addAllParameterMutations(new ArrayList<ParameterMutation>())
+            .build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    EventCreateRule eventCreateRule = EventCreateRule.newBuilder().build();
+    FieldMask updateMask = FieldMask.newBuilder().build();
+
+    EventCreateRule actualResponse = client.updateEventCreateRule(eventCreateRule, updateMask);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    UpdateEventCreateRuleRequest actualRequest =
+        ((UpdateEventCreateRuleRequest) actualRequests.get(0));
+
+    Assert.assertEquals(eventCreateRule, actualRequest.getEventCreateRule());
+    Assert.assertEquals(updateMask, actualRequest.getUpdateMask());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void updateEventCreateRuleExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      EventCreateRule eventCreateRule = EventCreateRule.newBuilder().build();
+      FieldMask updateMask = FieldMask.newBuilder().build();
+      client.updateEventCreateRule(eventCreateRule, updateMask);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void deleteEventCreateRuleTest() throws Exception {
+    Empty expectedResponse = Empty.newBuilder().build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    EventCreateRuleName name =
+        EventCreateRuleName.of("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]");
+
+    client.deleteEventCreateRule(name);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    DeleteEventCreateRuleRequest actualRequest =
+        ((DeleteEventCreateRuleRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name.toString(), actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void deleteEventCreateRuleExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      EventCreateRuleName name =
+          EventCreateRuleName.of("[PROPERTY]", "[DATA_STREAM]", "[EVENT_CREATE_RULE]");
+      client.deleteEventCreateRule(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void deleteEventCreateRuleTest2() throws Exception {
+    Empty expectedResponse = Empty.newBuilder().build();
+    mockAnalyticsAdminService.addResponse(expectedResponse);
+
+    String name = "name3373707";
+
+    client.deleteEventCreateRule(name);
+
+    List<AbstractMessage> actualRequests = mockAnalyticsAdminService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    DeleteEventCreateRuleRequest actualRequest =
+        ((DeleteEventCreateRuleRequest) actualRequests.get(0));
+
+    Assert.assertEquals(name, actualRequest.getName());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void deleteEventCreateRuleExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAnalyticsAdminService.addException(exception);
+
+    try {
+      String name = "name3373707";
+      client.deleteEventCreateRule(name);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception.

@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -300,6 +300,26 @@ public class MockMetastoreServiceImpl extends MetastoreServiceImplBase {
           new IllegalArgumentException(
               String.format(
                   "Unrecognized response type %s for method UpdateTable, expected %s or %s",
+                  response == null ? "null" : response.getClass().getName(),
+                  Table.class.getName(),
+                  Exception.class.getName())));
+    }
+  }
+
+  @Override
+  public void renameTable(RenameTableRequest request, StreamObserver<Table> responseObserver) {
+    Object response = responses.poll();
+    if (response instanceof Table) {
+      requests.add(request);
+      responseObserver.onNext(((Table) response));
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError(((Exception) response));
+    } else {
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method RenameTable, expected %s or %s",
                   response == null ? "null" : response.getClass().getName(),
                   Table.class.getName(),
                   Exception.class.getName())));

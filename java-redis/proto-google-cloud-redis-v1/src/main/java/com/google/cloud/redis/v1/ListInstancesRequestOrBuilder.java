@@ -61,6 +61,7 @@ public interface ListInstancesRequestOrBuilder
    *
    * <pre>
    * The maximum number of items to return.
+   *
    * If not specified, a default value of 1000 will be used by the service.
    * Regardless of the page_size value, the response may include a partial list
    * and a caller should only rely on response's
@@ -79,7 +80,8 @@ public interface ListInstancesRequestOrBuilder
    *
    * <pre>
    * The `next_page_token` value returned from a previous
-   * [ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances] request, if any.
+   * [ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances] request, if
+   * any.
    * </pre>
    *
    * <code>string page_token = 3;</code>
@@ -92,7 +94,8 @@ public interface ListInstancesRequestOrBuilder
    *
    * <pre>
    * The `next_page_token` value returned from a previous
-   * [ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances] request, if any.
+   * [ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances] request, if
+   * any.
    * </pre>
    *
    * <code>string page_token = 3;</code>

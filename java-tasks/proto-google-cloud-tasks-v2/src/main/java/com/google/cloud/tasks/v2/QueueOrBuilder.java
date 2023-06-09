@@ -27,11 +27,15 @@ public interface QueueOrBuilder
    *
    *
    * <pre>
-   * Caller-specified and required in [CreateQueue][google.cloud.tasks.v2.CloudTasks.CreateQueue],
-   * after which it becomes output only.
+   * Caller-specified and required in
+   * [CreateQueue][google.cloud.tasks.v2.CloudTasks.CreateQueue], after which it
+   * becomes output only.
+   *
    * The queue name.
+   *
    * The queue name must have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+   *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),
    *    hyphens (-), colons (:), or periods (.).
    *    For more information, see
@@ -54,11 +58,15 @@ public interface QueueOrBuilder
    *
    *
    * <pre>
-   * Caller-specified and required in [CreateQueue][google.cloud.tasks.v2.CloudTasks.CreateQueue],
-   * after which it becomes output only.
+   * Caller-specified and required in
+   * [CreateQueue][google.cloud.tasks.v2.CloudTasks.CreateQueue], after which it
+   * becomes output only.
+   *
    * The queue name.
+   *
    * The queue name must have the following format:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+   *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),
    *    hyphens (-), colons (:), or periods (.).
    *    For more information, see
@@ -83,14 +91,16 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Overrides for
-   * [task-level app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
+   * [task-level
+   * app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
    * These settings apply only to
-   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in this queue.
-   * [Http tasks][google.cloud.tasks.v2.HttpRequest] are not affected.
+   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in this
+   * queue. [Http tasks][google.cloud.tasks.v2.HttpRequest] are not affected.
+   *
    * If set, `app_engine_routing_override` is used for all
-   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in the queue, no matter what the
-   * setting is for the
-   * [task-level app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
+   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in the
+   * queue, no matter what the setting is for the [task-level
+   * app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.AppEngineRouting app_engine_routing_override = 2;</code>
@@ -103,14 +113,16 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Overrides for
-   * [task-level app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
+   * [task-level
+   * app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
    * These settings apply only to
-   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in this queue.
-   * [Http tasks][google.cloud.tasks.v2.HttpRequest] are not affected.
+   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in this
+   * queue. [Http tasks][google.cloud.tasks.v2.HttpRequest] are not affected.
+   *
    * If set, `app_engine_routing_override` is used for all
-   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in the queue, no matter what the
-   * setting is for the
-   * [task-level app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
+   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in the
+   * queue, no matter what the setting is for the [task-level
+   * app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.AppEngineRouting app_engine_routing_override = 2;</code>
@@ -123,14 +135,16 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Overrides for
-   * [task-level app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
+   * [task-level
+   * app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
    * These settings apply only to
-   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in this queue.
-   * [Http tasks][google.cloud.tasks.v2.HttpRequest] are not affected.
+   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in this
+   * queue. [Http tasks][google.cloud.tasks.v2.HttpRequest] are not affected.
+   *
    * If set, `app_engine_routing_override` is used for all
-   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in the queue, no matter what the
-   * setting is for the
-   * [task-level app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
+   * [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in the
+   * queue, no matter what the setting is for the [task-level
+   * app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.AppEngineRouting app_engine_routing_override = 2;</code>
@@ -142,20 +156,28 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Rate limits for task dispatches.
-   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] and [retry_config][google.cloud.tasks.v2.Queue.retry_config] are
-   * related because they both control task attempts. However they control task
-   * attempts in different ways:
-   * * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] controls the total rate of
+   *
+   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] and
+   * [retry_config][google.cloud.tasks.v2.Queue.retry_config] are related
+   * because they both control task attempts. However they control task attempts
+   * in different ways:
+   *
+   * * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] controls the total
+   * rate of
    *   dispatches from a queue (i.e. all traffic dispatched from the
    *   queue, regardless of whether the dispatch is from a first
    *   attempt or a retry).
-   * * [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls what happens to
+   * * [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls what
+   * happens to
    *   particular a task after its first attempt fails. That is,
-   *   [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls task retries (the
-   *   second attempt, third attempt, etc).
+   *   [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls task
+   *   retries (the second attempt, third attempt, etc).
+   *
    * The queue's actual dispatch rate is the result of:
+   *
    * * Number of tasks in the queue
-   * * User-specified throttling: [rate_limits][google.cloud.tasks.v2.Queue.rate_limits],
+   * * User-specified throttling:
+   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits],
    *   [retry_config][google.cloud.tasks.v2.Queue.retry_config], and the
    *   [queue's state][google.cloud.tasks.v2.Queue.state].
    * * System throttling due to `429` (Too Many Requests) or `503` (Service
@@ -173,20 +195,28 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Rate limits for task dispatches.
-   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] and [retry_config][google.cloud.tasks.v2.Queue.retry_config] are
-   * related because they both control task attempts. However they control task
-   * attempts in different ways:
-   * * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] controls the total rate of
+   *
+   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] and
+   * [retry_config][google.cloud.tasks.v2.Queue.retry_config] are related
+   * because they both control task attempts. However they control task attempts
+   * in different ways:
+   *
+   * * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] controls the total
+   * rate of
    *   dispatches from a queue (i.e. all traffic dispatched from the
    *   queue, regardless of whether the dispatch is from a first
    *   attempt or a retry).
-   * * [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls what happens to
+   * * [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls what
+   * happens to
    *   particular a task after its first attempt fails. That is,
-   *   [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls task retries (the
-   *   second attempt, third attempt, etc).
+   *   [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls task
+   *   retries (the second attempt, third attempt, etc).
+   *
    * The queue's actual dispatch rate is the result of:
+   *
    * * Number of tasks in the queue
-   * * User-specified throttling: [rate_limits][google.cloud.tasks.v2.Queue.rate_limits],
+   * * User-specified throttling:
+   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits],
    *   [retry_config][google.cloud.tasks.v2.Queue.retry_config], and the
    *   [queue's state][google.cloud.tasks.v2.Queue.state].
    * * System throttling due to `429` (Too Many Requests) or `503` (Service
@@ -204,20 +234,28 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Rate limits for task dispatches.
-   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] and [retry_config][google.cloud.tasks.v2.Queue.retry_config] are
-   * related because they both control task attempts. However they control task
-   * attempts in different ways:
-   * * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] controls the total rate of
+   *
+   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] and
+   * [retry_config][google.cloud.tasks.v2.Queue.retry_config] are related
+   * because they both control task attempts. However they control task attempts
+   * in different ways:
+   *
+   * * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits] controls the total
+   * rate of
    *   dispatches from a queue (i.e. all traffic dispatched from the
    *   queue, regardless of whether the dispatch is from a first
    *   attempt or a retry).
-   * * [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls what happens to
+   * * [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls what
+   * happens to
    *   particular a task after its first attempt fails. That is,
-   *   [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls task retries (the
-   *   second attempt, third attempt, etc).
+   *   [retry_config][google.cloud.tasks.v2.Queue.retry_config] controls task
+   *   retries (the second attempt, third attempt, etc).
+   *
    * The queue's actual dispatch rate is the result of:
+   *
    * * Number of tasks in the queue
-   * * User-specified throttling: [rate_limits][google.cloud.tasks.v2.Queue.rate_limits],
+   * * User-specified throttling:
+   * [rate_limits][google.cloud.tasks.v2.Queue.rate_limits],
    *   [retry_config][google.cloud.tasks.v2.Queue.retry_config], and the
    *   [queue's state][google.cloud.tasks.v2.Queue.state].
    * * System throttling due to `429` (Too Many Requests) or `503` (Service
@@ -234,6 +272,7 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Settings that determine the retry behavior.
+   *
    * * For tasks created using Cloud Tasks: the queue-level retry settings
    *   apply to all tasks in the queue that were created using Cloud Tasks.
    *   Retry settings cannot be set on individual tasks.
@@ -254,6 +293,7 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Settings that determine the retry behavior.
+   *
    * * For tasks created using Cloud Tasks: the queue-level retry settings
    *   apply to all tasks in the queue that were created using Cloud Tasks.
    *   Retry settings cannot be set on individual tasks.
@@ -274,6 +314,7 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Settings that determine the retry behavior.
+   *
    * * For tasks created using Cloud Tasks: the queue-level retry settings
    *   apply to all tasks in the queue that were created using Cloud Tasks.
    *   Retry settings cannot be set on individual tasks.
@@ -293,11 +334,13 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The state of the queue.
+   *
    * `state` can only be changed by called
    * [PauseQueue][google.cloud.tasks.v2.CloudTasks.PauseQueue],
    * [ResumeQueue][google.cloud.tasks.v2.CloudTasks.ResumeQueue], or uploading
    * [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref).
-   * [UpdateQueue][google.cloud.tasks.v2.CloudTasks.UpdateQueue] cannot be used to change `state`.
+   * [UpdateQueue][google.cloud.tasks.v2.CloudTasks.UpdateQueue] cannot be used
+   * to change `state`.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.Queue.State state = 5;</code>
@@ -310,11 +353,13 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The state of the queue.
+   *
    * `state` can only be changed by called
    * [PauseQueue][google.cloud.tasks.v2.CloudTasks.PauseQueue],
    * [ResumeQueue][google.cloud.tasks.v2.CloudTasks.ResumeQueue], or uploading
    * [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref).
-   * [UpdateQueue][google.cloud.tasks.v2.CloudTasks.UpdateQueue] cannot be used to change `state`.
+   * [UpdateQueue][google.cloud.tasks.v2.CloudTasks.UpdateQueue] cannot be used
+   * to change `state`.
    * </pre>
    *
    * <code>.google.cloud.tasks.v2.Queue.State state = 5;</code>
@@ -328,11 +373,15 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The last time this queue was purged.
-   * All tasks that were [created][google.cloud.tasks.v2.Task.create_time] before this time
-   * were purged.
-   * A queue can be purged using [PurgeQueue][google.cloud.tasks.v2.CloudTasks.PurgeQueue], the
-   * [App Engine Task Queue SDK, or the Cloud
+   *
+   * All tasks that were [created][google.cloud.tasks.v2.Task.create_time]
+   * before this time were purged.
+   *
+   * A queue can be purged using
+   * [PurgeQueue][google.cloud.tasks.v2.CloudTasks.PurgeQueue], the [App Engine
+   * Task Queue SDK, or the Cloud
    * Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue).
+   *
    * Purge time will be truncated to the nearest microsecond. Purge
    * time will be unset if the queue has never been purged.
    * </pre>
@@ -347,11 +396,15 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The last time this queue was purged.
-   * All tasks that were [created][google.cloud.tasks.v2.Task.create_time] before this time
-   * were purged.
-   * A queue can be purged using [PurgeQueue][google.cloud.tasks.v2.CloudTasks.PurgeQueue], the
-   * [App Engine Task Queue SDK, or the Cloud
+   *
+   * All tasks that were [created][google.cloud.tasks.v2.Task.create_time]
+   * before this time were purged.
+   *
+   * A queue can be purged using
+   * [PurgeQueue][google.cloud.tasks.v2.CloudTasks.PurgeQueue], the [App Engine
+   * Task Queue SDK, or the Cloud
    * Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue).
+   *
    * Purge time will be truncated to the nearest microsecond. Purge
    * time will be unset if the queue has never been purged.
    * </pre>
@@ -366,11 +419,15 @@ public interface QueueOrBuilder
    *
    * <pre>
    * Output only. The last time this queue was purged.
-   * All tasks that were [created][google.cloud.tasks.v2.Task.create_time] before this time
-   * were purged.
-   * A queue can be purged using [PurgeQueue][google.cloud.tasks.v2.CloudTasks.PurgeQueue], the
-   * [App Engine Task Queue SDK, or the Cloud
+   *
+   * All tasks that were [created][google.cloud.tasks.v2.Task.create_time]
+   * before this time were purged.
+   *
+   * A queue can be purged using
+   * [PurgeQueue][google.cloud.tasks.v2.CloudTasks.PurgeQueue], the [App Engine
+   * Task Queue SDK, or the Cloud
    * Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue).
+   *
    * Purge time will be truncated to the nearest microsecond. Purge
    * time will be unset if the queue has never been purged.
    * </pre>

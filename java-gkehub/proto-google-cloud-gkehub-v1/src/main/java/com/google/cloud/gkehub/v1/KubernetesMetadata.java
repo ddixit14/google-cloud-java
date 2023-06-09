@@ -49,11 +49,6 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
     return new KubernetesMetadata();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.gkehub.v1.MembershipProto
         .internal_static_google_cloud_gkehub_v1_KubernetesMetadata_descriptor;
@@ -77,7 +72,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. Kubernetes API server version string as reported by `/version`.
+   * Output only. Kubernetes API server version string as reported by
+   * `/version`.
    * </pre>
    *
    * <code>string kubernetes_api_server_version = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -101,7 +97,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. Kubernetes API server version string as reported by `/version`.
+   * Output only. Kubernetes API server version string as reported by
+   * `/version`.
    * </pre>
    *
    * <code>string kubernetes_api_server_version = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -130,9 +127,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. Node providerID as reported by the first node in the list of nodes on
-   * the Kubernetes endpoint. On Kubernetes platforms that support zero-node
-   * clusters (like GKE-on-GCP), the node_count will be zero and the
+   * Output only. Node providerID as reported by the first node in the list of
+   * nodes on the Kubernetes endpoint. On Kubernetes platforms that support
+   * zero-node clusters (like GKE-on-GCP), the node_count will be zero and the
    * node_provider_id will be empty.
    * </pre>
    *
@@ -156,9 +153,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. Node providerID as reported by the first node in the list of nodes on
-   * the Kubernetes endpoint. On Kubernetes platforms that support zero-node
-   * clusters (like GKE-on-GCP), the node_count will be zero and the
+   * Output only. Node providerID as reported by the first node in the list of
+   * nodes on the Kubernetes endpoint. On Kubernetes platforms that support
+   * zero-node clusters (like GKE-on-GCP), the node_count will be zero and the
    * node_provider_id will be empty.
    * </pre>
    *
@@ -221,8 +218,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. The total memory capacity as reported by the sum of all Kubernetes nodes
-   * resources, defined in MB.
+   * Output only. The total memory capacity as reported by the sum of all
+   * Kubernetes nodes resources, defined in MB.
    * </pre>
    *
    * <code>int32 memory_mb = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -240,9 +237,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. The time at which these details were last updated. This update_time is
-   * different from the Membership-level update_time since EndpointDetails are
-   * updated internally for API consumers.
+   * Output only. The time at which these details were last updated. This
+   * update_time is different from the Membership-level update_time since
+   * EndpointDetails are updated internally for API consumers.
    * </pre>
    *
    * <code>
@@ -259,9 +256,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. The time at which these details were last updated. This update_time is
-   * different from the Membership-level update_time since EndpointDetails are
-   * updated internally for API consumers.
+   * Output only. The time at which these details were last updated. This
+   * update_time is different from the Membership-level update_time since
+   * EndpointDetails are updated internally for API consumers.
    * </pre>
    *
    * <code>
@@ -278,9 +275,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. The time at which these details were last updated. This update_time is
-   * different from the Membership-level update_time since EndpointDetails are
-   * updated internally for API consumers.
+   * Output only. The time at which these details were last updated. This
+   * update_time is different from the Membership-level update_time since
+   * EndpointDetails are updated internally for API consumers.
    * </pre>
    *
    * <code>
@@ -762,7 +759,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Kubernetes API server version string as reported by `/version`.
+     * Output only. Kubernetes API server version string as reported by
+     * `/version`.
      * </pre>
      *
      * <code>string kubernetes_api_server_version = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -785,7 +783,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Kubernetes API server version string as reported by `/version`.
+     * Output only. Kubernetes API server version string as reported by
+     * `/version`.
      * </pre>
      *
      * <code>string kubernetes_api_server_version = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -808,7 +807,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Kubernetes API server version string as reported by `/version`.
+     * Output only. Kubernetes API server version string as reported by
+     * `/version`.
      * </pre>
      *
      * <code>string kubernetes_api_server_version = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -830,7 +830,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Kubernetes API server version string as reported by `/version`.
+     * Output only. Kubernetes API server version string as reported by
+     * `/version`.
      * </pre>
      *
      * <code>string kubernetes_api_server_version = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -848,7 +849,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Kubernetes API server version string as reported by `/version`.
+     * Output only. Kubernetes API server version string as reported by
+     * `/version`.
      * </pre>
      *
      * <code>string kubernetes_api_server_version = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -873,9 +875,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Node providerID as reported by the first node in the list of nodes on
-     * the Kubernetes endpoint. On Kubernetes platforms that support zero-node
-     * clusters (like GKE-on-GCP), the node_count will be zero and the
+     * Output only. Node providerID as reported by the first node in the list of
+     * nodes on the Kubernetes endpoint. On Kubernetes platforms that support
+     * zero-node clusters (like GKE-on-GCP), the node_count will be zero and the
      * node_provider_id will be empty.
      * </pre>
      *
@@ -898,9 +900,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Node providerID as reported by the first node in the list of nodes on
-     * the Kubernetes endpoint. On Kubernetes platforms that support zero-node
-     * clusters (like GKE-on-GCP), the node_count will be zero and the
+     * Output only. Node providerID as reported by the first node in the list of
+     * nodes on the Kubernetes endpoint. On Kubernetes platforms that support
+     * zero-node clusters (like GKE-on-GCP), the node_count will be zero and the
      * node_provider_id will be empty.
      * </pre>
      *
@@ -923,9 +925,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Node providerID as reported by the first node in the list of nodes on
-     * the Kubernetes endpoint. On Kubernetes platforms that support zero-node
-     * clusters (like GKE-on-GCP), the node_count will be zero and the
+     * Output only. Node providerID as reported by the first node in the list of
+     * nodes on the Kubernetes endpoint. On Kubernetes platforms that support
+     * zero-node clusters (like GKE-on-GCP), the node_count will be zero and the
      * node_provider_id will be empty.
      * </pre>
      *
@@ -947,9 +949,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Node providerID as reported by the first node in the list of nodes on
-     * the Kubernetes endpoint. On Kubernetes platforms that support zero-node
-     * clusters (like GKE-on-GCP), the node_count will be zero and the
+     * Output only. Node providerID as reported by the first node in the list of
+     * nodes on the Kubernetes endpoint. On Kubernetes platforms that support
+     * zero-node clusters (like GKE-on-GCP), the node_count will be zero and the
      * node_provider_id will be empty.
      * </pre>
      *
@@ -967,9 +969,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Node providerID as reported by the first node in the list of nodes on
-     * the Kubernetes endpoint. On Kubernetes platforms that support zero-node
-     * clusters (like GKE-on-GCP), the node_count will be zero and the
+     * Output only. Node providerID as reported by the first node in the list of
+     * nodes on the Kubernetes endpoint. On Kubernetes platforms that support
+     * zero-node clusters (like GKE-on-GCP), the node_count will be zero and the
      * node_provider_id will be empty.
      * </pre>
      *
@@ -1100,8 +1102,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The total memory capacity as reported by the sum of all Kubernetes nodes
-     * resources, defined in MB.
+     * Output only. The total memory capacity as reported by the sum of all
+     * Kubernetes nodes resources, defined in MB.
      * </pre>
      *
      * <code>int32 memory_mb = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1116,8 +1118,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The total memory capacity as reported by the sum of all Kubernetes nodes
-     * resources, defined in MB.
+     * Output only. The total memory capacity as reported by the sum of all
+     * Kubernetes nodes resources, defined in MB.
      * </pre>
      *
      * <code>int32 memory_mb = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1136,8 +1138,8 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The total memory capacity as reported by the sum of all Kubernetes nodes
-     * resources, defined in MB.
+     * Output only. The total memory capacity as reported by the sum of all
+     * Kubernetes nodes resources, defined in MB.
      * </pre>
      *
      * <code>int32 memory_mb = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1161,9 +1163,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The time at which these details were last updated. This update_time is
-     * different from the Membership-level update_time since EndpointDetails are
-     * updated internally for API consumers.
+     * Output only. The time at which these details were last updated. This
+     * update_time is different from the Membership-level update_time since
+     * EndpointDetails are updated internally for API consumers.
      * </pre>
      *
      * <code>
@@ -1179,9 +1181,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The time at which these details were last updated. This update_time is
-     * different from the Membership-level update_time since EndpointDetails are
-     * updated internally for API consumers.
+     * Output only. The time at which these details were last updated. This
+     * update_time is different from the Membership-level update_time since
+     * EndpointDetails are updated internally for API consumers.
      * </pre>
      *
      * <code>
@@ -1203,9 +1205,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The time at which these details were last updated. This update_time is
-     * different from the Membership-level update_time since EndpointDetails are
-     * updated internally for API consumers.
+     * Output only. The time at which these details were last updated. This
+     * update_time is different from the Membership-level update_time since
+     * EndpointDetails are updated internally for API consumers.
      * </pre>
      *
      * <code>
@@ -1229,9 +1231,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The time at which these details were last updated. This update_time is
-     * different from the Membership-level update_time since EndpointDetails are
-     * updated internally for API consumers.
+     * Output only. The time at which these details were last updated. This
+     * update_time is different from the Membership-level update_time since
+     * EndpointDetails are updated internally for API consumers.
      * </pre>
      *
      * <code>
@@ -1252,9 +1254,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The time at which these details were last updated. This update_time is
-     * different from the Membership-level update_time since EndpointDetails are
-     * updated internally for API consumers.
+     * Output only. The time at which these details were last updated. This
+     * update_time is different from the Membership-level update_time since
+     * EndpointDetails are updated internally for API consumers.
      * </pre>
      *
      * <code>
@@ -1281,9 +1283,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The time at which these details were last updated. This update_time is
-     * different from the Membership-level update_time since EndpointDetails are
-     * updated internally for API consumers.
+     * Output only. The time at which these details were last updated. This
+     * update_time is different from the Membership-level update_time since
+     * EndpointDetails are updated internally for API consumers.
      * </pre>
      *
      * <code>
@@ -1304,9 +1306,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The time at which these details were last updated. This update_time is
-     * different from the Membership-level update_time since EndpointDetails are
-     * updated internally for API consumers.
+     * Output only. The time at which these details were last updated. This
+     * update_time is different from the Membership-level update_time since
+     * EndpointDetails are updated internally for API consumers.
      * </pre>
      *
      * <code>
@@ -1322,9 +1324,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The time at which these details were last updated. This update_time is
-     * different from the Membership-level update_time since EndpointDetails are
-     * updated internally for API consumers.
+     * Output only. The time at which these details were last updated. This
+     * update_time is different from the Membership-level update_time since
+     * EndpointDetails are updated internally for API consumers.
      * </pre>
      *
      * <code>
@@ -1344,9 +1346,9 @@ public final class KubernetesMetadata extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. The time at which these details were last updated. This update_time is
-     * different from the Membership-level update_time since EndpointDetails are
-     * updated internally for API consumers.
+     * Output only. The time at which these details were last updated. This
+     * update_time is different from the Membership-level update_time since
+     * EndpointDetails are updated internally for API consumers.
      * </pre>
      *
      * <code>

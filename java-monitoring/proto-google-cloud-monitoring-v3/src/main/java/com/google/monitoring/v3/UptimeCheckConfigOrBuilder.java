@@ -28,9 +28,12 @@ public interface UptimeCheckConfigOrBuilder
    *
    * <pre>
    * A unique resource name for this Uptime check configuration. The format is:
+   *
    *      projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
+   *
    * `[PROJECT_ID_OR_NUMBER]` is the Workspace host project associated with the
    * Uptime check.
+   *
    * This field should be omitted when creating the Uptime check configuration;
    * on create, the resource name is assigned by the server and included in the
    * response.
@@ -46,9 +49,12 @@ public interface UptimeCheckConfigOrBuilder
    *
    * <pre>
    * A unique resource name for this Uptime check configuration. The format is:
+   *
    *      projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
+   *
    * `[PROJECT_ID_OR_NUMBER]` is the Workspace host project associated with the
    * Uptime check.
+   *
    * This field should be omitted when creating the Uptime check configuration;
    * on create, the resource name is assigned by the server and included in the
    * response.
@@ -65,8 +71,8 @@ public interface UptimeCheckConfigOrBuilder
    *
    * <pre>
    * A human-friendly name for the Uptime check configuration. The display name
-   * should be unique within a Stackdriver Workspace in order to make it easier
-   * to identify; however, uniqueness is not enforced. Required.
+   * should be unique within a Cloud Monitoring Workspace in order to make it
+   * easier to identify; however, uniqueness is not enforced. Required.
    * </pre>
    *
    * <code>string display_name = 2;</code>
@@ -79,8 +85,8 @@ public interface UptimeCheckConfigOrBuilder
    *
    * <pre>
    * A human-friendly name for the Uptime check configuration. The display name
-   * should be unique within a Stackdriver Workspace in order to make it easier
-   * to identify; however, uniqueness is not enforced. Required.
+   * should be unique within a Cloud Monitoring Workspace in order to make it
+   * easier to identify; however, uniqueness is not enforced. Required.
    * </pre>
    *
    * <code>string display_name = 2;</code>
@@ -103,6 +109,8 @@ public interface UptimeCheckConfigOrBuilder
    *   `aws_ec2_instance`,
    *   `aws_elb_load_balancer`
    *   `k8s_service`
+   *   `servicedirectory_service`
+   *   `cloud_run_revision`
    * </pre>
    *
    * <code>.google.api.MonitoredResource monitored_resource = 3;</code>
@@ -124,6 +132,8 @@ public interface UptimeCheckConfigOrBuilder
    *   `aws_ec2_instance`,
    *   `aws_elb_load_balancer`
    *   `k8s_service`
+   *   `servicedirectory_service`
+   *   `cloud_run_revision`
    * </pre>
    *
    * <code>.google.api.MonitoredResource monitored_resource = 3;</code>
@@ -145,6 +155,8 @@ public interface UptimeCheckConfigOrBuilder
    *   `aws_ec2_instance`,
    *   `aws_elb_load_balancer`
    *   `k8s_service`
+   *   `servicedirectory_service`
+   *   `cloud_run_revision`
    * </pre>
    *
    * <code>.google.api.MonitoredResource monitored_resource = 3;</code>
@@ -421,6 +433,31 @@ public interface UptimeCheckConfigOrBuilder
    *
    *
    * <pre>
+   * The type of checkers to use to execute the Uptime check.
+   * </pre>
+   *
+   * <code>.google.monitoring.v3.UptimeCheckConfig.CheckerType checker_type = 17;</code>
+   *
+   * @return The enum numeric value on the wire for checkerType.
+   */
+  int getCheckerTypeValue();
+  /**
+   *
+   *
+   * <pre>
+   * The type of checkers to use to execute the Uptime check.
+   * </pre>
+   *
+   * <code>.google.monitoring.v3.UptimeCheckConfig.CheckerType checker_type = 17;</code>
+   *
+   * @return The checkerType.
+   */
+  com.google.monitoring.v3.UptimeCheckConfig.CheckerType getCheckerType();
+
+  /**
+   *
+   *
+   * <pre>
    * The list of regions from which the check will be run.
    * Some regions contain one location, and others contain more than one.
    * If this field is specified, enough regions must be provided to include a
@@ -513,7 +550,7 @@ public interface UptimeCheckConfigOrBuilder
    * <code>bool is_internal = 15 [deprecated = true];</code>
    *
    * @deprecated google.monitoring.v3.UptimeCheckConfig.is_internal is deprecated. See
-   *     google/monitoring/v3/uptime.proto;l=359
+   *     google/monitoring/v3/uptime.proto;l=478
    * @return The isInternal.
    */
   @java.lang.Deprecated
@@ -601,7 +638,95 @@ public interface UptimeCheckConfigOrBuilder
   @java.lang.Deprecated
   com.google.monitoring.v3.InternalCheckerOrBuilder getInternalCheckersOrBuilder(int index);
 
-  public com.google.monitoring.v3.UptimeCheckConfig.ResourceCase getResourceCase();
+  /**
+   *
+   *
+   * <pre>
+   * User-supplied key/value data to be used for organizing and
+   * identifying the `UptimeCheckConfig` objects.
+   *
+   * The field can contain up to 64 entries. Each key and value is limited to
+   * 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
+   * values can contain only lowercase letters, numerals, underscores, and
+   * dashes. Keys must begin with a letter.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; user_labels = 20;</code>
+   */
+  int getUserLabelsCount();
+  /**
+   *
+   *
+   * <pre>
+   * User-supplied key/value data to be used for organizing and
+   * identifying the `UptimeCheckConfig` objects.
+   *
+   * The field can contain up to 64 entries. Each key and value is limited to
+   * 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
+   * values can contain only lowercase letters, numerals, underscores, and
+   * dashes. Keys must begin with a letter.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; user_labels = 20;</code>
+   */
+  boolean containsUserLabels(java.lang.String key);
+  /** Use {@link #getUserLabelsMap()} instead. */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.String> getUserLabels();
+  /**
+   *
+   *
+   * <pre>
+   * User-supplied key/value data to be used for organizing and
+   * identifying the `UptimeCheckConfig` objects.
+   *
+   * The field can contain up to 64 entries. Each key and value is limited to
+   * 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
+   * values can contain only lowercase letters, numerals, underscores, and
+   * dashes. Keys must begin with a letter.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; user_labels = 20;</code>
+   */
+  java.util.Map<java.lang.String, java.lang.String> getUserLabelsMap();
+  /**
+   *
+   *
+   * <pre>
+   * User-supplied key/value data to be used for organizing and
+   * identifying the `UptimeCheckConfig` objects.
+   *
+   * The field can contain up to 64 entries. Each key and value is limited to
+   * 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
+   * values can contain only lowercase letters, numerals, underscores, and
+   * dashes. Keys must begin with a letter.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; user_labels = 20;</code>
+   */
+  /* nullable */
+  java.lang.String getUserLabelsOrDefault(
+      java.lang.String key,
+      /* nullable */
+      java.lang.String defaultValue);
+  /**
+   *
+   *
+   * <pre>
+   * User-supplied key/value data to be used for organizing and
+   * identifying the `UptimeCheckConfig` objects.
+   *
+   * The field can contain up to 64 entries. Each key and value is limited to
+   * 63 Unicode characters or 128 bytes, whichever is smaller. Labels and
+   * values can contain only lowercase letters, numerals, underscores, and
+   * dashes. Keys must begin with a letter.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; user_labels = 20;</code>
+   */
+  java.lang.String getUserLabelsOrThrow(java.lang.String key);
 
-  public com.google.monitoring.v3.UptimeCheckConfig.CheckRequestTypeCase getCheckRequestTypeCase();
+  com.google.monitoring.v3.UptimeCheckConfig.ResourceCase getResourceCase();
+
+  com.google.monitoring.v3.UptimeCheckConfig.CheckRequestTypeCase getCheckRequestTypeCase();
 }

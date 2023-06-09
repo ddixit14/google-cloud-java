@@ -50,11 +50,6 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
     return new CollectUserEventRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.retail.v2alpha.UserEventServiceProto
         .internal_static_google_cloud_retail_v2alpha_CollectUserEventRequest_descriptor;
@@ -71,6 +66,8 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
   }
 
   private int conversionRuleCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object conversionRule_;
 
   public enum ConversionRuleCase
@@ -120,7 +117,7 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
    *
    * <pre>
    * The prebuilt rule name that can convert a specific type of raw_json.
-   * For example: "default_schema/v1.0"
+   * For example: "ga4_bq" rule for the GA4 user event schema.
    * </pre>
    *
    * <code>string prebuilt_rule = 6;</code>
@@ -135,7 +132,7 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
    *
    * <pre>
    * The prebuilt rule name that can convert a specific type of raw_json.
-   * For example: "default_schema/v1.0"
+   * For example: "ga4_bq" rule for the GA4 user event schema.
    * </pre>
    *
    * <code>string prebuilt_rule = 6;</code>
@@ -163,7 +160,7 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
    *
    * <pre>
    * The prebuilt rule name that can convert a specific type of raw_json.
-   * For example: "default_schema/v1.0"
+   * For example: "ga4_bq" rule for the GA4 user event schema.
    * </pre>
    *
    * <code>string prebuilt_rule = 6;</code>
@@ -934,7 +931,7 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
      *
      * <pre>
      * The prebuilt rule name that can convert a specific type of raw_json.
-     * For example: "default_schema/v1.0"
+     * For example: "ga4_bq" rule for the GA4 user event schema.
      * </pre>
      *
      * <code>string prebuilt_rule = 6;</code>
@@ -950,7 +947,7 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
      *
      * <pre>
      * The prebuilt rule name that can convert a specific type of raw_json.
-     * For example: "default_schema/v1.0"
+     * For example: "ga4_bq" rule for the GA4 user event schema.
      * </pre>
      *
      * <code>string prebuilt_rule = 6;</code>
@@ -979,7 +976,7 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
      *
      * <pre>
      * The prebuilt rule name that can convert a specific type of raw_json.
-     * For example: "default_schema/v1.0"
+     * For example: "ga4_bq" rule for the GA4 user event schema.
      * </pre>
      *
      * <code>string prebuilt_rule = 6;</code>
@@ -1008,7 +1005,7 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
      *
      * <pre>
      * The prebuilt rule name that can convert a specific type of raw_json.
-     * For example: "default_schema/v1.0"
+     * For example: "ga4_bq" rule for the GA4 user event schema.
      * </pre>
      *
      * <code>string prebuilt_rule = 6;</code>
@@ -1030,7 +1027,7 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
      *
      * <pre>
      * The prebuilt rule name that can convert a specific type of raw_json.
-     * For example: "default_schema/v1.0"
+     * For example: "ga4_bq" rule for the GA4 user event schema.
      * </pre>
      *
      * <code>string prebuilt_rule = 6;</code>
@@ -1050,7 +1047,7 @@ public final class CollectUserEventRequest extends com.google.protobuf.Generated
      *
      * <pre>
      * The prebuilt rule name that can convert a specific type of raw_json.
-     * For example: "default_schema/v1.0"
+     * For example: "ga4_bq" rule for the GA4 user event schema.
      * </pre>
      *
      * <code>string prebuilt_rule = 6;</code>

@@ -54,8 +54,7 @@ public interface ContainerOrBuilder
    * <pre>
    * Required. Name of the container image in Dockerhub, Google Artifact
    * Registry, or Google Container Registry. If the host is not provided,
-   * Dockerhub is assumed. More info:
-   * https://kubernetes.io/docs/concepts/containers/images
+   * Dockerhub is assumed.
    * </pre>
    *
    * <code>string image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -69,8 +68,7 @@ public interface ContainerOrBuilder
    * <pre>
    * Required. Name of the container image in Dockerhub, Google Artifact
    * Registry, or Google Container Registry. If the host is not provided,
-   * Dockerhub is assumed. More info:
-   * https://kubernetes.io/docs/concepts/containers/images
+   * Dockerhub is assumed.
    * </pre>
    *
    * <code>string image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -85,13 +83,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Entrypoint array. Not executed within a shell.
    * The docker image's ENTRYPOINT is used if this is not provided.
-   * Variable references $(VAR_NAME) are expanded using the container's
-   * environment. If a variable cannot be resolved, the reference in the input
-   * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not.
-   * More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * </pre>
    *
    * <code>repeated string command = 3;</code>
@@ -105,13 +96,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Entrypoint array. Not executed within a shell.
    * The docker image's ENTRYPOINT is used if this is not provided.
-   * Variable references $(VAR_NAME) are expanded using the container's
-   * environment. If a variable cannot be resolved, the reference in the input
-   * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not.
-   * More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * </pre>
    *
    * <code>repeated string command = 3;</code>
@@ -125,13 +109,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Entrypoint array. Not executed within a shell.
    * The docker image's ENTRYPOINT is used if this is not provided.
-   * Variable references $(VAR_NAME) are expanded using the container's
-   * environment. If a variable cannot be resolved, the reference in the input
-   * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not.
-   * More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * </pre>
    *
    * <code>repeated string command = 3;</code>
@@ -146,13 +123,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Entrypoint array. Not executed within a shell.
    * The docker image's ENTRYPOINT is used if this is not provided.
-   * Variable references $(VAR_NAME) are expanded using the container's
-   * environment. If a variable cannot be resolved, the reference in the input
-   * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not.
-   * More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * </pre>
    *
    * <code>repeated string command = 3;</code>
@@ -168,13 +138,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Arguments to the entrypoint.
    * The docker image's CMD is used if this is not provided.
-   * Variable references $(VAR_NAME) are expanded using the container's
-   * environment. If a variable cannot be resolved, the reference in the input
-   * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not.
-   * More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * </pre>
    *
    * <code>repeated string args = 4;</code>
@@ -188,13 +151,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Arguments to the entrypoint.
    * The docker image's CMD is used if this is not provided.
-   * Variable references $(VAR_NAME) are expanded using the container's
-   * environment. If a variable cannot be resolved, the reference in the input
-   * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not.
-   * More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * </pre>
    *
    * <code>repeated string args = 4;</code>
@@ -208,13 +164,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Arguments to the entrypoint.
    * The docker image's CMD is used if this is not provided.
-   * Variable references $(VAR_NAME) are expanded using the container's
-   * environment. If a variable cannot be resolved, the reference in the input
-   * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not.
-   * More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * </pre>
    *
    * <code>repeated string args = 4;</code>
@@ -229,13 +178,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Arguments to the entrypoint.
    * The docker image's CMD is used if this is not provided.
-   * Variable references $(VAR_NAME) are expanded using the container's
-   * environment. If a variable cannot be resolved, the reference in the input
-   * string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not.
-   * More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
    * </pre>
    *
    * <code>repeated string args = 4;</code>
@@ -301,8 +243,6 @@ public interface ContainerOrBuilder
    *
    * <pre>
    * Compute Resource requirements by this container.
-   * More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
    * </pre>
    *
    * <code>.google.cloud.run.v2.ResourceRequirements resources = 6;</code>
@@ -315,8 +255,6 @@ public interface ContainerOrBuilder
    *
    * <pre>
    * Compute Resource requirements by this container.
-   * More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
    * </pre>
    *
    * <code>.google.cloud.run.v2.ResourceRequirements resources = 6;</code>
@@ -329,8 +267,6 @@ public interface ContainerOrBuilder
    *
    * <pre>
    * Compute Resource requirements by this container.
-   * More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
    * </pre>
    *
    * <code>.google.cloud.run.v2.ResourceRequirements resources = 6;</code>
@@ -344,6 +280,7 @@ public interface ContainerOrBuilder
    * List of ports to expose from the container. Only a single port can be
    * specified. The specified ports must be listening on all interfaces
    * (0.0.0.0) within the container to be accessible.
+   *
    * If omitted, a port number will be chosen and passed to the container
    * through the PORT environment variable for the container to listen on.
    * </pre>
@@ -358,6 +295,7 @@ public interface ContainerOrBuilder
    * List of ports to expose from the container. Only a single port can be
    * specified. The specified ports must be listening on all interfaces
    * (0.0.0.0) within the container to be accessible.
+   *
    * If omitted, a port number will be chosen and passed to the container
    * through the PORT environment variable for the container to listen on.
    * </pre>
@@ -372,6 +310,7 @@ public interface ContainerOrBuilder
    * List of ports to expose from the container. Only a single port can be
    * specified. The specified ports must be listening on all interfaces
    * (0.0.0.0) within the container to be accessible.
+   *
    * If omitted, a port number will be chosen and passed to the container
    * through the PORT environment variable for the container to listen on.
    * </pre>
@@ -386,6 +325,7 @@ public interface ContainerOrBuilder
    * List of ports to expose from the container. Only a single port can be
    * specified. The specified ports must be listening on all interfaces
    * (0.0.0.0) within the container to be accessible.
+   *
    * If omitted, a port number will be chosen and passed to the container
    * through the PORT environment variable for the container to listen on.
    * </pre>
@@ -400,6 +340,7 @@ public interface ContainerOrBuilder
    * List of ports to expose from the container. Only a single port can be
    * specified. The specified ports must be listening on all interfaces
    * (0.0.0.0) within the container to be accessible.
+   *
    * If omitted, a port number will be chosen and passed to the container
    * through the PORT environment variable for the container to listen on.
    * </pre>
@@ -495,8 +436,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Periodic probe of container liveness.
    * Container will be restarted if the probe fails.
-   * More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * </pre>
    *
    * <code>.google.cloud.run.v2.Probe liveness_probe = 10;</code>
@@ -510,8 +449,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Periodic probe of container liveness.
    * Container will be restarted if the probe fails.
-   * More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * </pre>
    *
    * <code>.google.cloud.run.v2.Probe liveness_probe = 10;</code>
@@ -525,8 +462,6 @@ public interface ContainerOrBuilder
    * <pre>
    * Periodic probe of container liveness.
    * Container will be restarted if the probe fails.
-   * More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * </pre>
    *
    * <code>.google.cloud.run.v2.Probe liveness_probe = 10;</code>
@@ -541,8 +476,6 @@ public interface ContainerOrBuilder
    * All other probes are disabled if a startup probe is provided, until it
    * succeeds. Container will not be added to service endpoints if the probe
    * fails.
-   * More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * </pre>
    *
    * <code>.google.cloud.run.v2.Probe startup_probe = 11;</code>
@@ -558,8 +491,6 @@ public interface ContainerOrBuilder
    * All other probes are disabled if a startup probe is provided, until it
    * succeeds. Container will not be added to service endpoints if the probe
    * fails.
-   * More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * </pre>
    *
    * <code>.google.cloud.run.v2.Probe startup_probe = 11;</code>
@@ -575,8 +506,6 @@ public interface ContainerOrBuilder
    * All other probes are disabled if a startup probe is provided, until it
    * succeeds. Container will not be added to service endpoints if the probe
    * fails.
-   * More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
    * </pre>
    *
    * <code>.google.cloud.run.v2.Probe startup_probe = 11;</code>

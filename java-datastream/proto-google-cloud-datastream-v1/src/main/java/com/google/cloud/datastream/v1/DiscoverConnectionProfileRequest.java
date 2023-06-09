@@ -48,11 +48,6 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
     return new DiscoverConnectionProfileRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.datastream.v1.DatastreamProto
         .internal_static_google_cloud_datastream_v1_DiscoverConnectionProfileRequest_descriptor;
@@ -69,6 +64,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
   }
 
   private int targetCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object target_;
 
   public enum TargetCase
@@ -116,6 +113,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
   }
 
   private int hierarchyCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object hierarchy_;
 
   public enum HierarchyCase
@@ -163,6 +162,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
   }
 
   private int dataObjectCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object dataObject_;
 
   public enum DataObjectCase
@@ -220,8 +221,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
    *
    *
    * <pre>
-   * Required. The parent resource of the connection profile type. Must be in the
-   * format `projects/&#42;&#47;locations/&#42;`.
+   * Required. The parent resource of the connection profile type. Must be in
+   * the format `projects/&#42;&#47;locations/&#42;`.
    * </pre>
    *
    * <code>
@@ -246,8 +247,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
    *
    *
    * <pre>
-   * Required. The parent resource of the connection profile type. Must be in the
-   * format `projects/&#42;&#47;locations/&#42;`.
+   * Required. The parent resource of the connection profile type. Must be in
+   * the format `projects/&#42;&#47;locations/&#42;`.
    * </pre>
    *
    * <code>
@@ -1279,8 +1280,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
      *
      *
      * <pre>
-     * Required. The parent resource of the connection profile type. Must be in the
-     * format `projects/&#42;&#47;locations/&#42;`.
+     * Required. The parent resource of the connection profile type. Must be in
+     * the format `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>
@@ -1304,8 +1305,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
      *
      *
      * <pre>
-     * Required. The parent resource of the connection profile type. Must be in the
-     * format `projects/&#42;&#47;locations/&#42;`.
+     * Required. The parent resource of the connection profile type. Must be in
+     * the format `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>
@@ -1329,8 +1330,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
      *
      *
      * <pre>
-     * Required. The parent resource of the connection profile type. Must be in the
-     * format `projects/&#42;&#47;locations/&#42;`.
+     * Required. The parent resource of the connection profile type. Must be in
+     * the format `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>
@@ -1353,8 +1354,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
      *
      *
      * <pre>
-     * Required. The parent resource of the connection profile type. Must be in the
-     * format `projects/&#42;&#47;locations/&#42;`.
+     * Required. The parent resource of the connection profile type. Must be in
+     * the format `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>
@@ -1373,8 +1374,8 @@ public final class DiscoverConnectionProfileRequest extends com.google.protobuf.
      *
      *
      * <pre>
-     * Required. The parent resource of the connection profile type. Must be in the
-     * format `projects/&#42;&#47;locations/&#42;`.
+     * Required. The parent resource of the connection profile type. Must be in
+     * the format `projects/&#42;&#47;locations/&#42;`.
      * </pre>
      *
      * <code>

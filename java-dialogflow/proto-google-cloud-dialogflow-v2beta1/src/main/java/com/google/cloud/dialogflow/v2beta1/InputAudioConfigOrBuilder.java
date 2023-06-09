@@ -122,9 +122,11 @@ public interface InputAudioConfigOrBuilder
    * <pre>
    * A list of strings containing words and phrases that the speech
    * recognizer should recognize with higher likelihood.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
+   *
    * This field is deprecated. Please use [speech_contexts]() instead. If you
    * specify both [phrase_hints]() and [speech_contexts](), Dialogflow will
    * treat the [phrase_hints]() as a single additional [SpeechContext]().
@@ -133,7 +135,7 @@ public interface InputAudioConfigOrBuilder
    * <code>repeated string phrase_hints = 4 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.v2beta1.InputAudioConfig.phrase_hints is deprecated. See
-   *     google/cloud/dialogflow/v2beta1/audio_config.proto;l=256
+   *     google/cloud/dialogflow/v2beta1/audio_config.proto;l=266
    * @return A list containing the phraseHints.
    */
   @java.lang.Deprecated
@@ -144,9 +146,11 @@ public interface InputAudioConfigOrBuilder
    * <pre>
    * A list of strings containing words and phrases that the speech
    * recognizer should recognize with higher likelihood.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
+   *
    * This field is deprecated. Please use [speech_contexts]() instead. If you
    * specify both [phrase_hints]() and [speech_contexts](), Dialogflow will
    * treat the [phrase_hints]() as a single additional [SpeechContext]().
@@ -155,7 +159,7 @@ public interface InputAudioConfigOrBuilder
    * <code>repeated string phrase_hints = 4 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.v2beta1.InputAudioConfig.phrase_hints is deprecated. See
-   *     google/cloud/dialogflow/v2beta1/audio_config.proto;l=256
+   *     google/cloud/dialogflow/v2beta1/audio_config.proto;l=266
    * @return The count of phraseHints.
    */
   @java.lang.Deprecated
@@ -166,9 +170,11 @@ public interface InputAudioConfigOrBuilder
    * <pre>
    * A list of strings containing words and phrases that the speech
    * recognizer should recognize with higher likelihood.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
+   *
    * This field is deprecated. Please use [speech_contexts]() instead. If you
    * specify both [phrase_hints]() and [speech_contexts](), Dialogflow will
    * treat the [phrase_hints]() as a single additional [SpeechContext]().
@@ -177,7 +183,7 @@ public interface InputAudioConfigOrBuilder
    * <code>repeated string phrase_hints = 4 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.v2beta1.InputAudioConfig.phrase_hints is deprecated. See
-   *     google/cloud/dialogflow/v2beta1/audio_config.proto;l=256
+   *     google/cloud/dialogflow/v2beta1/audio_config.proto;l=266
    * @param index The index of the element to return.
    * @return The phraseHints at the given index.
    */
@@ -189,9 +195,11 @@ public interface InputAudioConfigOrBuilder
    * <pre>
    * A list of strings containing words and phrases that the speech
    * recognizer should recognize with higher likelihood.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
+   *
    * This field is deprecated. Please use [speech_contexts]() instead. If you
    * specify both [phrase_hints]() and [speech_contexts](), Dialogflow will
    * treat the [phrase_hints]() as a single additional [SpeechContext]().
@@ -200,7 +208,7 @@ public interface InputAudioConfigOrBuilder
    * <code>repeated string phrase_hints = 4 [deprecated = true];</code>
    *
    * @deprecated google.cloud.dialogflow.v2beta1.InputAudioConfig.phrase_hints is deprecated. See
-   *     google/cloud/dialogflow/v2beta1/audio_config.proto;l=256
+   *     google/cloud/dialogflow/v2beta1/audio_config.proto;l=266
    * @param index The index of the value to return.
    * @return The bytes of the phraseHints at the given index.
    */
@@ -212,6 +220,7 @@ public interface InputAudioConfigOrBuilder
    *
    * <pre>
    * Context information to assist speech recognition.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
@@ -225,6 +234,7 @@ public interface InputAudioConfigOrBuilder
    *
    * <pre>
    * Context information to assist speech recognition.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
@@ -238,6 +248,7 @@ public interface InputAudioConfigOrBuilder
    *
    * <pre>
    * Context information to assist speech recognition.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
@@ -251,6 +262,7 @@ public interface InputAudioConfigOrBuilder
    *
    * <pre>
    * Context information to assist speech recognition.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
@@ -265,6 +277,7 @@ public interface InputAudioConfigOrBuilder
    *
    * <pre>
    * Context information to assist speech recognition.
+   *
    * See [the Cloud Speech
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
    * for more details.
@@ -289,6 +302,12 @@ public interface InputAudioConfigOrBuilder
    * [Cloud Speech API
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
    * for more details.
+   * If you specify a model, the following models typically have the best
+   * performance:
+   *
+   * - phone_call (best for Agent Assist and telephony)
+   * - latest_short (best for Dialogflow non-telephony)
+   * - command_and_search (best for very short utterances and commands)
    * </pre>
    *
    * <code>string model = 7;</code>
@@ -311,6 +330,12 @@ public interface InputAudioConfigOrBuilder
    * [Cloud Speech API
    * documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
    * for more details.
+   * If you specify a model, the following models typically have the best
+   * performance:
+   *
+   * - phone_call (best for Agent Assist and telephony)
+   * - latest_short (best for Dialogflow non-telephony)
+   * - command_and_search (best for very short utterances and commands)
    * </pre>
    *
    * <code>string model = 7;</code>
@@ -420,4 +445,17 @@ public interface InputAudioConfigOrBuilder
    * <code>.google.cloud.dialogflow.v2beta1.BargeInConfig barge_in_config = 15;</code>
    */
   com.google.cloud.dialogflow.v2beta1.BargeInConfigOrBuilder getBargeInConfigOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Enable automatic punctuation option at the speech backend.
+   * </pre>
+   *
+   * <code>bool enable_automatic_punctuation = 17;</code>
+   *
+   * @return The enableAutomaticPunctuation.
+   */
+  boolean getEnableAutomaticPunctuation();
 }

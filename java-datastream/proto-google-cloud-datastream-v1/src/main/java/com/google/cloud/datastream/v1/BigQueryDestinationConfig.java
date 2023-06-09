@@ -18,7 +18,15 @@
 
 package com.google.cloud.datastream.v1;
 
-/** Protobuf type {@code google.cloud.datastream.v1.BigQueryDestinationConfig} */
+/**
+ *
+ *
+ * <pre>
+ * BigQuery destination configuration
+ * </pre>
+ *
+ * Protobuf type {@code google.cloud.datastream.v1.BigQueryDestinationConfig}
+ */
 public final class BigQueryDestinationConfig extends com.google.protobuf.GeneratedMessageV3
     implements
     // @@protoc_insertion_point(message_implements:google.cloud.datastream.v1.BigQueryDestinationConfig)
@@ -35,11 +43,6 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new BigQueryDestinationConfig();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -63,12 +66,24 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
+     * <pre>
+     * The dataset ID of the target dataset.
+     * </pre>
+     *
      * <code>string dataset_id = 1;</code>
      *
      * @return The datasetId.
      */
     java.lang.String getDatasetId();
     /**
+     *
+     *
+     * <pre>
+     * The dataset ID of the target dataset.
+     * </pre>
+     *
      * <code>string dataset_id = 1;</code>
      *
      * @return The bytes for datasetId.
@@ -104,11 +119,6 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
       return new SingleTargetDataset();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.datastream.v1.DatastreamResourcesProto
           .internal_static_google_cloud_datastream_v1_BigQueryDestinationConfig_SingleTargetDataset_descriptor;
@@ -130,6 +140,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
     @SuppressWarnings("serial")
     private volatile java.lang.Object datasetId_ = "";
     /**
+     *
+     *
+     * <pre>
+     * The dataset ID of the target dataset.
+     * </pre>
+     *
      * <code>string dataset_id = 1;</code>
      *
      * @return The datasetId.
@@ -147,6 +163,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
       }
     }
     /**
+     *
+     *
+     * <pre>
+     * The dataset ID of the target dataset.
+     * </pre>
+     *
      * <code>string dataset_id = 1;</code>
      *
      * @return The bytes for datasetId.
@@ -534,6 +556,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
 
       private java.lang.Object datasetId_ = "";
       /**
+       *
+       *
+       * <pre>
+       * The dataset ID of the target dataset.
+       * </pre>
+       *
        * <code>string dataset_id = 1;</code>
        *
        * @return The datasetId.
@@ -550,6 +578,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         }
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset ID of the target dataset.
+       * </pre>
+       *
        * <code>string dataset_id = 1;</code>
        *
        * @return The bytes for datasetId.
@@ -566,6 +600,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         }
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset ID of the target dataset.
+       * </pre>
+       *
        * <code>string dataset_id = 1;</code>
        *
        * @param value The datasetId to set.
@@ -581,6 +621,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset ID of the target dataset.
+       * </pre>
+       *
        * <code>string dataset_id = 1;</code>
        *
        * @return This builder for chaining.
@@ -592,6 +638,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset ID of the target dataset.
+       * </pre>
+       *
        * <code>string dataset_id = 1;</code>
        *
        * @param value The bytes for datasetId to set.
@@ -683,6 +735,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
+     * <pre>
+     * The dataset template to use for dynamic dataset creation.
+     * </pre>
+     *
      * <code>
      * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
      * </code>
@@ -691,6 +749,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
      */
     boolean hasDatasetTemplate();
     /**
+     *
+     *
+     * <pre>
+     * The dataset template to use for dynamic dataset creation.
+     * </pre>
+     *
      * <code>
      * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
      * </code>
@@ -700,6 +764,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
     com.google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate
         getDatasetTemplate();
     /**
+     *
+     *
+     * <pre>
+     * The dataset template to use for dynamic dataset creation.
+     * </pre>
+     *
      * <code>
      * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
      * </code>
@@ -735,11 +805,6 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new SourceHierarchyDatasets();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -889,11 +954,6 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
         return new DatasetTemplate();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-        return this.unknownFields;
       }
 
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -1985,6 +2045,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
             .DatasetTemplate
         datasetTemplate_;
     /**
+     *
+     *
+     * <pre>
+     * The dataset template to use for dynamic dataset creation.
+     * </pre>
+     *
      * <code>
      * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
      * </code>
@@ -1996,6 +2062,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
       return datasetTemplate_ != null;
     }
     /**
+     *
+     *
+     * <pre>
+     * The dataset template to use for dynamic dataset creation.
+     * </pre>
+     *
      * <code>
      * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
      * </code>
@@ -2012,6 +2084,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
           : datasetTemplate_;
     }
     /**
+     *
+     *
+     * <pre>
+     * The dataset template to use for dynamic dataset creation.
+     * </pre>
+     *
      * <code>
      * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
      * </code>
@@ -2421,6 +2499,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
                   .DatasetTemplateOrBuilder>
           datasetTemplateBuilder_;
       /**
+       *
+       *
+       * <pre>
+       * The dataset template to use for dynamic dataset creation.
+       * </pre>
+       *
        * <code>
        * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
        * </code>
@@ -2431,6 +2515,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset template to use for dynamic dataset creation.
+       * </pre>
+       *
        * <code>
        * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
        * </code>
@@ -2450,6 +2540,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         }
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset template to use for dynamic dataset creation.
+       * </pre>
+       *
        * <code>
        * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
        * </code>
@@ -2471,6 +2567,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset template to use for dynamic dataset creation.
+       * </pre>
+       *
        * <code>
        * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
        * </code>
@@ -2489,6 +2591,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset template to use for dynamic dataset creation.
+       * </pre>
+       *
        * <code>
        * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
        * </code>
@@ -2515,6 +2623,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset template to use for dynamic dataset creation.
+       * </pre>
+       *
        * <code>
        * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
        * </code>
@@ -2530,6 +2644,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset template to use for dynamic dataset creation.
+       * </pre>
+       *
        * <code>
        * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
        * </code>
@@ -2542,6 +2662,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         return getDatasetTemplateFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset template to use for dynamic dataset creation.
+       * </pre>
+       *
        * <code>
        * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
        * </code>
@@ -2559,6 +2685,12 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
         }
       }
       /**
+       *
+       *
+       * <pre>
+       * The dataset template to use for dynamic dataset creation.
+       * </pre>
+       *
        * <code>
        * .google.cloud.datastream.v1.BigQueryDestinationConfig.SourceHierarchyDatasets.DatasetTemplate dataset_template = 2;
        * </code>
@@ -2656,6 +2788,8 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
   }
 
   private int datasetConfigCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object datasetConfig_;
 
   public enum DatasetConfigCase
@@ -3101,7 +3235,15 @@ public final class BigQueryDestinationConfig extends com.google.protobuf.Generat
     Builder builder = new Builder(parent);
     return builder;
   }
-  /** Protobuf type {@code google.cloud.datastream.v1.BigQueryDestinationConfig} */
+  /**
+   *
+   *
+   * <pre>
+   * BigQuery destination configuration
+   * </pre>
+   *
+   * Protobuf type {@code google.cloud.datastream.v1.BigQueryDestinationConfig}
+   */
   public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
       implements
       // @@protoc_insertion_point(builder_implements:google.cloud.datastream.v1.BigQueryDestinationConfig)

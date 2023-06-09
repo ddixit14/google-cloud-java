@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,6 +29,7 @@ import com.google.api.gax.httpjson.ProtoMessageRequestFormatter;
 import com.google.api.gax.httpjson.ProtoMessageResponseParser;
 import com.google.api.gax.httpjson.ProtoRestSerializer;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.cloud.contentwarehouse.v1.CreateDocumentRequest;
 import com.google.cloud.contentwarehouse.v1.CreateDocumentResponse;
@@ -37,6 +38,7 @@ import com.google.cloud.contentwarehouse.v1.Document;
 import com.google.cloud.contentwarehouse.v1.FetchAclRequest;
 import com.google.cloud.contentwarehouse.v1.FetchAclResponse;
 import com.google.cloud.contentwarehouse.v1.GetDocumentRequest;
+import com.google.cloud.contentwarehouse.v1.LockDocumentRequest;
 import com.google.cloud.contentwarehouse.v1.SearchDocumentsRequest;
 import com.google.cloud.contentwarehouse.v1.SearchDocumentsResponse;
 import com.google.cloud.contentwarehouse.v1.SetAclRequest;
@@ -255,6 +257,43 @@ public class HttpJsonDocumentServiceStub extends DocumentServiceStub {
                       .build())
               .build();
 
+  private static final ApiMethodDescriptor<LockDocumentRequest, Document>
+      lockDocumentMethodDescriptor =
+          ApiMethodDescriptor.<LockDocumentRequest, Document>newBuilder()
+              .setFullMethodName("google.cloud.contentwarehouse.v1.DocumentService/LockDocument")
+              .setHttpMethod("POST")
+              .setType(ApiMethodDescriptor.MethodType.UNARY)
+              .setRequestFormatter(
+                  ProtoMessageRequestFormatter.<LockDocumentRequest>newBuilder()
+                      .setPath(
+                          "/v1/{name=projects/*/locations/*/documents/*}:lock",
+                          request -> {
+                            Map<String, String> fields = new HashMap<>();
+                            ProtoRestSerializer<LockDocumentRequest> serializer =
+                                ProtoRestSerializer.create();
+                            serializer.putPathParam(fields, "name", request.getName());
+                            return fields;
+                          })
+                      .setQueryParamsExtractor(
+                          request -> {
+                            Map<String, List<String>> fields = new HashMap<>();
+                            ProtoRestSerializer<LockDocumentRequest> serializer =
+                                ProtoRestSerializer.create();
+                            serializer.putQueryParam(fields, "$alt", "json;enum-encoding=int");
+                            return fields;
+                          })
+                      .setRequestBodyExtractor(
+                          request ->
+                              ProtoRestSerializer.create()
+                                  .toBody("*", request.toBuilder().clearName().build(), true))
+                      .build())
+              .setResponseParser(
+                  ProtoMessageResponseParser.<Document>newBuilder()
+                      .setDefaultInstance(Document.getDefaultInstance())
+                      .setDefaultTypeRegistry(typeRegistry)
+                      .build())
+              .build();
+
   private static final ApiMethodDescriptor<FetchAclRequest, FetchAclResponse>
       fetchAclMethodDescriptor =
           ApiMethodDescriptor.<FetchAclRequest, FetchAclResponse>newBuilder()
@@ -338,6 +377,7 @@ public class HttpJsonDocumentServiceStub extends DocumentServiceStub {
       searchDocumentsCallable;
   private final UnaryCallable<SearchDocumentsRequest, SearchDocumentsPagedResponse>
       searchDocumentsPagedCallable;
+  private final UnaryCallable<LockDocumentRequest, Document> lockDocumentCallable;
   private final UnaryCallable<FetchAclRequest, FetchAclResponse> fetchAclCallable;
   private final UnaryCallable<SetAclRequest, SetAclResponse> setAclCallable;
 
@@ -388,38 +428,91 @@ public class HttpJsonDocumentServiceStub extends DocumentServiceStub {
             HttpJsonCallSettings.<CreateDocumentRequest, CreateDocumentResponse>newBuilder()
                 .setMethodDescriptor(createDocumentMethodDescriptor)
                 .setTypeRegistry(typeRegistry)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("parent", String.valueOf(request.getParent()));
+                      return builder.build();
+                    })
                 .build();
     HttpJsonCallSettings<GetDocumentRequest, Document> getDocumentTransportSettings =
         HttpJsonCallSettings.<GetDocumentRequest, Document>newBuilder()
             .setMethodDescriptor(getDocumentMethodDescriptor)
             .setTypeRegistry(typeRegistry)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
+                })
             .build();
     HttpJsonCallSettings<UpdateDocumentRequest, UpdateDocumentResponse>
         updateDocumentTransportSettings =
             HttpJsonCallSettings.<UpdateDocumentRequest, UpdateDocumentResponse>newBuilder()
                 .setMethodDescriptor(updateDocumentMethodDescriptor)
                 .setTypeRegistry(typeRegistry)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("name", String.valueOf(request.getName()));
+                      return builder.build();
+                    })
                 .build();
     HttpJsonCallSettings<DeleteDocumentRequest, Empty> deleteDocumentTransportSettings =
         HttpJsonCallSettings.<DeleteDocumentRequest, Empty>newBuilder()
             .setMethodDescriptor(deleteDocumentMethodDescriptor)
             .setTypeRegistry(typeRegistry)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
+                })
             .build();
     HttpJsonCallSettings<SearchDocumentsRequest, SearchDocumentsResponse>
         searchDocumentsTransportSettings =
             HttpJsonCallSettings.<SearchDocumentsRequest, SearchDocumentsResponse>newBuilder()
                 .setMethodDescriptor(searchDocumentsMethodDescriptor)
                 .setTypeRegistry(typeRegistry)
+                .setParamsExtractor(
+                    request -> {
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("parent", String.valueOf(request.getParent()));
+                      return builder.build();
+                    })
                 .build();
+    HttpJsonCallSettings<LockDocumentRequest, Document> lockDocumentTransportSettings =
+        HttpJsonCallSettings.<LockDocumentRequest, Document>newBuilder()
+            .setMethodDescriptor(lockDocumentMethodDescriptor)
+            .setTypeRegistry(typeRegistry)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("name", String.valueOf(request.getName()));
+                  return builder.build();
+                })
+            .build();
     HttpJsonCallSettings<FetchAclRequest, FetchAclResponse> fetchAclTransportSettings =
         HttpJsonCallSettings.<FetchAclRequest, FetchAclResponse>newBuilder()
             .setMethodDescriptor(fetchAclMethodDescriptor)
             .setTypeRegistry(typeRegistry)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("resource", String.valueOf(request.getResource()));
+                  return builder.build();
+                })
             .build();
     HttpJsonCallSettings<SetAclRequest, SetAclResponse> setAclTransportSettings =
         HttpJsonCallSettings.<SetAclRequest, SetAclResponse>newBuilder()
             .setMethodDescriptor(setAclMethodDescriptor)
             .setTypeRegistry(typeRegistry)
+            .setParamsExtractor(
+                request -> {
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("resource", String.valueOf(request.getResource()));
+                  return builder.build();
+                })
             .build();
 
     this.createDocumentCallable =
@@ -440,6 +533,9 @@ public class HttpJsonDocumentServiceStub extends DocumentServiceStub {
     this.searchDocumentsPagedCallable =
         callableFactory.createPagedCallable(
             searchDocumentsTransportSettings, settings.searchDocumentsSettings(), clientContext);
+    this.lockDocumentCallable =
+        callableFactory.createUnaryCallable(
+            lockDocumentTransportSettings, settings.lockDocumentSettings(), clientContext);
     this.fetchAclCallable =
         callableFactory.createUnaryCallable(
             fetchAclTransportSettings, settings.fetchAclSettings(), clientContext);
@@ -459,6 +555,7 @@ public class HttpJsonDocumentServiceStub extends DocumentServiceStub {
     methodDescriptors.add(updateDocumentMethodDescriptor);
     methodDescriptors.add(deleteDocumentMethodDescriptor);
     methodDescriptors.add(searchDocumentsMethodDescriptor);
+    methodDescriptors.add(lockDocumentMethodDescriptor);
     methodDescriptors.add(fetchAclMethodDescriptor);
     methodDescriptors.add(setAclMethodDescriptor);
     return methodDescriptors;
@@ -493,6 +590,11 @@ public class HttpJsonDocumentServiceStub extends DocumentServiceStub {
   public UnaryCallable<SearchDocumentsRequest, SearchDocumentsPagedResponse>
       searchDocumentsPagedCallable() {
     return searchDocumentsPagedCallable;
+  }
+
+  @Override
+  public UnaryCallable<LockDocumentRequest, Document> lockDocumentCallable() {
+    return lockDocumentCallable;
   }
 
   @Override

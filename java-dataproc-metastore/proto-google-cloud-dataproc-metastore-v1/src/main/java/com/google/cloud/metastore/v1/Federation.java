@@ -52,11 +52,6 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
     return new Federation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.metastore.v1.MetastoreFederationProto
         .internal_static_google_cloud_metastore_v1_Federation_descriptor;
@@ -575,8 +570,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Immutable. The Apache Hive metastore version of the federation. All backend metastore
-   * versions must be compatible with the federation version.
+   * Immutable. The Apache Hive metastore version of the federation. All backend
+   * metastore versions must be compatible with the federation version.
    * </pre>
    *
    * <code>string version = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -599,8 +594,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Immutable. The Apache Hive metastore version of the federation. All backend metastore
-   * versions must be compatible with the federation version.
+   * Immutable. The Apache Hive metastore version of the federation. All backend
+   * metastore versions must be compatible with the federation version.
    * </pre>
    *
    * <code>string version = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -852,8 +847,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. Additional information about the current state of the metastore federation,
-   * if available.
+   * Output only. Additional information about the current state of the
+   * metastore federation, if available.
    * </pre>
    *
    * <code>string state_message = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -876,8 +871,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. Additional information about the current state of the metastore federation,
-   * if available.
+   * Output only. Additional information about the current state of the
+   * metastore federation, if available.
    * </pre>
    *
    * <code>string state_message = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -905,7 +900,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The globally unique resource identifier of the metastore federation.
+   * Output only. The globally unique resource identifier of the metastore
+   * federation.
    * </pre>
    *
    * <code>string uid = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -928,7 +924,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Output only. The globally unique resource identifier of the metastore federation.
+   * Output only. The globally unique resource identifier of the metastore
+   * federation.
    * </pre>
    *
    * <code>string uid = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2257,8 +2254,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Immutable. The Apache Hive metastore version of the federation. All backend metastore
-     * versions must be compatible with the federation version.
+     * Immutable. The Apache Hive metastore version of the federation. All backend
+     * metastore versions must be compatible with the federation version.
      * </pre>
      *
      * <code>string version = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2280,8 +2277,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Immutable. The Apache Hive metastore version of the federation. All backend metastore
-     * versions must be compatible with the federation version.
+     * Immutable. The Apache Hive metastore version of the federation. All backend
+     * metastore versions must be compatible with the federation version.
      * </pre>
      *
      * <code>string version = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2303,8 +2300,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Immutable. The Apache Hive metastore version of the federation. All backend metastore
-     * versions must be compatible with the federation version.
+     * Immutable. The Apache Hive metastore version of the federation. All backend
+     * metastore versions must be compatible with the federation version.
      * </pre>
      *
      * <code>string version = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2325,8 +2322,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Immutable. The Apache Hive metastore version of the federation. All backend metastore
-     * versions must be compatible with the federation version.
+     * Immutable. The Apache Hive metastore version of the federation. All backend
+     * metastore versions must be compatible with the federation version.
      * </pre>
      *
      * <code>string version = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2343,8 +2340,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Immutable. The Apache Hive metastore version of the federation. All backend metastore
-     * versions must be compatible with the federation version.
+     * Immutable. The Apache Hive metastore version of the federation. All backend
+     * metastore versions must be compatible with the federation version.
      * </pre>
      *
      * <code>string version = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2785,8 +2782,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Additional information about the current state of the metastore federation,
-     * if available.
+     * Output only. Additional information about the current state of the
+     * metastore federation, if available.
      * </pre>
      *
      * <code>string state_message = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2808,8 +2805,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Additional information about the current state of the metastore federation,
-     * if available.
+     * Output only. Additional information about the current state of the
+     * metastore federation, if available.
      * </pre>
      *
      * <code>string state_message = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2831,8 +2828,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Additional information about the current state of the metastore federation,
-     * if available.
+     * Output only. Additional information about the current state of the
+     * metastore federation, if available.
      * </pre>
      *
      * <code>string state_message = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2853,8 +2850,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Additional information about the current state of the metastore federation,
-     * if available.
+     * Output only. Additional information about the current state of the
+     * metastore federation, if available.
      * </pre>
      *
      * <code>string state_message = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2871,8 +2868,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. Additional information about the current state of the metastore federation,
-     * if available.
+     * Output only. Additional information about the current state of the
+     * metastore federation, if available.
      * </pre>
      *
      * <code>string state_message = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2896,7 +2893,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The globally unique resource identifier of the metastore federation.
+     * Output only. The globally unique resource identifier of the metastore
+     * federation.
      * </pre>
      *
      * <code>string uid = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2918,7 +2916,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The globally unique resource identifier of the metastore federation.
+     * Output only. The globally unique resource identifier of the metastore
+     * federation.
      * </pre>
      *
      * <code>string uid = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2940,7 +2939,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The globally unique resource identifier of the metastore federation.
+     * Output only. The globally unique resource identifier of the metastore
+     * federation.
      * </pre>
      *
      * <code>string uid = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2961,7 +2961,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The globally unique resource identifier of the metastore federation.
+     * Output only. The globally unique resource identifier of the metastore
+     * federation.
      * </pre>
      *
      * <code>string uid = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2978,7 +2979,8 @@ public final class Federation extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Output only. The globally unique resource identifier of the metastore federation.
+     * Output only. The globally unique resource identifier of the metastore
+     * federation.
      * </pre>
      *
      * <code>string uid = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -49,11 +49,6 @@ public final class ActionOutput extends com.google.protobuf.GeneratedMessageV3
     return new ActionOutput();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contentwarehouse.v1.RuleEngineProto
         .internal_static_google_cloud_contentwarehouse_v1_ActionOutput_descriptor;
@@ -79,7 +74,15 @@ public final class ActionOutput extends com.google.protobuf.GeneratedMessageV3
    * Protobuf enum {@code google.cloud.contentwarehouse.v1.ActionOutput.State}
    */
   public enum State implements com.google.protobuf.ProtocolMessageEnum {
-    /** <code>UNKNOWN = 0;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * The unknown state.
+     * </pre>
+     *
+     * <code>UNKNOWN = 0;</code>
+     */
     UNKNOWN(0),
     /**
      *
@@ -124,7 +127,15 @@ public final class ActionOutput extends com.google.protobuf.GeneratedMessageV3
     UNRECOGNIZED(-1),
     ;
 
-    /** <code>UNKNOWN = 0;</code> */
+    /**
+     *
+     *
+     * <pre>
+     * The unknown state.
+     * </pre>
+     *
+     * <code>UNKNOWN = 0;</code>
+     */
     public static final int UNKNOWN_VALUE = 0;
     /**
      *

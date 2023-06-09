@@ -47,11 +47,6 @@ public final class StartBackfillJobRequest extends com.google.protobuf.Generated
     return new StartBackfillJobRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.datastream.v1.DatastreamProto
         .internal_static_google_cloud_datastream_v1_StartBackfillJobRequest_descriptor;
@@ -75,7 +70,8 @@ public final class StartBackfillJobRequest extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * Required. The name of the stream object resource to start a backfill job for.
+   * Required. The name of the stream object resource to start a backfill job
+   * for.
    * </pre>
    *
    * <code>
@@ -100,7 +96,8 @@ public final class StartBackfillJobRequest extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * Required. The name of the stream object resource to start a backfill job for.
+   * Required. The name of the stream object resource to start a backfill job
+   * for.
    * </pre>
    *
    * <code>
@@ -470,7 +467,8 @@ public final class StartBackfillJobRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The name of the stream object resource to start a backfill job for.
+     * Required. The name of the stream object resource to start a backfill job
+     * for.
      * </pre>
      *
      * <code>
@@ -494,7 +492,8 @@ public final class StartBackfillJobRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The name of the stream object resource to start a backfill job for.
+     * Required. The name of the stream object resource to start a backfill job
+     * for.
      * </pre>
      *
      * <code>
@@ -518,7 +517,8 @@ public final class StartBackfillJobRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The name of the stream object resource to start a backfill job for.
+     * Required. The name of the stream object resource to start a backfill job
+     * for.
      * </pre>
      *
      * <code>
@@ -541,7 +541,8 @@ public final class StartBackfillJobRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The name of the stream object resource to start a backfill job for.
+     * Required. The name of the stream object resource to start a backfill job
+     * for.
      * </pre>
      *
      * <code>
@@ -560,7 +561,8 @@ public final class StartBackfillJobRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The name of the stream object resource to start a backfill job for.
+     * Required. The name of the stream object resource to start a backfill job
+     * for.
      * </pre>
      *
      * <code>

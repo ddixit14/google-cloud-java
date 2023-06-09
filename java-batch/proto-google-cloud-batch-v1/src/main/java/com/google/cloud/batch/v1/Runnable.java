@@ -46,14 +46,20 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     return new Runnable();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.batch.v1.TaskProto
         .internal_static_google_cloud_batch_v1_Runnable_descriptor;
+  }
+
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(int number) {
+    switch (number) {
+      case 9:
+        return internalGetLabels();
+      default:
+        throw new RuntimeException("Invalid map field number: " + number);
+    }
   }
 
   @java.lang.Override
@@ -271,8 +277,9 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * If set to true, external network access to and from container will be
-     * blocked. The container will use the default internal network
-     * 'goog-internal'.
+     * blocked, containers that are with block_external_network as true can
+     * still communicate with each other, network cannot be specified in the
+     * `container.options` field.
      * </pre>
      *
      * <code>bool block_external_network = 9;</code>
@@ -360,9 +367,9 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
 
     private Container() {
       imageUri_ = "";
-      commands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      commands_ = com.google.protobuf.LazyStringArrayList.emptyList();
       entrypoint_ = "";
-      volumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      volumes_ = com.google.protobuf.LazyStringArrayList.emptyList();
       options_ = "";
       username_ = "";
       password_ = "";
@@ -372,11 +379,6 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Container();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -448,7 +450,8 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     public static final int COMMANDS_FIELD_NUMBER = 2;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList commands_;
+    private com.google.protobuf.LazyStringArrayList commands_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      *
      *
@@ -570,7 +573,8 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     public static final int VOLUMES_FIELD_NUMBER = 7;
 
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList volumes_;
+    private com.google.protobuf.LazyStringArrayList volumes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      *
      *
@@ -698,8 +702,9 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * If set to true, external network access to and from container will be
-     * blocked. The container will use the default internal network
-     * 'goog-internal'.
+     * blocked, containers that are with block_external_network as true can
+     * still communicate with each other, network cannot be specified in the
+     * `container.options` field.
      * </pre>
      *
      * <code>bool block_external_network = 9;</code>
@@ -1099,11 +1104,9 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         super.clear();
         bitField0_ = 0;
         imageUri_ = "";
-        commands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        commands_ = com.google.protobuf.LazyStringArrayList.emptyList();
         entrypoint_ = "";
-        volumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        volumes_ = com.google.protobuf.LazyStringArrayList.emptyList();
         options_ = "";
         blockExternalNetwork_ = false;
         username_ = "";
@@ -1135,7 +1138,6 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
       public com.google.cloud.batch.v1.Runnable.Container buildPartial() {
         com.google.cloud.batch.v1.Runnable.Container result =
             new com.google.cloud.batch.v1.Runnable.Container(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) {
           buildPartial0(result);
         }
@@ -1143,26 +1145,21 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.google.cloud.batch.v1.Runnable.Container result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          commands_ = commands_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.commands_ = commands_;
-        if (((bitField0_ & 0x00000008) != 0)) {
-          volumes_ = volumes_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.volumes_ = volumes_;
-      }
-
       private void buildPartial0(com.google.cloud.batch.v1.Runnable.Container result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.imageUri_ = imageUri_;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          commands_.makeImmutable();
+          result.commands_ = commands_;
+        }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.entrypoint_ = entrypoint_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          volumes_.makeImmutable();
+          result.volumes_ = volumes_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.options_ = options_;
@@ -1233,7 +1230,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         if (!other.commands_.isEmpty()) {
           if (commands_.isEmpty()) {
             commands_ = other.commands_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000002;
           } else {
             ensureCommandsIsMutable();
             commands_.addAll(other.commands_);
@@ -1248,7 +1245,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         if (!other.volumes_.isEmpty()) {
           if (volumes_.isEmpty()) {
             volumes_ = other.volumes_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ |= 0x00000008;
           } else {
             ensureVolumesIsMutable();
             volumes_.addAll(other.volumes_);
@@ -1474,14 +1471,14 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
 
-      private com.google.protobuf.LazyStringList commands_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList commands_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensureCommandsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!commands_.isModifiable()) {
           commands_ = new com.google.protobuf.LazyStringArrayList(commands_);
-          bitField0_ |= 0x00000002;
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        *
@@ -1497,7 +1494,8 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        * @return A list containing the commands.
        */
       public com.google.protobuf.ProtocolStringList getCommandsList() {
-        return commands_.getUnmodifiableView();
+        commands_.makeImmutable();
+        return commands_;
       }
       /**
        *
@@ -1570,6 +1568,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         }
         ensureCommandsIsMutable();
         commands_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1593,6 +1592,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         }
         ensureCommandsIsMutable();
         commands_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1613,6 +1613,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
       public Builder addAllCommands(java.lang.Iterable<java.lang.String> values) {
         ensureCommandsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, commands_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1630,8 +1631,9 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        * @return This builder for chaining.
        */
       public Builder clearCommands() {
-        commands_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        commands_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        ;
         onChanged();
         return this;
       }
@@ -1656,6 +1658,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         checkByteStringIsUtf8(value);
         ensureCommandsIsMutable();
         commands_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1766,14 +1769,14 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         return this;
       }
 
-      private com.google.protobuf.LazyStringList volumes_ =
-          com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList volumes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
 
       private void ensureVolumesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!volumes_.isModifiable()) {
           volumes_ = new com.google.protobuf.LazyStringArrayList(volumes_);
-          bitField0_ |= 0x00000008;
         }
+        bitField0_ |= 0x00000008;
       }
       /**
        *
@@ -1789,7 +1792,8 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        * @return A list containing the volumes.
        */
       public com.google.protobuf.ProtocolStringList getVolumesList() {
-        return volumes_.getUnmodifiableView();
+        volumes_.makeImmutable();
+        return volumes_;
       }
       /**
        *
@@ -1862,6 +1866,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         }
         ensureVolumesIsMutable();
         volumes_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1885,6 +1890,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         }
         ensureVolumesIsMutable();
         volumes_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1905,6 +1911,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
       public Builder addAllVolumes(java.lang.Iterable<java.lang.String> values) {
         ensureVolumesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(values, volumes_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1922,8 +1929,9 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        * @return This builder for chaining.
        */
       public Builder clearVolumes() {
-        volumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        volumes_ = com.google.protobuf.LazyStringArrayList.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
+        ;
         onChanged();
         return this;
       }
@@ -1948,6 +1956,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         checkByteStringIsUtf8(value);
         ensureVolumesIsMutable();
         volumes_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2069,8 +2078,9 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * If set to true, external network access to and from container will be
-       * blocked. The container will use the default internal network
-       * 'goog-internal'.
+       * blocked, containers that are with block_external_network as true can
+       * still communicate with each other, network cannot be specified in the
+       * `container.options` field.
        * </pre>
        *
        * <code>bool block_external_network = 9;</code>
@@ -2086,8 +2096,9 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * If set to true, external network access to and from container will be
-       * blocked. The container will use the default internal network
-       * 'goog-internal'.
+       * blocked, containers that are with block_external_network as true can
+       * still communicate with each other, network cannot be specified in the
+       * `container.options` field.
        * </pre>
        *
        * <code>bool block_external_network = 9;</code>
@@ -2107,8 +2118,9 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * If set to true, external network access to and from container will be
-       * blocked. The container will use the default internal network
-       * 'goog-internal'.
+       * blocked, containers that are with block_external_network as true can
+       * still communicate with each other, network cannot be specified in the
+       * `container.options` field.
        * </pre>
        *
        * <code>bool block_external_network = 9;</code>
@@ -2428,6 +2440,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Script file path on the host VM.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
      * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
      * first line of the file.(For example, to execute the script using bash,
@@ -2447,6 +2460,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Script file path on the host VM.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
      * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
      * first line of the file.(For example, to execute the script using bash,
@@ -2466,6 +2480,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Script file path on the host VM.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
      * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
      * first line of the file.(For example, to execute the script using bash,
@@ -2486,6 +2501,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Shell script text.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
      * beginning of the text.(For example, to execute the script using bash,
      * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -2503,6 +2519,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Shell script text.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
      * beginning of the text.(For example, to execute the script using bash,
      * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -2520,6 +2537,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Shell script text.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
      * beginning of the text.(For example, to execute the script using bash,
      * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -2533,7 +2551,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      */
     com.google.protobuf.ByteString getTextBytes();
 
-    public com.google.cloud.batch.v1.Runnable.Script.CommandCase getCommandCase();
+    com.google.cloud.batch.v1.Runnable.Script.CommandCase getCommandCase();
   }
   /**
    *
@@ -2562,11 +2580,6 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
       return new Script();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.batch.v1.TaskProto
           .internal_static_google_cloud_batch_v1_Runnable_Script_descriptor;
@@ -2583,6 +2596,8 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     }
 
     private int commandCase_ = 0;
+
+    @SuppressWarnings("serial")
     private java.lang.Object command_;
 
     public enum CommandCase
@@ -2635,6 +2650,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Script file path on the host VM.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
      * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
      * first line of the file.(For example, to execute the script using bash,
@@ -2656,6 +2672,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Script file path on the host VM.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
      * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
      * first line of the file.(For example, to execute the script using bash,
@@ -2690,6 +2707,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Script file path on the host VM.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
      * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
      * first line of the file.(For example, to execute the script using bash,
@@ -2726,6 +2744,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Shell script text.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
      * beginning of the text.(For example, to execute the script using bash,
      * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -2745,6 +2764,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Shell script text.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
      * beginning of the text.(For example, to execute the script using bash,
      * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -2777,6 +2797,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Shell script text.
+     *
      * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
      * beginning of the text.(For example, to execute the script using bash,
      * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -3222,6 +3243,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Script file path on the host VM.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
        * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
        * first line of the file.(For example, to execute the script using bash,
@@ -3244,6 +3266,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Script file path on the host VM.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
        * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
        * first line of the file.(For example, to execute the script using bash,
@@ -3279,6 +3302,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Script file path on the host VM.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
        * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
        * first line of the file.(For example, to execute the script using bash,
@@ -3314,6 +3338,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Script file path on the host VM.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
        * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
        * first line of the file.(For example, to execute the script using bash,
@@ -3342,6 +3367,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Script file path on the host VM.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
        * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
        * first line of the file.(For example, to execute the script using bash,
@@ -3368,6 +3394,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Script file path on the host VM.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;`(also known as
        * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the
        * first line of the file.(For example, to execute the script using bash,
@@ -3398,6 +3425,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Shell script text.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
        * beginning of the text.(For example, to execute the script using bash,
        * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -3418,6 +3446,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Shell script text.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
        * beginning of the text.(For example, to execute the script using bash,
        * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -3451,6 +3480,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Shell script text.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
        * beginning of the text.(For example, to execute the script using bash,
        * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -3484,6 +3514,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Shell script text.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
        * beginning of the text.(For example, to execute the script using bash,
        * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -3510,6 +3541,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Shell script text.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
        * beginning of the text.(For example, to execute the script using bash,
        * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -3534,6 +3566,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
        *
        * <pre>
        * Shell script text.
+       *
        * To specify an interpreter, please add a `#!&lt;interpreter&gt;&#92;n` at the
        * beginning of the text.(For example, to execute the script using bash,
        * `#!/bin/bash&#92;n` should be added. To execute the script using`Python3`,
@@ -3680,11 +3713,6 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Barrier();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -4276,6 +4304,8 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
   }
 
   private int executableCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object executable_;
 
   public enum ExecutableCase
@@ -4527,6 +4557,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
    * flag indicates that this Runnable must be run even if the Task has already
    * failed. This is useful for Runnables that copy output files off of the VM
    * or for debugging.
+   *
    * The always_run flag does not override the Task's overall max_run_duration.
    * If the max_run_duration has expired then no further Runnables will execute,
    * not even always_run Runnables.
@@ -4640,6 +4671,108 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
   }
 
+  public static final int LABELS_FIELD_NUMBER = 9;
+
+  private static final class LabelsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<java.lang.String, java.lang.String> defaultEntry =
+        com.google.protobuf.MapEntry.<java.lang.String, java.lang.String>newDefaultInstance(
+            com.google.cloud.batch.v1.TaskProto
+                .internal_static_google_cloud_batch_v1_Runnable_LabelsEntry_descriptor,
+            com.google.protobuf.WireFormat.FieldType.STRING,
+            "",
+            com.google.protobuf.WireFormat.FieldType.STRING,
+            "");
+  }
+
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String> labels_;
+
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetLabels() {
+    if (labels_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(LabelsDefaultEntryHolder.defaultEntry);
+    }
+    return labels_;
+  }
+
+  public int getLabelsCount() {
+    return internalGetLabels().getMap().size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Labels for this Runnable.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; labels = 9;</code>
+   */
+  @java.lang.Override
+  public boolean containsLabels(java.lang.String key) {
+    if (key == null) {
+      throw new NullPointerException("map key");
+    }
+    return internalGetLabels().getMap().containsKey(key);
+  }
+  /** Use {@link #getLabelsMap()} instead. */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+    return getLabelsMap();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Labels for this Runnable.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; labels = 9;</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+    return internalGetLabels().getMap();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Labels for this Runnable.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; labels = 9;</code>
+   */
+  @java.lang.Override
+  public /* nullable */ java.lang.String getLabelsOrDefault(
+      java.lang.String key,
+      /* nullable */
+      java.lang.String defaultValue) {
+    if (key == null) {
+      throw new NullPointerException("map key");
+    }
+    java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Labels for this Runnable.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; labels = 9;</code>
+   */
+  @java.lang.Override
+  public java.lang.String getLabelsOrThrow(java.lang.String key) {
+    if (key == null) {
+      throw new NullPointerException("map key");
+    }
+    java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -4678,6 +4811,8 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     if (timeout_ != null) {
       output.writeMessage(8, getTimeout());
     }
+    com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
+        output, internalGetLabels(), LabelsDefaultEntryHolder.defaultEntry, 9);
     getUnknownFields().writeTo(output);
   }
 
@@ -4717,6 +4852,16 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     if (timeout_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(8, getTimeout());
     }
+    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry :
+        internalGetLabels().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
+          LabelsDefaultEntryHolder.defaultEntry
+              .newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(9, labels__);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -4743,6 +4888,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     if (hasTimeout()) {
       if (!getTimeout().equals(other.getTimeout())) return false;
     }
+    if (!internalGetLabels().equals(other.internalGetLabels())) return false;
     if (!getExecutableCase().equals(other.getExecutableCase())) return false;
     switch (executableCase_) {
       case 1:
@@ -4781,6 +4927,10 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
     if (hasTimeout()) {
       hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
       hash = (53 * hash) + getTimeout().hashCode();
+    }
+    if (!internalGetLabels().getMap().isEmpty()) {
+      hash = (37 * hash) + LABELS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetLabels().hashCode();
     }
     switch (executableCase_) {
       case 1:
@@ -4916,6 +5066,26 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
           .internal_static_google_cloud_batch_v1_Runnable_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(int number) {
+      switch (number) {
+        case 9:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException("Invalid map field number: " + number);
+      }
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(int number) {
+      switch (number) {
+        case 9:
+          return internalGetMutableLabels();
+        default:
+          throw new RuntimeException("Invalid map field number: " + number);
+      }
+    }
+
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -4959,6 +5129,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         timeoutBuilder_.dispose();
         timeoutBuilder_ = null;
       }
+      internalGetMutableLabels().clear();
       executableCase_ = 0;
       executable_ = null;
       return this;
@@ -5012,6 +5183,10 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.timeout_ = timeoutBuilder_ == null ? timeout_ : timeoutBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
       }
     }
 
@@ -5089,6 +5264,8 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
       if (other.hasTimeout()) {
         mergeTimeout(other.getTimeout());
       }
+      internalGetMutableLabels().mergeFrom(other.internalGetLabels());
+      bitField0_ |= 0x00000100;
       switch (other.getExecutableCase()) {
         case CONTAINER:
           {
@@ -5184,6 +5361,18 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
                 bitField0_ |= 0x00000080;
                 break;
               } // case 66
+            case 74:
+              {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> labels__ =
+                    input.readMessage(
+                        LabelsDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                internalGetMutableLabels()
+                    .getMutableMap()
+                    .put(labels__.getKey(), labels__.getValue());
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -5966,6 +6155,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      * flag indicates that this Runnable must be run even if the Task has already
      * failed. This is useful for Runnables that copy output files off of the VM
      * or for debugging.
+     *
      * The always_run flag does not override the Task's overall max_run_duration.
      * If the max_run_duration has expired then no further Runnables will execute,
      * not even always_run Runnables.
@@ -5987,6 +6177,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      * flag indicates that this Runnable must be run even if the Task has already
      * failed. This is useful for Runnables that copy output files off of the VM
      * or for debugging.
+     *
      * The always_run flag does not override the Task's overall max_run_duration.
      * If the max_run_duration has expired then no further Runnables will execute,
      * not even always_run Runnables.
@@ -6012,6 +6203,7 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
      * flag indicates that this Runnable must be run even if the Task has already
      * failed. This is useful for Runnables that copy output files off of the VM
      * or for debugging.
+     *
      * The always_run flag does not override the Task's overall max_run_duration.
      * If the max_run_duration has expired then no further Runnables will execute,
      * not even always_run Runnables.
@@ -6397,6 +6589,169 @@ public final class Runnable extends com.google.protobuf.GeneratedMessageV3
         timeout_ = null;
       }
       return timeoutBuilder_;
+    }
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> labels_;
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String> internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableLabels() {
+      if (labels_ == null) {
+        labels_ = com.google.protobuf.MapField.newMapField(LabelsDefaultEntryHolder.defaultEntry);
+      }
+      if (!labels_.isMutable()) {
+        labels_ = labels_.copy();
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Labels for this Runnable.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    @java.lang.Override
+    public boolean containsLabels(java.lang.String key) {
+      if (key == null) {
+        throw new NullPointerException("map key");
+      }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /** Use {@link #getLabelsMap()} instead. */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Labels for this Runnable.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Labels for this Runnable.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    @java.lang.Override
+    public /* nullable */ java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        /* nullable */
+        java.lang.String defaultValue) {
+      if (key == null) {
+        throw new NullPointerException("map key");
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Labels for this Runnable.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    @java.lang.Override
+    public java.lang.String getLabelsOrThrow(java.lang.String key) {
+      if (key == null) {
+        throw new NullPointerException("map key");
+      }
+      java.util.Map<java.lang.String, java.lang.String> map = internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public Builder clearLabels() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      internalGetMutableLabels().getMutableMap().clear();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Labels for this Runnable.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    public Builder removeLabels(java.lang.String key) {
+      if (key == null) {
+        throw new NullPointerException("map key");
+      }
+      internalGetMutableLabels().getMutableMap().remove(key);
+      return this;
+    }
+    /** Use alternate mutation accessors instead. */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getMutableLabels() {
+      bitField0_ |= 0x00000100;
+      return internalGetMutableLabels().getMutableMap();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Labels for this Runnable.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    public Builder putLabels(java.lang.String key, java.lang.String value) {
+      if (key == null) {
+        throw new NullPointerException("map key");
+      }
+      if (value == null) {
+        throw new NullPointerException("map value");
+      }
+      internalGetMutableLabels().getMutableMap().put(key, value);
+      bitField0_ |= 0x00000100;
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Labels for this Runnable.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    public Builder putAllLabels(java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableLabels().getMutableMap().putAll(values);
+      bitField0_ |= 0x00000100;
+      return this;
     }
 
     @java.lang.Override

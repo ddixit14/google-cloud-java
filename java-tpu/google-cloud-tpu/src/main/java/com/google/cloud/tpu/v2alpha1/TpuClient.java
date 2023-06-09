@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1336,7 +1336,7 @@ public class TpuClient implements BackgroundResource {
    *
    * @param parent Required. The parent resource name.
    * @param queuedResource Required. The queued resource.
-   * @param queuedResourceId The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$
+   * @param queuedResourceId The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$`
    *     regex format.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -1374,7 +1374,7 @@ public class TpuClient implements BackgroundResource {
    *
    * @param parent Required. The parent resource name.
    * @param queuedResource Required. The queued resource.
-   * @param queuedResourceId The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$
+   * @param queuedResourceId The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$`
    *     regex format.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -1562,6 +1562,7 @@ public class TpuClient implements BackgroundResource {
    *           .setName(
    *               QueuedResourceName.of("[PROJECT]", "[LOCATION]", "[QUEUED_RESOURCE]").toString())
    *           .setRequestId("requestId693933066")
+   *           .setForce(true)
    *           .build();
    *   QueuedResource response = tpuClient.deleteQueuedResourceAsync(request).get();
    * }
@@ -1593,6 +1594,7 @@ public class TpuClient implements BackgroundResource {
    *           .setName(
    *               QueuedResourceName.of("[PROJECT]", "[LOCATION]", "[QUEUED_RESOURCE]").toString())
    *           .setRequestId("requestId693933066")
+   *           .setForce(true)
    *           .build();
    *   OperationFuture<QueuedResource, OperationMetadata> future =
    *       tpuClient.deleteQueuedResourceOperationCallable().futureCall(request);
@@ -1624,6 +1626,7 @@ public class TpuClient implements BackgroundResource {
    *           .setName(
    *               QueuedResourceName.of("[PROJECT]", "[LOCATION]", "[QUEUED_RESOURCE]").toString())
    *           .setRequestId("requestId693933066")
+   *           .setForce(true)
    *           .build();
    *   ApiFuture<Operation> future = tpuClient.deleteQueuedResourceCallable().futureCall(request);
    *   // Do something.

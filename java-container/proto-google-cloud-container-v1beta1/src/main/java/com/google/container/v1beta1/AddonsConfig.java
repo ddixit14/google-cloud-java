@@ -46,11 +46,6 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     return new AddonsConfig();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.container.v1beta1.ClusterServiceProto
         .internal_static_google_container_v1beta1_AddonsConfig_descriptor;
@@ -194,7 +189,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    * </code>
    *
    * @deprecated google.container.v1beta1.AddonsConfig.kubernetes_dashboard is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1131
+   *     google/container/v1beta1/cluster_service.proto;l=1191
    * @return Whether the kubernetesDashboard field is set.
    */
   @java.lang.Override
@@ -218,7 +213,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    * </code>
    *
    * @deprecated google.container.v1beta1.AddonsConfig.kubernetes_dashboard is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1131
+   *     google/container/v1beta1/cluster_service.proto;l=1191
    * @return The kubernetesDashboard.
    */
   @java.lang.Override
@@ -322,7 +317,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.container.v1beta1.IstioConfig istio_config = 5 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.AddonsConfig.istio_config is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1140
+   *     google/container/v1beta1/cluster_service.proto;l=1200
    * @return Whether the istioConfig field is set.
    */
   @java.lang.Override
@@ -341,7 +336,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.container.v1beta1.IstioConfig istio_config = 5 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.AddonsConfig.istio_config is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1140
+   *     google/container/v1beta1/cluster_service.proto;l=1200
    * @return The istioConfig.
    */
   @java.lang.Override
@@ -601,7 +596,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.container.v1beta1.KalmConfig kalm_config = 12 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.AddonsConfig.kalm_config is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1159
+   *     google/container/v1beta1/cluster_service.proto;l=1219
    * @return Whether the kalmConfig field is set.
    */
   @java.lang.Override
@@ -620,7 +615,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.container.v1beta1.KalmConfig kalm_config = 12 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.AddonsConfig.kalm_config is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1159
+   *     google/container/v1beta1/cluster_service.proto;l=1219
    * @return The kalmConfig.
    */
   @java.lang.Override
@@ -756,6 +751,57 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
         : gkeBackupAgentConfig_;
   }
 
+  public static final int GCS_FUSE_CSI_DRIVER_CONFIG_FIELD_NUMBER = 17;
+  private com.google.container.v1beta1.GcsFuseCsiDriverConfig gcsFuseCsiDriverConfig_;
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for the Cloud Storage Fuse CSI driver.
+   * </pre>
+   *
+   * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;</code>
+   *
+   * @return Whether the gcsFuseCsiDriverConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasGcsFuseCsiDriverConfig() {
+    return gcsFuseCsiDriverConfig_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for the Cloud Storage Fuse CSI driver.
+   * </pre>
+   *
+   * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;</code>
+   *
+   * @return The gcsFuseCsiDriverConfig.
+   */
+  @java.lang.Override
+  public com.google.container.v1beta1.GcsFuseCsiDriverConfig getGcsFuseCsiDriverConfig() {
+    return gcsFuseCsiDriverConfig_ == null
+        ? com.google.container.v1beta1.GcsFuseCsiDriverConfig.getDefaultInstance()
+        : gcsFuseCsiDriverConfig_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for the Cloud Storage Fuse CSI driver.
+   * </pre>
+   *
+   * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;</code>
+   */
+  @java.lang.Override
+  public com.google.container.v1beta1.GcsFuseCsiDriverConfigOrBuilder
+      getGcsFuseCsiDriverConfigOrBuilder() {
+    return gcsFuseCsiDriverConfig_ == null
+        ? com.google.container.v1beta1.GcsFuseCsiDriverConfig.getDefaultInstance()
+        : gcsFuseCsiDriverConfig_;
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -805,6 +851,9 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     }
     if (gkeBackupAgentConfig_ != null) {
       output.writeMessage(16, getGkeBackupAgentConfig());
+    }
+    if (gcsFuseCsiDriverConfig_ != null) {
+      output.writeMessage(17, getGcsFuseCsiDriverConfig());
     }
     getUnknownFields().writeTo(output);
   }
@@ -858,6 +907,10 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     if (gkeBackupAgentConfig_ != null) {
       size +=
           com.google.protobuf.CodedOutputStream.computeMessageSize(16, getGkeBackupAgentConfig());
+    }
+    if (gcsFuseCsiDriverConfig_ != null) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(17, getGcsFuseCsiDriverConfig());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -926,6 +979,10 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     if (hasGkeBackupAgentConfig()) {
       if (!getGkeBackupAgentConfig().equals(other.getGkeBackupAgentConfig())) return false;
     }
+    if (hasGcsFuseCsiDriverConfig() != other.hasGcsFuseCsiDriverConfig()) return false;
+    if (hasGcsFuseCsiDriverConfig()) {
+      if (!getGcsFuseCsiDriverConfig().equals(other.getGcsFuseCsiDriverConfig())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -984,6 +1041,10 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     if (hasGkeBackupAgentConfig()) {
       hash = (37 * hash) + GKE_BACKUP_AGENT_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getGkeBackupAgentConfig().hashCode();
+    }
+    if (hasGcsFuseCsiDriverConfig()) {
+      hash = (37 * hash) + GCS_FUSE_CSI_DRIVER_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getGcsFuseCsiDriverConfig().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1185,6 +1246,11 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
         gkeBackupAgentConfigBuilder_.dispose();
         gkeBackupAgentConfigBuilder_ = null;
       }
+      gcsFuseCsiDriverConfig_ = null;
+      if (gcsFuseCsiDriverConfigBuilder_ != null) {
+        gcsFuseCsiDriverConfigBuilder_.dispose();
+        gcsFuseCsiDriverConfigBuilder_ = null;
+      }
       return this;
     }
 
@@ -1284,6 +1350,12 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
                 ? gkeBackupAgentConfig_
                 : gkeBackupAgentConfigBuilder_.build();
       }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.gcsFuseCsiDriverConfig_ =
+            gcsFuseCsiDriverConfigBuilder_ == null
+                ? gcsFuseCsiDriverConfig_
+                : gcsFuseCsiDriverConfigBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1366,6 +1438,9 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
       }
       if (other.hasGkeBackupAgentConfig()) {
         mergeGkeBackupAgentConfig(other.getGkeBackupAgentConfig());
+      }
+      if (other.hasGcsFuseCsiDriverConfig()) {
+        mergeGcsFuseCsiDriverConfig(other.getGcsFuseCsiDriverConfig());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1474,6 +1549,13 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
                 bitField0_ |= 0x00000800;
                 break;
               } // case 130
+            case 138:
+              {
+                input.readMessage(
+                    getGcsFuseCsiDriverConfigFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 138
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -1925,7 +2007,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      * </code>
      *
      * @deprecated google.container.v1beta1.AddonsConfig.kubernetes_dashboard is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1131
+     *     google/container/v1beta1/cluster_service.proto;l=1191
      * @return Whether the kubernetesDashboard field is set.
      */
     @java.lang.Deprecated
@@ -1948,7 +2030,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      * </code>
      *
      * @deprecated google.container.v1beta1.AddonsConfig.kubernetes_dashboard is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1131
+     *     google/container/v1beta1/cluster_service.proto;l=1191
      * @return The kubernetesDashboard.
      */
     @java.lang.Deprecated
@@ -2380,7 +2462,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.IstioConfig istio_config = 5 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.AddonsConfig.istio_config is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1140
+     *     google/container/v1beta1/cluster_service.proto;l=1200
      * @return Whether the istioConfig field is set.
      */
     @java.lang.Deprecated
@@ -2398,7 +2480,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.IstioConfig istio_config = 5 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.AddonsConfig.istio_config is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1140
+     *     google/container/v1beta1/cluster_service.proto;l=1200
      * @return The istioConfig.
      */
     @java.lang.Deprecated
@@ -3381,7 +3463,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.KalmConfig kalm_config = 12 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.AddonsConfig.kalm_config is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1159
+     *     google/container/v1beta1/cluster_service.proto;l=1219
      * @return Whether the kalmConfig field is set.
      */
     @java.lang.Deprecated
@@ -3399,7 +3481,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.KalmConfig kalm_config = 12 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.AddonsConfig.kalm_config is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1159
+     *     google/container/v1beta1/cluster_service.proto;l=1219
      * @return The kalmConfig.
      */
     @java.lang.Deprecated
@@ -3963,6 +4045,204 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
         gkeBackupAgentConfig_ = null;
       }
       return gkeBackupAgentConfigBuilder_;
+    }
+
+    private com.google.container.v1beta1.GcsFuseCsiDriverConfig gcsFuseCsiDriverConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1beta1.GcsFuseCsiDriverConfig,
+            com.google.container.v1beta1.GcsFuseCsiDriverConfig.Builder,
+            com.google.container.v1beta1.GcsFuseCsiDriverConfigOrBuilder>
+        gcsFuseCsiDriverConfigBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * </pre>
+     *
+     * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;
+     * </code>
+     *
+     * @return Whether the gcsFuseCsiDriverConfig field is set.
+     */
+    public boolean hasGcsFuseCsiDriverConfig() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * </pre>
+     *
+     * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;
+     * </code>
+     *
+     * @return The gcsFuseCsiDriverConfig.
+     */
+    public com.google.container.v1beta1.GcsFuseCsiDriverConfig getGcsFuseCsiDriverConfig() {
+      if (gcsFuseCsiDriverConfigBuilder_ == null) {
+        return gcsFuseCsiDriverConfig_ == null
+            ? com.google.container.v1beta1.GcsFuseCsiDriverConfig.getDefaultInstance()
+            : gcsFuseCsiDriverConfig_;
+      } else {
+        return gcsFuseCsiDriverConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * </pre>
+     *
+     * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;
+     * </code>
+     */
+    public Builder setGcsFuseCsiDriverConfig(
+        com.google.container.v1beta1.GcsFuseCsiDriverConfig value) {
+      if (gcsFuseCsiDriverConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        gcsFuseCsiDriverConfig_ = value;
+      } else {
+        gcsFuseCsiDriverConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * </pre>
+     *
+     * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;
+     * </code>
+     */
+    public Builder setGcsFuseCsiDriverConfig(
+        com.google.container.v1beta1.GcsFuseCsiDriverConfig.Builder builderForValue) {
+      if (gcsFuseCsiDriverConfigBuilder_ == null) {
+        gcsFuseCsiDriverConfig_ = builderForValue.build();
+      } else {
+        gcsFuseCsiDriverConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * </pre>
+     *
+     * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;
+     * </code>
+     */
+    public Builder mergeGcsFuseCsiDriverConfig(
+        com.google.container.v1beta1.GcsFuseCsiDriverConfig value) {
+      if (gcsFuseCsiDriverConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0)
+            && gcsFuseCsiDriverConfig_ != null
+            && gcsFuseCsiDriverConfig_
+                != com.google.container.v1beta1.GcsFuseCsiDriverConfig.getDefaultInstance()) {
+          getGcsFuseCsiDriverConfigBuilder().mergeFrom(value);
+        } else {
+          gcsFuseCsiDriverConfig_ = value;
+        }
+      } else {
+        gcsFuseCsiDriverConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * </pre>
+     *
+     * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;
+     * </code>
+     */
+    public Builder clearGcsFuseCsiDriverConfig() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      gcsFuseCsiDriverConfig_ = null;
+      if (gcsFuseCsiDriverConfigBuilder_ != null) {
+        gcsFuseCsiDriverConfigBuilder_.dispose();
+        gcsFuseCsiDriverConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * </pre>
+     *
+     * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;
+     * </code>
+     */
+    public com.google.container.v1beta1.GcsFuseCsiDriverConfig.Builder
+        getGcsFuseCsiDriverConfigBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getGcsFuseCsiDriverConfigFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * </pre>
+     *
+     * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;
+     * </code>
+     */
+    public com.google.container.v1beta1.GcsFuseCsiDriverConfigOrBuilder
+        getGcsFuseCsiDriverConfigOrBuilder() {
+      if (gcsFuseCsiDriverConfigBuilder_ != null) {
+        return gcsFuseCsiDriverConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return gcsFuseCsiDriverConfig_ == null
+            ? com.google.container.v1beta1.GcsFuseCsiDriverConfig.getDefaultInstance()
+            : gcsFuseCsiDriverConfig_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * </pre>
+     *
+     * <code>.google.container.v1beta1.GcsFuseCsiDriverConfig gcs_fuse_csi_driver_config = 17;
+     * </code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1beta1.GcsFuseCsiDriverConfig,
+            com.google.container.v1beta1.GcsFuseCsiDriverConfig.Builder,
+            com.google.container.v1beta1.GcsFuseCsiDriverConfigOrBuilder>
+        getGcsFuseCsiDriverConfigFieldBuilder() {
+      if (gcsFuseCsiDriverConfigBuilder_ == null) {
+        gcsFuseCsiDriverConfigBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1beta1.GcsFuseCsiDriverConfig,
+                com.google.container.v1beta1.GcsFuseCsiDriverConfig.Builder,
+                com.google.container.v1beta1.GcsFuseCsiDriverConfigOrBuilder>(
+                getGcsFuseCsiDriverConfig(), getParentForChildren(), isClean());
+        gcsFuseCsiDriverConfig_ = null;
+      }
+      return gcsFuseCsiDriverConfigBuilder_;
     }
 
     @java.lang.Override

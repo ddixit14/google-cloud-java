@@ -40,17 +40,13 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
   private ListTablesRequest() {
     parent_ = "";
     pageToken_ = "";
+    view_ = 0;
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new ListTablesRequest();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -158,6 +154,7 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
    * <pre>
    * A page token, received from a previous `ListTables` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to `ListTables` must match
    * the call that provided the page token.
    * </pre>
@@ -184,6 +181,7 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
    * <pre>
    * A page token, received from a previous `ListTables` call.
    * Provide this to retrieve the subsequent page.
+   *
    * When paginating, all other parameters provided to `ListTables` must match
    * the call that provided the page token.
    * </pre>
@@ -203,6 +201,43 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int VIEW_FIELD_NUMBER = 4;
+  private int view_ = 0;
+  /**
+   *
+   *
+   * <pre>
+   * The view for the returned tables.
+   * </pre>
+   *
+   * <code>.google.cloud.bigquery.biglake.v1alpha1.TableView view = 4;</code>
+   *
+   * @return The enum numeric value on the wire for view.
+   */
+  @java.lang.Override
+  public int getViewValue() {
+    return view_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * The view for the returned tables.
+   * </pre>
+   *
+   * <code>.google.cloud.bigquery.biglake.v1alpha1.TableView view = 4;</code>
+   *
+   * @return The view.
+   */
+  @java.lang.Override
+  public com.google.cloud.bigquery.biglake.v1alpha1.TableView getView() {
+    com.google.cloud.bigquery.biglake.v1alpha1.TableView result =
+        com.google.cloud.bigquery.biglake.v1alpha1.TableView.forNumber(view_);
+    return result == null
+        ? com.google.cloud.bigquery.biglake.v1alpha1.TableView.UNRECOGNIZED
+        : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -228,6 +263,11 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
     }
+    if (view_
+        != com.google.cloud.bigquery.biglake.v1alpha1.TableView.TABLE_VIEW_UNSPECIFIED
+            .getNumber()) {
+      output.writeEnum(4, view_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -245,6 +285,11 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+    }
+    if (view_
+        != com.google.cloud.bigquery.biglake.v1alpha1.TableView.TABLE_VIEW_UNSPECIFIED
+            .getNumber()) {
+      size += com.google.protobuf.CodedOutputStream.computeEnumSize(4, view_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -265,6 +310,7 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
     if (!getParent().equals(other.getParent())) return false;
     if (getPageSize() != other.getPageSize()) return false;
     if (!getPageToken().equals(other.getPageToken())) return false;
+    if (view_ != other.view_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -282,6 +328,8 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
     hash = (53 * hash) + getPageSize();
     hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getPageToken().hashCode();
+    hash = (37 * hash) + VIEW_FIELD_NUMBER;
+    hash = (53 * hash) + view_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -425,6 +473,7 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
       parent_ = "";
       pageSize_ = 0;
       pageToken_ = "";
+      view_ = 0;
       return this;
     }
 
@@ -471,6 +520,9 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.pageToken_ = pageToken_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.view_ = view_;
       }
     }
 
@@ -534,6 +586,9 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (other.view_ != 0) {
+        setViewValue(other.getViewValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -578,6 +633,12 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+            case 32:
+              {
+                view_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
             default:
               {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
@@ -792,6 +853,7 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
      * <pre>
      * A page token, received from a previous `ListTables` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListTables` must match
      * the call that provided the page token.
      * </pre>
@@ -817,6 +879,7 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
      * <pre>
      * A page token, received from a previous `ListTables` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListTables` must match
      * the call that provided the page token.
      * </pre>
@@ -842,6 +905,7 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
      * <pre>
      * A page token, received from a previous `ListTables` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListTables` must match
      * the call that provided the page token.
      * </pre>
@@ -866,6 +930,7 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
      * <pre>
      * A page token, received from a previous `ListTables` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListTables` must match
      * the call that provided the page token.
      * </pre>
@@ -886,6 +951,7 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
      * <pre>
      * A page token, received from a previous `ListTables` call.
      * Provide this to retrieve the subsequent page.
+     *
      * When paginating, all other parameters provided to `ListTables` must match
      * the call that provided the page token.
      * </pre>
@@ -902,6 +968,98 @@ public final class ListTablesRequest extends com.google.protobuf.GeneratedMessag
       checkByteStringIsUtf8(value);
       pageToken_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private int view_ = 0;
+    /**
+     *
+     *
+     * <pre>
+     * The view for the returned tables.
+     * </pre>
+     *
+     * <code>.google.cloud.bigquery.biglake.v1alpha1.TableView view = 4;</code>
+     *
+     * @return The enum numeric value on the wire for view.
+     */
+    @java.lang.Override
+    public int getViewValue() {
+      return view_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The view for the returned tables.
+     * </pre>
+     *
+     * <code>.google.cloud.bigquery.biglake.v1alpha1.TableView view = 4;</code>
+     *
+     * @param value The enum numeric value on the wire for view to set.
+     * @return This builder for chaining.
+     */
+    public Builder setViewValue(int value) {
+      view_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The view for the returned tables.
+     * </pre>
+     *
+     * <code>.google.cloud.bigquery.biglake.v1alpha1.TableView view = 4;</code>
+     *
+     * @return The view.
+     */
+    @java.lang.Override
+    public com.google.cloud.bigquery.biglake.v1alpha1.TableView getView() {
+      com.google.cloud.bigquery.biglake.v1alpha1.TableView result =
+          com.google.cloud.bigquery.biglake.v1alpha1.TableView.forNumber(view_);
+      return result == null
+          ? com.google.cloud.bigquery.biglake.v1alpha1.TableView.UNRECOGNIZED
+          : result;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The view for the returned tables.
+     * </pre>
+     *
+     * <code>.google.cloud.bigquery.biglake.v1alpha1.TableView view = 4;</code>
+     *
+     * @param value The view to set.
+     * @return This builder for chaining.
+     */
+    public Builder setView(com.google.cloud.bigquery.biglake.v1alpha1.TableView value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      view_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The view for the returned tables.
+     * </pre>
+     *
+     * <code>.google.cloud.bigquery.biglake.v1alpha1.TableView view = 4;</code>
+     *
+     * @return This builder for chaining.
+     */
+    public Builder clearView() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      view_ = 0;
       onChanged();
       return this;
     }

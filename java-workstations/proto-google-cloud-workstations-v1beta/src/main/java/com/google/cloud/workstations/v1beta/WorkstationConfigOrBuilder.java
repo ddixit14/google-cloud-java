@@ -352,7 +352,7 @@ public interface WorkstationConfigOrBuilder
    *
    * <pre>
    * Checksum computed by the server. May be sent on update and delete requests
-   * to ensure that the client has an up-to-date value before proceeding.
+   * to make sure that the client has an up-to-date value before proceeding.
    * </pre>
    *
    * <code>string etag = 9;</code>
@@ -365,7 +365,7 @@ public interface WorkstationConfigOrBuilder
    *
    * <pre>
    * Checksum computed by the server. May be sent on update and delete requests
-   * to ensure that the client has an up-to-date value before proceeding.
+   * to make sure that the client has an up-to-date value before proceeding.
    * </pre>
    *
    * <code>string etag = 9;</code>
@@ -603,23 +603,28 @@ public interface WorkstationConfigOrBuilder
    *
    *
    * <pre>
-   * Encrypts resources of this workstation configuration using a
+   * Immutable. Encrypts resources of this workstation configuration using a
    * customer-managed encryption key.
+   *
    * If specified, the boot disk of the Compute Engine instance and the
    * persistent disk are encrypted using this encryption key. If
    * this field is not set, the disks are encrypted using a generated
    * key. Customer-managed encryption keys do not protect disk metadata.
+   *
    * If the customer-managed encryption key is rotated, when the workstation
    * instance is stopped, the system attempts to recreate the
    * persistent disk with the new version of the key. Be sure to keep
    * older versions of the key until the persistent disk is recreated.
    * Otherwise, data on the persistent disk will be lost.
+   *
    * If the encryption key is revoked, the workstation session will
    * automatically be stopped within 7 hours.
+   *
+   * Immutable after the workstation configuration is created.
    * </pre>
    *
    * <code>
-   * .google.cloud.workstations.v1beta.WorkstationConfig.CustomerEncryptionKey encryption_key = 17;
+   * .google.cloud.workstations.v1beta.WorkstationConfig.CustomerEncryptionKey encryption_key = 17 [(.google.api.field_behavior) = IMMUTABLE];
    * </code>
    *
    * @return Whether the encryptionKey field is set.
@@ -629,23 +634,28 @@ public interface WorkstationConfigOrBuilder
    *
    *
    * <pre>
-   * Encrypts resources of this workstation configuration using a
+   * Immutable. Encrypts resources of this workstation configuration using a
    * customer-managed encryption key.
+   *
    * If specified, the boot disk of the Compute Engine instance and the
    * persistent disk are encrypted using this encryption key. If
    * this field is not set, the disks are encrypted using a generated
    * key. Customer-managed encryption keys do not protect disk metadata.
+   *
    * If the customer-managed encryption key is rotated, when the workstation
    * instance is stopped, the system attempts to recreate the
    * persistent disk with the new version of the key. Be sure to keep
    * older versions of the key until the persistent disk is recreated.
    * Otherwise, data on the persistent disk will be lost.
+   *
    * If the encryption key is revoked, the workstation session will
    * automatically be stopped within 7 hours.
+   *
+   * Immutable after the workstation configuration is created.
    * </pre>
    *
    * <code>
-   * .google.cloud.workstations.v1beta.WorkstationConfig.CustomerEncryptionKey encryption_key = 17;
+   * .google.cloud.workstations.v1beta.WorkstationConfig.CustomerEncryptionKey encryption_key = 17 [(.google.api.field_behavior) = IMMUTABLE];
    * </code>
    *
    * @return The encryptionKey.
@@ -655,27 +665,108 @@ public interface WorkstationConfigOrBuilder
    *
    *
    * <pre>
-   * Encrypts resources of this workstation configuration using a
+   * Immutable. Encrypts resources of this workstation configuration using a
    * customer-managed encryption key.
+   *
    * If specified, the boot disk of the Compute Engine instance and the
    * persistent disk are encrypted using this encryption key. If
    * this field is not set, the disks are encrypted using a generated
    * key. Customer-managed encryption keys do not protect disk metadata.
+   *
    * If the customer-managed encryption key is rotated, when the workstation
    * instance is stopped, the system attempts to recreate the
    * persistent disk with the new version of the key. Be sure to keep
    * older versions of the key until the persistent disk is recreated.
    * Otherwise, data on the persistent disk will be lost.
+   *
    * If the encryption key is revoked, the workstation session will
    * automatically be stopped within 7 hours.
+   *
+   * Immutable after the workstation configuration is created.
    * </pre>
    *
    * <code>
-   * .google.cloud.workstations.v1beta.WorkstationConfig.CustomerEncryptionKey encryption_key = 17;
+   * .google.cloud.workstations.v1beta.WorkstationConfig.CustomerEncryptionKey encryption_key = 17 [(.google.api.field_behavior) = IMMUTABLE];
    * </code>
    */
   com.google.cloud.workstations.v1beta.WorkstationConfig.CustomerEncryptionKeyOrBuilder
       getEncryptionKeyOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Readiness checks to perform when starting a workstation using this
+   * workstation configuration. Mark a workstation as running only after all
+   * specified readiness checks return 200 status codes.
+   * </pre>
+   *
+   * <code>
+   * repeated .google.cloud.workstations.v1beta.WorkstationConfig.ReadinessCheck readiness_checks = 19;
+   * </code>
+   */
+  java.util.List<com.google.cloud.workstations.v1beta.WorkstationConfig.ReadinessCheck>
+      getReadinessChecksList();
+  /**
+   *
+   *
+   * <pre>
+   * Readiness checks to perform when starting a workstation using this
+   * workstation configuration. Mark a workstation as running only after all
+   * specified readiness checks return 200 status codes.
+   * </pre>
+   *
+   * <code>
+   * repeated .google.cloud.workstations.v1beta.WorkstationConfig.ReadinessCheck readiness_checks = 19;
+   * </code>
+   */
+  com.google.cloud.workstations.v1beta.WorkstationConfig.ReadinessCheck getReadinessChecks(
+      int index);
+  /**
+   *
+   *
+   * <pre>
+   * Readiness checks to perform when starting a workstation using this
+   * workstation configuration. Mark a workstation as running only after all
+   * specified readiness checks return 200 status codes.
+   * </pre>
+   *
+   * <code>
+   * repeated .google.cloud.workstations.v1beta.WorkstationConfig.ReadinessCheck readiness_checks = 19;
+   * </code>
+   */
+  int getReadinessChecksCount();
+  /**
+   *
+   *
+   * <pre>
+   * Readiness checks to perform when starting a workstation using this
+   * workstation configuration. Mark a workstation as running only after all
+   * specified readiness checks return 200 status codes.
+   * </pre>
+   *
+   * <code>
+   * repeated .google.cloud.workstations.v1beta.WorkstationConfig.ReadinessCheck readiness_checks = 19;
+   * </code>
+   */
+  java.util.List<
+          ? extends com.google.cloud.workstations.v1beta.WorkstationConfig.ReadinessCheckOrBuilder>
+      getReadinessChecksOrBuilderList();
+  /**
+   *
+   *
+   * <pre>
+   * Readiness checks to perform when starting a workstation using this
+   * workstation configuration. Mark a workstation as running only after all
+   * specified readiness checks return 200 status codes.
+   * </pre>
+   *
+   * <code>
+   * repeated .google.cloud.workstations.v1beta.WorkstationConfig.ReadinessCheck readiness_checks = 19;
+   * </code>
+   */
+  com.google.cloud.workstations.v1beta.WorkstationConfig.ReadinessCheckOrBuilder
+      getReadinessChecksOrBuilder(int index);
 
   /**
    *
@@ -747,4 +838,21 @@ public interface WorkstationConfigOrBuilder
    * </code>
    */
   com.google.rpc.StatusOrBuilder getConditionsOrBuilder(int index);
+
+  /**
+   *
+   *
+   * <pre>
+   * Whether to enable linux auditd logging on the workstation. When enabled, a
+   * service account must also be specified that has logging.buckets.write
+   * permission on the project. Operating system audit logging is distinct from
+   * [Cloud Audit
+   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
+   * </pre>
+   *
+   * <code>bool enable_audit_agent = 20;</code>
+   *
+   * @return The enableAuditAgent.
+   */
+  boolean getEnableAuditAgent();
 }

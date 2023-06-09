@@ -76,6 +76,7 @@ public interface UpdateFederationRequestOrBuilder
    * <pre>
    * Required. The metastore federation to update. The server only merges fields
    * in the service if they are specified in `update_mask`.
+   *
    * The metastore federation's `name` field is used to identify the
    * metastore service to be updated.
    * </pre>
@@ -93,6 +94,7 @@ public interface UpdateFederationRequestOrBuilder
    * <pre>
    * Required. The metastore federation to update. The server only merges fields
    * in the service if they are specified in `update_mask`.
+   *
    * The metastore federation's `name` field is used to identify the
    * metastore service to be updated.
    * </pre>
@@ -110,6 +112,7 @@ public interface UpdateFederationRequestOrBuilder
    * <pre>
    * Required. The metastore federation to update. The server only merges fields
    * in the service if they are specified in `update_mask`.
+   *
    * The metastore federation's `name` field is used to identify the
    * metastore service to be updated.
    * </pre>
@@ -124,13 +127,15 @@ public interface UpdateFederationRequestOrBuilder
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -145,13 +150,15 @@ public interface UpdateFederationRequestOrBuilder
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.

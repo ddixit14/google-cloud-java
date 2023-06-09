@@ -46,11 +46,6 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
     return new MembershipEndpoint();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.gkehub.v1beta1.MembershipOuterClass
         .internal_static_google_cloud_gkehub_v1beta1_MembershipEndpoint_descriptor;
@@ -67,6 +62,8 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
   }
 
   private int typeCase_ = 0;
+
+  @SuppressWarnings("serial")
   private java.lang.Object type_;
 
   public enum TypeCase
@@ -184,9 +181,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-   * who has no resourceLink is not allowed to use this field, it should have
-   * a nil "type" instead.
+   * Optional. Specific information for a GKE On-Prem cluster. An onprem
+   * user-cluster who has no resourceLink is not allowed to use this field, it
+   * should have a nil "type" instead.
    * </pre>
    *
    * <code>
@@ -203,9 +200,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-   * who has no resourceLink is not allowed to use this field, it should have
-   * a nil "type" instead.
+   * Optional. Specific information for a GKE On-Prem cluster. An onprem
+   * user-cluster who has no resourceLink is not allowed to use this field, it
+   * should have a nil "type" instead.
    * </pre>
    *
    * <code>
@@ -225,9 +222,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-   * who has no resourceLink is not allowed to use this field, it should have
-   * a nil "type" instead.
+   * Optional. Specific information for a GKE On-Prem cluster. An onprem
+   * user-cluster who has no resourceLink is not allowed to use this field, it
+   * should have a nil "type" instead.
    * </pre>
    *
    * <code>
@@ -477,8 +474,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-   * registered cluster, in the steady state. These resources:
+   * Optional. The in-cluster Kubernetes Resources that should be applied for a
+   * correctly registered cluster, in the steady state. These resources:
+   *
    *   * Ensure that the cluster is exclusively registered to one and only one
    *     Hub Membership.
    *   * Propagate Workload Pool Information available in the Membership
@@ -500,8 +498,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-   * registered cluster, in the steady state. These resources:
+   * Optional. The in-cluster Kubernetes Resources that should be applied for a
+   * correctly registered cluster, in the steady state. These resources:
+   *
    *   * Ensure that the cluster is exclusively registered to one and only one
    *     Hub Membership.
    *   * Propagate Workload Pool Information available in the Membership
@@ -525,8 +524,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-   * registered cluster, in the steady state. These resources:
+   * Optional. The in-cluster Kubernetes Resources that should be applied for a
+   * correctly registered cluster, in the steady state. These resources:
+   *
    *   * Ensure that the cluster is exclusively registered to one and only one
    *     Hub Membership.
    *   * Propagate Workload Pool Information available in the Membership
@@ -1370,9 +1370,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-     * who has no resourceLink is not allowed to use this field, it should have
-     * a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem
+     * user-cluster who has no resourceLink is not allowed to use this field, it
+     * should have a nil "type" instead.
      * </pre>
      *
      * <code>
@@ -1389,9 +1389,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-     * who has no resourceLink is not allowed to use this field, it should have
-     * a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem
+     * user-cluster who has no resourceLink is not allowed to use this field, it
+     * should have a nil "type" instead.
      * </pre>
      *
      * <code>
@@ -1418,9 +1418,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-     * who has no resourceLink is not allowed to use this field, it should have
-     * a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem
+     * user-cluster who has no resourceLink is not allowed to use this field, it
+     * should have a nil "type" instead.
      * </pre>
      *
      * <code>
@@ -1444,9 +1444,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-     * who has no resourceLink is not allowed to use this field, it should have
-     * a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem
+     * user-cluster who has no resourceLink is not allowed to use this field, it
+     * should have a nil "type" instead.
      * </pre>
      *
      * <code>
@@ -1468,9 +1468,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-     * who has no resourceLink is not allowed to use this field, it should have
-     * a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem
+     * user-cluster who has no resourceLink is not allowed to use this field, it
+     * should have a nil "type" instead.
      * </pre>
      *
      * <code>
@@ -1504,9 +1504,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-     * who has no resourceLink is not allowed to use this field, it should have
-     * a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem
+     * user-cluster who has no resourceLink is not allowed to use this field, it
+     * should have a nil "type" instead.
      * </pre>
      *
      * <code>
@@ -1533,9 +1533,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-     * who has no resourceLink is not allowed to use this field, it should have
-     * a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem
+     * user-cluster who has no resourceLink is not allowed to use this field, it
+     * should have a nil "type" instead.
      * </pre>
      *
      * <code>
@@ -1549,9 +1549,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-     * who has no resourceLink is not allowed to use this field, it should have
-     * a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem
+     * user-cluster who has no resourceLink is not allowed to use this field, it
+     * should have a nil "type" instead.
      * </pre>
      *
      * <code>
@@ -1573,9 +1573,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster
-     * who has no resourceLink is not allowed to use this field, it should have
-     * a nil "type" instead.
+     * Optional. Specific information for a GKE On-Prem cluster. An onprem
+     * user-cluster who has no resourceLink is not allowed to use this field, it
+     * should have a nil "type" instead.
      * </pre>
      *
      * <code>
@@ -2505,8 +2505,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -2527,8 +2528,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -2555,8 +2557,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -2585,8 +2588,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -2613,8 +2617,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -2648,8 +2653,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -2675,8 +2681,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -2698,8 +2705,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership
@@ -2725,8 +2733,9 @@ public final class MembershipEndpoint extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-     * registered cluster, in the steady state. These resources:
+     * Optional. The in-cluster Kubernetes Resources that should be applied for a
+     * correctly registered cluster, in the steady state. These resources:
+     *
      *   * Ensure that the cluster is exclusively registered to one and only one
      *     Hub Membership.
      *   * Propagate Workload Pool Information available in the Membership

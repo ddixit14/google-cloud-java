@@ -49,11 +49,6 @@ public final class MysqlSslConfig extends com.google.protobuf.GeneratedMessageV3
     return new MysqlSslConfig();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.datastream.v1.DatastreamResourcesProto
         .internal_static_google_cloud_datastream_v1_MysqlSslConfig_descriptor;
@@ -223,8 +218,8 @@ public final class MysqlSslConfig extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Input only. PEM-encoded certificate of the CA that signed the source database
-   * server's certificate.
+   * Input only. PEM-encoded certificate of the CA that signed the source
+   * database server's certificate.
    * </pre>
    *
    * <code>string ca_certificate = 5 [(.google.api.field_behavior) = INPUT_ONLY];</code>
@@ -247,8 +242,8 @@ public final class MysqlSslConfig extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * Input only. PEM-encoded certificate of the CA that signed the source database
-   * server's certificate.
+   * Input only. PEM-encoded certificate of the CA that signed the source
+   * database server's certificate.
    * </pre>
    *
    * <code>string ca_certificate = 5 [(.google.api.field_behavior) = INPUT_ONLY];</code>
@@ -1084,8 +1079,8 @@ public final class MysqlSslConfig extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Input only. PEM-encoded certificate of the CA that signed the source database
-     * server's certificate.
+     * Input only. PEM-encoded certificate of the CA that signed the source
+     * database server's certificate.
      * </pre>
      *
      * <code>string ca_certificate = 5 [(.google.api.field_behavior) = INPUT_ONLY];</code>
@@ -1107,8 +1102,8 @@ public final class MysqlSslConfig extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Input only. PEM-encoded certificate of the CA that signed the source database
-     * server's certificate.
+     * Input only. PEM-encoded certificate of the CA that signed the source
+     * database server's certificate.
      * </pre>
      *
      * <code>string ca_certificate = 5 [(.google.api.field_behavior) = INPUT_ONLY];</code>
@@ -1130,8 +1125,8 @@ public final class MysqlSslConfig extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Input only. PEM-encoded certificate of the CA that signed the source database
-     * server's certificate.
+     * Input only. PEM-encoded certificate of the CA that signed the source
+     * database server's certificate.
      * </pre>
      *
      * <code>string ca_certificate = 5 [(.google.api.field_behavior) = INPUT_ONLY];</code>
@@ -1152,8 +1147,8 @@ public final class MysqlSslConfig extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Input only. PEM-encoded certificate of the CA that signed the source database
-     * server's certificate.
+     * Input only. PEM-encoded certificate of the CA that signed the source
+     * database server's certificate.
      * </pre>
      *
      * <code>string ca_certificate = 5 [(.google.api.field_behavior) = INPUT_ONLY];</code>
@@ -1170,8 +1165,8 @@ public final class MysqlSslConfig extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * Input only. PEM-encoded certificate of the CA that signed the source database
-     * server's certificate.
+     * Input only. PEM-encoded certificate of the CA that signed the source
+     * database server's certificate.
      * </pre>
      *
      * <code>string ca_certificate = 5 [(.google.api.field_behavior) = INPUT_ONLY];</code>

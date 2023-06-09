@@ -51,11 +51,6 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
     return new KubernetesResource();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.gkehub.v1.MembershipProto
         .internal_static_google_cloud_gkehub_v1_KubernetesResource_descriptor;
@@ -79,8 +74,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Input only. The YAML representation of the Membership CR. This field is ignored for GKE
-   * clusters where Hub can read the CR directly.
+   * Input only. The YAML representation of the Membership CR. This field is
+   * ignored for GKE clusters where Hub can read the CR directly.
+   *
    * Callers should provide the CR that is currently present in the cluster
    * during CreateMembership or UpdateMembership, or leave this field empty if
    * none exists. The CR manifest is used to validate the cluster has not been
@@ -107,8 +103,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Input only. The YAML representation of the Membership CR. This field is ignored for GKE
-   * clusters where Hub can read the CR directly.
+   * Input only. The YAML representation of the Membership CR. This field is
+   * ignored for GKE clusters where Hub can read the CR directly.
+   *
    * Callers should provide the CR that is currently present in the cluster
    * during CreateMembership or UpdateMembership, or leave this field empty if
    * none exists. The CR manifest is used to validate the cluster has not been
@@ -140,8 +137,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. Additional Kubernetes resources that need to be applied to the cluster
-   * after Membership creation, and after every update.
+   * Output only. Additional Kubernetes resources that need to be applied to the
+   * cluster after Membership creation, and after every update.
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -161,8 +159,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. Additional Kubernetes resources that need to be applied to the cluster
-   * after Membership creation, and after every update.
+   * Output only. Additional Kubernetes resources that need to be applied to the
+   * cluster after Membership creation, and after every update.
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -183,8 +182,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. Additional Kubernetes resources that need to be applied to the cluster
-   * after Membership creation, and after every update.
+   * Output only. Additional Kubernetes resources that need to be applied to the
+   * cluster after Membership creation, and after every update.
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -204,8 +204,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. Additional Kubernetes resources that need to be applied to the cluster
-   * after Membership creation, and after every update.
+   * Output only. Additional Kubernetes resources that need to be applied to the
+   * cluster after Membership creation, and after every update.
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -225,8 +226,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * Output only. Additional Kubernetes resources that need to be applied to the cluster
-   * after Membership creation, and after every update.
+   * Output only. Additional Kubernetes resources that need to be applied to the
+   * cluster after Membership creation, and after every update.
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -253,6 +255,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Output only. The Kubernetes resources for installing the GKE Connect agent
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -273,6 +276,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Output only. The Kubernetes resources for installing the GKE Connect agent
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -294,6 +298,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Output only. The Kubernetes resources for installing the GKE Connect agent
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -314,6 +319,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Output only. The Kubernetes resources for installing the GKE Connect agent
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -334,6 +340,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
    *
    * <pre>
    * Output only. The Kubernetes resources for installing the GKE Connect agent
+   *
    * This field is only populated in the Membership returned from a successful
    * long-running operation from CreateMembership or UpdateMembership. It is not
    * populated during normal GetMembership or ListMemberships requests. To get
@@ -926,8 +933,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Input only. The YAML representation of the Membership CR. This field is ignored for GKE
-     * clusters where Hub can read the CR directly.
+     * Input only. The YAML representation of the Membership CR. This field is
+     * ignored for GKE clusters where Hub can read the CR directly.
+     *
      * Callers should provide the CR that is currently present in the cluster
      * during CreateMembership or UpdateMembership, or leave this field empty if
      * none exists. The CR manifest is used to validate the cluster has not been
@@ -953,8 +961,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Input only. The YAML representation of the Membership CR. This field is ignored for GKE
-     * clusters where Hub can read the CR directly.
+     * Input only. The YAML representation of the Membership CR. This field is
+     * ignored for GKE clusters where Hub can read the CR directly.
+     *
      * Callers should provide the CR that is currently present in the cluster
      * during CreateMembership or UpdateMembership, or leave this field empty if
      * none exists. The CR manifest is used to validate the cluster has not been
@@ -980,8 +989,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Input only. The YAML representation of the Membership CR. This field is ignored for GKE
-     * clusters where Hub can read the CR directly.
+     * Input only. The YAML representation of the Membership CR. This field is
+     * ignored for GKE clusters where Hub can read the CR directly.
+     *
      * Callers should provide the CR that is currently present in the cluster
      * during CreateMembership or UpdateMembership, or leave this field empty if
      * none exists. The CR manifest is used to validate the cluster has not been
@@ -1006,8 +1016,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Input only. The YAML representation of the Membership CR. This field is ignored for GKE
-     * clusters where Hub can read the CR directly.
+     * Input only. The YAML representation of the Membership CR. This field is
+     * ignored for GKE clusters where Hub can read the CR directly.
+     *
      * Callers should provide the CR that is currently present in the cluster
      * during CreateMembership or UpdateMembership, or leave this field empty if
      * none exists. The CR manifest is used to validate the cluster has not been
@@ -1028,8 +1039,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Input only. The YAML representation of the Membership CR. This field is ignored for GKE
-     * clusters where Hub can read the CR directly.
+     * Input only. The YAML representation of the Membership CR. This field is
+     * ignored for GKE clusters where Hub can read the CR directly.
+     *
      * Callers should provide the CR that is currently present in the cluster
      * during CreateMembership or UpdateMembership, or leave this field empty if
      * none exists. The CR manifest is used to validate the cluster has not been
@@ -1074,8 +1086,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1099,8 +1112,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1123,8 +1137,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1147,8 +1162,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1178,8 +1194,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1206,8 +1223,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1236,8 +1254,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1267,8 +1286,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1295,8 +1315,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1323,8 +1344,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1351,8 +1373,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1378,8 +1401,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1405,8 +1429,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1426,8 +1451,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1451,8 +1477,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1476,8 +1503,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1497,8 +1525,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1519,8 +1548,9 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * Output only. Additional Kubernetes resources that need to be applied to the cluster
-     * after Membership creation, and after every update.
+     * Output only. Additional Kubernetes resources that need to be applied to the
+     * cluster after Membership creation, and after every update.
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1579,6 +1609,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1602,6 +1633,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1625,6 +1657,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1648,6 +1681,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1678,6 +1712,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1705,6 +1740,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1734,6 +1770,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1764,6 +1801,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1791,6 +1829,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1818,6 +1857,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1845,6 +1885,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1871,6 +1912,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1897,6 +1939,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1917,6 +1960,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1941,6 +1985,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1965,6 +2010,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -1985,6 +2031,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get
@@ -2006,6 +2053,7 @@ public final class KubernetesResource extends com.google.protobuf.GeneratedMessa
      *
      * <pre>
      * Output only. The Kubernetes resources for installing the GKE Connect agent
+     *
      * This field is only populated in the Membership returned from a successful
      * long-running operation from CreateMembership or UpdateMembership. It is not
      * populated during normal GetMembership or ListMemberships requests. To get

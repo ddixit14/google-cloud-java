@@ -48,11 +48,6 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
     return new SearchOrganizationsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.OrganizationsProto
         .internal_static_google_cloud_resourcemanager_v3_SearchOrganizationsRequest_descriptor;
@@ -75,7 +70,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
    *
    * <pre>
    * Optional. The maximum number of organizations to return in the response.
-   * If unspecified, server picks an appropriate default.
+   * The server can return fewer organizations than requested. If unspecified,
+   * server picks an appropriate default.
    * </pre>
    *
    * <code>int32 page_size = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -95,8 +91,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * Optional. A pagination token returned from a previous call to `SearchOrganizations`
-   * that indicates from where listing should continue.
+   * Optional. A pagination token returned from a previous call to
+   * `SearchOrganizations` that indicates from where listing should continue.
    * </pre>
    *
    * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -119,8 +115,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * Optional. A pagination token returned from a previous call to `SearchOrganizations`
-   * that indicates from where listing should continue.
+   * Optional. A pagination token returned from a previous call to
+   * `SearchOrganizations` that indicates from where listing should continue.
    * </pre>
    *
    * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -148,8 +144,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * Optional. An optional query string used to filter the Organizations to return in
-   * the response. Query rules are case-insensitive.
+   * Optional. An optional query string used to filter the Organizations to
+   * return in the response. Query rules are case-insensitive.
+   *
+   *
    * ```
    * | Field            | Description                                |
    * |------------------|--------------------------------------------|
@@ -157,8 +155,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
    * customer id. |
    * | domain           | Filters by domain.                         |
    * ```
+   *
    * Organizations may be queried by `directoryCustomerId` or by
    * `domain`, where the domain is a G Suite domain, for example:
+   *
    * * Query `directorycustomerid:123456789` returns Organization
    * resources with `owner.directory_customer_id` equal to `123456789`.
    * * Query `domain:google.com` returns Organization resources corresponding
@@ -185,8 +185,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
    *
    *
    * <pre>
-   * Optional. An optional query string used to filter the Organizations to return in
-   * the response. Query rules are case-insensitive.
+   * Optional. An optional query string used to filter the Organizations to
+   * return in the response. Query rules are case-insensitive.
+   *
+   *
    * ```
    * | Field            | Description                                |
    * |------------------|--------------------------------------------|
@@ -194,8 +196,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
    * customer id. |
    * | domain           | Filters by domain.                         |
    * ```
+   *
    * Organizations may be queried by `directoryCustomerId` or by
    * `domain`, where the domain is a G Suite domain, for example:
+   *
    * * Query `directorycustomerid:123456789` returns Organization
    * resources with `owner.directory_customer_id` equal to `123456789`.
    * * Query `domain:google.com` returns Organization resources corresponding
@@ -617,7 +621,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Optional. The maximum number of organizations to return in the response.
-     * If unspecified, server picks an appropriate default.
+     * The server can return fewer organizations than requested. If unspecified,
+     * server picks an appropriate default.
      * </pre>
      *
      * <code>int32 page_size = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -633,7 +638,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Optional. The maximum number of organizations to return in the response.
-     * If unspecified, server picks an appropriate default.
+     * The server can return fewer organizations than requested. If unspecified,
+     * server picks an appropriate default.
      * </pre>
      *
      * <code>int32 page_size = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -653,7 +659,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      * <pre>
      * Optional. The maximum number of organizations to return in the response.
-     * If unspecified, server picks an appropriate default.
+     * The server can return fewer organizations than requested. If unspecified,
+     * server picks an appropriate default.
      * </pre>
      *
      * <code>int32 page_size = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -672,8 +679,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `SearchOrganizations`
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * `SearchOrganizations` that indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -695,8 +702,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `SearchOrganizations`
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * `SearchOrganizations` that indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -718,8 +725,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `SearchOrganizations`
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * `SearchOrganizations` that indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -740,8 +747,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `SearchOrganizations`
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * `SearchOrganizations` that indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -758,8 +765,8 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `SearchOrganizations`
-     * that indicates from where listing should continue.
+     * Optional. A pagination token returned from a previous call to
+     * `SearchOrganizations` that indicates from where listing should continue.
      * </pre>
      *
      * <code>string page_token = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -783,8 +790,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. An optional query string used to filter the Organizations to return in
-     * the response. Query rules are case-insensitive.
+     * Optional. An optional query string used to filter the Organizations to
+     * return in the response. Query rules are case-insensitive.
+     *
+     *
      * ```
      * | Field            | Description                                |
      * |------------------|--------------------------------------------|
@@ -792,8 +801,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      * customer id. |
      * | domain           | Filters by domain.                         |
      * ```
+     *
      * Organizations may be queried by `directoryCustomerId` or by
      * `domain`, where the domain is a G Suite domain, for example:
+     *
      * * Query `directorycustomerid:123456789` returns Organization
      * resources with `owner.directory_customer_id` equal to `123456789`.
      * * Query `domain:google.com` returns Organization resources corresponding
@@ -819,8 +830,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. An optional query string used to filter the Organizations to return in
-     * the response. Query rules are case-insensitive.
+     * Optional. An optional query string used to filter the Organizations to
+     * return in the response. Query rules are case-insensitive.
+     *
+     *
      * ```
      * | Field            | Description                                |
      * |------------------|--------------------------------------------|
@@ -828,8 +841,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      * customer id. |
      * | domain           | Filters by domain.                         |
      * ```
+     *
      * Organizations may be queried by `directoryCustomerId` or by
      * `domain`, where the domain is a G Suite domain, for example:
+     *
      * * Query `directorycustomerid:123456789` returns Organization
      * resources with `owner.directory_customer_id` equal to `123456789`.
      * * Query `domain:google.com` returns Organization resources corresponding
@@ -855,8 +870,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. An optional query string used to filter the Organizations to return in
-     * the response. Query rules are case-insensitive.
+     * Optional. An optional query string used to filter the Organizations to
+     * return in the response. Query rules are case-insensitive.
+     *
+     *
      * ```
      * | Field            | Description                                |
      * |------------------|--------------------------------------------|
@@ -864,8 +881,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      * customer id. |
      * | domain           | Filters by domain.                         |
      * ```
+     *
      * Organizations may be queried by `directoryCustomerId` or by
      * `domain`, where the domain is a G Suite domain, for example:
+     *
      * * Query `directorycustomerid:123456789` returns Organization
      * resources with `owner.directory_customer_id` equal to `123456789`.
      * * Query `domain:google.com` returns Organization resources corresponding
@@ -890,8 +909,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. An optional query string used to filter the Organizations to return in
-     * the response. Query rules are case-insensitive.
+     * Optional. An optional query string used to filter the Organizations to
+     * return in the response. Query rules are case-insensitive.
+     *
+     *
      * ```
      * | Field            | Description                                |
      * |------------------|--------------------------------------------|
@@ -899,8 +920,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      * customer id. |
      * | domain           | Filters by domain.                         |
      * ```
+     *
      * Organizations may be queried by `directoryCustomerId` or by
      * `domain`, where the domain is a G Suite domain, for example:
+     *
      * * Query `directorycustomerid:123456789` returns Organization
      * resources with `owner.directory_customer_id` equal to `123456789`.
      * * Query `domain:google.com` returns Organization resources corresponding
@@ -921,8 +944,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      *
      *
      * <pre>
-     * Optional. An optional query string used to filter the Organizations to return in
-     * the response. Query rules are case-insensitive.
+     * Optional. An optional query string used to filter the Organizations to
+     * return in the response. Query rules are case-insensitive.
+     *
+     *
      * ```
      * | Field            | Description                                |
      * |------------------|--------------------------------------------|
@@ -930,8 +955,10 @@ public final class SearchOrganizationsRequest extends com.google.protobuf.Genera
      * customer id. |
      * | domain           | Filters by domain.                         |
      * ```
+     *
      * Organizations may be queried by `directoryCustomerId` or by
      * `domain`, where the domain is a G Suite domain, for example:
+     *
      * * Query `directorycustomerid:123456789` returns Organization
      * resources with `owner.directory_customer_id` equal to `123456789`.
      * * Query `domain:google.com` returns Organization resources corresponding

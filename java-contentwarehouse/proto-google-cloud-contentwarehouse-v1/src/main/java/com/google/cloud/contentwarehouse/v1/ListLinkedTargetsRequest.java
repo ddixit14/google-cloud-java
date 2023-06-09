@@ -47,11 +47,6 @@ public final class ListLinkedTargetsRequest extends com.google.protobuf.Generate
     return new ListLinkedTargetsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contentwarehouse.v1.DocumentLinkServiceProto
         .internal_static_google_cloud_contentwarehouse_v1_ListLinkedTargetsRequest_descriptor;
@@ -75,8 +70,8 @@ public final class ListLinkedTargetsRequest extends com.google.protobuf.Generate
    *
    *
    * <pre>
-   * Required. The name of the document, for which all target links are returned.
-   * Format:
+   * Required. The name of the document, for which all target links are
+   * returned. Format:
    * projects/{project_number}/locations/{location}/documents/{target_document_id}.
    * </pre>
    *
@@ -102,8 +97,8 @@ public final class ListLinkedTargetsRequest extends com.google.protobuf.Generate
    *
    *
    * <pre>
-   * Required. The name of the document, for which all target links are returned.
-   * Format:
+   * Required. The name of the document, for which all target links are
+   * returned. Format:
    * projects/{project_number}/locations/{location}/documents/{target_document_id}.
    * </pre>
    *
@@ -563,8 +558,8 @@ public final class ListLinkedTargetsRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all target links are returned.
-     * Format:
+     * Required. The name of the document, for which all target links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{target_document_id}.
      * </pre>
      *
@@ -589,8 +584,8 @@ public final class ListLinkedTargetsRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all target links are returned.
-     * Format:
+     * Required. The name of the document, for which all target links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{target_document_id}.
      * </pre>
      *
@@ -615,8 +610,8 @@ public final class ListLinkedTargetsRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all target links are returned.
-     * Format:
+     * Required. The name of the document, for which all target links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{target_document_id}.
      * </pre>
      *
@@ -640,8 +635,8 @@ public final class ListLinkedTargetsRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all target links are returned.
-     * Format:
+     * Required. The name of the document, for which all target links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{target_document_id}.
      * </pre>
      *
@@ -661,8 +656,8 @@ public final class ListLinkedTargetsRequest extends com.google.protobuf.Generate
      *
      *
      * <pre>
-     * Required. The name of the document, for which all target links are returned.
-     * Format:
+     * Required. The name of the document, for which all target links are
+     * returned. Format:
      * projects/{project_number}/locations/{location}/documents/{target_document_id}.
      * </pre>
      *

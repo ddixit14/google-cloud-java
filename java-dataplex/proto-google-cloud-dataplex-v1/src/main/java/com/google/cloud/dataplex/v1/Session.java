@@ -49,11 +49,6 @@ public final class Session extends com.google.protobuf.GeneratedMessageV3
     return new Session();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.dataplex.v1.AnalyzeProto
         .internal_static_google_cloud_dataplex_v1_Session_descriptor;
@@ -229,6 +224,12 @@ public final class Session extends com.google.protobuf.GeneratedMessageV3
   public static final int STATE_FIELD_NUMBER = 4;
   private int state_ = 0;
   /**
+   *
+   *
+   * <pre>
+   * Output only. State of Session
+   * </pre>
+   *
    * <code>.google.cloud.dataplex.v1.State state = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
    * </code>
    *
@@ -239,6 +240,12 @@ public final class Session extends com.google.protobuf.GeneratedMessageV3
     return state_;
   }
   /**
+   *
+   *
+   * <pre>
+   * Output only. State of Session
+   * </pre>
+   *
    * <code>.google.cloud.dataplex.v1.State state = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
    * </code>
    *
@@ -1096,6 +1103,12 @@ public final class Session extends com.google.protobuf.GeneratedMessageV3
 
     private int state_ = 0;
     /**
+     *
+     *
+     * <pre>
+     * Output only. State of Session
+     * </pre>
+     *
      * <code>.google.cloud.dataplex.v1.State state = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
      * </code>
      *
@@ -1106,6 +1119,12 @@ public final class Session extends com.google.protobuf.GeneratedMessageV3
       return state_;
     }
     /**
+     *
+     *
+     * <pre>
+     * Output only. State of Session
+     * </pre>
+     *
      * <code>.google.cloud.dataplex.v1.State state = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
      * </code>
      *
@@ -1119,6 +1138,12 @@ public final class Session extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
+     *
+     *
+     * <pre>
+     * Output only. State of Session
+     * </pre>
+     *
      * <code>.google.cloud.dataplex.v1.State state = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
      * </code>
      *
@@ -1131,6 +1156,12 @@ public final class Session extends com.google.protobuf.GeneratedMessageV3
       return result == null ? com.google.cloud.dataplex.v1.State.UNRECOGNIZED : result;
     }
     /**
+     *
+     *
+     * <pre>
+     * Output only. State of Session
+     * </pre>
+     *
      * <code>.google.cloud.dataplex.v1.State state = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
      * </code>
      *
@@ -1147,6 +1178,12 @@ public final class Session extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
     /**
+     *
+     *
+     * <pre>
+     * Output only. State of Session
+     * </pre>
+     *
      * <code>.google.cloud.dataplex.v1.State state = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];
      * </code>
      *

@@ -46,11 +46,6 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
     return new UpdateEntityTypeRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.aiplatform.v1beta1.FeaturestoreServiceProto
         .internal_static_google_cloud_aiplatform_v1beta1_UpdateEntityTypeRequest_descriptor;
@@ -141,7 +136,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
    * user does not provide a mask then only the non-empty fields present in the
    * request will be overwritten. Set the update_mask to `*` to override all
    * fields.
+   *
    * Updatable fields:
+   *
    *   * `description`
    *   * `labels`
    *   * `monitoring_config.snapshot_analysis.disabled`
@@ -151,7 +148,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
    *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
    *   * `monitoring_config.numerical_threshold_config.value`
    *   * `monitoring_config.categorical_threshold_config.value`
-   *   * `offline_storage_ttl_days` (available in Preview)
+   *   * `offline_storage_ttl_days`
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -173,7 +170,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
    * user does not provide a mask then only the non-empty fields present in the
    * request will be overwritten. Set the update_mask to `*` to override all
    * fields.
+   *
    * Updatable fields:
+   *
    *   * `description`
    *   * `labels`
    *   * `monitoring_config.snapshot_analysis.disabled`
@@ -183,7 +182,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
    *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
    *   * `monitoring_config.numerical_threshold_config.value`
    *   * `monitoring_config.categorical_threshold_config.value`
-   *   * `offline_storage_ttl_days` (available in Preview)
+   *   * `offline_storage_ttl_days`
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -205,7 +204,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
    * user does not provide a mask then only the non-empty fields present in the
    * request will be overwritten. Set the update_mask to `*` to override all
    * fields.
+   *
    * Updatable fields:
+   *
    *   * `description`
    *   * `labels`
    *   * `monitoring_config.snapshot_analysis.disabled`
@@ -215,7 +216,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
    *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
    *   * `monitoring_config.numerical_threshold_config.value`
    *   * `monitoring_config.categorical_threshold_config.value`
-   *   * `offline_storage_ttl_days` (available in Preview)
+   *   * `offline_storage_ttl_days`
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -844,7 +845,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `description`
      *   * `labels`
      *   * `monitoring_config.snapshot_analysis.disabled`
@@ -854,7 +857,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
      *   * `monitoring_config.numerical_threshold_config.value`
      *   * `monitoring_config.categorical_threshold_config.value`
-     *   * `offline_storage_ttl_days` (available in Preview)
+     *   * `offline_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -875,7 +878,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `description`
      *   * `labels`
      *   * `monitoring_config.snapshot_analysis.disabled`
@@ -885,7 +890,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
      *   * `monitoring_config.numerical_threshold_config.value`
      *   * `monitoring_config.categorical_threshold_config.value`
-     *   * `offline_storage_ttl_days` (available in Preview)
+     *   * `offline_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -912,7 +917,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `description`
      *   * `labels`
      *   * `monitoring_config.snapshot_analysis.disabled`
@@ -922,7 +929,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
      *   * `monitoring_config.numerical_threshold_config.value`
      *   * `monitoring_config.categorical_threshold_config.value`
-     *   * `offline_storage_ttl_days` (available in Preview)
+     *   * `offline_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -951,7 +958,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `description`
      *   * `labels`
      *   * `monitoring_config.snapshot_analysis.disabled`
@@ -961,7 +970,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
      *   * `monitoring_config.numerical_threshold_config.value`
      *   * `monitoring_config.categorical_threshold_config.value`
-     *   * `offline_storage_ttl_days` (available in Preview)
+     *   * `offline_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -987,7 +996,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `description`
      *   * `labels`
      *   * `monitoring_config.snapshot_analysis.disabled`
@@ -997,7 +1008,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
      *   * `monitoring_config.numerical_threshold_config.value`
      *   * `monitoring_config.categorical_threshold_config.value`
-     *   * `offline_storage_ttl_days` (available in Preview)
+     *   * `offline_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -1029,7 +1040,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `description`
      *   * `labels`
      *   * `monitoring_config.snapshot_analysis.disabled`
@@ -1039,7 +1052,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
      *   * `monitoring_config.numerical_threshold_config.value`
      *   * `monitoring_config.categorical_threshold_config.value`
-     *   * `offline_storage_ttl_days` (available in Preview)
+     *   * `offline_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -1065,7 +1078,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `description`
      *   * `labels`
      *   * `monitoring_config.snapshot_analysis.disabled`
@@ -1075,7 +1090,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
      *   * `monitoring_config.numerical_threshold_config.value`
      *   * `monitoring_config.categorical_threshold_config.value`
-     *   * `offline_storage_ttl_days` (available in Preview)
+     *   * `offline_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -1096,7 +1111,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `description`
      *   * `labels`
      *   * `monitoring_config.snapshot_analysis.disabled`
@@ -1106,7 +1123,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
      *   * `monitoring_config.numerical_threshold_config.value`
      *   * `monitoring_config.categorical_threshold_config.value`
-     *   * `offline_storage_ttl_days` (available in Preview)
+     *   * `offline_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -1131,7 +1148,9 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      * user does not provide a mask then only the non-empty fields present in the
      * request will be overwritten. Set the update_mask to `*` to override all
      * fields.
+     *
      * Updatable fields:
+     *
      *   * `description`
      *   * `labels`
      *   * `monitoring_config.snapshot_analysis.disabled`
@@ -1141,7 +1160,7 @@ public final class UpdateEntityTypeRequest extends com.google.protobuf.Generated
      *   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
      *   * `monitoring_config.numerical_threshold_config.value`
      *   * `monitoring_config.categorical_threshold_config.value`
-     *   * `offline_storage_ttl_days` (available in Preview)
+     *   * `offline_storage_ttl_days`
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>

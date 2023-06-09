@@ -51,11 +51,6 @@ public final class ExportTensorboardTimeSeriesDataResponse
     return new ExportTensorboardTimeSeriesDataResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.aiplatform.v1.TensorboardServiceProto
         .internal_static_google_cloud_aiplatform_v1_ExportTensorboardTimeSeriesDataResponse_descriptor;
@@ -158,8 +153,9 @@ public final class ExportTensorboardTimeSeriesDataResponse
    *
    * <pre>
    * A token, which can be sent as
-   * [ExportTensorboardTimeSeriesRequest.page_token][] to retrieve the next
-   * page. If this field is omitted, there are no subsequent pages.
+   * [page_token][google.cloud.aiplatform.v1.ExportTensorboardTimeSeriesDataRequest.page_token]
+   * to retrieve the next page. If this field is omitted, there are no
+   * subsequent pages.
    * </pre>
    *
    * <code>string next_page_token = 2;</code>
@@ -183,8 +179,9 @@ public final class ExportTensorboardTimeSeriesDataResponse
    *
    * <pre>
    * A token, which can be sent as
-   * [ExportTensorboardTimeSeriesRequest.page_token][] to retrieve the next
-   * page. If this field is omitted, there are no subsequent pages.
+   * [page_token][google.cloud.aiplatform.v1.ExportTensorboardTimeSeriesDataRequest.page_token]
+   * to retrieve the next page. If this field is omitted, there are no
+   * subsequent pages.
    * </pre>
    *
    * <code>string next_page_token = 2;</code>
@@ -1019,8 +1016,9 @@ public final class ExportTensorboardTimeSeriesDataResponse
      *
      * <pre>
      * A token, which can be sent as
-     * [ExportTensorboardTimeSeriesRequest.page_token][] to retrieve the next
-     * page. If this field is omitted, there are no subsequent pages.
+     * [page_token][google.cloud.aiplatform.v1.ExportTensorboardTimeSeriesDataRequest.page_token]
+     * to retrieve the next page. If this field is omitted, there are no
+     * subsequent pages.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1043,8 +1041,9 @@ public final class ExportTensorboardTimeSeriesDataResponse
      *
      * <pre>
      * A token, which can be sent as
-     * [ExportTensorboardTimeSeriesRequest.page_token][] to retrieve the next
-     * page. If this field is omitted, there are no subsequent pages.
+     * [page_token][google.cloud.aiplatform.v1.ExportTensorboardTimeSeriesDataRequest.page_token]
+     * to retrieve the next page. If this field is omitted, there are no
+     * subsequent pages.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1067,8 +1066,9 @@ public final class ExportTensorboardTimeSeriesDataResponse
      *
      * <pre>
      * A token, which can be sent as
-     * [ExportTensorboardTimeSeriesRequest.page_token][] to retrieve the next
-     * page. If this field is omitted, there are no subsequent pages.
+     * [page_token][google.cloud.aiplatform.v1.ExportTensorboardTimeSeriesDataRequest.page_token]
+     * to retrieve the next page. If this field is omitted, there are no
+     * subsequent pages.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1090,8 +1090,9 @@ public final class ExportTensorboardTimeSeriesDataResponse
      *
      * <pre>
      * A token, which can be sent as
-     * [ExportTensorboardTimeSeriesRequest.page_token][] to retrieve the next
-     * page. If this field is omitted, there are no subsequent pages.
+     * [page_token][google.cloud.aiplatform.v1.ExportTensorboardTimeSeriesDataRequest.page_token]
+     * to retrieve the next page. If this field is omitted, there are no
+     * subsequent pages.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1109,8 +1110,9 @@ public final class ExportTensorboardTimeSeriesDataResponse
      *
      * <pre>
      * A token, which can be sent as
-     * [ExportTensorboardTimeSeriesRequest.page_token][] to retrieve the next
-     * page. If this field is omitted, there are no subsequent pages.
+     * [page_token][google.cloud.aiplatform.v1.ExportTensorboardTimeSeriesDataRequest.page_token]
+     * to retrieve the next page. If this field is omitted, there are no
+     * subsequent pages.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>

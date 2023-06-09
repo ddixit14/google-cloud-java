@@ -22,7 +22,9 @@ package com.google.cloud.datastream.v1;
  *
  *
  * <pre>
- * Static IP address connectivity.
+ * Static IP address connectivity. Used when the source database is configured
+ * to allow incoming connections from the Datastream public IP addresses
+ * for the region specified in the connection profile.
  * </pre>
  *
  * Protobuf type {@code google.cloud.datastream.v1.StaticServiceIpConnectivity}
@@ -43,11 +45,6 @@ public final class StaticServiceIpConnectivity extends com.google.protobuf.Gener
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
     return new StaticServiceIpConnectivity();
-  }
-
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -220,7 +217,9 @@ public final class StaticServiceIpConnectivity extends com.google.protobuf.Gener
    *
    *
    * <pre>
-   * Static IP address connectivity.
+   * Static IP address connectivity. Used when the source database is configured
+   * to allow incoming connections from the Datastream public IP addresses
+   * for the region specified in the connection profile.
    * </pre>
    *
    * Protobuf type {@code google.cloud.datastream.v1.StaticServiceIpConnectivity}

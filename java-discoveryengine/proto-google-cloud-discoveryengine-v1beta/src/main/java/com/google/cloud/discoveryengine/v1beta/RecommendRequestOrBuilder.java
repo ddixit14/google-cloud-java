@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,8 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * Required. Full resource name of the format:
-   * projects/&#42;&#47;locations/global/collections/&#42;&#47;dataStores/&#42;&#47;servingConfigs/&#42;
+   * `projects/&#42;&#47;locations/global/collections/&#42;&#47;dataStores/&#42;&#47;servingConfigs/&#42;`
+   *
    * Before you can request recommendations from your model, you must create at
    * least one serving config  for it.
    * </pre>
@@ -45,7 +46,8 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * Required. Full resource name of the format:
-   * projects/&#42;&#47;locations/global/collections/&#42;&#47;dataStores/&#42;&#47;servingConfigs/&#42;
+   * `projects/&#42;&#47;locations/global/collections/&#42;&#47;dataStores/&#42;&#47;servingConfigs/&#42;`
+   *
    * Before you can request recommendations from your model, you must create at
    * least one serving config  for it.
    * </pre>
@@ -66,6 +68,7 @@ public interface RecommendRequestOrBuilder
    * they took to trigger the Recommend request. Note that this user event
    * detail won't be ingested to userEvent logs. Thus, a separate userEvent
    * write request is required for event logging.
+   *
    * Don't set
    * [UserEvent.user_pseudo_id][google.cloud.discoveryengine.v1beta.UserEvent.user_pseudo_id]
    * or
@@ -94,6 +97,7 @@ public interface RecommendRequestOrBuilder
    * they took to trigger the Recommend request. Note that this user event
    * detail won't be ingested to userEvent logs. Thus, a separate userEvent
    * write request is required for event logging.
+   *
    * Don't set
    * [UserEvent.user_pseudo_id][google.cloud.discoveryengine.v1beta.UserEvent.user_pseudo_id]
    * or
@@ -122,6 +126,7 @@ public interface RecommendRequestOrBuilder
    * they took to trigger the Recommend request. Note that this user event
    * detail won't be ingested to userEvent logs. Thus, a separate userEvent
    * write request is required for event logging.
+   *
    * Don't set
    * [UserEvent.user_pseudo_id][google.cloud.discoveryengine.v1beta.UserEvent.user_pseudo_id]
    * or
@@ -164,16 +169,22 @@ public interface RecommendRequestOrBuilder
    * Filter for restricting recommendation results with a length limit of 5,000
    * characters. Currently, only filter expressions on the `filter_tags`
    * attribute is supported.
+   *
+   *
    * Examples:
-   *  * (filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))
-   *  * (filter_tags: ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))
+   *
+   *  * `(filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))`
+   *  * `(filter_tags: ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))`
+   *
    * If your filter blocks all results, the API will return generic
    * (unfiltered) popular Documents. If you only want results strictly matching
    * the filters, set `strictFiltering` to True in
    * [RecommendRequest.params][google.cloud.discoveryengine.v1beta.RecommendRequest.params]
    * to receive empty results instead.
-   * Note that the API will never return Documents with storageStatus of
-   * "EXPIRED" or "DELETED" regardless of filter choices.
+   *
+   * Note that the API will never return
+   * [Document][google.cloud.discoveryengine.v1beta.Document]s with
+   * `storageStatus` of `EXPIRED` or `DELETED` regardless of filter choices.
    * </pre>
    *
    * <code>string filter = 4;</code>
@@ -188,16 +199,22 @@ public interface RecommendRequestOrBuilder
    * Filter for restricting recommendation results with a length limit of 5,000
    * characters. Currently, only filter expressions on the `filter_tags`
    * attribute is supported.
+   *
+   *
    * Examples:
-   *  * (filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))
-   *  * (filter_tags: ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))
+   *
+   *  * `(filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))`
+   *  * `(filter_tags: ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))`
+   *
    * If your filter blocks all results, the API will return generic
    * (unfiltered) popular Documents. If you only want results strictly matching
    * the filters, set `strictFiltering` to True in
    * [RecommendRequest.params][google.cloud.discoveryengine.v1beta.RecommendRequest.params]
    * to receive empty results instead.
-   * Note that the API will never return Documents with storageStatus of
-   * "EXPIRED" or "DELETED" regardless of filter choices.
+   *
+   * Note that the API will never return
+   * [Document][google.cloud.discoveryengine.v1beta.Document]s with
+   * `storageStatus` of `EXPIRED` or `DELETED` regardless of filter choices.
    * </pre>
    *
    * <code>string filter = 4;</code>
@@ -227,25 +244,27 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * Additional domain specific parameters for the recommendations.
+   *
    * Allowed values:
+   *
    * * `returnDocument`: Boolean. If set to true, the associated Document
    *    object will be returned in
-   *    [RecommendResponse.results.document][RecommendationResult.document].
+   *    [RecommendResponse.RecommendationResult.document][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.document].
    * * `returnScore`: Boolean. If set to true, the recommendation 'score'
    *    corresponding to each returned Document will be set in
-   *    [RecommendResponse.results.metadata][RecommendationResult.metadata]. The
-   *    given 'score' indicates the probability of a Document conversion given
-   *    the user's context and history.
+   *    [RecommendResponse.RecommendationResult.metadata][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.metadata].
+   *    The given 'score' indicates the probability of a Document conversion
+   *    given the user's context and history.
    * * `strictFiltering`: Boolean. True by default. If set to false, the service
    *    will return generic (unfiltered) popular Documents instead of empty if
    *    your filter blocks all recommendation results.
    * * `diversityLevel`: String. Default empty. If set to be non-empty, then
    *    it needs to be one of:
-   *    *  'no-diversity'
-   *    *  'low-diversity'
-   *    *  'medium-diversity'
-   *    *  'high-diversity'
-   *    *  'auto-diversity'
+   *     *  `no-diversity`
+   *     *  `low-diversity`
+   *     *  `medium-diversity`
+   *     *  `high-diversity`
+   *     *  `auto-diversity`
    *    This gives request-level control and adjusts recommendation results
    *    based on Document category.
    * </pre>
@@ -258,25 +277,27 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * Additional domain specific parameters for the recommendations.
+   *
    * Allowed values:
+   *
    * * `returnDocument`: Boolean. If set to true, the associated Document
    *    object will be returned in
-   *    [RecommendResponse.results.document][RecommendationResult.document].
+   *    [RecommendResponse.RecommendationResult.document][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.document].
    * * `returnScore`: Boolean. If set to true, the recommendation 'score'
    *    corresponding to each returned Document will be set in
-   *    [RecommendResponse.results.metadata][RecommendationResult.metadata]. The
-   *    given 'score' indicates the probability of a Document conversion given
-   *    the user's context and history.
+   *    [RecommendResponse.RecommendationResult.metadata][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.metadata].
+   *    The given 'score' indicates the probability of a Document conversion
+   *    given the user's context and history.
    * * `strictFiltering`: Boolean. True by default. If set to false, the service
    *    will return generic (unfiltered) popular Documents instead of empty if
    *    your filter blocks all recommendation results.
    * * `diversityLevel`: String. Default empty. If set to be non-empty, then
    *    it needs to be one of:
-   *    *  'no-diversity'
-   *    *  'low-diversity'
-   *    *  'medium-diversity'
-   *    *  'high-diversity'
-   *    *  'auto-diversity'
+   *     *  `no-diversity`
+   *     *  `low-diversity`
+   *     *  `medium-diversity`
+   *     *  `high-diversity`
+   *     *  `auto-diversity`
    *    This gives request-level control and adjusts recommendation results
    *    based on Document category.
    * </pre>
@@ -292,25 +313,27 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * Additional domain specific parameters for the recommendations.
+   *
    * Allowed values:
+   *
    * * `returnDocument`: Boolean. If set to true, the associated Document
    *    object will be returned in
-   *    [RecommendResponse.results.document][RecommendationResult.document].
+   *    [RecommendResponse.RecommendationResult.document][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.document].
    * * `returnScore`: Boolean. If set to true, the recommendation 'score'
    *    corresponding to each returned Document will be set in
-   *    [RecommendResponse.results.metadata][RecommendationResult.metadata]. The
-   *    given 'score' indicates the probability of a Document conversion given
-   *    the user's context and history.
+   *    [RecommendResponse.RecommendationResult.metadata][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.metadata].
+   *    The given 'score' indicates the probability of a Document conversion
+   *    given the user's context and history.
    * * `strictFiltering`: Boolean. True by default. If set to false, the service
    *    will return generic (unfiltered) popular Documents instead of empty if
    *    your filter blocks all recommendation results.
    * * `diversityLevel`: String. Default empty. If set to be non-empty, then
    *    it needs to be one of:
-   *    *  'no-diversity'
-   *    *  'low-diversity'
-   *    *  'medium-diversity'
-   *    *  'high-diversity'
-   *    *  'auto-diversity'
+   *     *  `no-diversity`
+   *     *  `low-diversity`
+   *     *  `medium-diversity`
+   *     *  `high-diversity`
+   *     *  `auto-diversity`
    *    This gives request-level control and adjusts recommendation results
    *    based on Document category.
    * </pre>
@@ -323,25 +346,27 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * Additional domain specific parameters for the recommendations.
+   *
    * Allowed values:
+   *
    * * `returnDocument`: Boolean. If set to true, the associated Document
    *    object will be returned in
-   *    [RecommendResponse.results.document][RecommendationResult.document].
+   *    [RecommendResponse.RecommendationResult.document][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.document].
    * * `returnScore`: Boolean. If set to true, the recommendation 'score'
    *    corresponding to each returned Document will be set in
-   *    [RecommendResponse.results.metadata][RecommendationResult.metadata]. The
-   *    given 'score' indicates the probability of a Document conversion given
-   *    the user's context and history.
+   *    [RecommendResponse.RecommendationResult.metadata][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.metadata].
+   *    The given 'score' indicates the probability of a Document conversion
+   *    given the user's context and history.
    * * `strictFiltering`: Boolean. True by default. If set to false, the service
    *    will return generic (unfiltered) popular Documents instead of empty if
    *    your filter blocks all recommendation results.
    * * `diversityLevel`: String. Default empty. If set to be non-empty, then
    *    it needs to be one of:
-   *    *  'no-diversity'
-   *    *  'low-diversity'
-   *    *  'medium-diversity'
-   *    *  'high-diversity'
-   *    *  'auto-diversity'
+   *     *  `no-diversity`
+   *     *  `low-diversity`
+   *     *  `medium-diversity`
+   *     *  `high-diversity`
+   *     *  `auto-diversity`
    *    This gives request-level control and adjusts recommendation results
    *    based on Document category.
    * </pre>
@@ -358,25 +383,27 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * Additional domain specific parameters for the recommendations.
+   *
    * Allowed values:
+   *
    * * `returnDocument`: Boolean. If set to true, the associated Document
    *    object will be returned in
-   *    [RecommendResponse.results.document][RecommendationResult.document].
+   *    [RecommendResponse.RecommendationResult.document][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.document].
    * * `returnScore`: Boolean. If set to true, the recommendation 'score'
    *    corresponding to each returned Document will be set in
-   *    [RecommendResponse.results.metadata][RecommendationResult.metadata]. The
-   *    given 'score' indicates the probability of a Document conversion given
-   *    the user's context and history.
+   *    [RecommendResponse.RecommendationResult.metadata][google.cloud.discoveryengine.v1beta.RecommendResponse.RecommendationResult.metadata].
+   *    The given 'score' indicates the probability of a Document conversion
+   *    given the user's context and history.
    * * `strictFiltering`: Boolean. True by default. If set to false, the service
    *    will return generic (unfiltered) popular Documents instead of empty if
    *    your filter blocks all recommendation results.
    * * `diversityLevel`: String. Default empty. If set to be non-empty, then
    *    it needs to be one of:
-   *    *  'no-diversity'
-   *    *  'low-diversity'
-   *    *  'medium-diversity'
-   *    *  'high-diversity'
-   *    *  'auto-diversity'
+   *     *  `no-diversity`
+   *     *  `low-diversity`
+   *     *  `medium-diversity`
+   *     *  `high-diversity`
+   *     *  `auto-diversity`
    *    This gives request-level control and adjusts recommendation results
    *    based on Document category.
    * </pre>
@@ -390,6 +417,7 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * The user labels applied to a resource must meet the following requirements:
+   *
    * * Each resource can have multiple labels, up to a maximum of 64.
    * * Each label must be a key-value pair.
    * * Keys have a minimum length of 1 character and a maximum length of 63
@@ -401,6 +429,7 @@ public interface RecommendRequestOrBuilder
    * * The key portion of a label must be unique. However, you can use the same
    *   key with multiple resources.
    * * Keys must start with a lowercase letter or international character.
+   *
    * See [Requirements for
    * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
    * for more details.
@@ -414,6 +443,7 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * The user labels applied to a resource must meet the following requirements:
+   *
    * * Each resource can have multiple labels, up to a maximum of 64.
    * * Each label must be a key-value pair.
    * * Keys have a minimum length of 1 character and a maximum length of 63
@@ -425,6 +455,7 @@ public interface RecommendRequestOrBuilder
    * * The key portion of a label must be unique. However, you can use the same
    *   key with multiple resources.
    * * Keys must start with a lowercase letter or international character.
+   *
    * See [Requirements for
    * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
    * for more details.
@@ -441,6 +472,7 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * The user labels applied to a resource must meet the following requirements:
+   *
    * * Each resource can have multiple labels, up to a maximum of 64.
    * * Each label must be a key-value pair.
    * * Keys have a minimum length of 1 character and a maximum length of 63
@@ -452,6 +484,7 @@ public interface RecommendRequestOrBuilder
    * * The key portion of a label must be unique. However, you can use the same
    *   key with multiple resources.
    * * Keys must start with a lowercase letter or international character.
+   *
    * See [Requirements for
    * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
    * for more details.
@@ -465,6 +498,7 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * The user labels applied to a resource must meet the following requirements:
+   *
    * * Each resource can have multiple labels, up to a maximum of 64.
    * * Each label must be a key-value pair.
    * * Keys have a minimum length of 1 character and a maximum length of 63
@@ -476,6 +510,7 @@ public interface RecommendRequestOrBuilder
    * * The key portion of a label must be unique. However, you can use the same
    *   key with multiple resources.
    * * Keys must start with a lowercase letter or international character.
+   *
    * See [Requirements for
    * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
    * for more details.
@@ -493,6 +528,7 @@ public interface RecommendRequestOrBuilder
    *
    * <pre>
    * The user labels applied to a resource must meet the following requirements:
+   *
    * * Each resource can have multiple labels, up to a maximum of 64.
    * * Each label must be a key-value pair.
    * * Keys have a minimum length of 1 character and a maximum length of 63
@@ -504,6 +540,7 @@ public interface RecommendRequestOrBuilder
    * * The key portion of a label must be unique. However, you can use the same
    *   key with multiple resources.
    * * Keys must start with a lowercase letter or international character.
+   *
    * See [Requirements for
    * labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
    * for more details.

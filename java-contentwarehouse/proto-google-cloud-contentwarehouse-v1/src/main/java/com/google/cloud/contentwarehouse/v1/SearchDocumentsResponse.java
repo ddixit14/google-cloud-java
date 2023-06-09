@@ -49,11 +49,6 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
     return new SearchDocumentsResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.contentwarehouse.v1.DocumentServiceProto
         .internal_static_google_cloud_contentwarehouse_v1_SearchDocumentsResponse_descriptor;
@@ -78,7 +73,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * Document that matches the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * This document only contains indexed metadata information.
      * </pre>
      *
@@ -91,7 +87,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * Document that matches the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * This document only contains indexed metadata information.
      * </pre>
      *
@@ -104,7 +101,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * Document that matches the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * This document only contains indexed metadata information.
      * </pre>
      *
@@ -120,10 +118,12 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      * closely match a search query's keywords, if available. All HTML tags in
      * the original fields are stripped when returned in this field, and
      * matching query keywords are enclosed in HTML bold tags.
+     *
      * If the question-answering feature is enabled, this field will instead
      * contain a snippet that answers the user's natural-language query. No HTML
      * bold tags will be present, and highlights in the answer snippet can be
-     * found in [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
+     * found in
+     * [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
      * </pre>
      *
      * <code>string search_text_snippet = 2;</code>
@@ -139,10 +139,12 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      * closely match a search query's keywords, if available. All HTML tags in
      * the original fields are stripped when returned in this field, and
      * matching query keywords are enclosed in HTML bold tags.
+     *
      * If the question-answering feature is enabled, this field will instead
      * contain a snippet that answers the user's natural-language query. No HTML
      * bold tags will be present, and highlights in the answer snippet can be
-     * found in [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
+     * found in
+     * [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
      * </pre>
      *
      * <code>string search_text_snippet = 2;</code>
@@ -193,7 +195,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * Document entry with metadata inside [SearchDocumentsResponse][google.cloud.contentwarehouse.v1.SearchDocumentsResponse]
+   * Document entry with metadata inside
+   * [SearchDocumentsResponse][google.cloud.contentwarehouse.v1.SearchDocumentsResponse]
    * </pre>
    *
    * Protobuf type {@code google.cloud.contentwarehouse.v1.SearchDocumentsResponse.MatchingDocument}
@@ -218,11 +221,6 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
       return new MatchingDocument();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.cloud.contentwarehouse.v1.DocumentServiceProto
           .internal_static_google_cloud_contentwarehouse_v1_SearchDocumentsResponse_MatchingDocument_descriptor;
@@ -245,7 +243,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * Document that matches the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * This document only contains indexed metadata information.
      * </pre>
      *
@@ -261,7 +260,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * Document that matches the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * This document only contains indexed metadata information.
      * </pre>
      *
@@ -279,7 +279,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * Document that matches the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * This document only contains indexed metadata information.
      * </pre>
      *
@@ -304,10 +305,12 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      * closely match a search query's keywords, if available. All HTML tags in
      * the original fields are stripped when returned in this field, and
      * matching query keywords are enclosed in HTML bold tags.
+     *
      * If the question-answering feature is enabled, this field will instead
      * contain a snippet that answers the user's natural-language query. No HTML
      * bold tags will be present, and highlights in the answer snippet can be
-     * found in [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
+     * found in
+     * [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
      * </pre>
      *
      * <code>string search_text_snippet = 2;</code>
@@ -334,10 +337,12 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      * closely match a search query's keywords, if available. All HTML tags in
      * the original fields are stripped when returned in this field, and
      * matching query keywords are enclosed in HTML bold tags.
+     *
      * If the question-answering feature is enabled, this field will instead
      * contain a snippet that answers the user's natural-language query. No HTML
      * bold tags will be present, and highlights in the answer snippet can be
-     * found in [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
+     * found in
+     * [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
      * </pre>
      *
      * <code>string search_text_snippet = 2;</code>
@@ -611,7 +616,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Document entry with metadata inside [SearchDocumentsResponse][google.cloud.contentwarehouse.v1.SearchDocumentsResponse]
+     * Document entry with metadata inside
+     * [SearchDocumentsResponse][google.cloud.contentwarehouse.v1.SearchDocumentsResponse]
      * </pre>
      *
      * Protobuf type {@code
@@ -851,7 +857,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+       * Document that matches the specified
+       * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
        * This document only contains indexed metadata information.
        * </pre>
        *
@@ -866,7 +873,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+       * Document that matches the specified
+       * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
        * This document only contains indexed metadata information.
        * </pre>
        *
@@ -887,7 +895,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+       * Document that matches the specified
+       * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
        * This document only contains indexed metadata information.
        * </pre>
        *
@@ -910,7 +919,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+       * Document that matches the specified
+       * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
        * This document only contains indexed metadata information.
        * </pre>
        *
@@ -931,7 +941,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+       * Document that matches the specified
+       * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
        * This document only contains indexed metadata information.
        * </pre>
        *
@@ -957,7 +968,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+       * Document that matches the specified
+       * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
        * This document only contains indexed metadata information.
        * </pre>
        *
@@ -977,7 +989,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+       * Document that matches the specified
+       * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
        * This document only contains indexed metadata information.
        * </pre>
        *
@@ -992,7 +1005,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+       * Document that matches the specified
+       * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
        * This document only contains indexed metadata information.
        * </pre>
        *
@@ -1011,7 +1025,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Document that matches the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+       * Document that matches the specified
+       * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
        * This document only contains indexed metadata information.
        * </pre>
        *
@@ -1043,10 +1058,12 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        * closely match a search query's keywords, if available. All HTML tags in
        * the original fields are stripped when returned in this field, and
        * matching query keywords are enclosed in HTML bold tags.
+       *
        * If the question-answering feature is enabled, this field will instead
        * contain a snippet that answers the user's natural-language query. No HTML
        * bold tags will be present, and highlights in the answer snippet can be
-       * found in [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
+       * found in
+       * [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
        * </pre>
        *
        * <code>string search_text_snippet = 2;</code>
@@ -1072,10 +1089,12 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        * closely match a search query's keywords, if available. All HTML tags in
        * the original fields are stripped when returned in this field, and
        * matching query keywords are enclosed in HTML bold tags.
+       *
        * If the question-answering feature is enabled, this field will instead
        * contain a snippet that answers the user's natural-language query. No HTML
        * bold tags will be present, and highlights in the answer snippet can be
-       * found in [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
+       * found in
+       * [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
        * </pre>
        *
        * <code>string search_text_snippet = 2;</code>
@@ -1101,10 +1120,12 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        * closely match a search query's keywords, if available. All HTML tags in
        * the original fields are stripped when returned in this field, and
        * matching query keywords are enclosed in HTML bold tags.
+       *
        * If the question-answering feature is enabled, this field will instead
        * contain a snippet that answers the user's natural-language query. No HTML
        * bold tags will be present, and highlights in the answer snippet can be
-       * found in [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
+       * found in
+       * [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
        * </pre>
        *
        * <code>string search_text_snippet = 2;</code>
@@ -1129,10 +1150,12 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        * closely match a search query's keywords, if available. All HTML tags in
        * the original fields are stripped when returned in this field, and
        * matching query keywords are enclosed in HTML bold tags.
+       *
        * If the question-answering feature is enabled, this field will instead
        * contain a snippet that answers the user's natural-language query. No HTML
        * bold tags will be present, and highlights in the answer snippet can be
-       * found in [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
+       * found in
+       * [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
        * </pre>
        *
        * <code>string search_text_snippet = 2;</code>
@@ -1153,10 +1176,12 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
        * closely match a search query's keywords, if available. All HTML tags in
        * the original fields are stripped when returned in this field, and
        * matching query keywords are enclosed in HTML bold tags.
+       *
        * If the question-answering feature is enabled, this field will instead
        * contain a snippet that answers the user's natural-language query. No HTML
        * bold tags will be present, and highlights in the answer snippet can be
-       * found in [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
+       * found in
+       * [QAResult.highlights][google.cloud.contentwarehouse.v1.QAResult.highlights].
        * </pre>
        *
        * <code>string search_text_snippet = 2;</code>
@@ -1447,7 +1472,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+   * The document entities that match the specified
+   * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
    * </pre>
    *
    * <code>
@@ -1464,7 +1490,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+   * The document entities that match the specified
+   * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
    * </pre>
    *
    * <code>
@@ -1483,7 +1510,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+   * The document entities that match the specified
+   * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
    * </pre>
    *
    * <code>
@@ -1498,7 +1526,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+   * The document entities that match the specified
+   * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
    * </pre>
    *
    * <code>
@@ -1514,7 +1543,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+   * The document entities that match the specified
+   * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
    * </pre>
    *
    * <code>
@@ -1587,11 +1617,13 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
    *
    * <pre>
    * The total number of matched documents which is available only if the client
-   * set [SearchDocumentsRequest.require_total_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.require_total_size] to `true`. Otherwise, the
-   * value will be `-1`. `total_size` will max at &amp;quot;100,000&amp;quot;. If this
-   * is returned, then it can be assumed that the count is equal to or greater
-   * than 100,000. Typically a UI would handle this condition by displaying
-   * &amp;quot;of many&amp;quot;, for example: &amp;quot;Displaying 10 of many&amp;quot;.
+   * set
+   * [SearchDocumentsRequest.require_total_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.require_total_size]
+   * to `true` or set
+   * [SearchDocumentsRequest.total_result_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.total_result_size]
+   * to `ESTIMATED_SIZE` or `ACTUAL_SIZE`. Otherwise, the value will be `-1`.
+   * Typically a UI would handle this condition by displaying &amp;quot;of
+   * many&amp;quot;, for example: &amp;quot;Displaying 10 of many&amp;quot;.
    * </pre>
    *
    * <code>int32 total_size = 3;</code>
@@ -2315,7 +2347,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2335,7 +2368,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2353,7 +2387,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2372,7 +2407,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2398,7 +2434,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2422,7 +2459,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2447,7 +2485,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2473,7 +2512,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2496,7 +2536,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2520,7 +2561,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2545,7 +2587,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2566,7 +2609,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2587,7 +2631,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2602,7 +2647,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2621,7 +2667,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2643,7 +2690,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2661,7 +2709,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2680,7 +2729,8 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * The document entities that match the specified [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
+     * The document entities that match the specified
+     * [SearchDocumentsRequest][google.cloud.contentwarehouse.v1.SearchDocumentsRequest].
      * </pre>
      *
      * <code>
@@ -2832,11 +2882,13 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      * <pre>
      * The total number of matched documents which is available only if the client
-     * set [SearchDocumentsRequest.require_total_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.require_total_size] to `true`. Otherwise, the
-     * value will be `-1`. `total_size` will max at &amp;quot;100,000&amp;quot;. If this
-     * is returned, then it can be assumed that the count is equal to or greater
-     * than 100,000. Typically a UI would handle this condition by displaying
-     * &amp;quot;of many&amp;quot;, for example: &amp;quot;Displaying 10 of many&amp;quot;.
+     * set
+     * [SearchDocumentsRequest.require_total_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.require_total_size]
+     * to `true` or set
+     * [SearchDocumentsRequest.total_result_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.total_result_size]
+     * to `ESTIMATED_SIZE` or `ACTUAL_SIZE`. Otherwise, the value will be `-1`.
+     * Typically a UI would handle this condition by displaying &amp;quot;of
+     * many&amp;quot;, for example: &amp;quot;Displaying 10 of many&amp;quot;.
      * </pre>
      *
      * <code>int32 total_size = 3;</code>
@@ -2852,11 +2904,13 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      * <pre>
      * The total number of matched documents which is available only if the client
-     * set [SearchDocumentsRequest.require_total_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.require_total_size] to `true`. Otherwise, the
-     * value will be `-1`. `total_size` will max at &amp;quot;100,000&amp;quot;. If this
-     * is returned, then it can be assumed that the count is equal to or greater
-     * than 100,000. Typically a UI would handle this condition by displaying
-     * &amp;quot;of many&amp;quot;, for example: &amp;quot;Displaying 10 of many&amp;quot;.
+     * set
+     * [SearchDocumentsRequest.require_total_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.require_total_size]
+     * to `true` or set
+     * [SearchDocumentsRequest.total_result_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.total_result_size]
+     * to `ESTIMATED_SIZE` or `ACTUAL_SIZE`. Otherwise, the value will be `-1`.
+     * Typically a UI would handle this condition by displaying &amp;quot;of
+     * many&amp;quot;, for example: &amp;quot;Displaying 10 of many&amp;quot;.
      * </pre>
      *
      * <code>int32 total_size = 3;</code>
@@ -2876,11 +2930,13 @@ public final class SearchDocumentsResponse extends com.google.protobuf.Generated
      *
      * <pre>
      * The total number of matched documents which is available only if the client
-     * set [SearchDocumentsRequest.require_total_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.require_total_size] to `true`. Otherwise, the
-     * value will be `-1`. `total_size` will max at &amp;quot;100,000&amp;quot;. If this
-     * is returned, then it can be assumed that the count is equal to or greater
-     * than 100,000. Typically a UI would handle this condition by displaying
-     * &amp;quot;of many&amp;quot;, for example: &amp;quot;Displaying 10 of many&amp;quot;.
+     * set
+     * [SearchDocumentsRequest.require_total_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.require_total_size]
+     * to `true` or set
+     * [SearchDocumentsRequest.total_result_size][google.cloud.contentwarehouse.v1.SearchDocumentsRequest.total_result_size]
+     * to `ESTIMATED_SIZE` or `ACTUAL_SIZE`. Otherwise, the value will be `-1`.
+     * Typically a UI would handle this condition by displaying &amp;quot;of
+     * many&amp;quot;, for example: &amp;quot;Displaying 10 of many&amp;quot;.
      * </pre>
      *
      * <code>int32 total_size = 3;</code>

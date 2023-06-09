@@ -48,11 +48,6 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
     return new ListTagBindingsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.resourcemanager.v3.TagBindingsProto
         .internal_static_google_cloud_resourcemanager_v3_ListTagBindingsRequest_descriptor;
@@ -76,9 +71,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The full resource name of a resource for which you want to list existing
-   * TagBindings.
-   * E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+   * Required. The full resource name of a resource for which you want to list
+   * existing TagBindings. E.g.
+   * "//cloudresourcemanager.googleapis.com/projects/123"
    * </pre>
    *
    * <code>
@@ -103,9 +98,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Required. The full resource name of a resource for which you want to list existing
-   * TagBindings.
-   * E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+   * Required. The full resource name of a resource for which you want to list
+   * existing TagBindings. E.g.
+   * "//cloudresourcemanager.googleapis.com/projects/123"
    * </pre>
    *
    * <code>
@@ -133,9 +128,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Optional. The maximum number of TagBindings to return in the response. The server
-   * allows a maximum of 300 TagBindings to return. If unspecified, the server
-   * will use 100 as the default.
+   * Optional. The maximum number of TagBindings to return in the response. The
+   * server allows a maximum of 300 TagBindings to return. If unspecified, the
+   * server will use 100 as the default.
    * </pre>
    *
    * <code>int32 page_size = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -155,8 +150,8 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Optional. A pagination token returned from a previous call to `ListTagBindings`
-   * that indicates where this listing should continue from.
+   * Optional. A pagination token returned from a previous call to
+   * `ListTagBindings` that indicates where this listing should continue from.
    * </pre>
    *
    * <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -179,8 +174,8 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Optional. A pagination token returned from a previous call to `ListTagBindings`
-   * that indicates where this listing should continue from.
+   * Optional. A pagination token returned from a previous call to
+   * `ListTagBindings` that indicates where this listing should continue from.
    * </pre>
    *
    * <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -594,9 +589,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The full resource name of a resource for which you want to list existing
-     * TagBindings.
-     * E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+     * Required. The full resource name of a resource for which you want to list
+     * existing TagBindings. E.g.
+     * "//cloudresourcemanager.googleapis.com/projects/123"
      * </pre>
      *
      * <code>
@@ -620,9 +615,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The full resource name of a resource for which you want to list existing
-     * TagBindings.
-     * E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+     * Required. The full resource name of a resource for which you want to list
+     * existing TagBindings. E.g.
+     * "//cloudresourcemanager.googleapis.com/projects/123"
      * </pre>
      *
      * <code>
@@ -646,9 +641,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The full resource name of a resource for which you want to list existing
-     * TagBindings.
-     * E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+     * Required. The full resource name of a resource for which you want to list
+     * existing TagBindings. E.g.
+     * "//cloudresourcemanager.googleapis.com/projects/123"
      * </pre>
      *
      * <code>
@@ -671,9 +666,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The full resource name of a resource for which you want to list existing
-     * TagBindings.
-     * E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+     * Required. The full resource name of a resource for which you want to list
+     * existing TagBindings. E.g.
+     * "//cloudresourcemanager.googleapis.com/projects/123"
      * </pre>
      *
      * <code>
@@ -692,9 +687,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Required. The full resource name of a resource for which you want to list existing
-     * TagBindings.
-     * E.g. "//cloudresourcemanager.googleapis.com/projects/123"
+     * Required. The full resource name of a resource for which you want to list
+     * existing TagBindings. E.g.
+     * "//cloudresourcemanager.googleapis.com/projects/123"
      * </pre>
      *
      * <code>
@@ -720,9 +715,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. The maximum number of TagBindings to return in the response. The server
-     * allows a maximum of 300 TagBindings to return. If unspecified, the server
-     * will use 100 as the default.
+     * Optional. The maximum number of TagBindings to return in the response. The
+     * server allows a maximum of 300 TagBindings to return. If unspecified, the
+     * server will use 100 as the default.
      * </pre>
      *
      * <code>int32 page_size = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -737,9 +732,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. The maximum number of TagBindings to return in the response. The server
-     * allows a maximum of 300 TagBindings to return. If unspecified, the server
-     * will use 100 as the default.
+     * Optional. The maximum number of TagBindings to return in the response. The
+     * server allows a maximum of 300 TagBindings to return. If unspecified, the
+     * server will use 100 as the default.
      * </pre>
      *
      * <code>int32 page_size = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -758,9 +753,9 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. The maximum number of TagBindings to return in the response. The server
-     * allows a maximum of 300 TagBindings to return. If unspecified, the server
-     * will use 100 as the default.
+     * Optional. The maximum number of TagBindings to return in the response. The
+     * server allows a maximum of 300 TagBindings to return. If unspecified, the
+     * server will use 100 as the default.
      * </pre>
      *
      * <code>int32 page_size = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -779,8 +774,8 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `ListTagBindings`
-     * that indicates where this listing should continue from.
+     * Optional. A pagination token returned from a previous call to
+     * `ListTagBindings` that indicates where this listing should continue from.
      * </pre>
      *
      * <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -802,8 +797,8 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `ListTagBindings`
-     * that indicates where this listing should continue from.
+     * Optional. A pagination token returned from a previous call to
+     * `ListTagBindings` that indicates where this listing should continue from.
      * </pre>
      *
      * <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -825,8 +820,8 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `ListTagBindings`
-     * that indicates where this listing should continue from.
+     * Optional. A pagination token returned from a previous call to
+     * `ListTagBindings` that indicates where this listing should continue from.
      * </pre>
      *
      * <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -847,8 +842,8 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `ListTagBindings`
-     * that indicates where this listing should continue from.
+     * Optional. A pagination token returned from a previous call to
+     * `ListTagBindings` that indicates where this listing should continue from.
      * </pre>
      *
      * <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -865,8 +860,8 @@ public final class ListTagBindingsRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Optional. A pagination token returned from a previous call to `ListTagBindings`
-     * that indicates where this listing should continue from.
+     * Optional. A pagination token returned from a previous call to
+     * `ListTagBindings` that indicates where this listing should continue from.
      * </pre>
      *
      * <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>

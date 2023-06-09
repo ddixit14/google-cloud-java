@@ -34,6 +34,10 @@ public interface CatalogAttributeOrBuilder
    * characters and underscores. For example, an attribute named
    * `attributes.abc_xyz` can be indexed, but an attribute named
    * `attributes.abc-xyz` cannot be indexed.
+   *
+   * If the attribute key starts with `attributes.`, then the attribute is a
+   * custom attribute. Attributes such as `brands`, `patterns`, and `title` are
+   * built-in and called system attributes.
    * </pre>
    *
    * <code>string key = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -52,6 +56,10 @@ public interface CatalogAttributeOrBuilder
    * characters and underscores. For example, an attribute named
    * `attributes.abc_xyz` can be indexed, but an attribute named
    * `attributes.abc-xyz` cannot be indexed.
+   *
+   * If the attribute key starts with `attributes.`, then the attribute is a
+   * custom attribute. Attributes such as `brands`, `patterns`, and `title` are
+   * built-in and called system attributes.
    * </pre>
    *
    * <code>string key = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -69,6 +77,7 @@ public interface CatalogAttributeOrBuilder
    * [Product][google.cloud.retail.v2alpha.Product] is using this attribute in
    * [Product.attributes][google.cloud.retail.v2alpha.Product.attributes].
    * Otherwise, this field is `False`.
+   *
    * [CatalogAttribute][google.cloud.retail.v2alpha.CatalogAttribute] can be
    * pre-loaded by using
    * [CatalogService.AddCatalogAttribute][google.cloud.retail.v2alpha.CatalogService.AddCatalogAttribute],
@@ -77,6 +86,7 @@ public interface CatalogAttributeOrBuilder
    * [CatalogService.UpdateAttributesConfig][google.cloud.retail.v2alpha.CatalogService.UpdateAttributesConfig]
    * APIs. This field is `False` for pre-loaded
    * [CatalogAttribute][google.cloud.retail.v2alpha.CatalogAttribute]s.
+   *
    * Only pre-loaded [catalog
    * attributes][google.cloud.retail.v2alpha.CatalogAttribute] that are neither
    * in use by products nor predefined can be deleted. [Catalog
@@ -84,6 +94,7 @@ public interface CatalogAttributeOrBuilder
    * either in use by products or are predefined attributes cannot be deleted;
    * however, their configuration properties will reset to default values upon
    * removal request.
+   *
    * After catalog changes, it takes about 10 minutes for this field to update.
    * </pre>
    *
@@ -133,6 +144,7 @@ public interface CatalogAttributeOrBuilder
    * is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if INDEXABLE_ENABLED attribute values
    * are indexed so that it can be filtered, faceted, or boosted in
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search].
+   *
    * Must be specified, otherwise throws INVALID_FORMAT error.
    * </pre>
    *
@@ -151,6 +163,7 @@ public interface CatalogAttributeOrBuilder
    * is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if INDEXABLE_ENABLED attribute values
    * are indexed so that it can be filtered, faceted, or boosted in
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search].
+   *
    * Must be specified, otherwise throws INVALID_FORMAT error.
    * </pre>
    *
@@ -169,6 +182,7 @@ public interface CatalogAttributeOrBuilder
    * facet. Could only be DYNAMIC_FACETABLE_DISABLED if
    * [CatalogAttribute.indexable_option][google.cloud.retail.v2alpha.CatalogAttribute.indexable_option]
    * is INDEXABLE_DISABLED. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Must be specified, otherwise throws INVALID_FORMAT error.
    * </pre>
    *
@@ -187,6 +201,7 @@ public interface CatalogAttributeOrBuilder
    * facet. Could only be DYNAMIC_FACETABLE_DISABLED if
    * [CatalogAttribute.indexable_option][google.cloud.retail.v2alpha.CatalogAttribute.indexable_option]
    * is INDEXABLE_DISABLED. Otherwise, an INVALID_ARGUMENT error is returned.
+   *
    * Must be specified, otherwise throws INVALID_FORMAT error.
    * </pre>
    *
@@ -208,10 +223,12 @@ public interface CatalogAttributeOrBuilder
    * is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if SEARCHABLE_ENABLED, attribute values
    * are searchable by text queries in
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search].
+   *
    * If SEARCHABLE_ENABLED but attribute type is numerical, attribute values
    * will not be searchable by text queries in
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search],
    * as there are no text values associated to numerical attributes.
+   *
    * Must be specified, otherwise throws INVALID_FORMAT error.
    * </pre>
    *
@@ -230,10 +247,12 @@ public interface CatalogAttributeOrBuilder
    * is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if SEARCHABLE_ENABLED, attribute values
    * are searchable by text queries in
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search].
+   *
    * If SEARCHABLE_ENABLED but attribute type is numerical, attribute values
    * will not be searchable by text queries in
    * [SearchService.Search][google.cloud.retail.v2alpha.SearchService.Search],
    * as there are no text values associated to numerical attributes.
+   *
    * Must be specified, otherwise throws INVALID_FORMAT error.
    * </pre>
    *
@@ -290,7 +309,9 @@ public interface CatalogAttributeOrBuilder
    * <pre>
    * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable.
    * This property only applies to textual custom attributes and requires
-   * indexable set to enabled to enable exact-searchable.
+   * indexable set to enabled to enable exact-searchable. If unset, the server
+   * behavior defaults to
+   * [EXACT_SEARCHABLE_DISABLED][google.cloud.retail.v2alpha.CatalogAttribute.ExactSearchableOption.EXACT_SEARCHABLE_DISABLED].
    * </pre>
    *
    * <code>
@@ -306,7 +327,9 @@ public interface CatalogAttributeOrBuilder
    * <pre>
    * If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable.
    * This property only applies to textual custom attributes and requires
-   * indexable set to enabled to enable exact-searchable.
+   * indexable set to enabled to enable exact-searchable. If unset, the server
+   * behavior defaults to
+   * [EXACT_SEARCHABLE_DISABLED][google.cloud.retail.v2alpha.CatalogAttribute.ExactSearchableOption.EXACT_SEARCHABLE_DISABLED].
    * </pre>
    *
    * <code>
@@ -322,7 +345,8 @@ public interface CatalogAttributeOrBuilder
    *
    * <pre>
    * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search
-   * results.
+   * results. If unset, the server behavior defaults to
+   * [RETRIEVABLE_DISABLED][google.cloud.retail.v2alpha.CatalogAttribute.RetrievableOption.RETRIEVABLE_DISABLED].
    * </pre>
    *
    * <code>.google.cloud.retail.v2alpha.CatalogAttribute.RetrievableOption retrievable_option = 12;
@@ -336,7 +360,8 @@ public interface CatalogAttributeOrBuilder
    *
    * <pre>
    * If RETRIEVABLE_ENABLED, attribute values are retrievable in the search
-   * results.
+   * results. If unset, the server behavior defaults to
+   * [RETRIEVABLE_DISABLED][google.cloud.retail.v2alpha.CatalogAttribute.RetrievableOption.RETRIEVABLE_DISABLED].
    * </pre>
    *
    * <code>.google.cloud.retail.v2alpha.CatalogAttribute.RetrievableOption retrievable_option = 12;

@@ -49,11 +49,6 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
     return new CreateFederationRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-    return this.unknownFields;
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.metastore.v1.MetastoreFederationProto
         .internal_static_google_cloud_metastore_v1_CreateFederationRequest_descriptor;
@@ -77,8 +72,9 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * Required. The relative resource name of the location in which to create a federation
-   * service, in the following form:
+   * Required. The relative resource name of the location in which to create a
+   * federation service, in the following form:
+   *
    * `projects/{project_number}/locations/{location_id}`.
    * </pre>
    *
@@ -104,8 +100,9 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * Required. The relative resource name of the location in which to create a federation
-   * service, in the following form:
+   * Required. The relative resource name of the location in which to create a
+   * federation service, in the following form:
+   *
    * `projects/{project_number}/locations/{location_id}`.
    * </pre>
    *
@@ -138,6 +135,7 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
    * <pre>
    * Required. The ID of the metastore federation, which is used as the final
    * component of the metastore federation's name.
+   *
    * This value must be between 2 and 63 characters long inclusive, begin with a
    * letter, end with a letter or number, and consist of alpha-numeric
    * ASCII characters or hyphens.
@@ -165,6 +163,7 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
    * <pre>
    * Required. The ID of the metastore federation, which is used as the final
    * component of the metastore federation's name.
+   *
    * This value must be between 2 and 63 characters long inclusive, begin with a
    * letter, end with a letter or number, and consist of alpha-numeric
    * ASCII characters or hyphens.
@@ -257,13 +256,15 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -289,13 +290,15 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
    *
    *
    * <pre>
-   * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-   * request if it has completed. The server will ignore subsequent requests
-   * that provide a duplicate request ID for at least 60 minutes after the first
-   * request.
+   * Optional. A request ID. Specify a unique request ID to allow the server to
+   * ignore the request if it has completed. The server will ignore subsequent
+   * requests that provide a duplicate request ID for at least 60 minutes after
+   * the first request.
+   *
    * For example, if an initial request times out, followed by another request
    * with the same request ID, the server ignores the second request to prevent
    * the creation of duplicate commitments.
+   *
    * The request ID must be a valid
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
    * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -745,8 +748,9 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The relative resource name of the location in which to create a federation
-     * service, in the following form:
+     * Required. The relative resource name of the location in which to create a
+     * federation service, in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -771,8 +775,9 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The relative resource name of the location in which to create a federation
-     * service, in the following form:
+     * Required. The relative resource name of the location in which to create a
+     * federation service, in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -797,8 +802,9 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The relative resource name of the location in which to create a federation
-     * service, in the following form:
+     * Required. The relative resource name of the location in which to create a
+     * federation service, in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -822,8 +828,9 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The relative resource name of the location in which to create a federation
-     * service, in the following form:
+     * Required. The relative resource name of the location in which to create a
+     * federation service, in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -843,8 +850,9 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The relative resource name of the location in which to create a federation
-     * service, in the following form:
+     * Required. The relative resource name of the location in which to create a
+     * federation service, in the following form:
+     *
      * `projects/{project_number}/locations/{location_id}`.
      * </pre>
      *
@@ -873,6 +881,7 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      * <pre>
      * Required. The ID of the metastore federation, which is used as the final
      * component of the metastore federation's name.
+     *
      * This value must be between 2 and 63 characters long inclusive, begin with a
      * letter, end with a letter or number, and consist of alpha-numeric
      * ASCII characters or hyphens.
@@ -899,6 +908,7 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      * <pre>
      * Required. The ID of the metastore federation, which is used as the final
      * component of the metastore federation's name.
+     *
      * This value must be between 2 and 63 characters long inclusive, begin with a
      * letter, end with a letter or number, and consist of alpha-numeric
      * ASCII characters or hyphens.
@@ -925,6 +935,7 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      * <pre>
      * Required. The ID of the metastore federation, which is used as the final
      * component of the metastore federation's name.
+     *
      * This value must be between 2 and 63 characters long inclusive, begin with a
      * letter, end with a letter or number, and consist of alpha-numeric
      * ASCII characters or hyphens.
@@ -950,6 +961,7 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      * <pre>
      * Required. The ID of the metastore federation, which is used as the final
      * component of the metastore federation's name.
+     *
      * This value must be between 2 and 63 characters long inclusive, begin with a
      * letter, end with a letter or number, and consist of alpha-numeric
      * ASCII characters or hyphens.
@@ -971,6 +983,7 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      * <pre>
      * Required. The ID of the metastore federation, which is used as the final
      * component of the metastore federation's name.
+     *
      * This value must be between 2 and 63 characters long inclusive, begin with a
      * letter, end with a letter or number, and consist of alpha-numeric
      * ASCII characters or hyphens.
@@ -1216,13 +1229,15 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -1247,13 +1262,15 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -1278,13 +1295,15 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -1308,13 +1327,15 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
@@ -1334,13 +1355,15 @@ public final class CreateFederationRequest extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-     * request if it has completed. The server will ignore subsequent requests
-     * that provide a duplicate request ID for at least 60 minutes after the first
-     * request.
+     * Optional. A request ID. Specify a unique request ID to allow the server to
+     * ignore the request if it has completed. The server will ignore subsequent
+     * requests that provide a duplicate request ID for at least 60 minutes after
+     * the first request.
+     *
      * For example, if an initial request times out, followed by another request
      * with the same request ID, the server ignores the second request to prevent
      * the creation of duplicate commitments.
+     *
      * The request ID must be a valid
      * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Format)
      * A zero UUID (00000000-0000-0000-0000-000000000000) is not supported.
