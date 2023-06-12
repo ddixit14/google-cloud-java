@@ -14,19 +14,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           commit_sha=${{ github.sha }}
-          pr_number=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "https://api.github.com/search/issues?q=sha:$commit_sha&type=pr" | jq -r '.items[0].html_url')
+          pr_url=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "https://api.github.com/search/issues?q=sha:$commit_sha&type=pr" | jq -r '.items[0].html_url')
           
-          echo " the pr is : ${pr_number}"
-          
-          if [ -n "$pr_number" ]; then
-            pr_labels=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$pr_number/labels" | jq -r '.[].name')
-            echo "${pr_labels}"
-          
-            if [[ $pr_labels == *"autorelease: pending"* ]]; then
-              echo "The commit is part of a pull request with the specified label."
-            else
-              echo "The commit is part of a pull request, but it does not have the specified label."
-            fi
-          else
-            echo "The commit is not associated with any pull request."
-          fi
+          pr_number=$(basename "$pr_url")
+              labels_url=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$pr_url" | jq -r '.labels_url')
+
+              pr_labels=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$labels_url" | jq -r '.[].name')
+              if [[ $pr_labels == *"autorelease: pending"* ]]; then
+                echo "The pull request has the specified label."
+              else
+                echo "The pull request does not have the specified label."
+              fi
