@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     if: |
         github.event.sender.login == ddixit14 && contains(github.event.pull_request.labels.*.name, 'autorelease: pending')
-    run: echo "The specified label exists."
+    steps:
+      - run: echo "The specified label exists."
 
   changelog-generation:
     runs-on: ubuntu-latest
