@@ -10,7 +10,7 @@ jobs:
   changelog-generation:
     runs-on: ubuntu-latest
     if: |
-      github.event_name != 'pull_request' || !contains(github.event.pull_request.labels.*.name, 'autorelease: pending')
+      contains(github.event.pull_request.labels.*.name, 'autorelease: snapshot')
     steps:
       - name: Print Details
         run: |
