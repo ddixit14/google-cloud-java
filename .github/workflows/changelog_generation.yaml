@@ -11,6 +11,13 @@ jobs:
     if: |
       github.event.sender.login == 'ddixit14'
     steps:
-      - name: Print Details
+      - name: Print something
         run: |
           echo "Performing changelog.md generation steps..."
+      - name: Print Details
+        run: |
+          echo "Commit author: ${{ github.event.sender.login }}"
+          echo "Pull Request Labels:"
+          for label in ${{ join(github.event.pull_request.labels.*.name, ', ') }}; do
+            echo "- $label"
+          done
