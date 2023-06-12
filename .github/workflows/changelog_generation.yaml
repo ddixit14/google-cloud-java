@@ -2,9 +2,7 @@ on:
   push:
     branches:
       - release-please--branches--main
-
 name: Module specific CHANGELOG.md generation
-
 jobs:
   changelog-generation:
     runs-on: ubuntu-latest
