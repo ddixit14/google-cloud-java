@@ -8,9 +8,10 @@ name: Module specific CHANGELOG.md generation
 jobs:
   changelog-generation:
     runs-on: ubuntu-latest
+    if: |
+      github.event.sender.login == 'ddixit14' &&
+      (contains(github.event.pull_request.labels.*.name, 'autorelease: pending'))
     steps:
       - name: Print Details
         run: |
-          echo "github event sender details: ${{ github.event.sender.login }}"
-          echo "github head_ref is: ${{ github.head_ref }}"
-          echo "github event details: ${{ github.event.pull_request.labels.*.name }}"
+          echo "Performing changelog.md generation steps..."
