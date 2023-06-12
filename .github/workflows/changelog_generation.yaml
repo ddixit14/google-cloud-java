@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Details
-        run:
+        run: |
           echo "github event sender details: ${{ github.event.sender.login }}"
           echo "github head_ref is: ${{ github.head_ref }}"
           echo "github event details: ${{ github.event.pull_request.labels.*.name }}"
