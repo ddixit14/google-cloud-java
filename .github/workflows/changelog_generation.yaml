@@ -1,7 +1,10 @@
 on:
+  pull_request:
+    types:
+      - synchronize
   push:
     branches:
-      - release-please--branches--main
+      - main
 
 name: Module specific CHANGELOG.md generation
 
@@ -9,7 +12,8 @@ jobs:
   changelog-generation:
     runs-on: ubuntu-latest
     if: |
-      contains(github.event.pull_request.labels.*.name, 'autorelease: pending')
+      github.event.sender.login == 'ddixit14' && github.head_ref == 'release-please--branches--main' &&
+      (!contains(github.event.pull_request.labels.*.name, 'autorelease: snapshot'))
     steps:
       - name: Print Details
         run: |
