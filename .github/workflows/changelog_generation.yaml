@@ -17,7 +17,8 @@ jobs:
       - name: Print Details
         run: |
           echo "Commit author: ${{ github.event.sender.login }}"
+          
           echo "Pull Request Labels:"
-          for label in ${{ join(github.event.pull_request.labels.*.name, ', ') }}; do
+          for label in ${{ github.event.pull_request.labels.*.name }}; do
             echo "- $label"
           done
