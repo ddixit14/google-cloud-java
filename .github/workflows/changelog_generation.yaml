@@ -10,8 +10,7 @@ jobs:
   changelog-generation:
     runs-on: ubuntu-latest
     if: |
-      github.event.sender.login == 'ddixit14' && github.head_ref == 'release-please--branches--main' &&
-      (github.event_name != 'pull_request' || !contains(github.event.pull_request.labels.*.name, 'autorelease: snapshot'))
+      github.event.sender.login == 'ddixit14' && github.head_ref == 'release-please--branches--main'
     steps:
       - name: Print Details
         run: |
