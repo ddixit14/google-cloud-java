@@ -1,7 +1,9 @@
 on:
   pull_request:
+    types:
+      - synchronize
     branches:
-    - release-please--branches--main
+      - release-please--branches--main
 
 name: Module specific CHANGELOG.md generation
 
@@ -14,8 +16,8 @@ jobs:
           EVENT_CONTEXT: ${{ toJSON(github.event) }}
         run: |
           echo "$EVENT_CONTEXT" | jq .
-          echo github.event.sender.login
-          echo github.event.pull_request.labels.*.name
+          echo "${github.event.sender.login}
+          echo "${github.event.pull_request.labels.*.name}
 
   changelog-generation:
     runs-on: ubuntu-latest
