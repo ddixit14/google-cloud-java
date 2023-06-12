@@ -1,18 +1,16 @@
-name: Module specific CHANGELOG.md generation
-
 on:
   push:
     branches:
-    - release-please--branches--main
-  
+      - release-please--branches--main
+
+name: Module specific CHANGELOG.md generation
+
 jobs:
-  autorelease:
+  existing-versions-check:
     runs-on: ubuntu-latest
-
+    if: |
+      github.event.sender.login == 'ddixit14' && github.head_ref == 'release-please--branches--main' &&
+      (contains(github.event.pull_request.labels.*.name, 'autorelease: pending'))
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run when labeled and pushed by 'release-please-bot' user
-        run: |
+      - run: |
           echo "Performing changelog.md generation steps..."
