@@ -10,6 +10,11 @@ jobs:
   print_context:
     runs-on: ubuntu-latest
     steps:
+      - name: Check if label exists
+        if: |
+        github.event.sender.login == ddixit14 && contains(github.event.pull_request.labels.*.name, 'autorelease: pending')
+        run: |
+            echo "The specified label exists."
       - env:
           EVENT_CONTEXT: ${{ toJSON(github.event) }}
         run: |
