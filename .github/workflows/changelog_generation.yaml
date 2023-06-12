@@ -6,19 +6,10 @@ on:
 name: Module specific CHANGELOG.md generation
 
 jobs:
-  changelog-generation:
+  print_context:
     runs-on: ubuntu-latest
-    if: |
-      github.event.sender.login == 'ddixit14'
     steps:
-      - name: Print something
+      - env:
+          EVENT_CONTEXT: ${{ toJSON(github.event) }}
         run: |
-          echo "Performing changelog.md generation steps..."
-      - name: Print Details
-        run: |
-          echo "Commit author: ${{ github.event.sender.login }}"
-          
-          echo "Pull Request Labels:"
-          for label in ${{ github.event.pull_request.labels.*.name }}; do
-            echo "- ${label}"
-          done
+          echo $EVENT_CONTEXT
