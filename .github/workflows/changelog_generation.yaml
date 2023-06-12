@@ -7,7 +7,7 @@ jobs:
   changelog-generation:
     runs-on: ubuntu-latest
     if: |
-      github.event.sender.login == 'ddixit1402'
+      github.event.sender.login == 'ddixit14'
     steps:
       - name: Print something
         env:
