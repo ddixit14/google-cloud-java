@@ -2,7 +2,6 @@ on:
   push:
     branches:
       - release-please--branches--main
-  pull_request:
 
 name: Module specific CHANGELOG.md generation
 
