@@ -12,7 +12,7 @@ jobs:
     if: |
         github.event.sender.login == 'ddixit14' && contains(github.event.pull_request.labels.*.name, 'autorelease: pending')
     steps:
-      - run: echo "The specified label exists."
+      - run: echo " head_ref is - ${{ github.head_ref }} , other thing is ${{ github.event.pull_request.head.ref }}, event ref is ${{ github.event.ref }}"
 
   changelog-generation:
     runs-on: ubuntu-latest
