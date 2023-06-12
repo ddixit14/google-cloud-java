@@ -20,6 +20,8 @@ jobs:
           
           if [ -n "$pr_number" ]; then
             pr_labels=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$pr_number/labels" | jq -r '.[].name')
+            echo "${pr_labels}"
+          
             if [[ $pr_labels == *"autorelease: pending"* ]]; then
               echo "The commit is part of a pull request with the specified label."
             else
