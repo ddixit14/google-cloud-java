@@ -8,8 +8,5 @@ name: Module specific CHANGELOG.md generation
 jobs:
   print_context:
     runs-on: ubuntu-latest
-    steps:
-      - env:
-          EVENT_CONTEXT: ${{ toJSON(github.event) }}
-        run: |
-          echo $EVENT_CONTEXT
+    run: |
+      echo "${{ toJSON(github.event) }}" | jq .
