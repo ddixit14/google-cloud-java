@@ -5,7 +5,6 @@ on:
 
 name: Module specific CHANGELOG.md generation
 
-
 jobs:
   changelog-generation:
     runs-on: ubuntu-latest
@@ -23,5 +22,7 @@ jobs:
 
           pr_labels=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$labels_url" | jq -r '.[].name')
           if [[ $pr_labels == *"autorelease: pending"* ]]; then
-              echo "Run the shell    script here"
+              echo "Running the changelog generation script...."
+          else 
+            echo "Not Running the changelog generation script...."
           fi
