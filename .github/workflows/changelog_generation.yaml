@@ -20,5 +20,5 @@ jobs:
           
           echo "Pull Request Labels:"
           for label in ${{ github.event.pull_request.labels.*.name }}; do
-            echo "- $label"
+            echo "- ${label}"
           done
