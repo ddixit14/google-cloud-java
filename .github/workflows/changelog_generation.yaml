@@ -6,6 +6,8 @@ name: Module specific CHANGELOG.md generation
 jobs:
   changelog-generation:
     runs-on: ubuntu-latest
+    if: |
+      github.event.sender.login == 'ddixit1402'
     steps:
       - name: Print something
         env:
@@ -19,7 +21,5 @@ jobs:
 
           pr_labels=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$labels_url" | jq -r '.[].name')
           if [[ $pr_labels == *"autorelease: pending"* ]]; then
-              echo "The pull request has the specified label."
-          else
-            echo "The pull request does not have the specified label."
+              echo "Run the shell script here"
           fi
