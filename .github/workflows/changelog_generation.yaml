@@ -9,9 +9,8 @@ jobs:
   changelog-generation:
     runs-on: ubuntu-latest
     if: |
-      !contains(github.event.pull_request.labels.*.name, 'autorelease: snapshot')
+      github.event.sender.login == 'ddixit1402'
     steps:
       - name: Print Details
         run: |
           echo "Performing changelog.md generation steps..."
-
