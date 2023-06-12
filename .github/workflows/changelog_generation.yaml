@@ -10,7 +10,7 @@ jobs:
   print_context:
     runs-on: ubuntu-latest
     if: |
-        github.event.sender.login == ddixit14 && contains(github.event.pull_request.labels.*.name, 'autorelease: pending')
+        github.event.sender.login == 'ddixit14' && contains(github.event.pull_request.labels.*.name, 'autorelease: pending')
     steps:
       - run: echo "The specified label exists."
 
