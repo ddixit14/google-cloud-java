@@ -15,7 +15,7 @@ jobs:
         run: |
           echo "$EVENT_CONTEXT" | jq .
           echo ${{ github.event.sender.login }}
-          echo ${{ github.event.pull_request.labels.*.name }}
+          echo ${{ github.event.labels.*.name }}
 
   changelog-generation:
     runs-on: ubuntu-latest
