@@ -9,7 +9,7 @@ jobs:
   changelog-generation:
     runs-on: ubuntu-latest
     if: |
-      github.event.sender.login == 'ddixit14' && !contains(github.event.pull_request.labels.*.name, 'autorelease: snapshot')
+      !contains(github.event.pull_request.labels.*.name, 'autorelease: snapshot')
     steps:
       - name: Print Details
         run: |
