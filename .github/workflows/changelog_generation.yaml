@@ -6,11 +6,11 @@ on:
 name: Module specific CHANGELOG.md generation
 
 jobs:
-  existing-versions-check:
+  Changelog Generation:
     runs-on: ubuntu-latest
-    if: |
-      github.event.sender.login == 'ddixit14' && github.head_ref == 'release-please--branches--main' &&
-      (contains(github.event.pull_request.labels.*.name, 'autorelease: pending'))
     steps:
       - run: |
+          echo "sender is : ${github.event.sender.login}" 
+          echo "github head_ref is : ${github.event.sender.login}" 
+          echo "github event details : ${github.event.pull_request.labels.*.name}" 
           echo "Performing changelog.md generation steps..."
