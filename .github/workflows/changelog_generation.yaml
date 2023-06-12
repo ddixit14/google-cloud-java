@@ -9,7 +9,7 @@ jobs:
   changelog-generation:
     runs-on: ubuntu-latest
     if: |
-      contains(github.event.pull_request.labels.*.name, 'autorelease: pending')
+      contains(github.event.pull_request.labels.*.name, 'autorelease: pending') && github.event.sender.login == 'ddixit14'
     steps:
       - name: Print Details
         run: |
