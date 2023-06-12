@@ -6,7 +6,7 @@ on:
 name: Module specific CHANGELOG.md generation
 
 jobs:
-  Changelog Generation:
+  changelog-generation:
     runs-on: ubuntu-latest
     steps:
       - run: |
