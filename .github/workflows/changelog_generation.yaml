@@ -2,9 +2,7 @@ on:
   pull_request:
     types:
       - synchronize
-
 name: Module specific CHANGELOG.md generation
-
 jobs:
   changelog_generation:
     runs-on: ubuntu-latest
