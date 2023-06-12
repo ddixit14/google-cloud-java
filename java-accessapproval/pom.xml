@@ -10,6 +10,8 @@
     Java idiomatic client for Google Cloud Platform services.
   </description>
 
+  
+  
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-jar-parent</artifactId>
