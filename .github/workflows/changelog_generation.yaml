@@ -4,16 +4,12 @@ on:
       - synchronize
 
 name: Module specific CHANGELOG.md generation
-
+        
 jobs:
-  changelog-generation:
+  print_context:
     runs-on: ubuntu-latest
-    if: |
-      github.head_ref == 'release-please--branches--main' &&
-      (contains(github.event.pull_request.labels.*.name, 'autorelease: pending'))
     steps:
       - env:
           EVENT_CONTEXT: ${{ toJSON(github.event) }}
-      - run: |
+        run: |
           echo "$EVENT_CONTEXT" | jq .
-          
