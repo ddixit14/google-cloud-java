@@ -6,7 +6,7 @@ on:
 name: Module specific CHANGELOG.md generation
 
 jobs:
-  existing-versions-check:
+  changelog-generation:
     runs-on: ubuntu-latest
     if: |
       github.head_ref == 'release-please--branches--main' &&
