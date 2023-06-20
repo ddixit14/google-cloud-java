@@ -9,8 +9,11 @@ jobs:
   existing-versions-check:
     runs-on: ubuntu-latest
     if: |
-      github.event.sender.login == 'ddixit14' && github.head_ref == 'release-please--branches--main' &&
+      github.head_ref == 'release-please--branches--main' &&
       (contains(github.event.pull_request.labels.*.name, 'autorelease: pending'))
     steps:
+      - env:
+          EVENT_CONTEXT: ${{ toJSON(github.event) }}
       - run: |
-          echo "Performing changelog.md generation steps..."
+          echo "$EVENT_CONTEXT" | jq .
+          
