@@ -1,7 +1,7 @@
 on:
-  push:
-    branches:
-      - release-please--branches--main
+  pull_request:
+    types:
+      - synchronize
 
 name: Module specific CHANGELOG.md generation
 
